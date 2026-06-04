@@ -135,18 +135,16 @@ leaving Chunk Manifest distribution as the only indexed full-file source.
 
 Honkai: Star Rail CN PC distribution is more regular than Genshin Impact. Early
 versions used complete ZIP packages. Version `1.4.0` exposes a root-level ZIP
-and a root-level `unzip` tree. Version `1.5.0` moves the package under `PC/`,
-but the current metadata does not expose a confirmed `PC/unzip` root. From the
-observed `1.6.0` metadata onward, the same release build usually exposes both
-package files and an expanded `PC/unzip` file tree. Later package format changes
-did not remove this direct-file root.
+and a root-level `unzip` tree. Version `1.5.0` moves both the package and
+expanded file tree under `PC/`. From that point onward, the same release build
+usually exposes both package files and an expanded `PC/unzip` file tree. Later
+package format changes did not remove this direct-file root.
 
 | Stage | Observed versions | Package path | Expanded file path |
 | --- | --- | --- | --- |
 | Packed client | 1.0.x - 1.3.x | `client/cn/{build}/StarRail_x.x.x.zip` | No stable `unzip` root observed in current metadata |
 | Root ZIP + unzip | 1.4 | `client/cn/{build}/StarRail_1.4.0.zip` | `client/cn/{build}/unzip/{path}` |
-| PC ZIP gap | 1.5 | `client/cn/{build}/PC/StarRail_1.5.0.zip` | No confirmed `PC/unzip` root in current metadata |
-| PC ZIP + unzip | 1.6 - 2.x | `client/cn/{build}/PC/StarRail_x.x.x.zip` | `client/cn/{build}/PC/unzip/{path}` |
+| PC ZIP + unzip | 1.5 - 2.x | `client/cn/{build}/PC/StarRail_x.x.x.zip` | `client/cn/{build}/PC/unzip/{path}` |
 | 7z volumes + unzip | 3.0 onward | `client/cn/{build}/PC/download/StarRail_x.x.x.7z.001` | `client/cn/{build}/PC/unzip/{path}` |
 | Three-track distribution | 3.3 onward | 7z volumes + `unzip` + Chunk Manifest | Chunk metadata appears while package and unzip routes remain available |
 

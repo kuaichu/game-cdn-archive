@@ -210,9 +210,23 @@ const hoyoSummaries = () => hoyoSummary()?.versions || [];
 const endfieldVersion = () => state.endfieldVersions?.[state.version] || null;
 const endfieldSummaries = () => state.endfieldIndex?.versions || [];
 
+const hoyoPackageUrl = (row) => row?.game?.full?.url || row?.game?.segments?.[0]?.url || "";
+
+const hoyoDecompressedPath = (row) => {
+  if (row?.decompressed_path) return row.decompressed_path;
+  if (state.gameId !== "hkrpg") return "";
+
+  const url = hoyoPackageUrl(row);
+  if (!url) return "";
+  if (url.includes("/PC/download/")) return `${url.split("/PC/download/")[0]}/PC/unzip`;
+  if (url.includes("/PC/")) return `${url.split("/PC/")[0]}/PC/unzip`;
+  if (/\/StarRail_[^/]+\.zip$/.test(url)) return `${url.slice(0, url.lastIndexOf("/"))}/unzip`;
+  return "";
+};
+
 const hoyoDistributionProfile = (summary, version = null) => {
   const row = version || hoyoVersionMap()?.[summary?.version] || {};
-  const path = String(row?.decompressed_path || "");
+  const path = String(hoyoDecompressedPath(row) || "");
   const hasPackage = Boolean(summary?.package_items || row?.game?.full || row?.game?.segments?.length);
   const hasDirect = Boolean(summary?.has_decompressed_path || path);
   const hasChunk = Boolean(summary?.has_chunk || row?.chunk);
@@ -462,11 +476,12 @@ const hoyoStats = () => {
   const summary = hoyoSummaries().find((item) => item.version === state.version);
   const version = hoyoVersion();
   const profile = hoyoDistributionProfile(summary, version);
+  const decompressedPath = hoyoDecompressedPath(version);
   return [
     ["当前版本", state.version],
     ["分发架构", profile.label],
     ["压缩包", `${summary?.package_items || 0} 个`],
-    ["散文件直链", version?.decompressed_path ? "可用" : "无"],
+    ["散文件直链", decompressedPath ? "可用" : "无"],
     ["Chunk", version?.chunk ? version.chunk.tag || "可用" : "无"],
   ];
 };
@@ -1384,7 +1399,7 @@ const renderHoyoFiles = async () => {
   try {
     const entries = await loadHoyoFileEntries();
     const canChunkDownload = Boolean(hoyoVersion()?.chunk);
-    const decompressedPath = hoyoVersion()?.decompressed_path || "";
+    const decompressedPath = hoyoDecompressedPath(hoyoVersion());
     const files = entries.map((entry, index) => ({
       ...hoyoFileItem(entry, index, entries.length),
       chunkDownload: canChunkDownload,
@@ -1626,7 +1641,8 @@ const renderNotice = () => {
       hoyoSummaries().find((item) => item.version === state.version),
       hoyoVersion(),
     );
-    const downloadOrder = hoyoVersion()?.decompressed_path
+    const decompressedPath = hoyoDecompressedPath(hoyoVersion());
+    const downloadOrder = decompressedPath
       ? "文件下载优先使用官方散文件直链；若同时存在 Chunk，可作为兜底。"
       : hoyoVersion()?.chunk
         ? "文件下载通过官方 Chunk Manifest 定位、下载并合并。"
