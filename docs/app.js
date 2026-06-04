@@ -24,7 +24,7 @@ const nteGame = {
   name: "异环",
   subName: "Neverness to Everness",
   shortName: "NTE",
-  icon: "assets/icons/nte.ico",
+  icon: "assets/icons/nte.png",
   kind: "nte",
 };
 

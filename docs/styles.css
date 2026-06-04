@@ -83,16 +83,21 @@ svg {
 }
 
 .game-mark {
+  appearance: none;
   display: grid;
+  flex: 0 0 40px;
   width: 40px;
   height: 40px;
   place-items: center;
+  margin: 0;
+  padding: 0;
   border: 0;
   border-radius: 12px;
   background: transparent;
   color: var(--text);
   font-weight: 850;
   font-size: 12px;
+  line-height: 0;
   letter-spacing: 0;
   opacity: 0.62;
   transition: opacity 150ms ease, box-shadow 150ms ease;
