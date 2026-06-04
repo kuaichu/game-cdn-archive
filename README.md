@@ -131,6 +131,34 @@ Chunk metadata is present from version `4.2.0`. Version `5.6.0` is the observed
 transition point where public package and `decompressed_path` metadata stopped,
 leaving Chunk Manifest distribution as the only indexed full-file source.
 
+## Star Rail CDN Pattern
+
+Honkai: Star Rail CN PC distribution is more regular than Genshin Impact. Early
+versions used complete ZIP packages. From the observed `1.4.0` metadata onward,
+the same release build usually exposes both package files and an expanded
+`unzip` file tree. Later package format changes did not remove this direct-file
+root.
+
+| Stage | Observed versions | Package path | Expanded file path |
+| --- | --- | --- | --- |
+| Packed client | 1.0.x - 1.3.x | `client/cn/{build}/StarRail_x.x.x.zip` | No stable `unzip` root observed in current metadata |
+| ZIP + unzip | 1.4 - 2.x | `client/cn/{build}/PC/StarRail_x.x.x.zip` or root ZIP | `client/cn/{build}/PC/unzip/{path}` or `client/cn/{build}/unzip/{path}` |
+| 7z volumes + unzip | 3.0 onward | `client/cn/{build}/PC/download/StarRail_x.x.x.7z.001` | `client/cn/{build}/PC/unzip/{path}` |
+| Three-track distribution | 3.3 onward | 7z volumes + `unzip` + Chunk Manifest | Chunk metadata appears while package and unzip routes remain available |
+
+Representative direct-file URLs for the root `StarRail.exe`:
+
+```text
+1.4.0
+https://autopatchcn.bhsr.com/client/cn/20230926141222_ZKWHBONxYlx8PGYQ/unzip/StarRail.exe
+
+2.0.0
+https://autopatchcn.bhsr.com/client/cn/20240126110214_QvLzGdvYfGBEq4M4/PC/unzip/StarRail.exe
+
+4.3.0
+https://autopatchcn.bhsr.com/client/cn/20260523104353_kjwMxQcpFWHse2S2/PC/unzip/StarRail.exe
+```
+
 ## HoyoFiles Migration
 
 The HoYo game data shown in the static UI is migrated from public HoyoFiles

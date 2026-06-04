@@ -217,6 +217,12 @@ const hoyoDistributionProfile = (summary, version = null) => {
   const hasDirect = Boolean(summary?.has_decompressed_path || path);
   const hasChunk = Boolean(summary?.has_chunk || row?.chunk);
 
+  if (state.gameId === "hkrpg") {
+    if (hasPackage && hasDirect && hasChunk) return { label: "三轨并行", color: "violet", detail: "压缩包 + unzip 文件树 + Chunk" };
+    if (hasPackage && hasDirect && path.includes("/unzip")) return { label: "unzip 双轨", color: "green", detail: "压缩包 + 官方 unzip 文件树" };
+    if (hasDirect && path.includes("/unzip")) return { label: "unzip 直链", color: "green", detail: "官方 unzip 文件树" };
+  }
+
   if (hasPackage && hasDirect && hasChunk) return { label: "三轨并行", color: "violet", detail: "压缩包 + 散文件直链 + Chunk" };
   if (hasChunk && !hasPackage && !hasDirect) return { label: "Chunk 独占", color: "violet", detail: "Chunk Manifest 文件分发" };
   if (hasChunk && hasDirect) return { label: "直链 + Chunk", color: "violet", detail: "散文件直链 + Chunk" };
