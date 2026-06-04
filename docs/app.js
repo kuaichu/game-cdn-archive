@@ -730,11 +730,29 @@ const ensureGameData = async () => {
 const renderNotice = () => {
   const notice = $("#notes");
   if (isNte()) {
-    notice.innerHTML = `<strong>技术说明</strong><span>页面仅保存由官方 CDN 清单解析出的 URL、校验信息与下载索引；解密流程与复现细节见仓库 README。</span>`;
+    notice.innerHTML = `
+      <div class="notice-copy">
+        <strong>数据来源</strong>
+        <span>页面保存由异环官方启动器 CDN 清单解析出的 URL、校验信息与下载索引；解密流程与复现细节见仓库 README。</span>
+      </div>
+      <a class="source-link" href="${escapeHtml(nteVersion()?.reslist_url || "#")}" target="_blank" rel="noreferrer">官方 ResList 清单</a>
+    `;
   } else if (isEndfield()) {
-    notice.innerHTML = `<strong>链接状态</strong><span>数据来自官方启动器 API 的持续归档。官方历史下载链接带短期签名，失效文件会同时提供由上游公开保存的归档镜像，并在页面中明确标注。</span>`;
+    notice.innerHTML = `
+      <div class="notice-copy">
+        <strong>数据来源</strong>
+        <span>上游项目持续归档终末地官方启动器 API。官方历史链接带短期签名，失效文件会同时提供公开归档镜像并明确标注。</span>
+      </div>
+      <a class="source-link" href="${escapeHtml(state.endfieldIndex.source)}" target="_blank" rel="noreferrer">daydreamer-json/ak-endfield-api-archive</a>
+    `;
   } else {
-    notice.innerHTML = `<strong>数据来源</strong><span>米家游戏数据迁移自 HoyoFiles 的公开版本清单接口，并在本站保存为静态索引；Chunk 视图只展示 Manifest 入口与统计信息。</span>`;
+    notice.innerHTML = `
+      <div class="notice-copy">
+        <strong>数据来源</strong>
+        <span>米家游戏数据迁移自 HoyoFiles 的公开版本清单接口，并在本站保存为静态索引；Chunk 视图只展示 Manifest 入口与统计信息。</span>
+      </div>
+      <a class="source-link" href="https://hoyo-files.amarea.cn/" target="_blank" rel="noreferrer">hoyo-files.amarea.cn</a>
+    `;
   }
 };
 

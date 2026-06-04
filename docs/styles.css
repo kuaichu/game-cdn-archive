@@ -551,6 +551,7 @@ h2 {
 
 .notice {
   display: flex;
+  justify-content: space-between;
   gap: 12px;
   align-items: center;
   margin: 18px 0;
@@ -562,9 +563,36 @@ h2 {
   color: #d6c28c;
 }
 
+.notice-copy {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+}
+
 .notice strong {
   color: var(--amber);
   white-space: nowrap;
+}
+
+.source-link {
+  flex: 0 0 auto;
+  max-width: min(420px, 42vw);
+  overflow: hidden;
+  border: 1px solid rgba(255, 195, 77, 0.34);
+  border-radius: 8px;
+  background: rgba(255, 195, 77, 0.08);
+  color: #ffe0a0;
+  padding: 7px 10px;
+  font-family: Consolas, "SFMono-Regular", monospace;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.source-link:hover {
+  border-color: rgba(255, 195, 77, 0.72);
+  background: rgba(255, 195, 77, 0.16);
 }
 
 .file-panel,
@@ -784,6 +812,17 @@ h2 {
   .notice {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .notice-copy {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .source-link {
+    width: 100%;
+    max-width: none;
   }
 
   .control-strip {
