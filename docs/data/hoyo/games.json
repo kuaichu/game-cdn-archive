@@ -1,0 +1,983 @@
+{
+  "source": "https://hoyo-files.amarea.cn",
+  "api_base": "https://autopatch.amarea.cn/pkg_version",
+  "generated_at": "2026-06-04T16:08:05.904Z",
+  "games": [
+    {
+      "id": "hk4e",
+      "name": "原神",
+      "shortName": "YS",
+      "domain": "autopatchcn.yuanshen.com",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 12850520560,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.0.1",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 12850596583,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.1.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 15910391284,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.2.0",
+          "package_items": 1,
+          "update_items": 1,
+          "direct_bytes": 21312935862,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.3.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 19451063669,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.3.2",
+          "package_items": 1,
+          "update_items": 2,
+          "direct_bytes": 24114470344,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.4.0",
+          "package_items": 1,
+          "update_items": 3,
+          "direct_bytes": 39117642284,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "1.5.0",
+          "package_items": 5,
+          "update_items": 1,
+          "direct_bytes": 30074367449,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.5.1",
+          "package_items": 5,
+          "update_items": 10,
+          "direct_bytes": 31946172190,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.6.0",
+          "package_items": 5,
+          "update_items": 15,
+          "direct_bytes": 49502262121,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.0.0",
+          "package_items": 5,
+          "update_items": 10,
+          "direct_bytes": 55456057075,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.1.0",
+          "package_items": 5,
+          "update_items": 10,
+          "direct_bytes": 65954216838,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.2.0",
+          "package_items": 5,
+          "update_items": 10,
+          "direct_bytes": 64745547291,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.3.0",
+          "package_items": 5,
+          "update_items": 10,
+          "direct_bytes": 63979465834,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.4.0",
+          "package_items": 5,
+          "update_items": 10,
+          "direct_bytes": 73761920820,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.5.0",
+          "package_items": 5,
+          "update_items": 10,
+          "direct_bytes": 73294805436,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.6.0",
+          "package_items": 5,
+          "update_items": 10,
+          "direct_bytes": 76915427879,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.7.0",
+          "package_items": 5,
+          "update_items": 10,
+          "direct_bytes": 120610549787,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.8.0",
+          "package_items": 5,
+          "update_items": 10,
+          "direct_bytes": 105819193663,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.0.0",
+          "package_items": 5,
+          "update_items": 10,
+          "direct_bytes": 101055272420,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.1.0",
+          "package_items": 5,
+          "update_items": 10,
+          "direct_bytes": 107257805579,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.2.0",
+          "package_items": 9,
+          "update_items": 10,
+          "direct_bytes": 83601117162,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.3.0",
+          "package_items": 10,
+          "update_items": 10,
+          "direct_bytes": 147433956312,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.4.0",
+          "package_items": 10,
+          "update_items": 10,
+          "direct_bytes": 90601220729,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.5.0",
+          "package_items": 10,
+          "update_items": 10,
+          "direct_bytes": 155206511776,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.6.0",
+          "package_items": 10,
+          "update_items": 10,
+          "direct_bytes": 172876703856,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.7.0",
+          "package_items": 10,
+          "update_items": 10,
+          "direct_bytes": 175386713233,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.8.0",
+          "package_items": 10,
+          "update_items": 10,
+          "direct_bytes": 179225705669,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.0.0",
+          "package_items": 11,
+          "update_items": 10,
+          "direct_bytes": 244531871410,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.0.1",
+          "package_items": 11,
+          "update_items": 2,
+          "direct_bytes": 203090665170,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.1.0",
+          "package_items": 11,
+          "update_items": 15,
+          "direct_bytes": 197654457936,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.2.0",
+          "package_items": 11,
+          "update_items": 15,
+          "direct_bytes": 191275200228,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.3.0",
+          "package_items": 11,
+          "update_items": 10,
+          "direct_bytes": 164527361432,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.4.0",
+          "package_items": 11,
+          "update_items": 10,
+          "direct_bytes": 163883228056,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.5.0",
+          "package_items": 12,
+          "update_items": 10,
+          "direct_bytes": 156215090439,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.6.0",
+          "package_items": 10,
+          "update_items": 10,
+          "direct_bytes": 187661977752,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.7.0",
+          "package_items": 10,
+          "update_items": 10,
+          "direct_bytes": 190291089999,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.8.0",
+          "package_items": 10,
+          "update_items": 10,
+          "direct_bytes": 179689053270,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "5.0.0",
+          "package_items": 11,
+          "update_items": 10,
+          "direct_bytes": 192821733107,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "5.1.0",
+          "package_items": 11,
+          "update_items": 10,
+          "direct_bytes": 186727607170,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "5.2.0",
+          "package_items": 11,
+          "update_items": 10,
+          "direct_bytes": 183796517504,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "5.3.0",
+          "package_items": 12,
+          "update_items": 10,
+          "direct_bytes": 194530762887,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "5.4.0",
+          "package_items": 12,
+          "update_items": 10,
+          "direct_bytes": 196030678534,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "5.5.0",
+          "package_items": 12,
+          "update_items": 10,
+          "direct_bytes": 195736791635,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "5.6.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "5.7.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "5.8.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "6.0.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "6.1.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "6.2.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "6.3.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "6.4.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "6.5.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "6.6.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        }
+      ],
+      "version_count": 54,
+      "first_version": "1.0.0",
+      "latest_version": "6.6.0",
+      "direct_items": 323,
+      "update_items": 374,
+      "chunk_versions": 23,
+      "direct_bytes": 5198776700234,
+      "versions_url": "https://autopatch.amarea.cn/pkg_version/hk4e_versions.json"
+    },
+    {
+      "id": "hkrpg",
+      "name": "崩坏：星穹铁道",
+      "shortName": "HSR",
+      "domain": "autopatchcn.bhsr.com",
+      "versions": [
+        {
+          "version": "1.0.5",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 10863708622,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.1.0",
+          "package_items": 1,
+          "update_items": 1,
+          "direct_bytes": 19165012006,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.2.0",
+          "package_items": 1,
+          "update_items": 2,
+          "direct_bytes": 40194825095,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.3.0",
+          "package_items": 1,
+          "update_items": 2,
+          "direct_bytes": 40696793995,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.4.0",
+          "package_items": 1,
+          "update_items": 2,
+          "direct_bytes": 40957734358,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "1.5.0",
+          "package_items": 6,
+          "update_items": 1,
+          "direct_bytes": 46673605597,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.6.0",
+          "package_items": 6,
+          "update_items": 6,
+          "direct_bytes": 53043073567,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.0.0",
+          "package_items": 6,
+          "update_items": 6,
+          "direct_bytes": 68952388463,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.1.0",
+          "package_items": 6,
+          "update_items": 6,
+          "direct_bytes": 65401632115,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.2.0",
+          "package_items": 6,
+          "update_items": 6,
+          "direct_bytes": 77684373589,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.3.0",
+          "package_items": 6,
+          "update_items": 6,
+          "direct_bytes": 85321048557,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.4.0",
+          "package_items": 6,
+          "update_items": 6,
+          "direct_bytes": 82927656821,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.5.0",
+          "package_items": 12,
+          "update_items": 6,
+          "direct_bytes": 82543869517,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.6.0",
+          "package_items": 12,
+          "update_items": 6,
+          "direct_bytes": 86124077288,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.7.0",
+          "package_items": 12,
+          "update_items": 6,
+          "direct_bytes": 122160527120,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.0.0",
+          "package_items": 14,
+          "update_items": 6,
+          "direct_bytes": 94913090105,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.1.0",
+          "package_items": 14,
+          "update_items": 6,
+          "direct_bytes": 91036835970,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.2.0",
+          "package_items": 13,
+          "update_items": 5,
+          "direct_bytes": 88003690938,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.3.0",
+          "package_items": 14,
+          "update_items": 5,
+          "direct_bytes": 100130745657,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.4.0",
+          "package_items": 15,
+          "update_items": 5,
+          "direct_bytes": 100492128261,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.5.0",
+          "package_items": 12,
+          "update_items": 5,
+          "direct_bytes": 106109965623,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.6.0",
+          "package_items": 13,
+          "update_items": 5,
+          "direct_bytes": 123112415665,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.7.0",
+          "package_items": 13,
+          "update_items": 5,
+          "direct_bytes": 116328902832,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "3.8.0",
+          "package_items": 14,
+          "update_items": 5,
+          "direct_bytes": 119817930740,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.0.0",
+          "package_items": 15,
+          "update_items": 5,
+          "direct_bytes": 140704110570,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.1.0",
+          "package_items": 15,
+          "update_items": 5,
+          "direct_bytes": 132670323384,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.2.0",
+          "package_items": 16,
+          "update_items": 5,
+          "direct_bytes": 138500463450,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "4.3.0",
+          "package_items": 16,
+          "update_items": 5,
+          "direct_bytes": 139992144729,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        }
+      ],
+      "version_count": 28,
+      "first_version": "1.0.5",
+      "latest_version": "4.3.0",
+      "direct_items": 267,
+      "update_items": 129,
+      "chunk_versions": 10,
+      "direct_bytes": 2414523074634,
+      "versions_url": "https://autopatch.amarea.cn/pkg_version/hkrpg_versions.json"
+    },
+    {
+      "id": "nap",
+      "name": "绝区零",
+      "shortName": "ZZZ",
+      "domain": "autopatchcn.juequling.com",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "package_items": 10,
+          "update_items": 0,
+          "direct_bytes": 53835050475,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "1.1.0",
+          "package_items": 14,
+          "update_items": 5,
+          "direct_bytes": 69403026231,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "1.2.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 101210699934,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "1.3.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 92894785300,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "1.4.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 107841569161,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "1.5.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 99013650484,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "1.6.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 92085689482,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "1.7.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 89760568086,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.0.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 170494227766,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.1.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 142281755709,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.2.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 98465215677,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.3.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 102315019518,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.4.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 98802458422,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.5.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 123449675487,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.6.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 121536174366,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.7.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 102827859102,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "2.8.0",
+          "package_items": 14,
+          "update_items": 10,
+          "direct_bytes": 106850255593,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        }
+      ],
+      "version_count": 17,
+      "first_version": "1.0.0",
+      "latest_version": "2.8.0",
+      "direct_items": 234,
+      "update_items": 155,
+      "chunk_versions": 15,
+      "direct_bytes": 1773067680793,
+      "versions_url": "https://autopatch.amarea.cn/pkg_version/nap_versions.json"
+    },
+    {
+      "id": "bh3",
+      "name": "崩坏3",
+      "shortName": "BH3",
+      "domain": "autopatchcn.bh3.com",
+      "versions": [
+        {
+          "version": "7.6.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 18973602618,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "7.7.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 19504958103,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "7.8.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 19815929692,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "7.9.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 20610529816,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "7.9.1",
+          "package_items": 1,
+          "update_items": 1,
+          "direct_bytes": 20467816949,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "8.0.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 21132460087,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "8.1.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 21846386552,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "8.2.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 21834314960,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "8.3.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 22491072482,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "8.4.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 23003662135,
+          "has_chunk": true,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "8.5.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "8.6.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "8.7.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "8.8.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "8.9.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
+        }
+      ],
+      "version_count": 15,
+      "first_version": "7.6.0",
+      "latest_version": "8.9.0",
+      "direct_items": 10,
+      "update_items": 1,
+      "chunk_versions": 8,
+      "direct_bytes": 209680733394,
+      "versions_url": "https://autopatch.amarea.cn/pkg_version/bh3_versions.json"
+    }
+  ]
+}

@@ -8,17 +8,14 @@
   </head>
   <body>
     <div class="app">
-      <aside class="game-rail" aria-label="Game selector">
-        <button class="game-mark active" title="异环">NTE</button>
-        <button class="game-mark muted" title="预留">+</button>
-      </aside>
+      <aside class="game-rail" id="gameRail" aria-label="Game selector"></aside>
 
       <nav class="side">
         <div class="brand">
-          <span class="brand-logo">N</span>
+          <span class="brand-logo" id="brandLogo">N</span>
           <div>
-            <strong>异环</strong>
-            <small>Neverness to Everness</small>
+            <strong id="brandName">异环</strong>
+            <small id="brandSub">Neverness to Everness</small>
           </div>
         </div>
         <a class="side-link" href="#home">主页</a>
@@ -35,7 +32,7 @@
         <header class="topbar" id="home">
           <div>
             <p class="kicker">Unofficial URL Archive</p>
-            <h1>异环官方 CDN 文件索引</h1>
+            <h1 id="pageTitle">游戏官方 CDN 文件索引</h1>
           </div>
           <div class="top-actions">
             <button class="ghost-button" id="copyCommandBtn" type="button"></button>
@@ -51,11 +48,7 @@
             </button>
             <div class="version-menu" id="versionMenu" hidden></div>
           </div>
-          <div class="mode-tabs" role="tablist" aria-label="File mode">
-            <button class="mode-tab active" data-mode="full" type="button">完整文件</button>
-            <button class="mode-tab" data-mode="patches" type="button">更新补丁</button>
-            <button class="mode-tab" data-mode="reslist" type="button">清单文件</button>
-          </div>
+          <div class="mode-tabs" id="modeTabs" role="tablist" aria-label="File mode"></div>
           <label class="search-box">
             <span>搜索</span>
             <input id="fileSearch" placeholder="文件名 / MD5 / URL" />

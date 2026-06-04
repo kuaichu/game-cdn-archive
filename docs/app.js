@@ -1,9 +1,13 @@
 const state = {
-  catalog: null,
-  version: null,
+  gameId: "nte",
   mode: "full",
-  entries: new Map(),
+  version: null,
   query: "",
+  nteCatalog: null,
+  hoyoIndex: null,
+  hoyoVersions: new Map(),
+  nteEntries: new Map(),
+  chunkEntries: new Map(),
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -13,8 +17,34 @@ const icons = {
   box: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 8-9-5-9 5 9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>',
   copy: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>',
   down: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>',
-  link: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.1 0l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1"/><path d="M14 11a5 5 0 0 0-7.1 0l-2 2A5 5 0 0 0 12 20l1.1-1.1"/></svg>',
 };
+
+const nteGame = {
+  id: "nte",
+  name: "异环",
+  subName: "Neverness to Everness",
+  shortName: "NTE",
+  kind: "nte",
+};
+
+const audioLabels = {
+  "zh-cn": "中文",
+  "en-us": "英语",
+  "ja-jp": "日语",
+  "ko-kr": "韩语",
+};
+
+const nteModes = [
+  ["full", "完整文件"],
+  ["patches", "更新补丁"],
+  ["reslist", "清单文件"],
+];
+
+const hoyoModes = [
+  ["packages", "压缩包"],
+  ["updates", "更新包"],
+  ["chunk", "Chunk 信息"],
+];
 
 const fmtBytes = (bytes) => {
   if (!bytes && bytes !== 0) return "-";
@@ -53,9 +83,6 @@ const compareVersions = (left, right) => {
   }
   return 0;
 };
-const availableVersions = () => state.catalog.versions.filter((item) => item.status === 200 && item.full);
-const currentVersion = () => state.catalog.versions.find((item) => item.version === state.version);
-const currentFiles = () => currentVersion()?.[state.mode];
 
 const escapeHtml = (value) =>
   String(value ?? "")
@@ -63,11 +90,6 @@ const escapeHtml = (value) =>
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
-
-const shortUrl = (url) => String(url).replace("https://yhcdn1.wmupd.com/clientRes/", "");
-
-const commandFor = (version) =>
-  `python scripts\\nte_downloader.py download ${version} --download-root downloads --workers 4 --pack --pack-dir packages`;
 
 const showToast = (text) => {
   const toast = $("#toast");
@@ -80,6 +102,40 @@ const showToast = (text) => {
 const copyText = async (text, label = "已复制") => {
   await navigator.clipboard.writeText(text);
   showToast(label);
+};
+
+const allGames = () => [
+  nteGame,
+  ...(state.hoyoIndex?.games || []).map((game) => ({
+    ...game,
+    subName: game.domain,
+    kind: "hoyo",
+  })),
+];
+
+const currentGame = () => allGames().find((game) => game.id === state.gameId) || nteGame;
+const isNte = () => currentGame().kind === "nte";
+const modesForGame = () => (isNte() ? nteModes : hoyoModes);
+
+const nteVersions = () => state.nteCatalog.versions.filter((item) => item.status === 200 && item.full);
+const nteVersion = () => state.nteCatalog.versions.find((item) => item.version === state.version);
+const nteFiles = () => nteVersion()?.[state.mode];
+
+const hoyoSummary = () => state.hoyoIndex.games.find((game) => game.id === state.gameId);
+const hoyoVersionMap = () => state.hoyoVersions.get(state.gameId);
+const hoyoVersion = () => hoyoVersionMap()?.[state.version] || null;
+const hoyoSummaries = () => hoyoSummary()?.versions || [];
+
+const versionFamily = (version) => {
+  const parts = version.split(".");
+  return isNte() ? parts.slice(0, 2).join(".") : `${parts[0]}.x`;
+};
+
+const commandFor = () => {
+  if (isNte()) {
+    return `python scripts\\nte_downloader.py download ${state.version} --download-root downloads --workers 4 --pack --pack-dir packages`;
+  }
+  return `aria2c -c -x16 -s16 <从页面复制对应 URL 列表>`;
 };
 
 const bindStaticActions = () => {
@@ -97,6 +153,47 @@ const bindStaticActions = () => {
     }
   });
 
+  $("#fileSearch").addEventListener("input", (event) => {
+    state.query = event.target.value.trim().toLowerCase();
+    renderList();
+  });
+
+  $("#copyCommandBtn").addEventListener("click", () => copyText(commandFor(), "命令已复制"));
+};
+
+const renderGameRail = () => {
+  $("#gameRail").innerHTML = allGames()
+    .map((game) => `
+      <button class="game-mark ${game.id === state.gameId ? "active" : ""}" type="button" data-game="${game.id}" title="${escapeHtml(game.name)}">
+        ${escapeHtml(game.shortName || game.id)}
+      </button>
+    `)
+    .join("");
+
+  $$(".game-mark").forEach((button) => {
+    button.addEventListener("click", async () => {
+      state.gameId = button.dataset.game;
+      state.mode = modesForGame()[0][0];
+      state.query = "";
+      $("#fileSearch").value = "";
+      await ensureGameData();
+      render();
+    });
+  });
+};
+
+const renderBrand = () => {
+  const game = currentGame();
+  $("#brandLogo").textContent = (game.shortName || game.id).slice(0, 3);
+  $("#brandName").textContent = game.name;
+  $("#brandSub").textContent = game.subName || "";
+  $("#pageTitle").textContent = `${game.name}官方 CDN 文件索引`;
+};
+
+const renderModes = () => {
+  $("#modeTabs").innerHTML = modesForGame()
+    .map(([id, label]) => `<button class="mode-tab ${state.mode === id ? "active" : ""}" data-mode="${id}" type="button">${label}</button>`)
+    .join("");
   $$(".mode-tab").forEach((button) => {
     button.addEventListener("click", () => {
       state.mode = button.dataset.mode;
@@ -104,53 +201,32 @@ const bindStaticActions = () => {
       render();
     });
   });
-
-  $("#fileSearch").addEventListener("input", (event) => {
-    state.query = event.target.value.trim().toLowerCase();
-    renderList();
-  });
-
-  $("#copyCommandBtn").addEventListener("click", () => copyText(commandFor(state.version), "命令已复制"));
 };
 
 const renderVersionMenu = () => {
-  const groups = availableVersions()
+  const versions = isNte()
+    ? nteVersions()
+    : hoyoSummaries().filter((item) => item.package_items || item.update_items || item.has_chunk);
+
+  const groups = [...versions]
     .sort((a, b) => compareVersions(b.version, a.version))
     .reduce((result, item) => {
-      const family = item.version.split(".").slice(0, 2).join(".");
+      const family = versionFamily(item.version);
       if (!result.has(family)) result.set(family, []);
       result.get(family).push(item);
       return result;
     }, new Map());
 
   $("#versionMenu").innerHTML = [...groups.entries()]
-    .map(([family, items]) => {
-      const base = `${family}.0`;
-      return `
-        <div class="version-group">
-          <div class="version-group-head">
-            <strong>${family} 大版本</strong>
-            <span>${items.length} 个可用版本</span>
-          </div>
-          ${items.map((item) => {
-            const isBase = item.version === base;
-            const selected = item.version === state.version;
-            return `
-              <button class="version-row ${selected ? "selected" : ""}" type="button" data-version="${item.version}">
-                <span class="version-number">${item.version}</span>
-                <span class="caps">
-                  <span class="cap ${isBase ? "green" : "amber"}">${isBase ? "大版本" : "补丁版"}</span>
-                  <span class="cap slate">${fmtDateTime(item.last_modified)}</span>
-                  <span class="cap blue">完整</span>
-                  <span class="cap violet">清单</span>
-                  <span class="cap green">直链</span>
-                </span>
-              </button>
-            `;
-          }).join("")}
+    .map(([family, items]) => `
+      <div class="version-group">
+        <div class="version-group-head">
+          <strong>${family} ${isNte() ? "大版本" : "版本"}</strong>
+          <span>${items.length} 个可用版本</span>
         </div>
-      `;
-    })
+        ${items.map((item) => versionButton(item)).join("")}
+      </div>
+    `)
     .join("");
 
   $$(".version-row").forEach((button) => {
@@ -163,63 +239,135 @@ const renderVersionMenu = () => {
   });
 };
 
+const versionButton = (item) => {
+  const family = item.version.split(".").slice(0, 2).join(".");
+  const isBase = item.version === `${family}.0`;
+  if (isNte()) {
+    return `
+      <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
+        <span class="version-number">${item.version}</span>
+        <span class="caps">
+          <span class="cap ${isBase ? "green" : "amber"}">${isBase ? "大版本" : "补丁版"}</span>
+          <span class="cap slate">${fmtDateTime(item.last_modified)}</span>
+          <span class="cap blue">完整</span>
+          <span class="cap violet">清单</span>
+          <span class="cap green">直链</span>
+        </span>
+      </button>
+    `;
+  }
+  return `
+    <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
+      <span class="version-number">${item.version}</span>
+      <span class="caps">
+        ${item.package_items ? '<span class="cap blue">压缩包</span>' : ""}
+        ${item.update_items ? '<span class="cap amber">更新包</span>' : ""}
+        ${item.has_chunk ? '<span class="cap violet">Chunk</span>' : ""}
+        ${item.has_decompressed_path ? '<span class="cap green">直链文件</span>' : ""}
+      </span>
+    </button>
+  `;
+};
+
 const renderStats = () => {
-  const version = currentVersion();
-  const okCount = availableVersions().length;
+  const stats = isNte() ? nteStats() : hoyoStats();
+  $("#stats").innerHTML = stats.map(([label, value]) => `<div class="stat"><span>${label}</span><strong>${value}</strong></div>`).join("");
+};
+
+const nteStats = () => {
+  const version = nteVersion();
   const family = version.version.split(".").slice(0, 2).join(".");
   const isBase = version.version === `${family}.0`;
-  const stats = [
+  return [
     ["当前版本", version.version],
     ["版本族", `${family} ${isBase ? "大版本" : "补丁版"}`],
     ["清单时间", fmtDateTime(version.last_modified)],
     ["完整文件", `${version.full.items} 个 / ${fmtBytes(version.full.bytes)}`],
     ["补丁文件", `${version.patches.items} 个 / ${fmtBytes(version.patches.bytes)}`],
   ];
-  $("#stats").innerHTML = stats.map(([label, value]) => `<div class="stat"><span>${label}</span><strong>${value}</strong></div>`).join("");
+};
+
+const hoyoStats = () => {
+  const summary = hoyoSummaries().find((item) => item.version === state.version);
+  const chunk = hoyoVersion()?.chunk;
+  return [
+    ["当前版本", state.version],
+    ["压缩包", `${summary?.package_items || 0} 个`],
+    ["更新包", `${summary?.update_items || 0} 个`],
+    ["直链体积", fmtBytes(summary?.direct_bytes || 0)],
+    ["Chunk", chunk ? chunk.tag || "可用" : "无"],
+  ];
 };
 
 const renderLinks = () => {
-  const files = currentFiles();
-  const disabled = state.mode === "reslist" || !files;
-  $("#urlsLink").classList.toggle("disabled", disabled);
-  $("#aria2Link").classList.toggle("disabled", disabled);
-  $("#jsonLink").classList.toggle("disabled", disabled);
-  $("#urlsLink").href = files?.urls || "#";
-  $("#aria2Link").href = files?.aria2 || "#";
-  $("#jsonLink").href = files?.json || "#";
+  if (isNte()) {
+    const files = nteFiles();
+    const disabled = state.mode === "reslist" || !files;
+    $("#urlsLink").classList.toggle("disabled", disabled);
+    $("#aria2Link").classList.toggle("disabled", disabled);
+    $("#jsonLink").classList.toggle("disabled", disabled);
+    $("#urlsLink").href = files?.urls || "#";
+    $("#aria2Link").href = files?.aria2 || "#";
+    $("#jsonLink").href = files?.json || "#";
+    return;
+  }
+
+  $("#urlsLink").classList.add("disabled");
+  $("#aria2Link").classList.add("disabled");
+  $("#jsonLink").classList.add("disabled");
+  $("#urlsLink").href = "#";
+  $("#aria2Link").href = "#";
+  $("#jsonLink").href = `data/hoyo/${state.gameId}_versions.json`;
+  $("#jsonLink").classList.remove("disabled");
 };
 
-const loadEntries = async () => {
+const renderPanelTitle = () => {
+  const modeLabel = modesForGame().find(([id]) => id === state.mode)?.[1] || "文件列表";
+  $("#selectedVersion").textContent = state.version || "-";
+  $("#copyCommandBtn").innerHTML = `${icons.copy}<span>复制下载命令</span>`;
+  $("#commandText").textContent = commandFor();
+  $("#panelKicker").textContent = isNte() ? "NTE files" : "Hoyo files";
+  $("#panelTitle").textContent = `${state.version} ${modeLabel}`;
+};
+
+const loadNteEntries = async () => {
   if (state.mode === "reslist") return [];
-  const files = currentFiles();
+  const files = nteFiles();
   if (!files?.json) return [];
   const key = `${state.version}:${state.mode}`;
-  if (!state.entries.has(key)) {
+  if (!state.nteEntries.has(key)) {
     const response = await fetch(files.json);
-    state.entries.set(key, await response.json());
+    state.nteEntries.set(key, await response.json());
   }
-  return state.entries.get(key);
+  return state.nteEntries.get(key);
 };
 
-const normalizeEntry = (entry, index, total) => {
+const loadHoyoChunk = async () => {
+  const key = `${state.gameId}:${state.version}`;
+  if (!state.chunkEntries.has(key)) {
+    const response = await fetch(`data/hoyo/chunk/${state.gameId}_${state.version}.json`);
+    const json = await response.json();
+    state.chunkEntries.set(key, json.data);
+  }
+  return state.chunkEntries.get(key);
+};
+
+const nteItem = (entry, index, total) => {
   if (state.mode === "patches") {
     const patch = entry.patch || "";
-    const name = patch || entry.url.split("/").at(-1);
     return {
       badge: "补丁分片",
-      title: name,
-      subtitle: `${entry.oldfile || "-"}  →  ${entry.newfile || "-"}`,
+      title: patch || entry.url.split("/").at(-1),
+      subtitle: `${entry.oldfile || "-"}  ->  ${entry.newfile || "-"}`,
       size: entry.filesize,
       hash: patch.split(".")[0] || "-",
       url: entry.url,
       count: `${index + 1}/${total}`,
     };
   }
-
-  const name = entry.filename?.split(/[\\/]/).at(-1) || entry.object;
   return {
     badge: "完整文件",
-    title: name,
+    title: entry.filename?.split(/[\\/]/).at(-1) || entry.object,
     subtitle: entry.filename || entry.object,
     size: entry.filesize,
     hash: entry.md5,
@@ -228,8 +376,49 @@ const normalizeEntry = (entry, index, total) => {
   };
 };
 
-const renderResList = () => {
-  const version = currentVersion();
+const hoyoPackageItems = () => {
+  const version = hoyoVersion();
+  if (!version) return [];
+  const items = [];
+  if (version.game?.full) items.push(hoyoDirectItem(version.game.full, "游戏包"));
+  if (version.game?.segments?.length) {
+    const total = version.game.segments.length;
+    version.game.segments.forEach((item, index) => {
+      items.push(hoyoDirectItem(item, "游戏包分卷", `${index + 1}/${total}`));
+    });
+  }
+  for (const [lang, item] of Object.entries(version.voice || {})) {
+    if (item) items.push(hoyoDirectItem(item, "语音包", audioLabels[lang] || lang));
+  }
+  return items;
+};
+
+const hoyoUpdateItems = () => {
+  const version = hoyoVersion();
+  if (!version) return [];
+  const items = [];
+  const fromVersions = Object.keys(version.update || {}).sort(compareVersions).reverse();
+  for (const from of fromVersions) {
+    const patch = version.update[from];
+    if (patch?.game) items.push(hoyoDirectItem(patch.game, "游戏包更新", `${from} -> ${state.version}`));
+    for (const [lang, item] of Object.entries(patch?.voice || {})) {
+      if (item) items.push(hoyoDirectItem(item, "语音包更新", `${audioLabels[lang] || lang} ${from} -> ${state.version}`));
+    }
+  }
+  return items;
+};
+
+const hoyoDirectItem = (item, badge, sublabel = "") => ({
+  badge,
+  title: item.name,
+  subtitle: sublabel || item.url,
+  size: item.size,
+  hash: item.checksum,
+  url: item.url,
+});
+
+const renderNteResList = () => {
+  const version = nteVersion();
   const rows = [
     ["ResList.bin.zip", "官方版本清单入口", version.reslist_bytes, "PatcherXML0", version.reslist_url],
     ["完整 URL 列表", `${version.full.items} 个文件`, version.full.bytes, "urls.txt", version.full.urls],
@@ -253,18 +442,63 @@ const renderResList = () => {
   bindCardActions();
 };
 
+const renderHoyoChunk = async () => {
+  const version = hoyoVersion();
+  if (!version?.chunk) {
+    $("#fileList").innerHTML = `<div class="empty">该版本没有 Chunk 信息</div>`;
+    return;
+  }
+  const chunk = await loadHoyoChunk();
+  const manifests = chunk.manifests || [];
+  const summary = manifests.reduce((acc, item) => {
+    acc.files += Number(item.stats?.file_count || 0);
+    acc.chunks += Number(item.stats?.chunk_count || 0);
+    acc.compressed += Number(item.stats?.compressed_size || item.manifest?.compressed_size || 0);
+    acc.uncompressed += Number(item.stats?.uncompressed_size || item.manifest?.uncompressed_size || 0);
+    return acc;
+  }, { files: 0, chunks: 0, compressed: 0, uncompressed: 0 });
+
+  const header = `
+    <div class="chunk-summary">
+      <div><span>Build Id</span><strong>${escapeHtml(chunk.build_id || "-")}</strong></div>
+      <div><span>Manifest</span><strong>${manifests.length.toLocaleString()}</strong></div>
+      <div><span>文件数</span><strong>${summary.files.toLocaleString()}</strong></div>
+      <div><span>文件块</span><strong>${summary.chunks.toLocaleString()}</strong></div>
+      <div><span>压缩大小</span><strong>${fmtBytes(summary.compressed)}</strong></div>
+      <div><span>解压大小</span><strong>${fmtBytes(summary.uncompressed)}</strong></div>
+    </div>
+  `;
+
+  const filtered = filterEntries(manifests);
+  $("#fileList").innerHTML = header + (filtered.length ? filtered
+    .map((item, index) => {
+      const url = `${item.manifest_download.url_prefix}/${item.manifest.id}`;
+      return fileCard({
+        badge: "Chunk Manifest",
+        title: item.category_name,
+        subtitle: `manifest id: ${item.manifest.id} / matching field: ${item.matching_field || "-"}`,
+        size: Number(item.stats?.compressed_size || item.manifest?.compressed_size || 0),
+        hash: item.manifest.checksum,
+        url,
+        count: `${index + 1}/${filtered.length}`,
+      });
+    })
+    .join("") : `<div class="empty">没有匹配到 Chunk Manifest</div>`);
+  bindCardActions();
+};
+
 const fileCard = (item) => `
   <article class="file-card">
     <div class="file-icon">${icons.box}</div>
     <div class="file-main">
       <div class="file-title">
-        <span class="pill">${item.badge}</span>
-        <span class="count">${item.count}</span>
+        <span class="pill">${escapeHtml(item.badge)}</span>
+        <span class="count">${escapeHtml(item.count || "")}</span>
         <strong>${escapeHtml(item.title)}</strong>
       </div>
       <div class="file-meta">
         <span>${fmtBytes(item.size)}</span>
-        <span># ${escapeHtml(item.hash)}</span>
+        <span># ${escapeHtml(item.hash || "-")}</span>
       </div>
       <div class="file-path">${escapeHtml(item.subtitle)}</div>
     </div>
@@ -282,38 +516,81 @@ const bindCardActions = () => {
 };
 
 const renderList = async () => {
-  if (state.mode === "reslist") {
-    renderResList();
+  if (isNte()) {
+    if (state.mode === "reslist") {
+      renderNteResList();
+      return;
+    }
+    const entries = await loadNteEntries();
+    const filtered = filterEntries(entries);
+    $("#fileList").innerHTML = filtered
+      .map((entry, index) => fileCard(nteItem(entry, index, filtered.length)))
+      .join("") || `<div class="empty">没有匹配到文件</div>`;
+    bindCardActions();
     return;
   }
 
-  const entries = await loadEntries();
-  const needle = state.query;
-  const filtered = entries.filter((entry) => JSON.stringify(entry).toLowerCase().includes(needle));
+  if (state.mode === "chunk") {
+    await renderHoyoChunk();
+    return;
+  }
+
+  const entries = state.mode === "packages" ? hoyoPackageItems() : hoyoUpdateItems();
+  const filtered = filterEntries(entries);
   $("#fileList").innerHTML = filtered
-    .map((entry, index) => fileCard(normalizeEntry(entry, index, filtered.length)))
-    .join("") || `<div class="empty">没有匹配到文件</div>`;
+    .map((entry, index) => fileCard({ ...entry, count: `${index + 1}/${filtered.length}` }))
+    .join("") || `<div class="empty">该版本没有${state.mode === "packages" ? "压缩包" : "更新包"}直链</div>`;
   bindCardActions();
 };
 
+const filterEntries = (entries) => {
+  const needle = state.query;
+  return entries.filter((entry) => JSON.stringify(entry).toLowerCase().includes(needle));
+};
+
+const ensureGameData = async () => {
+  if (isNte()) {
+    state.version = nteVersions().sort((a, b) => compareVersions(b.version, a.version))[0].version;
+    return;
+  }
+  if (!state.hoyoVersions.has(state.gameId)) {
+    const response = await fetch(`data/hoyo/${state.gameId}_versions.json`);
+    state.hoyoVersions.set(state.gameId, await response.json());
+  }
+  const versions = hoyoSummaries()
+    .filter((item) => item.package_items || item.update_items || item.has_chunk)
+    .sort((a, b) => compareVersions(b.version, a.version));
+  state.version = versions[0]?.version || null;
+};
+
+const renderNotice = () => {
+  const notice = $("#notes");
+  if (isNte()) {
+    notice.innerHTML = `<strong>技术说明</strong><span>页面仅保存由官方 CDN 清单解析出的 URL、校验信息与下载索引；解密流程与复现细节见仓库 README。</span>`;
+  } else {
+    notice.innerHTML = `<strong>数据来源</strong><span>米家游戏数据迁移自 HoyoFiles 的公开版本清单接口，并在本站保存为静态索引；Chunk 视图只展示 Manifest 入口与统计信息。</span>`;
+  }
+};
+
 const render = () => {
-  const version = currentVersion();
-  $("#selectedVersion").textContent = version.version;
-  $("#copyCommandBtn").innerHTML = `${icons.copy}<span>复制下载命令</span>`;
-  $("#commandText").textContent = commandFor(version.version);
-  $("#panelKicker").textContent = state.mode === "full" ? "Full files" : state.mode === "patches" ? "Patch objects" : "Manifests";
-  $("#panelTitle").textContent = `${version.version} ${state.mode === "full" ? "完整文件" : state.mode === "patches" ? "更新补丁" : "清单文件"}`;
+  renderGameRail();
+  renderBrand();
+  renderModes();
   renderVersionMenu();
   renderStats();
   renderLinks();
+  renderPanelTitle();
+  renderNotice();
   renderList();
 };
 
-fetch("./data/catalog.json")
-  .then((response) => response.json())
-  .then((catalog) => {
-    state.catalog = catalog;
-    state.version = availableVersions().sort((a, b) => compareVersions(b.version, a.version))[0].version;
-    bindStaticActions();
-    render();
-  });
+Promise.all([
+  fetch("./data/catalog.json").then((response) => response.json()),
+  fetch("./data/hoyo/games.json").then((response) => response.json()),
+]).then(async ([nteCatalog, hoyoIndex]) => {
+  state.nteCatalog = nteCatalog;
+  state.hoyoIndex = hoyoIndex;
+  bindStaticActions();
+  await ensureGameData();
+  render();
+});

@@ -11,6 +11,10 @@ reproduction. It does not mirror, repackage, or redistribute game binaries.
 | Game | Platform | Status |
 | --- | --- | --- |
 | Neverness to Everness / 异环 | Windows PC | Version manifests decoded and indexed |
+| Genshin Impact / 原神 | Windows PC | HoyoFiles version metadata migrated |
+| Honkai: Star Rail / 崩坏：星穹铁道 | Windows PC | HoyoFiles version metadata migrated |
+| Zenless Zone Zero / 绝区零 | Windows PC | HoyoFiles version metadata migrated |
+| Honkai Impact 3 / 崩坏3 | Windows PC | HoyoFiles version metadata migrated |
 
 More games can be added later as long as their official launcher manifests or
 CDN metadata can be reproduced.
@@ -48,6 +52,10 @@ docs/
   data/
     catalog.json            Version summary used by the static UI
     url_lists/              Per-version URL, aria2, and JSON indexes
+    hoyo/
+      games.json            Migrated HoyoFiles game/version summary
+      *_versions.json       Per-game package/update/chunk metadata
+      chunk/                Per-version Chunk manifest summaries
 scripts/
   archive_reslist_versions.py
                              Fetch, decode, and index versioned ResList archives
@@ -81,6 +89,20 @@ https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/{version}/
 
 Observed available versions include `1.0.0`, `1.0.1`, `1.0.3`, `1.0.5` through
 `1.0.9`, `1.0.11`, `1.0.13` through `1.0.15`, and `1.1.0` through `1.1.5`.
+
+## HoyoFiles Migration
+
+The HoYo game data shown in the static UI is migrated from public HoyoFiles
+metadata:
+
+```text
+https://hoyo-files.amarea.cn
+https://autopatch.amarea.cn/pkg_version
+```
+
+The migrated data includes version lists, direct package/update URLs, checksums,
+sizes, decompressed-path capability flags, and Chunk manifest summaries. It does
+not mirror game files or expanded chunk contents.
 
 ## Downloader
 
