@@ -163,6 +163,12 @@ const setActiveSideLink = (sectionId) => {
 };
 
 const updateActiveSideLink = () => {
+  const hashSection = location.hash.replace("#", "");
+  if (sideSections.includes(hashSection)) {
+    setActiveSideLink(hashSection);
+    return;
+  }
+
   const threshold = 24;
   const current = sideSections
     .map((id) => ({
