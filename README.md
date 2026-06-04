@@ -97,6 +97,40 @@ https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/{version}/
 Observed available versions include `1.0.0`, `1.0.1`, `1.0.3`, `1.0.5` through
 `1.0.9`, `1.0.11`, `1.0.13` through `1.0.15`, and `1.1.0` through `1.1.5`.
 
+## Genshin CDN Evolution
+
+The Genshin Impact CN PC distribution history exposes several distinct official
+CDN architectures. The site detects these states from actual package,
+`decompressed_path`, and Chunk metadata rather than relying only on version
+number ranges.
+
+| Stage | Observed versions | Typical path | Distribution characteristics |
+| --- | --- | --- | --- |
+| Packed client | 1.0 - 1.3 | `client_app/pc_mihoyo/{build}/YuanShen_x.x.x.zip` | Primarily complete ZIP packages; no stable expanded-file root was observed |
+| Experimental direct files | 1.4 | `client_app/pc_test/{build}/1.4.0cnrel/{path}` | Expanded files appeared under a separate `pc_test` build |
+| Direct-file gap | 1.5 | No confirmed expanded-file root | Package distribution remained, while the experimental direct-file path disappeared |
+| Official file-tree dual distribution | 1.6 - 2.2 | `client_app/pc_mihoyo/{build}/{version}/{path}` | Complete packages and an expanded official file tree coexisted |
+| ScatteredFiles dual distribution | 2.3 - 4.1 | `client_app/download/pc_zip/{release_id}/ScatteredFiles/{path}` | Packages and expanded files shared a normalized release directory |
+| Three-track distribution | 4.2 - 5.5 | Packages + `ScatteredFiles` + Chunk Manifest | Complete packages, direct files, and Chunk downloads coexisted |
+| Chunk-only distribution | 5.6 onward | Manifest files and content-addressed chunks | Traditional packages and expanded-file roots disappeared from the public version metadata |
+
+Representative direct-file URLs for the root `YuanShen.exe`:
+
+```text
+1.4.0
+https://autopatchcn.yuanshen.com/client_app/pc_test/20210331_f0cd161954d6ed7e/1.4.0cnrel/YuanShen.exe
+
+2.2.0
+https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/20211013_a336065295309dbe/2.2.0/YuanShen.exe
+
+2.3.0
+https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20211117173857_8JkfDHNPmqKi67qR/ScatteredFiles/YuanShen.exe
+```
+
+Chunk metadata is present from version `4.2.0`. Version `5.6.0` is the observed
+transition point where public package and `decompressed_path` metadata stopped,
+leaving Chunk Manifest distribution as the only indexed full-file source.
+
 ## HoyoFiles Migration
 
 The HoYo game data shown in the static UI is migrated from public HoyoFiles

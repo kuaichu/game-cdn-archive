@@ -210,6 +210,26 @@ const hoyoSummaries = () => hoyoSummary()?.versions || [];
 const endfieldVersion = () => state.endfieldVersions?.[state.version] || null;
 const endfieldSummaries = () => state.endfieldIndex?.versions || [];
 
+const hoyoDistributionProfile = (summary, version = null) => {
+  const row = version || hoyoVersionMap()?.[summary?.version] || {};
+  const path = String(row?.decompressed_path || "");
+  const hasPackage = Boolean(summary?.package_items || row?.game?.full || row?.game?.segments?.length);
+  const hasDirect = Boolean(summary?.has_decompressed_path || path);
+  const hasChunk = Boolean(summary?.has_chunk || row?.chunk);
+
+  if (hasPackage && hasDirect && hasChunk) return { label: "三轨并行", color: "violet", detail: "压缩包 + 散文件直链 + Chunk" };
+  if (hasChunk && !hasPackage && !hasDirect) return { label: "Chunk 独占", color: "violet", detail: "Chunk Manifest 文件分发" };
+  if (hasChunk && hasDirect) return { label: "直链 + Chunk", color: "violet", detail: "散文件直链 + Chunk" };
+  if (hasChunk && hasPackage) return { label: "压缩包 + Chunk", color: "violet", detail: "压缩包 + Chunk" };
+  if (path.includes("/pc_test/")) return { label: "实验直链", color: "amber", detail: "pc_test 文件树 + 压缩包" };
+  if (path.includes("/pc_mihoyo/")) return { label: "正式文件树", color: "green", detail: "pc_mihoyo 文件树 + 压缩包" };
+  if (path.includes("/ScatteredFiles")) return { label: "ScatteredFiles", color: "green", detail: "ScatteredFiles 散文件 + 压缩包" };
+  if (hasPackage && hasDirect) return { label: "压缩包 + 直链", color: "green", detail: "压缩包 + 官方散文件直链" };
+  if (hasDirect) return { label: "直链文件", color: "green", detail: "官方散文件直链" };
+  if (hasPackage) return { label: "整包分发", color: "blue", detail: "完整压缩包分发" };
+  return { label: "索引记录", color: "slate", detail: "仅保存版本索引" };
+};
+
 const availableSummaries = () => {
   if (isNte()) return nteVersions();
   if (isEndfield()) return endfieldSummaries();
@@ -390,14 +410,13 @@ const versionButton = (item) => {
       </button>
     `;
   }
+  const profile = hoyoDistributionProfile(item);
   return `
     <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
       <span class="version-number">${item.version}</span>
       <span class="caps">
-        ${item.package_items ? '<span class="cap blue">压缩包</span>' : ""}
+        <span class="cap ${profile.color}">${profile.label}</span>
         ${item.update_items ? '<span class="cap amber">更新包</span>' : ""}
-        ${item.has_chunk ? '<span class="cap violet">Chunk</span>' : ""}
-        ${item.has_decompressed_path ? '<span class="cap green">直链文件</span>' : ""}
       </span>
     </button>
   `;
@@ -435,13 +454,14 @@ const nteStats = () => {
 
 const hoyoStats = () => {
   const summary = hoyoSummaries().find((item) => item.version === state.version);
-  const chunk = hoyoVersion()?.chunk;
+  const version = hoyoVersion();
+  const profile = hoyoDistributionProfile(summary, version);
   return [
     ["当前版本", state.version],
+    ["分发架构", profile.label],
     ["压缩包", `${summary?.package_items || 0} 个`],
-    ["更新包", `${summary?.update_items || 0} 个`],
-    ["直链体积", fmtBytes(summary?.direct_bytes || 0)],
-    ["Chunk", chunk ? chunk.tag || "可用" : "无"],
+    ["散文件直链", version?.decompressed_path ? "可用" : "无"],
+    ["Chunk", version?.chunk ? version.chunk.tag || "可用" : "无"],
   ];
 };
 
@@ -1596,14 +1616,24 @@ const renderNotice = () => {
       </div>
     `;
   } else {
+    const profile = hoyoDistributionProfile(
+      hoyoSummaries().find((item) => item.version === state.version),
+      hoyoVersion(),
+    );
+    const downloadOrder = hoyoVersion()?.decompressed_path
+      ? "文件下载优先使用官方散文件直链；若同时存在 Chunk，可作为兜底。"
+      : hoyoVersion()?.chunk
+        ? "文件下载通过官方 Chunk Manifest 定位、下载并合并。"
+        : "该版本主要通过官方压缩包分发。";
     notice.innerHTML = `
       <div class="notice-copy">
-        <strong>数据来源</strong>
-        <span>米家游戏数据迁移自 HoyoFiles 的公开版本清单接口；文件清单与版本对比会按需读取上游文件级 pkg_version 索引，Chunk 视图暂展示 Manifest 入口与统计信息。</span>
+        <strong>${escapeHtml(profile.label)}</strong>
+        <span>${escapeHtml(profile.detail)}。${escapeHtml(downloadOrder)}文件清单与版本对比按需读取 HoyoFiles 的 pkg_version 索引。</span>
       </div>
       <div class="source-links">
         <a class="source-link" href="https://hoyo-files.amarea.cn/" target="_blank" rel="noreferrer">hoyo-files.amarea.cn</a>
         <a class="source-link" href="${HOYOFILES_API_BASE}/${state.gameId}/${state.version}/pkg_version" target="_blank" rel="noreferrer">pkg_version 文件清单</a>
+        ${state.gameId === "hk4e" ? `<a class="source-link" href="${REPOSITORY_URL}#genshin-cdn-evolution" target="_blank" rel="noreferrer">原神 CDN 演进</a>` : ""}
       </div>
     `;
   }
