@@ -5,6 +5,8 @@ const state = {
   query: "",
   nteCatalog: null,
   hoyoIndex: null,
+  endfieldIndex: null,
+  endfieldVersions: null,
   hoyoVersions: new Map(),
   nteEntries: new Map(),
   chunkEntries: new Map(),
@@ -52,6 +54,12 @@ const hoyoModes = [
   ["packages", "压缩包"],
   ["updates", "更新包"],
   ["chunk", "Chunk 信息"],
+];
+
+const endfieldModes = [
+  ["packages", "完整包"],
+  ["patches", "更新补丁"],
+  ["archive", "归档信息"],
 ];
 
 const fmtBytes = (bytes) => {
@@ -114,6 +122,7 @@ const copyText = async (text, label = "已复制") => {
 
 const allGames = () => [
   nteGame,
+  ...(state.endfieldIndex?.game ? [state.endfieldIndex.game] : []),
   ...(state.hoyoIndex?.games || []).map((game) => ({
     ...game,
     subName: hoyoEnglishNames[game.id] || game.name,
@@ -124,7 +133,8 @@ const allGames = () => [
 
 const currentGame = () => allGames().find((game) => game.id === state.gameId) || nteGame;
 const isNte = () => currentGame().kind === "nte";
-const modesForGame = () => (isNte() ? nteModes : hoyoModes);
+const isEndfield = () => currentGame().kind === "endfield";
+const modesForGame = () => (isNte() ? nteModes : isEndfield() ? endfieldModes : hoyoModes);
 
 const nteVersions = () => state.nteCatalog.versions.filter((item) => item.status === 200 && item.full);
 const nteVersion = () => state.nteCatalog.versions.find((item) => item.version === state.version);
@@ -135,14 +145,20 @@ const hoyoVersionMap = () => state.hoyoVersions.get(state.gameId);
 const hoyoVersion = () => hoyoVersionMap()?.[state.version] || null;
 const hoyoSummaries = () => hoyoSummary()?.versions || [];
 
+const endfieldVersion = () => state.endfieldVersions?.[state.version] || null;
+const endfieldSummaries = () => state.endfieldIndex?.versions || [];
+
 const versionFamily = (version) => {
   const parts = version.split(".");
-  return isNte() ? parts.slice(0, 2).join(".") : `${parts[0]}.x`;
+  return isNte() || isEndfield() ? parts.slice(0, 2).join(".") : `${parts[0]}.x`;
 };
 
 const commandFor = () => {
   if (isNte()) {
     return `python scripts\\nte_downloader.py download ${state.version} --download-root downloads --workers 4 --pack --pack-dir packages`;
+  }
+  if (isEndfield()) {
+    return `aria2c -c -x16 -s16 data/endfield/lists/${state.version}_${state.mode === "patches" ? "patches" : "packages"}.aria2.txt`;
   }
   return `aria2c -c -x16 -s16 <从页面复制对应 URL 列表>`;
 };
@@ -217,6 +233,8 @@ const renderModes = () => {
 const renderVersionMenu = () => {
   const versions = isNte()
     ? nteVersions()
+    : isEndfield()
+      ? endfieldSummaries()
     : hoyoSummaries().filter((item) => item.package_items || item.update_items || item.has_chunk);
 
   const groups = [...versions]
@@ -232,7 +250,7 @@ const renderVersionMenu = () => {
     .map(([family, items]) => `
       <div class="version-group">
         <div class="version-group-head">
-          <strong>${family} ${isNte() ? "大版本" : "版本"}</strong>
+          <strong>${family} ${isNte() || isEndfield() ? "大版本" : "版本"}</strong>
           <span>${items.length} 个可用版本</span>
         </div>
         ${items.map((item) => versionButton(item)).join("")}
@@ -267,6 +285,19 @@ const versionButton = (item) => {
       </button>
     `;
   }
+  if (isEndfield()) {
+    return `
+      <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
+        <span class="version-number">${item.version}</span>
+        <span class="caps">
+          <span class="cap slate">${fmtDateTime(item.released_at)}</span>
+          <span class="cap blue">${item.package_items} 个完整分卷</span>
+          ${item.patch_routes ? `<span class="cap amber">${item.patch_routes} 条更新路径</span>` : ""}
+          ${item.mirror_items ? '<span class="cap green">归档镜像</span>' : ""}
+        </span>
+      </button>
+    `;
+  }
   return `
     <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
       <span class="version-number">${item.version}</span>
@@ -281,8 +312,20 @@ const versionButton = (item) => {
 };
 
 const renderStats = () => {
-  const stats = isNte() ? nteStats() : hoyoStats();
+  const stats = isNte() ? nteStats() : isEndfield() ? endfieldStats() : hoyoStats();
   $("#stats").innerHTML = stats.map(([label, value]) => `<div class="stat"><span>${label}</span><strong>${value}</strong></div>`).join("");
+};
+
+const endfieldStats = () => {
+  const summary = endfieldSummaries().find((item) => item.version === state.version);
+  const version = endfieldVersion();
+  return [
+    ["当前版本", state.version],
+    ["归档时间", fmtDateTime(summary?.released_at)],
+    ["完整包", `${summary?.package_items || 0} 个 / ${fmtBytes(summary?.packed_size || 0)}`],
+    ["解压大小", fmtBytes(summary?.unpacked_size || 0)],
+    ["更新路径", `${version?.patches?.length || 0} 条`],
+  ];
 };
 
 const nteStats = () => {
@@ -323,6 +366,18 @@ const renderLinks = () => {
     return;
   }
 
+  if (isEndfield()) {
+    const links = endfieldVersion()?.links?.[state.mode];
+    const disabled = !links || state.mode === "archive";
+    $("#urlsLink").classList.toggle("disabled", disabled);
+    $("#aria2Link").classList.toggle("disabled", disabled);
+    $("#urlsLink").href = links?.urls || "#";
+    $("#aria2Link").href = links?.aria2 || "#";
+    $("#jsonLink").href = "data/endfield/versions.json";
+    $("#jsonLink").classList.remove("disabled");
+    return;
+  }
+
   $("#urlsLink").classList.add("disabled");
   $("#aria2Link").classList.add("disabled");
   $("#jsonLink").classList.add("disabled");
@@ -337,7 +392,7 @@ const renderPanelTitle = () => {
   $("#selectedVersion").textContent = state.version || "-";
   $("#copyCommandBtn").innerHTML = `${icons.copy}<span>复制下载命令</span>`;
   $("#commandText").textContent = commandFor();
-  $("#panelKicker").textContent = isNte() ? "NTE files" : "Hoyo files";
+  $("#panelKicker").textContent = isNte() ? "NTE files" : isEndfield() ? "Endfield files" : "Hoyo files";
   $("#panelTitle").textContent = `${state.version} ${modeLabel}`;
 };
 
@@ -428,6 +483,76 @@ const hoyoDirectItem = (item, badge, sublabel = "") => ({
   url: item.url,
 });
 
+const endfieldPackageItems = () => {
+  const version = endfieldVersion();
+  if (!version) return [];
+  return version.packages.map((item) => ({
+    badge: item.official_available ? "官方完整分卷" : "归档完整分卷",
+    title: item.name,
+    subtitle: item.official_available ? "官方签名链接当前可用" : "官方签名已过期，提供公开归档镜像",
+    size: item.size,
+    hash: item.md5,
+    officialUrl: item.official_url,
+    officialAvailable: item.official_available,
+    mirrorUrl: item.mirror_url,
+    preferredUrl: item.preferred_url,
+  }));
+};
+
+const endfieldPatchItems = () => {
+  const version = endfieldVersion();
+  if (!version) return [];
+  return version.patches.flatMap((route) => route.parts.map((item) => ({
+    badge: "更新分卷",
+    title: item.name,
+    subtitle: `${route.from} -> ${route.to}${item.official_available ? " / 官方可用" : " / 使用归档镜像"}`,
+    size: item.size,
+    hash: item.md5,
+    officialUrl: item.official_url,
+    officialAvailable: item.official_available,
+    mirrorUrl: item.mirror_url,
+    preferredUrl: item.preferred_url,
+  })));
+};
+
+const renderEndfieldArchive = () => {
+  const rows = [
+    {
+      badge: "上游归档",
+      title: "ak-endfield-api-archive",
+      subtitle: "持续记录官方启动器 API 返回与文件镜像状态",
+      hash: "GitHub",
+      url: state.endfieldIndex.source,
+    },
+    {
+      badge: "下载库",
+      title: "Endfield API Archive",
+      subtitle: "上游项目提供的版本与下载入口",
+      hash: "Archive",
+      url: state.endfieldIndex.source_site,
+    },
+    {
+      badge: "官方接口",
+      title: "Hypergryph Launcher API",
+      subtitle: "国服官方渠道最新版本接口",
+      hash: "Official",
+      url: state.endfieldIndex.official_api,
+    },
+    {
+      badge: "本站索引",
+      title: "Endfield versions.json",
+      subtitle: "本站生成的精简静态索引",
+      hash: "JSON",
+      url: "data/endfield/versions.json",
+    },
+  ];
+  $("#fileList").innerHTML = rows.map((item, index) => fileCard({
+    ...item,
+    count: `${index + 1}/${rows.length}`,
+  })).join("");
+  bindCardActions();
+};
+
 const renderNteResList = () => {
   const version = nteVersion();
   const rows = [
@@ -498,27 +623,37 @@ const renderHoyoChunk = async () => {
   bindCardActions();
 };
 
-const fileCard = (item) => `
-  <article class="file-card">
-    <div class="file-icon">${icons.box}</div>
-    <div class="file-main">
-      <div class="file-title">
-        <span class="pill">${escapeHtml(item.badge)}</span>
-        <span class="count">${escapeHtml(item.count || "")}</span>
-        <strong>${escapeHtml(item.title)}</strong>
+const fileCard = (item) => {
+  const preferredUrl = item.preferredUrl || item.url;
+  const actions = item.officialUrl
+    ? `
+      <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="复制当前可用链接">${icons.copy}<span>复制可用链接</span></button>
+      <a class="icon-button ${item.officialAvailable ? "" : "stale-link"}" href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noreferrer" title="${item.officialAvailable ? "官方链接" : "官方签名可能已过期"}">${icons.down}<span>官方${item.officialAvailable ? "" : "已过期"}</span></a>
+      ${item.mirrorUrl ? `<a class="icon-button mirror-link" href="${escapeHtml(item.mirrorUrl)}" target="_blank" rel="noreferrer" title="公开归档镜像">${icons.down}<span>归档镜像</span></a>` : ""}
+    `
+    : `
+      <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="复制链接">${icons.copy}<span>复制链接</span></button>
+      <a class="icon-button" href="${escapeHtml(preferredUrl)}" target="_blank" rel="noreferrer" title="打开">${icons.down}<span>打开</span></a>
+    `;
+  return `
+    <article class="file-card">
+      <div class="file-icon">${icons.box}</div>
+      <div class="file-main">
+        <div class="file-title">
+          <span class="pill">${escapeHtml(item.badge)}</span>
+          <span class="count">${escapeHtml(item.count || "")}</span>
+          <strong>${escapeHtml(item.title)}</strong>
+        </div>
+        <div class="file-meta">
+          <span>${fmtBytes(item.size)}</span>
+          <span># ${escapeHtml(item.hash || "-")}</span>
+        </div>
+        <div class="file-path">${escapeHtml(item.subtitle)}</div>
       </div>
-      <div class="file-meta">
-        <span>${fmtBytes(item.size)}</span>
-        <span># ${escapeHtml(item.hash || "-")}</span>
-      </div>
-      <div class="file-path">${escapeHtml(item.subtitle)}</div>
-    </div>
-    <div class="file-actions">
-      <button class="icon-button copy-link" type="button" data-url="${escapeHtml(item.url)}" title="复制链接">${icons.copy}<span>复制链接</span></button>
-      <a class="icon-button" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer" title="下载">${icons.down}<span>下载</span></a>
-    </div>
-  </article>
-`;
+      <div class="file-actions">${actions}</div>
+    </article>
+  `;
+};
 
 const bindCardActions = () => {
   $$(".copy-link").forEach((button) => {
@@ -537,6 +672,20 @@ const renderList = async () => {
     $("#fileList").innerHTML = filtered
       .map((entry, index) => fileCard(nteItem(entry, index, filtered.length)))
       .join("") || `<div class="empty">没有匹配到文件</div>`;
+    bindCardActions();
+    return;
+  }
+
+  if (isEndfield()) {
+    if (state.mode === "archive") {
+      renderEndfieldArchive();
+      return;
+    }
+    const entries = state.mode === "packages" ? endfieldPackageItems() : endfieldPatchItems();
+    const filtered = filterEntries(entries);
+    $("#fileList").innerHTML = filtered
+      .map((entry, index) => fileCard({ ...entry, count: `${index + 1}/${filtered.length}` }))
+      .join("") || `<div class="empty">该版本没有${state.mode === "packages" ? "完整包" : "更新补丁"}记录</div>`;
     bindCardActions();
     return;
   }
@@ -564,6 +713,10 @@ const ensureGameData = async () => {
     state.version = nteVersions().sort((a, b) => compareVersions(b.version, a.version))[0].version;
     return;
   }
+  if (isEndfield()) {
+    state.version = endfieldSummaries().sort((a, b) => compareVersions(b.version, a.version))[0]?.version || null;
+    return;
+  }
   if (!state.hoyoVersions.has(state.gameId)) {
     const response = await fetch(`data/hoyo/${state.gameId}_versions.json`);
     state.hoyoVersions.set(state.gameId, await response.json());
@@ -578,6 +731,8 @@ const renderNotice = () => {
   const notice = $("#notes");
   if (isNte()) {
     notice.innerHTML = `<strong>技术说明</strong><span>页面仅保存由官方 CDN 清单解析出的 URL、校验信息与下载索引；解密流程与复现细节见仓库 README。</span>`;
+  } else if (isEndfield()) {
+    notice.innerHTML = `<strong>链接状态</strong><span>数据来自官方启动器 API 的持续归档。官方历史下载链接带短期签名，失效文件会同时提供由上游公开保存的归档镜像，并在页面中明确标注。</span>`;
   } else {
     notice.innerHTML = `<strong>数据来源</strong><span>米家游戏数据迁移自 HoyoFiles 的公开版本清单接口，并在本站保存为静态索引；Chunk 视图只展示 Manifest 入口与统计信息。</span>`;
   }
@@ -598,9 +753,13 @@ const render = () => {
 Promise.all([
   fetch("./data/catalog.json").then((response) => response.json()),
   fetch("./data/hoyo/games.json").then((response) => response.json()),
-]).then(async ([nteCatalog, hoyoIndex]) => {
+  fetch("./data/endfield/index.json").then((response) => response.json()),
+  fetch("./data/endfield/versions.json").then((response) => response.json()),
+]).then(async ([nteCatalog, hoyoIndex, endfieldIndex, endfieldVersions]) => {
   state.nteCatalog = nteCatalog;
   state.hoyoIndex = hoyoIndex;
+  state.endfieldIndex = endfieldIndex;
+  state.endfieldVersions = endfieldVersions;
   bindStaticActions();
   await ensureGameData();
   render();

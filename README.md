@@ -11,6 +11,7 @@ reproduction. It does not mirror, repackage, or redistribute game binaries.
 | Game | Platform | Status |
 | --- | --- | --- |
 | Neverness to Everness / 异环 | Windows PC | Version manifests decoded and indexed |
+| Arknights: Endfield / 明日方舟：终末地 | Windows PC | Official launcher API history and archive mirrors indexed |
 | Genshin Impact / 原神 | Windows PC | HoyoFiles version metadata migrated |
 | Honkai: Star Rail / 崩坏：星穹铁道 | Windows PC | HoyoFiles version metadata migrated |
 | Zenless Zone Zero / 绝区零 | Windows PC | HoyoFiles version metadata migrated |
@@ -56,6 +57,10 @@ docs/
       games.json            Migrated HoyoFiles game/version summary
       *_versions.json       Per-game package/update/chunk metadata
       chunk/                Per-version Chunk manifest summaries
+    endfield/
+      index.json            Compact game/version summary
+      versions.json         Official URLs, checksums, status, and mirror URLs
+      lists/                Preferred URL and aria2 download lists
 scripts/
   archive_reslist_versions.py
                              Fetch, decode, and index versioned ResList archives
@@ -63,6 +68,8 @@ scripts/
                              Build URL/aria2 indexes from decoded ResList XML
   decode_patcherxml0.py     Decode protected PatcherXML0 XML files
   nte_downloader.py         Prepare, download, verify, and pack client files
+  import_endfield_archive.py
+                             Import compact Endfield indexes from the upstream archive
 ```
 
 ## NTE Manifest Notes
@@ -104,6 +111,25 @@ The migrated data includes version lists, direct package/update URLs, checksums,
 sizes, decompressed-path capability flags, and Chunk manifest summaries. It does
 not mirror game files or expanded chunk contents.
 
+## Endfield Archive Import
+
+The Endfield view is generated from the public
+[`daydreamer-json/ak-endfield-api-archive`](https://github.com/daydreamer-json/ak-endfield-api-archive)
+history for the CN official channel:
+
+```bash
+python scripts/import_endfield_archive.py path/to/ak-endfield-api-archive
+```
+
+Official historical download URLs use expiring signatures. When the upstream
+archive records an official URL as unavailable, the UI separately exposes its
+public archive mirror and uses that mirror in generated URL/aria2 lists. This
+repository only indexes those external URLs and does not host game files.
+
+The Endfield navigation icon is sourced from
+[`Yue-plus/endfield_icons`](https://github.com/Yue-plus/endfield_icons) under
+the MIT License.
+
 ## Downloader
 
 Install dependency:
@@ -144,5 +170,6 @@ python scripts/nte_downloader.py pack 1.1.5 --download-root downloads --output-d
 
 ## Disclaimer
 
-This project is an unofficial digital preservation index. All URLs point to
-official distribution infrastructure. No game binaries are redistributed here.
+This project is an unofficial digital preservation index. URLs point to official
+distribution infrastructure or clearly labeled public archive mirrors. No game
+binaries are redistributed from this repository.

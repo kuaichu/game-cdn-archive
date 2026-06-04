@@ -1,0 +1,61 @@
+{
+  "source": "https://github.com/daydreamer-json/ak-endfield-api-archive",
+  "source_site": "https://ak-endfield-api-archive.daydreamer-json.cc/",
+  "official_api": "https://launcher.hypergryph.com/api/game/get_latest?appcode=6LL0KJuqHBVz33WK&launcher_appcode=abYeZZ16BPluCFyT&channel=1&sub_channel=1&launcher_sub_channel=1",
+  "generated_from_observation": "2026-05-19T06:10:32.074+00:00",
+  "game": {
+    "id": "endfield",
+    "name": "明日方舟：终末地",
+    "subName": "Arknights: Endfield",
+    "shortName": "EF",
+    "icon": "assets/icons/endfield.svg",
+    "kind": "endfield"
+  },
+  "versions": [
+    {
+      "version": "1.2.5",
+      "released_at": "2026-04-19T08:50:31.109+00:00",
+      "package_items": 46,
+      "patch_routes": 2,
+      "packed_size": 48574178348,
+      "unpacked_size": 107162178062,
+      "mirror_items": 46
+    },
+    {
+      "version": "1.2.4",
+      "released_at": "2026-04-16T22:15:24.339+00:00",
+      "package_items": 46,
+      "patch_routes": 2,
+      "packed_size": 48574175958,
+      "unpacked_size": 107463372218,
+      "mirror_items": 46
+    },
+    {
+      "version": "1.1.9",
+      "released_at": "2026-03-11T22:10:19.400+00:00",
+      "package_items": 39,
+      "patch_routes": 2,
+      "packed_size": 41729840537,
+      "unpacked_size": 91824655390,
+      "mirror_items": 39
+    },
+    {
+      "version": "1.0.14",
+      "released_at": "2026-02-13T14:27:24.120+09:00",
+      "package_items": 36,
+      "patch_routes": 1,
+      "packed_size": 38087032681,
+      "unpacked_size": 83950648866,
+      "mirror_items": 36
+    },
+    {
+      "version": "1.0.13",
+      "released_at": "2026-01-22T17:31:25.044+09:00",
+      "package_items": 36,
+      "patch_routes": 0,
+      "packed_size": 38086060662,
+      "unpacked_size": 83946900374,
+      "mirror_items": 36
+    }
+  ]
+}
