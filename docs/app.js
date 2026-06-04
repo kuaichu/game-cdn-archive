@@ -154,6 +154,26 @@ const copyText = async (text, label = "已复制") => {
   showToast(label);
 };
 
+const sideSections = ["home", "notes", "files", "commands"];
+
+const setActiveSideLink = (sectionId) => {
+  $$(".side-link").forEach((link) => {
+    link.classList.toggle("active", link.dataset.section === sectionId);
+  });
+};
+
+const updateActiveSideLink = () => {
+  const threshold = 140;
+  const current = sideSections
+    .map((id) => ({
+      id,
+      top: document.getElementById(id)?.getBoundingClientRect().top ?? Number.POSITIVE_INFINITY,
+    }))
+    .filter((item) => item.top <= threshold)
+    .sort((a, b) => b.top - a.top)[0];
+  setActiveSideLink(current?.id || "home");
+};
+
 const allGames = () => [
   nteGame,
   ...(state.endfieldIndex?.game ? [state.endfieldIndex.game] : []),
@@ -238,6 +258,12 @@ const bindStaticActions = () => {
   });
 
   $("#copyCommandBtn").addEventListener("click", () => copyText(commandFor(), "命令已复制"));
+
+  $$(".side-link").forEach((link) => {
+    link.addEventListener("click", () => setActiveSideLink(link.dataset.section));
+  });
+  window.addEventListener("hashchange", updateActiveSideLink);
+  window.addEventListener("scroll", updateActiveSideLink, { passive: true });
 };
 
 const renderGameRail = () => {
@@ -1492,6 +1518,7 @@ const render = () => {
   renderPanelTitle();
   renderNotice();
   renderList();
+  updateActiveSideLink();
   saveView();
 };
 
