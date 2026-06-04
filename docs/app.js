@@ -24,6 +24,7 @@ const nteGame = {
   name: "异环",
   subName: "Neverness to Everness",
   shortName: "NTE",
+  icon: "assets/icons/nte.ico",
   kind: "nte",
 };
 
@@ -109,6 +110,7 @@ const allGames = () => [
   ...(state.hoyoIndex?.games || []).map((game) => ({
     ...game,
     subName: game.domain,
+    icon: `assets/icons/${game.id}.png`,
     kind: "hoyo",
   })),
 ];
@@ -165,7 +167,7 @@ const renderGameRail = () => {
   $("#gameRail").innerHTML = allGames()
     .map((game) => `
       <button class="game-mark ${game.id === state.gameId ? "active" : ""}" type="button" data-game="${game.id}" title="${escapeHtml(game.name)}">
-        ${escapeHtml(game.shortName || game.id)}
+        <img src="${escapeHtml(game.icon || "")}" alt="${escapeHtml(game.name)}" loading="lazy" onerror="this.remove(); this.parentElement.dataset.fallback='${escapeHtml(game.shortName || game.id)}';" />
       </button>
     `)
     .join("");
@@ -184,7 +186,9 @@ const renderGameRail = () => {
 
 const renderBrand = () => {
   const game = currentGame();
-  $("#brandLogo").textContent = (game.shortName || game.id).slice(0, 3);
+  $("#brandLogo").innerHTML = game.icon
+    ? `<img src="${escapeHtml(game.icon)}" alt="${escapeHtml(game.name)}" onerror="this.remove(); this.parentElement.textContent='${escapeHtml((game.shortName || game.id).slice(0, 3))}';" />`
+    : escapeHtml((game.shortName || game.id).slice(0, 3));
   $("#brandName").textContent = game.name;
   $("#brandSub").textContent = game.subName || "";
   $("#pageTitle").textContent = `${game.name}官方 CDN 文件索引`;
