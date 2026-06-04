@@ -549,9 +549,11 @@ const hoyoFileItem = (entry, index = 0, total = 0) => {
     badge: "游戏文件",
     title: path.split(/[\\/]/).at(-1) || path,
     subtitle: path,
+    remoteName: path,
     size: Number(entry.fileSize || entry.size || 0),
     hash: entry.md5 || entry.hash || "",
     extraHash: entry.hash && entry.hash !== entry.md5 ? entry.hash : "",
+    chunkDownload: false,
     count: total ? `${index + 1}/${total}` : "",
   };
 };
@@ -1345,7 +1347,11 @@ const renderHoyoChunk = async () => {
 const renderHoyoFiles = async () => {
   try {
     const entries = await loadHoyoFileEntries();
-    const files = entries.map((entry, index) => hoyoFileItem(entry, index, entries.length));
+    const canChunkDownload = Boolean(hoyoVersion()?.chunk);
+    const files = entries.map((entry, index) => ({
+      ...hoyoFileItem(entry, index, entries.length),
+      chunkDownload: canChunkDownload,
+    }));
     const filtered = filterEntries(files);
     const visibleCount = Math.min(state.hoyoFileVisible, filtered.length);
     const visible = filtered.slice(0, visibleCount);
@@ -1381,7 +1387,7 @@ const renderHoyoFiles = async () => {
 
 const fileCard = (item) => {
   const preferredUrl = item.preferredUrl || item.url;
-  const actions = item.officialUrl
+  const urlActions = item.officialUrl
     ? `
       <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="复制当前可用链接">${icons.copy}<span>复制可用链接</span></button>
       <a class="icon-button ${item.officialAvailable ? "" : "stale-link"}" href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noreferrer" title="${item.officialAvailable ? "上游探测时可用" : "上游曾标记不可用，实际状态可能变化"}">${icons.down}<span>官方${item.officialAvailable ? "" : "状态未知"}</span></a>
@@ -1391,7 +1397,10 @@ const fileCard = (item) => {
       <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="复制链接">${icons.copy}<span>复制链接</span></button>
       <a class="icon-button" href="${escapeHtml(preferredUrl)}" target="_blank" rel="noreferrer" title="打开">${icons.down}<span>打开</span></a>
     `;
-  const fileActions = preferredUrl ? actions : "";
+  const chunkAction = item.chunkDownload
+    ? `<button class="icon-button chunk-download-file" type="button" data-remote="${escapeHtml(item.remoteName || item.subtitle)}" data-size="${Number(item.size || 0)}" title="通过官方 Chunk 下载">${icons.down}<span>Chunk 下载</span></button>`
+    : "";
+  const fileActions = `${preferredUrl ? urlActions : ""}${chunkAction}`;
   const hashText = [item.hash, item.extraHash ? `xxHash64 ${item.extraHash}` : ""].filter(Boolean).join(" / ") || "-";
   return `
     <article class="file-card">
@@ -1413,9 +1422,57 @@ const fileCard = (item) => {
   `;
 };
 
+const chunkProgressText = ({ stage, done, total }) => {
+  if (stage === "manifest") return `Manifest ${done}/${total}`;
+  if (stage === "downloading") return `Chunk ${done}/${total}`;
+  if (stage === "merging") return "合并中";
+  if (stage === "done") return "完成";
+  return "下载中";
+};
+
+const downloadHoyoFileByChunk = async (button) => {
+  const remoteName = button.dataset.remote;
+  const size = Number(button.dataset.size || 0);
+  if (size > 2 * 1024 ** 3 && !window.confirm(`该文件大小约 ${fmtBytes(size)}，浏览器内存压力会很大，确定继续？`)) {
+    return;
+  }
+
+  const label = button.querySelector("span");
+  const original = label?.textContent || "Chunk 下载";
+  button.disabled = true;
+  label.textContent = "准备中";
+
+  try {
+    const chunk = await loadHoyoChunk();
+    const manifests = chunk.manifests || [];
+    if (!manifests.length) throw new Error("该版本没有 Chunk Manifest");
+
+    const { downloadHoyoChunkFile } = await import("./chunk-download.js");
+    const result = await downloadHoyoChunkFile({
+      file: { remoteName },
+      manifests,
+      gameId: state.gameId,
+      version: state.version,
+      onProgress: (progress) => {
+        label.textContent = chunkProgressText(progress);
+      },
+    });
+    showToast(`已生成下载：${result.filename}`);
+  } catch (error) {
+    console.error(error);
+    showToast(`Chunk 下载失败：${error.message}`);
+  } finally {
+    button.disabled = false;
+    label.textContent = original;
+  }
+};
+
 const bindCardActions = () => {
   $$(".copy-link").forEach((button) => {
     button.addEventListener("click", () => copyText(button.dataset.url, "链接已复制"));
+  });
+  $$(".chunk-download-file").forEach((button) => {
+    button.addEventListener("click", () => downloadHoyoFileByChunk(button));
   });
 };
 
