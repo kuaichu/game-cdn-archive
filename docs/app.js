@@ -35,6 +35,13 @@ const audioLabels = {
   "ko-kr": "韩语",
 };
 
+const hoyoEnglishNames = {
+  hk4e: "Genshin Impact",
+  hkrpg: "Honkai: Star Rail",
+  nap: "Zenless Zone Zero",
+  bh3: "Honkai Impact 3rd",
+};
+
 const nteModes = [
   ["full", "完整文件"],
   ["patches", "更新补丁"],
@@ -109,7 +116,7 @@ const allGames = () => [
   nteGame,
   ...(state.hoyoIndex?.games || []).map((game) => ({
     ...game,
-    subName: game.domain,
+    subName: hoyoEnglishNames[game.id] || game.name,
     icon: `assets/icons/${game.id}.png`,
     kind: "hoyo",
   })),
