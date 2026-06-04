@@ -1725,6 +1725,8 @@ const hoyoFileRow = (item, context, expandedKey = state.hoyoExpandedFile) => {
 
 const fileActionHtml = (item) => {
   const preferredUrl = item.preferredUrl || item.url;
+  const primaryLabel = item.mirrorUrl ? "CDN1" : "打开";
+  const copyLabel = item.mirrorUrl ? "复制 CDN1" : "复制链接";
   const urlActions = item.officialUrl
     ? `
       <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="复制当前可用链接">${icons.copy}<span>复制可用链接</span></button>
@@ -1732,8 +1734,8 @@ const fileActionHtml = (item) => {
       ${item.mirrorUrl ? `<a class="icon-button mirror-link" href="${escapeHtml(item.mirrorUrl)}" target="_blank" rel="noreferrer" title="备用下载链接">${icons.down}<span>${escapeHtml(item.mirrorLabel || "归档镜像")}</span></a>` : ""}
     `
     : `
-      <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="复制链接">${icons.copy}<span>复制链接</span></button>
-      <a class="icon-button" href="${escapeHtml(preferredUrl)}" target="_blank" rel="noreferrer" title="打开">${icons.down}<span>打开</span></a>
+      <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="${escapeHtml(copyLabel)}">${icons.copy}<span>${escapeHtml(copyLabel)}</span></button>
+      <a class="icon-button" href="${escapeHtml(preferredUrl)}" target="_blank" rel="noreferrer" title="${escapeHtml(primaryLabel)}">${icons.down}<span>${escapeHtml(primaryLabel)}</span></a>
       ${item.mirrorUrl ? `<a class="icon-button mirror-link" href="${escapeHtml(item.mirrorUrl)}" target="_blank" rel="noreferrer" title="备用下载链接">${icons.down}<span>${escapeHtml(item.mirrorLabel || "镜像")}</span></a>` : ""}
     `;
   const chunkAction = item.chunkDownload
