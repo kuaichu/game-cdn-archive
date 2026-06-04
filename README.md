@@ -148,6 +148,9 @@ It can run manually from the Actions tab, and also runs once per day. The job:
 5. Deploys to Cloudflare Pages when a repository secret named
    `CLOUDFLARE_API_TOKEN` is available.
 
+The separate `.github/workflows/deploy-pages.yml` workflow deploys the static
+site on every push to `main` and can also be run manually.
+
 ## Downloader
 
 Install dependency:
