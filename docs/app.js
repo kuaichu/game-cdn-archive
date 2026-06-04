@@ -1528,6 +1528,8 @@ const render = () => {
   saveView();
 };
 
+updateActiveSideLink();
+
 Promise.all([
   fetch("./data/catalog.json").then((response) => response.json()),
   fetch("./data/hoyo/games.json").then((response) => response.json()),

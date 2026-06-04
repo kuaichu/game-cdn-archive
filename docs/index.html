@@ -20,7 +20,7 @@
         </div>
         <div class="side-section">
           <span class="side-label">工作区</span>
-          <a class="side-link active" href="#home" data-section="home">
+          <a class="side-link" href="#home" data-section="home">
             <span>概览</span>
             <small>版本与统计</small>
           </a>
@@ -43,6 +43,15 @@
           <span>不托管游戏文件</span>
         </div>
       </nav>
+      <script>
+        (() => {
+          const sections = ["home", "notes", "files", "commands"];
+          const target = sections.includes(location.hash.slice(1)) ? location.hash.slice(1) : "home";
+          document.querySelectorAll(".side-link").forEach((link) => {
+            link.classList.toggle("active", link.dataset.section === target);
+          });
+        })();
+      </script>
 
       <main class="main">
         <header class="topbar" id="home">
