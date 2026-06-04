@@ -627,6 +627,10 @@ h2 {
   overflow: visible;
 }
 
+.trend-chart text {
+  stroke: none;
+}
+
 .chart-grid {
   stroke: rgba(148, 165, 186, 0.2);
   stroke-width: 1;
@@ -670,16 +674,16 @@ h2 {
 .chart-label {
   fill: #eef5ff;
   font-family: Consolas, "SFMono-Regular", monospace;
-  font-size: 15px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 650;
 }
 
 .chart-y-label,
 .chart-axis-title {
   fill: #d3dfef;
   font-family: Consolas, "SFMono-Regular", monospace;
-  font-size: 14px;
-  font-weight: 750;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .chart-y-label.right {
@@ -688,8 +692,8 @@ h2 {
 
 .chart-axis-title {
   fill: #dbeafe;
-  font-size: 15px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .chart-axis-title.right {
