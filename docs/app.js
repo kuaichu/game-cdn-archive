@@ -3,6 +3,7 @@ const state = {
   mode: "full",
   version: null,
   compareVersion: null,
+  diffFilter: "all",
   query: "",
   nteCatalog: null,
   hoyoIndex: null,
@@ -249,6 +250,7 @@ const renderGameRail = () => {
       $("#fileSearch").value = "";
       await ensureGameData();
       state.compareVersion = null;
+      state.diffFilter = "all";
       render();
     });
   });
@@ -272,6 +274,7 @@ const renderModes = () => {
     button.addEventListener("click", () => {
       state.mode = button.dataset.mode;
       state.compareVersion = null;
+      state.diffFilter = "all";
       $$(".mode-tab").forEach((item) => item.classList.toggle("active", item === button));
       render();
     });
@@ -304,6 +307,7 @@ const renderVersionMenu = () => {
     button.addEventListener("click", () => {
       state.version = button.dataset.version;
       state.compareVersion = null;
+      state.diffFilter = "all";
       $("#versionMenu").hidden = true;
       $("#selectButton").setAttribute("aria-expanded", "false");
       render();
@@ -649,8 +653,7 @@ const diffVersions = (oldItems, newItems) => {
   const newMap = new Map(newItems.map((item) => [item.key, item]));
   const added = [];
   const removed = [];
-  const checksumChanged = [];
-  const sizeChanged = [];
+  const modified = [];
 
   for (const [key, item] of newMap) {
     const oldItem = oldMap.get(key);
@@ -658,11 +661,16 @@ const diffVersions = (oldItems, newItems) => {
       added.push(item);
       continue;
     }
-    if (oldItem.hash && item.hash && oldItem.hash !== item.hash) {
-      checksumChanged.push({ ...item, oldHash: oldItem.hash, oldSize: oldItem.size });
-    }
-    if (Number(oldItem.size || 0) !== Number(item.size || 0)) {
-      sizeChanged.push({ ...item, oldHash: oldItem.hash, oldSize: oldItem.size });
+    const hashChanged = Boolean(oldItem.hash && item.hash && oldItem.hash !== item.hash);
+    const sizeChanged = Number(oldItem.size || 0) !== Number(item.size || 0);
+    if (hashChanged || sizeChanged) {
+      modified.push({
+        ...item,
+        oldHash: oldItem.hash,
+        oldSize: oldItem.size,
+        hashChanged,
+        sizeChanged,
+      });
     }
   }
 
@@ -670,14 +678,31 @@ const diffVersions = (oldItems, newItems) => {
     if (!newMap.has(key)) removed.push(item);
   }
 
-  return { added, removed, checksumChanged, sizeChanged };
+  return { added, removed, modified };
 };
 
 const diffLabels = {
-  added: ["新增文件", "green"],
-  removed: ["删除文件", "rose"],
-  checksumChanged: ["MD5 变化", "violet"],
-  sizeChanged: ["大小变化", "amber"],
+  added: ["Added", "+", "green"],
+  removed: ["Removed", "-", "rose"],
+  modified: ["Modified", "~", "amber"],
+};
+
+const diffFilterLabels = [
+  ["all", "全部"],
+  ["added", "新增"],
+  ["removed", "删除"],
+  ["modified", "修改"],
+  ["size", "仅大小变化"],
+  ["hash", "仅 MD5 变化"],
+];
+
+const sumSizes = (items, field = "size") => items.reduce((sum, item) => sum + Number(item[field] || 0), 0);
+const sumModifiedDelta = (items) => items.reduce((sum, item) => sum + Number(item.size || 0) - Number(item.oldSize || 0), 0);
+
+const fmtSignedBytes = (bytes) => {
+  const value = Number(bytes || 0);
+  if (value === 0) return "0 B";
+  return `${value > 0 ? "+" : "-"}${fmtBytes(Math.abs(value))}`;
 };
 
 const renderCompare = async () => {
@@ -696,6 +721,7 @@ const renderCompare = async () => {
   ]);
   const diff = diffVersions(oldItems, newItems);
   const totalChanges = Object.values(diff).reduce((sum, items) => sum + items.length, 0);
+  const modifiedNetBytes = sumModifiedDelta(diff.modified);
   const sourceHint = isNte()
     ? "异环基于完整文件清单做文件级对比。"
     : "当前基于本站保存的归档条目对比；要做压缩包内部文件级对比，需要额外保存 Chunk/Manifest 文件索引。";
@@ -717,55 +743,120 @@ const renderCompare = async () => {
       <p>${sourceHint}</p>
     </div>
     <div class="compare-summary">
-      ${Object.entries(diffLabels).map(([key, [label, tone]]) => `
-        <div class="compare-stat ${tone}">
-          <span>${label}</span>
-          <strong>${diff[key].length.toLocaleString()}</strong>
-        </div>
+      <div class="compare-stat green">
+        <span>+ 新增</span>
+        <strong>${diff.added.length.toLocaleString()} 个</strong>
+        <small>${fmtBytes(sumSizes(diff.added))}</small>
+      </div>
+      <div class="compare-stat rose">
+        <span>- 删除</span>
+        <strong>${diff.removed.length.toLocaleString()} 个</strong>
+        <small>${fmtBytes(sumSizes(diff.removed))}</small>
+      </div>
+      <div class="compare-stat amber">
+        <span>~ 修改</span>
+        <strong>${diff.modified.length.toLocaleString()} 个</strong>
+        <small>净变化 ${fmtSignedBytes(modifiedNetBytes)}</small>
+      </div>
+    </div>
+    <div class="diff-filter" role="toolbar" aria-label="Diff filter">
+      ${diffFilterLabels.map(([id, label]) => `
+        <button class="${state.diffFilter === id ? "active" : ""}" type="button" data-diff-filter="${id}">${label}</button>
       `).join("")}
     </div>
   `;
 
+  const sections = [
+    ["added", diff.added],
+    ["removed", diff.removed],
+    ["modified", diff.modified],
+  ]
+    .filter(([key]) => shouldShowDiffSection(key))
+    .map(([key, items]) => compareSection(diffLabels[key][0], items, key))
+    .join("");
+
   if (!totalChanges) {
     $("#fileList").innerHTML = `${selector}<div class="empty">两个版本没有可见差异</div>`;
   } else {
-    $("#fileList").innerHTML = selector + Object.entries(diffLabels)
-      .map(([key, [label]]) => compareSection(label, diff[key], key))
-      .join("");
+    $("#fileList").innerHTML = selector + (sections || `<div class="empty">当前筛选条件没有匹配项</div>`);
   }
   $("#compareVersionSelect")?.addEventListener("change", (event) => {
     state.compareVersion = event.target.value;
+    state.diffFilter = "all";
     renderList();
+  });
+  $$("[data-diff-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.diffFilter = button.dataset.diffFilter;
+      renderList();
+    });
   });
   bindCardActions();
 };
 
+const shouldShowDiffSection = (type) => {
+  if (state.diffFilter === "all") return true;
+  if (state.diffFilter === "size" || state.diffFilter === "hash") return type === "modified";
+  return state.diffFilter === type;
+};
+
+const filterDiffItems = (items, type) => {
+  const typed = type === "modified" && state.diffFilter === "size"
+    ? items.filter((item) => item.sizeChanged)
+    : type === "modified" && state.diffFilter === "hash"
+      ? items.filter((item) => item.hashChanged)
+      : items;
+  return filterEntries(typed);
+};
+
 const compareSection = (label, items, type) => {
-  const filtered = filterEntries(items);
+  const filtered = filterDiffItems(items, type);
   if (!filtered.length) return "";
   return `
-    <section class="compare-section">
+    <section class="compare-section ${type}">
       <div class="compare-section-head">
         <strong>${label}</strong>
         <span>${filtered.length.toLocaleString()} 项</span>
       </div>
-      ${filtered.slice(0, 300).map((item, index) => fileCard(compareCardItem(item, type, index, filtered.length))).join("")}
-      ${filtered.length > 300 ? `<div class="empty compact">已显示前 300 项，可用搜索继续过滤</div>` : ""}
+      <div class="diff-table">
+        ${filtered.slice(0, 500).map((item, index) => compareRow(item, type, index, filtered.length)).join("")}
+      </div>
+      ${filtered.length > 500 ? `<div class="empty compact">已显示前 500 项，可用搜索继续过滤</div>` : ""}
     </section>
   `;
 };
 
-const compareCardItem = (item, type, index, total) => {
-  const [label] = diffLabels[type];
-  const details = [];
-  if (item.oldHash && item.hash && item.oldHash !== item.hash) details.push(`MD5: ${item.oldHash} -> ${item.hash}`);
-  if (item.oldSize !== undefined && Number(item.oldSize || 0) !== Number(item.size || 0)) details.push(`大小: ${fmtBytes(item.oldSize)} -> ${fmtBytes(item.size)}`);
-  return {
-    ...item,
-    badge: label,
-    subtitle: details.length ? `${item.subtitle} / ${details.join(" / ")}` : item.subtitle,
-    count: `${index + 1}/${total}`,
-  };
+const compareRow = (item, type, index, total) => {
+  const [, marker] = diffLabels[type];
+  const hashLine = type === "modified" && item.hashChanged
+    ? `<div class="diff-change">md5: <code>${escapeHtml(item.oldHash || "-")}</code> <span>→</span> <code>${escapeHtml(item.hash || "-")}</code></div>`
+    : type === "modified"
+      ? `<div class="diff-change muted">md5 unchanged</div>`
+      : "";
+  const sizeLine = type === "modified" && item.sizeChanged
+    ? `<div class="diff-change">size: <code>${fmtBytes(item.oldSize)}</code> <span>→</span> <code>${fmtBytes(item.size)}</code> <em>${fmtSignedBytes(Number(item.size || 0) - Number(item.oldSize || 0))}</em></div>`
+    : type === "modified"
+      ? `<div class="diff-change muted">size: ${fmtBytes(item.size)} unchanged</div>`
+      : "";
+  const meta = type === "modified"
+    ? `${sizeLine}${hashLine}`
+    : `<div class="diff-change"><code>${fmtBytes(item.size)}</code>${item.hash ? ` <span>#</span> <code>${escapeHtml(item.hash)}</code>` : ""}</div>`;
+  return `
+    <article class="diff-row diff-${type}">
+      <div class="diff-marker">${marker}</div>
+      <div class="diff-body">
+        <div class="diff-title">
+          <strong>${escapeHtml(item.title)}</strong>
+          <span>${index + 1}/${total}</span>
+        </div>
+        <div class="diff-path">${escapeHtml(item.subtitle)}</div>
+        ${meta}
+      </div>
+      <div class="diff-actions">
+        ${item.url ? `<button class="icon-button copy-link" type="button" data-url="${escapeHtml(item.url)}" title="复制链接">${icons.copy}<span>复制</span></button>` : ""}
+      </div>
+    </article>
+  `;
 };
 
 const renderEndfieldArchive = () => {
