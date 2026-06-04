@@ -121,9 +121,11 @@ history for the CN official channel:
 python scripts/import_endfield_archive.py path/to/ak-endfield-api-archive
 ```
 
-Official historical download URLs use expiring signatures. When the upstream
-archive records an official URL as unavailable, the UI separately exposes its
-public archive mirror and uses that mirror in generated URL/aria2 lists. This
+Official historical download URLs use signed parameters. Their actual
+availability can change over time, and the upstream archive's `origStatus`
+field only represents a past probe result. When that result is unavailable,
+the UI labels the official link as status unknown, separately exposes its
+public archive mirror, and uses the mirror in generated URL/aria2 lists. This
 repository only indexes those external URLs and does not host game files.
 
 The Endfield navigation icon is sourced from

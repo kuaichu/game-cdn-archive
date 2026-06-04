@@ -487,9 +487,9 @@ const endfieldPackageItems = () => {
   const version = endfieldVersion();
   if (!version) return [];
   return version.packages.map((item) => ({
-    badge: item.official_available ? "官方完整分卷" : "归档完整分卷",
+    badge: item.official_available ? "官方完整分卷" : "完整分卷",
     title: item.name,
-    subtitle: item.official_available ? "官方签名链接当前可用" : "官方签名已过期，提供公开归档镜像",
+    subtitle: item.official_available ? "上游探测时官方链接可用" : "上游曾标记官方链接不可用；实际状态可能变化",
     size: item.size,
     hash: item.md5,
     officialUrl: item.official_url,
@@ -505,7 +505,7 @@ const endfieldPatchItems = () => {
   return version.patches.flatMap((route) => route.parts.map((item) => ({
     badge: "更新分卷",
     title: item.name,
-    subtitle: `${route.from} -> ${route.to}${item.official_available ? " / 官方可用" : " / 使用归档镜像"}`,
+    subtitle: `${route.from} -> ${route.to}${item.official_available ? " / 上游探测可用" : " / 官方状态未知，镜像可用"}`,
     size: item.size,
     hash: item.md5,
     officialUrl: item.official_url,
@@ -628,7 +628,7 @@ const fileCard = (item) => {
   const actions = item.officialUrl
     ? `
       <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="复制当前可用链接">${icons.copy}<span>复制可用链接</span></button>
-      <a class="icon-button ${item.officialAvailable ? "" : "stale-link"}" href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noreferrer" title="${item.officialAvailable ? "官方链接" : "官方签名可能已过期"}">${icons.down}<span>官方${item.officialAvailable ? "" : "已过期"}</span></a>
+      <a class="icon-button ${item.officialAvailable ? "" : "stale-link"}" href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noreferrer" title="${item.officialAvailable ? "上游探测时可用" : "上游曾标记不可用，实际状态可能变化"}">${icons.down}<span>官方${item.officialAvailable ? "" : "状态未知"}</span></a>
       ${item.mirrorUrl ? `<a class="icon-button mirror-link" href="${escapeHtml(item.mirrorUrl)}" target="_blank" rel="noreferrer" title="公开归档镜像">${icons.down}<span>归档镜像</span></a>` : ""}
     `
     : `
@@ -741,7 +741,7 @@ const renderNotice = () => {
     notice.innerHTML = `
       <div class="notice-copy">
         <strong>数据来源</strong>
-        <span>上游项目持续归档终末地官方启动器 API。官方历史链接带短期签名，失效文件会同时提供公开归档镜像并明确标注。</span>
+        <span>上游项目持续归档终末地官方启动器 API。页面展示的是上游历史探测状态，并非实时检测；官方链接状态可能变化，归档镜像作为稳定备用入口。</span>
       </div>
       <a class="source-link" href="${escapeHtml(state.endfieldIndex.source)}" target="_blank" rel="noreferrer">daydreamer-json/ak-endfield-api-archive</a>
     `;
