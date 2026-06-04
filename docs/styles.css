@@ -179,21 +179,48 @@ svg {
   font-size: 12px;
 }
 
+.side-section + .side-section {
+  margin-top: 20px;
+}
+
+.side-label {
+  display: block;
+  margin: 0 0 8px;
+  padding: 0 12px;
+  color: #6f829a;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .side-link {
   display: flex;
-  align-items: center;
-  min-height: 44px;
+  min-height: 58px;
+  flex-direction: column;
+  justify-content: center;
   margin: 6px 0;
-  padding: 0 14px;
+  padding: 8px 14px;
   border-radius: 8px;
   color: #b9c7d8;
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 1.25;
 }
 
 .side-link.active,
 .side-link:hover {
   background: rgba(68, 162, 255, 0.18);
   color: #65b4ff;
+}
+
+.side-link small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.side-link.compact {
+  min-height: 40px;
 }
 
 .side-foot {
