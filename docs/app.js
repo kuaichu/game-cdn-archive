@@ -10,6 +10,7 @@ const state = {
   endfieldIndex: null,
   endfieldVersions: null,
   hoyoVersions: new Map(),
+  hoyoFileEntries: new Map(),
   nteEntries: new Map(),
   chunkEntries: new Map(),
   nteAnalytics: null,
@@ -22,6 +23,7 @@ const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
+const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 
 const loadSavedView = () => {
   try {
@@ -80,6 +82,7 @@ const nteModes = [
 ];
 
 const hoyoModes = [
+  ["files", "文件清单"],
   ["packages", "压缩包"],
   ["updates", "更新包"],
   ["chunk", "Chunk 信息"],
@@ -441,10 +444,11 @@ const renderLinks = () => {
 
   $("#urlsLink").classList.add("disabled");
   $("#aria2Link").classList.add("disabled");
-  $("#jsonLink").classList.add("disabled");
   $("#urlsLink").href = "#";
   $("#aria2Link").href = "#";
-  $("#jsonLink").href = `data/hoyo/${state.gameId}_versions.json`;
+  $("#jsonLink").href = state.mode === "files"
+    ? hoyoFileListUrl(state.version)
+    : `data/hoyo/${state.gameId}_versions.json`;
   $("#jsonLink").classList.remove("disabled");
 };
 
@@ -478,6 +482,40 @@ const loadHoyoChunk = async () => {
     state.chunkEntries.set(key, json.data);
   }
   return state.chunkEntries.get(key);
+};
+
+const hoyoFileListUrl = (version, channel = "pkg_version") => (
+  `${HOYOFILES_API_BASE}/${state.gameId}/${version}/${encodeURIComponent(channel)}`
+);
+
+const parseJsonLines = (text) => text
+  .split(/\r?\n/)
+  .map((line) => line.trim())
+  .filter(Boolean)
+  .map((line) => JSON.parse(line));
+
+const loadHoyoFileEntries = async (version = state.version, channel = "pkg_version") => {
+  const key = `${state.gameId}:${version}:${channel}`;
+  if (!state.hoyoFileEntries.has(key)) {
+    const response = await fetch(hoyoFileListUrl(version, channel));
+    if (!response.ok) throw new Error(`HoyoFiles list not available: ${response.status}`);
+    state.hoyoFileEntries.set(key, parseJsonLines(await response.text()));
+  }
+  return state.hoyoFileEntries.get(key);
+};
+
+const hoyoFileItem = (entry, index = 0, total = 0) => {
+  const path = entry.remoteName || entry.path || entry.name || "";
+  return {
+    key: path,
+    badge: "游戏文件",
+    title: path.split(/[\\/]/).at(-1) || path,
+    subtitle: path,
+    size: Number(entry.fileSize || entry.size || 0),
+    hash: entry.md5 || entry.hash || "",
+    extraHash: entry.hash && entry.hash !== entry.md5 ? entry.hash : "",
+    count: total ? `${index + 1}/${total}` : "",
+  };
 };
 
 const nteItem = (entry, index, total) => {
@@ -579,7 +617,7 @@ const endfieldPatchItems = () => {
 
 const normalizeVersionText = (value) => String(value || "").replace(/\d+\.\d+\.\d+/g, "{version}");
 
-const hoyoComparableItems = (version) => {
+const hoyoArchiveComparableItems = (version) => {
   const row = hoyoVersionMap()?.[version];
   if (!row) return [];
   const items = [];
@@ -607,6 +645,21 @@ const hoyoComparableItems = (version) => {
     });
   });
   return items;
+};
+
+const hoyoFileComparableItems = async (version) => {
+  const entries = await loadHoyoFileEntries(version);
+  return entries.map((entry) => hoyoFileItem(entry));
+};
+
+const hoyoComparableItems = async (version) => {
+  try {
+    const items = await hoyoFileComparableItems(version);
+    if (items.length) return items;
+  } catch (error) {
+    console.warn(error);
+  }
+  return hoyoArchiveComparableItems(version);
 };
 
 const endfieldComparableItems = (version) => {
@@ -1006,7 +1059,9 @@ const renderCompare = async () => {
   const modifiedNetBytes = sumModifiedDelta(diff.modified);
   const sourceHint = isNte()
     ? "异环基于完整文件清单做文件级对比。"
-    : "当前基于本站保存的归档条目对比；要做压缩包内部文件级对比，需要额外保存 Chunk/Manifest 文件索引。";
+    : isEndfield()
+      ? "终末地基于完整包与补丁归档条目对比。"
+      : "米家游戏优先读取 HoyoFiles 文件清单接口做文件级对比；接口不可用时回退到本站保存的压缩包条目。";
 
   const selector = `
     <div class="compare-toolbar">
@@ -1249,6 +1304,28 @@ const renderHoyoChunk = async () => {
   bindCardActions();
 };
 
+const renderHoyoFiles = async () => {
+  try {
+    const entries = await loadHoyoFileEntries();
+    const files = entries.map((entry, index) => hoyoFileItem(entry, index, entries.length));
+    const filtered = filterEntries(files);
+    const header = `
+      <div class="chunk-summary">
+        <div><span>文件清单</span><strong>pkg_version</strong></div>
+        <div><span>文件数</span><strong>${entries.length.toLocaleString()}</strong></div>
+        <div><span>总大小</span><strong>${fmtBytes(sumSizes(entries.map((entry) => ({ size: entry.fileSize }))))}</strong></div>
+        <div><span>来源</span><strong>HoyoFiles API</strong></div>
+      </div>
+    `;
+    $("#fileList").innerHTML = header + (filtered.length ? filtered
+      .map((entry) => fileCard(entry))
+      .join("") : `<div class="empty">没有匹配到文件</div>`);
+  } catch (error) {
+    $("#fileList").innerHTML = `<div class="empty">文件清单读取失败：${escapeHtml(error.message)}</div>`;
+  }
+  bindCardActions();
+};
+
 const fileCard = (item) => {
   const preferredUrl = item.preferredUrl || item.url;
   const actions = item.officialUrl
@@ -1261,6 +1338,8 @@ const fileCard = (item) => {
       <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="复制链接">${icons.copy}<span>复制链接</span></button>
       <a class="icon-button" href="${escapeHtml(preferredUrl)}" target="_blank" rel="noreferrer" title="打开">${icons.down}<span>打开</span></a>
     `;
+  const fileActions = preferredUrl ? actions : "";
+  const hashText = [item.hash, item.extraHash ? `xxHash64 ${item.extraHash}` : ""].filter(Boolean).join(" / ") || "-";
   return `
     <article class="file-card">
       <div class="file-icon">${icons.box}</div>
@@ -1272,11 +1351,11 @@ const fileCard = (item) => {
         </div>
         <div class="file-meta">
           <span>${fmtBytes(item.size)}</span>
-          <span># ${escapeHtml(item.hash || "-")}</span>
+          <span># ${escapeHtml(hashText)}</span>
         </div>
         <div class="file-path">${escapeHtml(item.subtitle)}</div>
       </div>
-      <div class="file-actions">${actions}</div>
+      <div class="file-actions">${fileActions}</div>
     </article>
   `;
 };
@@ -1318,6 +1397,11 @@ const renderList = async () => {
       .map((entry, index) => fileCard({ ...entry, count: `${index + 1}/${filtered.length}` }))
       .join("") || `<div class="empty">该版本没有${state.mode === "packages" ? "完整包" : "更新补丁"}记录</div>`;
     bindCardActions();
+    return;
+  }
+
+  if (state.mode === "files") {
+    await renderHoyoFiles();
     return;
   }
 
@@ -1387,10 +1471,11 @@ const renderNotice = () => {
     notice.innerHTML = `
       <div class="notice-copy">
         <strong>数据来源</strong>
-        <span>米家游戏数据迁移自 HoyoFiles 的公开版本清单接口，并在本站保存为静态索引；Chunk 视图只展示 Manifest 入口与统计信息。</span>
+        <span>米家游戏数据迁移自 HoyoFiles 的公开版本清单接口；文件清单与版本对比会按需读取上游文件级 pkg_version 索引，Chunk 视图暂展示 Manifest 入口与统计信息。</span>
       </div>
       <div class="source-links">
         <a class="source-link" href="https://hoyo-files.amarea.cn/" target="_blank" rel="noreferrer">hoyo-files.amarea.cn</a>
+        <a class="source-link" href="${HOYOFILES_API_BASE}/${state.gameId}/${state.version}/pkg_version" target="_blank" rel="noreferrer">pkg_version 文件清单</a>
       </div>
     `;
   }
