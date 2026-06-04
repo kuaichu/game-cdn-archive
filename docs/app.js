@@ -309,7 +309,7 @@ const nteDownloadScript = (version, entries) => {
   const root = `NTE_${version}_full`;
   const items = entries.map((entry) => {
     const path = String(entry.filename || entry.subtitle || entry.object || "").replace(/\\/g, "/").replace(/^\/+/, "");
-    return `  @{ Url='${psSingleQuote(entry.url)}'; Path='${psSingleQuote(path)}'; Size=${Number(entry.filesize || entry.size || 0)}; Md5='${psSingleQuote(entry.md5 || entry.hash || "")}' }`;
+    return `  @{ Url='${psSingleQuote(entry.url)}'; Mirror='${psSingleQuote(nteCdn2Url(entry.url))}'; Path='${psSingleQuote(path)}'; Size=${Number(entry.filesize || entry.size || 0)}; Md5='${psSingleQuote(entry.md5 || entry.hash || "")}' }`;
   }).join(",\n");
   return `# Game CDN Archive - NTE ${version} full download
 # 在 PowerShell 中运行：powershell -ExecutionPolicy Bypass -File .\\NTE_${version}_full_download.ps1
@@ -334,6 +334,7 @@ if ($aria2) {
     $Out = Split-Path -Leaf $Target
     New-Item -ItemType Directory -Force -Path $Dir | Out-Null
     $Lines.Add($Item.Url)
+    if ($Item.Mirror) { $Lines.Add($Item.Mirror) }
     $Lines.Add('  dir=' + $Dir)
     $Lines.Add('  out=' + $Out)
   }
@@ -353,7 +354,20 @@ foreach ($Item in $Items) {
   }
 
   Write-Host ('Download ' + $Item.Path)
-  Invoke-WebRequest -Uri $Item.Url -OutFile $Target
+  $Downloaded = $false
+  foreach ($Url in @($Item.Url, $Item.Mirror)) {
+    if (-not $Url) { continue }
+    try {
+      Invoke-WebRequest -Uri $Url -OutFile $Target
+      $Downloaded = $true
+      break
+    } catch {
+      Write-Warning ('Failed ' + $Url)
+    }
+  }
+  if (-not $Downloaded) {
+    throw ('Download failed: ' + $Item.Path)
+  }
 }
 
 Write-Host 'Download complete.'
@@ -720,6 +734,12 @@ const hoyoFileItem = (entry, index = 0, total = 0) => {
   };
 };
 
+const nteCdn2Url = (url) => {
+  const text = String(url || "");
+  const mirror = text.replace("https://yhcdn1.wmupd.com/", "https://yhcdn2.wmupd.com/");
+  return mirror === text ? "" : mirror;
+};
+
 const nteItem = (entry, index, total) => {
   if (state.mode === "patches") {
     const patch = entry.patch || "";
@@ -730,6 +750,8 @@ const nteItem = (entry, index, total) => {
       size: entry.filesize,
       hash: patch.split(".")[0] || "-",
       url: entry.url,
+      mirrorUrl: nteCdn2Url(entry.url),
+      mirrorLabel: "CDN2",
       count: `${index + 1}/${total}`,
     };
   }
@@ -740,6 +762,8 @@ const nteItem = (entry, index, total) => {
     size: entry.filesize,
     hash: entry.md5,
     url: entry.url,
+    mirrorUrl: nteCdn2Url(entry.url),
+    mirrorLabel: "CDN2",
     count: `${index + 1}/${total}`,
   };
 };
@@ -1705,11 +1729,12 @@ const fileActionHtml = (item) => {
     ? `
       <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="复制当前可用链接">${icons.copy}<span>复制可用链接</span></button>
       <a class="icon-button ${item.officialAvailable ? "" : "stale-link"}" href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noreferrer" title="${item.officialAvailable ? "上游探测时可用" : "上游曾标记不可用，实际状态可能变化"}">${icons.down}<span>官方${item.officialAvailable ? "" : "状态未知"}</span></a>
-      ${item.mirrorUrl ? `<a class="icon-button mirror-link" href="${escapeHtml(item.mirrorUrl)}" target="_blank" rel="noreferrer" title="公开归档镜像">${icons.down}<span>归档镜像</span></a>` : ""}
+      ${item.mirrorUrl ? `<a class="icon-button mirror-link" href="${escapeHtml(item.mirrorUrl)}" target="_blank" rel="noreferrer" title="备用下载链接">${icons.down}<span>${escapeHtml(item.mirrorLabel || "归档镜像")}</span></a>` : ""}
     `
     : `
       <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="复制链接">${icons.copy}<span>复制链接</span></button>
       <a class="icon-button" href="${escapeHtml(preferredUrl)}" target="_blank" rel="noreferrer" title="打开">${icons.down}<span>打开</span></a>
+      ${item.mirrorUrl ? `<a class="icon-button mirror-link" href="${escapeHtml(item.mirrorUrl)}" target="_blank" rel="noreferrer" title="备用下载链接">${icons.down}<span>${escapeHtml(item.mirrorLabel || "镜像")}</span></a>` : ""}
     `;
   const chunkAction = item.chunkDownload
     ? `<button class="icon-button chunk-download-file" type="button" data-remote="${escapeHtml(item.remoteName || item.subtitle)}" data-size="${Number(item.size || 0)}" title="通过官方 Chunk 下载">${icons.down}<span>Chunk 下载</span></button>`
