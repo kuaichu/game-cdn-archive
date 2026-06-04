@@ -12,6 +12,8 @@ const state = {
   hoyoVersions: new Map(),
   nteEntries: new Map(),
   chunkEntries: new Map(),
+  nteAnalytics: null,
+  nteAnalyticsPromise: null,
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -705,6 +707,210 @@ const fmtSignedBytes = (bytes) => {
   return `${value > 0 ? "+" : "-"}${fmtBytes(Math.abs(value))}`;
 };
 
+const nteTrendRows = () => nteVersions()
+  .slice()
+  .sort((a, b) => compareVersions(a.version, b.version))
+  .map((item, index, rows) => {
+    const bytes = Number(item.full?.bytes || 0);
+    const previous = index > 0 ? Number(rows[index - 1].full?.bytes || 0) : bytes;
+    return {
+      version: item.version,
+      bytes,
+      delta: index > 0 ? bytes - previous : 0,
+      date: item.last_modified,
+    };
+  });
+
+const svgPoints = (rows, valueKey, { width, height, padX, padY, min, max }) => {
+  const span = Math.max(max - min, 1);
+  const usableW = width - padX * 2;
+  const usableH = height - padY * 2;
+  return rows.map((row, index) => {
+    const x = padX + (rows.length === 1 ? usableW / 2 : (usableW * index) / (rows.length - 1));
+    const y = padY + usableH - ((Number(row[valueKey] || 0) - min) / span) * usableH;
+    return `${x.toFixed(2)},${y.toFixed(2)}`;
+  }).join(" ");
+};
+
+const renderTrendChart = (rows) => {
+  if (!rows.length) return `<div class="empty compact">暂无趋势数据</div>`;
+  const width = 760;
+  const height = 250;
+  const padX = 42;
+  const padY = 42;
+  const fullValues = rows.map((row) => row.bytes);
+  const deltaValues = rows.map((row) => row.delta);
+  const fullMin = Math.min(...fullValues);
+  const fullMax = Math.max(...fullValues);
+  const deltaMin = Math.min(...deltaValues);
+  const deltaMax = Math.max(...deltaValues);
+  const fullPoints = svgPoints(rows, "bytes", { width, height, padX, padY, min: fullMin, max: fullMax });
+  const deltaPoints = svgPoints(rows, "delta", { width, height, padX, padY, min: deltaMin, max: deltaMax });
+  const tickEvery = Math.max(1, Math.ceil(rows.length / 6));
+  let tickIndexes = rows
+    .map((_, index) => index)
+    .filter((index) => index % tickEvery === 0);
+  if (!tickIndexes.includes(rows.length - 1)) tickIndexes.push(rows.length - 1);
+  if (tickIndexes.length > 2 && tickIndexes.at(-1) - tickIndexes.at(-2) < Math.max(2, Math.floor(tickEvery / 2))) {
+    tickIndexes.splice(-2, 1);
+  }
+  const zeroY = padY + (height - padY * 2) - ((0 - deltaMin) / Math.max(deltaMax - deltaMin, 1)) * (height - padY * 2);
+  return `
+    <svg class="trend-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="版本体积趋势图">
+      <defs>
+        <linearGradient id="fullLineGlow" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0" stop-color="#44a2ff" />
+          <stop offset="1" stop-color="#4ad7c8" />
+        </linearGradient>
+      </defs>
+      <path class="chart-grid" d="M${padX} ${padY}H${width - padX}M${padX} ${height / 2}H${width - padX}M${padX} ${height - padY}H${width - padX}" />
+      <path class="chart-zero" d="M${padX} ${zeroY.toFixed(2)}H${width - padX}" />
+      <polyline class="chart-line full" points="${fullPoints}" />
+      <polyline class="chart-line delta" points="${deltaPoints}" />
+      ${rows.map((row, index) => {
+        const x = padX + (rows.length === 1 ? (width - padX * 2) / 2 : ((width - padX * 2) * index) / (rows.length - 1));
+        const y = padY + (height - padY * 2) - ((row.bytes - fullMin) / Math.max(fullMax - fullMin, 1)) * (height - padY * 2);
+        return `<circle class="chart-dot" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="3"><title>${escapeHtml(row.version)} / ${fmtBytes(row.bytes)} / ${fmtSignedBytes(row.delta)}</title></circle>`;
+      }).join("")}
+      ${tickIndexes.map((index, visibleIndex) => {
+        const row = rows[index];
+        const x = padX + (rows.length === 1 ? (width - padX * 2) / 2 : ((width - padX * 2) * index) / (rows.length - 1));
+        return `<text class="chart-label" x="${x.toFixed(2)}" y="${height - 12}" text-anchor="${visibleIndex === 0 ? "start" : "middle"}">${escapeHtml(row.version)}</text>`;
+      }).join("")}
+    </svg>
+  `;
+};
+
+const getNteAnalytics = async () => {
+  if (state.nteAnalytics) return state.nteAnalytics;
+  if (!state.nteAnalyticsPromise) {
+    state.nteAnalyticsPromise = (async () => {
+      const versions = nteVersions().slice().sort((a, b) => compareVersions(a.version, b.version));
+      const entriesByVersion = new Map();
+      await Promise.all(versions.map(async (item) => {
+        entriesByVersion.set(item.version, await nteComparableItems(item.version));
+      }));
+      const pairs = [];
+      for (let index = 1; index < versions.length; index += 1) {
+        const from = versions[index - 1].version;
+        const to = versions[index].version;
+        const diff = diffVersions(entriesByVersion.get(from) || [], entriesByVersion.get(to) || []);
+        const modifiedDelta = sumModifiedDelta(diff.modified);
+        const addedBytes = sumSizes(diff.added);
+        const removedBytes = sumSizes(diff.removed);
+        const modifiedBytes = diff.modified.reduce((sum, item) =>
+          sum + Math.abs(Number(item.size || 0) - Number(item.oldSize || 0)), 0);
+        const changedBytes = addedBytes + removedBytes + modifiedBytes;
+        pairs.push({
+          from,
+          to,
+          added: diff.added.length,
+          removed: diff.removed.length,
+          modified: diff.modified.length,
+          changedFiles: diff.added.length + diff.removed.length + diff.modified.length,
+          changedBytes,
+          netBytes: addedBytes - removedBytes + modifiedDelta,
+        });
+      }
+      state.nteAnalytics = {
+        pairs,
+        topChanged: pairs.slice().sort((a, b) => b.changedBytes - a.changedBytes).slice(0, 5),
+        topGrowth: pairs.slice().sort((a, b) => b.netBytes - a.netBytes).slice(0, 3),
+      };
+      return state.nteAnalytics;
+    })();
+  }
+  return state.nteAnalyticsPromise;
+};
+
+const renderAnalytics = () => {
+  const panel = $("#analytics");
+  if (!isNte()) {
+    panel.hidden = true;
+    panel.innerHTML = "";
+    return;
+  }
+  panel.hidden = false;
+  const rows = nteTrendRows();
+  const latest = rows.at(-1);
+  const first = rows[0];
+  const totalGrowth = latest && first ? latest.bytes - first.bytes : 0;
+  panel.innerHTML = `
+    <div class="analytics-head">
+      <div>
+        <p class="kicker">Version Analytics</p>
+        <h2>版本体积趋势</h2>
+      </div>
+      <div class="chart-legend">
+        <span class="legend full">完整包体积</span>
+        <span class="legend delta">净变化</span>
+      </div>
+    </div>
+    <div class="analytics-grid">
+      <div class="trend-panel">
+        ${renderTrendChart(rows)}
+        <div class="trend-meta">
+          <span>${rows.length} 个可用版本</span>
+          <span>${first?.version || "-"} -> ${latest?.version || "-"}</span>
+          <strong>${fmtSignedBytes(totalGrowth)}</strong>
+        </div>
+      </div>
+      <div class="rank-panel" id="diffRankPanel">
+        <div class="rank-loading">正在计算相邻版本 Diff 排行...</div>
+      </div>
+    </div>
+  `;
+  getNteAnalytics()
+    .then((analytics) => {
+      if (!isNte()) return;
+      renderDiffRank(analytics);
+    })
+    .catch((error) => {
+      $("#diffRankPanel").innerHTML = `<div class="empty compact">排行计算失败：${escapeHtml(error.message)}</div>`;
+    });
+};
+
+const renderDiffRank = (analytics) => {
+  const panel = $("#diffRankPanel");
+  if (!panel) return;
+  const rows = analytics.topChanged;
+  const biggestGrowth = analytics.topGrowth.find((item) => item.netBytes > 0);
+  panel.innerHTML = `
+    <div class="rank-head">
+      <div>
+        <strong>最重相邻 Diff</strong>
+        <span>按累计变动体积排序</span>
+      </div>
+      ${biggestGrowth ? `<small>最大净增 ${biggestGrowth.from} -> ${biggestGrowth.to} / ${fmtSignedBytes(biggestGrowth.netBytes)}</small>` : ""}
+    </div>
+    <div class="rank-list">
+      ${rows.map((item, index) => `
+        <article class="rank-row">
+          <div class="rank-index">${index + 1}</div>
+          <div class="rank-body">
+            <strong>${escapeHtml(item.from)} -> ${escapeHtml(item.to)}</strong>
+            <span>+${item.added} / -${item.removed} / ~${item.modified}，${item.changedFiles} 个文件</span>
+            <em>累计 ${fmtBytes(item.changedBytes)} / 净变化 ${fmtSignedBytes(item.netBytes)}</em>
+          </div>
+          <button class="icon-button open-compare" type="button" data-from="${escapeHtml(item.from)}" data-to="${escapeHtml(item.to)}">打开对比</button>
+        </article>
+      `).join("")}
+    </div>
+  `;
+  $$(".open-compare").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.mode = "compare";
+      state.version = button.dataset.to;
+      state.compareVersion = button.dataset.from;
+      state.diffFilter = "all";
+      state.query = "";
+      $("#fileSearch").value = "";
+      render();
+      $("#files").scrollIntoView({ block: "start" });
+    });
+  });
+};
+
 const renderCompare = async () => {
   const versions = availableVersions();
   if (!state.compareVersion || state.compareVersion === state.version || !versions.includes(state.compareVersion)) {
@@ -1120,6 +1326,7 @@ const render = () => {
   renderModes();
   renderVersionMenu();
   renderStats();
+  renderAnalytics();
   renderLinks();
   renderPanelTitle();
   renderNotice();

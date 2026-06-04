@@ -549,6 +549,229 @@ h2 {
   white-space: nowrap;
 }
 
+.analytics {
+  margin: 0 0 18px;
+  border: 1px solid rgba(52, 70, 91, 0.82);
+  border-radius: 8px;
+  background: rgba(20, 29, 43, 0.78);
+  padding: 14px;
+}
+
+.analytics-head,
+.rank-head,
+.trend-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.legend {
+  display: inline-flex;
+  min-height: 28px;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid rgba(78, 96, 121, 0.76);
+  border-radius: 999px;
+  color: #c9d7ea;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.legend::before {
+  content: "";
+  width: 18px;
+  height: 3px;
+  border-radius: 999px;
+}
+
+.legend.full::before {
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+}
+
+.legend.delta::before {
+  background: var(--amber);
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(340px, 0.95fr);
+  gap: 12px;
+  align-items: start;
+  margin-top: 12px;
+}
+
+.trend-panel,
+.rank-panel {
+  min-width: 0;
+  border: 1px solid rgba(52, 70, 91, 0.68);
+  border-radius: 8px;
+  background: rgba(26, 37, 55, 0.78);
+}
+
+.trend-panel {
+  padding: 10px 12px 12px;
+}
+
+.trend-chart {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.chart-grid {
+  stroke: rgba(148, 165, 186, 0.16);
+  stroke-width: 1;
+}
+
+.chart-zero {
+  stroke: rgba(255, 195, 77, 0.22);
+  stroke-dasharray: 5 7;
+  stroke-width: 1;
+}
+
+.chart-line {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3;
+}
+
+.chart-line.full {
+  stroke: url(#fullLineGlow);
+}
+
+.chart-line.delta {
+  stroke: var(--amber);
+  stroke-width: 2;
+  opacity: 0.78;
+}
+
+.chart-dot {
+  fill: #9fd0ff;
+  stroke: #0f1724;
+  stroke-width: 2;
+}
+
+.chart-label {
+  fill: #7f91a7;
+  font-family: Consolas, "SFMono-Regular", monospace;
+  font-size: 11px;
+}
+
+.trend-meta {
+  border-top: 1px solid var(--line-soft);
+  color: var(--muted);
+  padding-top: 10px;
+  font-family: Consolas, "SFMono-Regular", monospace;
+  font-size: 12px;
+}
+
+.trend-meta strong {
+  color: var(--green);
+}
+
+.rank-panel {
+  display: grid;
+  align-content: start;
+  gap: 10px;
+  padding: 12px;
+}
+
+.rank-head strong,
+.rank-head span,
+.rank-head small {
+  display: block;
+}
+
+.rank-head strong {
+  color: #f2f7ff;
+}
+
+.rank-head span,
+.rank-head small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.rank-head small {
+  color: #f2cc60;
+  text-align: right;
+}
+
+.rank-list {
+  display: grid;
+  gap: 8px;
+}
+
+.rank-row {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(78, 96, 121, 0.58);
+  border-radius: 8px;
+  background: rgba(15, 23, 36, 0.5);
+  padding: 10px;
+}
+
+.rank-index {
+  display: grid;
+  width: 26px;
+  height: 26px;
+  place-items: center;
+  border-radius: 7px;
+  background: rgba(68, 162, 255, 0.16);
+  color: #8dccff;
+  font-family: Consolas, "SFMono-Regular", monospace;
+  font-weight: 900;
+}
+
+.rank-body {
+  min-width: 0;
+}
+
+.rank-body strong,
+.rank-body span,
+.rank-body em {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rank-body strong {
+  color: #edf6ff;
+  font-family: Consolas, "SFMono-Regular", monospace;
+}
+
+.rank-body span {
+  color: #9fb0c5;
+  font-size: 12px;
+}
+
+.rank-body em {
+  color: #f2cc60;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.rank-loading {
+  min-height: 120px;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .notice {
   display: flex;
   justify-content: space-between;
@@ -1078,6 +1301,10 @@ h2 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+
   .compare-summary {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1159,6 +1386,27 @@ h2 {
 
   .chunk-summary {
     grid-template-columns: 1fr;
+  }
+
+  .analytics-head,
+  .trend-meta,
+  .rank-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .rank-head small {
+    text-align: left;
+  }
+
+  .rank-row {
+    grid-template-columns: 28px minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .rank-row .icon-button {
+    grid-column: 1 / -1;
+    justify-self: end;
   }
 
   .compare-toolbar,
