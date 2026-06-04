@@ -15,6 +15,7 @@ const state = {
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 const VIEW_STORAGE_KEY = "game-cdn-archive:view";
+const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 
 const loadSavedView = () => {
   try {
@@ -758,7 +759,10 @@ const renderNotice = () => {
         <strong>数据来源</strong>
         <span>页面保存由异环官方启动器 CDN 清单解析出的 URL、校验信息与下载索引；解密流程与复现细节见仓库 README。</span>
       </div>
-      <a class="source-link" href="${escapeHtml(nteVersion()?.reslist_url || "#")}" target="_blank" rel="noreferrer">官方 ResList 清单</a>
+      <div class="source-links">
+        <a class="source-link" href="${escapeHtml(nteVersion()?.reslist_url || "#")}" target="_blank" rel="noreferrer">官方 ResList 清单</a>
+        <a class="source-link" href="${REPOSITORY_URL}#nte-manifest-notes" target="_blank" rel="noreferrer">本站仓库 README</a>
+      </div>
     `;
   } else if (isEndfield()) {
     notice.innerHTML = `
@@ -766,7 +770,9 @@ const renderNotice = () => {
         <strong>数据来源</strong>
         <span>上游项目持续归档终末地官方启动器 API。页面展示的是上游历史探测状态，并非实时检测；官方链接状态可能变化，归档镜像作为稳定备用入口。</span>
       </div>
-      <a class="source-link" href="${escapeHtml(state.endfieldIndex.source)}" target="_blank" rel="noreferrer">daydreamer-json/ak-endfield-api-archive</a>
+      <div class="source-links">
+        <a class="source-link" href="${escapeHtml(state.endfieldIndex.source)}" target="_blank" rel="noreferrer">daydreamer-json/ak-endfield-api-archive</a>
+      </div>
     `;
   } else {
     notice.innerHTML = `
@@ -774,7 +780,9 @@ const renderNotice = () => {
         <strong>数据来源</strong>
         <span>米家游戏数据迁移自 HoyoFiles 的公开版本清单接口，并在本站保存为静态索引；Chunk 视图只展示 Manifest 入口与统计信息。</span>
       </div>
-      <a class="source-link" href="https://hoyo-files.amarea.cn/" target="_blank" rel="noreferrer">hoyo-files.amarea.cn</a>
+      <div class="source-links">
+        <a class="source-link" href="https://hoyo-files.amarea.cn/" target="_blank" rel="noreferrer">hoyo-files.amarea.cn</a>
+      </div>
     `;
   }
 };

@@ -575,6 +575,14 @@ h2 {
   white-space: nowrap;
 }
 
+.source-links {
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
 .source-link {
   flex: 0 0 auto;
   max-width: min(420px, 42vw);
@@ -823,6 +831,11 @@ h2 {
   .source-link {
     width: 100%;
     max-width: none;
+  }
+
+  .source-links {
+    width: 100%;
+    justify-content: stretch;
   }
 
   .control-strip {
