@@ -318,6 +318,10 @@ h2 {
   padding: 0 13px;
 }
 
+.tool-button[hidden] {
+  display: none;
+}
+
 .tool-button.disabled {
   pointer-events: none;
   opacity: 0.42;

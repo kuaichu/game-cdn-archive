@@ -291,6 +291,86 @@ const commandFor = () => {
   return `aria2c -c -x16 -s16 <从页面复制对应 URL 列表>`;
 };
 
+const psSingleQuote = (value) => String(value ?? "").replace(/'/g, "''");
+
+const downloadTextFile = (filename, text, type = "text/plain;charset=utf-8") => {
+  const blob = new Blob([text], { type });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+};
+
+const nteDownloadScript = (version, entries) => {
+  const root = `NTE_${version}_full`;
+  const items = entries.map((entry) => {
+    const path = String(entry.filename || entry.subtitle || entry.object || "").replace(/\\/g, "/").replace(/^\/+/, "");
+    return `  @{ Url='${psSingleQuote(entry.url)}'; Path='${psSingleQuote(path)}'; Size=${Number(entry.filesize || entry.size || 0)}; Md5='${psSingleQuote(entry.md5 || entry.hash || "")}' }`;
+  }).join(",\n");
+  return `# Game CDN Archive - NTE ${version} full download
+# 在 PowerShell 中运行：powershell -ExecutionPolicy Bypass -File .\\NTE_${version}_full_download.ps1
+Set-StrictMode -Version Latest
+$ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
+
+$Root = Join-Path (Get-Location) '${psSingleQuote(root)}'
+$Items = @(
+${items}
+)
+
+New-Item -ItemType Directory -Force -Path $Root | Out-Null
+
+$aria2 = Get-Command aria2c -ErrorAction SilentlyContinue
+if ($aria2) {
+  $InputFile = Join-Path $Root 'download.aria2.txt'
+  $Lines = New-Object System.Collections.Generic.List[string]
+  foreach ($Item in $Items) {
+    $Target = Join-Path $Root $Item.Path
+    $Dir = Split-Path -Parent $Target
+    $Out = Split-Path -Leaf $Target
+    New-Item -ItemType Directory -Force -Path $Dir | Out-Null
+    $Lines.Add($Item.Url)
+    $Lines.Add('  dir=' + $Dir)
+    $Lines.Add('  out=' + $Out)
+  }
+  [System.IO.File]::WriteAllLines($InputFile, $Lines, [System.Text.UTF8Encoding]::new($false))
+  & $aria2.Source -c -x16 -s16 -j4 -i $InputFile
+  exit $LASTEXITCODE
+}
+
+foreach ($Item in $Items) {
+  $Target = Join-Path $Root $Item.Path
+  $Dir = Split-Path -Parent $Target
+  New-Item -ItemType Directory -Force -Path $Dir | Out-Null
+
+  if ((Test-Path $Target) -and ((Get-Item $Target).Length -eq [int64]$Item.Size)) {
+    Write-Host ('Skip ' + $Item.Path)
+    continue
+  }
+
+  Write-Host ('Download ' + $Item.Path)
+  Invoke-WebRequest -Uri $Item.Url -OutFile $Target
+}
+
+Write-Host 'Download complete.'
+`;
+};
+
+const downloadNteScript = async () => {
+  if (!isNte() || state.mode !== "full") return;
+  const entries = await loadNteEntries(state.version, "full");
+  if (!entries.length) {
+    showToast("当前版本没有完整文件清单");
+    return;
+  }
+  downloadTextFile(`NTE_${state.version}_full_download.ps1`, nteDownloadScript(state.version, entries));
+  showToast("下载脚本已生成");
+};
+
 const bindStaticActions = () => {
   $("#selectButton").addEventListener("click", () => {
     const menu = $("#versionMenu");
@@ -315,6 +395,12 @@ const bindStaticActions = () => {
   });
 
   $("#copyCommandBtn").addEventListener("click", () => copyText(commandFor(), "命令已复制"));
+  $("#scriptButton").addEventListener("click", () => {
+    downloadNteScript().catch((error) => {
+      console.error(error);
+      showToast(`脚本生成失败：${error.message}`);
+    });
+  });
 
   $$(".side-link").forEach((link) => {
     link.addEventListener("click", () => setActiveSideLink(link.dataset.section));
@@ -507,6 +593,9 @@ const hoyoStats = () => {
 };
 
 const renderLinks = () => {
+  const scriptButton = $("#scriptButton");
+  scriptButton.hidden = true;
+  scriptButton.disabled = true;
   if (state.mode === "compare") {
     $("#urlsLink").classList.add("disabled");
     $("#aria2Link").classList.add("disabled");
@@ -526,6 +615,8 @@ const renderLinks = () => {
     $("#urlsLink").href = files?.urls || "#";
     $("#aria2Link").href = files?.aria2 || "#";
     $("#jsonLink").href = files?.json || "#";
+    scriptButton.hidden = disabled || state.mode !== "full";
+    scriptButton.disabled = disabled || state.mode !== "full";
     return;
   }
 
