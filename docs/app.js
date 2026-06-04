@@ -15,6 +15,8 @@ const state = {
   hoyoFilePath: "",
   hoyoExpandedFile: "",
   nteEntries: new Map(),
+  nteFilePath: "",
+  nteExpandedFile: "",
   chunkEntries: new Map(),
   nteAnalytics: null,
   nteAnalyticsPromise: null,
@@ -308,6 +310,7 @@ const bindStaticActions = () => {
     state.query = event.target.value.trim().toLowerCase();
     state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
     state.hoyoExpandedFile = "";
+    state.nteExpandedFile = "";
     renderList();
   });
 
@@ -337,6 +340,8 @@ const renderGameRail = () => {
       state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
       state.hoyoFilePath = "";
       state.hoyoExpandedFile = "";
+      state.nteFilePath = "";
+      state.nteExpandedFile = "";
       $("#fileSearch").value = "";
       await ensureGameData();
       state.compareVersion = null;
@@ -368,6 +373,8 @@ const renderModes = () => {
       state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
       state.hoyoFilePath = "";
       state.hoyoExpandedFile = "";
+      state.nteFilePath = "";
+      state.nteExpandedFile = "";
       $$(".mode-tab").forEach((item) => item.classList.toggle("active", item === button));
       render();
     });
@@ -404,6 +411,8 @@ const renderVersionMenu = () => {
       state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
       state.hoyoFilePath = "";
       state.hoyoExpandedFile = "";
+      state.nteFilePath = "";
+      state.nteExpandedFile = "";
       $("#versionMenu").hidden = true;
       $("#selectButton").setAttribute("aria-expanded", "false");
       render();
@@ -1361,6 +1370,48 @@ const renderNteResList = () => {
   bindCardActions();
 };
 
+const renderNteFullFiles = (items) => {
+  const filtered = filterEntries(items);
+  const note = `
+    <div class="notice file-browser-note">
+      <div class="notice-copy">
+        <strong>清单口径</strong>
+        <span>这里展示的是官方 ResList 中可直接下载的游戏对象数量，不等同于本地安装目录递归后的文件数；启动器 Allfile 属于 launcher 独立清单。</span>
+      </div>
+    </div>
+  `;
+  if (state.query) {
+    $("#fileList").innerHTML = note + (filtered.length
+      ? `<div class="hoyo-browser search-results">${filtered.map((entry) => hoyoFileRow(entry, "search", state.nteExpandedFile)).join("")}</div>`
+      : `<div class="empty">没有匹配到文件</div>`);
+  } else {
+    $("#fileList").innerHTML = note + renderDirectoryBrowser({
+      files: items,
+      currentPath: state.nteFilePath || "",
+      expandedFile: state.nteExpandedFile,
+    });
+  }
+  bindCardActions();
+  bindNteBrowserActions();
+};
+
+const bindNteBrowserActions = () => {
+  $$(".folder-row, .breadcrumb-step").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.nteFilePath = button.dataset.folder || "";
+      state.nteExpandedFile = "";
+      renderList();
+    });
+  });
+  $$(".hoyo-browser .file-row").forEach((button) => {
+    button.addEventListener("click", () => {
+      const key = button.dataset.file || "";
+      state.nteExpandedFile = state.nteExpandedFile === key ? "" : key;
+      renderList();
+    });
+  });
+};
+
 const renderHoyoChunk = async () => {
   const version = hoyoVersion();
   if (!version?.chunk) {
@@ -1456,8 +1507,7 @@ const renderHoyoSearchResults = (filtered) => {
     : `<div class="empty">没有匹配到文件</div>`;
 };
 
-const renderHoyoFileBrowser = (files) => {
-  const currentPath = state.hoyoFilePath || "";
+const renderDirectoryBrowser = ({ files, currentPath = "", expandedFile = "" }) => {
   const prefix = currentPath ? `${currentPath}/` : "";
   const folders = new Map();
   const currentFiles = [];
@@ -1484,7 +1534,7 @@ const renderHoyoFileBrowser = (files) => {
   const fileRows = currentFiles.sort((a, b) => a.title.localeCompare(b.title));
   const rows = [
     ...folderRows.map(hoyoFolderRow),
-    ...fileRows.map((item) => hoyoFileRow(item, "browser")),
+    ...fileRows.map((item) => hoyoFileRow(item, "browser", expandedFile)),
   ].join("");
   const currentLabel = currentPath || "根目录";
   return `
@@ -1502,6 +1552,12 @@ const renderHoyoFileBrowser = (files) => {
     </div>
   `;
 };
+
+const renderHoyoFileBrowser = (files) => renderDirectoryBrowser({
+  files,
+  currentPath: state.hoyoFilePath || "",
+  expandedFile: state.hoyoExpandedFile,
+});
 
 const hoyoBreadcrumb = (currentPath) => {
   const segments = currentPath ? currentPath.split("/") : [];
@@ -1527,9 +1583,9 @@ const hoyoFolderRow = (folder) => `
   </button>
 `;
 
-const hoyoFileRow = (item, context) => {
+const hoyoFileRow = (item, context, expandedKey = state.hoyoExpandedFile) => {
   const key = item.remoteName || item.subtitle || item.title || "";
-  const expanded = state.hoyoExpandedFile === key;
+  const expanded = expandedKey === key;
   const hashText = [item.hash, item.extraHash ? `xxHash64 ${item.extraHash}` : ""].filter(Boolean).join(" / ") || "-";
   return `
     <button class="browser-row file-row ${expanded ? "selected" : ""}" type="button" data-file="${escapeHtml(key)}">
@@ -1682,9 +1738,14 @@ const renderList = async () => {
       return;
     }
     const entries = await loadNteEntries();
-    const filtered = filterEntries(entries);
+    const items = entries.map((entry, index) => nteItem(entry, index, entries.length));
+    if (state.mode === "full") {
+      renderNteFullFiles(items);
+      return;
+    }
+    const filtered = filterEntries(items);
     $("#fileList").innerHTML = filtered
-      .map((entry, index) => fileCard(nteItem(entry, index, filtered.length)))
+      .map((entry, index) => fileCard({ ...entry, count: `${index + 1}/${filtered.length}` }))
       .join("") || `<div class="empty">没有匹配到文件</div>`;
     bindCardActions();
     return;
