@@ -14,6 +14,8 @@ const state = {
   chunkEntries: new Map(),
   nteAnalytics: null,
   nteAnalyticsPromise: null,
+  endfieldAnalytics: null,
+  endfieldAnalyticsPromise: null,
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -727,6 +729,22 @@ const nteTrendRows = () => nteVersions()
     };
   });
 
+const endfieldTrendRows = () => endfieldSummaries()
+  .slice()
+  .sort((a, b) => compareVersions(a.version, b.version))
+  .map((item, index, rows) => {
+    const bytes = Number(item.packed_size || 0);
+    const previous = index > 0 ? Number(rows[index - 1].packed_size || 0) : bytes;
+    return {
+      version: item.version,
+      bytes,
+      delta: index > 0 ? bytes - previous : 0,
+      date: item.released_at,
+    };
+  });
+
+const analyticsTrendRows = () => (isEndfield() ? endfieldTrendRows() : nteTrendRows());
+
 const svgPoints = (rows, valueKey, { width, height, padX, padY, min, max }) => {
   const span = Math.max(max - min, 1);
   const usableW = width - padX * 2;
@@ -769,7 +787,7 @@ const renderTrendChart = (rows) => {
     .map((_, index) => index)
     .filter((index) => index % tickEvery === 0);
   if (!tickIndexes.includes(rows.length - 1)) tickIndexes.push(rows.length - 1);
-  if (tickIndexes.length > 2 && tickIndexes.at(-1) - tickIndexes.at(-2) < Math.max(2, Math.floor(tickEvery / 2))) {
+  if (rows.length > 8 && tickIndexes.length > 2 && tickIndexes.at(-1) - tickIndexes.at(-2) < Math.max(2, Math.floor(tickEvery / 2))) {
     tickIndexes.splice(-2, 1);
   }
   const zeroY = deltaScale(0);
@@ -818,57 +836,80 @@ const renderTrendChart = (rows) => {
 const getNteAnalytics = async () => {
   if (state.nteAnalytics) return state.nteAnalytics;
   if (!state.nteAnalyticsPromise) {
-    state.nteAnalyticsPromise = (async () => {
-      const versions = nteVersions().slice().sort((a, b) => compareVersions(a.version, b.version));
-      const entriesByVersion = new Map();
-      await Promise.all(versions.map(async (item) => {
-        entriesByVersion.set(item.version, await nteComparableItems(item.version));
-      }));
-      const pairs = [];
-      for (let index = 1; index < versions.length; index += 1) {
-        const from = versions[index - 1].version;
-        const to = versions[index].version;
-        const diff = diffVersions(entriesByVersion.get(from) || [], entriesByVersion.get(to) || []);
-        const modifiedDelta = sumModifiedDelta(diff.modified);
-        const addedBytes = sumSizes(diff.added);
-        const removedBytes = sumSizes(diff.removed);
-        const modifiedBytes = diff.modified.reduce((sum, item) =>
-          sum + Math.abs(Number(item.size || 0) - Number(item.oldSize || 0)), 0);
-        const changedBytes = addedBytes + removedBytes + modifiedBytes;
-        pairs.push({
-          from,
-          to,
-          added: diff.added.length,
-          removed: diff.removed.length,
-          modified: diff.modified.length,
-          changedFiles: diff.added.length + diff.removed.length + diff.modified.length,
-          changedBytes,
-          netBytes: addedBytes - removedBytes + modifiedDelta,
-        });
-      }
-      state.nteAnalytics = {
-        pairs,
-        topChanged: pairs.slice().sort((a, b) => b.changedBytes - a.changedBytes).slice(0, 5),
-        topGrowth: pairs.slice().sort((a, b) => b.netBytes - a.netBytes).slice(0, 3),
-      };
-      return state.nteAnalytics;
-    })();
+    state.nteAnalyticsPromise = buildVersionAnalytics(
+      nteVersions().slice().sort((a, b) => compareVersions(a.version, b.version)),
+      (version) => nteComparableItems(version),
+    ).then((analytics) => {
+      state.nteAnalytics = analytics;
+      return analytics;
+    });
   }
   return state.nteAnalyticsPromise;
 };
 
+const getEndfieldAnalytics = async () => {
+  if (state.endfieldAnalytics) return state.endfieldAnalytics;
+  if (!state.endfieldAnalyticsPromise) {
+    state.endfieldAnalyticsPromise = buildVersionAnalytics(
+      endfieldSummaries().slice().sort((a, b) => compareVersions(a.version, b.version)),
+      (version) => endfieldComparableItems(version),
+    ).then((analytics) => {
+      state.endfieldAnalytics = analytics;
+      return analytics;
+    });
+  }
+  return state.endfieldAnalyticsPromise;
+};
+
+const getCurrentAnalytics = () => (isEndfield() ? getEndfieldAnalytics() : getNteAnalytics());
+
+const buildVersionAnalytics = async (versions, itemLoader) => {
+  const entriesByVersion = new Map();
+  await Promise.all(versions.map(async (item) => {
+    entriesByVersion.set(item.version, await itemLoader(item.version));
+  }));
+  const pairs = [];
+  for (let index = 1; index < versions.length; index += 1) {
+    const from = versions[index - 1].version;
+    const to = versions[index].version;
+    const diff = diffVersions(entriesByVersion.get(from) || [], entriesByVersion.get(to) || []);
+    const modifiedDelta = sumModifiedDelta(diff.modified);
+    const addedBytes = sumSizes(diff.added);
+    const removedBytes = sumSizes(diff.removed);
+    const modifiedBytes = diff.modified.reduce((sum, item) =>
+      sum + Math.abs(Number(item.size || 0) - Number(item.oldSize || 0)), 0);
+    const changedBytes = addedBytes + removedBytes + modifiedBytes;
+    pairs.push({
+      from,
+      to,
+      added: diff.added.length,
+      removed: diff.removed.length,
+      modified: diff.modified.length,
+      changedFiles: diff.added.length + diff.removed.length + diff.modified.length,
+      changedBytes,
+      netBytes: addedBytes - removedBytes + modifiedDelta,
+    });
+  }
+  return {
+    pairs,
+    topChanged: pairs.slice().sort((a, b) => b.changedBytes - a.changedBytes).slice(0, 5),
+    topGrowth: pairs.slice().sort((a, b) => b.netBytes - a.netBytes).slice(0, 3),
+  };
+};
+
 const renderAnalytics = () => {
   const panel = $("#analytics");
-  if (!isNte()) {
+  if (!isNte() && !isEndfield()) {
     panel.hidden = true;
     panel.innerHTML = "";
     return;
   }
   panel.hidden = false;
-  const rows = nteTrendRows();
+  const rows = analyticsTrendRows();
   const latest = rows.at(-1);
   const first = rows[0];
   const totalGrowth = latest && first ? latest.bytes - first.bytes : 0;
+  const sourceLabel = isEndfield() ? "终末地完整包归档" : "异环完整文件清单";
   panel.innerHTML = `
     <div class="analytics-head">
       <div>
@@ -887,6 +928,7 @@ const renderAnalytics = () => {
           <span>${rows.length} 个可用版本</span>
           <span>${first?.version || "-"} -> ${latest?.version || "-"}</span>
           <strong>${fmtSignedBytes(totalGrowth)}</strong>
+          <span>${sourceLabel}</span>
         </div>
       </div>
       <div class="rank-panel" id="diffRankPanel">
@@ -894,9 +936,9 @@ const renderAnalytics = () => {
       </div>
     </div>
   `;
-  getNteAnalytics()
+  getCurrentAnalytics()
     .then((analytics) => {
-      if (!isNte()) return;
+      if (!isNte() && !isEndfield()) return;
       renderDiffRank(analytics);
     })
     .catch((error) => {
