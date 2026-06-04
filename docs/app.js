@@ -2,6 +2,7 @@ const state = {
   gameId: "nte",
   mode: "full",
   version: null,
+  compareVersion: null,
   query: "",
   nteCatalog: null,
   hoyoIndex: null,
@@ -70,18 +71,21 @@ const nteModes = [
   ["full", "完整文件"],
   ["patches", "更新补丁"],
   ["reslist", "清单文件"],
+  ["compare", "版本对比"],
 ];
 
 const hoyoModes = [
   ["packages", "压缩包"],
   ["updates", "更新包"],
   ["chunk", "Chunk 信息"],
+  ["compare", "版本对比"],
 ];
 
 const endfieldModes = [
   ["packages", "完整包"],
   ["patches", "更新补丁"],
   ["archive", "归档信息"],
+  ["compare", "版本对比"],
 ];
 
 const fmtBytes = (bytes) => {
@@ -170,12 +174,32 @@ const hoyoSummaries = () => hoyoSummary()?.versions || [];
 const endfieldVersion = () => state.endfieldVersions?.[state.version] || null;
 const endfieldSummaries = () => state.endfieldIndex?.versions || [];
 
+const availableSummaries = () => {
+  if (isNte()) return nteVersions();
+  if (isEndfield()) return endfieldSummaries();
+  return hoyoSummaries().filter((item) => item.package_items || item.update_items || item.has_chunk);
+};
+
+const availableVersions = () => availableSummaries()
+  .map((item) => item.version)
+  .sort(compareVersions);
+
+const defaultCompareVersion = () => {
+  const versions = availableVersions();
+  const currentIndex = versions.indexOf(state.version);
+  if (currentIndex > 0) return versions[currentIndex - 1];
+  return versions.find((version) => version !== state.version) || null;
+};
+
 const versionFamily = (version) => {
   const parts = version.split(".");
   return isNte() || isEndfield() ? parts.slice(0, 2).join(".") : `${parts[0]}.x`;
 };
 
 const commandFor = () => {
+  if (state.mode === "compare") {
+    return "版本对比模式不需要下载命令";
+  }
   if (isNte()) {
     return `python scripts\\nte_downloader.py download ${state.version} --download-root downloads --workers 4 --pack --pack-dir packages`;
   }
@@ -224,6 +248,7 @@ const renderGameRail = () => {
       state.query = "";
       $("#fileSearch").value = "";
       await ensureGameData();
+      state.compareVersion = null;
       render();
     });
   });
@@ -246,6 +271,7 @@ const renderModes = () => {
   $$(".mode-tab").forEach((button) => {
     button.addEventListener("click", () => {
       state.mode = button.dataset.mode;
+      state.compareVersion = null;
       $$(".mode-tab").forEach((item) => item.classList.toggle("active", item === button));
       render();
     });
@@ -253,13 +279,7 @@ const renderModes = () => {
 };
 
 const renderVersionMenu = () => {
-  const versions = isNte()
-    ? nteVersions()
-    : isEndfield()
-      ? endfieldSummaries()
-    : hoyoSummaries().filter((item) => item.package_items || item.update_items || item.has_chunk);
-
-  const groups = [...versions]
+  const groups = [...availableSummaries()]
     .sort((a, b) => compareVersions(b.version, a.version))
     .reduce((result, item) => {
       const family = versionFamily(item.version);
@@ -283,6 +303,7 @@ const renderVersionMenu = () => {
   $$(".version-row").forEach((button) => {
     button.addEventListener("click", () => {
       state.version = button.dataset.version;
+      state.compareVersion = null;
       $("#versionMenu").hidden = true;
       $("#selectButton").setAttribute("aria-expanded", "false");
       render();
@@ -376,6 +397,16 @@ const hoyoStats = () => {
 };
 
 const renderLinks = () => {
+  if (state.mode === "compare") {
+    $("#urlsLink").classList.add("disabled");
+    $("#aria2Link").classList.add("disabled");
+    $("#jsonLink").classList.add("disabled");
+    $("#urlsLink").href = "#";
+    $("#aria2Link").href = "#";
+    $("#jsonLink").href = "#";
+    return;
+  }
+
   if (isNte()) {
     const files = nteFiles();
     const disabled = state.mode === "reslist" || !files;
@@ -418,11 +449,12 @@ const renderPanelTitle = () => {
   $("#panelTitle").textContent = `${state.version} ${modeLabel}`;
 };
 
-const loadNteEntries = async () => {
-  if (state.mode === "reslist") return [];
-  const files = nteFiles();
+const loadNteEntries = async (version = state.version, mode = state.mode) => {
+  if (mode === "reslist" || mode === "compare") mode = "full";
+  const row = state.nteCatalog.versions.find((item) => item.version === version);
+  const files = row?.[mode];
   if (!files?.json) return [];
-  const key = `${state.version}:${state.mode}`;
+  const key = `${version}:${mode}`;
   if (!state.nteEntries.has(key)) {
     const response = await fetch(files.json);
     state.nteEntries.set(key, await response.json());
@@ -535,6 +567,205 @@ const endfieldPatchItems = () => {
     mirrorUrl: item.mirror_url,
     preferredUrl: item.preferred_url,
   })));
+};
+
+const normalizeVersionText = (value) => String(value || "").replace(/\d+\.\d+\.\d+/g, "{version}");
+
+const hoyoComparableItems = (version) => {
+  const row = hoyoVersionMap()?.[version];
+  if (!row) return [];
+  const items = [];
+  const addItem = (item, badge, sublabel = "") => {
+    if (!item) return;
+    const title = item.name || item.url;
+    items.push({
+      key: `${badge}:${normalizeVersionText(sublabel)}:${normalizeVersionText(title)}`,
+      title,
+      subtitle: sublabel || item.url,
+      badge,
+      size: Number(item.size || 0),
+      hash: item.checksum || "",
+      url: item.url,
+    });
+  };
+
+  addItem(row.game?.full, "游戏包");
+  (row.game?.segments || []).forEach((item, index) => addItem(item, "游戏包分卷", `分卷 ${index + 1}`));
+  Object.entries(row.voice || {}).forEach(([lang, item]) => addItem(item, "语音包", audioLabels[lang] || lang));
+  Object.entries(row.update || {}).forEach(([from, patch]) => {
+    addItem(patch?.game, "游戏包更新", normalizeVersionText(`${from} -> ${version}`));
+    Object.entries(patch?.voice || {}).forEach(([lang, item]) => {
+      addItem(item, "语音包更新", `${audioLabels[lang] || lang} ${normalizeVersionText(`${from} -> ${version}`)}`);
+    });
+  });
+  return items;
+};
+
+const endfieldComparableItems = (version) => {
+  const row = state.endfieldVersions?.[version];
+  if (!row) return [];
+  const packages = (row.packages || []).map((item, index) => ({
+    key: `package:${index + 1}`,
+    title: item.name,
+    subtitle: item.official_available ? "官方完整分卷" : "完整分卷",
+    badge: "完整包",
+    size: Number(item.size || 0),
+    hash: item.md5 || "",
+    url: item.preferred_url || item.official_url || item.mirror_url,
+  }));
+  const patches = (row.patches || []).flatMap((route) => route.parts.map((item, index) => ({
+    key: `patch:${normalizeVersionText(route.from)}->${normalizeVersionText(route.to)}:${index + 1}`,
+    title: item.name,
+    subtitle: `${route.from} -> ${route.to}`,
+    badge: "更新补丁",
+    size: Number(item.size || 0),
+    hash: item.md5 || "",
+    url: item.preferred_url || item.official_url || item.mirror_url,
+  })));
+  return [...packages, ...patches];
+};
+
+const nteComparableItems = async (version) => {
+  const entries = await loadNteEntries(version, "full");
+  return entries.map((item) => ({
+    key: item.filename || item.object,
+    title: item.filename?.split(/[\\/]/).at(-1) || item.object,
+    subtitle: item.filename || item.object,
+    badge: "完整文件",
+    size: Number(item.filesize || 0),
+    hash: item.md5 || "",
+    url: item.url,
+  }));
+};
+
+const comparableItems = async (version) => {
+  if (isNte()) return nteComparableItems(version);
+  if (isEndfield()) return endfieldComparableItems(version);
+  return hoyoComparableItems(version);
+};
+
+const diffVersions = (oldItems, newItems) => {
+  const oldMap = new Map(oldItems.map((item) => [item.key, item]));
+  const newMap = new Map(newItems.map((item) => [item.key, item]));
+  const added = [];
+  const removed = [];
+  const checksumChanged = [];
+  const sizeChanged = [];
+
+  for (const [key, item] of newMap) {
+    const oldItem = oldMap.get(key);
+    if (!oldItem) {
+      added.push(item);
+      continue;
+    }
+    if (oldItem.hash && item.hash && oldItem.hash !== item.hash) {
+      checksumChanged.push({ ...item, oldHash: oldItem.hash, oldSize: oldItem.size });
+    }
+    if (Number(oldItem.size || 0) !== Number(item.size || 0)) {
+      sizeChanged.push({ ...item, oldHash: oldItem.hash, oldSize: oldItem.size });
+    }
+  }
+
+  for (const [key, item] of oldMap) {
+    if (!newMap.has(key)) removed.push(item);
+  }
+
+  return { added, removed, checksumChanged, sizeChanged };
+};
+
+const diffLabels = {
+  added: ["新增文件", "green"],
+  removed: ["删除文件", "rose"],
+  checksumChanged: ["MD5 变化", "violet"],
+  sizeChanged: ["大小变化", "amber"],
+};
+
+const renderCompare = async () => {
+  const versions = availableVersions();
+  if (!state.compareVersion || state.compareVersion === state.version || !versions.includes(state.compareVersion)) {
+    state.compareVersion = defaultCompareVersion();
+  }
+  if (!state.compareVersion) {
+    $("#fileList").innerHTML = `<div class="empty">没有可用于对比的其他版本</div>`;
+    return;
+  }
+
+  const [oldItems, newItems] = await Promise.all([
+    comparableItems(state.compareVersion),
+    comparableItems(state.version),
+  ]);
+  const diff = diffVersions(oldItems, newItems);
+  const totalChanges = Object.values(diff).reduce((sum, items) => sum + items.length, 0);
+  const sourceHint = isNte()
+    ? "异环基于完整文件清单做文件级对比。"
+    : "当前基于本站保存的归档条目对比；要做压缩包内部文件级对比，需要额外保存 Chunk/Manifest 文件索引。";
+
+  const selector = `
+    <div class="compare-toolbar">
+      <div>
+        <span>对比范围</span>
+        <strong>${escapeHtml(state.compareVersion)} -> ${escapeHtml(state.version)}</strong>
+      </div>
+      <label>
+        <span>基准版本</span>
+        <select id="compareVersionSelect">
+          ${versions.filter((version) => version !== state.version).map((version) => `
+            <option value="${escapeHtml(version)}" ${version === state.compareVersion ? "selected" : ""}>${escapeHtml(version)}</option>
+          `).join("")}
+        </select>
+      </label>
+      <p>${sourceHint}</p>
+    </div>
+    <div class="compare-summary">
+      ${Object.entries(diffLabels).map(([key, [label, tone]]) => `
+        <div class="compare-stat ${tone}">
+          <span>${label}</span>
+          <strong>${diff[key].length.toLocaleString()}</strong>
+        </div>
+      `).join("")}
+    </div>
+  `;
+
+  if (!totalChanges) {
+    $("#fileList").innerHTML = `${selector}<div class="empty">两个版本没有可见差异</div>`;
+  } else {
+    $("#fileList").innerHTML = selector + Object.entries(diffLabels)
+      .map(([key, [label]]) => compareSection(label, diff[key], key))
+      .join("");
+  }
+  $("#compareVersionSelect")?.addEventListener("change", (event) => {
+    state.compareVersion = event.target.value;
+    renderList();
+  });
+  bindCardActions();
+};
+
+const compareSection = (label, items, type) => {
+  const filtered = filterEntries(items);
+  if (!filtered.length) return "";
+  return `
+    <section class="compare-section">
+      <div class="compare-section-head">
+        <strong>${label}</strong>
+        <span>${filtered.length.toLocaleString()} 项</span>
+      </div>
+      ${filtered.slice(0, 300).map((item, index) => fileCard(compareCardItem(item, type, index, filtered.length))).join("")}
+      ${filtered.length > 300 ? `<div class="empty compact">已显示前 300 项，可用搜索继续过滤</div>` : ""}
+    </section>
+  `;
+};
+
+const compareCardItem = (item, type, index, total) => {
+  const [label] = diffLabels[type];
+  const details = [];
+  if (item.oldHash && item.hash && item.oldHash !== item.hash) details.push(`MD5: ${item.oldHash} -> ${item.hash}`);
+  if (item.oldSize !== undefined && Number(item.oldSize || 0) !== Number(item.size || 0)) details.push(`大小: ${fmtBytes(item.oldSize)} -> ${fmtBytes(item.size)}`);
+  return {
+    ...item,
+    badge: label,
+    subtitle: details.length ? `${item.subtitle} / ${details.join(" / ")}` : item.subtitle,
+    count: `${index + 1}/${total}`,
+  };
 };
 
 const renderEndfieldArchive = () => {
@@ -684,6 +915,11 @@ const bindCardActions = () => {
 };
 
 const renderList = async () => {
+  if (state.mode === "compare") {
+    await renderCompare();
+    return;
+  }
+
   if (isNte()) {
     if (state.mode === "reslist") {
       renderNteResList();
