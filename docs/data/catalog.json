@@ -1,0 +1,424 @@
+{
+  "game": {
+    "id": "nte",
+    "name": "Neverness to Everness",
+    "zh_name": "异环",
+    "branch": "publish_PC",
+    "platform": "Windows",
+    "cdn_hosts": [
+      "https://yhcdn1.wmupd.com/clientRes",
+      "https://yhcdn2.wmupd.com/clientRes"
+    ],
+    "config_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/config.xml",
+    "object_template": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Res/{first}/{md5}.{size}"
+  },
+  "generated_at": "2026-06-04 23:23:06 +08:00",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.0/ResList.bin.zip",
+      "last_modified": "Tue, 14 Apr 2026 04:08:28 GMT",
+      "reslist_bytes": 22571,
+      "full": {
+        "items": 56,
+        "bytes": 43299181839,
+        "json": "data/url_lists/1.0.0-full.json",
+        "urls": "data/url_lists/1.0.0-full.urls.txt",
+        "aria2": "data/url_lists/1.0.0-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 0,
+        "bytes": 0,
+        "json": "data/url_lists/1.0.0-patches.json",
+        "urls": "data/url_lists/1.0.0-patches.urls.txt",
+        "aria2": "data/url_lists/1.0.0-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.0.1",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.1/ResList.bin.zip",
+      "last_modified": "Fri, 17 Apr 2026 02:00:39 GMT",
+      "reslist_bytes": 24603,
+      "full": {
+        "items": 64,
+        "bytes": 45405505270,
+        "json": "data/url_lists/1.0.1-full.json",
+        "urls": "data/url_lists/1.0.1-full.urls.txt",
+        "aria2": "data/url_lists/1.0.1-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1,
+        "bytes": 117827080,
+        "json": "data/url_lists/1.0.1-patches.json",
+        "urls": "data/url_lists/1.0.1-patches.urls.txt",
+        "aria2": "data/url_lists/1.0.1-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.0.2",
+      "status": 404,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.2/ResList.bin.zip",
+      "last_modified": null,
+      "reslist_bytes": 484
+    },
+    {
+      "version": "1.0.3",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.3/ResList.bin.zip",
+      "last_modified": "Mon, 20 Apr 2026 16:52:02 GMT",
+      "reslist_bytes": 27163,
+      "full": {
+        "items": 66,
+        "bytes": 49499212922,
+        "json": "data/url_lists/1.0.3-full.json",
+        "urls": "data/url_lists/1.0.3-full.urls.txt",
+        "aria2": "data/url_lists/1.0.3-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 25,
+        "bytes": 7647576778,
+        "json": "data/url_lists/1.0.3-patches.json",
+        "urls": "data/url_lists/1.0.3-patches.urls.txt",
+        "aria2": "data/url_lists/1.0.3-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.0.4",
+      "status": 404,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.4/ResList.bin.zip",
+      "last_modified": null,
+      "reslist_bytes": 488
+    },
+    {
+      "version": "1.0.5",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.5/ResList.bin.zip",
+      "last_modified": "Wed, 22 Apr 2026 11:52:58 GMT",
+      "reslist_bytes": 30923,
+      "full": {
+        "items": 70,
+        "bytes": 51430021941,
+        "json": "data/url_lists/1.0.5-full.json",
+        "urls": "data/url_lists/1.0.5-full.urls.txt",
+        "aria2": "data/url_lists/1.0.5-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 78,
+        "bytes": 31272696436,
+        "json": "data/url_lists/1.0.5-patches.json",
+        "urls": "data/url_lists/1.0.5-patches.urls.txt",
+        "aria2": "data/url_lists/1.0.5-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.0.6",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.6/ResList.bin.zip",
+      "last_modified": "Wed, 22 Apr 2026 15:32:38 GMT",
+      "reslist_bytes": 31947,
+      "full": {
+        "items": 70,
+        "bytes": 51434842341,
+        "json": "data/url_lists/1.0.6-full.json",
+        "urls": "data/url_lists/1.0.6-full.urls.txt",
+        "aria2": "data/url_lists/1.0.6-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 99,
+        "bytes": 34441340518,
+        "json": "data/url_lists/1.0.6-patches.json",
+        "urls": "data/url_lists/1.0.6-patches.urls.txt",
+        "aria2": "data/url_lists/1.0.6-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.0.7",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.7/ResList.bin.zip",
+      "last_modified": "Thu, 23 Apr 2026 06:25:37 GMT",
+      "reslist_bytes": 32875,
+      "full": {
+        "items": 70,
+        "bytes": 51431653189,
+        "json": "data/url_lists/1.0.7-full.json",
+        "urls": "data/url_lists/1.0.7-full.urls.txt",
+        "aria2": "data/url_lists/1.0.7-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 122,
+        "bytes": 34912816372,
+        "json": "data/url_lists/1.0.7-patches.json",
+        "urls": "data/url_lists/1.0.7-patches.urls.txt",
+        "aria2": "data/url_lists/1.0.7-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.0.8",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.8/ResList.bin.zip",
+      "last_modified": "Fri, 24 Apr 2026 00:34:48 GMT",
+      "reslist_bytes": 33803,
+      "full": {
+        "items": 70,
+        "bytes": 51452143797,
+        "json": "data/url_lists/1.0.8-full.json",
+        "urls": "data/url_lists/1.0.8-full.urls.txt",
+        "aria2": "data/url_lists/1.0.8-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 145,
+        "bytes": 35506156498,
+        "json": "data/url_lists/1.0.8-patches.json",
+        "urls": "data/url_lists/1.0.8-patches.urls.txt",
+        "aria2": "data/url_lists/1.0.8-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.0.9",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.9/ResList.bin.zip",
+      "last_modified": "Sat, 25 Apr 2026 00:00:01 GMT",
+      "reslist_bytes": 34971,
+      "full": {
+        "items": 70,
+        "bytes": 51440551382,
+        "json": "data/url_lists/1.0.9-full.json",
+        "urls": "data/url_lists/1.0.9-full.urls.txt",
+        "aria2": "data/url_lists/1.0.9-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 173,
+        "bytes": 36171453132,
+        "json": "data/url_lists/1.0.9-patches.json",
+        "urls": "data/url_lists/1.0.9-patches.urls.txt",
+        "aria2": "data/url_lists/1.0.9-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.0.10",
+      "status": 404,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.10/ResList.bin.zip",
+      "last_modified": null,
+      "reslist_bytes": 485
+    },
+    {
+      "version": "1.0.11",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.11/ResList.bin.zip",
+      "last_modified": "Sat, 25 Apr 2026 22:30:02 GMT",
+      "reslist_bytes": 37339,
+      "full": {
+        "items": 70,
+        "bytes": 51455533814,
+        "json": "data/url_lists/1.0.11-full.json",
+        "urls": "data/url_lists/1.0.11-full.urls.txt",
+        "aria2": "data/url_lists/1.0.11-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 221,
+        "bytes": 37311552516,
+        "json": "data/url_lists/1.0.11-patches.json",
+        "urls": "data/url_lists/1.0.11-patches.urls.txt",
+        "aria2": "data/url_lists/1.0.11-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.0.12",
+      "status": 404,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.12/ResList.bin.zip",
+      "last_modified": null,
+      "reslist_bytes": 485
+    },
+    {
+      "version": "1.0.13",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.13/ResList.bin.zip",
+      "last_modified": "Sun, 26 Apr 2026 02:04:33 GMT",
+      "reslist_bytes": 37627,
+      "full": {
+        "items": 70,
+        "bytes": 51455563510,
+        "json": "data/url_lists/1.0.13-full.json",
+        "urls": "data/url_lists/1.0.13-full.urls.txt",
+        "aria2": "data/url_lists/1.0.13-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 227,
+        "bytes": 38367487295,
+        "json": "data/url_lists/1.0.13-patches.json",
+        "urls": "data/url_lists/1.0.13-patches.urls.txt",
+        "aria2": "data/url_lists/1.0.13-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.0.14",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.14/ResList.bin.zip",
+      "last_modified": "Mon, 27 Apr 2026 21:30:02 GMT",
+      "reslist_bytes": 38331,
+      "full": {
+        "items": 70,
+        "bytes": 49975682832,
+        "json": "data/url_lists/1.0.14-full.json",
+        "urls": "data/url_lists/1.0.14-full.urls.txt",
+        "aria2": "data/url_lists/1.0.14-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 245,
+        "bytes": 40200991830,
+        "json": "data/url_lists/1.0.14-patches.json",
+        "urls": "data/url_lists/1.0.14-patches.urls.txt",
+        "aria2": "data/url_lists/1.0.14-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.0.15",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.15/ResList.bin.zip",
+      "last_modified": "Wed, 29 Apr 2026 22:00:03 GMT",
+      "reslist_bytes": 39243,
+      "full": {
+        "items": 71,
+        "bytes": 49269516748,
+        "json": "data/url_lists/1.0.15-full.json",
+        "urls": "data/url_lists/1.0.15-full.urls.txt",
+        "aria2": "data/url_lists/1.0.15-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 264,
+        "bytes": 41009459976,
+        "json": "data/url_lists/1.0.15-patches.json",
+        "urls": "data/url_lists/1.0.15-patches.urls.txt",
+        "aria2": "data/url_lists/1.0.15-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.1.0",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.0/ResList.bin.zip",
+      "last_modified": "Wed, 27 May 2026 22:05:03 GMT",
+      "reslist_bytes": 87114,
+      "full": {
+        "items": 73,
+        "bytes": 56323969475,
+        "json": "data/url_lists/1.1.0-full.json",
+        "urls": "data/url_lists/1.1.0-full.urls.txt",
+        "aria2": "data/url_lists/1.1.0-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1201,
+        "bytes": 201030829235,
+        "json": "data/url_lists/1.1.0-patches.json",
+        "urls": "data/url_lists/1.1.0-patches.urls.txt",
+        "aria2": "data/url_lists/1.1.0-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.1.1",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.1/ResList.bin.zip",
+      "last_modified": "Wed, 27 May 2026 23:25:33 GMT",
+      "reslist_bytes": 57280,
+      "full": {
+        "items": 73,
+        "bytes": 56324376595,
+        "json": "data/url_lists/1.1.1-full.json",
+        "urls": "data/url_lists/1.1.1-full.urls.txt",
+        "aria2": "data/url_lists/1.1.1-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 614,
+        "bytes": 100930716509,
+        "json": "data/url_lists/1.1.1-patches.json",
+        "urls": "data/url_lists/1.1.1-patches.urls.txt",
+        "aria2": "data/url_lists/1.1.1-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.1.2",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.2/ResList.bin.zip",
+      "last_modified": "Thu, 28 May 2026 22:00:03 GMT",
+      "reslist_bytes": 58544,
+      "full": {
+        "items": 73,
+        "bytes": 56330732979,
+        "json": "data/url_lists/1.1.2-full.json",
+        "urls": "data/url_lists/1.1.2-full.urls.txt",
+        "aria2": "data/url_lists/1.1.2-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 644,
+        "bytes": 101287183311,
+        "json": "data/url_lists/1.1.2-patches.json",
+        "urls": "data/url_lists/1.1.2-patches.urls.txt",
+        "aria2": "data/url_lists/1.1.2-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.1.3",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.3/ResList.bin.zip",
+      "last_modified": "Fri, 29 May 2026 21:07:24 GMT",
+      "reslist_bytes": 58736,
+      "full": {
+        "items": 73,
+        "bytes": 56359502215,
+        "json": "data/url_lists/1.1.3-full.json",
+        "urls": "data/url_lists/1.1.3-full.urls.txt",
+        "aria2": "data/url_lists/1.1.3-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 643,
+        "bytes": 100362515389,
+        "json": "data/url_lists/1.1.3-patches.json",
+        "urls": "data/url_lists/1.1.3-patches.urls.txt",
+        "aria2": "data/url_lists/1.1.3-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.1.4",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.4/ResList.bin.zip",
+      "last_modified": "Mon, 01 Jun 2026 20:33:12 GMT",
+      "reslist_bytes": 60357,
+      "full": {
+        "items": 73,
+        "bytes": 56456991787,
+        "json": "data/url_lists/1.1.4-full.json",
+        "urls": "data/url_lists/1.1.4-full.urls.txt",
+        "aria2": "data/url_lists/1.1.4-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 682,
+        "bytes": 101542999719,
+        "json": "data/url_lists/1.1.4-patches.json",
+        "urls": "data/url_lists/1.1.4-patches.urls.txt",
+        "aria2": "data/url_lists/1.1.4-patches.patches.aria2.txt"
+      }
+    },
+    {
+      "version": "1.1.5",
+      "status": 200,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.5/ResList.bin.zip",
+      "last_modified": "Wed, 03 Jun 2026 20:00:01 GMT",
+      "reslist_bytes": 61973,
+      "full": {
+        "items": 73,
+        "bytes": 56464804567,
+        "json": "data/url_lists/1.1.5-full.json",
+        "urls": "data/url_lists/1.1.5-full.urls.txt",
+        "aria2": "data/url_lists/1.1.5-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 721,
+        "bytes": 102558778093,
+        "json": "data/url_lists/1.1.5-patches.json",
+        "urls": "data/url_lists/1.1.5-patches.urls.txt",
+        "aria2": "data/url_lists/1.1.5-patches.patches.aria2.txt"
+      }
+    }
+  ]
+}

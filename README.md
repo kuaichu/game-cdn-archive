@@ -1,0 +1,126 @@
+# Game CDN Archive
+
+Unofficial index of official game CDN manifests, file URLs, checksums, and
+download helper scripts.
+
+This project is built for digital preservation, version research, and technical
+reproduction. It does not mirror, repackage, or redistribute game binaries.
+
+## Current Coverage
+
+| Game | Platform | Status |
+| --- | --- | --- |
+| Neverness to Everness / 异环 | Windows PC | Version manifests decoded and indexed |
+
+More games can be added later as long as their official launcher manifests or
+CDN metadata can be reproduced.
+
+## Static Site
+
+The static UI lives in `docs/` and is ready for GitHub Pages or Cloudflare
+Pages.
+
+Run it locally:
+
+```bash
+python -m http.server 8765
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8765/docs/
+```
+
+Deploy with Wrangler:
+
+```bash
+npx wrangler pages deploy docs --project-name game-cdn-archive --branch main
+```
+
+## Repository Layout
+
+```text
+docs/
+  index.html                Static file-index UI
+  app.js
+  styles.css
+  data/
+    catalog.json            Version summary used by the static UI
+    url_lists/              Per-version URL, aria2, and JSON indexes
+scripts/
+  archive_reslist_versions.py
+                             Fetch, decode, and index versioned ResList archives
+  build_urls_from_reslist.py
+                             Build URL/aria2 indexes from decoded ResList XML
+  decode_patcherxml0.py     Decode protected PatcherXML0 XML files
+  nte_downloader.py         Prepare, download, verify, and pack client files
+```
+
+## NTE Manifest Notes
+
+The current public launcher uses packed resource lists. They are stored as
+`ResList.bin.zip` and contain protected `ResList.bin` and `lastdiff.bin` files.
+
+The protection layer has been identified as:
+
+```text
+PatcherXML0 header
+AES-128-CBC decrypt
+zlib inflate
+```
+
+For app `1289`, the observed key seed is `1289@Patcher`; the IV seed is
+`PatcherSDK`. Both are padded to 16 bytes with ASCII `0`.
+
+Versioned ResList entry:
+
+```text
+https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/{version}/ResList.bin.zip
+```
+
+Observed available versions include `1.0.0`, `1.0.1`, `1.0.3`, `1.0.5` through
+`1.0.9`, `1.0.11`, `1.0.13` through `1.0.15`, and `1.1.0` through `1.1.5`.
+
+## Downloader
+
+Install dependency:
+
+```bash
+pip install -r requirements.txt
+```
+
+Probe available versioned resource lists:
+
+```bash
+python scripts/nte_downloader.py list --start 1.0.0 --end 1.1.5 --out outputs/nte_versions.json
+```
+
+Generate file indexes without downloading the full client:
+
+```bash
+python scripts/nte_downloader.py prepare 1.1.5 --work-dir outputs/nte_downloader
+```
+
+Download a full version:
+
+```bash
+python scripts/nte_downloader.py download 1.1.5 --download-root downloads --workers 4
+```
+
+Download and then pack it:
+
+```bash
+python scripts/nte_downloader.py download 1.1.5 --download-root downloads --workers 4 --pack --pack-dir packages
+```
+
+Pack an already downloaded version:
+
+```bash
+python scripts/nte_downloader.py pack 1.1.5 --download-root downloads --output-dir packages
+```
+
+## Disclaimer
+
+This project is an unofficial digital preservation index. All URLs point to
+official distribution infrastructure. No game binaries are redistributed here.
