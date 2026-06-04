@@ -915,6 +915,186 @@ h2 {
   padding: 14px;
 }
 
+.hoyo-browser-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid rgba(52, 70, 91, 0.76);
+  border-radius: 8px;
+  background: rgba(15, 23, 36, 0.72);
+  padding: 10px 12px;
+}
+
+.hoyo-breadcrumb {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumb-step {
+  max-width: min(280px, 42vw);
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: #8ec8ff;
+  padding: 5px 8px;
+  font: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.breadcrumb-step:hover,
+.breadcrumb-step.active {
+  border-color: rgba(87, 148, 214, 0.46);
+  background: rgba(68, 116, 172, 0.22);
+  color: #e9f4ff;
+}
+
+.breadcrumb-sep {
+  color: #5e7189;
+  font-family: Consolas, "SFMono-Regular", monospace;
+}
+
+.hoyo-browser-count {
+  display: grid;
+  gap: 3px;
+  text-align: right;
+}
+
+.hoyo-browser-count span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.hoyo-browser-count strong {
+  color: #9be7d8;
+  font-size: 13px;
+}
+
+.hoyo-browser {
+  overflow: hidden;
+  border: 1px solid rgba(52, 70, 91, 0.76);
+  border-radius: 8px;
+  background: rgba(13, 22, 35, 0.84);
+}
+
+.browser-row {
+  display: grid;
+  width: 100%;
+  min-height: 52px;
+  grid-template-columns: 30px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  border-bottom: 1px solid rgba(52, 70, 91, 0.55);
+  background: transparent;
+  color: var(--text);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.browser-row:hover,
+.browser-row.selected {
+  background: rgba(68, 162, 255, 0.12);
+}
+
+.browser-row:last-child {
+  border-bottom: 0;
+}
+
+.browser-icon {
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+}
+
+.browser-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+}
+
+.browser-icon.folder {
+  color: #f2cc60;
+}
+
+.browser-icon.file {
+  color: #9badbf;
+}
+
+.browser-name {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.browser-name strong {
+  min-width: 0;
+  overflow: hidden;
+  color: #f3f8ff;
+  font-size: 16px;
+  font-weight: 760;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.browser-name small {
+  min-width: 0;
+  overflow: hidden;
+  color: #7f91aa;
+  font-family: Consolas, "SFMono-Regular", monospace;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.browser-size {
+  color: #8ea3bd;
+  font-family: Consolas, "SFMono-Regular", monospace;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.browser-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  border-bottom: 1px solid rgba(52, 70, 91, 0.55);
+  background: rgba(8, 15, 25, 0.78);
+  padding: 11px 14px 12px 56px;
+}
+
+.browser-detail strong,
+.browser-detail span {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  font-family: Consolas, "SFMono-Regular", monospace;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.browser-detail strong {
+  color: #dbeafe;
+  font-size: 13px;
+}
+
+.browser-detail span {
+  margin-top: 4px;
+  color: #77869a;
+  font-size: 12px;
+}
+
 .list-pager {
   display: flex;
   align-items: center;
@@ -1511,6 +1691,27 @@ h2 {
 
   .diff-change code {
     max-width: 100%;
+  }
+
+  .hoyo-browser-head,
+  .browser-detail {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hoyo-browser-count {
+    text-align: left;
+  }
+
+  .browser-row {
+    grid-template-columns: 28px minmax(0, 1fr);
+  }
+
+  .browser-size {
+    grid-column: 2;
+  }
+
+  .browser-detail {
+    padding-left: 14px;
   }
 
   .file-card {

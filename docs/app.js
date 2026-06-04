@@ -12,6 +12,8 @@ const state = {
   hoyoVersions: new Map(),
   hoyoFileEntries: new Map(),
   hoyoFileVisible: 150,
+  hoyoFilePath: "",
+  hoyoExpandedFile: "",
   nteEntries: new Map(),
   chunkEntries: new Map(),
   nteAnalytics: null,
@@ -49,6 +51,8 @@ const saveView = () => {
 
 const icons = {
   box: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 8-9-5-9 5 9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>',
+  file: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>',
+  folder: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A2.5 2.5 0 0 1 5.5 4H9l2 2h7.5A2.5 2.5 0 0 1 21 8.5v9A2.5 2.5 0 0 1 18.5 20h-13A2.5 2.5 0 0 1 3 17.5Z"/></svg>',
   copy: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>',
   down: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>',
 };
@@ -303,6 +307,7 @@ const bindStaticActions = () => {
   $("#fileSearch").addEventListener("input", (event) => {
     state.query = event.target.value.trim().toLowerCase();
     state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
+    state.hoyoExpandedFile = "";
     renderList();
   });
 
@@ -330,6 +335,8 @@ const renderGameRail = () => {
       state.mode = modesForGame()[0][0];
       state.query = "";
       state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
+      state.hoyoFilePath = "";
+      state.hoyoExpandedFile = "";
       $("#fileSearch").value = "";
       await ensureGameData();
       state.compareVersion = null;
@@ -359,6 +366,8 @@ const renderModes = () => {
       state.compareVersion = null;
       state.diffFilter = "all";
       state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
+      state.hoyoFilePath = "";
+      state.hoyoExpandedFile = "";
       $$(".mode-tab").forEach((item) => item.classList.toggle("active", item === button));
       render();
     });
@@ -393,6 +402,8 @@ const renderVersionMenu = () => {
       state.compareVersion = null;
       state.diffFilter = "all";
       state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
+      state.hoyoFilePath = "";
+      state.hoyoExpandedFile = "";
       $("#versionMenu").hidden = true;
       $("#selectButton").setAttribute("aria-expanded", "false");
       render();
@@ -1406,9 +1417,6 @@ const renderHoyoFiles = async () => {
       directUrl: joinHoyoFileUrl(decompressedPath, entry.remoteName || entry.path || entry.name || ""),
     }));
     const filtered = filterEntries(files);
-    const visibleCount = Math.min(state.hoyoFileVisible, filtered.length);
-    const visible = filtered.slice(0, visibleCount);
-    const more = filtered.length - visibleCount;
     const header = `
       <div class="chunk-summary">
         <div><span>文件清单</span><strong>pkg_version</strong></div>
@@ -1417,28 +1425,134 @@ const renderHoyoFiles = async () => {
         <div><span>来源</span><strong>HoyoFiles API</strong></div>
       </div>
     `;
-    const footer = more > 0
-      ? `<div class="list-pager">
-          <span>已显示 ${visibleCount.toLocaleString()} / ${filtered.length.toLocaleString()} 个文件</span>
-          <button class="icon-button load-more-files" type="button">加载更多 ${Math.min(HOYO_FILE_PAGE_SIZE, more).toLocaleString()} 个</button>
-        </div>`
-      : filtered.length
-        ? `<div class="list-pager muted">已显示全部 ${filtered.length.toLocaleString()} 个文件</div>`
-        : "";
-    $("#fileList").innerHTML = header + (filtered.length ? visible
-      .map((entry) => fileCard(entry))
-      .join("") + footer : `<div class="empty">没有匹配到文件</div>`);
+    $("#fileList").innerHTML = header + (state.query
+      ? renderHoyoSearchResults(filtered)
+      : renderHoyoFileBrowser(files));
   } catch (error) {
     $("#fileList").innerHTML = `<div class="empty">文件清单读取失败：${escapeHtml(error.message)}</div>`;
   }
   bindCardActions();
+  bindHoyoBrowserActions();
   $(".load-more-files")?.addEventListener("click", () => {
     state.hoyoFileVisible += HOYO_FILE_PAGE_SIZE;
     renderHoyoFiles();
   });
 };
 
-const fileCard = (item) => {
+const renderHoyoSearchResults = (filtered) => {
+  const visibleCount = Math.min(state.hoyoFileVisible, filtered.length);
+  const visible = filtered.slice(0, visibleCount);
+  const more = filtered.length - visibleCount;
+  const footer = more > 0
+    ? `<div class="list-pager">
+        <span>已显示 ${visibleCount.toLocaleString()} / ${filtered.length.toLocaleString()} 个文件</span>
+        <button class="icon-button load-more-files" type="button">加载更多 ${Math.min(HOYO_FILE_PAGE_SIZE, more).toLocaleString()} 个</button>
+      </div>`
+    : filtered.length
+      ? `<div class="list-pager muted">已显示全部 ${filtered.length.toLocaleString()} 个文件</div>`
+      : "";
+  return filtered.length
+    ? `<div class="hoyo-browser search-results">${visible.map((entry) => hoyoFileRow(entry, "search")).join("")}</div>${footer}`
+    : `<div class="empty">没有匹配到文件</div>`;
+};
+
+const renderHoyoFileBrowser = (files) => {
+  const currentPath = state.hoyoFilePath || "";
+  const prefix = currentPath ? `${currentPath}/` : "";
+  const folders = new Map();
+  const currentFiles = [];
+
+  files.forEach((item) => {
+    const remoteName = item.remoteName || item.subtitle || item.title || "";
+    if (prefix && !remoteName.startsWith(prefix)) return;
+    const rest = prefix ? remoteName.slice(prefix.length) : remoteName;
+    if (!rest) return;
+    const slash = rest.indexOf("/");
+    if (slash >= 0) {
+      const name = rest.slice(0, slash);
+      const path = prefix ? `${currentPath}/${name}` : name;
+      const folder = folders.get(name) || { name, path, count: 0, size: 0 };
+      folder.count += 1;
+      folder.size += Number(item.size || 0);
+      folders.set(name, folder);
+      return;
+    }
+    currentFiles.push(item);
+  });
+
+  const folderRows = [...folders.values()].sort((a, b) => a.name.localeCompare(b.name));
+  const fileRows = currentFiles.sort((a, b) => a.title.localeCompare(b.title));
+  const rows = [
+    ...folderRows.map(hoyoFolderRow),
+    ...fileRows.map((item) => hoyoFileRow(item, "browser")),
+  ].join("");
+  const currentLabel = currentPath || "根目录";
+  return `
+    <div class="hoyo-browser-head">
+      <div class="hoyo-breadcrumb">
+        ${hoyoBreadcrumb(currentPath)}
+      </div>
+      <div class="hoyo-browser-count">
+        <span>${escapeHtml(currentLabel)}</span>
+        <strong>${folderRows.length.toLocaleString()} 个文件夹 / ${fileRows.length.toLocaleString()} 个文件</strong>
+      </div>
+    </div>
+    <div class="hoyo-browser">
+      ${rows || `<div class="empty">当前目录没有可显示文件</div>`}
+    </div>
+  `;
+};
+
+const hoyoBreadcrumb = (currentPath) => {
+  const segments = currentPath ? currentPath.split("/") : [];
+  let acc = "";
+  const buttons = [
+    `<button class="breadcrumb-step ${segments.length ? "" : "active"}" type="button" data-folder="">根目录</button>`,
+  ];
+  segments.forEach((segment, index) => {
+    acc = index === 0 ? segment : `${acc}/${segment}`;
+    buttons.push(`<button class="breadcrumb-step ${index === segments.length - 1 ? "active" : ""}" type="button" data-folder="${escapeHtml(acc)}">${escapeHtml(segment)}</button>`);
+  });
+  return buttons.join('<span class="breadcrumb-sep">/</span>');
+};
+
+const hoyoFolderRow = (folder) => `
+  <button class="browser-row folder-row" type="button" data-folder="${escapeHtml(folder.path)}">
+    <span class="browser-icon folder">${icons.folder}</span>
+    <span class="browser-name">
+      <strong>${escapeHtml(folder.name)}</strong>
+      <small>${folder.count.toLocaleString()} 个文件</small>
+    </span>
+    <span class="browser-size">${fmtBytes(folder.size)}</span>
+  </button>
+`;
+
+const hoyoFileRow = (item, context) => {
+  const key = item.remoteName || item.subtitle || item.title || "";
+  const expanded = state.hoyoExpandedFile === key;
+  const hashText = [item.hash, item.extraHash ? `xxHash64 ${item.extraHash}` : ""].filter(Boolean).join(" / ") || "-";
+  return `
+    <button class="browser-row file-row ${expanded ? "selected" : ""}" type="button" data-file="${escapeHtml(key)}">
+      <span class="browser-icon file">${icons.file}</span>
+      <span class="browser-name">
+        <strong>${escapeHtml(item.title)}</strong>
+        <small>${escapeHtml(context === "search" ? item.subtitle : hashText)}</small>
+      </span>
+      <span class="browser-size">${fmtBytes(item.size)}</span>
+    </button>
+    ${expanded ? `
+      <div class="browser-detail">
+        <div>
+          <strong>${escapeHtml(item.subtitle)}</strong>
+          <span># ${escapeHtml(hashText)}</span>
+        </div>
+        <div class="file-actions">${fileActionHtml(item)}</div>
+      </div>
+    ` : ""}
+  `;
+};
+
+const fileActionHtml = (item) => {
   const preferredUrl = item.preferredUrl || item.url;
   const urlActions = item.officialUrl
     ? `
@@ -1459,7 +1573,11 @@ const fileCard = (item) => {
       <a class="icon-button direct-file-link" href="${escapeHtml(item.directUrl)}" target="_blank" rel="noreferrer" title="打开官方散文件直链">${icons.down}<span>官方直链</span></a>
     `
     : "";
-  const fileActions = `${preferredUrl ? urlActions : ""}${directAction}${chunkAction}`;
+  return `${preferredUrl ? urlActions : ""}${directAction}${chunkAction}`;
+};
+
+const fileCard = (item) => {
+  const fileActions = fileActionHtml(item);
   const hashText = [item.hash, item.extraHash ? `xxHash64 ${item.extraHash}` : ""].filter(Boolean).join(" / ") || "-";
   return `
     <article class="file-card">
@@ -1479,6 +1597,23 @@ const fileCard = (item) => {
       <div class="file-actions">${fileActions}</div>
     </article>
   `;
+};
+
+const bindHoyoBrowserActions = () => {
+  $$(".folder-row, .breadcrumb-step").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.hoyoFilePath = button.dataset.folder || "";
+      state.hoyoExpandedFile = "";
+      renderHoyoFiles();
+    });
+  });
+  $$(".hoyo-browser .file-row").forEach((button) => {
+    button.addEventListener("click", () => {
+      const key = button.dataset.file || "";
+      state.hoyoExpandedFile = state.hoyoExpandedFile === key ? "" : key;
+      renderHoyoFiles();
+    });
+  });
 };
 
 const chunkProgressText = ({ stage, done, total }) => {
