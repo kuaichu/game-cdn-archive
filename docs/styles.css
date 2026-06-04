@@ -891,6 +891,12 @@ h2 {
   opacity: 0.58;
 }
 
+.direct-file-link {
+  border-color: rgba(82, 216, 132, 0.36);
+  background: rgba(82, 216, 132, 0.12);
+  color: #9df2b8;
+}
+
 .file-panel,
 .commands {
   border: 1px solid var(--line);

@@ -526,6 +526,15 @@ const hoyoFileListUrl = (version, channel = "pkg_version") => (
   `${HOYOFILES_API_BASE}/${state.gameId}/${version}/${encodeURIComponent(channel)}`
 );
 
+const joinHoyoFileUrl = (base, path) => {
+  if (!base || !path) return "";
+  const encodedPath = String(path)
+    .split("/")
+    .map((segment) => encodeURIComponent(segment))
+    .join("/");
+  return `${String(base).replace(/\/+$/, "")}/${encodedPath}`;
+};
+
 const parseJsonLines = (text) => text
   .split(/\r?\n/)
   .map((line) => line.trim())
@@ -554,6 +563,7 @@ const hoyoFileItem = (entry, index = 0, total = 0) => {
     hash: entry.md5 || entry.hash || "",
     extraHash: entry.hash && entry.hash !== entry.md5 ? entry.hash : "",
     chunkDownload: false,
+    directUrl: "",
     count: total ? `${index + 1}/${total}` : "",
   };
 };
@@ -1348,9 +1358,11 @@ const renderHoyoFiles = async () => {
   try {
     const entries = await loadHoyoFileEntries();
     const canChunkDownload = Boolean(hoyoVersion()?.chunk);
+    const decompressedPath = hoyoVersion()?.decompressed_path || "";
     const files = entries.map((entry, index) => ({
       ...hoyoFileItem(entry, index, entries.length),
       chunkDownload: canChunkDownload,
+      directUrl: joinHoyoFileUrl(decompressedPath, entry.remoteName || entry.path || entry.name || ""),
     }));
     const filtered = filterEntries(files);
     const visibleCount = Math.min(state.hoyoFileVisible, filtered.length);
@@ -1400,7 +1412,13 @@ const fileCard = (item) => {
   const chunkAction = item.chunkDownload
     ? `<button class="icon-button chunk-download-file" type="button" data-remote="${escapeHtml(item.remoteName || item.subtitle)}" data-size="${Number(item.size || 0)}" title="通过官方 Chunk 下载">${icons.down}<span>Chunk 下载</span></button>`
     : "";
-  const fileActions = `${preferredUrl ? urlActions : ""}${chunkAction}`;
+  const directAction = item.directUrl
+    ? `
+      <button class="icon-button copy-link" type="button" data-url="${escapeHtml(item.directUrl)}" title="复制官方散文件直链">${icons.copy}<span>复制直链</span></button>
+      <a class="icon-button direct-file-link" href="${escapeHtml(item.directUrl)}" target="_blank" rel="noreferrer" title="打开官方散文件直链">${icons.down}<span>官方直链</span></a>
+    `
+    : "";
+  const fileActions = `${preferredUrl ? urlActions : ""}${directAction}${chunkAction}`;
   const hashText = [item.hash, item.extraHash ? `xxHash64 ${item.extraHash}` : ""].filter(Boolean).join(" / ") || "-";
   return `
     <article class="file-card">
