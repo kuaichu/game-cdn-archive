@@ -14,6 +14,27 @@ const state = {
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
+const VIEW_STORAGE_KEY = "game-cdn-archive:view";
+
+const loadSavedView = () => {
+  try {
+    return JSON.parse(localStorage.getItem(VIEW_STORAGE_KEY)) || {};
+  } catch {
+    return {};
+  }
+};
+
+const saveView = () => {
+  try {
+    localStorage.setItem(VIEW_STORAGE_KEY, JSON.stringify({
+      gameId: state.gameId,
+      mode: state.mode,
+      version: state.version,
+    }));
+  } catch {
+    // The page still works when storage is blocked or unavailable.
+  }
+};
 
 const icons = {
   box: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 8-9-5-9 5 9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>',
@@ -708,13 +729,15 @@ const filterEntries = (entries) => {
   return entries.filter((entry) => JSON.stringify(entry).toLowerCase().includes(needle));
 };
 
-const ensureGameData = async () => {
+const ensureGameData = async (preferredVersion = null) => {
   if (isNte()) {
-    state.version = nteVersions().sort((a, b) => compareVersions(b.version, a.version))[0].version;
+    const versions = nteVersions().sort((a, b) => compareVersions(b.version, a.version));
+    state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
     return;
   }
   if (isEndfield()) {
-    state.version = endfieldSummaries().sort((a, b) => compareVersions(b.version, a.version))[0]?.version || null;
+    const versions = endfieldSummaries().sort((a, b) => compareVersions(b.version, a.version));
+    state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
     return;
   }
   if (!state.hoyoVersions.has(state.gameId)) {
@@ -724,7 +747,7 @@ const ensureGameData = async () => {
   const versions = hoyoSummaries()
     .filter((item) => item.package_items || item.update_items || item.has_chunk)
     .sort((a, b) => compareVersions(b.version, a.version));
-  state.version = versions[0]?.version || null;
+  state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
 };
 
 const renderNotice = () => {
@@ -766,6 +789,7 @@ const render = () => {
   renderPanelTitle();
   renderNotice();
   renderList();
+  saveView();
 };
 
 Promise.all([
@@ -778,7 +802,14 @@ Promise.all([
   state.hoyoIndex = hoyoIndex;
   state.endfieldIndex = endfieldIndex;
   state.endfieldVersions = endfieldVersions;
+  const savedView = loadSavedView();
+  if (allGames().some((game) => game.id === savedView.gameId)) {
+    state.gameId = savedView.gameId;
+  }
+  state.mode = modesForGame().some(([mode]) => mode === savedView.mode)
+    ? savedView.mode
+    : modesForGame()[0][0];
   bindStaticActions();
-  await ensureGameData();
+  await ensureGameData(savedView.version);
   render();
 });
