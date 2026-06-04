@@ -141,14 +141,12 @@ It can run manually from the Actions tab, and also runs once per day. The job:
 
 1. Probes the current NTE launcher config and refreshes versioned ResList
    indexes up to the current official version.
-2. Clones `daydreamer-json/ak-endfield-api-archive` and regenerates the
+2. Syncs HoYo game package and chunk indexes from the public HoyoFiles API.
+3. Clones `daydreamer-json/ak-endfield-api-archive` and regenerates the
    compact Endfield indexes.
-3. Commits and pushes only when generated data actually changes.
-4. Deploys to Cloudflare Pages when a repository secret named
+4. Commits and pushes only when generated data actually changes.
+5. Deploys to Cloudflare Pages when a repository secret named
    `CLOUDFLARE_API_TOKEN` is available.
-
-HoYo game data is still a static HoyoFiles migration. Add a HoyoFiles importer
-before relying on scheduled automation for those games.
 
 ## Downloader
 

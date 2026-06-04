@@ -30,6 +30,9 @@ jobs:
       - name: Refresh NTE data
         run: python scripts/update_nte_static.py
 
+      - name: Refresh HoyoFiles data
+        run: python scripts/sync_hoyofiles.py
+
       - name: Clone Endfield upstream archive
         run: git clone --depth 1 https://github.com/daydreamer-json/ak-endfield-api-archive.git /tmp/ak-endfield-api-archive
 
@@ -49,7 +52,7 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data docs/app.js scripts/update_nte_static.py scripts/import_endfield_archive.py
+          git add docs/data docs/app.js scripts/update_nte_static.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py
           git commit -m "Auto update archive data"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
