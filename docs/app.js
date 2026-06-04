@@ -11,6 +11,7 @@ const state = {
   endfieldVersions: null,
   hoyoVersions: new Map(),
   hoyoFileEntries: new Map(),
+  hoyoFileVisible: 150,
   nteEntries: new Map(),
   chunkEntries: new Map(),
   nteAnalytics: null,
@@ -24,6 +25,7 @@ const $$ = (selector) => [...document.querySelectorAll(selector)];
 const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
+const HOYO_FILE_PAGE_SIZE = 150;
 
 const loadSavedView = () => {
   try {
@@ -82,8 +84,8 @@ const nteModes = [
 ];
 
 const hoyoModes = [
-  ["files", "文件清单"],
   ["packages", "压缩包"],
+  ["files", "文件清单"],
   ["updates", "更新包"],
   ["chunk", "Chunk 信息"],
   ["compare", "版本对比"],
@@ -260,6 +262,7 @@ const bindStaticActions = () => {
 
   $("#fileSearch").addEventListener("input", (event) => {
     state.query = event.target.value.trim().toLowerCase();
+    state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
     renderList();
   });
 
@@ -286,6 +289,7 @@ const renderGameRail = () => {
       state.gameId = button.dataset.game;
       state.mode = modesForGame()[0][0];
       state.query = "";
+      state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
       $("#fileSearch").value = "";
       await ensureGameData();
       state.compareVersion = null;
@@ -314,6 +318,7 @@ const renderModes = () => {
       state.mode = button.dataset.mode;
       state.compareVersion = null;
       state.diffFilter = "all";
+      state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
       $$(".mode-tab").forEach((item) => item.classList.toggle("active", item === button));
       render();
     });
@@ -347,6 +352,7 @@ const renderVersionMenu = () => {
       state.version = button.dataset.version;
       state.compareVersion = null;
       state.diffFilter = "all";
+      state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
       $("#versionMenu").hidden = true;
       $("#selectButton").setAttribute("aria-expanded", "false");
       render();
@@ -1341,6 +1347,9 @@ const renderHoyoFiles = async () => {
     const entries = await loadHoyoFileEntries();
     const files = entries.map((entry, index) => hoyoFileItem(entry, index, entries.length));
     const filtered = filterEntries(files);
+    const visibleCount = Math.min(state.hoyoFileVisible, filtered.length);
+    const visible = filtered.slice(0, visibleCount);
+    const more = filtered.length - visibleCount;
     const header = `
       <div class="chunk-summary">
         <div><span>文件清单</span><strong>pkg_version</strong></div>
@@ -1349,13 +1358,25 @@ const renderHoyoFiles = async () => {
         <div><span>来源</span><strong>HoyoFiles API</strong></div>
       </div>
     `;
-    $("#fileList").innerHTML = header + (filtered.length ? filtered
+    const footer = more > 0
+      ? `<div class="list-pager">
+          <span>已显示 ${visibleCount.toLocaleString()} / ${filtered.length.toLocaleString()} 个文件</span>
+          <button class="icon-button load-more-files" type="button">加载更多 ${Math.min(HOYO_FILE_PAGE_SIZE, more).toLocaleString()} 个</button>
+        </div>`
+      : filtered.length
+        ? `<div class="list-pager muted">已显示全部 ${filtered.length.toLocaleString()} 个文件</div>`
+        : "";
+    $("#fileList").innerHTML = header + (filtered.length ? visible
       .map((entry) => fileCard(entry))
-      .join("") : `<div class="empty">没有匹配到文件</div>`);
+      .join("") + footer : `<div class="empty">没有匹配到文件</div>`);
   } catch (error) {
     $("#fileList").innerHTML = `<div class="empty">文件清单读取失败：${escapeHtml(error.message)}</div>`;
   }
   bindCardActions();
+  $(".load-more-files")?.addEventListener("click", () => {
+    state.hoyoFileVisible += HOYO_FILE_PAGE_SIZE;
+    renderHoyoFiles();
+  });
 };
 
 const fileCard = (item) => {

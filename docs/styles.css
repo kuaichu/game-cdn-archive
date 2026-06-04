@@ -904,6 +904,20 @@ h2 {
   padding: 14px;
 }
 
+.list-pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.list-pager.muted {
+  border-top: 1px solid var(--line-soft);
+}
+
 .chunk-summary {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
