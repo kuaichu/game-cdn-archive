@@ -163,7 +163,7 @@ const setActiveSideLink = (sectionId) => {
 };
 
 const updateActiveSideLink = () => {
-  const threshold = 140;
+  const threshold = 24;
   const current = sideSections
     .map((id) => ({
       id,
