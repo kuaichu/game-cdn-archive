@@ -628,12 +628,18 @@ h2 {
 }
 
 .chart-grid {
-  stroke: rgba(148, 165, 186, 0.16);
+  stroke: rgba(148, 165, 186, 0.2);
+  stroke-width: 1;
+}
+
+.chart-axis,
+.chart-x-tick {
+  stroke: rgba(201, 215, 234, 0.42);
   stroke-width: 1;
 }
 
 .chart-zero {
-  stroke: rgba(255, 195, 77, 0.22);
+  stroke: rgba(255, 195, 77, 0.3);
   stroke-dasharray: 5 7;
   stroke-width: 1;
 }
@@ -662,9 +668,32 @@ h2 {
 }
 
 .chart-label {
-  fill: #7f91a7;
+  fill: #eef5ff;
   font-family: Consolas, "SFMono-Regular", monospace;
-  font-size: 11px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.chart-y-label,
+.chart-axis-title {
+  fill: #d3dfef;
+  font-family: Consolas, "SFMono-Regular", monospace;
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.chart-y-label.right {
+  fill: #f2cc60;
+}
+
+.chart-axis-title {
+  fill: #dbeafe;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.chart-axis-title.right {
+  fill: #ffd981;
 }
 
 .trend-meta {

@@ -707,6 +707,12 @@ const fmtSignedBytes = (bytes) => {
   return `${value > 0 ? "+" : "-"}${fmtBytes(Math.abs(value))}`;
 };
 
+const fmtChartGB = (bytes, signed = false) => {
+  const value = Number(bytes || 0) / 1024 ** 3;
+  const prefix = signed && value > 0 ? "+" : "";
+  return `${prefix}${value.toFixed(1)} GB`;
+};
+
 const nteTrendRows = () => nteVersions()
   .slice()
   .sort((a, b) => compareVersions(a.version, b.version))
@@ -735,17 +741,29 @@ const svgPoints = (rows, valueKey, { width, height, padX, padY, min, max }) => {
 const renderTrendChart = (rows) => {
   if (!rows.length) return `<div class="empty compact">暂无趋势数据</div>`;
   const width = 760;
-  const height = 250;
-  const padX = 42;
-  const padY = 42;
+  const height = 280;
+  const padLeft = 82;
+  const padRight = 96;
+  const padTop = 36;
+  const padBottom = 48;
+  const padX = padLeft;
+  const padY = padTop;
   const fullValues = rows.map((row) => row.bytes);
   const deltaValues = rows.map((row) => row.delta);
   const fullMin = Math.min(...fullValues);
   const fullMax = Math.max(...fullValues);
   const deltaMin = Math.min(...deltaValues);
   const deltaMax = Math.max(...deltaValues);
-  const fullPoints = svgPoints(rows, "bytes", { width, height, padX, padY, min: fullMin, max: fullMax });
-  const deltaPoints = svgPoints(rows, "delta", { width, height, padX, padY, min: deltaMin, max: deltaMax });
+  const plotWidth = width - padLeft - padRight;
+  const plotHeight = height - padTop - padBottom;
+  const fullScale = (value) => padTop + plotHeight - ((Number(value || 0) - fullMin) / Math.max(fullMax - fullMin, 1)) * plotHeight;
+  const deltaScale = (value) => padTop + plotHeight - ((Number(value || 0) - deltaMin) / Math.max(deltaMax - deltaMin, 1)) * plotHeight;
+  const xScale = (index) => padLeft + (rows.length === 1 ? plotWidth / 2 : (plotWidth * index) / (rows.length - 1));
+  const fullPoints = rows.map((row, index) => `${xScale(index).toFixed(2)},${fullScale(row.bytes).toFixed(2)}`).join(" ");
+  const deltaPoints = rows.map((row, index) => `${xScale(index).toFixed(2)},${deltaScale(row.delta).toFixed(2)}`).join(" ");
+  const fullTicks = [fullMax, (fullMax + fullMin) / 2, fullMin];
+  const deltaTicks = [deltaMax, 0, deltaMin]
+    .filter((value, index, list) => list.findIndex((item) => Math.abs(item - value) < 1) === index);
   const tickEvery = Math.max(1, Math.ceil(rows.length / 6));
   let tickIndexes = rows
     .map((_, index) => index)
@@ -754,7 +772,7 @@ const renderTrendChart = (rows) => {
   if (tickIndexes.length > 2 && tickIndexes.at(-1) - tickIndexes.at(-2) < Math.max(2, Math.floor(tickEvery / 2))) {
     tickIndexes.splice(-2, 1);
   }
-  const zeroY = padY + (height - padY * 2) - ((0 - deltaMin) / Math.max(deltaMax - deltaMin, 1)) * (height - padY * 2);
+  const zeroY = deltaScale(0);
   return `
     <svg class="trend-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="版本体积趋势图">
       <defs>
@@ -763,19 +781,35 @@ const renderTrendChart = (rows) => {
           <stop offset="1" stop-color="#4ad7c8" />
         </linearGradient>
       </defs>
-      <path class="chart-grid" d="M${padX} ${padY}H${width - padX}M${padX} ${height / 2}H${width - padX}M${padX} ${height - padY}H${width - padX}" />
-      <path class="chart-zero" d="M${padX} ${zeroY.toFixed(2)}H${width - padX}" />
+      <path class="chart-axis" d="M${padLeft} ${padTop}V${height - padBottom}H${width - padRight}M${width - padRight} ${padTop}V${height - padBottom}" />
+      ${fullTicks.map((value) => {
+        const y = fullScale(value);
+        return `
+          <path class="chart-grid" d="M${padLeft} ${y.toFixed(2)}H${width - padRight}" />
+          <text class="chart-y-label" x="${padLeft - 10}" y="${(y + 4).toFixed(2)}" text-anchor="end">${fmtChartGB(value)}</text>
+        `;
+      }).join("")}
+      ${deltaTicks.map((value) => {
+        const y = deltaScale(value);
+        return `<text class="chart-y-label right" x="${width - padRight + 10}" y="${(y + 4).toFixed(2)}">${fmtChartGB(value, true)}</text>`;
+      }).join("")}
+      <text class="chart-axis-title" x="${padLeft}" y="16">完整包体积</text>
+      <text class="chart-axis-title right" x="${width - padRight}" y="16" text-anchor="end">净变化</text>
+      <path class="chart-zero" d="M${padLeft} ${zeroY.toFixed(2)}H${width - padRight}" />
       <polyline class="chart-line full" points="${fullPoints}" />
       <polyline class="chart-line delta" points="${deltaPoints}" />
       ${rows.map((row, index) => {
-        const x = padX + (rows.length === 1 ? (width - padX * 2) / 2 : ((width - padX * 2) * index) / (rows.length - 1));
-        const y = padY + (height - padY * 2) - ((row.bytes - fullMin) / Math.max(fullMax - fullMin, 1)) * (height - padY * 2);
+        const x = xScale(index);
+        const y = fullScale(row.bytes);
         return `<circle class="chart-dot" cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="3"><title>${escapeHtml(row.version)} / ${fmtBytes(row.bytes)} / ${fmtSignedBytes(row.delta)}</title></circle>`;
       }).join("")}
       ${tickIndexes.map((index, visibleIndex) => {
         const row = rows[index];
-        const x = padX + (rows.length === 1 ? (width - padX * 2) / 2 : ((width - padX * 2) * index) / (rows.length - 1));
-        return `<text class="chart-label" x="${x.toFixed(2)}" y="${height - 12}" text-anchor="${visibleIndex === 0 ? "start" : "middle"}">${escapeHtml(row.version)}</text>`;
+        const x = xScale(index);
+        return `
+          <path class="chart-x-tick" d="M${x.toFixed(2)} ${height - padBottom}V${height - padBottom + 5}" />
+          <text class="chart-label" x="${x.toFixed(2)}" y="${height - 18}" text-anchor="${visibleIndex === 0 ? "start" : visibleIndex === tickIndexes.length - 1 ? "end" : "middle"}">${escapeHtml(row.version)}</text>
+        `;
       }).join("")}
     </svg>
   `;
