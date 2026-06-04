@@ -65,7 +65,7 @@ svg {
 .app {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 76px 232px minmax(0, 1fr);
+  grid-template-columns: 64px 232px minmax(0, 1fr);
 }
 
 .game-rail {
@@ -76,45 +76,51 @@ svg {
   height: 100vh;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
-  padding: 20px 12px;
+  gap: 8px;
+  padding: 12px;
   border-right: 1px solid var(--line-soft);
   background: #101827;
 }
 
 .game-mark {
   display: grid;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   place-items: center;
-  overflow: hidden;
-  border: 1px solid rgba(117, 150, 190, 0.28);
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.05);
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
   color: var(--text);
   font-weight: 850;
   font-size: 12px;
   letter-spacing: 0;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  opacity: 0.62;
+  transition: opacity 150ms ease, box-shadow 150ms ease;
 }
 
 .game-mark.active {
-  border-color: var(--blue);
-  box-shadow: 0 0 0 4px rgba(68, 162, 255, 0.18), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+  opacity: 1;
+  box-shadow: 0 0 0 2px var(--blue), 0 0 0 3px #101827;
+}
+
+.game-mark:hover {
+  opacity: 1;
 }
 
 .game-mark img {
-  width: 100%;
-  height: 100%;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
   object-fit: cover;
 }
 
 .game-mark[data-fallback]::after {
   content: attr(data-fallback);
   display: grid;
-  width: 100%;
-  height: 100%;
+  width: 36px;
+  height: 36px;
   place-items: center;
+  border-radius: 12px;
   background: linear-gradient(145deg, rgba(68, 162, 255, 0.22), rgba(238, 111, 159, 0.18));
 }
 
@@ -706,7 +712,7 @@ h2 {
 
 @media (max-width: 1180px) {
   .app {
-    grid-template-columns: 68px minmax(0, 1fr);
+    grid-template-columns: 64px minmax(0, 1fr);
   }
 
   .side {
