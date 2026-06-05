@@ -3,8 +3,8 @@ name: Update archive data
 on:
   workflow_dispatch:
   schedule:
-    - cron: "18 6 * * *"
-    - cron: "18 12 * * *"
+    - cron: "18 23 * * *"
+    - cron: "18 4 * * *"
 
 permissions:
   contents: write
