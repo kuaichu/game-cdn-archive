@@ -206,8 +206,8 @@ the MIT License.
 
 The Wuthering Waves view is generated from the launcher discovery metadata
 documented by [`yuhkix/wuwa-downloader`](https://github.com/yuhkix/wuwa-downloader).
-The sync script follows the CN live launcher index, reads the official resource
-index, and preserves each file's official CDN URLs, size, and MD5:
+The sync script follows the current CN live launcher index, reads the official
+resource index, and preserves each file's official CDN URLs, size, and MD5:
 
 ```bash
 python scripts/sync_wuwa.py
@@ -218,6 +218,12 @@ site uses the first CDN as `CDN1` and exposes the remaining mirrors as alternate
 download buttons. Patch routes are shown as launcher-provided update index
 entries; they are indexed for research and are not repackaged by this
 repository.
+
+Some historical CN live resource indexes are also preserved when their
+version-specific official URLs can be independently recovered and verified. The
+current recovered set includes `2.3.1`, `2.6.2`, `2.8.0`, and `3.2.2`, plus the
+current launcher version. These are complete resource indexes, not a guaranteed
+full-version history.
 
 ## Automated Updates
 

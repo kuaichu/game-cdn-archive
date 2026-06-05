@@ -662,6 +662,19 @@ const versionButton = (item) => {
       </button>
     `;
   }
+  if (isWuwa()) {
+    return `
+      <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
+        <span class="version-number">${item.version}</span>
+        <span class="caps">
+          <span class="cap blue">${Number(item.file_count || 0).toLocaleString()} 个文件</span>
+          <span class="cap green">${item.cdn_count || 0} CDN</span>
+          ${item.patch_routes ? `<span class="cap amber">${item.patch_routes} 条更新路线</span>` : ""}
+          ${item.source_note ? '<span class="cap slate">历史索引</span>' : '<span class="cap violet">当前索引</span>'}
+        </span>
+      </button>
+    `;
+  }
   const profile = hoyoDistributionProfile(item);
   return `
     <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">

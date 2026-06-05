@@ -19,6 +19,37 @@ DISCOVERY_URL = (
     "4435fd290c07f7f766a6d2ab09ed3096d83b02e3/wuwa.json"
 )
 SOURCE_REPO = "https://github.com/yuhkix/wuwa-downloader"
+CN_LIVE_CDNS = [
+    "https://pcdownload-aliyun.aki-game.com",
+    "https://pcdownload-huoshan.aki-game.com",
+    "https://pcdownload-qcloud.aki-game.com",
+]
+HISTORICAL_CN_LIVE_INDEXES = [
+    {
+        "version": "2.3.1",
+        "resource_index": "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/2.3.1/xAgwspCwdYJOMlAPyLUCRnoCkGlYgUkv/resource.json",
+        "base_url": "launcher/game/G152/2.3.1/xAgwspCwdYJOMlAPyLUCRnoCkGlYgUkv/zip/",
+        "source_note": "recorded by external manual-install archive",
+    },
+    {
+        "version": "2.6.2",
+        "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/2.6.2/DYINNoSACrMDUahXEhMxmWqVOHJjvFSH/resource/10003/2.6.2/indexFile.json",
+        "base_url": "launcher/game/G152/10003/2.6.2/DYINNoSACrMDUahXEhMxmWqVOHJjvFSH/zip/",
+        "source_note": "recovered from Wayback launcher index snapshot 20250922105631",
+    },
+    {
+        "version": "2.8.0",
+        "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/2.8.0/QqtoWZIMsZkiMQSwcmrYEFqYozeLagjd/resource/10003/2.8.0/indexFile.json",
+        "base_url": "launcher/game/G152/10003/2.8.0/QqtoWZIMsZkiMQSwcmrYEFqYozeLagjd/zip/",
+        "source_note": "recovered from Wayback launcher index snapshot 20251125142709",
+    },
+    {
+        "version": "3.2.2",
+        "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.2.2/sUfHBBTqFSGticVyXaeclYjVwoLQhMEE/resource/10003/3.2.2/indexFile.json",
+        "base_url": "launcher/game/G152/10003/3.2.2/sUfHBBTqFSGticVyXaeclYjVwoLQhMEE/zip/",
+        "source_note": "recovered from Wayback launcher index snapshot 20260418145837",
+    },
+]
 
 
 def fetch_json(url: str):
@@ -155,6 +186,42 @@ def build_channel(discovery: dict, channel: str, region: str, output_dir: Path):
     return summary, version, index_url
 
 
+def build_historical_cn_live(spec: dict, output_dir: Path):
+    resource_index = fetch_json(spec["resource_index"])
+    raw_items = resource_index.get("resource") or []
+    items = [normalize_resource(item, CN_LIVE_CDNS, spec["base_url"]) for item in raw_items]
+    links = write_lists(output_dir, spec["version"], items)
+    total_size = sum(item["size"] for item in items)
+    version = {
+        "version": spec["version"],
+        "channel": "live",
+        "region": "cn",
+        "resource_index": spec["resource_index"],
+        "base_url": spec["base_url"],
+        "cdn_urls": CN_LIVE_CDNS,
+        "index_file_md5": "",
+        "size": total_size,
+        "uncompressed_size": total_size,
+        "file_count": len(items),
+        "files": items,
+        "patches": [],
+        "source_note": spec["source_note"],
+        "links": {"files": links},
+    }
+    summary = {
+        "version": version["version"],
+        "channel": version["channel"],
+        "region": version["region"],
+        "file_count": len(items),
+        "cdn_count": len(CN_LIVE_CDNS),
+        "patch_routes": 0,
+        "size": total_size,
+        "uncompressed_size": total_size,
+        "source_note": spec["source_note"],
+    }
+    return summary, version
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--channel", default="live", choices=["live", "beta"])
@@ -171,6 +238,18 @@ def main() -> None:
     summary, version, selected_index_url = build_channel(
         discovery, args.channel, args.region, args.output
     )
+    summaries = [summary]
+    versions = {version["version"]: version}
+
+    if args.channel == "live" and args.region == "cn":
+        for spec in HISTORICAL_CN_LIVE_INDEXES:
+            if spec["version"] in versions:
+                continue
+            historical_summary, historical_version = build_historical_cn_live(spec, args.output)
+            summaries.append(historical_summary)
+            versions[historical_version["version"]] = historical_version
+
+    summaries.sort(key=lambda item: version_key(item["version"]), reverse=True)
 
     index = {
         "source": SOURCE_REPO,
@@ -185,9 +264,8 @@ def main() -> None:
             "icon": "assets/icons/wuwa.png",
             "kind": "wuwa",
         },
-        "versions": [summary],
+        "versions": summaries,
     }
-    versions = {version["version"]: version}
 
     (args.output / "index.json").write_text(
         json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
@@ -196,8 +274,8 @@ def main() -> None:
         json.dumps(versions, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
     print(
-        f"Wrote Wuthering Waves {summary['region']} {summary['channel']} "
-        f"{summary['version']} with {summary['file_count']} files"
+        f"Wrote Wuthering Waves {args.region} {args.channel} "
+        f"{len(summaries)} versions"
     )
 
 
