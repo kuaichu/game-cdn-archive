@@ -39,6 +39,9 @@ jobs:
       - name: Refresh Endfield data
         run: python scripts/import_endfield_archive.py /tmp/ak-endfield-api-archive
 
+      - name: Refresh Wuthering Waves data
+        run: python scripts/sync_wuwa.py
+
       - name: Check generated JavaScript
         run: node --check docs/app.js
 
@@ -52,7 +55,7 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data docs/app.js scripts/update_nte_static.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py
+          git add docs/data docs/app.js scripts/update_nte_static.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py scripts/sync_wuwa.py
           git commit -m "Auto update archive data"
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"

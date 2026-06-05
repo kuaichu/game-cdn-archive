@@ -12,6 +12,7 @@ reproduction. It does not mirror, repackage, or redistribute game binaries.
 | --- | --- | --- |
 | Neverness to Everness / 异环 | Windows PC | Version manifests decoded and indexed |
 | Arknights: Endfield / 明日方舟：终末地 | Windows PC | Official launcher API history and archive mirrors indexed |
+| Wuthering Waves / 鸣潮 | Windows PC | Official launcher resource index and CDN mirrors indexed |
 | Genshin Impact / 原神 | Windows PC | HoyoFiles version metadata migrated |
 | Honkai: Star Rail / 崩坏：星穹铁道 | Windows PC | HoyoFiles version metadata migrated |
 | Zenless Zone Zero / 绝区零 | Windows PC | HoyoFiles version metadata migrated |
@@ -61,6 +62,10 @@ docs/
       index.json            Compact game/version summary
       versions.json         Official URLs, checksums, status, and mirror URLs
       lists/                Preferred URL and aria2 download lists
+    wuwa/
+      index.json            Current launcher/resource-index summary
+      versions.json         File URLs, MD5 values, CDN mirrors, and patch routes
+      lists/                URL, aria2, and JSON file lists
 scripts/
   archive_reslist_versions.py
                              Fetch, decode, and index versioned ResList archives
@@ -70,6 +75,7 @@ scripts/
   nte_downloader.py         Prepare, download, verify, and pack client files
   import_endfield_archive.py
                              Import compact Endfield indexes from the upstream archive
+  sync_wuwa.py               Sync Wuthering Waves launcher and resource indexes
 ```
 
 ## NTE Manifest Notes
@@ -196,6 +202,23 @@ The Endfield navigation icon is sourced from
 [`Yue-plus/endfield_icons`](https://github.com/Yue-plus/endfield_icons) under
 the MIT License.
 
+## Wuthering Waves Sync
+
+The Wuthering Waves view is generated from the launcher discovery metadata
+documented by [`yuhkix/wuwa-downloader`](https://github.com/yuhkix/wuwa-downloader).
+The sync script follows the CN live launcher index, reads the official resource
+index, and preserves each file's official CDN URLs, size, and MD5:
+
+```bash
+python scripts/sync_wuwa.py
+```
+
+The generated file list includes all CDN mirrors exposed by the launcher. The
+site uses the first CDN as `CDN1` and exposes the remaining mirrors as alternate
+download buttons. Patch routes are shown as launcher-provided update index
+entries; they are indexed for research and are not repackaged by this
+repository.
+
 ## Automated Updates
 
 The repository includes a GitHub Actions workflow at
@@ -208,8 +231,9 @@ It can run manually from the Actions tab, and also runs once per day. The job:
 2. Syncs HoYo game package and chunk indexes from the public HoyoFiles API.
 3. Clones `daydreamer-json/ak-endfield-api-archive` and regenerates the
    compact Endfield indexes.
-4. Commits and pushes only when generated data actually changes.
-5. Deploys to Cloudflare Pages when a repository secret named
+4. Refreshes Wuthering Waves launcher/resource-index data.
+5. Commits and pushes only when generated data actually changes.
+6. Deploys to Cloudflare Pages when a repository secret named
    `CLOUDFLARE_API_TOKEN` is available.
 
 The separate `.github/workflows/deploy-pages.yml` workflow deploys the static

@@ -9,6 +9,11 @@ const state = {
   hoyoIndex: null,
   endfieldIndex: null,
   endfieldVersions: null,
+  wuwaIndex: null,
+  wuwaVersions: null,
+  wuwaEntries: new Map(),
+  wuwaFilePath: "",
+  wuwaExpandedFile: "",
   hoyoVersions: new Map(),
   hoyoFileEntries: new Map(),
   hoyoFileVisible: 150,
@@ -104,6 +109,11 @@ const endfieldModes = [
   ["compare", "版本对比"],
 ];
 
+const wuwaModes = [
+  ["files", "文件清单"],
+  ["patches", "更新路线"],
+];
+
 const fmtBytes = (bytes) => {
   if (!bytes && bytes !== 0) return "-";
   const units = ["B", "KB", "MB", "GB", "TB"];
@@ -191,6 +201,7 @@ const updateActiveSideLink = () => {
 const allGames = () => [
   nteGame,
   ...(state.endfieldIndex?.game ? [state.endfieldIndex.game] : []),
+  ...(state.wuwaIndex?.game ? [state.wuwaIndex.game] : []),
   ...(state.hoyoIndex?.games || []).map((game) => ({
     ...game,
     subName: hoyoEnglishNames[game.id] || game.name,
@@ -202,7 +213,8 @@ const allGames = () => [
 const currentGame = () => allGames().find((game) => game.id === state.gameId) || nteGame;
 const isNte = () => currentGame().kind === "nte";
 const isEndfield = () => currentGame().kind === "endfield";
-const modesForGame = () => (isNte() ? nteModes : isEndfield() ? endfieldModes : hoyoModes);
+const isWuwa = () => currentGame().kind === "wuwa";
+const modesForGame = () => (isNte() ? nteModes : isEndfield() ? endfieldModes : isWuwa() ? wuwaModes : hoyoModes);
 
 const nteVersions = () => state.nteCatalog.versions.filter((item) => item.status === 200 && item.full);
 const nteVersion = () => state.nteCatalog.versions.find((item) => item.version === state.version);
@@ -215,6 +227,9 @@ const hoyoSummaries = () => hoyoSummary()?.versions || [];
 
 const endfieldVersion = () => state.endfieldVersions?.[state.version] || null;
 const endfieldSummaries = () => state.endfieldIndex?.versions || [];
+
+const wuwaVersion = () => state.wuwaVersions?.[state.version] || null;
+const wuwaSummaries = () => state.wuwaIndex?.versions || [];
 
 const hoyoPackageUrl = (row) => row?.game?.full?.url || row?.game?.segments?.[0]?.url || "";
 
@@ -259,6 +274,7 @@ const hoyoDistributionProfile = (summary, version = null) => {
 const availableSummaries = () => {
   if (isNte()) return nteVersions();
   if (isEndfield()) return endfieldSummaries();
+  if (isWuwa()) return wuwaSummaries();
   return hoyoSummaries().filter((item) => item.package_items || item.update_items || item.has_chunk);
 };
 
@@ -287,6 +303,11 @@ const commandFor = () => {
   }
   if (isEndfield()) {
     return `aria2c -c -x16 -s16 data/endfield/lists/${state.version}_${state.mode === "patches" ? "patches" : "packages"}.aria2.txt`;
+  }
+  if (isWuwa()) {
+    return state.mode === "files"
+      ? `aria2c -c -x16 -s16 -i data/wuwa/lists/${state.version}-files.aria2.txt`
+      : "更新路线模式用于查看旧版本到当前版本的官方索引";
   }
   return `aria2c -c -x16 -s16 <从页面复制对应 URL 列表>`;
 };
@@ -385,6 +406,89 @@ const downloadNteScript = async () => {
   showToast("下载脚本已生成");
 };
 
+const wuwaDownloadScript = (version, entries) => {
+  const root = `WutheringWaves_${version}`;
+  const items = entries.map((entry) => {
+    const path = String(entry.dest || entry.name || "").replace(/\\/g, "/").replace(/^\/+/, "");
+    const urls = (entry.urls?.length ? entry.urls : [entry.url])
+      .filter(Boolean)
+      .map((url) => `'${psSingleQuote(url)}'`)
+      .join(", ");
+    return `  @{ Urls=@(${urls}); Path='${psSingleQuote(path)}'; Size=${Number(entry.size || 0)}; Md5='${psSingleQuote(entry.md5 || "")}' }`;
+  }).join(",\n");
+  return `# Game CDN Archive - Wuthering Waves ${version} full download
+# 在 PowerShell 中运行：powershell -ExecutionPolicy Bypass -File .\\WutheringWaves_${version}_download.ps1
+Set-StrictMode -Version Latest
+$ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
+
+$Root = Join-Path (Get-Location) '${psSingleQuote(root)}'
+$Items = @(
+${items}
+)
+
+New-Item -ItemType Directory -Force -Path $Root | Out-Null
+
+$aria2 = Get-Command aria2c -ErrorAction SilentlyContinue
+if ($aria2) {
+  $InputFile = Join-Path $Root 'download.aria2.txt'
+  $Lines = New-Object System.Collections.Generic.List[string]
+  foreach ($Item in $Items) {
+    $Target = Join-Path $Root $Item.Path
+    $Dir = Split-Path -Parent $Target
+    $Out = Split-Path -Leaf $Target
+    New-Item -ItemType Directory -Force -Path $Dir | Out-Null
+    foreach ($Url in $Item.Urls) { $Lines.Add($Url) }
+    $Lines.Add('  dir=' + $Dir)
+    $Lines.Add('  out=' + $Out)
+    if ($Item.Md5) { $Lines.Add('  checksum=md5=' + $Item.Md5) }
+  }
+  [System.IO.File]::WriteAllLines($InputFile, $Lines, [System.Text.UTF8Encoding]::new($false))
+  & $aria2.Source -c -x16 -s16 -j4 -i $InputFile
+  exit $LASTEXITCODE
+}
+
+foreach ($Item in $Items) {
+  $Target = Join-Path $Root $Item.Path
+  $Dir = Split-Path -Parent $Target
+  New-Item -ItemType Directory -Force -Path $Dir | Out-Null
+
+  if ((Test-Path $Target) -and ((Get-Item $Target).Length -eq [int64]$Item.Size)) {
+    Write-Host ('Skip ' + $Item.Path)
+    continue
+  }
+
+  Write-Host ('Download ' + $Item.Path)
+  $Downloaded = $false
+  foreach ($Url in $Item.Urls) {
+    try {
+      Invoke-WebRequest -Uri $Url -OutFile $Target
+      $Downloaded = $true
+      break
+    } catch {
+      Write-Warning ('Failed ' + $Url)
+    }
+  }
+  if (-not $Downloaded) {
+    throw ('Download failed: ' + $Item.Path)
+  }
+}
+
+Write-Host 'Download complete.'
+`;
+};
+
+const downloadWuwaScript = async () => {
+  if (!isWuwa() || state.mode !== "files") return;
+  const entries = await loadWuwaEntries();
+  if (!entries.length) {
+    showToast("当前版本没有文件清单");
+    return;
+  }
+  downloadTextFile(`WutheringWaves_${state.version}_download.ps1`, wuwaDownloadScript(state.version, entries));
+  showToast("下载脚本已生成");
+};
+
 const bindStaticActions = () => {
   $("#selectButton").addEventListener("click", () => {
     const menu = $("#versionMenu");
@@ -405,12 +509,14 @@ const bindStaticActions = () => {
     state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
     state.hoyoExpandedFile = "";
     state.nteExpandedFile = "";
+    state.wuwaExpandedFile = "";
     renderList();
   });
 
   $("#copyCommandBtn").addEventListener("click", () => copyText(commandFor(), "命令已复制"));
   $("#scriptButton").addEventListener("click", () => {
-    downloadNteScript().catch((error) => {
+    const task = isWuwa() ? downloadWuwaScript() : downloadNteScript();
+    Promise.resolve(task).catch((error) => {
       console.error(error);
       showToast(`脚本生成失败：${error.message}`);
     });
@@ -442,6 +548,8 @@ const renderGameRail = () => {
       state.hoyoExpandedFile = "";
       state.nteFilePath = "";
       state.nteExpandedFile = "";
+      state.wuwaFilePath = "";
+      state.wuwaExpandedFile = "";
       $("#fileSearch").value = "";
       await ensureGameData();
       state.compareVersion = null;
@@ -475,6 +583,8 @@ const renderModes = () => {
       state.hoyoExpandedFile = "";
       state.nteFilePath = "";
       state.nteExpandedFile = "";
+      state.wuwaFilePath = "";
+      state.wuwaExpandedFile = "";
       $$(".mode-tab").forEach((item) => item.classList.toggle("active", item === button));
       render();
     });
@@ -513,6 +623,8 @@ const renderVersionMenu = () => {
       state.hoyoExpandedFile = "";
       state.nteFilePath = "";
       state.nteExpandedFile = "";
+      state.wuwaFilePath = "";
+      state.wuwaExpandedFile = "";
       $("#versionMenu").hidden = true;
       $("#selectButton").setAttribute("aria-expanded", "false");
       render();
@@ -563,7 +675,7 @@ const versionButton = (item) => {
 };
 
 const renderStats = () => {
-  const stats = isNte() ? nteStats() : isEndfield() ? endfieldStats() : hoyoStats();
+  const stats = isNte() ? nteStats() : isEndfield() ? endfieldStats() : isWuwa() ? wuwaStats() : hoyoStats();
   $("#stats").innerHTML = stats.map(([label, value]) => `<div class="stat"><span>${label}</span><strong>${value}</strong></div>`).join("");
 };
 
@@ -606,6 +718,18 @@ const hoyoStats = () => {
   ];
 };
 
+const wuwaStats = () => {
+  const summary = wuwaSummaries().find((item) => item.version === state.version);
+  return [
+    ["当前版本", state.version],
+    ["区服", `${summary?.region?.toUpperCase() || "-"} ${summary?.channel || "-"}`],
+    ["文件数", `${(summary?.file_count || 0).toLocaleString()} 个`],
+    ["总大小", fmtBytes(summary?.size || 0)],
+    ["CDN", `${summary?.cdn_count || 0} 个 / 更新路线 ${summary?.patch_routes || 0} 条`],
+  ];
+};
+
+
 const renderLinks = () => {
   const scriptButton = $("#scriptButton");
   scriptButton.hidden = true;
@@ -646,6 +770,20 @@ const renderLinks = () => {
     return;
   }
 
+  if (isWuwa()) {
+    const links = wuwaVersion()?.links?.files;
+    const disabled = state.mode !== "files" || !links;
+    $("#urlsLink").classList.toggle("disabled", disabled);
+    $("#aria2Link").classList.toggle("disabled", disabled);
+    $("#jsonLink").classList.remove("disabled");
+    $("#urlsLink").href = links?.urls || "#";
+    $("#aria2Link").href = links?.aria2 || "#";
+    $("#jsonLink").href = state.mode === "files" ? links?.json || "data/wuwa/versions.json" : "data/wuwa/versions.json";
+    scriptButton.hidden = disabled;
+    scriptButton.disabled = disabled;
+    return;
+  }
+
   $("#urlsLink").classList.add("disabled");
   $("#aria2Link").classList.add("disabled");
   $("#urlsLink").href = "#";
@@ -661,7 +799,7 @@ const renderPanelTitle = () => {
   $("#selectedVersion").textContent = state.version || "-";
   $("#copyCommandBtn").innerHTML = `${icons.copy}<span>复制下载命令</span>`;
   $("#commandText").textContent = commandFor();
-  $("#panelKicker").textContent = isNte() ? "NTE files" : isEndfield() ? "Endfield files" : "Hoyo files";
+  $("#panelKicker").textContent = isNte() ? "NTE files" : isEndfield() ? "Endfield files" : isWuwa() ? "Wuwa files" : "Hoyo files";
   $("#panelTitle").textContent = `${state.version} ${modeLabel}`;
 };
 
@@ -676,6 +814,18 @@ const loadNteEntries = async (version = state.version, mode = state.mode) => {
     state.nteEntries.set(key, await response.json());
   }
   return state.nteEntries.get(key);
+};
+
+const loadWuwaEntries = async (version = state.version) => {
+  const row = state.wuwaVersions?.[version];
+  const fileList = row?.links?.files?.json;
+  if (!fileList) return [];
+  const key = `${version}:files`;
+  if (!state.wuwaEntries.has(key)) {
+    const response = await fetch(fileList);
+    state.wuwaEntries.set(key, await response.json());
+  }
+  return state.wuwaEntries.get(key);
 };
 
 const loadHoyoChunk = async () => {
@@ -765,6 +915,22 @@ const nteItem = (entry, index, total) => {
     mirrorUrl: nteCdn2Url(entry.url),
     mirrorLabel: "CDN2",
     count: `${index + 1}/${total}`,
+  };
+};
+
+const wuwaFileItem = (entry, index = 0, total = 0) => {
+  const urls = entry.urls?.length ? entry.urls : [entry.url].filter(Boolean);
+  return {
+    key: entry.dest,
+    badge: "游戏文件",
+    title: entry.name || entry.dest?.split(/[\\/]/).at(-1) || "-",
+    subtitle: entry.dest || entry.name || "-",
+    remoteName: entry.dest || entry.name || "",
+    size: Number(entry.size || 0),
+    hash: entry.md5 || "",
+    url: urls[0] || "",
+    extraLinks: urls.slice(1).map((url, index) => ({ url, label: `CDN${index + 2}` })),
+    count: total ? `${index + 1}/${total}` : "",
   };
 };
 
@@ -1527,6 +1693,68 @@ const bindNteBrowserActions = () => {
   });
 };
 
+const renderWuwaFiles = async () => {
+  const entries = await loadWuwaEntries();
+  const items = entries.map((entry, index) => wuwaFileItem(entry, index, entries.length));
+  const filtered = filterEntries(items);
+  const version = wuwaVersion();
+  const note = `
+    <div class="notice file-browser-note">
+      <div class="notice-copy">
+        <strong>文件索引</strong>
+        <span>鸣潮官方启动器提供散文件索引；当前版本 ${escapeHtml(state.version)} 含 ${entries.length.toLocaleString()} 个文件，页面按目录浏览，下载时可使用 ${version?.cdn_urls?.length || 0} 个官方 CDN 镜像。</span>
+      </div>
+    </div>
+  `;
+  if (state.query) {
+    $("#fileList").innerHTML = note + (filtered.length
+      ? `<div class="hoyo-browser search-results">${filtered.map((entry) => hoyoFileRow(entry, "search", state.wuwaExpandedFile)).join("")}</div>`
+      : `<div class="empty">没有匹配到文件</div>`);
+  } else {
+    $("#fileList").innerHTML = note + renderDirectoryBrowser({
+      files: items,
+      currentPath: state.wuwaFilePath || "",
+      expandedFile: state.wuwaExpandedFile,
+    });
+  }
+  bindCardActions();
+  bindWuwaBrowserActions();
+};
+
+const bindWuwaBrowserActions = () => {
+  $$(".folder-row, .breadcrumb-step").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.wuwaFilePath = button.dataset.folder || "";
+      state.wuwaExpandedFile = "";
+      renderList();
+    });
+  });
+  $$(".hoyo-browser .file-row").forEach((button) => {
+    button.addEventListener("click", () => {
+      const key = button.dataset.file || "";
+      state.wuwaExpandedFile = state.wuwaExpandedFile === key ? "" : key;
+      renderList();
+    });
+  });
+};
+
+const renderWuwaPatches = () => {
+  const routes = (wuwaVersion()?.patches || []).map((route, index, all) => ({
+    badge: "更新路线",
+    title: `${route.from} -> ${route.to}`,
+    subtitle: route.base_url || route.index_file || route.index_url,
+    size: route.size,
+    hash: route.index_file_md5,
+    url: route.index_url,
+    count: `${index + 1}/${all.length}`,
+  }));
+  const filtered = filterEntries(routes);
+  $("#fileList").innerHTML = filtered.length
+    ? filtered.map((entry, index) => fileCard({ ...entry, count: `${index + 1}/${filtered.length}` })).join("")
+    : `<div class="empty">没有匹配到更新路线</div>`;
+  bindCardActions();
+};
+
 const renderHoyoChunk = async () => {
   const version = hoyoVersion();
   if (!version?.chunk) {
@@ -1723,20 +1951,30 @@ const hoyoFileRow = (item, context, expandedKey = state.hoyoExpandedFile) => {
   `;
 };
 
+const fileAlternateLinks = (item) => [
+  ...(item.mirrorUrl ? [{ url: item.mirrorUrl, label: item.mirrorLabel || "镜像" }] : []),
+  ...(item.extraLinks || []),
+].filter((link) => link.url);
+
+const fileAlternateActionHtml = (links, fallbackLabel = "镜像") => links
+  .map((link) => `<a class="icon-button mirror-link" href="${escapeHtml(link.url)}" target="_blank" rel="noreferrer" title="备用下载链接">${icons.down}<span>${escapeHtml(link.label || fallbackLabel)}</span></a>`)
+  .join("");
+
 const fileActionHtml = (item) => {
   const preferredUrl = item.preferredUrl || item.url;
-  const primaryLabel = item.mirrorUrl ? "CDN1" : "打开";
-  const copyLabel = item.mirrorUrl ? "复制 CDN1" : "复制链接";
+  const alternateLinks = fileAlternateLinks(item);
+  const primaryLabel = alternateLinks.length ? "CDN1" : "打开";
+  const copyLabel = alternateLinks.length ? "复制 CDN1" : "复制链接";
   const urlActions = item.officialUrl
     ? `
       <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="复制当前可用链接">${icons.copy}<span>复制可用链接</span></button>
       <a class="icon-button ${item.officialAvailable ? "" : "stale-link"}" href="${escapeHtml(item.officialUrl)}" target="_blank" rel="noreferrer" title="${item.officialAvailable ? "上游探测时可用" : "上游曾标记不可用，实际状态可能变化"}">${icons.down}<span>官方${item.officialAvailable ? "" : "状态未知"}</span></a>
-      ${item.mirrorUrl ? `<a class="icon-button mirror-link" href="${escapeHtml(item.mirrorUrl)}" target="_blank" rel="noreferrer" title="备用下载链接">${icons.down}<span>${escapeHtml(item.mirrorLabel || "归档镜像")}</span></a>` : ""}
+      ${fileAlternateActionHtml(alternateLinks, "归档镜像")}
     `
     : `
       <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="${escapeHtml(copyLabel)}">${icons.copy}<span>${escapeHtml(copyLabel)}</span></button>
       <a class="icon-button" href="${escapeHtml(preferredUrl)}" target="_blank" rel="noreferrer" title="${escapeHtml(primaryLabel)}">${icons.down}<span>${escapeHtml(primaryLabel)}</span></a>
-      ${item.mirrorUrl ? `<a class="icon-button mirror-link" href="${escapeHtml(item.mirrorUrl)}" target="_blank" rel="noreferrer" title="备用下载链接">${icons.down}<span>${escapeHtml(item.mirrorLabel || "镜像")}</span></a>` : ""}
+      ${fileAlternateActionHtml(alternateLinks)}
     `;
   const chunkAction = item.chunkDownload
     ? `<button class="icon-button chunk-download-file" type="button" data-remote="${escapeHtml(item.remoteName || item.subtitle)}" data-size="${Number(item.size || 0)}" title="通过官方 Chunk 下载">${icons.down}<span>Chunk 下载</span></button>`
@@ -1883,6 +2121,15 @@ const renderList = async () => {
     return;
   }
 
+  if (isWuwa()) {
+    if (state.mode === "files") {
+      await renderWuwaFiles();
+    } else {
+      renderWuwaPatches();
+    }
+    return;
+  }
+
   if (state.mode === "files") {
     await renderHoyoFiles();
     return;
@@ -1917,6 +2164,11 @@ const ensureGameData = async (preferredVersion = null) => {
     state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
     return;
   }
+  if (isWuwa()) {
+    const versions = wuwaSummaries().sort((a, b) => compareVersions(b.version, a.version));
+    state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
+    return;
+  }
   if (!state.hoyoVersions.has(state.gameId)) {
     const response = await fetch(`data/hoyo/${state.gameId}_versions.json`);
     state.hoyoVersions.set(state.gameId, await response.json());
@@ -1948,6 +2200,18 @@ const renderNotice = () => {
       </div>
       <div class="source-links">
         <a class="source-link" href="${escapeHtml(state.endfieldIndex.source)}" target="_blank" rel="noreferrer">daydreamer-json/ak-endfield-api-archive</a>
+      </div>
+    `;
+  } else if (isWuwa()) {
+    notice.innerHTML = `
+      <div class="notice-copy">
+        <strong>数据来源</strong>
+        <span>页面基于 yuhkix/wuwa-downloader 的启动器发现入口，读取鸣潮国服官方启动器索引与 resource index，保存官方 CDN 文件 URL、MD5 与目录结构。</span>
+      </div>
+      <div class="source-links">
+        <a class="source-link" href="${escapeHtml(state.wuwaIndex.source)}" target="_blank" rel="noreferrer">yuhkix/wuwa-downloader</a>
+        <a class="source-link" href="${escapeHtml(state.wuwaIndex.selected_launcher_index)}" target="_blank" rel="noreferrer">官方 launcher index</a>
+        <a class="source-link" href="${escapeHtml(wuwaVersion()?.resource_index || "#")}" target="_blank" rel="noreferrer">resource index</a>
       </div>
     `;
   } else {
@@ -1997,11 +2261,15 @@ Promise.all([
   fetch("./data/hoyo/games.json").then((response) => response.json()),
   fetch("./data/endfield/index.json").then((response) => response.json()),
   fetch("./data/endfield/versions.json").then((response) => response.json()),
-]).then(async ([nteCatalog, hoyoIndex, endfieldIndex, endfieldVersions]) => {
+  fetch("./data/wuwa/index.json").then((response) => response.json()),
+  fetch("./data/wuwa/versions.json").then((response) => response.json()),
+]).then(async ([nteCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, wuwaVersions]) => {
   state.nteCatalog = nteCatalog;
   state.hoyoIndex = hoyoIndex;
   state.endfieldIndex = endfieldIndex;
   state.endfieldVersions = endfieldVersions;
+  state.wuwaIndex = wuwaIndex;
+  state.wuwaVersions = wuwaVersions;
   const savedView = loadSavedView();
   if (allGames().some((game) => game.id === savedView.gameId)) {
     state.gameId = savedView.gameId;
