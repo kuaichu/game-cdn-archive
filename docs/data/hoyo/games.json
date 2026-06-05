@@ -1,7 +1,7 @@
 {
   "source": "https://hoyo-files.amarea.cn",
   "api_base": "https://autopatch.amarea.cn/pkg_version",
-  "generated_at": "2026-06-05T17:55:29.725Z",
+  "generated_at": "2026-06-05T18:08:44.103Z",
   "games": [
     {
       "id": "hk4e",
@@ -850,6 +850,86 @@
       "domain": "autopatchcn.bh3.com",
       "versions": [
         {
+          "version": "4.1.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "4.2.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 4553098731,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "4.3.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 4637027964,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "4.3.1",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 4634044068,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "4.4.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 4800027777,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "4.5.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 5179182836,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "4.6.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "4.7.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "4.8.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
+          "version": "4.9.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": false,
+          "has_decompressed_path": false
+        },
+        {
           "version": "5.0.0",
           "package_items": 1,
           "update_items": 0,
@@ -1154,13 +1234,13 @@
           "has_decompressed_path": false
         }
       ],
-      "version_count": 38,
-      "first_version": "5.0.0",
+      "version_count": 48,
+      "first_version": "4.1.0",
       "latest_version": "8.9.0",
-      "direct_items": 33,
+      "direct_items": 43,
       "update_items": 1,
       "chunk_versions": 8,
-      "direct_bytes": 309834528207,
+      "direct_bytes": 333637909583,
       "versions_url": "https://autopatch.amarea.cn/pkg_version/bh3_versions.json"
     }
   ]
