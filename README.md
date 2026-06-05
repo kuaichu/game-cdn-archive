@@ -225,6 +225,9 @@ current recovered set includes `2.3.1`, `2.6.2`, `2.8.0`, and `3.2.2`, plus the
 current launcher version. These are complete resource indexes, not a guaranteed
 full-version history.
 
+The Wuthering Waves navigation icon is sourced from the official App Store
+listing published by HK KURO GAMES LIMITED.
+
 ## Automated Updates
 
 The repository includes a GitHub Actions workflow at
