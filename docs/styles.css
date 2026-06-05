@@ -494,6 +494,11 @@ h2 {
   color: #7df0a7;
 }
 
+.cap.red {
+  background: rgba(248, 81, 73, 0.18);
+  color: #ff9b96;
+}
+
 .cap.slate {
   background: rgba(148, 165, 186, 0.14);
   color: #bdcad8;

@@ -229,9 +229,13 @@ const androidSummaries = () => {
       channels: [],
       status: entry.status,
       last_modified: entry.last_modified,
+      unavailable_count: 0,
     };
     row.apk_count += 1;
     row.size += Number(entry.size || 0);
+    if (entry.error || Number(entry.status || 0) < 200 || Number(entry.status || 0) >= 400) {
+      row.unavailable_count += 1;
+    }
     if (entry.channel && !row.channels.includes(entry.channel)) row.channels.push(entry.channel);
     byVersion.set(entry.version, row);
   });
@@ -298,6 +302,54 @@ const hoyoDistributionProfile = (summary, version = null) => {
   if (hasDirect) return { label: "直链文件", color: "green", detail: "官方散文件直链" };
   if (hasPackage) return { label: "整包分发", color: "blue", detail: "完整压缩包分发" };
   return { label: "索引记录", color: "slate", detail: "仅保存版本索引" };
+};
+
+const asArray = (value) => Array.isArray(value) ? value : value ? [value] : [];
+
+const hoyoDownloadItems = (row) => {
+  const items = [];
+  const game = row?.game || {};
+  items.push(...asArray(game.full), ...asArray(game.segments));
+  Object.values(row?.voice || {}).forEach((voice) => items.push(...asArray(voice)));
+  Object.values(row?.update || {}).forEach((patch) => {
+    items.push(...asArray(patch?.game));
+    Object.values(patch?.voice || {}).forEach((voice) => items.push(...asArray(voice)));
+  });
+  return items.filter((item) => item && typeof item === "object" && item.url);
+};
+
+const hoyoUnavailableCount = (version) => {
+  const row = hoyoVersionMap()?.[version];
+  return hoyoDownloadItems(row).filter((item) => Number(item.size || 0) <= 0).length;
+};
+
+const endfieldOfficialStatus = (version) => {
+  const row = state.endfieldVersions?.[version];
+  const items = [...(row?.packages || []), ...(row?.patches || [])];
+  const officialExpired = items.filter((item) => item.official_url && item.official_available === false);
+  if (!officialExpired.length) return null;
+  const mirrored = officialExpired.filter((item) => item.mirror_url || item.preferred_url).length;
+  return mirrored === officialExpired.length
+    ? { color: "amber", label: "官方过期" }
+    : { color: "red", label: `失效 ${officialExpired.length}` };
+};
+
+const versionAvailabilityCap = (item) => {
+  if (state.mode === "android") {
+    const count = Number(item.unavailable_count || 0);
+    if (!count) return "";
+    const label = count >= Number(item.apk_count || 0) ? "链接失效" : `含失效 ${count}`;
+    return `<span class="cap red">${label}</span>`;
+  }
+  if (isEndfield()) {
+    const status = endfieldOfficialStatus(item.version);
+    return status ? `<span class="cap ${status.color}">${status.label}</span>` : "";
+  }
+  if (!isNte() && !isWuwa()) {
+    const count = hoyoUnavailableCount(item.version);
+    if (count) return `<span class="cap red">${count === 1 ? "链接失效" : `含失效 ${count}`}</span>`;
+  }
+  return "";
 };
 
 const availableSummaries = () => {
@@ -681,6 +733,7 @@ const versionButton = (item) => {
           <span class="cap blue">${Number(item.apk_count || 0).toLocaleString()} 个包</span>
           <span class="cap green">${escapeHtml((item.channels || []).join(" / ") || "官方渠道")}</span>
           <span class="cap slate">${fmtBytes(item.size || 0)}</span>
+          ${versionAvailabilityCap(item)}
         </span>
       </button>
     `;
@@ -708,6 +761,7 @@ const versionButton = (item) => {
           <span class="cap blue">${item.package_items} 个完整分卷</span>
           ${item.patch_routes ? `<span class="cap amber">${item.patch_routes} 条更新路径</span>` : ""}
           ${item.mirror_items ? '<span class="cap green">归档镜像</span>' : ""}
+          ${versionAvailabilityCap(item)}
         </span>
       </button>
     `;
@@ -732,6 +786,7 @@ const versionButton = (item) => {
       <span class="caps">
         <span class="cap ${profile.color}">${profile.label}</span>
         ${item.update_items ? '<span class="cap amber">更新包</span>' : ""}
+        ${versionAvailabilityCap(item)}
       </span>
     </button>
   `;
