@@ -356,6 +356,13 @@ KNOWN_APKS = [
     },
     {
         "game_id": "bh3",
+        "version": "3.4.0",
+        "channel": "guofu",
+        "url": "https://app.bh3.com/public/Android/20190823-210658-gf_android_ota-R3_4-The_Twilight_Ruling_guofu.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "bh3",
         "version": "1.9.0",
         "channel": "guofu",
         "url": "http://app.bh3.com/public/Android/20171123-android_versions_v1_9_resurrection_of_the_sacramental_guofu.apk",

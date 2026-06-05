@@ -49,6 +49,45 @@ GAMES = [
 
 MANUAL_HOYO_VERSION_PATCHES: dict[str, dict[str, dict[str, Any]]] = {
     "bh3": {
+        "3.7.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v3.7.0_39ef5ab7dab.7z",
+                    "url": "http://bundle.bh3.com/tmp/pc/BH3_v3.7.0_39ef5ab7dab.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
+        "3.8.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v3.8.0_12d334ef92e.7z",
+                    "url": "http://bundle.bh3.com/tmp/pc/BH3_v3.8.0_12d334ef92e.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
+        "3.9.1": {
+            "game": {
+                "full": {
+                    "name": "BH3_v3.9.1_23d0982b635.7z",
+                    "url": "https://app.bh3.com/public/download/BH3_v3.9.1_23d0982b635.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
         "4.1.0": {
             "game": {
                 "full": {
