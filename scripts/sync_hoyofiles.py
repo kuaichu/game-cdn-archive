@@ -47,6 +47,180 @@ GAMES = [
 ]
 
 
+MANUAL_HOYO_VERSION_PATCHES: dict[str, dict[str, dict[str, Any]]] = {
+    "bh3": {
+        "6.1.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v6.1.0_cd4c898e2f15.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20220927105429_ALm4C1zHrTLNlwkq/PC/BH3_v6.1.0_cd4c898e2f15.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20220927105429_ALm4C1zHrTLNlwkq/PC/extract",
+            "chunk": None,
+        },
+        "6.2.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v6.2.0_3eb0db30afc9.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20221106182828_Sd8hWJzQkh5gR2ZV/PC/BH3_v6.2.0_3eb0db30afc9.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20221106182828_Sd8hWJzQkh5gR2ZV/PC/extract",
+            "chunk": None,
+        },
+        "6.3.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v6.3.0_102c3ff09afb.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20221210130727_kMujQDyj3dcmqupm/PC/BH3_v6.3.0_102c3ff09afb.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20221210130727_kMujQDyj3dcmqupm/PC/extract",
+            "chunk": None,
+        },
+        "6.4.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v6.4.0_1331e8aa9e17.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20230116101825_JscRRCB6O6EzK9C5/PC/BH3_v6.4.0_1331e8aa9e17.7z",
+                    "checksum": "",
+                    "size": 10832841217,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20230116101825_JscRRCB6O6EzK9C5/PC/extract",
+            "chunk": None,
+        },
+        "6.5.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v6.5.0_826e19c5f031.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20230305113140_X4V6Nf5dn6viEyfS/PC/BH3_v6.5.0_826e19c5f031.7z",
+                    "checksum": "",
+                    "size": 11225162137,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20230305113140_X4V6Nf5dn6viEyfS/PC/extract",
+            "chunk": None,
+        },
+        "6.6.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v6.6.0_4ed7d53313df.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20230416151857_AsBJm4PVPKKR38YI/PC/BH3_v6.6.0_4ed7d53313df.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20230416151857_AsBJm4PVPKKR38YI/PC/extract",
+            "chunk": None,
+        },
+        "6.7.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v6.7.0_c02b55ac37c9.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20230529102233_twzVyW15N4xGFkQ8/PC/BH3_v6.7.0_c02b55ac37c9.7z",
+                    "checksum": "",
+                    "size": 11813659145,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20230529102233_twzVyW15N4xGFkQ8/PC/extract",
+            "chunk": None,
+        },
+        "6.8.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v6.8.0_fe00767f5f60.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20230702172043_o8BzGMLGBbVpTjyy/PC/BH3_v6.8.0_fe00767f5f60.7z",
+                    "checksum": "",
+                    "size": 12218548509,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20230702172043_o8BzGMLGBbVpTjyy/PC/extract",
+            "chunk": None,
+        },
+        "6.9.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v6.9.0_d09f54ae2822.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20230814114102_KD8RjBDLGc0wU5j9/PC/BH3_v6.9.0_d09f54ae2822.7z",
+                    "checksum": "",
+                    "size": 12656036672,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20230814114102_KD8RjBDLGc0wU5j9/PC/extract",
+            "chunk": None,
+        },
+        "7.0.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v7.0.0_ec9940649b00.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20230925103219_8WqdhyRJLpCQJNBY/PC/BH3_v7.0.0_ec9940649b00.7z",
+                    "checksum": "",
+                    "size": 13615515905,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20230925103219_8WqdhyRJLpCQJNBY/PC/extract",
+            "chunk": None,
+        },
+        "7.1.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v7.1.0_2370cca635c2.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20231106105308_PSI04xYkMRDoKldh/PC/BH3_v7.1.0_2370cca635c2.7z",
+                    "checksum": "",
+                    "size": 14270824403,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20231106105308_PSI04xYkMRDoKldh/PC/extract",
+            "chunk": None,
+        },
+        "7.2.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v7.2.0_a5dedc5699ee.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20231218144111_nFwR8NyQCxVRbXeo/PC/BH3_v7.2.0_a5dedc5699ee.7z",
+                    "checksum": "",
+                    "size": 13521206825,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20231218144111_nFwR8NyQCxVRbXeo/PC/extract",
+            "chunk": None,
+        },
+    }
+}
+
+
 def fetch_json(url: str, timeout: int = 45) -> Any:
     request = urllib.request.Request(url, headers={"User-Agent": "game-cdn-archive/1.0"})
     with urllib.request.urlopen(request, timeout=timeout) as response:
@@ -119,6 +293,31 @@ def version_stats(row: dict[str, Any]) -> dict[str, int | bool]:
     }
 
 
+def merge_manual_version_patches(game_id: str, versions: dict[str, Any]) -> None:
+    patches = MANUAL_HOYO_VERSION_PATCHES.get(game_id, {})
+    for version, row in patches.items():
+        if version not in versions:
+            versions[version] = deepcopy(row)
+            continue
+
+        existing = versions[version]
+        if not isinstance(existing, dict):
+            versions[version] = deepcopy(row)
+            continue
+
+        existing.setdefault("voice", {})
+        existing.setdefault("update", {})
+        existing.setdefault("chunk", row.get("chunk"))
+        if row.get("decompressed_path") and not existing.get("decompressed_path"):
+            existing["decompressed_path"] = row["decompressed_path"]
+
+        game = existing.setdefault("game", {})
+        manual_game = row.get("game") or {}
+        if isinstance(game, dict) and isinstance(manual_game, dict):
+            for key, value in manual_game.items():
+                game.setdefault(key, deepcopy(value))
+
+
 def stable_compare_games(index: dict[str, Any]) -> dict[str, Any]:
     stable = deepcopy(index)
     stable["generated_at"] = None
@@ -139,6 +338,7 @@ def main() -> None:
         versions = fetch_json(versions_url)
         if not isinstance(versions, dict):
             raise RuntimeError(f"unexpected version payload for {game_id}")
+        merge_manual_version_patches(game_id, versions)
 
         write_json_if_changed(HOYO_DATA / f"{game_id}_versions.json", versions, indent=4)
 

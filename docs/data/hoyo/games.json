@@ -1,7 +1,7 @@
 {
   "source": "https://hoyo-files.amarea.cn",
   "api_base": "https://autopatch.amarea.cn/pkg_version",
-  "generated_at": "2026-06-04T16:08:05.904Z",
+  "generated_at": "2026-06-05T17:50:36.604Z",
   "games": [
     {
       "id": "hk4e",
@@ -850,6 +850,102 @@
       "domain": "autopatchcn.bh3.com",
       "versions": [
         {
+          "version": "6.1.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "6.2.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "6.3.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "6.4.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 10832841217,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "6.5.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 11225162137,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "6.6.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "6.7.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 11813659145,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "6.8.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 12218548509,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "6.9.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 12656036672,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "7.0.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 13615515905,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "7.1.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 14270824403,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "7.2.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 13521206825,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
           "version": "7.6.0",
           "package_items": 1,
           "update_items": 0,
@@ -970,13 +1066,13 @@
           "has_decompressed_path": false
         }
       ],
-      "version_count": 15,
-      "first_version": "7.6.0",
+      "version_count": 27,
+      "first_version": "6.1.0",
       "latest_version": "8.9.0",
-      "direct_items": 10,
+      "direct_items": 22,
       "update_items": 1,
       "chunk_versions": 8,
-      "direct_bytes": 209680733394,
+      "direct_bytes": 309834528207,
       "versions_url": "https://autopatch.amarea.cn/pkg_version/bh3_versions.json"
     }
   ]
