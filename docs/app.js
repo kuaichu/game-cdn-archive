@@ -11,6 +11,7 @@ const state = {
   endfieldVersions: null,
   wuwaIndex: null,
   wuwaVersions: null,
+  androidIndex: null,
   wuwaEntries: new Map(),
   wuwaFilePath: "",
   wuwaExpandedFile: "",
@@ -114,6 +115,8 @@ const wuwaModes = [
   ["patches", "更新路线"],
 ];
 
+const androidMode = ["android", "Android APK"];
+
 const fmtBytes = (bytes) => {
   if (!bytes && bytes !== 0) return "-";
   const units = ["B", "KB", "MB", "GB", "TB"];
@@ -214,7 +217,31 @@ const currentGame = () => allGames().find((game) => game.id === state.gameId) ||
 const isNte = () => currentGame().kind === "nte";
 const isEndfield = () => currentGame().kind === "endfield";
 const isWuwa = () => currentGame().kind === "wuwa";
-const modesForGame = () => (isNte() ? nteModes : isEndfield() ? endfieldModes : isWuwa() ? wuwaModes : hoyoModes);
+const androidGame = () => state.androidIndex?.games?.[state.gameId] || null;
+const androidEntries = () => androidGame()?.versions || [];
+const androidSummaries = () => {
+  const byVersion = new Map();
+  androidEntries().forEach((entry) => {
+    const row = byVersion.get(entry.version) || {
+      version: entry.version,
+      apk_count: 0,
+      size: 0,
+      channels: [],
+      status: entry.status,
+      last_modified: entry.last_modified,
+    };
+    row.apk_count += 1;
+    row.size += Number(entry.size || 0);
+    if (entry.channel && !row.channels.includes(entry.channel)) row.channels.push(entry.channel);
+    byVersion.set(entry.version, row);
+  });
+  return [...byVersion.values()];
+};
+const hasAndroidApks = () => androidSummaries().length > 0;
+const modesForGame = () => {
+  const modes = isNte() ? nteModes : isEndfield() ? endfieldModes : isWuwa() ? wuwaModes : hoyoModes;
+  return hasAndroidApks() ? [...modes, androidMode] : modes;
+};
 
 const nteVersions = () => state.nteCatalog.versions.filter((item) => item.status === 200 && item.full);
 const nteVersion = () => state.nteCatalog.versions.find((item) => item.version === state.version);
@@ -230,6 +257,8 @@ const endfieldSummaries = () => state.endfieldIndex?.versions || [];
 
 const wuwaVersion = () => state.wuwaVersions?.[state.version] || null;
 const wuwaSummaries = () => state.wuwaIndex?.versions || [];
+const androidVersion = () => androidSummaries().find((item) => item.version === state.version) || null;
+const androidVersionEntries = () => androidEntries().filter((item) => item.version === state.version);
 
 const hoyoPackageUrl = (row) => row?.game?.full?.url || row?.game?.segments?.[0]?.url || "";
 
@@ -272,6 +301,7 @@ const hoyoDistributionProfile = (summary, version = null) => {
 };
 
 const availableSummaries = () => {
+  if (state.mode === "android") return androidSummaries();
   if (isNte()) return nteVersions();
   if (isEndfield()) return endfieldSummaries();
   if (isWuwa()) return wuwaSummaries();
@@ -297,6 +327,12 @@ const versionFamily = (version) => {
 const commandFor = () => {
   if (state.mode === "compare") {
     return "版本对比模式不需要下载命令";
+  }
+  if (state.mode === "android") {
+    const links = androidGame()?.links?.[state.version];
+    return links?.aria2
+      ? `aria2c -c -x16 -s16 -i ${links.aria2}`
+      : "当前游戏没有 Android APK 直链记录";
   }
   if (isNte()) {
     return `python scripts\\nte_downloader.py download ${state.version} --download-root downloads --workers 4 --pack --pack-dir packages`;
@@ -574,7 +610,7 @@ const renderModes = () => {
     .map(([id, label]) => `<button class="mode-tab ${state.mode === id ? "active" : ""}" data-mode="${id}" type="button">${label}</button>`)
     .join("");
   $$(".mode-tab").forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
       state.mode = button.dataset.mode;
       state.compareVersion = null;
       state.diffFilter = "all";
@@ -585,6 +621,7 @@ const renderModes = () => {
       state.nteExpandedFile = "";
       state.wuwaFilePath = "";
       state.wuwaExpandedFile = "";
+      await ensureGameData(state.version);
       $$(".mode-tab").forEach((item) => item.classList.toggle("active", item === button));
       render();
     });
@@ -635,6 +672,19 @@ const renderVersionMenu = () => {
 const versionButton = (item) => {
   const family = item.version.split(".").slice(0, 2).join(".");
   const isBase = item.version === `${family}.0`;
+  if (state.mode === "android") {
+    return `
+      <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
+        <span class="version-number">${item.version}</span>
+        <span class="caps">
+          <span class="cap green">APK</span>
+          <span class="cap blue">${Number(item.apk_count || 0).toLocaleString()} 个包</span>
+          <span class="cap green">${escapeHtml((item.channels || []).join(" / ") || "官方渠道")}</span>
+          <span class="cap slate">${fmtBytes(item.size || 0)}</span>
+        </span>
+      </button>
+    `;
+  }
   if (isNte()) {
     return `
       <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
@@ -688,8 +738,23 @@ const versionButton = (item) => {
 };
 
 const renderStats = () => {
-  const stats = isNte() ? nteStats() : isEndfield() ? endfieldStats() : isWuwa() ? wuwaStats() : hoyoStats();
+  const stats = state.mode === "android"
+    ? androidStats()
+    : isNte() ? nteStats() : isEndfield() ? endfieldStats() : isWuwa() ? wuwaStats() : hoyoStats();
   $("#stats").innerHTML = stats.map(([label, value]) => `<div class="stat"><span>${label}</span><strong>${value}</strong></div>`).join("");
+};
+
+const androidStats = () => {
+  const entry = androidVersion();
+  const entries = androidVersionEntries();
+  return [
+    ["当前版本", state.version],
+    ["平台", "Android"],
+    ["APK 数", `${entries.length.toLocaleString()} 个`],
+    ["渠道", entry?.channels?.join(" / ") || "-"],
+    ["APK 大小", fmtBytes(entry?.size || 0)],
+    ["状态", entry?.status ? `HTTP ${entry.status}` : "-"],
+  ];
 };
 
 const endfieldStats = () => {
@@ -746,6 +811,18 @@ const wuwaStats = () => {
 const renderLinks = () => {
   const scriptButton = $("#scriptButton");
   scriptButton.hidden = true;
+
+  if (state.mode === "android") {
+    const links = androidGame()?.links?.[state.version];
+    const disabled = !links;
+    $("#urlsLink").classList.toggle("disabled", disabled);
+    $("#aria2Link").classList.toggle("disabled", disabled);
+    $("#jsonLink").classList.toggle("disabled", disabled);
+    $("#urlsLink").href = links?.urls || "#";
+    $("#aria2Link").href = links?.aria2 || "#";
+    $("#jsonLink").href = links?.json || "data/android/index.json";
+    return;
+  }
   scriptButton.disabled = true;
   if (state.mode === "compare") {
     $("#urlsLink").classList.add("disabled");
@@ -812,7 +889,9 @@ const renderPanelTitle = () => {
   $("#selectedVersion").textContent = state.version || "-";
   $("#copyCommandBtn").innerHTML = `${icons.copy}<span>复制下载命令</span>`;
   $("#commandText").textContent = commandFor();
-  $("#panelKicker").textContent = isNte() ? "NTE files" : isEndfield() ? "Endfield files" : isWuwa() ? "Wuwa files" : "Hoyo files";
+  $("#panelKicker").textContent = state.mode === "android"
+    ? "Android APK"
+    : isNte() ? "NTE files" : isEndfield() ? "Endfield files" : isWuwa() ? "Wuwa files" : "Hoyo files";
   $("#panelTitle").textContent = `${state.version} ${modeLabel}`;
 };
 
@@ -946,6 +1025,16 @@ const wuwaFileItem = (entry, index = 0, total = 0) => {
     count: total ? `${index + 1}/${total}` : "",
   };
 };
+
+const androidItem = (entry, index = 0, total = 0) => ({
+  badge: "Android APK",
+  title: entry.filename || `${currentGame().name}_${entry.version}.apk`,
+  subtitle: `${entry.channel || "官方渠道"} / ${entry.last_modified || entry.source || "official CDN"}`,
+  size: Number(entry.size || 0),
+  hash: entry.md5 || entry.etag || "",
+  url: entry.url,
+  count: total ? `${index + 1}/${total}` : "",
+});
 
 const hoyoPackageItems = () => {
   const version = hoyoVersion();
@@ -2101,6 +2190,16 @@ const renderList = async () => {
     return;
   }
 
+  if (state.mode === "android") {
+    const entries = androidVersionEntries();
+    const filtered = filterEntries(entries.map((entry, index) => androidItem(entry, index, entries.length)));
+    $("#fileList").innerHTML = filtered
+      .map((entry, index) => fileCard({ ...entry, count: `${index + 1}/${filtered.length}` }))
+      .join("") || `<div class="empty">当前游戏没有 Android APK 直链记录</div>`;
+    bindCardActions();
+    return;
+  }
+
   if (isNte()) {
     if (state.mode === "reslist") {
       renderNteResList();
@@ -2167,6 +2266,11 @@ const filterEntries = (entries) => {
 };
 
 const ensureGameData = async (preferredVersion = null) => {
+  if (state.mode === "android") {
+    const versions = androidSummaries().slice().sort((a, b) => compareVersions(b.version, a.version));
+    state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
+    return;
+  }
   if (isNte()) {
     const versions = nteVersions().sort((a, b) => compareVersions(b.version, a.version));
     state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
@@ -2194,7 +2298,18 @@ const ensureGameData = async (preferredVersion = null) => {
 
 const renderNotice = () => {
   const notice = $("#notes");
-  if (isNte()) {
+  if (state.mode === "android") {
+    notice.innerHTML = `
+      <div class="notice-copy">
+        <strong>Android APK 直链</strong>
+        <span>页面保存已确认的官方 Android APK CDN URL，并通过 HEAD 记录大小、Last-Modified、ETag 与可用状态。该列表从当前可确认版本开始滚动保存，不代表完整历史。</span>
+      </div>
+      <div class="source-links">
+        <a class="source-link" href="data/android/index.json" target="_blank" rel="noreferrer">Android APK 索引</a>
+        <a class="source-link" href="${REPOSITORY_URL}#android-apk-archive" target="_blank" rel="noreferrer">本站仓库 README</a>
+      </div>
+    `;
+  } else if (isNte()) {
     notice.innerHTML = `
       <div class="notice-copy">
         <strong>数据来源</strong>
@@ -2276,13 +2391,15 @@ Promise.all([
   fetch("./data/endfield/versions.json").then((response) => response.json()),
   fetch("./data/wuwa/index.json").then((response) => response.json()),
   fetch("./data/wuwa/versions.json").then((response) => response.json()),
-]).then(async ([nteCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, wuwaVersions]) => {
+  fetch("./data/android/index.json").then((response) => response.json()),
+]).then(async ([nteCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, wuwaVersions, androidIndex]) => {
   state.nteCatalog = nteCatalog;
   state.hoyoIndex = hoyoIndex;
   state.endfieldIndex = endfieldIndex;
   state.endfieldVersions = endfieldVersions;
   state.wuwaIndex = wuwaIndex;
   state.wuwaVersions = wuwaVersions;
+  state.androidIndex = androidIndex;
   const savedView = loadSavedView();
   if (allGames().some((game) => game.id === savedView.gameId)) {
     state.gameId = savedView.gameId;

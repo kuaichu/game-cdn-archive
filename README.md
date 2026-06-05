@@ -76,6 +76,7 @@ scripts/
   import_endfield_archive.py
                              Import compact Endfield indexes from the upstream archive
   sync_wuwa.py               Sync Wuthering Waves launcher and resource indexes
+  sync_android_apks.py       Refresh metadata for known official Android APK URLs
 ```
 
 ## NTE Manifest Notes
@@ -228,6 +229,21 @@ full-version history.
 The Wuthering Waves navigation icon is sourced from the official App Store
 listing published by HK KURO GAMES LIMITED.
 
+## Android APK Archive
+
+The Android APK view is intentionally incremental. It preserves official APK
+CDN URLs only after a URL has been captured and verified, then refreshes HEAD
+metadata during scheduled updates:
+
+```bash
+python scripts/sync_android_apks.py
+```
+
+The generated index records URL, filename, channel, HTTP status, size,
+Last-Modified, ETag, and MD5 when the CDN exposes it. This is not a complete
+historical APK mirror; it is a rolling archive starting from the official APK
+links that can be confirmed now.
+
 ## Automated Updates
 
 The repository includes a GitHub Actions workflow at
@@ -241,8 +257,9 @@ It can run manually from the Actions tab, and also runs once per day. The job:
 3. Clones `daydreamer-json/ak-endfield-api-archive` and regenerates the
    compact Endfield indexes.
 4. Refreshes Wuthering Waves launcher/resource-index data.
-5. Commits and pushes only when generated data actually changes.
-6. Deploys to Cloudflare Pages when a repository secret named
+5. Refreshes metadata for known official Android APK URLs.
+6. Commits and pushes only when generated data actually changes.
+7. Deploys to Cloudflare Pages when a repository secret named
    `CLOUDFLARE_API_TOKEN` is available.
 
 The separate `.github/workflows/deploy-pages.yml` workflow deploys the static
