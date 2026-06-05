@@ -49,6 +49,149 @@ GAMES = [
 
 MANUAL_HOYO_VERSION_PATCHES: dict[str, dict[str, dict[str, Any]]] = {
     "bh3": {
+        "5.0.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v5.0.0_7a3047d5be1.7z",
+                    "url": "https://bundle.bh3.com/public/PC/BH3_v5.0.0_7a3047d5be1.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
+        "5.1.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v5.1.0_4d7e266e4fa.7z",
+                    "url": "https://bundle.bh3.com/public/PC/BH3_v5.1.0_4d7e266e4fa.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
+        "5.2.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v5.2.0_77f090b6a721.7z",
+                    "url": "https://bundle.bh3.com/public/PC/BH3_v5.2.0_77f090b6a721.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
+        "5.3.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v5.3.0_a3a92da6712f.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20211103104259_693ct8KNQRPrRgww/PC/BH3_v5.3.0_a3a92da6712f.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
+        "5.4.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v5.4.0_571c0ff55162.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20211215100712_yZnkyc197WEAbpXD/PC/BH3_v5.4.0_571c0ff55162.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
+        "5.5.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v5.5.0_56e0f53e9241.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20220125172258_G8SfUTQ2pert78RO/PC/BH3_v5.5.0_56e0f53e9241.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
+        "5.6.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v5.6.0_e9b301f2edac.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20220308195925_CQP628TAPz6hlV25/PC/BH3_v5.6.0_e9b301f2edac.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
+        "5.7.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v5.7.0_87c27c9bd47a.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20220418185848_OBkB8bi84cA2655H/PC/BH3_v5.7.0_87c27c9bd47a.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
+        "5.8.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v5.8.0_0e38ab9b9519.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20220530180356_zQkusPa43Hl6Pm21/PC/BH3_v5.8.0_0e38ab9b9519.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
+        "5.9.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v5.9.0_e61b333c9991.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20220711190415_uAJEjoWCS53uMXSJ/pc/BH3_v5.9.0_e61b333c9991.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
+        "6.0.1": {
+            "game": {
+                "full": {
+                    "name": "BH3_v6.0.1_2d927448f4c3.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20220829102342_5OzDI6dZmyn8DiSR/PC/BH3_v6.0.1_2d927448f4c3.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
         "6.1.0": {
             "game": {
                 "full": {
