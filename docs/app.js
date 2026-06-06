@@ -36,6 +36,14 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
+const ASSET_VERSION = "20260606-sync-status";
+
+const cacheBusted = (url) => {
+  if (!url || /^https?:\/\//.test(url)) return url;
+  return `${url}${url.includes("?") ? "&" : "?"}v=${ASSET_VERSION}`;
+};
+
+const fetchJson = (url) => fetch(cacheBusted(url)).then((response) => response.json());
 
 const loadSavedView = () => {
   try {
@@ -129,10 +137,22 @@ const fmtBytes = (bytes) => {
   return `${value.toFixed(unit === 0 ? 0 : 2)} ${units[unit]}`;
 };
 
+const parseDateValue = (value) => {
+  if (!value) return null;
+  if (value instanceof Date) return Number.isNaN(value.getTime()) ? null : value;
+  const text = String(value).trim();
+  const zoneMatch = text.match(/^(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2}:\d{2}) ([+-])(\d{2})(\d{2})$/);
+  const normalized = zoneMatch
+    ? `${zoneMatch[1]}T${zoneMatch[2]}${zoneMatch[3]}${zoneMatch[4]}:${zoneMatch[5]}`
+    : text;
+  const date = new Date(normalized);
+  return Number.isNaN(date.getTime()) ? null : date;
+};
+
 const fmtDateTime = (value) => {
   if (!value) return "-";
-  const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return value;
+  const date = parseDateValue(value);
+  if (!date) return value;
   return new Intl.DateTimeFormat("zh-CN", {
     timeZone: "Asia/Shanghai",
     year: "numeric",
@@ -142,6 +162,20 @@ const fmtDateTime = (value) => {
     minute: "2-digit",
     hour12: false,
   }).format(date).replace(/\//g, ".");
+};
+
+const fmtRelativeTime = (value) => {
+  const date = parseDateValue(value);
+  if (!date) return "-";
+  const diffMs = Date.now() - date.getTime();
+  const absMs = Math.abs(diffMs);
+  const minute = 60 * 1000;
+  const hour = 60 * minute;
+  const day = 24 * hour;
+  const rtf = new Intl.RelativeTimeFormat("zh-CN", { numeric: "auto" });
+  if (absMs < hour) return rtf.format(Math.round(-diffMs / minute), "minute");
+  if (absMs < day) return rtf.format(Math.round(-diffMs / hour), "hour");
+  return rtf.format(Math.round(-diffMs / day), "day");
 };
 
 const compareVersions = (left, right) => {
@@ -363,6 +397,108 @@ const availableSummaries = () => {
 const availableVersions = () => availableSummaries()
   .map((item) => item.version)
   .sort(compareVersions);
+
+const latestByVersion = (rows, predicate = () => true) => rows
+  .filter((item) => item?.version && predicate(item))
+  .slice()
+  .sort((a, b) => compareVersions(b.version, a.version))[0] || null;
+
+const sourceStatusRows = () => {
+  const nteAvailable = nteVersions();
+  const nteUnavailable = (state.nteCatalog?.versions || []).filter((item) => item.status !== 200).length;
+  const hoyoLabels = (state.hoyoIndex?.games || []).map((game) => {
+    const latest = latestByVersion((game.versions || []).filter((item) => item.package_items || item.update_items || item.has_chunk));
+    return latest ? `${game.shortName || game.name} ${latest.version}` : null;
+  }).filter(Boolean);
+  const endfieldLatest = latestByVersion(endfieldSummaries());
+  const wuwaLatest = latestByVersion(wuwaSummaries());
+  const androidRows = Object.values(state.androidIndex?.games || {}).flatMap((game) => game.versions || []);
+  const androidLatest = latestByVersion(androidRows);
+  return [
+    {
+      name: "异环 PC",
+      updated: state.nteCatalog?.generated_at,
+      latest: latestByVersion(nteAvailable)?.version,
+      detail: `${nteAvailable.length} 个可用版本${nteUnavailable ? ` / ${nteUnavailable} 个不可用` : ""}`,
+      tone: "cyan",
+    },
+    {
+      name: "米家 PC",
+      updated: state.hoyoIndex?.generated_at,
+      latest: hoyoLabels.join(" / "),
+      detail: `${state.hoyoIndex?.games?.length || 0} 个游戏，HoyoFiles 同步`,
+      tone: "blue",
+    },
+    {
+      name: "终末地 PC",
+      updated: state.endfieldIndex?.generated_from_observation,
+      latest: endfieldLatest?.version,
+      detail: `${endfieldSummaries().length} 个版本，上游启动器 API 归档`,
+      tone: "amber",
+    },
+    {
+      name: "鸣潮 PC",
+      updated: state.wuwaIndex?.generated_at,
+      latest: wuwaLatest?.version,
+      detail: `${wuwaSummaries().length} 个版本，官方 resource index`,
+      tone: "green",
+    },
+    {
+      name: "Android APK",
+      updated: state.androidIndex?.generated_at,
+      latest: androidLatest?.version,
+      detail: `${androidRows.length} 条 APK 直链记录`,
+      tone: "rose",
+    },
+  ];
+};
+
+const currentGameSyncInfo = () => {
+  const game = currentGame();
+  const androidLatest = latestByVersion(androidSummaries());
+  if (isNte()) {
+    const latest = latestByVersion(nteVersions());
+    return {
+      game,
+      source: "异环官方启动器 ResList",
+      updated: state.nteCatalog?.generated_at,
+      latest: latest?.version,
+      detail: `${latest?.full?.items || 0} 个完整文件 / ${fmtBytes(latest?.full?.bytes || 0)}`,
+      android: androidLatest?.version,
+    };
+  }
+  if (isEndfield()) {
+    const latest = latestByVersion(endfieldSummaries());
+    return {
+      game,
+      source: "daydreamer-json 上游归档",
+      updated: state.endfieldIndex?.generated_from_observation,
+      latest: latest?.version,
+      detail: `${latest?.package_items || 0} 个完整分卷 / ${fmtBytes(latest?.packed_size || 0)}`,
+      android: androidLatest?.version,
+    };
+  }
+  if (isWuwa()) {
+    const latest = latestByVersion(wuwaSummaries());
+    return {
+      game,
+      source: "鸣潮官方启动器索引",
+      updated: state.wuwaIndex?.generated_at,
+      latest: latest?.version,
+      detail: `${(latest?.file_count || 0).toLocaleString()} 个文件 / ${fmtBytes(latest?.size || 0)}`,
+      android: androidLatest?.version,
+    };
+  }
+  const latest = latestByVersion(hoyoSummaries().filter((item) => item.package_items || item.update_items || item.has_chunk));
+  return {
+    game,
+    source: "HoyoFiles 公开版本清单",
+    updated: state.hoyoIndex?.generated_at,
+    latest: latest?.version,
+    detail: `${latest?.package_items || 0} 个压缩包 / ${latest?.update_items || 0} 个更新包`,
+    android: androidLatest?.version,
+  };
+};
 
 const defaultCompareVersion = () => {
   const versions = availableVersions();
@@ -799,6 +935,56 @@ const renderStats = () => {
   $("#stats").innerHTML = stats.map(([label, value]) => `<div class="stat"><span>${label}</span><strong>${value}</strong></div>`).join("");
 };
 
+const renderSyncStatus = () => {
+  const panel = $("#syncStatus");
+  const current = currentGameSyncInfo();
+  const rows = sourceStatusRows();
+  panel.innerHTML = `
+    <div class="sync-current">
+      <div class="sync-current-head">
+        <span class="sync-pulse" aria-hidden="true"></span>
+        <div>
+          <p class="kicker">Sync Status</p>
+          <h2>${escapeHtml(current.game.name)} 最新归档</h2>
+        </div>
+      </div>
+      <div class="sync-current-grid">
+        <div>
+          <span>最新 PC 版本</span>
+          <strong>${escapeHtml(current.latest || "-")}</strong>
+        </div>
+        <div>
+          <span>最近同步</span>
+          <strong>${fmtDateTime(current.updated)}</strong>
+          <small>${fmtRelativeTime(current.updated)}</small>
+        </div>
+        <div>
+          <span>来源</span>
+          <strong>${escapeHtml(current.source)}</strong>
+          <small>${escapeHtml(current.detail)}</small>
+        </div>
+        <div>
+          <span>Android 留档</span>
+          <strong>${escapeHtml(current.android || "暂无")}</strong>
+          <small>${current.android ? "已记录 APK 直链" : "当前游戏未记录 APK"}</small>
+        </div>
+      </div>
+    </div>
+    <div class="sync-sources" aria-label="数据源同步状态">
+      ${rows.map((row) => `
+        <article class="sync-source ${row.tone}">
+          <div>
+            <span>${escapeHtml(row.name)}</span>
+            <strong title="${escapeHtml(row.latest || "-")}">${escapeHtml(row.latest || "-")}</strong>
+          </div>
+          <p>${fmtDateTime(row.updated)}</p>
+          <small>${escapeHtml(row.detail)}</small>
+        </article>
+      `).join("")}
+    </div>
+  `;
+};
+
 const androidStats = () => {
   const entry = androidVersion();
   const entries = androidVersionEntries();
@@ -957,8 +1143,7 @@ const loadNteEntries = async (version = state.version, mode = state.mode) => {
   if (!files?.json) return [];
   const key = `${version}:${mode}`;
   if (!state.nteEntries.has(key)) {
-    const response = await fetch(files.json);
-    state.nteEntries.set(key, await response.json());
+    state.nteEntries.set(key, await fetchJson(files.json));
   }
   return state.nteEntries.get(key);
 };
@@ -969,8 +1154,7 @@ const loadWuwaEntries = async (version = state.version) => {
   if (!fileList) return [];
   const key = `${version}:files`;
   if (!state.wuwaEntries.has(key)) {
-    const response = await fetch(fileList);
-    state.wuwaEntries.set(key, await response.json());
+    state.wuwaEntries.set(key, await fetchJson(fileList));
   }
   return state.wuwaEntries.get(key);
 };
@@ -978,8 +1162,7 @@ const loadWuwaEntries = async (version = state.version) => {
 const loadHoyoChunk = async () => {
   const key = `${state.gameId}:${state.version}`;
   if (!state.chunkEntries.has(key)) {
-    const response = await fetch(`data/hoyo/chunk/${state.gameId}_${state.version}.json`);
-    const json = await response.json();
+    const json = await fetchJson(`data/hoyo/chunk/${state.gameId}_${state.version}.json`);
     state.chunkEntries.set(key, json.data);
   }
   return state.chunkEntries.get(key);
@@ -1007,7 +1190,7 @@ const parseJsonLines = (text) => text
 const loadHoyoFileEntries = async (version = state.version, channel = "pkg_version") => {
   const key = `${state.gameId}:${version}:${channel}`;
   if (!state.hoyoFileEntries.has(key)) {
-    const response = await fetch(hoyoFileListUrl(version, channel));
+    const response = await fetch(cacheBusted(hoyoFileListUrl(version, channel)));
     if (!response.ok) throw new Error(`HoyoFiles list not available: ${response.status}`);
     state.hoyoFileEntries.set(key, parseJsonLines(await response.text()));
   }
@@ -2342,8 +2525,7 @@ const ensureGameData = async (preferredVersion = null) => {
     return;
   }
   if (!state.hoyoVersions.has(state.gameId)) {
-    const response = await fetch(`data/hoyo/${state.gameId}_versions.json`);
-    state.hoyoVersions.set(state.gameId, await response.json());
+    state.hoyoVersions.set(state.gameId, await fetchJson(`data/hoyo/${state.gameId}_versions.json`));
   }
   const versions = hoyoSummaries()
     .filter((item) => item.package_items || item.update_items || item.has_chunk)
@@ -2428,6 +2610,7 @@ const render = () => {
   renderModes();
   renderVersionMenu();
   renderStats();
+  renderSyncStatus();
   renderAnalytics();
   renderLinks();
   renderPanelTitle();
@@ -2440,13 +2623,13 @@ const render = () => {
 updateActiveSideLink();
 
 Promise.all([
-  fetch("./data/catalog.json").then((response) => response.json()),
-  fetch("./data/hoyo/games.json").then((response) => response.json()),
-  fetch("./data/endfield/index.json").then((response) => response.json()),
-  fetch("./data/endfield/versions.json").then((response) => response.json()),
-  fetch("./data/wuwa/index.json").then((response) => response.json()),
-  fetch("./data/wuwa/versions.json").then((response) => response.json()),
-  fetch("./data/android/index.json").then((response) => response.json()),
+  fetchJson("./data/catalog.json"),
+  fetchJson("./data/hoyo/games.json"),
+  fetchJson("./data/endfield/index.json"),
+  fetchJson("./data/endfield/versions.json"),
+  fetchJson("./data/wuwa/index.json"),
+  fetchJson("./data/wuwa/versions.json"),
+  fetchJson("./data/android/index.json"),
 ]).then(async ([nteCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, wuwaVersions, androidIndex]) => {
   state.nteCatalog = nteCatalog;
   state.hoyoIndex = hoyoIndex;
