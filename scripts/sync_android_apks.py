@@ -45,6 +45,30 @@ KNOWN_APKS = [
         "headers": {"Referer": "https://klbq.qq.com/"},
     },
     {
+        "game_id": "aethergazer",
+        "version": "0.303.501",
+        "channel": "303",
+        "url": "https://packaging.ys4fun.com/package/channel/303/mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
+        "source": "official CDN URL recovered from official historical download page; versionName read from AndroidManifest.xml",
+        "headers": {"Referer": "https://skzy.ys4fun.com/"},
+    },
+    {
+        "game_id": "aethergazer",
+        "version": "0.294.0",
+        "channel": "294",
+        "url": "https://packaging.ys4fun.com/package/channel/294/mimir_ali_prod_294_1_ys4fun_20240710095639_M01000000_bi3NUfr4_sign.apk",
+        "source": "official CDN URL recovered from official historical download page; exact versionName unavailable from remote manifest",
+        "headers": {"Referer": "https://skzy.ys4fun.com/"},
+    },
+    {
+        "game_id": "aethergazer",
+        "version": "0.285.0",
+        "channel": "285",
+        "url": "https://download.ys4fun.com/package/channel/285/mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
+        "source": "official CDN URL recovered from official historical download page; exact versionName unavailable from remote manifest",
+        "headers": {"Referer": "https://skzy.ys4fun.com/"},
+    },
+    {
         "game_id": "bluearchive",
         "version": "2.1.2",
         "channel": "Official",
@@ -1129,6 +1153,30 @@ def discover_hypergryph_apks() -> list[dict]:
 
 
 def head_url(url: str, headers: dict | None = None) -> dict:
+    def range_fallback(meta: dict) -> dict:
+        if not url.lower().split("?", 1)[0].endswith(".apk"):
+            return meta
+        if meta.get("size") and "text/html" not in str(meta.get("content_type", "")).lower():
+            return meta
+        try:
+            probed_size = content_length(url, headers=extra_headers)
+        except Exception:
+            return meta
+        if probed_size > 1024 * 1024:
+            return {
+                **meta,
+                "status": 200,
+                "content_type": "application/vnd.android.package-archive",
+                "size": probed_size,
+                "error": "",
+            }
+        return {
+            **meta,
+            "status": 404 if probed_size else int(meta.get("status") or 0),
+            "size": 0,
+            "error": meta.get("error") or "APK object unavailable",
+        }
+
     extra_headers = headers
     request = urllib.request.Request(url, headers=request_headers(extra_headers), method="HEAD")
     try:
@@ -1137,7 +1185,7 @@ def head_url(url: str, headers: dict | None = None) -> dict:
             size = int(response_headers.get("Content-Length") or 0)
             content_type = response_headers.get("Content-Type", "")
             if size == 0 or "text/html" in content_type.lower():
-                return curl_head(url, headers=extra_headers, timeout=60)
+                return range_fallback(curl_head(url, headers=extra_headers, timeout=60))
             return {
                 "status": response.status,
                 "content_type": content_type,
@@ -1150,7 +1198,7 @@ def head_url(url: str, headers: dict | None = None) -> dict:
             }
     except Exception as exc:
         try:
-            return curl_head(url, headers=extra_headers, timeout=60)
+            return range_fallback(curl_head(url, headers=extra_headers, timeout=60))
         except Exception:
             return {
                 "status": 0,

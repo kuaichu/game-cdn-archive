@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T21:10:04.312778+00:00",
+  "generated_at": "2026-06-06T22:54:29.106555+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -89,6 +89,105 @@
           "urls": "data/android/lists/calabiyau_1.1.5.2_android.urls.txt",
           "aria2": "data/android/lists/calabiyau_1.1.5.2_android.aria2.txt",
           "json": "data/android/lists/calabiyau_1.1.5.2_android.json"
+        }
+      }
+    },
+    "aethergazer": {
+      "name": "深空之眼",
+      "subName": "Aether Gazer",
+      "versions": [
+        {
+          "game_id": "aethergazer",
+          "version": "0.305.2",
+          "channel": "gwdl",
+          "url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
+          "source": "official Aether Gazer Android download endpoint; resolves to a CDN URL",
+          "source_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
+          "archive_url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
+          "archive_note": "CDN URL captured during sync",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2023625968,
+          "last_modified": "Mon, 23 Mar 2026 04:02:37 GMT",
+          "etag": "339695581774CBDF745D857F8975AA34-193",
+          "md5": "",
+          "crc64": "8155058698090329544",
+          "error": "",
+          "filename": "ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
+          "captured_at": "2026-06-06T20:12:21.605318+00:00"
+        },
+        {
+          "game_id": "aethergazer",
+          "version": "0.303.501",
+          "channel": "303",
+          "url": "https://packaging.ys4fun.com/package/channel/303/mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
+          "source": "official CDN URL recovered from official historical download page; versionName read from AndroidManifest.xml",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1833034832,
+          "last_modified": "Thu, 11 Sep 2025 09:39:36 GMT",
+          "etag": "5D6C68FB99A03CCC30BA5E94D97A76B6-175",
+          "md5": "",
+          "crc64": "11029514340957415713",
+          "error": "",
+          "filename": "mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
+          "captured_at": "2026-06-06T22:54:29.106555+00:00"
+        },
+        {
+          "game_id": "aethergazer",
+          "version": "0.294.0",
+          "channel": "294",
+          "url": "https://packaging.ys4fun.com/package/channel/294/mimir_ali_prod_294_1_ys4fun_20240710095639_M01000000_bi3NUfr4_sign.apk",
+          "source": "official CDN URL recovered from official historical download page; exact versionName unavailable from remote manifest",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 456,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "mimir_ali_prod_294_1_ys4fun_20240710095639_M01000000_bi3NUfr4_sign.apk",
+          "captured_at": "2026-06-06T22:54:29.106555+00:00"
+        },
+        {
+          "game_id": "aethergazer",
+          "version": "0.285.0",
+          "channel": "285",
+          "url": "https://download.ys4fun.com/package/channel/285/mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
+          "source": "official CDN URL recovered from official historical download page; exact versionName unavailable from remote manifest",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 457,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
+          "captured_at": "2026-06-06T22:54:29.106555+00:00"
+        }
+      ],
+      "links": {
+        "0.305.2": {
+          "urls": "data/android/lists/aethergazer_0.305.2_android.urls.txt",
+          "aria2": "data/android/lists/aethergazer_0.305.2_android.aria2.txt",
+          "json": "data/android/lists/aethergazer_0.305.2_android.json"
+        },
+        "0.303.501": {
+          "urls": "data/android/lists/aethergazer_0.303.501_android.urls.txt",
+          "aria2": "data/android/lists/aethergazer_0.303.501_android.aria2.txt",
+          "json": "data/android/lists/aethergazer_0.303.501_android.json"
+        },
+        "0.294.0": {
+          "urls": "data/android/lists/aethergazer_0.294.0_android.urls.txt",
+          "aria2": "data/android/lists/aethergazer_0.294.0_android.aria2.txt",
+          "json": "data/android/lists/aethergazer_0.294.0_android.json"
+        },
+        "0.285.0": {
+          "urls": "data/android/lists/aethergazer_0.285.0_android.urls.txt",
+          "aria2": "data/android/lists/aethergazer_0.285.0_android.aria2.txt",
+          "json": "data/android/lists/aethergazer_0.285.0_android.json"
         }
       }
     },
@@ -1677,39 +1776,6 @@
           "urls": "data/android/lists/bh3_1.0.0_android.urls.txt",
           "aria2": "data/android/lists/bh3_1.0.0_android.aria2.txt",
           "json": "data/android/lists/bh3_1.0.0_android.json"
-        }
-      }
-    },
-    "aethergazer": {
-      "name": "深空之眼",
-      "subName": "Aether Gazer",
-      "versions": [
-        {
-          "game_id": "aethergazer",
-          "version": "0.305.2",
-          "channel": "gwdl",
-          "url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-          "source": "official Aether Gazer Android download endpoint; resolves to a CDN URL",
-          "source_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-          "archive_url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
-          "archive_note": "CDN URL captured during sync",
-          "status": 200,
-          "content_type": "application/vnd.android.package-archive",
-          "size": 2023625968,
-          "last_modified": "Mon, 23 Mar 2026 04:02:37 GMT",
-          "etag": "339695581774CBDF745D857F8975AA34-193",
-          "md5": "",
-          "crc64": "8155058698090329544",
-          "error": "",
-          "filename": "ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
-          "captured_at": "2026-06-06T20:12:21.605318+00:00"
-        }
-      ],
-      "links": {
-        "0.305.2": {
-          "urls": "data/android/lists/aethergazer_0.305.2_android.urls.txt",
-          "aria2": "data/android/lists/aethergazer_0.305.2_android.aria2.txt",
-          "json": "data/android/lists/aethergazer_0.305.2_android.json"
         }
       }
     },
