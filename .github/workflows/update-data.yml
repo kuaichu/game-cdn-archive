@@ -64,6 +64,19 @@ jobs:
           git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
+      - name: Check Cloudflare credentials
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        shell: bash
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::CLOUDFLARE_API_TOKEN is not configured, so updated archive data cannot be deployed."
+            exit 1
+          fi
+          if [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::error::CLOUDFLARE_ACCOUNT_ID is not configured, so updated archive data cannot be deployed."
+            exit 1
+          fi
+
       - name: Deploy to Cloudflare Pages
-        if: steps.commit.outputs.changed == 'true' && env.CLOUDFLARE_API_TOKEN != ''
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: npx --yes wrangler pages deploy docs --project-name game-cdn-archive --branch main
