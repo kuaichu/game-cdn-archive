@@ -887,6 +887,12 @@ const renderStats = () => {
 
 const renderSyncStatus = () => {
   const panel = $("#syncStatus");
+  if (state.mode === "android") {
+    panel.hidden = true;
+    panel.innerHTML = "";
+    return;
+  }
+  panel.hidden = false;
   const current = currentGameSyncInfo();
   panel.innerHTML = `
     <div class="sync-current">
@@ -1621,7 +1627,7 @@ const buildVersionAnalytics = async (versions, itemLoader) => {
 
 const renderAnalytics = () => {
   const panel = $("#analytics");
-  if (!isNte() && !isEndfield()) {
+  if (state.mode === "android" || (!isNte() && !isEndfield())) {
     panel.hidden = true;
     panel.innerHTML = "";
     return;
@@ -1660,7 +1666,7 @@ const renderAnalytics = () => {
   `;
   getCurrentAnalytics()
     .then((analytics) => {
-      if (!isNte() && !isEndfield()) return;
+      if (state.mode === "android" || (!isNte() && !isEndfield())) return;
       renderDiffRank(analytics);
     })
     .catch((error) => {
