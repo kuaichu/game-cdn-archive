@@ -457,6 +457,14 @@ DOWNLOAD_PORTER_APIS = [
     },
 ]
 
+NTE_APK_CONFIGS = [
+    {
+        "game_id": "nte",
+        "url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/yh-gameDownload.js",
+        "channel": "official",
+    },
+]
+
 
 def version_key(version: str) -> tuple[int, ...]:
     return tuple(int(part) for part in version.split("."))
@@ -526,6 +534,52 @@ def discover_download_porter_apks() -> list[dict]:
             "channel": channel_from_url(final_url),
             "url": final_url,
             "source": "official download porter latest endpoint",
+            "source_url": item["url"],
+        })
+    return entries
+
+
+def fetch_text(url: str, timeout: int = 30) -> str:
+    request = urllib.request.Request(url, headers={"User-Agent": "game-cdn-archive/1.0"})
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        return response.read().decode("utf-8", "ignore")
+
+
+def latest_nte_version(catalog_path: Path) -> str | None:
+    if not catalog_path.exists():
+        return None
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    versions = [
+        item["version"]
+        for item in catalog.get("versions", [])
+        if item.get("status") == 200 and item.get("full")
+    ]
+    if not versions:
+        return None
+    return sorted(versions, key=version_key, reverse=True)[0]
+
+
+def discover_nte_apks(catalog_path: Path) -> list[dict]:
+    version = latest_nte_version(catalog_path)
+    if not version:
+        return []
+    entries: list[dict] = []
+    for item in NTE_APK_CONFIGS:
+        try:
+            text = fetch_text(item["url"]).replace("\\/", "/")
+        except Exception as exc:
+            print(f"NTE APK config unavailable {item['url']}: {exc}")
+            continue
+        match = re.search(r'"android"\s*:\s*"([^"]+\.apk)"', text, re.IGNORECASE)
+        if not match:
+            print(f"NTE APK config has no android APK URL: {item['url']}")
+            continue
+        entries.append({
+            "game_id": item["game_id"],
+            "version": version,
+            "channel": item["channel"],
+            "url": match.group(1),
+            "source": "official website Android download config",
             "source_url": item["url"],
         })
     return entries
@@ -664,6 +718,8 @@ def main() -> None:
 
     seeds_by_url = {seed["url"]: seed for seed in KNOWN_APKS}
     for seed in discover_download_porter_apks():
+        seeds_by_url.setdefault(seed["url"], seed)
+    for seed in discover_nte_apks(output_dir.parent / "catalog.json"):
         seeds_by_url.setdefault(seed["url"], seed)
 
     for seed in seeds_by_url.values():
