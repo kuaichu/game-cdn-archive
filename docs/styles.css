@@ -586,21 +586,16 @@ h2 {
 }
 
 .sync-status {
-  display: grid;
-  grid-template-columns: minmax(360px, 0.95fr) minmax(0, 1.55fr);
-  gap: 12px;
   margin: 0 0 18px;
 }
 
-.sync-current,
-.sync-source {
+.sync-current {
   border: 1px solid rgba(52, 70, 91, 0.82);
   border-radius: 8px;
   background: rgba(20, 29, 43, 0.84);
 }
 
 .sync-current {
-  min-width: 0;
   padding: 15px;
 }
 
@@ -637,7 +632,7 @@ h2 {
 
 .sync-current-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
 }
 
@@ -650,15 +645,13 @@ h2 {
   padding: 11px 12px;
 }
 
-.sync-current-grid span,
-.sync-source span {
+.sync-current-grid span {
   display: block;
   color: var(--muted);
   font-size: 12px;
 }
 
-.sync-current-grid strong,
-.sync-source strong {
+.sync-current-grid strong {
   display: block;
   overflow: hidden;
   margin-top: 4px;
@@ -668,8 +661,7 @@ h2 {
   white-space: nowrap;
 }
 
-.sync-current-grid small,
-.sync-source small {
+.sync-current-grid small {
   display: block;
   overflow: hidden;
   margin-top: 3px;
@@ -677,46 +669,6 @@ h2 {
   font-size: 12px;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.sync-sources {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
-}
-
-.sync-source {
-  min-width: 0;
-  min-height: 132px;
-  padding: 12px;
-  border-top-width: 3px;
-}
-
-.sync-source p {
-  margin: 12px 0 0;
-  color: #c7d8ee;
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.sync-source.cyan {
-  border-top-color: var(--cyan);
-}
-
-.sync-source.blue {
-  border-top-color: var(--blue);
-}
-
-.sync-source.amber {
-  border-top-color: var(--amber);
-}
-
-.sync-source.green {
-  border-top-color: var(--green);
-}
-
-.sync-source.rose {
-  border-top-color: var(--rose);
 }
 
 .analytics {
@@ -1714,12 +1666,8 @@ h2 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .sync-status {
-    grid-template-columns: 1fr;
-  }
-
-  .sync-sources {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .sync-current-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .chunk-summary {
@@ -1809,8 +1757,7 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .sync-current-grid,
-  .sync-sources {
+  .sync-current-grid {
     grid-template-columns: 1fr;
   }
 

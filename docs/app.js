@@ -36,7 +36,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260606-sync-status";
+const ASSET_VERSION = "20260606-sync-current";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -402,56 +402,6 @@ const latestByVersion = (rows, predicate = () => true) => rows
   .filter((item) => item?.version && predicate(item))
   .slice()
   .sort((a, b) => compareVersions(b.version, a.version))[0] || null;
-
-const sourceStatusRows = () => {
-  const nteAvailable = nteVersions();
-  const nteUnavailable = (state.nteCatalog?.versions || []).filter((item) => item.status !== 200).length;
-  const hoyoLabels = (state.hoyoIndex?.games || []).map((game) => {
-    const latest = latestByVersion((game.versions || []).filter((item) => item.package_items || item.update_items || item.has_chunk));
-    return latest ? `${game.shortName || game.name} ${latest.version}` : null;
-  }).filter(Boolean);
-  const endfieldLatest = latestByVersion(endfieldSummaries());
-  const wuwaLatest = latestByVersion(wuwaSummaries());
-  const androidRows = Object.values(state.androidIndex?.games || {}).flatMap((game) => game.versions || []);
-  const androidLatest = latestByVersion(androidRows);
-  return [
-    {
-      name: "异环 PC",
-      updated: state.nteCatalog?.generated_at,
-      latest: latestByVersion(nteAvailable)?.version,
-      detail: `${nteAvailable.length} 个可用版本${nteUnavailable ? ` / ${nteUnavailable} 个不可用` : ""}`,
-      tone: "cyan",
-    },
-    {
-      name: "米家 PC",
-      updated: state.hoyoIndex?.generated_at,
-      latest: hoyoLabels.join(" / "),
-      detail: `${state.hoyoIndex?.games?.length || 0} 个游戏，HoyoFiles 同步`,
-      tone: "blue",
-    },
-    {
-      name: "终末地 PC",
-      updated: state.endfieldIndex?.generated_from_observation,
-      latest: endfieldLatest?.version,
-      detail: `${endfieldSummaries().length} 个版本，上游启动器 API 归档`,
-      tone: "amber",
-    },
-    {
-      name: "鸣潮 PC",
-      updated: state.wuwaIndex?.generated_at,
-      latest: wuwaLatest?.version,
-      detail: `${wuwaSummaries().length} 个版本，官方 resource index`,
-      tone: "green",
-    },
-    {
-      name: "Android APK",
-      updated: state.androidIndex?.generated_at,
-      latest: androidLatest?.version,
-      detail: `${androidRows.length} 条 APK 直链记录`,
-      tone: "rose",
-    },
-  ];
-};
 
 const currentGameSyncInfo = () => {
   const game = currentGame();
@@ -938,7 +888,6 @@ const renderStats = () => {
 const renderSyncStatus = () => {
   const panel = $("#syncStatus");
   const current = currentGameSyncInfo();
-  const rows = sourceStatusRows();
   panel.innerHTML = `
     <div class="sync-current">
       <div class="sync-current-head">
@@ -969,18 +918,6 @@ const renderSyncStatus = () => {
           <small>${current.android ? "已记录 APK 直链" : "当前游戏未记录 APK"}</small>
         </div>
       </div>
-    </div>
-    <div class="sync-sources" aria-label="数据源同步状态">
-      ${rows.map((row) => `
-        <article class="sync-source ${row.tone}">
-          <div>
-            <span>${escapeHtml(row.name)}</span>
-            <strong title="${escapeHtml(row.latest || "-")}">${escapeHtml(row.latest || "-")}</strong>
-          </div>
-          <p>${fmtDateTime(row.updated)}</p>
-          <small>${escapeHtml(row.detail)}</small>
-        </article>
-      `).join("")}
     </div>
   `;
 };
