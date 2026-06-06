@@ -236,7 +236,9 @@ CDN URLs only after a URL has been captured and verified. Scheduled updates
 also resolve supported official download porter endpoints, so a newly published
 APK can be added automatically when the latest endpoint starts pointing to it:
 HoYo games use Download Porter endpoints, Wuthering Waves uses Kuro's official
-JSON download index, and NTE reads the official website Android download config.
+JSON download index, NTE reads the official website Android download config,
+and Endfield follows the official launcher latest-APK endpoint while probing
+the temporary signed CDN target only for version and file metadata.
 
 ```bash
 python scripts/sync_android_apks.py

@@ -36,7 +36,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260606-sync-current";
+const ASSET_VERSION = "20260607-endfield-apk";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -2479,10 +2479,13 @@ const ensureGameData = async (preferredVersion = null) => {
 const renderNotice = () => {
   const notice = $("#notes");
   if (state.mode === "android") {
+    const androidNotice = isEndfield()
+      ? "页面保存已确认的官方 Android APK 下载入口；终末地使用官方 launcher latest 入口，Hycdn 临时签名目标只用于同步时识别版本、大小、Last-Modified 与 ETag。该列表从当前可确认版本开始滚动保存，不代表完整历史。"
+      : "页面保存已确认的官方 Android APK CDN URL；同步任务会解析支持的官方最新下载入口，发现新 APK 后记录大小、Last-Modified、ETag 与可用状态。该列表从当前可确认版本开始滚动保存，不代表完整历史。";
     notice.innerHTML = `
       <div class="notice-copy">
         <strong>Android APK 直链</strong>
-        <span>页面保存已确认的官方 Android APK CDN URL；同步任务会解析支持的官方最新下载入口，发现新 APK 后记录大小、Last-Modified、ETag 与可用状态。该列表从当前可确认版本开始滚动保存，不代表完整历史。</span>
+        <span>${androidNotice}</span>
       </div>
       <div class="source-links">
         <a class="source-link" href="data/android/index.json" target="_blank" rel="noreferrer">Android APK 索引</a>

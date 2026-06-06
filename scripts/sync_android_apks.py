@@ -473,6 +473,14 @@ WUWA_APK_INDEXES = [
     },
 ]
 
+ENDFIELD_APK_ENDPOINTS = [
+    {
+        "game_id": "endfield",
+        "url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
+        "channel": "official",
+    },
+]
+
 
 def version_key(version: str) -> tuple[int, ...]:
     return tuple(int(part) for part in version.split("."))
@@ -491,6 +499,7 @@ def version_from_url(url: str) -> str:
         r"yuanshen_(\d+(?:\.\d+){1,2})\.apk$",
         r"StarRail_(\d+(?:\.\d+){1,2})\.apk$",
         r"ZenlessZoneZero_(\d+(?:\.\d+){1,2})\.apk$",
+        r"endfield-[^/]*-(\d+(?:\.\d+){1,2})\.apk$",
         r"versions-v(\d+(?:[_\.]\d+){1,2})",
     ]
     for pattern in patterns:
@@ -515,7 +524,8 @@ def resolve_download_porter_url(url: str, timeout: int = 30, retries: int = 2) -
             response = urllib.request.urlopen(request, timeout=timeout)
             final_url = response.geturl()
             response.close()
-            return final_url if final_url.lower().endswith(".apk") else None
+            path = urllib.parse.urlparse(final_url).path.lower()
+            return final_url if path.endswith(".apk") else None
         except urllib.error.HTTPError as exc:
             print(f"download porter unavailable {url}: HTTP {exc.code}")
             return None
@@ -567,7 +577,20 @@ def fetch_range(url: str, start: int, end: int, timeout: int = 60) -> bytes:
 
 def content_length(url: str, timeout: int = 30) -> int:
     request = urllib.request.Request(url, headers={"User-Agent": "game-cdn-archive/1.0"}, method="HEAD")
-    with urllib.request.urlopen(request, timeout=timeout) as response:
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return int(response.headers.get("Content-Length") or 0)
+    except urllib.error.HTTPError as exc:
+        if exc.code != 405:
+            raise
+    range_request = urllib.request.Request(
+        url,
+        headers={"User-Agent": "game-cdn-archive/1.0", "Range": "bytes=0-0"},
+    )
+    with urllib.request.urlopen(range_request, timeout=timeout) as response:
+        content_range = response.headers.get("Content-Range") or ""
+        if "/" in content_range:
+            return int(content_range.rsplit("/", 1)[1])
         return int(response.headers.get("Content-Length") or 0)
 
 
@@ -759,6 +782,37 @@ def discover_wuwa_apks() -> list[dict]:
     return entries
 
 
+def discover_endfield_apks() -> list[dict]:
+    entries: list[dict] = []
+    for item in ENDFIELD_APK_ENDPOINTS:
+        final_url = resolve_download_porter_url(item["url"])
+        if not final_url:
+            continue
+        try:
+            version = version_from_url(final_url)
+        except ValueError:
+            try:
+                version = remote_apk_manifest_version_name(final_url)
+            except Exception as exc:
+                print(f"Endfield APK manifest unavailable {final_url}: {exc}")
+                continue
+        if not version:
+            print(f"Endfield APK has no version: {final_url}")
+            continue
+        entries.append({
+            "game_id": item["game_id"],
+            "version": normalize_version(version),
+            "channel": item["channel"],
+            "url": item["url"],
+            "source": "official Endfield latest APK endpoint; resolves to a temporary signed CDN URL",
+            "source_url": item["url"],
+            "metadata_url": final_url,
+            "filename_url": final_url,
+            "force_refresh": True,
+        })
+    return entries
+
+
 def head_url(url: str) -> dict:
     request = urllib.request.Request(url, headers={"User-Agent": "game-cdn-archive/1.0"}, method="HEAD")
     try:
@@ -838,6 +892,20 @@ def has_same_game_version(candidate: dict, entries: list[dict]) -> bool:
     )
 
 
+def same_source_previous(candidate: dict, previous_entries: list[dict]) -> dict | None:
+    candidate_hashes = apk_hashes(candidate)
+    if not candidate_hashes:
+        return None
+    for previous in previous_entries:
+        if previous.get("game_id") != candidate.get("game_id"):
+            continue
+        if previous.get("version") != candidate.get("version"):
+            continue
+        if apk_hashes(previous) & candidate_hashes:
+            return previous
+    return None
+
+
 def write_lists(output_dir: Path, game_id: str, version: str, entries: list[dict]) -> dict[str, str]:
     lists_dir = output_dir / "lists"
     lists_dir.mkdir(parents=True, exist_ok=True)
@@ -887,6 +955,11 @@ def main() -> None:
         for entry in game.get("versions", [])
         if entry.get("url")
     }
+    previous_by_source_url: dict[str, list[dict]] = {}
+    for game in previous_index.get("games", {}).values():
+        for entry in game.get("versions", []):
+            if entry.get("source_url"):
+                previous_by_source_url.setdefault(entry["source_url"], []).append(entry)
     generated_at = datetime.now(timezone.utc).isoformat()
     entries: list[dict] = []
 
@@ -897,25 +970,46 @@ def main() -> None:
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_wuwa_apks():
         seeds_by_url.setdefault(seed["url"], seed)
+    for seed in discover_endfield_apks():
+        seeds_by_url.setdefault(seed["url"], seed)
 
     for seed in seeds_by_url.values():
-        previous = previous_by_url.get(seed["url"])
+        public_seed = {
+            key: value
+            for key, value in seed.items()
+            if key not in {"metadata_url", "filename_url", "force_refresh"}
+        }
+        previous = None if seed.get("force_refresh") else previous_by_url.get(seed["url"])
         if previous:
-            entry = {**previous, **seed}
+            entry = {**previous, **public_seed}
             filename = entry.get("filename") or filename_from_url(seed["url"])
             entry["filename"] = filename
             entry["md5"] = entry.get("md5") or md5_from_filename(filename)
             entry["captured_at"] = previous.get("captured_at", generated_at)
         else:
-            meta = head_url(seed["url"])
-            filename = filename_from_url(seed["url"])
+            metadata_url = seed.get("metadata_url", seed["url"])
+            filename_url = seed.get("filename_url", seed["url"])
+            meta = head_url(metadata_url)
+            filename = filename_from_url(filename_url)
             entry = {
-                **seed,
+                **public_seed,
                 **meta,
                 "md5": meta["md5"] or md5_from_filename(filename),
                 "filename": filename,
                 "captured_at": generated_at,
             }
+        if entry.get("source_url") and not previous and not seed.get("force_refresh"):
+            same_source = same_source_previous(entry, previous_by_source_url.get(entry["source_url"], []))
+            if same_source:
+                entry = {
+                    **same_source,
+                    "source": seed.get("source", same_source.get("source", "")),
+                    "source_url": seed.get("source_url", same_source.get("source_url", "")),
+                }
+        if entry.get("source_url") and seed.get("force_refresh"):
+            same_source = same_source_previous(entry, previous_by_source_url.get(entry["source_url"], []))
+            if same_source:
+                entry["captured_at"] = same_source.get("captured_at", entry["captured_at"])
         if entry.get("source_url"):
             if has_same_apk_hash(entry, entries):
                 print(f"skip duplicate APK hash: {entry['game_id']} {entry['version']} {entry['url']}")
