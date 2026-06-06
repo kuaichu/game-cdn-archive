@@ -36,7 +36,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260607-endfield-apk";
+const ASSET_VERSION = "20260607-endfield-apk-archive";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -1214,6 +1214,7 @@ const androidItem = (entry, index = 0, total = 0) => ({
   size: Number(entry.size || 0),
   hash: entry.md5 || entry.etag || "",
   url: entry.url,
+  extraLinks: entry.archive_url ? [{ url: entry.archive_url, label: "签名留档" }] : [],
   count: total ? `${index + 1}/${total}` : "",
 });
 
@@ -2480,7 +2481,7 @@ const renderNotice = () => {
   const notice = $("#notes");
   if (state.mode === "android") {
     const androidNotice = isEndfield()
-      ? "页面保存已确认的官方 Android APK 下载入口；终末地使用官方 launcher latest 入口，Hycdn 临时签名目标只用于同步时识别版本、大小、Last-Modified 与 ETag。该列表从当前可确认版本开始滚动保存，不代表完整历史。"
+      ? "页面保存已确认的官方 Android APK 下载入口；终末地使用官方 launcher latest 入口，同时留档同步时解析到的 Hycdn 临时签名目标。签名目标可能过期，但仍保留历史记录价值。该列表从当前可确认版本开始滚动保存，不代表完整历史。"
       : "页面保存已确认的官方 Android APK CDN URL；同步任务会解析支持的官方最新下载入口，发现新 APK 后记录大小、Last-Modified、ETag 与可用状态。该列表从当前可确认版本开始滚动保存，不代表完整历史。";
     notice.innerHTML = `
       <div class="notice-copy">

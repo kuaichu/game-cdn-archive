@@ -238,7 +238,9 @@ APK can be added automatically when the latest endpoint starts pointing to it:
 HoYo games use Download Porter endpoints, Wuthering Waves uses Kuro's official
 JSON download index, NTE reads the official website Android download config,
 and Endfield follows the official launcher latest-APK endpoint while probing
-the temporary signed CDN target only for version and file metadata.
+the temporary signed CDN target for version and file metadata. Endfield also
+keeps the first signed CDN URL seen for the same package as an archival record,
+even though that URL may expire later.
 
 ```bash
 python scripts/sync_android_apks.py

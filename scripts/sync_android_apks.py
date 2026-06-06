@@ -806,6 +806,8 @@ def discover_endfield_apks() -> list[dict]:
             "url": item["url"],
             "source": "official Endfield latest APK endpoint; resolves to a temporary signed CDN URL",
             "source_url": item["url"],
+            "archive_url": final_url,
+            "archive_note": "temporary signed CDN URL captured during sync",
             "metadata_url": final_url,
             "filename_url": final_url,
             "force_refresh": True,
@@ -1010,6 +1012,8 @@ def main() -> None:
             same_source = same_source_previous(entry, previous_by_source_url.get(entry["source_url"], []))
             if same_source:
                 entry["captured_at"] = same_source.get("captured_at", entry["captured_at"])
+                entry["archive_url"] = same_source.get("archive_url") or entry.get("archive_url", "")
+                entry["archive_note"] = same_source.get("archive_note") or entry.get("archive_note", "")
         if entry.get("source_url"):
             if has_same_apk_hash(entry, entries):
                 print(f"skip duplicate APK hash: {entry['game_id']} {entry['version']} {entry['url']}")
