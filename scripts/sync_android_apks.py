@@ -322,6 +322,27 @@ KNOWN_APKS = [
     },
     {
         "game_id": "hk4e",
+        "version": "3.3.0",
+        "channel": "mihoyo",
+        "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20221125145552_5ZtiRoenlT70kKdw/mihoyo/yuanshen_3.3.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hk4e",
+        "version": "3.1.0",
+        "channel": "mihoyo",
+        "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20220919213200_hkvknSN1UX4opUrq/mihoyo/yuanshen_3.1.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hk4e",
+        "version": "3.0.0",
+        "channel": "mihoyo",
+        "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20220815204259_sVvNKoBYqWK1LRwd/mihoyo/yuanshen_3.0.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hk4e",
         "version": "2.6.0",
         "channel": "mihoyo",
         "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20220321183336_jY1eJDXeR1hLiFDk/mihoyo/yuanshen_2.6.0.apk",
