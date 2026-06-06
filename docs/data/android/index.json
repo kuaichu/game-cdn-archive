@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T01:29:00.526318+00:00",
+  "generated_at": "2026-06-06T07:29:12.631982+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -21,7 +21,7 @@
           "crc64": "",
           "error": "",
           "filename": "KwmNRJZa.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         }
       ],
       "links": {
@@ -51,7 +51,7 @@
           "crc64": "12982693900871198752",
           "error": "",
           "filename": "鸣潮_3.3.2_168377155_33_官渠_32e97887831ba8ca620f93b4aa2ad0ff_shelled.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "wuwa",
@@ -68,7 +68,7 @@
           "crc64": "10516332995218268721",
           "error": "",
           "filename": "鸣潮_3.0.0_156399220_33_官渠_e76c2d8ea383e31af9a8ac20ae3f02e1_shelled.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "wuwa",
@@ -85,7 +85,7 @@
           "crc64": "10572048176872661662",
           "error": "",
           "filename": "鸣潮_2.7.0_149269354_33_官渠_a8cc769870e6ffbad35575179e98b30d_shelled.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         }
       ],
       "links": {
@@ -125,7 +125,7 @@
           "crc64": "",
           "error": "",
           "filename": "ZenlessZoneZero_2.8.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "nap",
@@ -142,7 +142,7 @@
           "crc64": "",
           "error": "",
           "filename": "ZenlessZoneZero_2.4.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "nap",
@@ -159,7 +159,7 @@
           "crc64": "",
           "error": "",
           "filename": "ZenlessZoneZero_2.3.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         }
       ],
       "links": {
@@ -193,13 +193,13 @@
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
           "size": 454916540,
-          "last_modified": "Mon, 11 May 2026 07:09:06 GMT",
-          "etag": "1b9ccdeea7d1625f9b1a2bebc23aa942",
+          "last_modified": "Mon, 11 May 2026 03:29:36 GMT",
+          "etag": "A280E524AE26936264B3617B79C2CABA-10",
           "md5": "",
-          "crc64": "10639064434591057764",
+          "crc64": "",
           "error": "",
           "filename": "yuanshen_6.6.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -207,16 +207,16 @@
           "channel": "mihoyo",
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260209151532_ootIRmm1n6FxPqzy/mihoyo/yuanshen_6.4.0.apk",
           "source": "official CDN URL captured manually",
-          "status": 0,
-          "content_type": "",
-          "size": 0,
-          "last_modified": "",
-          "etag": "",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 435050838,
+          "last_modified": "Mon, 09 Feb 2026 11:15:01 GMT",
+          "etag": "8E451E3643474FF6B72C66479DEFE7D8-10",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+          "error": "",
           "filename": "yuanshen_6.4.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -227,13 +227,13 @@
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
           "size": 425923926,
-          "last_modified": "Mon, 24 Nov 2025 11:18:20 GMT",
-          "etag": "E86F874711BDCD16030C24683512CA58-10",
+          "last_modified": "Thu, 27 Nov 2025 02:50:26 GMT",
+          "etag": "d4def910c1464f3809ecb3ecd680f872",
           "md5": "",
-          "crc64": "",
+          "crc64": "7411424771478668058",
           "error": "",
           "filename": "yuanshen_6.2.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -244,13 +244,13 @@
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
           "size": 395432136,
-          "last_modified": "Mon, 01 Sep 2025 02:47:24 GMT",
-          "etag": "D628E3F01F9E30C01D6C38BCBFEA2D84-10",
+          "last_modified": "Tue, 02 Sep 2025 08:07:48 GMT",
+          "etag": "440ba0577364d2d8dfa3da4801764e7a",
           "md5": "",
-          "crc64": "",
+          "crc64": "1119117697926776587",
           "error": "",
           "filename": "yuanshen_6.0.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -258,16 +258,16 @@
           "channel": "mihoyo",
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20250718182628_nnOpvKMewCwYMAFU/mihoyo/yuanshen_5.8.0.apk",
           "source": "official CDN URL captured manually",
-          "status": 0,
-          "content_type": "",
-          "size": 0,
-          "last_modified": "",
-          "etag": "",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 382668824,
+          "last_modified": "Mon, 21 Jul 2025 08:46:23 GMT",
+          "etag": "EB623711A78DAB07240070692AD1401E-10",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+          "error": "",
           "filename": "yuanshen_5.8.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -278,13 +278,13 @@
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
           "size": 377254140,
-          "last_modified": "Sun, 27 Apr 2025 07:59:58 GMT",
-          "etag": "160A0CC6E3F719778059A8463BF1534E-10",
+          "last_modified": "Thu, 01 May 2025 13:05:56 GMT",
+          "etag": "eeb4f75176157dd908c2e6a845cb80de",
           "md5": "",
-          "crc64": "",
+          "crc64": "11571207368077690098",
           "error": "",
           "filename": "yuanshen_5.6.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -301,7 +301,7 @@
           "crc64": "13006711456810827503",
           "error": "",
           "filename": "yuanshen_5.5.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -318,7 +318,7 @@
           "crc64": "4297153437914766955",
           "error": "",
           "filename": "yuanshen_5.4.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -335,7 +335,7 @@
           "crc64": "16798790677746828095",
           "error": "",
           "filename": "yuanshen_5.2.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -352,7 +352,7 @@
           "crc64": "3867913854605646271",
           "error": "",
           "filename": "yuanshen_5.0.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -369,7 +369,7 @@
           "crc64": "417864239073809190",
           "error": "",
           "filename": "yuanshen_4.8.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -386,7 +386,7 @@
           "crc64": "6432340214748596656",
           "error": "",
           "filename": "yuanshen_4.7.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -403,7 +403,7 @@
           "crc64": "16028276802809668619",
           "error": "",
           "filename": "yuanshen_4.6.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -420,7 +420,7 @@
           "crc64": "12138174734436585541",
           "error": "",
           "filename": "yuanshen_4.5.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -437,7 +437,7 @@
           "crc64": "6499416929443252460",
           "error": "",
           "filename": "yuanshen_4.2.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -454,7 +454,7 @@
           "crc64": "17562084075024077945",
           "error": "",
           "filename": "yuanshen_3.7.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -471,7 +471,7 @@
           "crc64": "13891605291687208491",
           "error": "",
           "filename": "yuanshen_3.6.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -488,7 +488,7 @@
           "crc64": "129994296013692725",
           "error": "",
           "filename": "yuanshen_3.5.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -505,7 +505,7 @@
           "crc64": "",
           "error": "HTTP Error 404: Not Found",
           "filename": "yuanshen_3.4.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -522,7 +522,7 @@
           "crc64": "",
           "error": "HTTP Error 404: Not Found",
           "filename": "yuanshen_3.2.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -539,7 +539,7 @@
           "crc64": "870434675034939186",
           "error": "",
           "filename": "yuanshen_2.6.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -556,7 +556,7 @@
           "crc64": "10117264663613266109",
           "error": "",
           "filename": "yuanshen_2.1.0_mihoyo.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -573,7 +573,7 @@
           "crc64": "14097084836520059433",
           "error": "",
           "filename": "yuanshen_1.6.0_mihoyo.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -590,7 +590,7 @@
           "crc64": "731889136328059443",
           "error": "",
           "filename": "yuanshen_1.5.1_mihoyo.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hk4e",
@@ -607,7 +607,7 @@
           "crc64": "4561955704616774260",
           "error": "",
           "filename": "yuanshen_1.2.0_mihoyo.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         }
       ],
       "links": {
@@ -757,7 +757,7 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_4.3.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hkrpg",
@@ -774,7 +774,7 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_3.8.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hkrpg",
@@ -791,7 +791,7 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_3.7.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hkrpg",
@@ -808,7 +808,7 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_3.5.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hkrpg",
@@ -825,7 +825,7 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_3.4.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hkrpg",
@@ -842,7 +842,7 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.6.0.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hkrpg",
@@ -859,7 +859,7 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.3.0_mihoyo_8.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "hkrpg",
@@ -876,7 +876,7 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.2.0_mihoyo_8.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         }
       ],
       "links": {
@@ -941,7 +941,7 @@
           "crc64": "",
           "error": "",
           "filename": "20260514-004049-gf_android_ota-versions-v8_9-Lives_Flourish_gw.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -958,7 +958,7 @@
           "crc64": "",
           "error": "HTTP Error 403: Forbidden",
           "filename": "20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -975,7 +975,7 @@
           "crc64": "",
           "error": "<urlopen error timed out>",
           "filename": "20230413-122623-gf_android_ota-versions-v6_6-Woven_from_Last_Snow_gw.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -992,7 +992,7 @@
           "crc64": "",
           "error": "<urlopen error timed out>",
           "filename": "20230301-220508-gf_android_ota-versions-v6_5-Hot_Sands_Escapade_gw.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1009,7 +1009,7 @@
           "crc64": "",
           "error": "",
           "filename": "20230110-030853-gf_android_ota-versions-v6_4-From_Finality_the_Origin_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1026,7 +1026,7 @@
           "crc64": "",
           "error": "HTTP Error 404: Not Found",
           "filename": "20221103-165551-gf_android_ota-versions-v6_2-The_Chrono_and_the_Hare_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1043,7 +1043,7 @@
           "crc64": "",
           "error": "HTTP Error 404: Not Found",
           "filename": "20220922-171040-gf_android_ota-versions-v6_1-Moonshade_Epic_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1060,7 +1060,7 @@
           "crc64": "",
           "error": "HTTP Error 404: Not Found",
           "filename": "20220302-235837-gf_android_ota-versions-v5_6-Elysian_Reverie_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1077,7 +1077,7 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20200921-205726-gf_android_ota-versions-v4_3-Rhythms_of_Neon_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1094,7 +1094,7 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20190823-210658-gf_android_ota-R3_4-The_Twilight_Ruling_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1111,7 +1111,7 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20171123-android_versions_v1_9_resurrection_of_the_sacramental_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1128,7 +1128,7 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20171012-android_versions_v1_8_Scarlet_Mitama_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1145,7 +1145,7 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20170824-android_versions_v1_7_The_Awakening_of_SliverWolf_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1162,7 +1162,7 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20170630-android_versions-v1_6_TogetherinSummer_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1179,7 +1179,7 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20170525-android_versions-v1_5_Theresa_Fight_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1196,7 +1196,7 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20170407-184918-gf_android_ota-versions-v1_4-4R-6d1fb22-ASB-il2cpp_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1213,7 +1213,7 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20170228-202036-gf_android_ota-versions-v1_3_bugfix-updateota-2de1573-ASB-il2cpp_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1230,7 +1230,7 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20161108-112940-gf_android-versions-v1_1-4R-705fcfd-ASB-il2cpp_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         },
         {
           "game_id": "bh3",
@@ -1247,7 +1247,7 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "0_gf_android-versions-v1_0_2nd-4R-b2b8e16-ASB-mono_guofu.apk",
-          "captured_at": "2026-06-06T01:29:00.526318+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00"
         }
       ],
       "links": {
