@@ -465,6 +465,14 @@ NTE_APK_CONFIGS = [
     },
 ]
 
+WUWA_APK_INDEXES = [
+    {
+        "game_id": "wuwa",
+        "url": "https://download.kurogames.com/mc_WnGtDn85y8lJB4mTmYHYuNjIl9n6YGVm/official/cn/zh-Hans/android_app.json",
+        "channel": "官渠",
+    },
+]
+
 
 def version_key(version: str) -> tuple[int, ...]:
     return tuple(int(part) for part in version.split("."))
@@ -727,6 +735,30 @@ def discover_nte_apks() -> list[dict]:
     return entries
 
 
+def discover_wuwa_apks() -> list[dict]:
+    entries: list[dict] = []
+    for item in WUWA_APK_INDEXES:
+        try:
+            index = json.loads(fetch_text(item["url"]))
+        except Exception as exc:
+            print(f"Wuthering Waves APK index unavailable {item['url']}: {exc}")
+            continue
+        version = index.get("version")
+        url = index.get("primary") or index.get("secondary") or index.get("third")
+        if not version or not url:
+            print(f"Wuthering Waves APK index missing version or URL: {item['url']}")
+            continue
+        entries.append({
+            "game_id": item["game_id"],
+            "version": normalize_version(version),
+            "channel": item["channel"],
+            "url": url,
+            "source": "official Wuthering Waves Android download index",
+            "source_url": item["url"],
+        })
+    return entries
+
+
 def head_url(url: str) -> dict:
     request = urllib.request.Request(url, headers={"User-Agent": "game-cdn-archive/1.0"}, method="HEAD")
     try:
@@ -862,6 +894,8 @@ def main() -> None:
     for seed in discover_download_porter_apks():
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_nte_apks():
+        seeds_by_url.setdefault(seed["url"], seed)
+    for seed in discover_wuwa_apks():
         seeds_by_url.setdefault(seed["url"], seed)
 
     for seed in seeds_by_url.values():
