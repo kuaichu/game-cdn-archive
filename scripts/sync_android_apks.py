@@ -572,6 +572,40 @@ def md5_from_filename(filename: str) -> str:
     return md5_candidates[-1] if md5_candidates else ""
 
 
+def apk_hashes(entry: dict) -> set[str]:
+    hashes: set[str] = set()
+    for value in (entry.get("md5"), md5_from_filename(entry.get("filename") or "")):
+        if value and re.fullmatch(r"[0-9a-fA-F]{32}", value):
+            hashes.add(value.lower())
+    etag = (entry.get("etag") or "").strip().strip('"').lower()
+    if etag:
+        hashes.add(etag)
+        match = re.fullmatch(r"([0-9a-f]{32})(?:-\d+)?", etag)
+        if match:
+            hashes.add(match.group(1))
+    return hashes
+
+
+def has_same_apk_hash(candidate: dict, entries: list[dict]) -> bool:
+    candidate_hashes = apk_hashes(candidate)
+    if not candidate_hashes:
+        return False
+    for entry in entries:
+        if entry.get("game_id") != candidate.get("game_id"):
+            continue
+        if apk_hashes(entry) & candidate_hashes:
+            return True
+    return False
+
+
+def has_same_game_version(candidate: dict, entries: list[dict]) -> bool:
+    return any(
+        entry.get("game_id") == candidate.get("game_id")
+        and entry.get("version") == candidate.get("version")
+        for entry in entries
+    )
+
+
 def write_lists(output_dir: Path, game_id: str, version: str, entries: list[dict]) -> dict[str, str]:
     lists_dir = output_dir / "lists"
     lists_dir.mkdir(parents=True, exist_ok=True)
@@ -646,6 +680,13 @@ def main() -> None:
                 "filename": filename,
                 "captured_at": generated_at,
             }
+        if entry.get("source_url"):
+            if has_same_apk_hash(entry, entries):
+                print(f"skip duplicate APK hash: {entry['game_id']} {entry['version']} {entry['url']}")
+                continue
+            if has_same_game_version(entry, entries):
+                print(f"skip duplicate APK version: {entry['game_id']} {entry['version']} {entry['url']}")
+                continue
         entries.append(entry)
 
     games: dict[str, dict] = {}
