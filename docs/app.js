@@ -36,7 +36,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260607-snowbreak-apk-archive";
+const ASSET_VERSION = "20260607-reverse1999-apk-archive";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;

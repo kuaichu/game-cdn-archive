@@ -30,18 +30,10 @@ KNOWN_APKS = [
     },
     {
         "game_id": "reverse1999",
-        "version": "3.7.0",
-        "channel": "home",
-        "url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
-        "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
-        "headers": {"Referer": "https://re.bluepoch.com/"},
-    },
-    {
-        "game_id": "reverse1999",
-        "version": "3.7.0",
+        "version": "1.0.3",
         "channel": "prepage",
-        "url": "https://d.bluepoch.com/prepage/Reverse1999_Bluepoch_1006.apk",
-        "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+        "url": "https://d.bluepoch.com/prepage/Reverse1999_app1.0.3_res100.0.101_Bluepoch_1006.apk",
+        "source": "official CDN URL recovered from official historical download page",
         "headers": {"Referer": "https://re.bluepoch.com/"},
     },
     {
