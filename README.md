@@ -232,17 +232,19 @@ listing published by HK KURO GAMES LIMITED.
 ## Android APK Archive
 
 The Android APK view is intentionally incremental. It preserves official APK
-CDN URLs only after a URL has been captured and verified, then refreshes HEAD
-metadata during scheduled updates:
+CDN URLs only after a URL has been captured and verified. Scheduled updates
+also resolve supported official download porter endpoints, so a newly published
+APK can be added automatically when the latest endpoint starts pointing to it:
 
 ```bash
 python scripts/sync_android_apks.py
 ```
 
 The generated index records URL, filename, channel, HTTP status, size,
-Last-Modified, ETag, and MD5 when the CDN exposes it. This is not a complete
-historical APK mirror; it is a rolling archive starting from the official APK
-links that can be confirmed now.
+Last-Modified, ETag, and MD5 when the CDN exposes it. Existing entries keep
+their previously captured metadata to avoid noisy churn from CDN header changes.
+This is not a complete historical APK mirror; it is a rolling archive starting
+from the official APK links that can be confirmed now.
 
 ## Automated Updates
 
@@ -257,7 +259,8 @@ It can run manually from the Actions tab, and also runs once per day. The job:
 3. Clones `daydreamer-json/ak-endfield-api-archive` and regenerates the
    compact Endfield indexes.
 4. Refreshes Wuthering Waves launcher/resource-index data.
-5. Refreshes metadata for known official Android APK URLs.
+5. Resolves supported Android latest-download endpoints and indexes new APK
+   URLs.
 6. Commits and pushes only when generated data actually changes.
 7. Deploys to Cloudflare Pages when a repository secret named
    `CLOUDFLARE_API_TOKEN` is available.

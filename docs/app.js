@@ -2476,7 +2476,7 @@ const renderNotice = () => {
     notice.innerHTML = `
       <div class="notice-copy">
         <strong>Android APK 直链</strong>
-        <span>页面保存已确认的官方 Android APK CDN URL，并通过 HEAD 记录大小、Last-Modified、ETag 与可用状态。该列表从当前可确认版本开始滚动保存，不代表完整历史。</span>
+        <span>页面保存已确认的官方 Android APK CDN URL；同步任务会解析支持的官方最新下载入口，发现新 APK 后记录大小、Last-Modified、ETag 与可用状态。该列表从当前可确认版本开始滚动保存，不代表完整历史。</span>
       </div>
       <div class="source-links">
         <a class="source-link" href="data/android/index.json" target="_blank" rel="noreferrer">Android APK 索引</a>

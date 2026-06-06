@@ -4,7 +4,9 @@
 from __future__ import annotations
 
 import json
+import re
 import urllib.parse
+import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -436,9 +438,93 @@ GAME_NAMES = {
     "bh3": {"name": "崩坏3", "subName": "Honkai Impact 3rd"},
 }
 
+DOWNLOAD_PORTER_APIS = [
+    {
+        "game_id": "hk4e",
+        "url": "https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/android_default",
+    },
+    {
+        "game_id": "hkrpg",
+        "url": "https://api-takumi.mihoyo.com/event/download_porter/link/hkrpg_cn/official/android_default",
+    },
+    {
+        "game_id": "nap",
+        "url": "https://api-takumi.mihoyo.com/event/download_porter/link/nap_cn/official/android_default",
+    },
+]
+
 
 def version_key(version: str) -> tuple[int, ...]:
     return tuple(int(part) for part in version.split("."))
+
+
+def normalize_version(version: str) -> str:
+    parts = [int(part) for part in version.replace("_", ".").split(".") if part != ""]
+    while len(parts) < 3:
+        parts.append(0)
+    return ".".join(str(part) for part in parts[:3])
+
+
+def version_from_url(url: str) -> str:
+    filename = filename_from_url(url)
+    patterns = [
+        r"yuanshen_(\d+(?:\.\d+){1,2})\.apk$",
+        r"StarRail_(\d+(?:\.\d+){1,2})\.apk$",
+        r"ZenlessZoneZero_(\d+(?:\.\d+){1,2})\.apk$",
+        r"versions-v(\d+(?:[_\.]\d+){1,2})",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, filename, re.IGNORECASE)
+        if match:
+            return normalize_version(match.group(1))
+    raise ValueError(f"could not parse APK version from {filename}")
+
+
+def channel_from_url(url: str) -> str:
+    path = urllib.parse.urlparse(url).path.strip("/")
+    parts = path.split("/")
+    if len(parts) >= 2:
+        return urllib.parse.unquote(parts[-2])
+    return "official"
+
+
+def resolve_download_porter_url(url: str, timeout: int = 30, retries: int = 2) -> str | None:
+    request = urllib.request.Request(url, headers={"User-Agent": "game-cdn-archive/1.0"})
+    for attempt in range(retries + 1):
+        try:
+            response = urllib.request.urlopen(request, timeout=timeout)
+            final_url = response.geturl()
+            response.close()
+            return final_url if final_url.lower().endswith(".apk") else None
+        except urllib.error.HTTPError as exc:
+            print(f"download porter unavailable {url}: HTTP {exc.code}")
+            return None
+        except Exception as exc:
+            if attempt >= retries:
+                print(f"download porter unavailable {url}: {exc}")
+    return None
+
+
+def discover_download_porter_apks() -> list[dict]:
+    entries: list[dict] = []
+    for item in DOWNLOAD_PORTER_APIS:
+        final_url = resolve_download_porter_url(item["url"])
+        if not final_url:
+            continue
+        try:
+            version = version_from_url(final_url)
+        except ValueError as exc:
+            print(exc)
+            continue
+        entries.append({
+            "game_id": item["game_id"],
+            "version": version,
+            "channel": channel_from_url(final_url),
+            "url": final_url,
+            "source": "official download porter latest endpoint",
+            "source_url": item["url"],
+        })
+    return entries
 
 
 def head_url(url: str) -> dict:
@@ -474,6 +560,18 @@ def filename_from_url(url: str) -> str:
     return urllib.parse.unquote(Path(path).name)
 
 
+def md5_from_filename(filename: str) -> str:
+    if not filename.endswith(".apk"):
+        return ""
+    parts = filename.split("_")
+    md5_candidates = [
+        part
+        for part in parts
+        if len(part) == 32 and all(ch in "0123456789abcdef" for ch in part.lower())
+    ]
+    return md5_candidates[-1] if md5_candidates else ""
+
+
 def write_lists(output_dir: Path, game_id: str, version: str, entries: list[dict]) -> dict[str, str]:
     lists_dir = output_dir / "lists"
     lists_dir.mkdir(parents=True, exist_ok=True)
@@ -501,27 +599,54 @@ def write_lists(output_dir: Path, game_id: str, version: str, entries: list[dict
     }
 
 
+def stable_index(index: dict) -> dict:
+    stable = json.loads(json.dumps(index, ensure_ascii=False))
+    stable.pop("generated_at", None)
+    for game in stable.get("games", {}).values():
+        for entry in game.get("versions", []):
+            entry.pop("captured_at", None)
+    return stable
+
+
 def main() -> None:
     output_dir = Path(__file__).resolve().parents[1] / "docs" / "data" / "android"
     output_dir.mkdir(parents=True, exist_ok=True)
+    index_path = output_dir / "index.json"
+    previous_index = {}
+    if index_path.exists():
+        previous_index = json.loads(index_path.read_text(encoding="utf-8"))
+    previous_by_url = {
+        entry["url"]: entry
+        for game in previous_index.get("games", {}).values()
+        for entry in game.get("versions", [])
+        if entry.get("url")
+    }
     generated_at = datetime.now(timezone.utc).isoformat()
     entries: list[dict] = []
 
-    for seed in KNOWN_APKS:
-        meta = head_url(seed["url"])
-        filename = filename_from_url(seed["url"])
-        md5 = meta["md5"] or ""
-        if not md5 and filename.endswith(".apk"):
-            parts = filename.split("_")
-            md5_candidates = [part for part in parts if len(part) == 32 and all(ch in "0123456789abcdef" for ch in part.lower())]
-            md5 = md5_candidates[-1] if md5_candidates else ""
-        entries.append({
-            **seed,
-            **meta,
-            "md5": md5,
-            "filename": filename,
-            "captured_at": generated_at,
-        })
+    seeds_by_url = {seed["url"]: seed for seed in KNOWN_APKS}
+    for seed in discover_download_porter_apks():
+        seeds_by_url.setdefault(seed["url"], seed)
+
+    for seed in seeds_by_url.values():
+        previous = previous_by_url.get(seed["url"])
+        if previous:
+            entry = {**previous, **seed}
+            filename = entry.get("filename") or filename_from_url(seed["url"])
+            entry["filename"] = filename
+            entry["md5"] = entry.get("md5") or md5_from_filename(filename)
+            entry["captured_at"] = previous.get("captured_at", generated_at)
+        else:
+            meta = head_url(seed["url"])
+            filename = filename_from_url(seed["url"])
+            entry = {
+                **seed,
+                **meta,
+                "md5": meta["md5"] or md5_from_filename(filename),
+                "filename": filename,
+                "captured_at": generated_at,
+            }
+        entries.append(entry)
 
     games: dict[str, dict] = {}
     for entry in entries:
@@ -544,7 +669,10 @@ def main() -> None:
         "source": "manually captured official Android APK CDN URLs",
         "games": games,
     }
-    (output_dir / "index.json").write_text(
+    if previous_index and stable_index(index) == stable_index(previous_index):
+        index["generated_at"] = previous_index.get("generated_at", generated_at)
+
+    index_path.write_text(
         json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
     print(f"Wrote Android APK index for {len(entries)} APKs")
