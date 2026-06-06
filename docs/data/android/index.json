@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T20:12:21.605318+00:00",
+  "generated_at": "2026-06-06T20:21:58.318080+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -106,6 +106,66 @@
           "urls": "data/android/lists/calabiyau_1.1.5.2_android.urls.txt",
           "aria2": "data/android/lists/calabiyau_1.1.5.2_android.aria2.txt",
           "json": "data/android/lists/calabiyau_1.1.5.2_android.json"
+        }
+      }
+    },
+    "bluearchive": {
+      "name": "碧蓝档案",
+      "subName": "Blue Archive",
+      "versions": [
+        {
+          "game_id": "bluearchive",
+          "version": "2.1.2",
+          "channel": "Official",
+          "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
+          "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1723356917,
+          "last_modified": "Tue, 23 Sep 2025 05:29:37 GMT",
+          "etag": "5D9E2E9524A91CE8873B67101CC362F8-1644",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "BlueArchive.apk",
+          "captured_at": "2026-06-06T20:21:58.318080+00:00"
+        }
+      ],
+      "links": {
+        "2.1.2": {
+          "urls": "data/android/lists/bluearchive_2.1.2_android.urls.txt",
+          "aria2": "data/android/lists/bluearchive_2.1.2_android.aria2.txt",
+          "json": "data/android/lists/bluearchive_2.1.2_android.json"
+        }
+      }
+    },
+    "snowbreak": {
+      "name": "尘白禁区",
+      "subName": "Snowbreak: Containment Zone",
+      "versions": [
+        {
+          "game_id": "snowbreak",
+          "version": "3.6.0.122",
+          "channel": "jinshan",
+          "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
+          "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1427726880,
+          "last_modified": "Thu, 07 May 2026 03:12:21 GMT",
+          "etag": "a22da702ac349b6c06dbc6a6c69adcb0-171",
+          "md5": "",
+          "crc64": "17658315226039455406",
+          "error": "",
+          "filename": "CBJQ.3.6.0.122.jinshan_202603301341.apk",
+          "captured_at": "2026-06-06T20:21:58.318080+00:00"
+        }
+      ],
+      "links": {
+        "3.6.0.122": {
+          "urls": "data/android/lists/snowbreak_3.6.0.122_android.urls.txt",
+          "aria2": "data/android/lists/snowbreak_3.6.0.122_android.aria2.txt",
+          "json": "data/android/lists/snowbreak_3.6.0.122_android.json"
         }
       }
     },
@@ -1491,6 +1551,39 @@
           "urls": "data/android/lists/aethergazer_0.305.2_android.urls.txt",
           "aria2": "data/android/lists/aethergazer_0.305.2_android.aria2.txt",
           "json": "data/android/lists/aethergazer_0.305.2_android.json"
+        }
+      }
+    },
+    "gf2": {
+      "name": "少女前线2：追放",
+      "subName": "Girls' Frontline 2: Exilium",
+      "versions": [
+        {
+          "game_id": "gf2",
+          "version": "3.0.0",
+          "channel": "gwaz",
+          "url": "https://gf2-web-preregister-api.sunborngame.com/website/url_manage?timestamp=1780775971&nonce=c20j1x&sign=74ca012c6a9ef865f150e6613462bb5a",
+          "source": "official Sunborn download API; resolves to a signed APK URL",
+          "source_url": "https://gf2-web-preregister-api.sunborngame.com/website/url_manage?timestamp=1780775971&nonce=c20j1x&sign=74ca012c6a9ef865f150e6613462bb5a",
+          "archive_url": "https://mica-download.sunborngame.com/p2/apk/3532/1744344831_signed_aligned_ReYun_gwaz_GW_Build_CN_878_7155_9889_1744280284_3532_100.apk?auth_key=1780777381-02063355754168975360-0-4be006515f273b14091ce71e1b741ead",
+          "archive_note": "Signed CDN URL captured during sync",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1852239327,
+          "last_modified": "Mon, 14 Apr 2025 15:20:37 GMT",
+          "etag": "6B809BAB832F4972F742BB61F5865121-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "1744344831_signed_aligned_ReYun_gwaz_GW_Build_CN_878_7155_9889_1744280284_3532_100.apk",
+          "captured_at": "2026-06-06T20:21:58.318080+00:00"
+        }
+      ],
+      "links": {
+        "3.0.0": {
+          "urls": "data/android/lists/gf2_3.0.0_android.urls.txt",
+          "aria2": "data/android/lists/gf2_3.0.0_android.aria2.txt",
+          "json": "data/android/lists/gf2_3.0.0_android.json"
         }
       }
     },

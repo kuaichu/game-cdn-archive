@@ -53,6 +53,20 @@ KNOWN_APKS = [
         "headers": {"Referer": "https://klbq.qq.com/"},
     },
     {
+        "game_id": "bluearchive",
+        "version": "2.1.2",
+        "channel": "Official",
+        "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
+        "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+    },
+    {
+        "game_id": "snowbreak",
+        "version": "3.6.0.122",
+        "channel": "jinshan",
+        "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
+        "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+    },
+    {
         "game_id": "wuwa",
         "version": "3.3.2",
         "channel": "官渠",
@@ -464,10 +478,13 @@ GAME_NAMES = {
     "nte": {"name": "异环", "subName": "Neverness to Everness"},
     "aethergazer": {"name": "深空之眼", "subName": "Aether Gazer"},
     "arknights": {"name": "明日方舟", "subName": "Arknights"},
+    "bluearchive": {"name": "碧蓝档案", "subName": "Blue Archive"},
     "calabiyau": {"name": "卡拉比丘", "subName": "Calabiyau"},
     "endfield": {"name": "明日方舟：终末地", "subName": "Arknights: Endfield"},
+    "gf2": {"name": "少女前线2：追放", "subName": "Girls' Frontline 2: Exilium"},
     "pns": {"name": "战双帕弥什", "subName": "Punishing: Gray Raven"},
     "reverse1999": {"name": "重返未来：1999", "subName": "Reverse: 1999"},
+    "snowbreak": {"name": "尘白禁区", "subName": "Snowbreak: Containment Zone"},
     "wuwa": {"name": "鸣潮", "subName": "Wuthering Waves"},
     "hk4e": {"name": "原神", "subName": "Genshin Impact"},
     "hkrpg": {"name": "崩坏：星穹铁道", "subName": "Honkai: Star Rail"},
@@ -509,6 +526,15 @@ REDIRECT_APK_ENDPOINTS = [
         "channel": "gwdl",
         "source": "official Aether Gazer Android download endpoint; resolves to a CDN URL",
         "headers": {"Referer": "https://skzy.ys4fun.com/"},
+    },
+]
+
+SUNBORN_APK_ENDPOINTS = [
+    {
+        "game_id": "gf2",
+        "url": "https://gf2-web-preregister-api.sunborngame.com/website/url_manage?timestamp=1780775971&nonce=c20j1x&sign=74ca012c6a9ef865f150e6613462bb5a",
+        "channel": "gwaz",
+        "source": "official Sunborn download API; resolves to a signed APK URL",
     },
 ]
 
@@ -950,6 +976,53 @@ def discover_redirect_apks() -> list[dict]:
     return entries
 
 
+def discover_sunborn_apks() -> list[dict]:
+    entries: list[dict] = []
+    for item in SUNBORN_APK_ENDPOINTS:
+        try:
+            payload = json.loads(fetch_text(item["url"], headers=item.get("headers")))
+        except Exception as exc:
+            print(f"Sunborn APK API unavailable {item['url']}: {exc}")
+            continue
+        if payload.get("code") != 0:
+            print(f"Sunborn APK API returned code {payload.get('code')}: {item['url']}")
+            continue
+        apk_url = ""
+        for row in payload.get("data", []):
+            if row.get("type") == 4 or row.get("Name") == "安卓下载":
+                apk_url = row.get("Url") or ""
+                break
+        if not apk_url:
+            print(f"Sunborn APK API has no Android URL: {item['url']}")
+            continue
+        try:
+            version = version_from_url(apk_url)
+        except ValueError:
+            try:
+                version = remote_apk_manifest_version_name(apk_url, headers=item.get("headers"))
+            except Exception as exc:
+                print(f"Sunborn APK manifest unavailable {apk_url}: {exc}")
+                continue
+        if not version:
+            print(f"Sunborn APK has no version: {apk_url}")
+            continue
+        entries.append({
+            "game_id": item["game_id"],
+            "version": normalize_version(version),
+            "channel": item["channel"],
+            "url": item["url"],
+            "source": item.get("source", "official Sunborn download API; resolves to a signed APK URL"),
+            "source_url": item["url"],
+            "archive_url": apk_url,
+            "archive_note": "Signed CDN URL captured during sync",
+            "metadata_url": apk_url,
+            "filename_url": apk_url,
+            "headers": item.get("headers"),
+            "force_refresh": True,
+        })
+    return entries
+
+
 def discover_kuro_apks() -> list[dict]:
     entries: list[dict] = []
     for item in KURO_APK_INDEXES:
@@ -1163,6 +1236,8 @@ def main() -> None:
     for seed in discover_nte_apks():
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_redirect_apks():
+        seeds_by_url.setdefault(seed["url"], seed)
+    for seed in discover_sunborn_apks():
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_kuro_apks():
         seeds_by_url.setdefault(seed["url"], seed)

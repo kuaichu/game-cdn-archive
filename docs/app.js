@@ -36,7 +36,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260607-more-mobile-apks";
+const ASSET_VERSION = "20260607-mobile-apk-batch-2";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -140,17 +140,23 @@ const fmtBytes = (bytes) => {
 const androidIcons = {
   aethergazer: "assets/icons/aethergazer.ico",
   arknights: "assets/icons/arknights.ico",
+  bluearchive: "assets/icons/bluearchive.png",
   calabiyau: "assets/icons/calabiyau.png",
+  gf2: "assets/icons/gf2.png",
   pns: "assets/icons/pns.png",
   reverse1999: "assets/icons/reverse1999.png",
+  snowbreak: "assets/icons/snowbreak.svg",
 };
 
 const androidShortNames = {
   aethergazer: "SK",
   arknights: "AK",
+  bluearchive: "BA",
   calabiyau: "KLB",
+  gf2: "GF2",
   pns: "PNS",
   reverse1999: "1999",
+  snowbreak: "CBJQ",
 };
 
 const parseDateValue = (value) => {
