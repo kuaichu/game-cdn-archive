@@ -243,6 +243,9 @@ python scripts/sync_android_apks.py
 The generated index records URL, filename, channel, HTTP status, size,
 Last-Modified, ETag, and MD5 when the CDN exposes it. Existing entries keep
 their previously captured metadata to avoid noisy churn from CDN header changes.
+When an APK URL does not carry a version number, the sync script reads the
+APK's `AndroidManifest.xml` `versionName` via HTTP range requests instead of
+guessing from the PC client version.
 This is not a complete historical APK mirror; it is a rolling archive starting
 from the official APK links that can be confirmed now.
 

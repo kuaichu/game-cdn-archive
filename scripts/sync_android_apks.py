@@ -15,10 +15,10 @@ from pathlib import Path
 KNOWN_APKS = [
     {
         "game_id": "nte",
-        "version": "1.1.5",
+        "version": "1.0.2",
         "channel": "official",
         "url": "https://download982100001.wmupd.com/DBBAcAsHETkPNZ/KahEjcXPZw/ZMHiHAAKS/rMETwPrjYHWX/WSsWamksBPBi/xJJBDjteYbWDjH/yGjMzBb/nnaDzeXeMNR/KwmNRJZa.apk",
-        "source": "official CDN URL captured manually",
+        "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
     },
     {
         "game_id": "wuwa",
@@ -545,24 +545,157 @@ def fetch_text(url: str, timeout: int = 30) -> str:
         return response.read().decode("utf-8", "ignore")
 
 
-def latest_nte_version(catalog_path: Path) -> str | None:
-    if not catalog_path.exists():
-        return None
-    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
-    versions = [
-        item["version"]
-        for item in catalog.get("versions", [])
-        if item.get("status") == 200 and item.get("full")
+def fetch_range(url: str, start: int, end: int, timeout: int = 60) -> bytes:
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "game-cdn-archive/1.0",
+            "Range": f"bytes={start}-{end}",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        return response.read()
+
+
+def content_length(url: str, timeout: int = 30) -> int:
+    request = urllib.request.Request(url, headers={"User-Agent": "game-cdn-archive/1.0"}, method="HEAD")
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        return int(response.headers.get("Content-Length") or 0)
+
+
+def read_binary_xml_len8(buf: bytes, offset: int) -> tuple[int, int]:
+    first = buf[offset]
+    offset += 1
+    if first & 0x80:
+        second = buf[offset]
+        offset += 1
+        return ((first & 0x7f) << 8) | second, offset
+    return first, offset
+
+
+def read_binary_xml_len16(buf: bytes, offset: int) -> tuple[int, int]:
+    first = int.from_bytes(buf[offset:offset + 2], "little")
+    offset += 2
+    if first & 0x8000:
+        second = int.from_bytes(buf[offset:offset + 2], "little")
+        offset += 2
+        return ((first & 0x7fff) << 16) | second, offset
+    return first, offset
+
+
+def binary_xml_strings(buf: bytes, offset: int) -> tuple[list[str], int]:
+    chunk_type = int.from_bytes(buf[offset:offset + 2], "little")
+    if chunk_type != 0x0001:
+        raise ValueError("AndroidManifest string pool not found")
+    header_size = int.from_bytes(buf[offset + 2:offset + 4], "little")
+    size = int.from_bytes(buf[offset + 4:offset + 8], "little")
+    string_count = int.from_bytes(buf[offset + 8:offset + 12], "little")
+    flags = int.from_bytes(buf[offset + 16:offset + 20], "little")
+    strings_start = int.from_bytes(buf[offset + 20:offset + 24], "little")
+    offsets = [
+        int.from_bytes(buf[offset + header_size + index * 4:offset + header_size + index * 4 + 4], "little")
+        for index in range(string_count)
     ]
-    if not versions:
+    is_utf8 = bool(flags & 0x100)
+    strings_base = offset + strings_start
+    strings: list[str] = []
+    for relative_offset in offsets:
+        cursor = strings_base + relative_offset
+        if is_utf8:
+            _, cursor = read_binary_xml_len8(buf, cursor)
+            byte_length, cursor = read_binary_xml_len8(buf, cursor)
+            value = buf[cursor:cursor + byte_length].decode("utf-8", "replace")
+        else:
+            char_length, cursor = read_binary_xml_len16(buf, cursor)
+            value = buf[cursor:cursor + char_length * 2].decode("utf-16le", "replace")
+        strings.append(value)
+    return strings, offset + size
+
+
+def binary_manifest_version_name(manifest: bytes) -> str | None:
+    if int.from_bytes(manifest[0:2], "little") != 0x0003:
         return None
-    return sorted(versions, key=version_key, reverse=True)[0]
+    strings, offset = binary_xml_strings(manifest, 8)
+    while offset < len(manifest):
+        chunk_type = int.from_bytes(manifest[offset:offset + 2], "little")
+        header_size = int.from_bytes(manifest[offset + 2:offset + 4], "little")
+        chunk_size = int.from_bytes(manifest[offset + 4:offset + 8], "little")
+        if chunk_type == 0x0102:
+            tag_name_index = int.from_bytes(manifest[offset + 20:offset + 24], "little")
+            tag_name = strings[tag_name_index] if tag_name_index != 0xffffffff else ""
+            attribute_start = int.from_bytes(manifest[offset + 24:offset + 26], "little")
+            attribute_size = int.from_bytes(manifest[offset + 26:offset + 28], "little")
+            attribute_count = int.from_bytes(manifest[offset + 28:offset + 30], "little")
+            attribute_base = offset + header_size + attribute_start
+            if tag_name == "manifest":
+                for index in range(attribute_count):
+                    attribute_offset = attribute_base + index * attribute_size
+                    name_index = int.from_bytes(manifest[attribute_offset + 4:attribute_offset + 8], "little")
+                    raw_value_index = int.from_bytes(manifest[attribute_offset + 8:attribute_offset + 12], "little")
+                    data_type = manifest[attribute_offset + 15]
+                    data_value = int.from_bytes(manifest[attribute_offset + 16:attribute_offset + 20], "little")
+                    name = strings[name_index] if name_index != 0xffffffff else ""
+                    if name != "versionName":
+                        continue
+                    if raw_value_index != 0xffffffff:
+                        return strings[raw_value_index]
+                    if data_type == 0x03:
+                        return strings[data_value]
+                    return str(data_value)
+        offset += chunk_size
+    return None
 
 
-def discover_nte_apks(catalog_path: Path) -> list[dict]:
-    version = latest_nte_version(catalog_path)
-    if not version:
-        return []
+def remote_apk_manifest_version_name(url: str) -> str | None:
+    import zlib
+
+    size = content_length(url)
+    if not size:
+        return None
+    tail_size = min(size, 262144)
+    tail = fetch_range(url, size - tail_size, size - 1)
+    eocd_signature = b"PK\x05\x06"
+    eocd_offset = tail.rfind(eocd_signature)
+    if eocd_offset < 0:
+        return None
+    eocd = tail[eocd_offset:eocd_offset + 22]
+    central_dir_size = int.from_bytes(eocd[12:16], "little")
+    central_dir_offset = int.from_bytes(eocd[16:20], "little")
+    central_dir = fetch_range(url, central_dir_offset, central_dir_offset + central_dir_size - 1)
+    cursor = 0
+    manifest_entry = None
+    while cursor < len(central_dir):
+        if central_dir[cursor:cursor + 4] != b"PK\x01\x02":
+            break
+        method = int.from_bytes(central_dir[cursor + 10:cursor + 12], "little")
+        compressed_size = int.from_bytes(central_dir[cursor + 20:cursor + 24], "little")
+        name_length = int.from_bytes(central_dir[cursor + 28:cursor + 30], "little")
+        extra_length = int.from_bytes(central_dir[cursor + 30:cursor + 32], "little")
+        comment_length = int.from_bytes(central_dir[cursor + 32:cursor + 34], "little")
+        local_offset = int.from_bytes(central_dir[cursor + 42:cursor + 46], "little")
+        name = central_dir[cursor + 46:cursor + 46 + name_length].decode("utf-8", "ignore")
+        if name == "AndroidManifest.xml":
+            manifest_entry = (method, compressed_size, local_offset)
+            break
+        cursor += 46 + name_length + extra_length + comment_length
+    if not manifest_entry:
+        return None
+    method, compressed_size, local_offset = manifest_entry
+    local_header = fetch_range(url, local_offset, local_offset + 30 - 1)
+    name_length = int.from_bytes(local_header[26:28], "little")
+    extra_length = int.from_bytes(local_header[28:30], "little")
+    data_offset = local_offset + 30 + name_length + extra_length
+    compressed_manifest = fetch_range(url, data_offset, data_offset + compressed_size - 1)
+    if method == 0:
+        manifest = compressed_manifest
+    elif method == 8:
+        manifest = zlib.decompress(compressed_manifest, -15)
+    else:
+        return None
+    return binary_manifest_version_name(manifest)
+
+
+def discover_nte_apks() -> list[dict]:
     entries: list[dict] = []
     for item in NTE_APK_CONFIGS:
         try:
@@ -574,12 +707,21 @@ def discover_nte_apks(catalog_path: Path) -> list[dict]:
         if not match:
             print(f"NTE APK config has no android APK URL: {item['url']}")
             continue
+        apk_url = match.group(1)
+        try:
+            version = remote_apk_manifest_version_name(apk_url)
+        except Exception as exc:
+            print(f"NTE APK manifest unavailable {apk_url}: {exc}")
+            continue
+        if not version:
+            print(f"NTE APK manifest has no versionName: {apk_url}")
+            continue
         entries.append({
             "game_id": item["game_id"],
             "version": version,
             "channel": item["channel"],
-            "url": match.group(1),
-            "source": "official website Android download config",
+            "url": apk_url,
+            "source": "official website Android download config; versionName read from AndroidManifest.xml",
             "source_url": item["url"],
         })
     return entries
@@ -719,7 +861,7 @@ def main() -> None:
     seeds_by_url = {seed["url"]: seed for seed in KNOWN_APKS}
     for seed in discover_download_porter_apks():
         seeds_by_url.setdefault(seed["url"], seed)
-    for seed in discover_nte_apks(output_dir.parent / "catalog.json"):
+    for seed in discover_nte_apks():
         seeds_by_url.setdefault(seed["url"], seed)
 
     for seed in seeds_by_url.values():

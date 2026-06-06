@@ -1,10 +1,10 @@
 [
   {
     "game_id": "nte",
-    "version": "1.1.5",
+    "version": "1.0.2",
     "channel": "official",
     "url": "https://download982100001.wmupd.com/DBBAcAsHETkPNZ/KahEjcXPZw/ZMHiHAAKS/rMETwPrjYHWX/WSsWamksBPBi/xJJBDjteYbWDjH/yGjMzBb/nnaDzeXeMNR/KwmNRJZa.apk",
-    "source": "official CDN URL captured manually",
+    "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
     "status": 200,
     "content_type": "application/octet-stream",
     "size": 940694857,

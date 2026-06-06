@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T16:13:30.401242+00:00",
+  "generated_at": "2026-06-06T18:09:30.758812+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -8,10 +8,10 @@
       "versions": [
         {
           "game_id": "nte",
-          "version": "1.1.5",
+          "version": "1.0.2",
           "channel": "official",
           "url": "https://download982100001.wmupd.com/DBBAcAsHETkPNZ/KahEjcXPZw/ZMHiHAAKS/rMETwPrjYHWX/WSsWamksBPBi/xJJBDjteYbWDjH/yGjMzBb/nnaDzeXeMNR/KwmNRJZa.apk",
-          "source": "official CDN URL captured manually",
+          "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
           "status": 200,
           "content_type": "application/octet-stream",
           "size": 940694857,
@@ -25,10 +25,10 @@
         }
       ],
       "links": {
-        "1.1.5": {
-          "urls": "data/android/lists/nte_1.1.5_android.urls.txt",
-          "aria2": "data/android/lists/nte_1.1.5_android.aria2.txt",
-          "json": "data/android/lists/nte_1.1.5_android.json"
+        "1.0.2": {
+          "urls": "data/android/lists/nte_1.0.2_android.urls.txt",
+          "aria2": "data/android/lists/nte_1.0.2_android.aria2.txt",
+          "json": "data/android/lists/nte_1.0.2_android.json"
         }
       }
     },
