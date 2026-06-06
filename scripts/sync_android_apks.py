@@ -357,14 +357,14 @@ KNOWN_APKS = [
         "game_id": "bh3",
         "version": "6.6.0",
         "channel": "gw",
-        "url": "https://download-porter.mihoyo.com/dowload-porter/2023/04/17/20230413-122623-gf_android_ota-versions-v6_6-Woven_from_Last_Snow_gw.apk",
+        "url": "https://bundle.bh3.com/public/Android/20230413-122623-gf_android_ota-versions-v6_6-Woven_from_Last_Snow_gw.apk",
         "source": "official CDN URL captured manually",
     },
     {
         "game_id": "bh3",
         "version": "6.5.0",
         "channel": "gw",
-        "url": "https://download-porter.mihoyo.com/dowload-porter/2023/03/07/20230301-220508-gf_android_ota-versions-v6_5-Hot_Sands_Escapade_gw.apk",
+        "url": "https://bundle.bh3.com/public/Android/20230301-220508-gf_android_ota-versions-v6_5-Hot_Sands_Escapade_gw.apk",
         "source": "official CDN URL captured manually",
     },
     {
