@@ -235,12 +235,11 @@ The Android APK view is intentionally incremental. It preserves official APK
 CDN URLs only after a URL has been captured and verified. Scheduled updates
 also resolve supported official download porter endpoints, so a newly published
 APK can be added automatically when the latest endpoint starts pointing to it:
-HoYo games use Download Porter endpoints, Wuthering Waves uses Kuro's official
-JSON download index, NTE reads the official website Android download config,
-and Hypergryph games follow official latest-APK endpoints while probing the
-resolved CDN target for version and file metadata. The first resolved CDN URL
-seen for the same package is kept as an archival record, even when it may expire
-later.
+HoYo games use Download Porter endpoints, Kuro games use official JSON download
+indexes, NTE reads the official website Android download config, and Hypergryph
+games follow official latest-APK endpoints while probing the resolved CDN target
+for version and file metadata. The first resolved CDN URL seen for the same
+package is kept as an archival record, even when it may expire later.
 
 ```bash
 python scripts/sync_android_apks.py

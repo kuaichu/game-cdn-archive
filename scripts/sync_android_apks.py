@@ -432,6 +432,7 @@ GAME_NAMES = {
     "nte": {"name": "异环", "subName": "Neverness to Everness"},
     "arknights": {"name": "明日方舟", "subName": "Arknights"},
     "endfield": {"name": "明日方舟：终末地", "subName": "Arknights: Endfield"},
+    "pns": {"name": "战双帕弥什", "subName": "Punishing: Gray Raven"},
     "wuwa": {"name": "鸣潮", "subName": "Wuthering Waves"},
     "hk4e": {"name": "原神", "subName": "Genshin Impact"},
     "hkrpg": {"name": "崩坏：星穹铁道", "subName": "Honkai: Star Rail"},
@@ -466,11 +467,24 @@ NTE_APK_CONFIGS = [
     },
 ]
 
-WUWA_APK_INDEXES = [
+KURO_APK_INDEXES = [
+    {
+        "game_id": "pns",
+        "url": "https://download.kurogames.com/pns/official/cn/zh-Hans/android_app.json",
+        "channel": "官渠",
+        "source": "official Punishing: Gray Raven Android download index",
+    },
+    {
+        "game_id": "pns",
+        "url": "https://download.kurogames.com/pns/official/cn/zh-Hans/androidpc_app.json",
+        "channel": "模拟器",
+        "source": "official Punishing: Gray Raven Android emulator download index",
+    },
     {
         "game_id": "wuwa",
         "url": "https://download.kurogames.com/mc_WnGtDn85y8lJB4mTmYHYuNjIl9n6YGVm/official/cn/zh-Hans/android_app.json",
         "channel": "官渠",
+        "source": "official Wuthering Waves Android download index",
     },
 ]
 
@@ -764,25 +778,25 @@ def discover_nte_apks() -> list[dict]:
     return entries
 
 
-def discover_wuwa_apks() -> list[dict]:
+def discover_kuro_apks() -> list[dict]:
     entries: list[dict] = []
-    for item in WUWA_APK_INDEXES:
+    for item in KURO_APK_INDEXES:
         try:
             index = json.loads(fetch_text(item["url"]))
         except Exception as exc:
-            print(f"Wuthering Waves APK index unavailable {item['url']}: {exc}")
+            print(f"Kuro APK index unavailable {item['url']}: {exc}")
             continue
         version = index.get("version")
         url = index.get("primary") or index.get("secondary") or index.get("third")
         if not version or not url:
-            print(f"Wuthering Waves APK index missing version or URL: {item['url']}")
+            print(f"Kuro APK index missing version or URL: {item['url']}")
             continue
         entries.append({
             "game_id": item["game_id"],
             "version": normalize_version(version),
             "channel": item["channel"],
             "url": url,
-            "source": "official Wuthering Waves Android download index",
+            "source": item.get("source", "official Kuro Android download index"),
             "source_url": item["url"],
         })
     return entries
@@ -892,14 +906,6 @@ def has_same_apk_hash(candidate: dict, entries: list[dict]) -> bool:
     return False
 
 
-def has_same_game_version(candidate: dict, entries: list[dict]) -> bool:
-    return any(
-        entry.get("game_id") == candidate.get("game_id")
-        and entry.get("version") == candidate.get("version")
-        for entry in entries
-    )
-
-
 def same_source_previous(candidate: dict, previous_entries: list[dict]) -> dict | None:
     candidate_hashes = apk_hashes(candidate)
     if not candidate_hashes:
@@ -976,7 +982,7 @@ def main() -> None:
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_nte_apks():
         seeds_by_url.setdefault(seed["url"], seed)
-    for seed in discover_wuwa_apks():
+    for seed in discover_kuro_apks():
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_hypergryph_apks():
         seeds_by_url.setdefault(seed["url"], seed)
@@ -1023,9 +1029,6 @@ def main() -> None:
         if entry.get("source_url"):
             if has_same_apk_hash(entry, entries):
                 print(f"skip duplicate APK hash: {entry['game_id']} {entry['version']} {entry['url']}")
-                continue
-            if has_same_game_version(entry, entries):
-                print(f"skip duplicate APK version: {entry['game_id']} {entry['version']} {entry['url']}")
                 continue
         entries.append(entry)
 
