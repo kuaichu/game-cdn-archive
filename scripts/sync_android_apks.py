@@ -451,6 +451,10 @@ DOWNLOAD_PORTER_APIS = [
         "game_id": "nap",
         "url": "https://api-takumi.mihoyo.com/event/download_porter/link/nap_cn/official/android_default",
     },
+    {
+        "game_id": "bh3",
+        "url": "https://act-api-takumi.mihoyo.com/event/download_porter/link/bh3_cn/bh3/android_gw",
+    },
 ]
 
 
