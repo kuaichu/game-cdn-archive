@@ -11,6 +11,8 @@ const state = {
   endfieldVersions: null,
   wuwaIndex: null,
   wuwaVersions: null,
+  arknightsIndex: null,
+  arknightsVersions: null,
   androidIndex: null,
   wuwaEntries: new Map(),
   wuwaFilePath: "",
@@ -36,7 +38,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260607-reverse1999-apk-archive";
+const ASSET_VERSION = "20260607-arknights-pc";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -121,6 +123,10 @@ const endfieldModes = [
 const wuwaModes = [
   ["files", "文件清单"],
   ["patches", "更新路线"],
+];
+
+const arknightsModes = [
+  ["packages", "完整包"],
 ];
 
 const androidMode = ["android", "Android APK"];
@@ -261,6 +267,7 @@ const allGames = () => {
   const baseGames = [
     nteGame,
     ...(state.endfieldIndex?.game ? [state.endfieldIndex.game] : []),
+    ...(state.arknightsIndex?.game ? [state.arknightsIndex.game] : []),
     ...(state.wuwaIndex?.game ? [state.wuwaIndex.game] : []),
     ...(state.hoyoIndex?.games || []).map((game) => ({
     ...game,
@@ -287,6 +294,7 @@ const currentGame = () => allGames().find((game) => game.id === state.gameId) ||
 const isNte = () => currentGame().kind === "nte";
 const isEndfield = () => currentGame().kind === "endfield";
 const isWuwa = () => currentGame().kind === "wuwa";
+const isArknights = () => currentGame().kind === "arknights";
 const isAndroidOnly = () => currentGame().kind === "android";
 const androidGame = () => state.androidIndex?.games?.[state.gameId] || null;
 const androidEntries = () => androidGame()?.versions || [];
@@ -316,7 +324,7 @@ const hasAndroidApks = () => androidSummaries().length > 0;
 const modesForGame = () => {
   const modes = isAndroidOnly()
     ? []
-    : isNte() ? nteModes : isEndfield() ? endfieldModes : isWuwa() ? wuwaModes : hoyoModes;
+    : isNte() ? nteModes : isEndfield() ? endfieldModes : isWuwa() ? wuwaModes : isArknights() ? arknightsModes : hoyoModes;
   return hasAndroidApks() ? [...modes, androidMode] : modes;
 };
 
@@ -334,6 +342,8 @@ const endfieldSummaries = () => state.endfieldIndex?.versions || [];
 
 const wuwaVersion = () => state.wuwaVersions?.[state.version] || null;
 const wuwaSummaries = () => state.wuwaIndex?.versions || [];
+const arknightsVersion = () => state.arknightsVersions?.[state.version] || null;
+const arknightsSummaries = () => state.arknightsIndex?.versions || [];
 const androidVersion = () => androidSummaries().find((item) => item.version === state.version) || null;
 const androidVersionEntries = () => androidEntries().filter((item) => item.version === state.version);
 
@@ -430,6 +440,7 @@ const availableSummaries = () => {
   if (isNte()) return nteVersions();
   if (isEndfield()) return endfieldSummaries();
   if (isWuwa()) return wuwaSummaries();
+  if (isArknights()) return arknightsSummaries();
   return hoyoSummaries().filter((item) => item.package_items || item.update_items || item.has_chunk);
 };
 
@@ -462,6 +473,17 @@ const currentGameSyncInfo = () => {
       game,
       source: "daydreamer-json 上游归档",
       updated: state.endfieldIndex?.generated_from_observation,
+      latest: latest?.version,
+      detail: `${latest?.package_items || 0} 个完整分卷 / ${fmtBytes(latest?.packed_size || 0)}`,
+      android: androidLatest?.version,
+    };
+  }
+  if (isArknights()) {
+    const latest = latestByVersion(arknightsSummaries());
+    return {
+      game,
+      source: "鹰角官方启动器 API",
+      updated: state.arknightsIndex?.generated_at,
       latest: latest?.version,
       detail: `${latest?.package_items || 0} 个完整分卷 / ${fmtBytes(latest?.packed_size || 0)}`,
       android: androidLatest?.version,
@@ -516,6 +538,9 @@ const commandFor = () => {
   }
   if (isEndfield()) {
     return `aria2c -c -x16 -s16 data/endfield/lists/${state.version}_${state.mode === "patches" ? "patches" : "packages"}.aria2.txt`;
+  }
+  if (isArknights()) {
+    return `aria2c -c -x16 -s16 -i data/arknights/lists/${state.version}_packages.aria2.txt`;
   }
   if (isWuwa()) {
     return state.mode === "files"
@@ -904,6 +929,18 @@ const versionButton = (item) => {
       </button>
     `;
   }
+  if (isArknights()) {
+    return `
+      <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
+        <span class="version-number">${item.version}</span>
+        <span class="caps">
+          <span class="cap blue">${item.package_items || 0} 个分卷</span>
+          <span class="cap green">${fmtBytes(item.packed_size || 0)}</span>
+          <span class="cap violet">官方接口</span>
+        </span>
+      </button>
+    `;
+  }
   const profile = hoyoDistributionProfile(item);
   return `
     <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
@@ -920,7 +957,7 @@ const versionButton = (item) => {
 const renderStats = () => {
   const stats = state.mode === "android"
     ? androidStats()
-    : isNte() ? nteStats() : isEndfield() ? endfieldStats() : isWuwa() ? wuwaStats() : hoyoStats();
+    : isNte() ? nteStats() : isEndfield() ? endfieldStats() : isWuwa() ? wuwaStats() : isArknights() ? arknightsStats() : hoyoStats();
   $("#stats").innerHTML = stats.map(([label, value]) => `<div class="stat"><span>${label}</span><strong>${value}</strong></div>`).join("");
 };
 
@@ -989,6 +1026,18 @@ const endfieldStats = () => {
     ["完整包", `${summary?.package_items || 0} 个 / ${fmtBytes(summary?.packed_size || 0)}`],
     ["解压大小", fmtBytes(summary?.unpacked_size || 0)],
     ["更新路径", `${version?.patches?.length || 0} 条`],
+  ];
+};
+
+const arknightsStats = () => {
+  const summary = arknightsSummaries().find((item) => item.version === state.version);
+  const version = arknightsVersion();
+  return [
+    ["当前版本", state.version],
+    ["归档时间", fmtDateTime(summary?.observed_at)],
+    ["完整分卷", `${summary?.package_items || 0} 个 / ${fmtBytes(summary?.packed_size || 0)}`],
+    ["接口体积", fmtBytes(summary?.unpacked_size || 0)],
+    ["文件校验", version?.game_files_md5 ? "game_files_md5" : "无"],
   ];
 };
 
@@ -1083,6 +1132,18 @@ const renderLinks = () => {
     return;
   }
 
+  if (isArknights()) {
+    const links = arknightsVersion()?.links?.packages;
+    const disabled = !links;
+    $("#urlsLink").classList.toggle("disabled", disabled);
+    $("#aria2Link").classList.toggle("disabled", disabled);
+    $("#jsonLink").classList.remove("disabled");
+    $("#urlsLink").href = links?.urls || "#";
+    $("#aria2Link").href = links?.aria2 || "#";
+    $("#jsonLink").href = links?.json || "data/arknights/versions.json";
+    return;
+  }
+
   if (isWuwa()) {
     const links = wuwaVersion()?.links?.files;
     const disabled = state.mode !== "files" || !links;
@@ -1114,7 +1175,7 @@ const renderPanelTitle = () => {
   $("#commandText").textContent = commandFor();
   $("#panelKicker").textContent = state.mode === "android"
     ? "Android APK"
-    : isNte() ? "NTE files" : isEndfield() ? "Endfield files" : isWuwa() ? "Wuwa files" : "Hoyo files";
+    : isNte() ? "NTE files" : isEndfield() ? "Endfield files" : isWuwa() ? "Wuwa files" : isArknights() ? "Arknights packages" : "Hoyo files";
   $("#panelTitle").textContent = `${state.version} ${modeLabel}`;
 };
 
@@ -1328,6 +1389,19 @@ const endfieldPatchItems = () => {
     mirrorUrl: item.mirror_url,
     preferredUrl: item.preferred_url,
   })));
+};
+
+const arknightsPackageItems = () => {
+  const version = arknightsVersion();
+  if (!version) return [];
+  return version.packages.map((item) => ({
+    badge: "官方完整分卷",
+    title: item.name,
+    subtitle: `分卷 ${item.part} / Hypergryph launcher API`,
+    size: item.size,
+    hash: item.md5,
+    url: item.url,
+  }));
 };
 
 const normalizeVersionText = (value) => String(value || "").replace(/\d+\.\d+\.\d+/g, "{version}");
@@ -2454,6 +2528,16 @@ const renderList = async () => {
     return;
   }
 
+  if (isArknights()) {
+    const entries = arknightsPackageItems();
+    const filtered = filterEntries(entries);
+    $("#fileList").innerHTML = filtered
+      .map((entry, index) => fileCard({ ...entry, count: `${index + 1}/${filtered.length}` }))
+      .join("") || `<div class="empty">该版本没有完整包记录</div>`;
+    bindCardActions();
+    return;
+  }
+
   if (isWuwa()) {
     if (state.mode === "files") {
       await renderWuwaFiles();
@@ -2507,6 +2591,11 @@ const ensureGameData = async (preferredVersion = null) => {
     state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
     return;
   }
+  if (isArknights()) {
+    const versions = arknightsSummaries().sort((a, b) => compareVersions(b.version, a.version));
+    state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
+    return;
+  }
   if (!state.hoyoVersions.has(state.gameId)) {
     state.hoyoVersions.set(state.gameId, await fetchJson(`data/hoyo/${state.gameId}_versions.json`));
   }
@@ -2551,6 +2640,18 @@ const renderNotice = () => {
       </div>
       <div class="source-links">
         <a class="source-link" href="${escapeHtml(state.endfieldIndex.source)}" target="_blank" rel="noreferrer">daydreamer-json/ak-endfield-api-archive</a>
+      </div>
+    `;
+  } else if (isArknights()) {
+    notice.innerHTML = `
+      <div class="notice-copy">
+        <strong>数据来源</strong>
+        <span>页面读取明日方舟 PC 官方启动器 API，保存当前完整分卷 URL、MD5 与大小。该接口仅提供当前最新版本，历史版本后续再通过网页时空机或旧接口快照补充。</span>
+      </div>
+      <div class="source-links">
+        <a class="source-link" href="${escapeHtml(state.arknightsIndex.official_api)}" target="_blank" rel="noreferrer">官方 get_latest API</a>
+        <a class="source-link" href="${escapeHtml(state.arknightsIndex.source_site)}" target="_blank" rel="noreferrer">明日方舟 PC 官网</a>
+        <a class="source-link" href="data/arknights/versions.json" target="_blank" rel="noreferrer">本站方舟 PC 索引</a>
       </div>
     `;
   } else if (isWuwa()) {
@@ -2615,14 +2716,18 @@ Promise.all([
   fetchJson("./data/endfield/versions.json"),
   fetchJson("./data/wuwa/index.json"),
   fetchJson("./data/wuwa/versions.json"),
+  fetchJson("./data/arknights/index.json"),
+  fetchJson("./data/arknights/versions.json"),
   fetchJson("./data/android/index.json"),
-]).then(async ([nteCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, wuwaVersions, androidIndex]) => {
+]).then(async ([nteCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, wuwaVersions, arknightsIndex, arknightsVersions, androidIndex]) => {
   state.nteCatalog = nteCatalog;
   state.hoyoIndex = hoyoIndex;
   state.endfieldIndex = endfieldIndex;
   state.endfieldVersions = endfieldVersions;
   state.wuwaIndex = wuwaIndex;
   state.wuwaVersions = wuwaVersions;
+  state.arknightsIndex = arknightsIndex;
+  state.arknightsVersions = arknightsVersions;
   state.androidIndex = androidIndex;
   const savedView = loadSavedView();
   if (allGames().some((game) => game.id === savedView.gameId)) {
