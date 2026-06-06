@@ -36,7 +36,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260607-endfield-apk-archive";
+const ASSET_VERSION = "20260607-android-only-apks";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -137,6 +137,14 @@ const fmtBytes = (bytes) => {
   return `${value.toFixed(unit === 0 ? 0 : 2)} ${units[unit]}`;
 };
 
+const androidIcons = {
+  arknights: "assets/icons/arknights.ico",
+};
+
+const androidShortNames = {
+  arknights: "AK",
+};
+
 const parseDateValue = (value) => {
   if (!value) return null;
   if (value instanceof Date) return Number.isNaN(value.getTime()) ? null : value;
@@ -235,22 +243,37 @@ const updateActiveSideLink = () => {
   setActiveSideLink(current?.id || "home");
 };
 
-const allGames = () => [
-  nteGame,
-  ...(state.endfieldIndex?.game ? [state.endfieldIndex.game] : []),
-  ...(state.wuwaIndex?.game ? [state.wuwaIndex.game] : []),
-  ...(state.hoyoIndex?.games || []).map((game) => ({
+const allGames = () => {
+  const baseGames = [
+    nteGame,
+    ...(state.endfieldIndex?.game ? [state.endfieldIndex.game] : []),
+    ...(state.wuwaIndex?.game ? [state.wuwaIndex.game] : []),
+    ...(state.hoyoIndex?.games || []).map((game) => ({
     ...game,
     subName: hoyoEnglishNames[game.id] || game.name,
     icon: `assets/icons/${game.id}.png`,
     kind: "hoyo",
-  })),
-];
+    })),
+  ];
+  const knownIds = new Set(baseGames.map((game) => game.id));
+  const androidOnlyGames = Object.entries(state.androidIndex?.games || {})
+    .filter(([id]) => !knownIds.has(id))
+    .map(([id, game]) => ({
+      id,
+      name: game.name || id,
+      subName: game.subName || game.name || id,
+      shortName: androidShortNames[id] || id.toUpperCase().slice(0, 3),
+      icon: androidIcons[id] || `assets/icons/${id}.png`,
+      kind: "android",
+    }));
+  return [...baseGames, ...androidOnlyGames];
+};
 
 const currentGame = () => allGames().find((game) => game.id === state.gameId) || nteGame;
 const isNte = () => currentGame().kind === "nte";
 const isEndfield = () => currentGame().kind === "endfield";
 const isWuwa = () => currentGame().kind === "wuwa";
+const isAndroidOnly = () => currentGame().kind === "android";
 const androidGame = () => state.androidIndex?.games?.[state.gameId] || null;
 const androidEntries = () => androidGame()?.versions || [];
 const androidSummaries = () => {
@@ -277,7 +300,9 @@ const androidSummaries = () => {
 };
 const hasAndroidApks = () => androidSummaries().length > 0;
 const modesForGame = () => {
-  const modes = isNte() ? nteModes : isEndfield() ? endfieldModes : isWuwa() ? wuwaModes : hoyoModes;
+  const modes = isAndroidOnly()
+    ? []
+    : isNte() ? nteModes : isEndfield() ? endfieldModes : isWuwa() ? wuwaModes : hoyoModes;
   return hasAndroidApks() ? [...modes, androidMode] : modes;
 };
 

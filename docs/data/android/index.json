@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T18:44:42.470903+00:00",
+  "generated_at": "2026-06-06T19:21:48.010511+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -1348,6 +1348,39 @@
         }
       }
     },
+    "arknights": {
+      "name": "明日方舟",
+      "subName": "Arknights",
+      "versions": [
+        {
+          "game_id": "arknights",
+          "version": "2.7.41",
+          "channel": "official",
+          "url": "https://ak.hypergryph.com/downloads/android_lastest",
+          "source": "official Hypergryph latest APK endpoint; resolves to a CDN URL",
+          "source_url": "https://ak.hypergryph.com/downloads/android_lastest",
+          "archive_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/package/1/1/Android/74.0.0_UR6RdckAf6SA49i2/arknights-hg-2741.apk",
+          "archive_note": "CDN URL captured during sync",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2062252913,
+          "last_modified": "Fri, 29 May 2026 06:50:18 GMT",
+          "etag": "6F20472BEE19105D4C393B78D43E2ED9-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-2741.apk",
+          "captured_at": "2026-06-06T19:21:48.010511+00:00"
+        }
+      ],
+      "links": {
+        "2.7.41": {
+          "urls": "data/android/lists/arknights_2.7.41_android.urls.txt",
+          "aria2": "data/android/lists/arknights_2.7.41_android.aria2.txt",
+          "json": "data/android/lists/arknights_2.7.41_android.json"
+        }
+      }
+    },
     "endfield": {
       "name": "明日方舟：终末地",
       "subName": "Arknights: Endfield",
@@ -1357,7 +1390,7 @@
           "version": "1.3.4",
           "channel": "official",
           "url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
-          "source": "official Endfield latest APK endpoint; resolves to a temporary signed CDN URL",
+          "source": "official Hypergryph latest APK endpoint; resolves to a CDN URL",
           "source_url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
           "archive_url": "https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.3/package/1/1/Android/1.3.4_PZm7Rp0p1e8i8oNT/endfield-hg-1-1.3.4.apk?auth_key=1780771484-894a44eb4fae42f2a890ecd5b37e88ee-0-ae7699367f09ca3566cef67954498ca8",
           "archive_note": "temporary signed CDN URL captured during sync",

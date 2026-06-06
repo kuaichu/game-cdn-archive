@@ -430,6 +430,7 @@ KNOWN_APKS = [
 
 GAME_NAMES = {
     "nte": {"name": "异环", "subName": "Neverness to Everness"},
+    "arknights": {"name": "明日方舟", "subName": "Arknights"},
     "endfield": {"name": "明日方舟：终末地", "subName": "Arknights: Endfield"},
     "wuwa": {"name": "鸣潮", "subName": "Wuthering Waves"},
     "hk4e": {"name": "原神", "subName": "Genshin Impact"},
@@ -473,7 +474,12 @@ WUWA_APK_INDEXES = [
     },
 ]
 
-ENDFIELD_APK_ENDPOINTS = [
+HYPERGRYPH_APK_ENDPOINTS = [
+    {
+        "game_id": "arknights",
+        "url": "https://ak.hypergryph.com/downloads/android_lastest",
+        "channel": "official",
+    },
     {
         "game_id": "endfield",
         "url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
@@ -782,9 +788,9 @@ def discover_wuwa_apks() -> list[dict]:
     return entries
 
 
-def discover_endfield_apks() -> list[dict]:
+def discover_hypergryph_apks() -> list[dict]:
     entries: list[dict] = []
-    for item in ENDFIELD_APK_ENDPOINTS:
+    for item in HYPERGRYPH_APK_ENDPOINTS:
         final_url = resolve_download_porter_url(item["url"])
         if not final_url:
             continue
@@ -794,20 +800,20 @@ def discover_endfield_apks() -> list[dict]:
             try:
                 version = remote_apk_manifest_version_name(final_url)
             except Exception as exc:
-                print(f"Endfield APK manifest unavailable {final_url}: {exc}")
+                print(f"Hypergryph APK manifest unavailable {final_url}: {exc}")
                 continue
         if not version:
-            print(f"Endfield APK has no version: {final_url}")
+            print(f"Hypergryph APK has no version: {final_url}")
             continue
         entries.append({
             "game_id": item["game_id"],
             "version": normalize_version(version),
             "channel": item["channel"],
             "url": item["url"],
-            "source": "official Endfield latest APK endpoint; resolves to a temporary signed CDN URL",
+            "source": "official Hypergryph latest APK endpoint; resolves to a CDN URL",
             "source_url": item["url"],
             "archive_url": final_url,
-            "archive_note": "temporary signed CDN URL captured during sync",
+            "archive_note": "CDN URL captured during sync",
             "metadata_url": final_url,
             "filename_url": final_url,
             "force_refresh": True,
@@ -972,7 +978,7 @@ def main() -> None:
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_wuwa_apks():
         seeds_by_url.setdefault(seed["url"], seed)
-    for seed in discover_endfield_apks():
+    for seed in discover_hypergryph_apks():
         seeds_by_url.setdefault(seed["url"], seed)
 
     for seed in seeds_by_url.values():
