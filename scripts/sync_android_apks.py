@@ -5,11 +5,19 @@ from __future__ import annotations
 
 import json
 import re
+import subprocess
 import urllib.parse
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+
+
+DEFAULT_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/125.0 Safari/537.36",
+    "Accept": "*/*",
+}
 
 
 KNOWN_APKS = [
@@ -19,6 +27,30 @@ KNOWN_APKS = [
         "channel": "official",
         "url": "https://download982100001.wmupd.com/DBBAcAsHETkPNZ/KahEjcXPZw/ZMHiHAAKS/rMETwPrjYHWX/WSsWamksBPBi/xJJBDjteYbWDjH/yGjMzBb/nnaDzeXeMNR/KwmNRJZa.apk",
         "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+    },
+    {
+        "game_id": "reverse1999",
+        "version": "3.7.0",
+        "channel": "home",
+        "url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
+        "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+        "headers": {"Referer": "https://re.bluepoch.com/"},
+    },
+    {
+        "game_id": "reverse1999",
+        "version": "3.7.0",
+        "channel": "prepage",
+        "url": "https://d.bluepoch.com/prepage/Reverse1999_Bluepoch_1006.apk",
+        "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+        "headers": {"Referer": "https://re.bluepoch.com/"},
+    },
+    {
+        "game_id": "calabiyau",
+        "version": "1.1.5.2",
+        "channel": "official",
+        "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+        "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+        "headers": {"Referer": "https://klbq.qq.com/"},
     },
     {
         "game_id": "wuwa",
@@ -430,9 +462,12 @@ KNOWN_APKS = [
 
 GAME_NAMES = {
     "nte": {"name": "异环", "subName": "Neverness to Everness"},
+    "aethergazer": {"name": "深空之眼", "subName": "Aether Gazer"},
     "arknights": {"name": "明日方舟", "subName": "Arknights"},
+    "calabiyau": {"name": "卡拉比丘", "subName": "Calabiyau"},
     "endfield": {"name": "明日方舟：终末地", "subName": "Arknights: Endfield"},
     "pns": {"name": "战双帕弥什", "subName": "Punishing: Gray Raven"},
+    "reverse1999": {"name": "重返未来：1999", "subName": "Reverse: 1999"},
     "wuwa": {"name": "鸣潮", "subName": "Wuthering Waves"},
     "hk4e": {"name": "原神", "subName": "Genshin Impact"},
     "hkrpg": {"name": "崩坏：星穹铁道", "subName": "Honkai: Star Rail"},
@@ -464,6 +499,16 @@ NTE_APK_CONFIGS = [
         "game_id": "nte",
         "url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/yh-gameDownload.js",
         "channel": "official",
+    },
+]
+
+REDIRECT_APK_ENDPOINTS = [
+    {
+        "game_id": "aethergazer",
+        "url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
+        "channel": "gwdl",
+        "source": "official Aether Gazer Android download endpoint; resolves to a CDN URL",
+        "headers": {"Referer": "https://skzy.ys4fun.com/"},
     },
 ]
 
@@ -507,6 +552,7 @@ def version_key(version: str) -> tuple[int, ...]:
 
 
 def normalize_version(version: str) -> str:
+    version = version.strip().lstrip("vV")
     parts = [int(part) for part in version.replace("_", ".").split(".") if part != ""]
     while len(parts) < 3:
         parts.append(0)
@@ -537,8 +583,91 @@ def channel_from_url(url: str) -> str:
     return "official"
 
 
-def resolve_download_porter_url(url: str, timeout: int = 30, retries: int = 2) -> str | None:
-    request = urllib.request.Request(url, headers={"User-Agent": "game-cdn-archive/1.0"})
+def request_headers(extra_headers: dict | None = None, range_header: str | None = None) -> dict:
+    headers = dict(DEFAULT_HEADERS)
+    if extra_headers:
+        headers.update(extra_headers)
+    if range_header:
+        headers["Range"] = range_header
+    return headers
+
+
+def curl_header_args(headers: dict) -> list[str]:
+    args: list[str] = []
+    for key, value in headers.items():
+        args.extend(["-H", f"{key}: {value}"])
+    return args
+
+
+def parse_headers(raw_headers: str) -> dict:
+    result: dict[str, str | int] = {"status": 0}
+    for block in raw_headers.replace("\r\n", "\n").strip().split("\n\n"):
+        lines = [line for line in block.split("\n") if line.strip()]
+        if not lines or not lines[0].startswith("HTTP/"):
+            continue
+        status_match = re.search(r"HTTP/\S+\s+(\d+)", lines[0])
+        if status_match:
+            result = {"status": int(status_match.group(1))}
+        for line in lines[1:]:
+            if ":" not in line:
+                continue
+            key, value = line.split(":", 1)
+            result[key.strip().lower()] = value.strip()
+    return result
+
+
+def curl_fetch_range(url: str, start: int, end: int, headers: dict | None = None, timeout: int = 60) -> bytes:
+    all_headers = request_headers(headers, f"bytes={start}-{end}")
+    command = ["curl", "-L", "-s", "--max-time", str(timeout), *curl_header_args(all_headers), url]
+    return subprocess.check_output(command)
+
+
+def curl_head(url: str, headers: dict | None = None, timeout: int = 30) -> dict:
+    command = ["curl", "-I", "-L", "-s", "--max-time", str(timeout), *curl_header_args(request_headers(headers)), url]
+    raw = subprocess.check_output(command).decode("utf-8", "ignore")
+    parsed = parse_headers(raw)
+    return {
+        "status": int(parsed.get("status") or 0),
+        "content_type": str(parsed.get("content-type", "")),
+        "size": int(parsed.get("content-length") or 0),
+        "last_modified": str(parsed.get("last-modified", "")),
+        "etag": str(parsed.get("etag", "")).strip('"'),
+        "md5": str(parsed.get("x-cos-meta-md5", "")),
+        "crc64": str(parsed.get("x-cos-hash-crc64ecma", "") or parsed.get("x-oss-hash-crc64ecma", "")),
+        "error": "",
+    }
+
+
+def curl_content_length(url: str, headers: dict | None = None, timeout: int = 30) -> int:
+    command = [
+        "curl",
+        "-L",
+        "-s",
+        "-D",
+        "-",
+        "-o",
+        "-",
+        "--max-time",
+        str(timeout),
+        *curl_header_args(request_headers(headers, "bytes=0-0")),
+        url,
+    ]
+    output = subprocess.check_output(command)
+    head, _, _ = output.partition(b"\r\n\r\n")
+    parsed = parse_headers(head.decode("utf-8", "ignore"))
+    content_range = str(parsed.get("content-range", ""))
+    if "/" in content_range:
+        return int(content_range.rsplit("/", 1)[1])
+    return int(parsed.get("content-length") or 0)
+
+
+def resolve_download_porter_url(
+    url: str,
+    timeout: int = 30,
+    retries: int = 2,
+    headers: dict | None = None,
+) -> str | None:
+    request = urllib.request.Request(url, headers=request_headers(headers))
     for attempt in range(retries + 1):
         try:
             response = urllib.request.urlopen(request, timeout=timeout)
@@ -558,7 +687,7 @@ def resolve_download_porter_url(url: str, timeout: int = 30, retries: int = 2) -
 def discover_download_porter_apks() -> list[dict]:
     entries: list[dict] = []
     for item in DOWNLOAD_PORTER_APIS:
-        final_url = resolve_download_porter_url(item["url"])
+        final_url = resolve_download_porter_url(item["url"], headers=item.get("headers"))
         if not final_url:
             continue
         try:
@@ -577,41 +706,50 @@ def discover_download_porter_apks() -> list[dict]:
     return entries
 
 
-def fetch_text(url: str, timeout: int = 30) -> str:
-    request = urllib.request.Request(url, headers={"User-Agent": "game-cdn-archive/1.0"})
+def fetch_text(url: str, timeout: int = 30, headers: dict | None = None) -> str:
+    request = urllib.request.Request(url, headers=request_headers(headers))
     with urllib.request.urlopen(request, timeout=timeout) as response:
         return response.read().decode("utf-8", "ignore")
 
 
-def fetch_range(url: str, start: int, end: int, timeout: int = 60) -> bytes:
+def fetch_range(url: str, start: int, end: int, timeout: int = 60, headers: dict | None = None) -> bytes:
     request = urllib.request.Request(
         url,
-        headers={
-            "User-Agent": "game-cdn-archive/1.0",
-            "Range": f"bytes={start}-{end}",
-        },
+        headers=request_headers(headers, f"bytes={start}-{end}"),
     )
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        return response.read()
-
-
-def content_length(url: str, timeout: int = 30) -> int:
-    request = urllib.request.Request(url, headers={"User-Agent": "game-cdn-archive/1.0"}, method="HEAD")
     try:
         with urllib.request.urlopen(request, timeout=timeout) as response:
-            return int(response.headers.get("Content-Length") or 0)
+            content_type = response.headers.get("Content-Type", "").lower()
+            if "text/html" in content_type:
+                return curl_fetch_range(url, start, end, headers=headers, timeout=timeout)
+            return response.read()
+    except Exception:
+        return curl_fetch_range(url, start, end, headers=headers, timeout=timeout)
+
+
+def content_length(url: str, timeout: int = 30, headers: dict | None = None) -> int:
+    request = urllib.request.Request(url, headers=request_headers(headers), method="HEAD")
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            length = int(response.headers.get("Content-Length") or 0)
+            return length or curl_content_length(url, headers=headers, timeout=timeout)
     except urllib.error.HTTPError as exc:
         if exc.code != 405:
-            raise
+            return curl_content_length(url, headers=headers, timeout=timeout)
+    except Exception:
+        return curl_content_length(url, headers=headers, timeout=timeout)
     range_request = urllib.request.Request(
         url,
-        headers={"User-Agent": "game-cdn-archive/1.0", "Range": "bytes=0-0"},
+        headers=request_headers(headers, "bytes=0-0"),
     )
-    with urllib.request.urlopen(range_request, timeout=timeout) as response:
-        content_range = response.headers.get("Content-Range") or ""
-        if "/" in content_range:
-            return int(content_range.rsplit("/", 1)[1])
-        return int(response.headers.get("Content-Length") or 0)
+    try:
+        with urllib.request.urlopen(range_request, timeout=timeout) as response:
+            content_range = response.headers.get("Content-Range") or ""
+            if "/" in content_range:
+                return int(content_range.rsplit("/", 1)[1])
+            return int(response.headers.get("Content-Length") or 0)
+    except Exception:
+        return curl_content_length(url, headers=headers, timeout=timeout)
 
 
 def read_binary_xml_len8(buf: bytes, offset: int) -> tuple[int, int]:
@@ -697,14 +835,14 @@ def binary_manifest_version_name(manifest: bytes) -> str | None:
     return None
 
 
-def remote_apk_manifest_version_name(url: str) -> str | None:
+def remote_apk_manifest_version_name(url: str, headers: dict | None = None) -> str | None:
     import zlib
 
-    size = content_length(url)
+    size = content_length(url, headers=headers)
     if not size:
         return None
     tail_size = min(size, 262144)
-    tail = fetch_range(url, size - tail_size, size - 1)
+    tail = fetch_range(url, size - tail_size, size - 1, headers=headers)
     eocd_signature = b"PK\x05\x06"
     eocd_offset = tail.rfind(eocd_signature)
     if eocd_offset < 0:
@@ -712,7 +850,7 @@ def remote_apk_manifest_version_name(url: str) -> str | None:
     eocd = tail[eocd_offset:eocd_offset + 22]
     central_dir_size = int.from_bytes(eocd[12:16], "little")
     central_dir_offset = int.from_bytes(eocd[16:20], "little")
-    central_dir = fetch_range(url, central_dir_offset, central_dir_offset + central_dir_size - 1)
+    central_dir = fetch_range(url, central_dir_offset, central_dir_offset + central_dir_size - 1, headers=headers)
     cursor = 0
     manifest_entry = None
     while cursor < len(central_dir):
@@ -732,11 +870,11 @@ def remote_apk_manifest_version_name(url: str) -> str | None:
     if not manifest_entry:
         return None
     method, compressed_size, local_offset = manifest_entry
-    local_header = fetch_range(url, local_offset, local_offset + 30 - 1)
+    local_header = fetch_range(url, local_offset, local_offset + 30 - 1, headers=headers)
     name_length = int.from_bytes(local_header[26:28], "little")
     extra_length = int.from_bytes(local_header[28:30], "little")
     data_offset = local_offset + 30 + name_length + extra_length
-    compressed_manifest = fetch_range(url, data_offset, data_offset + compressed_size - 1)
+    compressed_manifest = fetch_range(url, data_offset, data_offset + compressed_size - 1, headers=headers)
     if method == 0:
         manifest = compressed_manifest
     elif method == 8:
@@ -760,7 +898,7 @@ def discover_nte_apks() -> list[dict]:
             continue
         apk_url = match.group(1)
         try:
-            version = remote_apk_manifest_version_name(apk_url)
+            version = remote_apk_manifest_version_name(apk_url, headers=item.get("headers"))
         except Exception as exc:
             print(f"NTE APK manifest unavailable {apk_url}: {exc}")
             continue
@@ -774,6 +912,40 @@ def discover_nte_apks() -> list[dict]:
             "url": apk_url,
             "source": "official website Android download config; versionName read from AndroidManifest.xml",
             "source_url": item["url"],
+        })
+    return entries
+
+
+def discover_redirect_apks() -> list[dict]:
+    entries: list[dict] = []
+    for item in REDIRECT_APK_ENDPOINTS:
+        final_url = resolve_download_porter_url(item["url"], headers=item.get("headers"))
+        if not final_url:
+            continue
+        try:
+            version = version_from_url(final_url)
+        except ValueError:
+            try:
+                version = remote_apk_manifest_version_name(final_url, headers=item.get("headers"))
+            except Exception as exc:
+                print(f"redirect APK manifest unavailable {final_url}: {exc}")
+                continue
+        if not version:
+            print(f"redirect APK has no version: {final_url}")
+            continue
+        entries.append({
+            "game_id": item["game_id"],
+            "version": normalize_version(version),
+            "channel": item["channel"],
+            "url": item["url"],
+            "source": item.get("source", "official Android download endpoint; resolves to a CDN URL"),
+            "source_url": item["url"],
+            "archive_url": final_url,
+            "archive_note": "CDN URL captured during sync",
+            "metadata_url": final_url,
+            "filename_url": final_url,
+            "headers": item.get("headers"),
+            "force_refresh": True,
         })
     return entries
 
@@ -812,7 +984,7 @@ def discover_hypergryph_apks() -> list[dict]:
             version = version_from_url(final_url)
         except ValueError:
             try:
-                version = remote_apk_manifest_version_name(final_url)
+                version = remote_apk_manifest_version_name(final_url, headers=item.get("headers"))
             except Exception as exc:
                 print(f"Hypergryph APK manifest unavailable {final_url}: {exc}")
                 continue
@@ -835,32 +1007,40 @@ def discover_hypergryph_apks() -> list[dict]:
     return entries
 
 
-def head_url(url: str) -> dict:
-    request = urllib.request.Request(url, headers={"User-Agent": "game-cdn-archive/1.0"}, method="HEAD")
+def head_url(url: str, headers: dict | None = None) -> dict:
+    extra_headers = headers
+    request = urllib.request.Request(url, headers=request_headers(extra_headers), method="HEAD")
     try:
         with urllib.request.urlopen(request, timeout=60) as response:
-            headers = response.headers
+            response_headers = response.headers
+            size = int(response_headers.get("Content-Length") or 0)
+            content_type = response_headers.get("Content-Type", "")
+            if size == 0 or "text/html" in content_type.lower():
+                return curl_head(url, headers=extra_headers, timeout=60)
             return {
                 "status": response.status,
-                "content_type": headers.get("Content-Type", ""),
-                "size": int(headers.get("Content-Length") or 0),
-                "last_modified": headers.get("Last-Modified", ""),
-                "etag": (headers.get("ETag") or "").strip('"'),
-                "md5": headers.get("X-Cos-Meta-Md5", ""),
-                "crc64": headers.get("X-Cos-Hash-Crc64ecma", ""),
+                "content_type": content_type,
+                "size": size,
+                "last_modified": response_headers.get("Last-Modified", ""),
+                "etag": (response_headers.get("ETag") or "").strip('"'),
+                "md5": response_headers.get("X-Cos-Meta-Md5", ""),
+                "crc64": response_headers.get("X-Cos-Hash-Crc64ecma", ""),
                 "error": "",
             }
     except Exception as exc:
-        return {
-            "status": 0,
-            "content_type": "",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "md5": "",
-            "crc64": "",
-            "error": str(exc),
-        }
+        try:
+            return curl_head(url, headers=extra_headers, timeout=60)
+        except Exception:
+            return {
+                "status": 0,
+                "content_type": "",
+                "size": 0,
+                "last_modified": "",
+                "etag": "",
+                "md5": "",
+                "crc64": "",
+                "error": str(exc),
+            }
 
 
 def filename_from_url(url: str) -> str:
@@ -982,6 +1162,8 @@ def main() -> None:
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_nte_apks():
         seeds_by_url.setdefault(seed["url"], seed)
+    for seed in discover_redirect_apks():
+        seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_kuro_apks():
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_hypergryph_apks():
@@ -991,7 +1173,7 @@ def main() -> None:
         public_seed = {
             key: value
             for key, value in seed.items()
-            if key not in {"metadata_url", "filename_url", "force_refresh"}
+            if key not in {"metadata_url", "filename_url", "force_refresh", "headers"}
         }
         previous = None if seed.get("force_refresh") else previous_by_url.get(seed["url"])
         if previous:
@@ -1003,7 +1185,7 @@ def main() -> None:
         else:
             metadata_url = seed.get("metadata_url", seed["url"])
             filename_url = seed.get("filename_url", seed["url"])
-            meta = head_url(metadata_url)
+            meta = head_url(metadata_url, headers=seed.get("headers"))
             filename = filename_from_url(filename_url)
             entry = {
                 **public_seed,
