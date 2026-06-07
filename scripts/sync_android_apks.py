@@ -181,6 +181,20 @@ KNOWN_APKS = [
         "source": "official CDN URL captured manually",
     },
     {
+        "game_id": "nap",
+        "version": "2.0.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20250524102650_a8PjvKxdb4vmCkHH/gw/ZenlessZoneZero_2.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "nap",
+        "version": "1.3.0",
+        "channel": "mktbackup2",
+        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20241025155348_P1CiQgR6Uw0z3Pb8/mktbackup2/ZenlessZoneZero_1.3.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
         "game_id": "hk4e",
         "version": "6.6.0",
         "channel": "mihoyo",
@@ -399,6 +413,13 @@ KNOWN_APKS = [
     },
     {
         "game_id": "hkrpg",
+        "version": "3.6.0",
+        "channel": "gw_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20250913175807_IPNyJ3QQa0TlG771/gw_An/StarRail_3.6.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
         "version": "3.5.0",
         "channel": "ad_dyst12_An",
         "url": "https://autopatchcn.bhsr.com/client/cn/20250801095521_kFIVD1SzuosxW9vr/ad_dyst12_An/StarRail_3.5.0.apk",
@@ -409,6 +430,13 @@ KNOWN_APKS = [
         "version": "3.4.0",
         "channel": "gw_An",
         "url": "https://autopatchcn.bhsr.com/client/cn/20250623112713_2bg6PaxrWLL0CPvF/gw_An/StarRail_3.4.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "3.1.0",
+        "channel": "mihoyo_1",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20250214151706_oIzdt9FPrcWYnq4F/mihoyo_1/StarRail_3.1.0.apk",
         "source": "official CDN URL captured manually",
     },
     {
