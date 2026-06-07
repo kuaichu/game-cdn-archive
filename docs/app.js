@@ -38,7 +38,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260607-sync-status-fix";
+const ASSET_VERSION = "20260607-sync-status-trim";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -976,9 +976,6 @@ const renderSyncStatus = () => {
   panel.hidden = false;
   const current = currentGameSyncInfo();
   const checkedAt = current.checked || current.updated;
-  const changedText = current.updated
-    ? `数据变更 ${fmtDateTime(current.updated)}`
-    : "数据变更 -";
   const checkedText = checkedAt
     ? fmtRelativeTime(checkedAt)
     : "-";
@@ -997,14 +994,14 @@ const renderSyncStatus = () => {
           <strong>${escapeHtml(current.latest || "-")}</strong>
         </div>
         <div>
-          <span>最近巡检</span>
+          <span>网页同步</span>
           <strong>${fmtDateTime(checkedAt)}</strong>
           <small>${checkedText}</small>
         </div>
         <div>
           <span>来源</span>
           <strong>${escapeHtml(current.source)}</strong>
-          <small>${escapeHtml(`${current.detail} / ${changedText}`)}</small>
+          <small>${escapeHtml(current.detail)}</small>
         </div>
         <div>
           <span>Android 留档</span>
