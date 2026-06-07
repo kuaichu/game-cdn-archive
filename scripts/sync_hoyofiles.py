@@ -633,6 +633,7 @@ def merge_manual_version_patches(game_id: str, versions: dict[str, Any]) -> None
 def stable_compare_games(index: dict[str, Any]) -> dict[str, Any]:
     stable = deepcopy(index)
     stable["generated_at"] = None
+    stable["last_checked_at"] = None
     return stable
 
 
@@ -641,6 +642,7 @@ def main() -> None:
     CHUNK_DATA.mkdir(parents=True, exist_ok=True)
 
     previous = json.loads(GAMES_PATH.read_text(encoding="utf-8")) if GAMES_PATH.exists() else {}
+    checked_at = datetime.now(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z")
     games_summary = []
     synced_chunks = 0
 
@@ -692,6 +694,7 @@ def main() -> None:
     new_index = {
         "source": SOURCE_URL,
         "api_base": API_BASE,
+        "last_checked_at": checked_at,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z"),
         "games": games_summary,
     }

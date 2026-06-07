@@ -131,6 +131,7 @@ def main() -> None:
 
     output_dir = args.output
     output_dir.mkdir(parents=True, exist_ok=True)
+    checked_at = datetime.now().astimezone().isoformat()
     versions: dict[str, dict] = {}
     summaries = []
 
@@ -204,6 +205,7 @@ def main() -> None:
         "source": SOURCE_REPO,
         "source_site": SOURCE_SITE,
         "official_api": OFFICIAL_API,
+        "last_checked_at": checked_at,
         "generated_from_observation": latest_observation,
         "game": {
             "id": "endfield",

@@ -38,7 +38,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260607-genshin-6-1-apk";
+const ASSET_VERSION = "20260607-sync-status-fix";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -461,6 +461,7 @@ const currentGameSyncInfo = () => {
     return {
       game,
       source: "异环官方启动器 ResList",
+      checked: state.nteCatalog?.last_checked_at || state.nteCatalog?.generated_at,
       updated: state.nteCatalog?.generated_at,
       latest: latest?.version,
       detail: `${latest?.full?.items || 0} 个完整文件 / ${fmtBytes(latest?.full?.bytes || 0)}`,
@@ -472,6 +473,7 @@ const currentGameSyncInfo = () => {
     return {
       game,
       source: "daydreamer-json 上游归档",
+      checked: state.endfieldIndex?.last_checked_at || state.endfieldIndex?.generated_from_observation,
       updated: state.endfieldIndex?.generated_from_observation,
       latest: latest?.version,
       detail: `${latest?.package_items || 0} 个完整分卷 / ${fmtBytes(latest?.packed_size || 0)}`,
@@ -483,6 +485,7 @@ const currentGameSyncInfo = () => {
     return {
       game,
       source: "鹰角官方启动器 API",
+      checked: state.arknightsIndex?.last_checked_at || state.arknightsIndex?.generated_at,
       updated: state.arknightsIndex?.generated_at,
       latest: latest?.version,
       detail: `${latest?.package_items || 0} 个完整分卷 / ${fmtBytes(latest?.packed_size || 0)}`,
@@ -494,6 +497,7 @@ const currentGameSyncInfo = () => {
     return {
       game,
       source: "鸣潮官方启动器索引",
+      checked: state.wuwaIndex?.last_checked_at || state.wuwaIndex?.generated_at,
       updated: state.wuwaIndex?.generated_at,
       latest: latest?.version,
       detail: `${(latest?.file_count || 0).toLocaleString()} 个文件 / ${fmtBytes(latest?.size || 0)}`,
@@ -504,6 +508,7 @@ const currentGameSyncInfo = () => {
   return {
     game,
     source: "HoyoFiles 公开版本清单",
+    checked: state.hoyoIndex?.last_checked_at || state.hoyoIndex?.generated_at,
     updated: state.hoyoIndex?.generated_at,
     latest: latest?.version,
     detail: `${latest?.package_items || 0} 个压缩包 / ${latest?.update_items || 0} 个更新包`,
@@ -970,6 +975,13 @@ const renderSyncStatus = () => {
   }
   panel.hidden = false;
   const current = currentGameSyncInfo();
+  const checkedAt = current.checked || current.updated;
+  const changedText = current.updated
+    ? `数据变更 ${fmtDateTime(current.updated)}`
+    : "数据变更 -";
+  const checkedText = checkedAt
+    ? fmtRelativeTime(checkedAt)
+    : "-";
   panel.innerHTML = `
     <div class="sync-current">
       <div class="sync-current-head">
@@ -985,14 +997,14 @@ const renderSyncStatus = () => {
           <strong>${escapeHtml(current.latest || "-")}</strong>
         </div>
         <div>
-          <span>最近同步</span>
-          <strong>${fmtDateTime(current.updated)}</strong>
-          <small>${fmtRelativeTime(current.updated)}</small>
+          <span>最近巡检</span>
+          <strong>${fmtDateTime(checkedAt)}</strong>
+          <small>${checkedText}</small>
         </div>
         <div>
           <span>来源</span>
           <strong>${escapeHtml(current.source)}</strong>
-          <small>${escapeHtml(current.detail)}</small>
+          <small>${escapeHtml(`${current.detail} / ${changedText}`)}</small>
         </div>
         <div>
           <span>Android 留档</span>

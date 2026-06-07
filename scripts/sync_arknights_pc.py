@@ -131,6 +131,7 @@ def build(output_dir: Path) -> None:
         "source": "Hypergryph launcher API",
         "source_site": SOURCE_SITE,
         "official_api": OFFICIAL_API,
+        "last_checked_at": observed_at,
         "generated_at": observed_at,
         "game": {
             "id": GAME_ID,

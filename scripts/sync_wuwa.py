@@ -255,6 +255,7 @@ def main() -> None:
         "source": SOURCE_REPO,
         "discovery_url": DISCOVERY_URL,
         "selected_launcher_index": selected_index_url,
+        "last_checked_at": datetime.now(timezone.utc).isoformat(),
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "game": {
             "id": "wuwa",

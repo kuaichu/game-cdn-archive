@@ -1355,6 +1355,7 @@ def write_lists(output_dir: Path, game_id: str, version: str, entries: list[dict
 def stable_index(index: dict) -> dict:
     stable = json.loads(json.dumps(index, ensure_ascii=False))
     stable.pop("generated_at", None)
+    stable.pop("last_checked_at", None)
     for game in stable.get("games", {}).values():
         for entry in game.get("versions", []):
             entry.pop("captured_at", None)
@@ -1458,6 +1459,7 @@ def main() -> None:
         game["links"] = links
 
     index = {
+        "last_checked_at": generated_at,
         "generated_at": generated_at,
         "source": "manually captured official Android APK CDN URLs",
         "games": games,

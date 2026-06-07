@@ -50,6 +50,7 @@ def copy_url_lists(temp_root: Path) -> None:
 def stable_compare_catalog(catalog: dict) -> dict:
     stable = deepcopy(catalog)
     stable["generated_at"] = None
+    stable["last_checked_at"] = None
     for row in stable.get("versions", []):
         if row.get("status") != 200:
             row.pop("content_length", None)
@@ -58,6 +59,7 @@ def stable_compare_catalog(catalog: dict) -> dict:
 
 def main() -> None:
     catalog = read_json(CATALOG_PATH)
+    checked_at = datetime.now(timezone.utc).astimezone().strftime("%Y-%m-%d %H:%M:%S %z")
     _, config = fetch_config(timeout=30)
     current = current_version_from_config(config)
     if not current:
@@ -89,6 +91,7 @@ def main() -> None:
     rows.sort(key=lambda row: version_sort_key(row["version"]))
     new_catalog = {
         **catalog,
+        "last_checked_at": checked_at,
         "versions": rows,
     }
     if stable_compare_catalog(catalog) == stable_compare_catalog(new_catalog):
