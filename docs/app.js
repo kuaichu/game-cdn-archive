@@ -38,7 +38,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260607-sync-status-trim";
+const ASSET_VERSION = "20260608-wuwa-preload";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -929,7 +929,7 @@ const versionButton = (item) => {
           <span class="cap blue">${Number(item.file_count || 0).toLocaleString()} 个文件</span>
           <span class="cap green">${item.cdn_count || 0} CDN</span>
           ${item.patch_routes ? `<span class="cap amber">${item.patch_routes} 条更新路线</span>` : ""}
-          ${item.source_note ? '<span class="cap slate">历史索引</span>' : '<span class="cap violet">当前索引</span>'}
+          ${item.release_stage === "preload" ? '<span class="cap amber">预下载</span>' : item.source_note ? '<span class="cap slate">历史索引</span>' : '<span class="cap violet">当前索引</span>'}
         </span>
       </button>
     `;
@@ -1154,14 +1154,14 @@ const renderLinks = () => {
   }
 
   if (isWuwa()) {
-    const links = wuwaVersion()?.links?.files;
-    const disabled = state.mode !== "files" || !links;
+    const links = state.mode === "patches" ? wuwaVersion()?.links?.patches : wuwaVersion()?.links?.files;
+    const disabled = !links;
     $("#urlsLink").classList.toggle("disabled", disabled);
     $("#aria2Link").classList.toggle("disabled", disabled);
     $("#jsonLink").classList.remove("disabled");
     $("#urlsLink").href = links?.urls || "#";
     $("#aria2Link").href = links?.aria2 || "#";
-    $("#jsonLink").href = state.mode === "files" ? links?.json || "data/wuwa/versions.json" : "data/wuwa/versions.json";
+    $("#jsonLink").href = links?.json || "data/wuwa/versions.json";
     scriptButton.hidden = disabled;
     scriptButton.disabled = disabled;
     return;
@@ -1312,6 +1312,22 @@ const wuwaFileItem = (entry, index = 0, total = 0) => {
     hash: entry.md5 || "",
     url: urls[0] || "",
     extraLinks: urls.slice(1).map((url, index) => ({ url, label: `CDN${index + 2}` })),
+    count: total ? `${index + 1}/${total}` : "",
+  };
+};
+
+const wuwaPatchItem = (route, entry, index = 0, total = 0) => {
+  const urls = entry.urls?.length ? entry.urls : [entry.url].filter(Boolean);
+  return {
+    key: `${route.from}->${route.to}:${entry.dest}`,
+    badge: "补丁分片",
+    title: entry.name || entry.dest?.split(/[\\/]/).at(-1) || "-",
+    subtitle: `${route.from} -> ${route.to} / ${entry.dest || entry.name || "-"}`,
+    remoteName: entry.dest || entry.name || "",
+    size: Number(entry.size || 0),
+    hash: entry.md5 || "",
+    url: urls[0] || "",
+    extraLinks: urls.slice(1).map((url, extraIndex) => ({ url, label: `CDN${extraIndex + 2}` })),
     count: total ? `${index + 1}/${total}` : "",
   };
 };
@@ -2104,11 +2120,12 @@ const renderWuwaFiles = async () => {
   const items = entries.map((entry, index) => wuwaFileItem(entry, index, entries.length));
   const filtered = filterEntries(items);
   const version = wuwaVersion();
+  const prefix = version?.release_stage === "preload" ? "当前索引来自官方预下载目录；" : "";
   const note = `
     <div class="notice file-browser-note">
       <div class="notice-copy">
         <strong>文件索引</strong>
-        <span>鸣潮官方启动器提供散文件索引；当前版本 ${escapeHtml(state.version)} 含 ${entries.length.toLocaleString()} 个文件，页面按目录浏览，下载时可使用 ${version?.cdn_urls?.length || 0} 个官方 CDN 镜像。</span>
+        <span>${escapeHtml(prefix)}鸣潮官方启动器提供散文件索引；当前版本 ${escapeHtml(state.version)} 含 ${entries.length.toLocaleString()} 个文件，页面按目录浏览，下载时可使用 ${version?.cdn_urls?.length || 0} 个官方 CDN 镜像。</span>
       </div>
     </div>
   `;
@@ -2145,7 +2162,27 @@ const bindWuwaBrowserActions = () => {
 };
 
 const renderWuwaPatches = () => {
-  const routes = (wuwaVersion()?.patches || []).map((route, index, all) => ({
+  const version = wuwaVersion();
+  const patchFiles = (version?.patches || []).flatMap((route) => route.parts?.length
+    ? route.parts.map((entry) => wuwaPatchItem(route, entry))
+    : []);
+  if (patchFiles.length) {
+    const filteredFiles = filterEntries(patchFiles);
+    const note = `
+      <div class="notice file-browser-note">
+        <div class="notice-copy">
+          <strong>预下载补丁</strong>
+          <span>当前版本 ${escapeHtml(state.version)} 已记录 ${patchFiles.length.toLocaleString()} 个官方补丁分片对象，来源于 ${(version?.patches || []).map((route) => `${route.from} -> ${route.to}`).join(" / ")}。</span>
+        </div>
+      </div>
+    `;
+    $("#fileList").innerHTML = note + (filteredFiles.length
+      ? filteredFiles.map((entry, index) => fileCard({ ...entry, count: `${index + 1}/${filteredFiles.length}` })).join("")
+      : `<div class="empty">没有匹配到补丁分片</div>`);
+    bindCardActions();
+    return;
+  }
+  const routes = (version?.patches || []).map((route, index, all) => ({
     badge: "更新路线",
     title: `${route.from} -> ${route.to}`,
     subtitle: route.base_url || route.index_file || route.index_url,

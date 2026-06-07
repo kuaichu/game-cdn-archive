@@ -10,7 +10,7 @@ import time
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit
 
 
 DISCOVERY_URL = (
@@ -49,6 +49,22 @@ HISTORICAL_CN_LIVE_INDEXES = [
         "base_url": "launcher/game/G152/10003/3.2.2/sUfHBBTqFSGticVyXaeclYjVwoLQhMEE/zip/",
         "source_note": "recovered from Wayback launcher index snapshot 20260418145837",
     },
+]
+MANUAL_CN_PRELOAD_INDEXES = [
+    {
+        "version": "3.4.0",
+        "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/indexFile.json",
+        "base_url": "launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/zip/",
+        "source_note": "captured from official predownload CDN directory",
+        "release_stage": "preload",
+        "patches": [
+            {
+                "from": "3.3.0",
+                "index_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/indexFile.json",
+                "base_url": "launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/",
+            }
+        ],
+    }
 ]
 
 
@@ -91,10 +107,22 @@ def normalize_resource(item: dict, cdn_urls: list[str], base_url: str) -> dict:
     }
 
 
-def write_lists(output_dir: Path, version: str, items: list[dict]) -> dict[str, str]:
+def normalize_patch_resource(item: dict, cdn_urls: list[str], base_url: str) -> dict:
+    dest = item["dest"].replace("\\", "/").lstrip("/")
+    urls = [join_url(join_url(cdn, base_url), dest) for cdn in cdn_urls]
+    return {
+        "dest": dest,
+        "name": Path(dest).name,
+        "md5": item.get("md5") or "",
+        "size": int(item.get("size") or 0),
+        "url": urls[0],
+        "urls": urls,
+    }
+
+
+def write_named_lists(output_dir: Path, stem: str, root_dir: str, items: list[dict]) -> dict[str, str]:
     lists_dir = output_dir / "lists"
     lists_dir.mkdir(parents=True, exist_ok=True)
-    stem = f"{version}-files"
 
     json_path = lists_dir / f"{stem}.json"
     urls_path = lists_dir / f"{stem}.urls.txt"
@@ -110,7 +138,7 @@ def write_lists(output_dir: Path, version: str, items: list[dict]) -> dict[str, 
         out = Path(dest).name
         for url in item["urls"]:
             lines.append(url)
-        lines.append(f"  dir=WutheringWaves_{version}/{parent}" if parent != "." else f"  dir=WutheringWaves_{version}")
+        lines.append(f"  dir={root_dir}/{parent}" if parent != "." else f"  dir={root_dir}")
         lines.append(f"  out={out}")
         if item["md5"]:
             lines.append(f"  checksum=md5={item['md5']}")
@@ -123,6 +151,10 @@ def write_lists(output_dir: Path, version: str, items: list[dict]) -> dict[str, 
         "urls": f"{prefix}/{urls_path.name}",
         "aria2": f"{prefix}/{aria2_path.name}",
     }
+
+
+def write_lists(output_dir: Path, version: str, items: list[dict]) -> dict[str, str]:
+    return write_named_lists(output_dir, f"{version}-files", f"WutheringWaves_{version}", items)
 
 
 def build_channel(discovery: dict, channel: str, region: str, output_dir: Path):
@@ -222,6 +254,88 @@ def build_historical_cn_live(spec: dict, output_dir: Path):
     return summary, version
 
 
+def index_path_from_url(url: str) -> str:
+    return urlsplit(url).path.lstrip("/")
+
+
+def build_manual_cn_preload(spec: dict, output_dir: Path):
+    resource_index = fetch_json(spec["resource_index"])
+    raw_items = resource_index.get("resource") or []
+    items = [normalize_resource(item, CN_LIVE_CDNS, spec["base_url"]) for item in raw_items]
+    links = write_lists(output_dir, spec["version"], items)
+    total_size = sum(item["size"] for item in items)
+
+    patch_routes = []
+    patch_parts_all = []
+    for patch in spec.get("patches", []):
+        patch_index = fetch_json(patch["index_url"])
+        patch_raw = patch_index.get("resource") or []
+        parts = [
+            normalize_patch_resource(item, CN_LIVE_CDNS, patch["base_url"])
+            for item in patch_raw
+            if str(item.get("dest") or "").endswith(".krpdiff")
+        ]
+        patch_parts_all.extend(parts)
+        patch_links = write_named_lists(
+            output_dir,
+            f"{spec['version']}_{patch['from']}_patches",
+            f"WutheringWaves_{spec['version']}_patches/{patch['from']}_to_{spec['version']}",
+            parts,
+        ) if parts else None
+        patch_routes.append(
+            {
+                "from": patch["from"],
+                "to": spec["version"],
+                "size": sum(item["size"] for item in parts),
+                "uncompressed_size": 0,
+                "index_file_md5": "",
+                "index_file": index_path_from_url(patch["index_url"]),
+                "index_url": patch["index_url"],
+                "base_url": patch["base_url"],
+                "parts": parts,
+                "links": patch_links,
+            }
+        )
+
+    combined_patch_links = write_named_lists(
+        output_dir,
+        f"{spec['version']}-patches",
+        f"WutheringWaves_{spec['version']}_patches",
+        patch_parts_all,
+    ) if patch_parts_all else None
+
+    version = {
+        "version": spec["version"],
+        "channel": "live",
+        "region": "cn",
+        "resource_index": spec["resource_index"],
+        "base_url": spec["base_url"],
+        "cdn_urls": CN_LIVE_CDNS,
+        "index_file_md5": "",
+        "size": total_size,
+        "uncompressed_size": total_size,
+        "file_count": len(items),
+        "files": items,
+        "patches": patch_routes,
+        "source_note": spec["source_note"],
+        "release_stage": spec.get("release_stage") or "",
+        "links": {"files": links, "patches": combined_patch_links},
+    }
+    summary = {
+        "version": version["version"],
+        "channel": version["channel"],
+        "region": version["region"],
+        "file_count": len(items),
+        "cdn_count": len(CN_LIVE_CDNS),
+        "patch_routes": len(patch_routes),
+        "size": total_size,
+        "uncompressed_size": total_size,
+        "source_note": spec["source_note"],
+        "release_stage": spec.get("release_stage") or "",
+    }
+    return summary, version
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--channel", default="live", choices=["live", "beta"])
@@ -248,6 +362,12 @@ def main() -> None:
             historical_summary, historical_version = build_historical_cn_live(spec, args.output)
             summaries.append(historical_summary)
             versions[historical_version["version"]] = historical_version
+        for spec in MANUAL_CN_PRELOAD_INDEXES:
+            if spec["version"] in versions:
+                continue
+            preload_summary, preload_version = build_manual_cn_preload(spec, args.output)
+            summaries.append(preload_summary)
+            versions[preload_version["version"]] = preload_version
 
     summaries.sort(key=lambda item: version_key(item["version"]), reverse=True)
 
