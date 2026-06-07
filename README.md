@@ -254,6 +254,32 @@ guessing from the PC client version.
 This is not a complete historical APK mirror; it is a rolling archive starting
 from the official APK links that can be confirmed now.
 
+### Kuro Android Fallback Note
+
+The current Wuthering Waves Android sync follows Kuro's public latest-download
+JSON index:
+
+`https://download.kurogames.com/mc_.../official/cn/zh-Hans/android_app.json`
+
+As long as that JSON path stays stable and only its content changes, the sync
+job can automatically roll from one latest APK to the next while keeping older
+archived APK entries (for example, keeping `3.3.2` after `3.4.0` appears).
+
+If the `mc_...` prefix or the JSON entrypoint itself changes in a future site
+update, the preferred fallback order is:
+
+1. Re-discover the current JSON URL from the official site HTML and its latest
+   JS bundle on `https://mc.kurogames.com/`.
+2. If needed, automate the official Android download button and capture the
+   network request or redirect target.
+3. Only if both discovery paths fail, record the newly captured CDN APK URL
+   manually and treat it as a temporary archival seed until the automated
+   entrypoint is recovered.
+
+This fallback is intentionally documented before changing the live sync logic.
+If the next official update still resolves through the existing JSON endpoint,
+no code changes are required.
+
 ## Automated Updates
 
 The repository includes a GitHub Actions workflow at
