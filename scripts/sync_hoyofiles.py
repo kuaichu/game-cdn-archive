@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import json
+import time
+import urllib.error
 import urllib.request
 from copy import deepcopy
 from datetime import datetime, timezone
@@ -533,10 +535,24 @@ MANUAL_HOYO_VERSION_PATCHES: dict[str, dict[str, dict[str, Any]]] = {
 }
 
 
-def fetch_json(url: str, timeout: int = 45) -> Any:
-    request = urllib.request.Request(url, headers={"User-Agent": "game-cdn-archive/1.0"})
-    with urllib.request.urlopen(request, timeout=timeout) as response:
-        return json.loads(response.read().decode("utf-8"))
+def fetch_json(url: str, timeout: int = 45, retries: int = 2, backoff: float = 2.0) -> Any:
+    last_error: Exception | None = None
+    for attempt in range(retries + 1):
+        request = urllib.request.Request(url, headers={"User-Agent": "game-cdn-archive/1.0"})
+        try:
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            last_error = exc
+            if 400 <= exc.code < 500 and exc.code not in {408, 429}:
+                break
+        except Exception as exc:
+            last_error = exc
+        if attempt < retries:
+            delay = backoff * (attempt + 1)
+            print(f"retry fetch_json {url} after {last_error} (attempt {attempt + 2}/{retries + 1}, sleep {delay:.1f}s)")
+            time.sleep(delay)
+    raise RuntimeError(f"failed to fetch JSON from {url}: {last_error}") from last_error
 
 
 def write_json_if_changed(path: Path, data: Any, indent: int = 2) -> bool:

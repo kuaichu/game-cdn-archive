@@ -295,9 +295,14 @@ It can run manually from the Actions tab, and also runs once per day. The job:
 4. Refreshes Wuthering Waves launcher/resource-index data.
 5. Resolves supported Android latest-download endpoints and indexes new APK
    URLs.
-6. Commits and pushes only when generated data actually changes.
-7. Deploys to Cloudflare Pages when a repository secret named
+6. Continues through later sync sources even if one upstream source fails, then
+   reports a partial-failure workflow result at the end.
+7. Commits and pushes generated changes when the data update steps succeed
+   enough to produce valid output.
+8. Deploys to Cloudflare Pages when a repository secret named
    `CLOUDFLARE_API_TOKEN` is available.
+9. Optionally sends a Telegram summary when repository secrets named
+   `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` are configured.
 
 The separate `.github/workflows/deploy-pages.yml` workflow deploys the static
 site on every push to `main` and can also be run manually.
