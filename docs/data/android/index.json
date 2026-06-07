@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-07T14:08:18.902957+00:00",
-  "generated_at": "2026-06-07T14:08:18.902957+00:00",
+  "last_checked_at": "2026-06-07T23:44:14.364581+00:00",
+  "generated_at": "2026-06-07T23:44:14.364581+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -434,6 +434,24 @@
       "versions": [
         {
           "game_id": "wuwa",
+          "version": "3.4.0",
+          "channel": "官渠",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20260602140107_UQyAIKmc2P9CJ2zSXf/%E9%B8%A3%E6%BD%AE_3.4.0_170559099_33_%E5%AE%98%E6%B8%A0_0151cd62aef4c25ab11e32a40e05ddc4_shelled.apk",
+          "source": "official Wuthering Waves Android download index",
+          "source_url": "https://download.kurogames.com/mc_WnGtDn85y8lJB4mTmYHYuNjIl9n6YGVm/official/cn/zh-Hans/android_app.json",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2016398059,
+          "last_modified": "Tue, 02 Jun 2026 06:01:13 GMT",
+          "etag": "ae8a817cc1a0331ae8d914cbfc989f64-39",
+          "md5": "0151cd62aef4c25ab11e32a40e05ddc4",
+          "crc64": "8058118400426582515",
+          "error": "",
+          "filename": "鸣潮_3.4.0_170559099_33_官渠_0151cd62aef4c25ab11e32a40e05ddc4_shelled.apk",
+          "captured_at": "2026-06-07T23:44:14.364581+00:00"
+        },
+        {
+          "game_id": "wuwa",
           "version": "3.3.2",
           "channel": "官渠",
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20260516183706_FRC8o8CQS9L44Ra4WW/%E9%B8%A3%E6%BD%AE_3.3.2_168377155_33_%E5%AE%98%E6%B8%A0_32e97887831ba8ca620f93b4aa2ad0ff_shelled.apk",
@@ -485,6 +503,11 @@
         }
       ],
       "links": {
+        "3.4.0": {
+          "urls": "data/android/lists/wuwa_3.4.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.4.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.4.0_android.json"
+        },
         "3.3.2": {
           "urls": "data/android/lists/wuwa_3.3.2_android.urls.txt",
           "aria2": "data/android/lists/wuwa_3.3.2_android.aria2.txt",
