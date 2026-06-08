@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-08T18:23:36.007646+00:00",
-  "generated_at": "2026-06-08T18:23:36.007646+00:00",
+  "last_checked_at": "2026-06-08T18:26:03.629191+00:00",
+  "generated_at": "2026-06-08T18:26:03.629191+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -99,13 +99,10 @@
       "versions": [
         {
           "game_id": "aethergazer",
-          "version": "0.305.2",
-          "channel": "gwdl",
-          "url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-          "source": "official Aether Gazer Android download endpoint; resolves to a CDN URL",
-          "source_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-          "archive_url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
-          "archive_note": "CDN URL captured during sync",
+          "version": "0.305.3",
+          "channel": "305",
+          "url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
+          "source": "official CDN URL provided by user",
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
           "size": 2023625968,
@@ -115,7 +112,7 @@
           "crc64": "8155058698090329544",
           "error": "",
           "filename": "ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
-          "captured_at": "2026-06-06T20:12:21.605318+00:00"
+          "captured_at": "2026-06-08T18:26:03.629191+00:00"
         },
         {
           "game_id": "aethergazer",
@@ -170,10 +167,10 @@
         }
       ],
       "links": {
-        "0.305.2": {
-          "urls": "data/android/lists/aethergazer_0.305.2_android.urls.txt",
-          "aria2": "data/android/lists/aethergazer_0.305.2_android.aria2.txt",
-          "json": "data/android/lists/aethergazer_0.305.2_android.json"
+        "0.305.3": {
+          "urls": "data/android/lists/aethergazer_0.305.3_android.urls.txt",
+          "aria2": "data/android/lists/aethergazer_0.305.3_android.aria2.txt",
+          "json": "data/android/lists/aethergazer_0.305.3_android.json"
         },
         "0.303.501": {
           "urls": "data/android/lists/aethergazer_0.303.501_android.urls.txt",

@@ -1114,6 +1114,15 @@ KNOWN_APKS = [
         "source": "official CDN URL recovered from archive.org CDX search",
     },
 
+
+    {
+        "game_id": "aethergazer",
+        "version": "0.305.3",
+        "channel": "305",
+        "url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
+        "source": "official CDN URL provided by user",
+    },
+
 ]
 
 GAME_NAMES = {
