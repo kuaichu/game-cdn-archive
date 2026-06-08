@@ -1016,6 +1016,30 @@ KNOWN_APKS = [
         "source": "CBT3 closed beta APK; URL sourced from a 2020 forum post, original CDN link no longer accessible",
     },
 
+
+    # === nap (绝区零) - recovered from CDX ===
+    {
+        "game_id": "nap",
+        "version": "1.0",
+        "channel": "mktbackup2",
+        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240623113017_aqRjyJNQjPi1XNZN/mktbackup2/ZenlessZoneZero_1.0.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    {
+        "game_id": "nap",
+        "version": "1.0",
+        "channel": "oonrzywymxk1",
+        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240623113017_aqRjyJNQjPi1XNZN/oonrzywymxk1/ZenlessZoneZero_1.0.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    {
+        "game_id": "nap",
+        "version": "1.7",
+        "channel": "gw",
+        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20250410105547_du1FLxuQOSTj5Rjh/gw/ZenlessZoneZero_1.7.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+
 ]
 
 GAME_NAMES = {
