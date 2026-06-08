@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-08T16:40:00.303054+00:00",
-  "generated_at": "2026-06-08T16:40:00.303054+00:00",
+  "last_checked_at": "2026-06-08T17:44:40.153103+00:00",
+  "generated_at": "2026-06-08T17:44:40.153103+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -469,6 +469,23 @@
         },
         {
           "game_id": "wuwa",
+          "version": "3.0.1",
+          "channel": "kuro_tf52",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20251230153335_DIaYUy2QRRUcV9JRgM/KR_TF_52-%E9%B8%A3%E6%BD%AE_3.0.1_157207705_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_0812c3eaf14c876481e41cb9783e11cf_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 566,
+          "last_modified": "",
+          "etag": "",
+          "md5": "0812c3eaf14c876481e41cb9783e11cf",
+          "crc64": "",
+          "error": "",
+          "filename": "KR_TF_52-鸣潮_3.0.1_157207705_33_库洛_投放包_1_0812c3eaf14c876481e41cb9783e11cf_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
           "version": "3.0.0",
           "channel": "官渠",
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20251218163511_GpB6itW0p623nE4SMi/%E9%B8%A3%E6%BD%AE_3.0.0_156399220_33_%E5%AE%98%E6%B8%A0_e76c2d8ea383e31af9a8ac20ae3f02e1_shelled.apk",
@@ -500,6 +517,244 @@
           "error": "",
           "filename": "鸣潮_2.7.0_149269354_33_官渠_a8cc769870e6ffbad35575179e98b30d_shelled.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "2.6.0",
+          "channel": "kuro_tf41",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20250825103928_on6XW04clnHhBnrvCe/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.6.0_145597397__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_d9bb02269dfea9e4084cb4f0f141e4c4_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 564,
+          "last_modified": "",
+          "etag": "",
+          "md5": "d9bb02269dfea9e4084cb4f0f141e4c4",
+          "crc64": "",
+          "error": "",
+          "filename": "KR_TF_41-鸣潮_2.6.0_145597397__库洛_投放包_1_d9bb02269dfea9e4084cb4f0f141e4c4_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "2.5.0",
+          "channel": "kuro_tf41",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20250721175818_mtpHRQl6I2qBYIj4w0/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.5.0_142563591__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_d52f6d505a9741173a20005313a7c594_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 564,
+          "last_modified": "",
+          "etag": "",
+          "md5": "d52f6d505a9741173a20005313a7c594",
+          "crc64": "",
+          "error": "",
+          "filename": "KR_TF_41-鸣潮_2.5.0_142563591__库洛_投放包_1_d52f6d505a9741173a20005313a7c594_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "2.4.1",
+          "channel": "kuro_tf41",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20250709105231_grUsSFZZmVEXfwkHyM/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.4.1_141938334__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_0198dea9f935f0df478aeae416b85a83_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 564,
+          "last_modified": "",
+          "etag": "",
+          "md5": "0198dea9f935f0df478aeae416b85a83",
+          "crc64": "",
+          "error": "",
+          "filename": "KR_TF_41-鸣潮_2.4.1_141938334__库洛_投放包_1_0198dea9f935f0df478aeae416b85a83_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "2.4.0",
+          "channel": "kuro_tf41",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20250609192249_lbNQFD2LbLW5ZWemLF/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.4.0_139015362__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_82ecc5a3dad3ec68f67500dbf289f2c3_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 564,
+          "last_modified": "",
+          "etag": "",
+          "md5": "82ecc5a3dad3ec68f67500dbf289f2c3",
+          "crc64": "",
+          "error": "",
+          "filename": "KR_TF_41-鸣潮_2.4.0_139015362__库洛_投放包_1_82ecc5a3dad3ec68f67500dbf289f2c3_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "2.3.0",
+          "channel": "kuro_tf41",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20250423181738_d3TQAVpJNjy9CIsriH/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.3.0_135127140__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_2d29eda4701501e76b018f280b7ccf0_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 563,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "KR_TF_41-鸣潮_2.3.0_135127140__库洛_投放包_1_2d29eda4701501e76b018f280b7ccf0_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "2.2.0",
+          "channel": "guanqu",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20250320142224_4EhecQOUHby0rlb4JK/%E9%B8%A3%E6%BD%AE_2.2.0_131924627__%E5%AE%98%E6%B8%A0_fa10fc740c571c2e68366a447b57bff3_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2018073369,
+          "last_modified": "Thu, 20 Mar 2025 06:22:30 GMT",
+          "etag": "ac3422c47125cbcf51a6472f259169e6-39",
+          "md5": "fa10fc740c571c2e68366a447b57bff3",
+          "crc64": "7832300854939393280",
+          "error": "",
+          "filename": "鸣潮_2.2.0_131924627__官渠_fa10fc740c571c2e68366a447b57bff3_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "2.1.1",
+          "channel": "guanqu",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20250303101706_MQcbLujOCnf4R9G6R7/%E9%B8%A3%E6%BD%AE_2.1.1_127864672__%E5%AE%98%E6%B8%A0_eb769f191b1aaaf291dcf9a56fbcd1d7_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2020387609,
+          "last_modified": "Mon, 03 Mar 2025 02:17:12 GMT",
+          "etag": "54630a3c50ac7c647e3c493cd1bca642-39",
+          "md5": "eb769f191b1aaaf291dcf9a56fbcd1d7",
+          "crc64": "16299288753056471903",
+          "error": "",
+          "filename": "鸣潮_2.1.1_127864672__官渠_eb769f191b1aaaf291dcf9a56fbcd1d7_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "2.1.0",
+          "channel": "guanqu",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20250207162516_DgjEaCZcImRq2yzYHd/%E9%B8%A3%E6%BD%AE_2.1.0_127864671__%E5%AE%98%E6%B8%A0_8b870bacfddc4c4752f6b556c8ae6e1a_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2019977118,
+          "last_modified": "Fri, 07 Feb 2025 08:25:22 GMT",
+          "etag": "f8951e4d3432d87015a4eb4124fd165f-39",
+          "md5": "8b870bacfddc4c4752f6b556c8ae6e1a",
+          "crc64": "14228119266706674204",
+          "error": "",
+          "filename": "鸣潮_2.1.0_127864671__官渠_8b870bacfddc4c4752f6b556c8ae6e1a_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "2.0.0",
+          "channel": "guanqu",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20241224103726_DxOIeFzo0WOzqOufSL/%E9%B8%A3%E6%BD%AE_2.0.0_124936468__%E5%AE%98%E6%B8%A0_e9e27e3beccb245e79c81bb77a019bc7_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 404,
+          "content_type": "text/html",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "e9e27e3beccb245e79c81bb77a019bc7",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "鸣潮_2.0.0_124936468__官渠_e9e27e3beccb245e79c81bb77a019bc7_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "1.4.0",
+          "channel": "guanqu",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20241104113431_7qYSFuM4phMLA1bfTp/%E9%B8%A3%E6%BD%AE_1.4.0_120822928__%E5%AE%98%E6%B8%A0_5146be995ac1f9d4e918426bae7c869d_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 404,
+          "content_type": "text/html",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "5146be995ac1f9d4e918426bae7c869d",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "鸣潮_1.4.0_120822928__官渠_5146be995ac1f9d4e918426bae7c869d_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "1.3.0",
+          "channel": "guanqu",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20240919153138_DfMc71zrMqk43foG1E/%E9%B8%A3%E6%BD%AE_1.3.0_116761876__%E5%AE%98%E6%B8%A0_56323c8fffdc1701fe2f3d3195a45e9c_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1997604851,
+          "last_modified": "Thu, 19 Sep 2024 07:31:44 GMT",
+          "etag": "974ea8f3524bcd5f04b19244bfbcc4a1-39",
+          "md5": "56323c8fffdc1701fe2f3d3195a45e9c",
+          "crc64": "9946798042755764081",
+          "error": "",
+          "filename": "鸣潮_1.3.0_116761876__官渠_56323c8fffdc1701fe2f3d3195a45e9c_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "1.2.0",
+          "channel": "guanqu",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20240808152445_wfgvR40uxlHKdbvrjc/%E9%B8%A3%E6%BD%AE_1.2.0_112802763__%E5%AE%98%E6%B8%A0_81b08709203b7387d166954acc706a48_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2016298925,
+          "last_modified": "Thu, 08 Aug 2024 07:24:51 GMT",
+          "etag": "26371dfc147e46848bc4b768f632d16a-39",
+          "md5": "81b08709203b7387d166954acc706a48",
+          "crc64": "17936062525847604453",
+          "error": "",
+          "filename": "鸣潮_1.2.0_112802763__官渠_81b08709203b7387d166954acc706a48_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "1.1.0",
+          "channel": "guanqu",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20240621110554_yJFOu44VHg7P6AH1e9/%E9%B8%A3%E6%BD%AE_1.1.0_108846801__%E5%AE%98%E6%B8%A0_bbda348a919f317ed975e5486bdbba49_shelled.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2000487630,
+          "last_modified": "Fri, 21 Jun 2024 03:06:00 GMT",
+          "etag": "67120cb61e8e6f3cb46fff66fb24be39-39",
+          "md5": "bbda348a919f317ed975e5486bdbba49",
+          "crc64": "9273905964516548067",
+          "error": "",
+          "filename": "鸣潮_1.1.0_108846801__官渠_bbda348a919f317ed975e5486bdbba49_shelled.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "1.0.0",
+          "channel": "official",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20240515180358_GMXTiY9I3QUipDJypL/%E9%B8%A3%E6%BD%AE_1.0.0_official.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 404,
+          "content_type": "text/html",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "鸣潮_1.0.0_official.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
         }
       ],
       "links": {
@@ -513,6 +768,11 @@
           "aria2": "data/android/lists/wuwa_3.3.2_android.aria2.txt",
           "json": "data/android/lists/wuwa_3.3.2_android.json"
         },
+        "3.0.1": {
+          "urls": "data/android/lists/wuwa_3.0.1_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.0.1_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.0.1_android.json"
+        },
         "3.0.0": {
           "urls": "data/android/lists/wuwa_3.0.0_android.urls.txt",
           "aria2": "data/android/lists/wuwa_3.0.0_android.aria2.txt",
@@ -522,6 +782,76 @@
           "urls": "data/android/lists/wuwa_2.7.0_android.urls.txt",
           "aria2": "data/android/lists/wuwa_2.7.0_android.aria2.txt",
           "json": "data/android/lists/wuwa_2.7.0_android.json"
+        },
+        "2.6.0": {
+          "urls": "data/android/lists/wuwa_2.6.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_2.6.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_2.6.0_android.json"
+        },
+        "2.5.0": {
+          "urls": "data/android/lists/wuwa_2.5.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_2.5.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_2.5.0_android.json"
+        },
+        "2.4.1": {
+          "urls": "data/android/lists/wuwa_2.4.1_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_2.4.1_android.aria2.txt",
+          "json": "data/android/lists/wuwa_2.4.1_android.json"
+        },
+        "2.4.0": {
+          "urls": "data/android/lists/wuwa_2.4.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_2.4.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_2.4.0_android.json"
+        },
+        "2.3.0": {
+          "urls": "data/android/lists/wuwa_2.3.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_2.3.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_2.3.0_android.json"
+        },
+        "2.2.0": {
+          "urls": "data/android/lists/wuwa_2.2.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_2.2.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_2.2.0_android.json"
+        },
+        "2.1.1": {
+          "urls": "data/android/lists/wuwa_2.1.1_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_2.1.1_android.aria2.txt",
+          "json": "data/android/lists/wuwa_2.1.1_android.json"
+        },
+        "2.1.0": {
+          "urls": "data/android/lists/wuwa_2.1.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_2.1.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_2.1.0_android.json"
+        },
+        "2.0.0": {
+          "urls": "data/android/lists/wuwa_2.0.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_2.0.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_2.0.0_android.json"
+        },
+        "1.4.0": {
+          "urls": "data/android/lists/wuwa_1.4.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_1.4.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_1.4.0_android.json"
+        },
+        "1.3.0": {
+          "urls": "data/android/lists/wuwa_1.3.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_1.3.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_1.3.0_android.json"
+        },
+        "1.2.0": {
+          "urls": "data/android/lists/wuwa_1.2.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_1.2.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_1.2.0_android.json"
+        },
+        "1.1.0": {
+          "urls": "data/android/lists/wuwa_1.1.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_1.1.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_1.1.0_android.json"
+        },
+        "1.0.0": {
+          "urls": "data/android/lists/wuwa_1.0.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_1.0.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_1.0.0_android.json"
         }
       }
     },
@@ -704,7 +1034,7 @@
           "version": "6.3.0",
           "channel": "mihoyo",
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260105194354_Hg1kdEKFbVyCgBcZ/mihoyo/yuanshen_6.3.0.apk",
-          "source": "official download porter latest endpoint",
+          "source": "official CDN URL recovered from archive.org CDX search",
           "source_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260105194354_Hg1kdEKFbVyCgBcZ/mihoyo/yuanshen_6.3.0.apk",
           "status": 200,
           "content_type": "application/vnd.android.package-archive;charset=UTF-8",
@@ -790,7 +1120,7 @@
           "version": "5.7.0",
           "channel": "mihoyo",
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20250606180410_KknDJ8NyESkCPBvH/mihoyo/yuanshen_5.7.0.apk",
-          "source": "official download porter latest endpoint",
+          "source": "official CDN URL recovered from archive.org CDX search",
           "source_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20250606180410_KknDJ8NyESkCPBvH/mihoyo/yuanshen_5.7.0.apk",
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
@@ -893,7 +1223,7 @@
           "version": "5.1.0",
           "channel": "mihoyo",
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20240927184040_XnwSMMsa18eRD0fz/mihoyo/yuanshen_5.1.0.apk",
-          "source": "official download porter latest endpoint",
+          "source": "official CDN URL recovered from archive.org CDX search",
           "source_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20240927184040_XnwSMMsa18eRD0fz/mihoyo/yuanshen_5.1.0.apk",
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
@@ -996,7 +1326,7 @@
           "version": "4.4.0",
           "channel": "mihoyo",
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20240122140232_rebB7JXUoZcId5WF/mihoyo/yuanshen_4.4.0.apk",
-          "source": "official download porter latest endpoint",
+          "source": "official CDN URL recovered from archive.org CDX search",
           "source_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20240122140232_rebB7JXUoZcId5WF/mihoyo/yuanshen_4.4.0.apk",
           "status": 200,
           "content_type": "application/vnd.android.package-archive;charset=UTF-8",
@@ -1014,7 +1344,7 @@
           "version": "4.3.0",
           "channel": "mihoyo",
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20231211150750_A8Q7WahLfCaG6pNu/mihoyo/yuanshen_4.3.0.apk",
-          "source": "official download porter latest endpoint",
+          "source": "official CDN URL recovered from archive.org CDX search",
           "source_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20231211150750_A8Q7WahLfCaG6pNu/mihoyo/yuanshen_4.3.0.apk",
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
@@ -1049,7 +1379,7 @@
           "version": "3.8.0",
           "channel": "mihoyo",
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20230625152748_Ih7bdShLfP9DkxVD/mihoyo/yuanshen_3.8.0.apk",
-          "source": "official download porter latest endpoint",
+          "source": "official CDN URL recovered from archive.org CDX search",
           "source_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20230625152748_Ih7bdShLfP9DkxVD/mihoyo/yuanshen_3.8.0.apk",
           "status": 200,
           "content_type": "application/vnd.android.package-archive;charset=UTF-8",
@@ -1203,7 +1533,7 @@
           "version": "2.8.0",
           "channel": "ydbackup308",
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20220704153809_VQU8ZYPfctnoKBrB/ydbackup308/yuanshen_2.8.0.apk",
-          "source": "official download porter latest endpoint",
+          "source": "official CDN URL recovered from archive.org CDX search",
           "source_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20220704153809_VQU8ZYPfctnoKBrB/ydbackup308/yuanshen_2.8.0.apk",
           "status": 200,
           "content_type": "application/vnd.android.package-archive;charset=UTF-8",
@@ -1221,7 +1551,7 @@
           "version": "2.7.0",
           "channel": "mihoyo",
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20220516191350_a8NUjZ1Vie2blUVC/mihoyo/yuanshen_2.7.0.apk",
-          "source": "official download porter latest endpoint",
+          "source": "official CDN URL recovered from archive.org CDX search",
           "source_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20220516191350_a8NUjZ1Vie2blUVC/mihoyo/yuanshen_2.7.0.apk",
           "status": 200,
           "content_type": "application/vnd.android.package-archive;charset=UTF-8",
@@ -1253,10 +1583,27 @@
         },
         {
           "game_id": "hk4e",
+          "version": "2.5.0",
+          "channel": "mihoyo",
+          "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20220203212134_R2K36VO9daAhNt88/mihoyo/yuanshen_2.5.0.apk",
+          "source": "official CDN URL provided by user",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 216461331,
+          "last_modified": "Tue, 08 Feb 2022 03:53:30 GMT",
+          "etag": "7D9D5F89ECDE4E4A50AED5D17D894D5F-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "yuanshen_2.5.0.apk",
+          "captured_at": "2026-06-08T17:44:40.153103+00:00"
+        },
+        {
+          "game_id": "hk4e",
           "version": "2.4.0",
           "channel": "mihoyo",
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20211221204338_arWQkucokKWFbA6b/mihoyo/yuanshen_2.4.0.apk",
-          "source": "official download porter latest endpoint",
+          "source": "official CDN URL recovered from archive.org CDX search",
           "source_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20211221204338_arWQkucokKWFbA6b/mihoyo/yuanshen_2.4.0.apk",
           "status": 200,
           "content_type": "application/vnd.android.package-archive;charset=UTF-8",
@@ -1268,6 +1615,40 @@
           "error": "",
           "filename": "yuanshen_2.4.0.apk",
           "captured_at": "2026-06-08T16:40:00.303054+00:00"
+        },
+        {
+          "game_id": "hk4e",
+          "version": "2.3.0",
+          "channel": "mihoyo",
+          "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20211115112423_mcqMxJ8RGidTl6Ho/mihoyo/yuanshen_2.3.0_mihoyo.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 258637118,
+          "last_modified": "Mon, 15 Nov 2021 03:28:01 GMT",
+          "etag": "0460F2DFC3AD3AB7E602B0D812281A60-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "yuanshen_2.3.0_mihoyo.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "hk4e",
+          "version": "2.2.0",
+          "channel": "mihoyo",
+          "url": "https://autopatchcn.yuanshen.com/client_app/Android/20211013_6371803a7950091f/yuanshen_2.2.0_mihoyo.apk",
+          "source": "official CDN URL provided by user",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 255873460,
+          "last_modified": "Tue, 28 Sep 2021 11:57:00 GMT",
+          "etag": "C58F3204127A51E4407D9969768E1FEB-25",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "yuanshen_2.2.0_mihoyo.apk",
+          "captured_at": "2026-06-08T17:44:40.153103+00:00"
         },
         {
           "game_id": "hk4e",
@@ -1291,7 +1672,7 @@
           "version": "2.0.0",
           "channel": "ydadmgsky",
           "url": "https://autopatchcn.yuanshen.com/client_app/Android/20210721_d7f1e0ad308120d3/ydadmgsky/yuanshen_2.0.0.apk",
-          "source": "official download porter latest endpoint",
+          "source": "official CDN URL recovered from archive.org CDX search",
           "source_url": "https://autopatchcn.yuanshen.com/client_app/Android/20210721_d7f1e0ad308120d3/ydadmgsky/yuanshen_2.0.0.apk",
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
@@ -1340,6 +1721,40 @@
         },
         {
           "game_id": "hk4e",
+          "version": "1.4.0",
+          "channel": "mihoyo",
+          "url": "https://autopatchcn.yuanshen.com/client_app/Android/20210317_89cc7ee76bc22c55/yuanshen_1.4.0_mihoyo.apk",
+          "source": "official CDN URL provided by user",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 206294286,
+          "last_modified": "Tue, 09 Mar 2021 06:42:30 GMT",
+          "etag": "89F54F4B7134CF35EA686F266C3553F5-20",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "yuanshen_1.4.0_mihoyo.apk",
+          "captured_at": "2026-06-08T17:44:40.153103+00:00"
+        },
+        {
+          "game_id": "hk4e",
+          "version": "1.3.0",
+          "channel": "mihoyo",
+          "url": "https://autopatchcn.yuanshen.com/client_app/Android/20210203_e45f41e272abcec8/yuanshen_1.3.0_mihoyo.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 190508425,
+          "last_modified": "Mon, 25 Jan 2021 10:01:24 GMT",
+          "etag": "8D573586C904504B64D7C0A6FC7CDFA4-19",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "yuanshen_1.3.0_mihoyo.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "hk4e",
           "version": "1.2.0",
           "channel": "mihoyo",
           "url": "https://autopatchcn.yuanshen.com/client_app/Android/20201223_3a5cd05350de467d/yuanshen_1.2.0_mihoyo.apk",
@@ -1354,6 +1769,40 @@
           "error": "",
           "filename": "yuanshen_1.2.0_mihoyo.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00"
+        },
+        {
+          "game_id": "hk4e",
+          "version": "1.1.1",
+          "channel": "mihoyo",
+          "url": "https://autopatchcn.yuanshen.com/client_app/Android/20201111_c957958f02d43b5b/yuanshen_1.1.1_mihoyo.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 152568499,
+          "last_modified": "Fri, 06 Nov 2020 09:32:33 GMT",
+          "etag": "A6FF16DB6B5D79CAFC8CC3C05AD48E2F-15",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "yuanshen_1.1.1_mihoyo.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "hk4e",
+          "version": "1.0.0",
+          "channel": "mihoyo",
+          "url": "https://autopatchcn.yuanshen.com/client_app/Android/20200928_75e9e7b1e7e3cd66/yuanshen_1.0.0_mihoyo.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 143024280,
+          "last_modified": "Tue, 22 Sep 2020 14:26:08 GMT",
+          "etag": "1B4D7090354E4A4B73BA630C6DB15B4C-14",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "yuanshen_1.0.0_mihoyo.apk",
+          "captured_at": "2026-06-08T17:43:05.181300+00:00"
         }
       ],
       "links": {
@@ -1527,10 +1976,25 @@
           "aria2": "data/android/lists/hk4e_2.6.0_android.aria2.txt",
           "json": "data/android/lists/hk4e_2.6.0_android.json"
         },
+        "2.5.0": {
+          "urls": "data/android/lists/hk4e_2.5.0_android.urls.txt",
+          "aria2": "data/android/lists/hk4e_2.5.0_android.aria2.txt",
+          "json": "data/android/lists/hk4e_2.5.0_android.json"
+        },
         "2.4.0": {
           "urls": "data/android/lists/hk4e_2.4.0_android.urls.txt",
           "aria2": "data/android/lists/hk4e_2.4.0_android.aria2.txt",
           "json": "data/android/lists/hk4e_2.4.0_android.json"
+        },
+        "2.3.0": {
+          "urls": "data/android/lists/hk4e_2.3.0_android.urls.txt",
+          "aria2": "data/android/lists/hk4e_2.3.0_android.aria2.txt",
+          "json": "data/android/lists/hk4e_2.3.0_android.json"
+        },
+        "2.2.0": {
+          "urls": "data/android/lists/hk4e_2.2.0_android.urls.txt",
+          "aria2": "data/android/lists/hk4e_2.2.0_android.aria2.txt",
+          "json": "data/android/lists/hk4e_2.2.0_android.json"
         },
         "2.1.0": {
           "urls": "data/android/lists/hk4e_2.1.0_android.urls.txt",
@@ -1552,10 +2016,30 @@
           "aria2": "data/android/lists/hk4e_1.5.1_android.aria2.txt",
           "json": "data/android/lists/hk4e_1.5.1_android.json"
         },
+        "1.4.0": {
+          "urls": "data/android/lists/hk4e_1.4.0_android.urls.txt",
+          "aria2": "data/android/lists/hk4e_1.4.0_android.aria2.txt",
+          "json": "data/android/lists/hk4e_1.4.0_android.json"
+        },
+        "1.3.0": {
+          "urls": "data/android/lists/hk4e_1.3.0_android.urls.txt",
+          "aria2": "data/android/lists/hk4e_1.3.0_android.aria2.txt",
+          "json": "data/android/lists/hk4e_1.3.0_android.json"
+        },
         "1.2.0": {
           "urls": "data/android/lists/hk4e_1.2.0_android.urls.txt",
           "aria2": "data/android/lists/hk4e_1.2.0_android.aria2.txt",
           "json": "data/android/lists/hk4e_1.2.0_android.json"
+        },
+        "1.1.1": {
+          "urls": "data/android/lists/hk4e_1.1.1_android.urls.txt",
+          "aria2": "data/android/lists/hk4e_1.1.1_android.aria2.txt",
+          "json": "data/android/lists/hk4e_1.1.1_android.json"
+        },
+        "1.0.0": {
+          "urls": "data/android/lists/hk4e_1.0.0_android.urls.txt",
+          "aria2": "data/android/lists/hk4e_1.0.0_android.aria2.txt",
+          "json": "data/android/lists/hk4e_1.0.0_android.json"
         }
       }
     },
