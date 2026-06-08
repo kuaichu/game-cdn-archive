@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-08T16:03:51.220985+00:00",
-  "generated_at": "2026-06-08T16:03:51.220985+00:00",
+  "last_checked_at": "2026-06-08T16:11:52.960334+00:00",
+  "generated_at": "2026-06-08T16:11:52.960334+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -1371,6 +1371,23 @@
         {
           "game_id": "hkrpg",
           "version": "3.8.0",
+          "channel": "backup1_An",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20251205193454_2JAzO0tkfc1lPb0c/backup1_An/StarRail_3.8.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 370714492,
+          "last_modified": "Fri, 05 Dec 2025 11:36:04 GMT",
+          "etag": "0500A0215D20B6F16AF309031C2235A9-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_3.8.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "3.8.0",
           "channel": "gw_An",
           "url": "https://autopatchcn.bhsr.com/client/cn/20251205193454_2JAzO0tkfc1lPb0c/gw_An/StarRail_3.8.0.apk",
           "source": "official CDN URL captured manually",
@@ -1384,6 +1401,23 @@
           "error": "",
           "filename": "StarRail_3.8.0.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "3.7.0",
+          "channel": "gw_An",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20251025162622_alR6Tz1Le986Lu9q/gw_An/StarRail_3.7.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 364194771,
+          "last_modified": "Sat, 25 Oct 2025 08:28:25 GMT",
+          "etag": "119E107138D1455A1E018477E820D95C-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_3.7.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
         },
         {
           "game_id": "hkrpg",
@@ -1422,6 +1456,23 @@
         {
           "game_id": "hkrpg",
           "version": "3.5.0",
+          "channel": "gw_An",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20250801095521_kFIVD1SzuosxW9vr/gw_An/StarRail_3.5.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 332811090,
+          "last_modified": "Fri, 01 Aug 2025 01:56:46 GMT",
+          "etag": "70B69E35B0F4A895507DC85CB6281B07-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_3.5.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "3.5.0",
           "channel": "ad_dyst12_An",
           "url": "https://autopatchcn.bhsr.com/client/cn/20250801095521_kFIVD1SzuosxW9vr/ad_dyst12_An/StarRail_3.5.0.apk",
           "source": "official CDN URL captured manually",
@@ -1455,6 +1506,57 @@
         },
         {
           "game_id": "hkrpg",
+          "version": "3.3.0",
+          "channel": "gw_An",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20250509160832_GYFFC7NLruyZB5hq/gw_An/StarRail_3.3.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 326230663,
+          "last_modified": "Fri, 09 May 2025 08:10:33 GMT",
+          "etag": "6132CACE64362A2220D47BBDED638E0E-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_3.3.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "3.2.0",
+          "channel": "gw_An",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20250328115502_Fay8gx5DMPr95mmh/gw_An/StarRail_3.2.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 302953671,
+          "last_modified": "Fri, 28 Mar 2025 04:00:18 GMT",
+          "etag": "4990F43BBD6B8F86B0B1EDDDFE37DD92-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_3.2.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "3.1.0",
+          "channel": "gw_An",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20250214151706_oIzdt9FPrcWYnq4F/gw_An/StarRail_3.1.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 290078627,
+          "last_modified": "Fri, 14 Feb 2025 07:19:11 GMT",
+          "etag": "A2054A222F9FFC13191AD9811B8643C8-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_3.1.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
           "version": "3.1.0",
           "channel": "mihoyo_1",
           "url": "https://autopatchcn.bhsr.com/client/cn/20250214151706_oIzdt9FPrcWYnq4F/mihoyo_1/StarRail_3.1.0.apk",
@@ -1469,6 +1571,91 @@
           "error": "",
           "filename": "StarRail_3.1.0.apk",
           "captured_at": "2026-06-07T00:22:39.219892+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "3.0.0",
+          "channel": "gw_An",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20250102101521_GZIKULA8s13Jmew0/gw_An/StarRail_3.0.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 285809337,
+          "last_modified": "Thu, 02 Jan 2025 02:27:27 GMT",
+          "etag": "CE0D9985D323658C6299EBE6CF6F991B-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_3.0.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "2.7.0",
+          "channel": "gw_An",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20241121163119_GdgAYjnYypkAQKYt/gw_An/StarRail_2.7.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 268154188,
+          "last_modified": "Thu, 21 Nov 2024 16:16:04 GMT",
+          "etag": "1AD44B77997AE62CD560B3DC2F56F822-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_2.7.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "2.6.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20241010190121_XZzSJ4bwKblrS2Kc/gw/StarRail_2.6.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "text/plain",
+          "size": 3,
+          "last_modified": "Fri, 21 Mar 2025 02:40:02 GMT",
+          "etag": "06377DB9F4697DA95000A32DC53F1B61",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_2.6.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "2.5.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20240829163400_T4NhQaIeWzaVVwjM/gw/StarRail_2.5.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "text/plain",
+          "size": 3,
+          "last_modified": "Thu, 20 Feb 2025 10:57:42 GMT",
+          "etag": "06377DB9F4697DA95000A32DC53F1B61",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_2.5.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "2.4.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20240719102722_EhJt8U81MUk0CIGt/gw/StarRail_2.4.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "text/plain",
+          "size": 3,
+          "last_modified": "Thu, 17 Apr 2025 02:43:13 GMT",
+          "etag": "06377DB9F4697DA95000A32DC53F1B61",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_2.4.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
         },
         {
           "game_id": "hkrpg",
@@ -1489,6 +1676,74 @@
         },
         {
           "game_id": "hkrpg",
+          "version": "2.2.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20240425223601_Mh1fhzqWdL6e11cp/gw/StarRail_2.2.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "text/plain",
+          "size": 3,
+          "last_modified": "Thu, 17 Apr 2025 02:42:29 GMT",
+          "etag": "06377DB9F4697DA95000A32DC53F1B61",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_2.2.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "2.1.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20240323143802_CczdNHKo8H8ZpOD8/gw/StarRail_2.1.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "text/plain",
+          "size": 3,
+          "last_modified": "Wed, 04 Sep 2024 03:03:40 GMT",
+          "etag": "06377DB9F4697DA95000A32DC53F1B61",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_2.1.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "2.0.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20240126110214_QvLzGdvYfGBEq4M4/gw/StarRail_2.0.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "text/plain",
+          "size": 3,
+          "last_modified": "Thu, 06 Jun 2024 07:28:10 GMT",
+          "etag": "06377DB9F4697DA95000A32DC53F1B61",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_2.0.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "1.6.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20231215090743_ffCg5V2j0gON2tvr/gw/StarRail_1.6.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "text/plain",
+          "size": 3,
+          "last_modified": "Wed, 12 Jun 2024 06:55:42 GMT",
+          "etag": "06377DB9F4697DA95000A32DC53F1B61",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_1.6.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
           "version": "1.6.0",
           "channel": "mihoyo_8",
           "url": "https://autopatchcn.bhsr.com/client/cn/20231215090743_ffCg5V2j0gON2tvr/mihoyo_8/StarRail_1.6.0.apk",
@@ -1503,6 +1758,23 @@
           "error": "",
           "filename": "StarRail_1.6.0.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "1.5.0",
+          "channel": "gw_An",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20231103101022_A4CvNRMprqjemK7k/gw_An/StarRail_1.5.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "text/plain",
+          "size": 3,
+          "last_modified": "Thu, 06 Jun 2024 12:36:43 GMT",
+          "etag": "06377DB9F4697DA95000A32DC53F1B61",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_1.5.0.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
         },
         {
           "game_id": "hkrpg",
@@ -1524,6 +1796,23 @@
         {
           "game_id": "hkrpg",
           "version": "1.3.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20230818153431_sMKzYZ9EOeT15oNn/StarRail_1.3.0_gw.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "text/plain",
+          "size": 3,
+          "last_modified": "Wed, 12 Jun 2024 06:38:00 GMT",
+          "etag": "06377DB9F4697DA95000A32DC53F1B61",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_1.3.0_gw.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "1.3.0",
           "channel": "mihoyo_8",
           "url": "https://autopatchcn.bhsr.com/client/cn/20230818153431_sMKzYZ9EOeT15oNn/StarRail_1.3.0_mihoyo_8.apk",
           "source": "official CDN URL captured manually",
@@ -1541,6 +1830,23 @@
         {
           "game_id": "hkrpg",
           "version": "1.2.0",
+          "channel": "mihoyo",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20230709224719_3CcrEpEKT9iaObJh/StarRail_1.2.0_mihoyo.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 167204456,
+          "last_modified": "Mon, 10 Jul 2023 06:13:53 GMT",
+          "etag": "56F79A41615C6CE646E1F25A97BE532E-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "StarRail_1.2.0_mihoyo.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "1.2.0",
           "channel": "mihoyo_8",
           "url": "https://autopatchcn.bhsr.com/client/cn/20230709224719_3CcrEpEKT9iaObJh/StarRail_1.2.0_mihoyo_8.apk",
           "source": "official CDN URL captured manually",
@@ -1554,6 +1860,23 @@
           "error": "",
           "filename": "StarRail_1.2.0_mihoyo_8.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00"
+        },
+        {
+          "game_id": "hkrpg",
+          "version": "1.1.0",
+          "channel": "mihoyo_1",
+          "url": "https://autopatchcn.bhsr.com/client/cn/20230527110540_Kt2XHQtmHSq920j9/StarRail_1.1.0_mihoyo_1.apk",
+          "source": "official CDN URL captured manually",
+          "status": 404,
+          "content_type": "text/html",
+          "size": 0,
+          "last_modified": "Thu, 08 Sep 2022 10:13:18 GMT",
+          "etag": "53AF239EE5D3E261545DEDEDCB6FFD57",
+          "md5": "",
+          "crc64": "4510927154085114263",
+          "error": "APK object unavailable",
+          "filename": "StarRail_1.1.0_mihoyo_1.apk",
+          "captured_at": "2026-06-08T16:11:52.960334+00:00"
         },
         {
           "game_id": "hkrpg",
@@ -1638,20 +1961,75 @@
           "aria2": "data/android/lists/hkrpg_3.4.0_android.aria2.txt",
           "json": "data/android/lists/hkrpg_3.4.0_android.json"
         },
+        "3.3.0": {
+          "urls": "data/android/lists/hkrpg_3.3.0_android.urls.txt",
+          "aria2": "data/android/lists/hkrpg_3.3.0_android.aria2.txt",
+          "json": "data/android/lists/hkrpg_3.3.0_android.json"
+        },
+        "3.2.0": {
+          "urls": "data/android/lists/hkrpg_3.2.0_android.urls.txt",
+          "aria2": "data/android/lists/hkrpg_3.2.0_android.aria2.txt",
+          "json": "data/android/lists/hkrpg_3.2.0_android.json"
+        },
         "3.1.0": {
           "urls": "data/android/lists/hkrpg_3.1.0_android.urls.txt",
           "aria2": "data/android/lists/hkrpg_3.1.0_android.aria2.txt",
           "json": "data/android/lists/hkrpg_3.1.0_android.json"
+        },
+        "3.0.0": {
+          "urls": "data/android/lists/hkrpg_3.0.0_android.urls.txt",
+          "aria2": "data/android/lists/hkrpg_3.0.0_android.aria2.txt",
+          "json": "data/android/lists/hkrpg_3.0.0_android.json"
+        },
+        "2.7.0": {
+          "urls": "data/android/lists/hkrpg_2.7.0_android.urls.txt",
+          "aria2": "data/android/lists/hkrpg_2.7.0_android.aria2.txt",
+          "json": "data/android/lists/hkrpg_2.7.0_android.json"
+        },
+        "2.6.0": {
+          "urls": "data/android/lists/hkrpg_2.6.0_android.urls.txt",
+          "aria2": "data/android/lists/hkrpg_2.6.0_android.aria2.txt",
+          "json": "data/android/lists/hkrpg_2.6.0_android.json"
+        },
+        "2.5.0": {
+          "urls": "data/android/lists/hkrpg_2.5.0_android.urls.txt",
+          "aria2": "data/android/lists/hkrpg_2.5.0_android.aria2.txt",
+          "json": "data/android/lists/hkrpg_2.5.0_android.json"
+        },
+        "2.4.0": {
+          "urls": "data/android/lists/hkrpg_2.4.0_android.urls.txt",
+          "aria2": "data/android/lists/hkrpg_2.4.0_android.aria2.txt",
+          "json": "data/android/lists/hkrpg_2.4.0_android.json"
         },
         "2.3.0": {
           "urls": "data/android/lists/hkrpg_2.3.0_android.urls.txt",
           "aria2": "data/android/lists/hkrpg_2.3.0_android.aria2.txt",
           "json": "data/android/lists/hkrpg_2.3.0_android.json"
         },
+        "2.2.0": {
+          "urls": "data/android/lists/hkrpg_2.2.0_android.urls.txt",
+          "aria2": "data/android/lists/hkrpg_2.2.0_android.aria2.txt",
+          "json": "data/android/lists/hkrpg_2.2.0_android.json"
+        },
+        "2.1.0": {
+          "urls": "data/android/lists/hkrpg_2.1.0_android.urls.txt",
+          "aria2": "data/android/lists/hkrpg_2.1.0_android.aria2.txt",
+          "json": "data/android/lists/hkrpg_2.1.0_android.json"
+        },
+        "2.0.0": {
+          "urls": "data/android/lists/hkrpg_2.0.0_android.urls.txt",
+          "aria2": "data/android/lists/hkrpg_2.0.0_android.aria2.txt",
+          "json": "data/android/lists/hkrpg_2.0.0_android.json"
+        },
         "1.6.0": {
           "urls": "data/android/lists/hkrpg_1.6.0_android.urls.txt",
           "aria2": "data/android/lists/hkrpg_1.6.0_android.aria2.txt",
           "json": "data/android/lists/hkrpg_1.6.0_android.json"
+        },
+        "1.5.0": {
+          "urls": "data/android/lists/hkrpg_1.5.0_android.urls.txt",
+          "aria2": "data/android/lists/hkrpg_1.5.0_android.aria2.txt",
+          "json": "data/android/lists/hkrpg_1.5.0_android.json"
         },
         "1.4.0": {
           "urls": "data/android/lists/hkrpg_1.4.0_android.urls.txt",

@@ -414,8 +414,22 @@ KNOWN_APKS = [
     {
         "game_id": "hkrpg",
         "version": "3.8.0",
+        "channel": "backup1_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20251205193454_2JAzO0tkfc1lPb0c/backup1_An/StarRail_3.8.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "3.8.0",
         "channel": "gw_An",
         "url": "https://autopatchcn.bhsr.com/client/cn/20251205193454_2JAzO0tkfc1lPb0c/gw_An/StarRail_3.8.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "3.7.0",
+        "channel": "gw_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20251025162622_alR6Tz1Le986Lu9q/gw_An/StarRail_3.7.0.apk",
         "source": "official CDN URL captured manually",
     },
     {
@@ -435,6 +449,13 @@ KNOWN_APKS = [
     {
         "game_id": "hkrpg",
         "version": "3.5.0",
+        "channel": "gw_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20250801095521_kFIVD1SzuosxW9vr/gw_An/StarRail_3.5.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "3.5.0",
         "channel": "ad_dyst12_An",
         "url": "https://autopatchcn.bhsr.com/client/cn/20250801095521_kFIVD1SzuosxW9vr/ad_dyst12_An/StarRail_3.5.0.apk",
         "source": "official CDN URL captured manually",
@@ -448,9 +469,65 @@ KNOWN_APKS = [
     },
     {
         "game_id": "hkrpg",
+        "version": "3.3.0",
+        "channel": "gw_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20250509160832_GYFFC7NLruyZB5hq/gw_An/StarRail_3.3.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "3.2.0",
+        "channel": "gw_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20250328115502_Fay8gx5DMPr95mmh/gw_An/StarRail_3.2.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "3.1.0",
+        "channel": "gw_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20250214151706_oIzdt9FPrcWYnq4F/gw_An/StarRail_3.1.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
         "version": "3.1.0",
         "channel": "mihoyo_1",
         "url": "https://autopatchcn.bhsr.com/client/cn/20250214151706_oIzdt9FPrcWYnq4F/mihoyo_1/StarRail_3.1.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "3.0.0",
+        "channel": "gw_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20250102101521_GZIKULA8s13Jmew0/gw_An/StarRail_3.0.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "2.7.0",
+        "channel": "gw_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20241121163119_GdgAYjnYypkAQKYt/gw_An/StarRail_2.7.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "2.6.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20241010190121_XZzSJ4bwKblrS2Kc/gw/StarRail_2.6.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "2.5.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20240829163400_T4NhQaIeWzaVVwjM/gw/StarRail_2.5.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "2.4.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20240719102722_EhJt8U81MUk0CIGt/gw/StarRail_2.4.0.apk",
         "source": "official CDN URL captured manually",
     },
     {
@@ -462,9 +539,44 @@ KNOWN_APKS = [
     },
     {
         "game_id": "hkrpg",
+        "version": "2.2.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20240425223601_Mh1fhzqWdL6e11cp/gw/StarRail_2.2.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "2.1.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20240323143802_CczdNHKo8H8ZpOD8/gw/StarRail_2.1.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "2.0.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20240126110214_QvLzGdvYfGBEq4M4/gw/StarRail_2.0.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "1.6.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20231215090743_ffCg5V2j0gON2tvr/gw/StarRail_1.6.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
         "version": "1.6.0",
         "channel": "mihoyo_8",
         "url": "https://autopatchcn.bhsr.com/client/cn/20231215090743_ffCg5V2j0gON2tvr/mihoyo_8/StarRail_1.6.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "1.5.0",
+        "channel": "gw_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20231103101022_A4CvNRMprqjemK7k/gw_An/StarRail_1.5.0.apk",
         "source": "official CDN URL captured manually",
     },
     {
@@ -477,6 +589,13 @@ KNOWN_APKS = [
     {
         "game_id": "hkrpg",
         "version": "1.3.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20230818153431_sMKzYZ9EOeT15oNn/StarRail_1.3.0_gw.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "1.3.0",
         "channel": "mihoyo_8",
         "url": "https://autopatchcn.bhsr.com/client/cn/20230818153431_sMKzYZ9EOeT15oNn/StarRail_1.3.0_mihoyo_8.apk",
         "source": "official CDN URL captured manually",
@@ -484,8 +603,22 @@ KNOWN_APKS = [
     {
         "game_id": "hkrpg",
         "version": "1.2.0",
+        "channel": "mihoyo",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20230709224719_3CcrEpEKT9iaObJh/StarRail_1.2.0_mihoyo.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "1.2.0",
         "channel": "mihoyo_8",
         "url": "https://autopatchcn.bhsr.com/client/cn/20230709224719_3CcrEpEKT9iaObJh/StarRail_1.2.0_mihoyo_8.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "1.1.0",
+        "channel": "mihoyo_1",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20230527110540_Kt2XHQtmHSq920j9/StarRail_1.1.0_mihoyo_1.apk",
         "source": "official CDN URL captured manually",
     },
     {
@@ -1478,10 +1611,9 @@ def main() -> None:
                 entry["captured_at"] = same_source.get("captured_at", entry["captured_at"])
                 entry["archive_url"] = same_source.get("archive_url") or entry.get("archive_url", "")
                 entry["archive_note"] = same_source.get("archive_note") or entry.get("archive_note", "")
-        if entry.get("source_url"):
-            if has_same_apk_hash(entry, entries):
-                print(f"skip duplicate APK hash: {entry['game_id']} {entry['version']} {entry['url']}")
-                continue
+        if entry.get("source_url") and has_same_apk_hash(entry, entries):
+            print(f"skip duplicate APK hash: {entry['game_id']} {entry['version']} {entry['url']}")
+            continue
         entries.append(entry)
 
     games: dict[str, dict] = {}
