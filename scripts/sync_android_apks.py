@@ -1259,6 +1259,16 @@ KNOWN_APKS = [
         "source": "official CDN URL recovered from archive.org CDX search",
     },
 
+
+    # === arknights - latest build (override auto-resolved version) ===
+    {
+        "game_id": "arknights",
+        "version": "2741.0.0",
+        "channel": "hg",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/package/1/1/Android/74.0.0_UR6RdckAf6SA49i2/arknights-hg-2741.apk",
+        "source": "official CDN URL captured from latest endpoint; build 2741",
+    },
+
 ]
 
 GAME_NAMES = {
