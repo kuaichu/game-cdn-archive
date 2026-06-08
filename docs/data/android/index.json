@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-08T13:26:10.189973+00:00",
-  "generated_at": "2026-06-08T13:26:10.189973+00:00",
+  "last_checked_at": "2026-06-08T14:20:17.233052+00:00",
+  "generated_at": "2026-06-08T14:20:17.233052+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -820,6 +820,23 @@
         },
         {
           "game_id": "hk4e",
+          "version": "5.3.0",
+          "channel": "mihoyo",
+          "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20241223180529_TD3XG9XKsqN3o88m/mihoyo/yuanshen_5.3.0.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive;charset=UTF-8",
+          "size": 356222544,
+          "last_modified": "Tue, 24 Dec 2024 03:12:11 GMT",
+          "etag": "luWDSzKi_Q-6bpORjTvZdt1cirDr",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "yuanshen_5.3.0.apk",
+          "captured_at": "2026-06-08T14:20:17.233052+00:00"
+        },
+        {
+          "game_id": "hk4e",
           "version": "5.2.0",
           "channel": "mihoyo",
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20241108184319_6NzQMQfgYmRRtnw5/mihoyo/yuanshen_5.2.0.apk",
@@ -1204,6 +1221,11 @@
           "urls": "data/android/lists/hk4e_5.4.0_android.urls.txt",
           "aria2": "data/android/lists/hk4e_5.4.0_android.aria2.txt",
           "json": "data/android/lists/hk4e_5.4.0_android.json"
+        },
+        "5.3.0": {
+          "urls": "data/android/lists/hk4e_5.3.0_android.urls.txt",
+          "aria2": "data/android/lists/hk4e_5.3.0_android.aria2.txt",
+          "json": "data/android/lists/hk4e_5.3.0_android.json"
         },
         "5.2.0": {
           "urls": "data/android/lists/hk4e_5.2.0_android.urls.txt",
