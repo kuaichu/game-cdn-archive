@@ -475,6 +475,13 @@ KNOWN_APKS = [
         "source": "official CDN URL captured manually",
     },
     {
+        "game_id": "hkrpg",
+        "version": "1.0.5",
+        "channel": "gw",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20230413215209_VC9JD8S2WrcciZFu/StarRail_1.0.5_gw.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
         "game_id": "bh3",
         "version": "8.9.0",
         "channel": "gw",
