@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-08T18:22:50.891949+00:00",
-  "generated_at": "2026-06-08T18:22:50.891949+00:00",
+  "last_checked_at": "2026-06-08T18:23:36.007646+00:00",
+  "generated_at": "2026-06-08T18:23:36.007646+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -2905,7 +2905,7 @@
         },
         {
           "game_id": "bh3",
-          "version": "8.7",
+          "version": "8.7.0",
           "channel": "ym",
           "url": "https://autopatchcn.bh3.com/ptpublic/rel/20260129104916_BoBPLPFIyJkDEQgJ/CPS/20260122-005217-gf_android_ota-versions-v8_7-Passage_To_NewDawns_ym.apk",
           "source": "official CDN URL recovered from archive.org CDX search",
@@ -2922,7 +2922,7 @@
         },
         {
           "game_id": "bh3",
-          "version": "8.5",
+          "version": "8.5.0",
           "channel": "gw",
           "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250919160133_7I3uYOQENmLOcD8O/CPS/20250911-052146-gf_android_ota-versions-v8_5-A_Lightful_Love_gw.apk",
           "source": "official CDN URL recovered from archive.org CDX search",
@@ -2939,7 +2939,7 @@
         },
         {
           "game_id": "bh3",
-          "version": "7.9",
+          "version": "7.9.0",
           "channel": "gw",
           "url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/CPS/20241024-005902-gf_android_ota-versions-v7_9-Stars_Derailed_gw.apk",
           "source": "official CDN URL provided by user",
@@ -2956,7 +2956,7 @@
         },
         {
           "game_id": "bh3",
-          "version": "7.8",
+          "version": "7.8.0",
           "channel": "gw",
           "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240912162405_49ekXZIjd6SoVTrN/CPS/20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
           "source": "official CDN URL recovered from archive.org CDX search",
@@ -2973,7 +2973,7 @@
         },
         {
           "game_id": "bh3",
-          "version": "7.4",
+          "version": "7.4.0",
           "channel": "gw",
           "url": "https://bundle.bh3.com/ptpublic/rel/20240325143924_D6bZkQP9zm8vNajM/CPS/20240321-183112-gf_android_ota-versions-v7_4-Invitation_to_the_Mad_Banquet_gw.apk",
           "source": "official CDN URL recovered from archive.org CDX search",
@@ -3007,7 +3007,7 @@
         },
         {
           "game_id": "bh3",
-          "version": "7.2",
+          "version": "7.2.0",
           "channel": "gw",
           "url": "https://bundle.bh3.com/ptpublic/rel/20231218144111_nFwR8NyQCxVRbXeo/CPS/20231213-222300-gf_android_ota-versions-v7_2-The_Wings_to_Mars_gw.apk",
           "source": "official CDN URL recovered from archive.org CDX search",
@@ -3024,7 +3024,7 @@
         },
         {
           "game_id": "bh3",
-          "version": "7.1",
+          "version": "7.1.0",
           "channel": "baidu",
           "url": "https://bundle.bh3.com/ptpublic/rel/20231106153627_b1OpytRR6oCFFnkm/CPS/20231102-000511-gf_android_ota-versions-v7_1-Starbound_Painter_baidu.apk",
           "source": "official CDN URL recovered from archive.org CDX search",
@@ -3041,7 +3041,7 @@
         },
         {
           "game_id": "bh3",
-          "version": "7.0",
+          "version": "7.0.0",
           "channel": "gw",
           "url": "https://bundle.bh3.com/ptpublic/rel/20230925103219_8WqdhyRJLpCQJNBY/CPS/20230920-235123-gf_android_ota-versions-v7_0-RePromise_to_Luna_gw.apk",
           "source": "official CDN URL recovered from archive.org CDX search",
@@ -3352,50 +3352,50 @@
           "aria2": "data/android/lists/bh3_8.9.0_android.aria2.txt",
           "json": "data/android/lists/bh3_8.9.0_android.json"
         },
-        "8.7": {
-          "urls": "data/android/lists/bh3_8.7_android.urls.txt",
-          "aria2": "data/android/lists/bh3_8.7_android.aria2.txt",
-          "json": "data/android/lists/bh3_8.7_android.json"
+        "8.7.0": {
+          "urls": "data/android/lists/bh3_8.7.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_8.7.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_8.7.0_android.json"
         },
-        "8.5": {
-          "urls": "data/android/lists/bh3_8.5_android.urls.txt",
-          "aria2": "data/android/lists/bh3_8.5_android.aria2.txt",
-          "json": "data/android/lists/bh3_8.5_android.json"
+        "8.5.0": {
+          "urls": "data/android/lists/bh3_8.5.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_8.5.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_8.5.0_android.json"
         },
-        "7.9": {
-          "urls": "data/android/lists/bh3_7.9_android.urls.txt",
-          "aria2": "data/android/lists/bh3_7.9_android.aria2.txt",
-          "json": "data/android/lists/bh3_7.9_android.json"
+        "7.9.0": {
+          "urls": "data/android/lists/bh3_7.9.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_7.9.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_7.9.0_android.json"
         },
-        "7.8": {
-          "urls": "data/android/lists/bh3_7.8_android.urls.txt",
-          "aria2": "data/android/lists/bh3_7.8_android.aria2.txt",
-          "json": "data/android/lists/bh3_7.8_android.json"
+        "7.8.0": {
+          "urls": "data/android/lists/bh3_7.8.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_7.8.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_7.8.0_android.json"
         },
-        "7.4": {
-          "urls": "data/android/lists/bh3_7.4_android.urls.txt",
-          "aria2": "data/android/lists/bh3_7.4_android.aria2.txt",
-          "json": "data/android/lists/bh3_7.4_android.json"
+        "7.4.0": {
+          "urls": "data/android/lists/bh3_7.4.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_7.4.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_7.4.0_android.json"
         },
         "7.3.0": {
           "urls": "data/android/lists/bh3_7.3.0_android.urls.txt",
           "aria2": "data/android/lists/bh3_7.3.0_android.aria2.txt",
           "json": "data/android/lists/bh3_7.3.0_android.json"
         },
-        "7.2": {
-          "urls": "data/android/lists/bh3_7.2_android.urls.txt",
-          "aria2": "data/android/lists/bh3_7.2_android.aria2.txt",
-          "json": "data/android/lists/bh3_7.2_android.json"
+        "7.2.0": {
+          "urls": "data/android/lists/bh3_7.2.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_7.2.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_7.2.0_android.json"
         },
-        "7.1": {
-          "urls": "data/android/lists/bh3_7.1_android.urls.txt",
-          "aria2": "data/android/lists/bh3_7.1_android.aria2.txt",
-          "json": "data/android/lists/bh3_7.1_android.json"
+        "7.1.0": {
+          "urls": "data/android/lists/bh3_7.1.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_7.1.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_7.1.0_android.json"
         },
-        "7.0": {
-          "urls": "data/android/lists/bh3_7.0_android.urls.txt",
-          "aria2": "data/android/lists/bh3_7.0_android.aria2.txt",
-          "json": "data/android/lists/bh3_7.0_android.json"
+        "7.0.0": {
+          "urls": "data/android/lists/bh3_7.0.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_7.0.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_7.0.0_android.json"
         },
         "6.6.0": {
           "urls": "data/android/lists/bh3_6.6.0_android.urls.txt",

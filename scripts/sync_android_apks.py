@@ -1044,7 +1044,7 @@ KNOWN_APKS = [
     # === bh3 - additional versions ===
     {
         "game_id": "bh3",
-        "version": "7.9",
+        "version": "7.9.0",
         "channel": "gw",
         "url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/CPS/20241024-005902-gf_android_ota-versions-v7_9-Stars_Derailed_gw.apk",
         "source": "official CDN URL provided by user",
@@ -1063,28 +1063,28 @@ KNOWN_APKS = [
     # === bh3 - recovered from CDX ===
     {
         "game_id": "bh3",
-        "version": "7.0",
+        "version": "7.0.0",
         "channel": "gw",
         "url": "https://bundle.bh3.com/ptpublic/rel/20230925103219_8WqdhyRJLpCQJNBY/CPS/20230920-235123-gf_android_ota-versions-v7_0-RePromise_to_Luna_gw.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
     },
     {
         "game_id": "bh3",
-        "version": "7.1",
+        "version": "7.1.0",
         "channel": "baidu",
         "url": "https://bundle.bh3.com/ptpublic/rel/20231106153627_b1OpytRR6oCFFnkm/CPS/20231102-000511-gf_android_ota-versions-v7_1-Starbound_Painter_baidu.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
     },
     {
         "game_id": "bh3",
-        "version": "7.2",
+        "version": "7.2.0",
         "channel": "gw",
         "url": "https://bundle.bh3.com/ptpublic/rel/20231218144111_nFwR8NyQCxVRbXeo/CPS/20231213-222300-gf_android_ota-versions-v7_2-The_Wings_to_Mars_gw.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
     },
     {
         "game_id": "bh3",
-        "version": "7.4",
+        "version": "7.4.0",
         "channel": "gw",
         "url": "https://bundle.bh3.com/ptpublic/rel/20240325143924_D6bZkQP9zm8vNajM/CPS/20240321-183112-gf_android_ota-versions-v7_4-Invitation_to_the_Mad_Banquet_gw.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
@@ -1094,21 +1094,21 @@ KNOWN_APKS = [
     # === bh3 - more from CDX ===
     {
         "game_id": "bh3",
-        "version": "7.8",
+        "version": "7.8.0",
         "channel": "gw",
         "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240912162405_49ekXZIjd6SoVTrN/CPS/20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
     },
     {
         "game_id": "bh3",
-        "version": "8.5",
+        "version": "8.5.0",
         "channel": "gw",
         "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250919160133_7I3uYOQENmLOcD8O/CPS/20250911-052146-gf_android_ota-versions-v8_5-A_Lightful_Love_gw.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
     },
     {
         "game_id": "bh3",
-        "version": "8.7",
+        "version": "8.7.0",
         "channel": "ym",
         "url": "https://autopatchcn.bh3.com/ptpublic/rel/20260129104916_BoBPLPFIyJkDEQgJ/CPS/20260122-005217-gf_android_ota-versions-v8_7-Passage_To_NewDawns_ym.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
