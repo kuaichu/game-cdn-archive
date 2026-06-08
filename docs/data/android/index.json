@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-08T18:26:03.629191+00:00",
-  "generated_at": "2026-06-08T18:26:03.629191+00:00",
+  "last_checked_at": "2026-06-08T18:28:37.666162+00:00",
+  "generated_at": "2026-06-08T18:28:37.666162+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -3481,6 +3481,457 @@
         }
       }
     },
+    "arknights": {
+      "name": "明日方舟",
+      "subName": "Arknights",
+      "versions": [
+        {
+          "game_id": "arknights",
+          "version": "2441.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202501201109-2441-f4nql2kxbinoieig3as2/arknights-hg-2441.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1934573724,
+          "last_modified": "Sun, 27 Apr 2025 11:44:38 GMT",
+          "etag": "032D444453E1455DCBAF8001FC3F3BC2-185",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-2441.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "2421.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202411291024-2421-u4qncegvfv5sesfovkaq/arknights-hg-2421.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1879542706,
+          "last_modified": "Wed, 05 Mar 2025 06:55:25 GMT",
+          "etag": "EE2CBCE7DB9E183258B0672DCE0E100A-180",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-2421.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "2401.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202410301849-2401-te3svuc43h63yfe8a4pk/arknights-hg-2401.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1840210366,
+          "last_modified": "Mon, 20 Jan 2025 07:56:33 GMT",
+          "etag": "9A035B0E26E5746B44DEAF59DF74F3E5-176",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-2401.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "2301.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202407072201-2301-oq0ywpuqm0unmfdzeift/arknights-hg-2301.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1913410430,
+          "last_modified": "Wed, 11 Sep 2024 02:59:47 GMT",
+          "etag": "7B3DF489845A17CAF378DBCB837B8D18-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-2301.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "2241.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202404071436-2241-7hrpbfdt2x4bu2h9sz2q/arknights-hg-2241.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1735991493,
+          "last_modified": "Wed, 11 Sep 2024 02:39:58 GMT",
+          "etag": "1A50225F5207AE9012C74910011A2377-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-2241.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "2141.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202312011528-2141-n09gx6umwxg279rjm8js/arknights-hg-2141.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1590567784,
+          "last_modified": "Mon, 09 Sep 2024 02:53:43 GMT",
+          "etag": "9D4876FFBD79FD041D6A7C261D195C8F-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-2141.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "2101.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202309271907-2101-y0c1c0hpwmvo6svddz9v/arknights-hg-2101.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1552013970,
+          "last_modified": "Mon, 09 Sep 2024 02:46:59 GMT",
+          "etag": "C43D3A26BD1F7F67A1A1DDC1BD09AF94-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-2101.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "2040.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202307041815-2040-y9rygj9zi97245mhou8y/arknights-hg-2040.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1467712224,
+          "last_modified": "Mon, 09 Sep 2024 02:36:34 GMT",
+          "etag": "8F42EF005F3233A7CCF052419293E1A9-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-2040.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "2001.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202304281114-2001-3l0xy1rm0mm8u2ibbzmc/arknights-hg-2001.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1432615157,
+          "last_modified": "Mon, 09 Sep 2024 02:29:20 GMT",
+          "etag": "C8721156EDC02BA0530543F3210D0AF7-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-2001.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "1901.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202209261155-1901-hel5xybw05jzbti29ks2/arknights-hg-1901.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1530216271,
+          "last_modified": "Fri, 06 Sep 2024 04:01:41 GMT",
+          "etag": "0EED5D9D66512417FB90E142517E9D96-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-1901.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "1801.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202204121544-1801-yk1f3rk2xef6ouhqok38/arknights-hg-1801.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1630605719,
+          "last_modified": "Fri, 06 Sep 2024 03:44:42 GMT",
+          "etag": "F452E3D9A2779AE7BA8047E93D7E8D99-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-1801.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "1581.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202109151624-1581-fnj60dalawa9hrco20a7/arknights-hg-1581.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1628461303,
+          "last_modified": "Fri, 06 Sep 2024 03:29:03 GMT",
+          "etag": "9046F14512E5FA56BA4729E38681646B-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-1581.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "1501.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202104141056-1501-ddfegbjv0zp6gj9r138x/arknights-hg-1501.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1649317149,
+          "last_modified": "Fri, 06 Sep 2024 03:18:15 GMT",
+          "etag": "DB2EE8F0DEE48E10FDC49269D82CE58B-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-1501.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "1401.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202103041209-1401-kdb7ess6im3ys7jesg60/arknights-hg-1401.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1694317081,
+          "last_modified": "Fri, 06 Sep 2024 03:13:01 GMT",
+          "etag": "68032AB49696738211396DCBD05FD3B0-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-1401.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "1210.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202012161718-1210-2f98d22a22c6bca91335/arknights-hg-1210.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1576206107,
+          "last_modified": "Fri, 06 Sep 2024 02:53:12 GMT",
+          "etag": "FD807A878CF95388ACB092300069F4A3-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-1210.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "1201.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202010281505-1201-f75c49dbdd52c3d0d02f/arknights-hg-1201.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1607689957,
+          "last_modified": "Fri, 06 Sep 2024 02:50:29 GMT",
+          "etag": "B8A675EE3777BBDC68A7C7AEB33DB74A-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-1201.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "1190.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202009231557-1190-ad849fdf21cc0693d122/arknights-hg-1190.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1654223671,
+          "last_modified": "Fri, 06 Sep 2024 02:43:50 GMT",
+          "etag": "B4677055928CF2E1CBBFC7ED2D7D1CAE-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-1190.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "1180.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202008241206-1180-133220af4fdcf33dfedc/arknights-hg-1180.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1635703328,
+          "last_modified": "Fri, 06 Sep 2024 02:33:47 GMT",
+          "etag": "B065FB3F803A38038100B9DA51ECEC1E-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-1180.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "1150.0.0",
+          "channel": "hg",
+          "url": "https://ak.hycdn.cn/apk/202007081730-1150-774ce26c6443bf45e5f5/arknights-hg-1150.apk",
+          "source": "official CDN URL recovered from archive.org CDX search; build number from filename",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1545322676,
+          "last_modified": "Fri, 06 Sep 2024 02:23:48 GMT",
+          "etag": "977385B2B635E0256F1F43235176DA64-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-1150.apk",
+          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+        },
+        {
+          "game_id": "arknights",
+          "version": "2.7.41",
+          "channel": "official",
+          "url": "https://ak.hypergryph.com/downloads/android_lastest",
+          "source": "official Hypergryph latest APK endpoint; resolves to a CDN URL",
+          "source_url": "https://ak.hypergryph.com/downloads/android_lastest",
+          "archive_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/package/1/1/Android/74.0.0_UR6RdckAf6SA49i2/arknights-hg-2741.apk",
+          "archive_note": "CDN URL captured during sync",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2062252913,
+          "last_modified": "Fri, 29 May 2026 06:50:18 GMT",
+          "etag": "6F20472BEE19105D4C393B78D43E2ED9-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "arknights-hg-2741.apk",
+          "captured_at": "2026-06-06T19:21:48.010511+00:00"
+        }
+      ],
+      "links": {
+        "2441.0.0": {
+          "urls": "data/android/lists/arknights_2441.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_2441.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_2441.0.0_android.json"
+        },
+        "2421.0.0": {
+          "urls": "data/android/lists/arknights_2421.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_2421.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_2421.0.0_android.json"
+        },
+        "2401.0.0": {
+          "urls": "data/android/lists/arknights_2401.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_2401.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_2401.0.0_android.json"
+        },
+        "2301.0.0": {
+          "urls": "data/android/lists/arknights_2301.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_2301.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_2301.0.0_android.json"
+        },
+        "2241.0.0": {
+          "urls": "data/android/lists/arknights_2241.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_2241.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_2241.0.0_android.json"
+        },
+        "2141.0.0": {
+          "urls": "data/android/lists/arknights_2141.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_2141.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_2141.0.0_android.json"
+        },
+        "2101.0.0": {
+          "urls": "data/android/lists/arknights_2101.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_2101.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_2101.0.0_android.json"
+        },
+        "2040.0.0": {
+          "urls": "data/android/lists/arknights_2040.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_2040.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_2040.0.0_android.json"
+        },
+        "2001.0.0": {
+          "urls": "data/android/lists/arknights_2001.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_2001.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_2001.0.0_android.json"
+        },
+        "1901.0.0": {
+          "urls": "data/android/lists/arknights_1901.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_1901.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_1901.0.0_android.json"
+        },
+        "1801.0.0": {
+          "urls": "data/android/lists/arknights_1801.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_1801.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_1801.0.0_android.json"
+        },
+        "1581.0.0": {
+          "urls": "data/android/lists/arknights_1581.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_1581.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_1581.0.0_android.json"
+        },
+        "1501.0.0": {
+          "urls": "data/android/lists/arknights_1501.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_1501.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_1501.0.0_android.json"
+        },
+        "1401.0.0": {
+          "urls": "data/android/lists/arknights_1401.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_1401.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_1401.0.0_android.json"
+        },
+        "1210.0.0": {
+          "urls": "data/android/lists/arknights_1210.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_1210.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_1210.0.0_android.json"
+        },
+        "1201.0.0": {
+          "urls": "data/android/lists/arknights_1201.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_1201.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_1201.0.0_android.json"
+        },
+        "1190.0.0": {
+          "urls": "data/android/lists/arknights_1190.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_1190.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_1190.0.0_android.json"
+        },
+        "1180.0.0": {
+          "urls": "data/android/lists/arknights_1180.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_1180.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_1180.0.0_android.json"
+        },
+        "1150.0.0": {
+          "urls": "data/android/lists/arknights_1150.0.0_android.urls.txt",
+          "aria2": "data/android/lists/arknights_1150.0.0_android.aria2.txt",
+          "json": "data/android/lists/arknights_1150.0.0_android.json"
+        },
+        "2.7.41": {
+          "urls": "data/android/lists/arknights_2.7.41_android.urls.txt",
+          "aria2": "data/android/lists/arknights_2.7.41_android.aria2.txt",
+          "json": "data/android/lists/arknights_2.7.41_android.json"
+        }
+      }
+    },
     "gf2": {
       "name": "少女前线2：追放",
       "subName": "Girls' Frontline 2: Exilium",
@@ -3560,39 +4011,6 @@
           "urls": "data/android/lists/pns_4.5.0_android.urls.txt",
           "aria2": "data/android/lists/pns_4.5.0_android.aria2.txt",
           "json": "data/android/lists/pns_4.5.0_android.json"
-        }
-      }
-    },
-    "arknights": {
-      "name": "明日方舟",
-      "subName": "Arknights",
-      "versions": [
-        {
-          "game_id": "arknights",
-          "version": "2.7.41",
-          "channel": "official",
-          "url": "https://ak.hypergryph.com/downloads/android_lastest",
-          "source": "official Hypergryph latest APK endpoint; resolves to a CDN URL",
-          "source_url": "https://ak.hypergryph.com/downloads/android_lastest",
-          "archive_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/package/1/1/Android/74.0.0_UR6RdckAf6SA49i2/arknights-hg-2741.apk",
-          "archive_note": "CDN URL captured during sync",
-          "status": 200,
-          "content_type": "application/vnd.android.package-archive",
-          "size": 2062252913,
-          "last_modified": "Fri, 29 May 2026 06:50:18 GMT",
-          "etag": "6F20472BEE19105D4C393B78D43E2ED9-400",
-          "md5": "",
-          "crc64": "",
-          "error": "",
-          "filename": "arknights-hg-2741.apk",
-          "captured_at": "2026-06-06T19:21:48.010511+00:00"
-        }
-      ],
-      "links": {
-        "2.7.41": {
-          "urls": "data/android/lists/arknights_2.7.41_android.urls.txt",
-          "aria2": "data/android/lists/arknights_2.7.41_android.aria2.txt",
-          "json": "data/android/lists/arknights_2.7.41_android.json"
         }
       }
     },
