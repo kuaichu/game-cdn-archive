@@ -1090,6 +1090,30 @@ KNOWN_APKS = [
         "source": "official CDN URL recovered from archive.org CDX search",
     },
 
+
+    # === bh3 - more from CDX ===
+    {
+        "game_id": "bh3",
+        "version": "7.8",
+        "channel": "gw",
+        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240912162405_49ekXZIjd6SoVTrN/CPS/20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    {
+        "game_id": "bh3",
+        "version": "8.5",
+        "channel": "gw",
+        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250919160133_7I3uYOQENmLOcD8O/CPS/20250911-052146-gf_android_ota-versions-v8_5-A_Lightful_Love_gw.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    {
+        "game_id": "bh3",
+        "version": "8.7",
+        "channel": "ym",
+        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20260129104916_BoBPLPFIyJkDEQgJ/CPS/20260122-005217-gf_android_ota-versions-v8_7-Passage_To_NewDawns_ym.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+
 ]
 
 GAME_NAMES = {
