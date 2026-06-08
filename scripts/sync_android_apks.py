@@ -1040,6 +1040,16 @@ KNOWN_APKS = [
         "source": "official CDN URL recovered from archive.org CDX search",
     },
 
+
+    # === bh3 - additional versions ===
+    {
+        "game_id": "bh3",
+        "version": "7.9",
+        "channel": "gw",
+        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/CPS/20241024-005902-gf_android_ota-versions-v7_9-Stars_Derailed_gw.apk",
+        "source": "official CDN URL provided by user",
+    },
+
 ]
 
 GAME_NAMES = {
