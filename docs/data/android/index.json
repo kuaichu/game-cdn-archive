@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-08T17:44:40.153103+00:00",
-  "generated_at": "2026-06-08T17:44:40.153103+00:00",
+  "last_checked_at": "2026-06-08T18:02:55.807863+00:00",
+  "generated_at": "2026-06-08T18:02:55.807863+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -1803,6 +1803,23 @@
           "error": "",
           "filename": "yuanshen_1.0.0_mihoyo.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00"
+        },
+        {
+          "game_id": "hk4e",
+          "version": "0.9.3",
+          "channel": "cbt3",
+          "url": "https://autopatchcn.yuanshen.com/client_app/yuanshen_0.9.3.apk",
+          "source": "CBT3 closed beta APK; URL sourced from a 2020 forum post, original CDN link no longer accessible",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 306,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "yuanshen_0.9.3.apk",
+          "captured_at": "2026-06-08T18:02:55.807863+00:00"
         }
       ],
       "links": {
@@ -2040,6 +2057,11 @@
           "urls": "data/android/lists/hk4e_1.0.0_android.urls.txt",
           "aria2": "data/android/lists/hk4e_1.0.0_android.aria2.txt",
           "json": "data/android/lists/hk4e_1.0.0_android.json"
+        },
+        "0.9.3": {
+          "urls": "data/android/lists/hk4e_0.9.3_android.urls.txt",
+          "aria2": "data/android/lists/hk4e_0.9.3_android.aria2.txt",
+          "json": "data/android/lists/hk4e_0.9.3_android.json"
         }
       }
     },

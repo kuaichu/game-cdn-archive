@@ -1006,6 +1006,16 @@ KNOWN_APKS = [
         "source": "official CDN URL provided by user",
     },
 
+
+    # === hk4e - CBT3 beta (dead link) ===
+    {
+        "game_id": "hk4e",
+        "version": "0.9.3",
+        "channel": "cbt3",
+        "url": "https://autopatchcn.yuanshen.com/client_app/yuanshen_0.9.3.apk",
+        "source": "CBT3 closed beta APK; URL sourced from a 2020 forum post, original CDN link no longer accessible",
+    },
+
 ]
 
 GAME_NAMES = {
