@@ -469,6 +469,13 @@ KNOWN_APKS = [
     },
     {
         "game_id": "hkrpg",
+        "version": "1.4.0",
+        "channel": "ad_bdpz",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20230926141222_ZKWHBONxYlx8PGYQ/StarRail_1.4.0_ad_bdpz.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
         "version": "1.3.0",
         "channel": "mihoyo_8",
         "url": "https://autopatchcn.bhsr.com/client/cn/20230818153431_sMKzYZ9EOeT15oNn/StarRail_1.3.0_mihoyo_8.apk",
@@ -479,6 +486,13 @@ KNOWN_APKS = [
         "version": "1.2.0",
         "channel": "mihoyo_8",
         "url": "https://autopatchcn.bhsr.com/client/cn/20230709224719_3CcrEpEKT9iaObJh/StarRail_1.2.0_mihoyo_8.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "1.1.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20230527110540_Kt2XHQtmHSq920j9/StarRail_1.1.0_gw.apk",
         "source": "official CDN URL captured manually",
     },
     {
