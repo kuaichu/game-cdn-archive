@@ -1050,6 +1050,15 @@ KNOWN_APKS = [
         "source": "official CDN URL provided by user",
     },
 
+
+    {
+        "game_id": "nap",
+        "version": "1.2",
+        "channel": "cps_gw",
+        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240914102852_G6ZTcn1Y1EGPzlKq/cps_gw/ZenlessZoneZero_1.2.apk",
+        "source": "official CDN URL recovered from third-party download site",
+    },
+
 ]
 
 GAME_NAMES = {

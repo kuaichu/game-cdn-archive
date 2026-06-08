@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-08T18:16:42.405026+00:00",
-  "generated_at": "2026-06-08T18:16:42.405026+00:00",
+  "last_checked_at": "2026-06-08T18:17:20.519294+00:00",
+  "generated_at": "2026-06-08T18:17:20.519294+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -981,6 +981,23 @@
         },
         {
           "game_id": "nap",
+          "version": "1.2",
+          "channel": "cps_gw",
+          "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240914102852_G6ZTcn1Y1EGPzlKq/cps_gw/ZenlessZoneZero_1.2.apk",
+          "source": "official CDN URL recovered from third-party download site",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 368234311,
+          "last_modified": "Sat, 14 Sep 2024 04:23:46 GMT",
+          "etag": "FAEF47396B3177673CFCD4E5CF936409-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "ZenlessZoneZero_1.2.apk",
+          "captured_at": "2026-06-08T18:17:20.519294+00:00"
+        },
+        {
+          "game_id": "nap",
           "version": "1.0",
           "channel": "mktbackup2",
           "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240623113017_aqRjyJNQjPi1XNZN/mktbackup2/ZenlessZoneZero_1.0.apk",
@@ -1044,6 +1061,11 @@
           "urls": "data/android/lists/nap_1.3.0_android.urls.txt",
           "aria2": "data/android/lists/nap_1.3.0_android.aria2.txt",
           "json": "data/android/lists/nap_1.3.0_android.json"
+        },
+        "1.2": {
+          "urls": "data/android/lists/nap_1.2_android.urls.txt",
+          "aria2": "data/android/lists/nap_1.2_android.aria2.txt",
+          "json": "data/android/lists/nap_1.2_android.json"
         },
         "1.0": {
           "urls": "data/android/lists/nap_1.0_android.urls.txt",
