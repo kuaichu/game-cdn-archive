@@ -1,4 +1,4 @@
-name: Sync archive data
+name: Update archive data
 
 on:
   workflow_dispatch:
@@ -15,8 +15,6 @@ jobs:
     env:
       CLOUDFLARE_ACCOUNT_ID: ff0930c51b39f84ac55383aeb3432cf0
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
     steps:
       - name: Checkout
@@ -31,90 +29,31 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Refresh NTE data
-        id: sync_nte
-        continue-on-error: true
         run: python scripts/update_nte_static.py
 
       - name: Refresh HoyoFiles data
-        id: sync_hoyofiles
-        continue-on-error: true
         run: python scripts/sync_hoyofiles.py
 
       - name: Clone Endfield upstream archive
-        id: clone_endfield
-        continue-on-error: true
         run: git clone --depth 1 https://github.com/daydreamer-json/ak-endfield-api-archive.git /tmp/ak-endfield-api-archive
 
       - name: Refresh Endfield data
-        id: sync_endfield
-        continue-on-error: true
         run: python scripts/import_endfield_archive.py /tmp/ak-endfield-api-archive
 
       - name: Refresh Wuthering Waves data
-        id: sync_wuwa
-        continue-on-error: true
         run: python scripts/sync_wuwa.py
 
       - name: Refresh Arknights PC data
-        id: sync_arknights
-        continue-on-error: true
         run: python scripts/sync_arknights_pc.py
 
       - name: Refresh Android APK data
-        id: sync_android
-        continue-on-error: true
         run: python scripts/sync_android_apks.py
 
       - name: Check generated JavaScript
-        id: check_js
-        continue-on-error: true
         run: node --check docs/app.js
-
-      - name: Build sync summary
-        if: always()
-        id: sync_summary
-        shell: bash
-        run: |
-          declare -a failures=()
-          declare -a lines=()
-
-          collect() {
-            local label="$1"
-            local outcome="$2"
-            if [ "$outcome" = "success" ]; then
-              lines+=("✅ $label")
-            else
-              lines+=("❌ $label ($outcome)")
-              failures+=("$label")
-            fi
-          }
-
-          collect "NTE" "${{ steps.sync_nte.outcome }}"
-          collect "HoyoFiles" "${{ steps.sync_hoyofiles.outcome }}"
-          collect "Clone Endfield upstream" "${{ steps.clone_endfield.outcome }}"
-          collect "Endfield" "${{ steps.sync_endfield.outcome }}"
-          collect "Wuthering Waves" "${{ steps.sync_wuwa.outcome }}"
-          collect "Arknights PC" "${{ steps.sync_arknights.outcome }}"
-          collect "Android APK" "${{ steps.sync_android.outcome }}"
-          collect "Check generated JavaScript" "${{ steps.check_js.outcome }}"
-
-          {
-            echo "summary<<EOF"
-            printf '%s\n' "${lines[@]}"
-            echo "EOF"
-            if [ ${#failures[@]} -eq 0 ]; then
-              echo "has_failures=false"
-              echo "failure_count=0"
-            else
-              echo "has_failures=true"
-              echo "failure_count=${#failures[@]}"
-            fi
-            echo "failures=$(IFS=', '; echo "${failures[*]}")"
-          } >> "$GITHUB_OUTPUT"
 
       - name: Commit changes
         id: commit
-        if: always() && steps.check_js.outcome == 'success'
         shell: bash
         run: |
           if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
@@ -129,7 +68,7 @@ jobs:
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Check Cloudflare credentials
-        if: always() && steps.check_js.outcome == 'success' && (steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch')
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         shell: bash
         run: |
           if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
@@ -142,57 +81,5 @@ jobs:
           fi
 
       - name: Deploy to Cloudflare Pages
-        if: always() && steps.check_js.outcome == 'success' && (steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch')
+        if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: npx --yes wrangler pages deploy docs --project-name game-cdn-archive --branch main
-
-      - name: Notify Telegram
-        if: always() && env.TELEGRAM_BOT_TOKEN != '' && env.TELEGRAM_CHAT_ID != ''
-        shell: bash
-        run: |
-          if [ "${{ job.status }}" = "success" ] && [ "${{ steps.sync_summary.outputs.has_failures }}" != "true" ]; then
-            result="✅ 成功"
-          else
-            result="⚠️ 部分失败"
-          fi
-
-          if [ "${{ steps.commit.outputs.changed }}" = "true" ]; then
-            changed="有数据变更并已推送"
-          else
-            changed="无数据变更"
-          fi
-
-          if [ "${{ steps.sync_summary.outputs.has_failures }}" = "true" ]; then
-            failures="失败步骤：${{ steps.sync_summary.outputs.failures }}"
-          else
-            failures="失败步骤：无"
-          fi
-
-          message=$(cat <<EOF
-Game CDN Archive 自动同步
-
-结果：$result
-触发：${{ github.event_name }}
-提交：${{ github.sha }}
-变更：$changed
-$failures
-
-步骤结果：
-${{ steps.sync_summary.outputs.summary }}
-
-Run:
-https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-EOF
-)
-
-          curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-            -d "chat_id=${TELEGRAM_CHAT_ID}" \
-            --data-urlencode "text=${message}" \
-            -d "disable_web_page_preview=true" \
-            >/dev/null || true
-
-      - name: Fail workflow if any sync step failed
-        if: always() && steps.sync_summary.outputs.has_failures == 'true'
-        shell: bash
-        run: |
-          echo "::error::One or more sync steps failed: ${{ steps.sync_summary.outputs.failures }}"
-          exit 1
