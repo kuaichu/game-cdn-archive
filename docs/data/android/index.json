@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-08T18:17:20.519294+00:00",
-  "generated_at": "2026-06-08T18:17:20.519294+00:00",
+  "last_checked_at": "2026-06-08T18:20:29.063705+00:00",
+  "generated_at": "2026-06-08T18:20:29.063705+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -2922,6 +2922,23 @@
         },
         {
           "game_id": "bh3",
+          "version": "7.4",
+          "channel": "gw",
+          "url": "https://bundle.bh3.com/ptpublic/rel/20240325143924_D6bZkQP9zm8vNajM/CPS/20240321-183112-gf_android_ota-versions-v7_4-Invitation_to_the_Mad_Banquet_gw.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 571277789,
+          "last_modified": "Mon, 25 Mar 2024 07:17:33 GMT",
+          "etag": "0E7EE48C74623424A15EEFB2EC7AD875-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "20240321-183112-gf_android_ota-versions-v7_4-Invitation_to_the_Mad_Banquet_gw.apk",
+          "captured_at": "2026-06-08T18:20:29.063705+00:00"
+        },
+        {
+          "game_id": "bh3",
           "version": "7.3.0",
           "channel": "gw",
           "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
@@ -2936,6 +2953,57 @@
           "error": "HTTP Error 403: Forbidden",
           "filename": "20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00"
+        },
+        {
+          "game_id": "bh3",
+          "version": "7.2",
+          "channel": "gw",
+          "url": "https://bundle.bh3.com/ptpublic/rel/20231218144111_nFwR8NyQCxVRbXeo/CPS/20231213-222300-gf_android_ota-versions-v7_2-The_Wings_to_Mars_gw.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 538409750,
+          "last_modified": "Mon, 18 Dec 2023 07:42:36 GMT",
+          "etag": "0769D6BAAC5311F2D102E34D3B8E63EE-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "20231213-222300-gf_android_ota-versions-v7_2-The_Wings_to_Mars_gw.apk",
+          "captured_at": "2026-06-08T18:20:29.063705+00:00"
+        },
+        {
+          "game_id": "bh3",
+          "version": "7.1",
+          "channel": "baidu",
+          "url": "https://bundle.bh3.com/ptpublic/rel/20231106153627_b1OpytRR6oCFFnkm/CPS/20231102-000511-gf_android_ota-versions-v7_1-Starbound_Painter_baidu.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 845542287,
+          "last_modified": "Mon, 06 Nov 2023 07:41:07 GMT",
+          "etag": "7175AC8C4DD6BC3C82595C2FFC6243BE-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "20231102-000511-gf_android_ota-versions-v7_1-Starbound_Painter_baidu.apk",
+          "captured_at": "2026-06-08T18:20:29.063705+00:00"
+        },
+        {
+          "game_id": "bh3",
+          "version": "7.0",
+          "channel": "gw",
+          "url": "https://bundle.bh3.com/ptpublic/rel/20230925103219_8WqdhyRJLpCQJNBY/CPS/20230920-235123-gf_android_ota-versions-v7_0-RePromise_to_Luna_gw.apk",
+          "source": "official CDN URL recovered from archive.org CDX search",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 722100914,
+          "last_modified": "Mon, 25 Sep 2023 08:05:54 GMT",
+          "etag": "A18B3F3600DE4AED411C9748FCF1296B-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "20230920-235123-gf_android_ota-versions-v7_0-RePromise_to_Luna_gw.apk",
+          "captured_at": "2026-06-08T18:20:29.063705+00:00"
         },
         {
           "game_id": "bh3",
@@ -3238,10 +3306,30 @@
           "aria2": "data/android/lists/bh3_7.9_android.aria2.txt",
           "json": "data/android/lists/bh3_7.9_android.json"
         },
+        "7.4": {
+          "urls": "data/android/lists/bh3_7.4_android.urls.txt",
+          "aria2": "data/android/lists/bh3_7.4_android.aria2.txt",
+          "json": "data/android/lists/bh3_7.4_android.json"
+        },
         "7.3.0": {
           "urls": "data/android/lists/bh3_7.3.0_android.urls.txt",
           "aria2": "data/android/lists/bh3_7.3.0_android.aria2.txt",
           "json": "data/android/lists/bh3_7.3.0_android.json"
+        },
+        "7.2": {
+          "urls": "data/android/lists/bh3_7.2_android.urls.txt",
+          "aria2": "data/android/lists/bh3_7.2_android.aria2.txt",
+          "json": "data/android/lists/bh3_7.2_android.json"
+        },
+        "7.1": {
+          "urls": "data/android/lists/bh3_7.1_android.urls.txt",
+          "aria2": "data/android/lists/bh3_7.1_android.aria2.txt",
+          "json": "data/android/lists/bh3_7.1_android.json"
+        },
+        "7.0": {
+          "urls": "data/android/lists/bh3_7.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_7.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_7.0_android.json"
         },
         "6.6.0": {
           "urls": "data/android/lists/bh3_6.6.0_android.urls.txt",

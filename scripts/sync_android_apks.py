@@ -1059,6 +1059,37 @@ KNOWN_APKS = [
         "source": "official CDN URL recovered from third-party download site",
     },
 
+
+    # === bh3 - recovered from CDX ===
+    {
+        "game_id": "bh3",
+        "version": "7.0",
+        "channel": "gw",
+        "url": "https://bundle.bh3.com/ptpublic/rel/20230925103219_8WqdhyRJLpCQJNBY/CPS/20230920-235123-gf_android_ota-versions-v7_0-RePromise_to_Luna_gw.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    {
+        "game_id": "bh3",
+        "version": "7.1",
+        "channel": "baidu",
+        "url": "https://bundle.bh3.com/ptpublic/rel/20231106153627_b1OpytRR6oCFFnkm/CPS/20231102-000511-gf_android_ota-versions-v7_1-Starbound_Painter_baidu.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    {
+        "game_id": "bh3",
+        "version": "7.2",
+        "channel": "gw",
+        "url": "https://bundle.bh3.com/ptpublic/rel/20231218144111_nFwR8NyQCxVRbXeo/CPS/20231213-222300-gf_android_ota-versions-v7_2-The_Wings_to_Mars_gw.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    {
+        "game_id": "bh3",
+        "version": "7.4",
+        "channel": "gw",
+        "url": "https://bundle.bh3.com/ptpublic/rel/20240325143924_D6bZkQP9zm8vNajM/CPS/20240321-183112-gf_android_ota-versions-v7_4-Invitation_to_the_Mad_Banquet_gw.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+
 ]
 
 GAME_NAMES = {
