@@ -1020,21 +1020,21 @@ KNOWN_APKS = [
     # === nap (绝区零) - recovered from CDX ===
     {
         "game_id": "nap",
-        "version": "1.0",
+        "version": "1.0.0",
         "channel": "mktbackup2",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240623113017_aqRjyJNQjPi1XNZN/mktbackup2/ZenlessZoneZero_1.0.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
     },
     {
         "game_id": "nap",
-        "version": "1.0",
+        "version": "1.0.0",
         "channel": "oonrzywymxk1",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240623113017_aqRjyJNQjPi1XNZN/oonrzywymxk1/ZenlessZoneZero_1.0.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
     },
     {
         "game_id": "nap",
-        "version": "1.7",
+        "version": "1.7.0",
         "channel": "gw",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20250410105547_du1FLxuQOSTj5Rjh/gw/ZenlessZoneZero_1.7.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
@@ -1053,7 +1053,7 @@ KNOWN_APKS = [
 
     {
         "game_id": "nap",
-        "version": "1.2",
+        "version": "1.2.0",
         "channel": "cps_gw",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240914102852_G6ZTcn1Y1EGPzlKq/cps_gw/ZenlessZoneZero_1.2.apk",
         "source": "official CDN URL recovered from third-party download site",

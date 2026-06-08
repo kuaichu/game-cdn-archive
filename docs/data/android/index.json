@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-08T18:21:01.169939+00:00",
-  "generated_at": "2026-06-08T18:21:01.169939+00:00",
+  "last_checked_at": "2026-06-08T18:22:50.891949+00:00",
+  "generated_at": "2026-06-08T18:22:50.891949+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -947,7 +947,7 @@
         },
         {
           "game_id": "nap",
-          "version": "1.7",
+          "version": "1.7.0",
           "channel": "gw",
           "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20250410105547_du1FLxuQOSTj5Rjh/gw/ZenlessZoneZero_1.7.apk",
           "source": "official CDN URL recovered from archive.org CDX search",
@@ -981,7 +981,7 @@
         },
         {
           "game_id": "nap",
-          "version": "1.2",
+          "version": "1.2.0",
           "channel": "cps_gw",
           "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240914102852_G6ZTcn1Y1EGPzlKq/cps_gw/ZenlessZoneZero_1.2.apk",
           "source": "official CDN URL recovered from third-party download site",
@@ -998,7 +998,7 @@
         },
         {
           "game_id": "nap",
-          "version": "1.0",
+          "version": "1.0.0",
           "channel": "mktbackup2",
           "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240623113017_aqRjyJNQjPi1XNZN/mktbackup2/ZenlessZoneZero_1.0.apk",
           "source": "official CDN URL recovered from archive.org CDX search",
@@ -1015,7 +1015,7 @@
         },
         {
           "game_id": "nap",
-          "version": "1.0",
+          "version": "1.0.0",
           "channel": "oonrzywymxk1",
           "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240623113017_aqRjyJNQjPi1XNZN/oonrzywymxk1/ZenlessZoneZero_1.0.apk",
           "source": "official CDN URL recovered from archive.org CDX search",
@@ -1052,25 +1052,25 @@
           "aria2": "data/android/lists/nap_2.0.0_android.aria2.txt",
           "json": "data/android/lists/nap_2.0.0_android.json"
         },
-        "1.7": {
-          "urls": "data/android/lists/nap_1.7_android.urls.txt",
-          "aria2": "data/android/lists/nap_1.7_android.aria2.txt",
-          "json": "data/android/lists/nap_1.7_android.json"
+        "1.7.0": {
+          "urls": "data/android/lists/nap_1.7.0_android.urls.txt",
+          "aria2": "data/android/lists/nap_1.7.0_android.aria2.txt",
+          "json": "data/android/lists/nap_1.7.0_android.json"
         },
         "1.3.0": {
           "urls": "data/android/lists/nap_1.3.0_android.urls.txt",
           "aria2": "data/android/lists/nap_1.3.0_android.aria2.txt",
           "json": "data/android/lists/nap_1.3.0_android.json"
         },
-        "1.2": {
-          "urls": "data/android/lists/nap_1.2_android.urls.txt",
-          "aria2": "data/android/lists/nap_1.2_android.aria2.txt",
-          "json": "data/android/lists/nap_1.2_android.json"
+        "1.2.0": {
+          "urls": "data/android/lists/nap_1.2.0_android.urls.txt",
+          "aria2": "data/android/lists/nap_1.2.0_android.aria2.txt",
+          "json": "data/android/lists/nap_1.2.0_android.json"
         },
-        "1.0": {
-          "urls": "data/android/lists/nap_1.0_android.urls.txt",
-          "aria2": "data/android/lists/nap_1.0_android.aria2.txt",
-          "json": "data/android/lists/nap_1.0_android.json"
+        "1.0.0": {
+          "urls": "data/android/lists/nap_1.0.0_android.urls.txt",
+          "aria2": "data/android/lists/nap_1.0.0_android.aria2.txt",
+          "json": "data/android/lists/nap_1.0.0_android.json"
         }
       }
     },
