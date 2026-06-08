@@ -1269,6 +1269,94 @@ KNOWN_APKS = [
         "source": "official CDN URL captured from latest endpoint; build 2741",
     },
 
+
+    # === bh3 - more from CDX file ===
+    {
+        "game_id": "bh3",
+        "version": "4.8.0",
+        "channel": "guofu",
+        "url": "https://bundle.bh3.com/public/Android/20210422-145145-gf_android_ota-versions-v4_8-The_Phantom_of_the_Theater_guofu.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    {
+        "game_id": "bh3",
+        "version": "4.9.0",
+        "channel": "guofu",
+        "url": "https://bundle.bh3.com/public/Android/20210603-161309-gf_android_ota-versions-v4_9-Outworld_Traveler_guofu.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    {
+        "game_id": "bh3",
+        "version": "5.0.1",
+        "channel": "guofu",
+        "url": "https://bundle.bh3.com/public/Android/20210713-190832-gf_android_ota-versions-v5_0_1-Inherit_the_Flame_guofu.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    {
+        "game_id": "bh3",
+        "version": "8.3.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250523115648_9RU48di9UxAQIixO/CPS/20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    {
+        "game_id": "bh3",
+        "version": "8.6.0",
+        "channel": "guofu",
+        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20251126103029_6BdFwrhJbJwHQQAX/CPS/20251119-224340-gf_android_ota-versions-v8_6-Banquet_Operative_guofu.apk",
+        "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    # === bh3 - dead links (app.bh3.com) ===
+    {
+        "game_id": "bh3",
+        "version": "0.9.9",
+        "channel": "guofu",
+        "url": "https://app.bh3.com/public/Android/20160927-204034-gf_android-versions-v0_9_9_android-4R-797e295-ASB-mono_guofu.apk",
+        "source": "Wayback Machine historical URL; original domain no longer resolves",
+    },
+    {
+        "game_id": "bh3",
+        "version": "1.2.0",
+        "channel": "guofu",
+        "url": "https://app.bh3.com/public/Android/20161230-180434-gf_android-versions-v1_2-4R-ASB-il2cpp_guofu.apk",
+        "source": "Wayback Machine historical URL; original domain no longer resolves",
+    },
+    {
+        "game_id": "bh3",
+        "version": "2.0.0",
+        "channel": "guofu",
+        "url": "https://app.bh3.com/public/Android/20180111-android_versions_v2_0_Housewarming_Party_guofu.apk",
+        "source": "Wayback Machine historical URL; original domain no longer resolves",
+    },
+    {
+        "game_id": "bh3",
+        "version": "3.2.0",
+        "channel": "guofu",
+        "url": "https://app.bh3.com/public/Android/20190531-201355-gf_android_ota-versions-v3_2-Nursery_Rhymes_with_Illusion_guofu1.apk",
+        "source": "Wayback Machine historical URL; original domain no longer resolves",
+    },
+    {
+        "game_id": "bh3",
+        "version": "3.3.0",
+        "channel": "guofu",
+        "url": "https://app.bh3.com/public/Android/20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
+        "source": "Wayback Machine historical URL; original domain no longer resolves",
+    },
+    {
+        "game_id": "bh3",
+        "version": "3.5.0",
+        "channel": "guofu",
+        "url": "https://app.bh3.com/public/Android/20191018-162047-gf_android_ota-versions-v3_5-Stygian_Nymph_guofu.apk",
+        "source": "Wayback Machine historical URL; original domain no longer resolves",
+    },
+    {
+        "game_id": "bh3",
+        "version": "3.6.0",
+        "channel": "guofu",
+        "url": "https://app.bh3.com/public/Android/20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja%%20Noir_guofu.apk",
+        "source": "Wayback Machine historical URL; original domain no longer resolves",
+    },
+
 ]
 
 GAME_NAMES = {
