@@ -15,8 +15,46 @@ jobs:
     env:
       CLOUDFLARE_ACCOUNT_ID: ff0930c51b39f84ac55383aeb3432cf0
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
     steps:
+      - name: Notify Telegram start
+        shell: bash
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "Telegram secrets are not configured, skip start notification."
+            exit 0
+          fi
+
+          case "${{ github.event_name }}" in
+            schedule)
+              trigger="schedule"
+              ;;
+            workflow_dispatch)
+              trigger="manual"
+              ;;
+            *)
+              trigger="${{ github.event_name }}"
+              ;;
+          esac
+
+          message=$(cat <<EOF
+          Game CDN Archive sync started
+          Status: running
+          Trigger: $trigger
+          Repository: ${{ github.repository }}
+          Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          EOF
+          )
+
+          if ! curl -fsS -o /dev/null -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "text=${message}" \
+            -d "disable_web_page_preview=true"; then
+            echo "::warning::Failed to send Telegram start notification."
+          fi
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -83,3 +121,44 @@ jobs:
       - name: Deploy to Cloudflare Pages
         if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: npx --yes wrangler pages deploy docs --project-name game-cdn-archive --branch main
+
+      - name: Notify Telegram result
+        if: always()
+        shell: bash
+        env:
+          JOB_STATUS: ${{ job.status }}
+          DATA_CHANGED: ${{ steps.commit.outputs.changed }}
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "Telegram secrets are not configured, skip result notification."
+            exit 0
+          fi
+
+          case "$DATA_CHANGED" in
+            true)
+              change_result="changed and committed"
+              ;;
+            false)
+              change_result="no changes"
+              ;;
+            *)
+              change_result="not reached"
+              ;;
+          esac
+
+          message=$(cat <<EOF
+          Game CDN Archive sync finished
+          Status: $JOB_STATUS
+          Data: $change_result
+          Trigger: ${{ github.event_name }}
+          Repository: ${{ github.repository }}
+          Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          EOF
+          )
+
+          if ! curl -fsS -o /dev/null -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "text=${message}" \
+            -d "disable_web_page_preview=true"; then
+            echo "::warning::Failed to send Telegram result notification."
+          fi
