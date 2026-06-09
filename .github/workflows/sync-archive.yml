@@ -54,6 +54,20 @@ jobs:
           PY
           }
 
+          telegram_migrate_to_chat_id() {
+            TELEGRAM_BODY="$1" python3 - <<'PY'
+          import json
+          import os
+
+          try:
+              data = json.loads(os.environ.get("TELEGRAM_BODY", ""))
+              migrate_to_chat_id = (data.get("parameters") or {}).get("migrate_to_chat_id")
+          except Exception:
+              migrate_to_chat_id = None
+          print(migrate_to_chat_id or "")
+          PY
+          }
+
           send_telegram() {
             local label="$1"
             local message="$2"
@@ -84,6 +98,26 @@ jobs:
               fi
 
               if ! [[ "$http_code" =~ ^[0-9]{3}$ ]] || [ "$http_code" -lt 200 ] || [ "$http_code" -ge 300 ]; then
+                migrate_chat_id="$(telegram_migrate_to_chat_id "$body")"
+                if [ -n "$migrate_chat_id" ]; then
+                  retry_body_file="$(mktemp)"
+                  retry_http_code="$(curl -sS -o "$retry_body_file" -w "%{http_code}" -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+                    --data-urlencode "chat_id=${migrate_chat_id}" \
+                    --data-urlencode "text=${message}" \
+                    -d "disable_web_page_preview=true")"
+                  retry_curl_status=$?
+                  retry_body="$(cat "$retry_body_file")"
+                  rm -f "$retry_body_file"
+
+                  if [ "$retry_curl_status" -eq 0 ] && [[ "$retry_http_code" =~ ^[0-9]{3}$ ]] && [ "$retry_http_code" -ge 200 ] && [ "$retry_http_code" -lt 300 ] && [ "$(telegram_response_ok "$retry_body")" = "true" ]; then
+                    echo "::warning::Telegram ${label} notification target #${target_index} used an old group chat ID; resent to migrated supergroup ${migrate_chat_id}. Update TELEGRAM_CHAT_ID to avoid this retry."
+                    continue
+                  fi
+
+                  retry_description="$(telegram_response_description "$retry_body")"
+                  echo "::warning::Failed to retry Telegram ${label} notification to migrated target #${target_index} (HTTP ${retry_http_code}): ${retry_description}"
+                fi
+
                 description="$(telegram_response_description "$body")"
                 echo "::warning::Failed to send Telegram ${label} notification to target #${target_index} (HTTP ${http_code}): ${description}"
                 continue
@@ -229,6 +263,20 @@ jobs:
           PY
           }
 
+          telegram_migrate_to_chat_id() {
+            TELEGRAM_BODY="$1" python3 - <<'PY'
+          import json
+          import os
+
+          try:
+              data = json.loads(os.environ.get("TELEGRAM_BODY", ""))
+              migrate_to_chat_id = (data.get("parameters") or {}).get("migrate_to_chat_id")
+          except Exception:
+              migrate_to_chat_id = None
+          print(migrate_to_chat_id or "")
+          PY
+          }
+
           send_telegram() {
             local label="$1"
             local message="$2"
@@ -259,6 +307,26 @@ jobs:
               fi
 
               if ! [[ "$http_code" =~ ^[0-9]{3}$ ]] || [ "$http_code" -lt 200 ] || [ "$http_code" -ge 300 ]; then
+                migrate_chat_id="$(telegram_migrate_to_chat_id "$body")"
+                if [ -n "$migrate_chat_id" ]; then
+                  retry_body_file="$(mktemp)"
+                  retry_http_code="$(curl -sS -o "$retry_body_file" -w "%{http_code}" -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+                    --data-urlencode "chat_id=${migrate_chat_id}" \
+                    --data-urlencode "text=${message}" \
+                    -d "disable_web_page_preview=true")"
+                  retry_curl_status=$?
+                  retry_body="$(cat "$retry_body_file")"
+                  rm -f "$retry_body_file"
+
+                  if [ "$retry_curl_status" -eq 0 ] && [[ "$retry_http_code" =~ ^[0-9]{3}$ ]] && [ "$retry_http_code" -ge 200 ] && [ "$retry_http_code" -lt 300 ] && [ "$(telegram_response_ok "$retry_body")" = "true" ]; then
+                    echo "::warning::Telegram ${label} notification target #${target_index} used an old group chat ID; resent to migrated supergroup ${migrate_chat_id}. Update TELEGRAM_CHAT_ID to avoid this retry."
+                    continue
+                  fi
+
+                  retry_description="$(telegram_response_description "$retry_body")"
+                  echo "::warning::Failed to retry Telegram ${label} notification to migrated target #${target_index} (HTTP ${retry_http_code}): ${retry_description}"
+                fi
+
                 description="$(telegram_response_description "$body")"
                 echo "::warning::Failed to send Telegram ${label} notification to target #${target_index} (HTTP ${http_code}): ${description}"
                 continue
