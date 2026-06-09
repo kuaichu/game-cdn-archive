@@ -27,6 +27,79 @@ jobs:
             exit 0
           fi
 
+          telegram_response_description() {
+            TELEGRAM_BODY="$1" python3 - <<'PY'
+          import json
+          import os
+
+          body = os.environ.get("TELEGRAM_BODY", "")
+          try:
+              data = json.loads(body)
+              text = data.get("description") or body
+          except Exception:
+              text = body
+          print(" ".join((text or "no response body")[:500].split()))
+          PY
+          }
+
+          telegram_response_ok() {
+            TELEGRAM_BODY="$1" python3 - <<'PY'
+          import json
+          import os
+
+          try:
+              print(str(json.loads(os.environ.get("TELEGRAM_BODY", "")).get("ok")).lower())
+          except Exception:
+              print("unknown")
+          PY
+          }
+
+          send_telegram() {
+            local label="$1"
+            local message="$2"
+            local target_index=0
+            local sent_any=false
+
+            while IFS= read -r chat_id; do
+              chat_id="${chat_id#"${chat_id%%[![:space:]]*}"}"
+              chat_id="${chat_id%"${chat_id##*[![:space:]]}"}"
+              if [ -z "$chat_id" ]; then
+                continue
+              fi
+
+              target_index=$((target_index + 1))
+              sent_any=true
+              body_file="$(mktemp)"
+              http_code="$(curl -sS -o "$body_file" -w "%{http_code}" -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+                --data-urlencode "chat_id=${chat_id}" \
+                --data-urlencode "text=${message}" \
+                -d "disable_web_page_preview=true")"
+              curl_status=$?
+              body="$(cat "$body_file")"
+              rm -f "$body_file"
+
+              if [ "$curl_status" -ne 0 ]; then
+                echo "::warning::Failed to send Telegram ${label} notification to target #${target_index}: curl exited with ${curl_status}."
+                continue
+              fi
+
+              if ! [[ "$http_code" =~ ^[0-9]{3}$ ]] || [ "$http_code" -lt 200 ] || [ "$http_code" -ge 300 ]; then
+                description="$(telegram_response_description "$body")"
+                echo "::warning::Failed to send Telegram ${label} notification to target #${target_index} (HTTP ${http_code}): ${description}"
+                continue
+              fi
+
+              if [ "$(telegram_response_ok "$body")" != "true" ]; then
+                description="$(telegram_response_description "$body")"
+                echo "::warning::Telegram ${label} notification to target #${target_index} returned an unexpected response: ${description}"
+              fi
+            done < <(printf '%s\n' "$TELEGRAM_CHAT_ID" | tr ',;' '\n')
+
+            if [ "$sent_any" = false ]; then
+              echo "::warning::TELEGRAM_CHAT_ID did not contain a usable chat id."
+            fi
+          }
+
           case "${{ github.event_name }}" in
             schedule)
               trigger="schedule"
@@ -48,12 +121,7 @@ jobs:
           EOF
           )
 
-          if ! curl -fsS -o /dev/null -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
-            --data-urlencode "text=${message}" \
-            -d "disable_web_page_preview=true"; then
-            echo "::warning::Failed to send Telegram start notification."
-          fi
+          send_telegram start "$message"
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -134,6 +202,79 @@ jobs:
             exit 0
           fi
 
+          telegram_response_description() {
+            TELEGRAM_BODY="$1" python3 - <<'PY'
+          import json
+          import os
+
+          body = os.environ.get("TELEGRAM_BODY", "")
+          try:
+              data = json.loads(body)
+              text = data.get("description") or body
+          except Exception:
+              text = body
+          print(" ".join((text or "no response body")[:500].split()))
+          PY
+          }
+
+          telegram_response_ok() {
+            TELEGRAM_BODY="$1" python3 - <<'PY'
+          import json
+          import os
+
+          try:
+              print(str(json.loads(os.environ.get("TELEGRAM_BODY", "")).get("ok")).lower())
+          except Exception:
+              print("unknown")
+          PY
+          }
+
+          send_telegram() {
+            local label="$1"
+            local message="$2"
+            local target_index=0
+            local sent_any=false
+
+            while IFS= read -r chat_id; do
+              chat_id="${chat_id#"${chat_id%%[![:space:]]*}"}"
+              chat_id="${chat_id%"${chat_id##*[![:space:]]}"}"
+              if [ -z "$chat_id" ]; then
+                continue
+              fi
+
+              target_index=$((target_index + 1))
+              sent_any=true
+              body_file="$(mktemp)"
+              http_code="$(curl -sS -o "$body_file" -w "%{http_code}" -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+                --data-urlencode "chat_id=${chat_id}" \
+                --data-urlencode "text=${message}" \
+                -d "disable_web_page_preview=true")"
+              curl_status=$?
+              body="$(cat "$body_file")"
+              rm -f "$body_file"
+
+              if [ "$curl_status" -ne 0 ]; then
+                echo "::warning::Failed to send Telegram ${label} notification to target #${target_index}: curl exited with ${curl_status}."
+                continue
+              fi
+
+              if ! [[ "$http_code" =~ ^[0-9]{3}$ ]] || [ "$http_code" -lt 200 ] || [ "$http_code" -ge 300 ]; then
+                description="$(telegram_response_description "$body")"
+                echo "::warning::Failed to send Telegram ${label} notification to target #${target_index} (HTTP ${http_code}): ${description}"
+                continue
+              fi
+
+              if [ "$(telegram_response_ok "$body")" != "true" ]; then
+                description="$(telegram_response_description "$body")"
+                echo "::warning::Telegram ${label} notification to target #${target_index} returned an unexpected response: ${description}"
+              fi
+            done < <(printf '%s\n' "$TELEGRAM_CHAT_ID" | tr ',;' '\n')
+
+            if [ "$sent_any" = false ]; then
+              echo "::warning::TELEGRAM_CHAT_ID did not contain a usable chat id."
+            fi
+          }
+
           case "$DATA_CHANGED" in
             true)
               change_result="changed and committed"
@@ -156,9 +297,4 @@ jobs:
           EOF
           )
 
-          if ! curl -fsS -o /dev/null -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
-            --data-urlencode "text=${message}" \
-            -d "disable_web_page_preview=true"; then
-            echo "::warning::Failed to send Telegram result notification."
-          fi
+          send_telegram result "$message"

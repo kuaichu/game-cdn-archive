@@ -331,7 +331,11 @@ It can run manually from the Actions tab, and it also runs twice per day at
 8. Deploys to Cloudflare Pages when a repository secret named
    `CLOUDFLARE_API_TOKEN` is available.
 9. Optionally sends a Telegram summary when repository secrets named
-   `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` are configured.
+   `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` are configured. `TELEGRAM_CHAT_ID`
+   can contain one chat ID or multiple IDs separated by commas or semicolons.
+   For private chats, start the bot first and use the numeric user chat ID. For
+   groups, add the bot to the group and use the negative group or supergroup chat
+   ID, often starting with `-100`.
 
 The separate `.github/workflows/deploy-pages.yml` workflow deploys the static
 site on every push to `main` and can also be run manually.
