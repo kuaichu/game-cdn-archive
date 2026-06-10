@@ -87,6 +87,7 @@ jobs:
               http_code="$(curl -sS -o "$body_file" -w "%{http_code}" -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
                 --data-urlencode "chat_id=${chat_id}" \
                 --data-urlencode "text=${message}" \
+                -d "parse_mode=HTML" \
                 -d "disable_web_page_preview=true")"
               curl_status=$?
               body="$(cat "$body_file")"
@@ -104,6 +105,7 @@ jobs:
                   retry_http_code="$(curl -sS -o "$retry_body_file" -w "%{http_code}" -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
                     --data-urlencode "chat_id=${migrate_chat_id}" \
                     --data-urlencode "text=${message}" \
+                    -d "parse_mode=HTML" \
                     -d "disable_web_page_preview=true")"
                   retry_curl_status=$?
                   retry_body="$(cat "$retry_body_file")"
@@ -146,12 +148,19 @@ jobs:
               ;;
           esac
 
+          project="${GITHUB_REPOSITORY#*/}"
+          run_url="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          {
+            echo "NOTIFY_TRIGGER=${trigger}"
+            echo "NOTIFY_STARTED_AT=$(date +%s)"
+          } >> "$GITHUB_ENV"
+
           message=$(cat <<EOF
           Game CDN Archive sync started
+          Project: $project
           Status: running
           Trigger: $trigger
-          Repository: ${{ github.repository }}
-          Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          Run: <a href="$run_url">#$GITHUB_RUN_ID</a>
           EOF
           )
 
@@ -166,63 +175,88 @@ jobs:
           python-version: "3.12"
 
       - name: Install Python dependencies
-        run: pip install -r requirements.txt
+        run: bash scripts/gha_run_step.sh "Install Python dependencies" pip install -r requirements.txt
 
       - name: Refresh NTE data
-        run: python scripts/update_nte_static.py
+        env:
+          GHA_RUN_RETRIES: 2
+          GHA_RUN_RETRY_DELAY: 20
+        run: bash scripts/gha_run_step.sh "Refresh NTE data" python scripts/update_nte_static.py
 
       - name: Refresh HoyoFiles data
-        run: python scripts/sync_hoyofiles.py
+        env:
+          GHA_RUN_RETRIES: 2
+          GHA_RUN_RETRY_DELAY: 20
+        run: bash scripts/gha_run_step.sh "Refresh HoyoFiles data" python scripts/sync_hoyofiles.py
 
       - name: Clone Endfield upstream archive
-        run: git clone --depth 1 https://github.com/daydreamer-json/ak-endfield-api-archive.git /tmp/ak-endfield-api-archive
+        env:
+          GHA_RUN_RETRIES: 2
+          GHA_RUN_RETRY_DELAY: 20
+        run: bash scripts/gha_run_step.sh "Clone Endfield upstream archive" git clone --depth 1 https://github.com/daydreamer-json/ak-endfield-api-archive.git /tmp/ak-endfield-api-archive
 
       - name: Refresh Endfield data
-        run: python scripts/import_endfield_archive.py /tmp/ak-endfield-api-archive
+        run: bash scripts/gha_run_step.sh "Refresh Endfield data" python scripts/import_endfield_archive.py /tmp/ak-endfield-api-archive
 
       - name: Refresh Wuthering Waves data
-        run: python scripts/sync_wuwa.py
+        env:
+          GHA_RUN_RETRIES: 2
+          GHA_RUN_RETRY_DELAY: 20
+        run: bash scripts/gha_run_step.sh "Refresh Wuthering Waves data" python scripts/sync_wuwa.py
 
       - name: Refresh Arknights PC data
-        run: python scripts/sync_arknights_pc.py
+        env:
+          GHA_RUN_RETRIES: 2
+          GHA_RUN_RETRY_DELAY: 20
+        run: bash scripts/gha_run_step.sh "Refresh Arknights PC data" python scripts/sync_arknights_pc.py
 
       - name: Refresh Android APK data
-        run: python scripts/sync_android_apks.py
+        env:
+          GHA_RUN_RETRIES: 2
+          GHA_RUN_RETRY_DELAY: 20
+        run: bash scripts/gha_run_step.sh "Refresh Android APK data" python scripts/sync_android_apks.py
 
       - name: Check generated JavaScript
-        run: node --check docs/app.js
+        run: bash scripts/gha_run_step.sh "Check generated JavaScript" node --check docs/app.js
 
       - name: Commit changes
         id: commit
         shell: bash
         run: |
-          if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data docs/app.js docs/index.html scripts/update_nte_static.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py scripts/sync_wuwa.py scripts/sync_arknights_pc.py scripts/sync_android_apks.py
-          git commit -m "Auto update archive data"
-          git push
-          echo "changed=true" >> "$GITHUB_OUTPUT"
+          bash scripts/gha_run_step.sh "Commit changes" bash -e -o pipefail -c '
+            if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add docs/data docs/app.js docs/index.html scripts/update_nte_static.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py scripts/sync_wuwa.py scripts/sync_arknights_pc.py scripts/sync_android_apks.py
+            git commit -m "Auto update archive data"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          '
 
       - name: Check Cloudflare credentials
         if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         shell: bash
         run: |
-          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
-            echo "::error::CLOUDFLARE_API_TOKEN is not configured, so updated archive data cannot be deployed."
-            exit 1
-          fi
-          if [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
-            echo "::error::CLOUDFLARE_ACCOUNT_ID is not configured, so updated archive data cannot be deployed."
-            exit 1
-          fi
+          bash scripts/gha_run_step.sh "Check Cloudflare credentials" bash -e -o pipefail -c '
+            if [ -z "${CLOUDFLARE_API_TOKEN:-}" ]; then
+              echo "::error::CLOUDFLARE_API_TOKEN is not configured, so updated archive data cannot be deployed."
+              exit 1
+            fi
+            if [ -z "${CLOUDFLARE_ACCOUNT_ID:-}" ]; then
+              echo "::error::CLOUDFLARE_ACCOUNT_ID is not configured, so updated archive data cannot be deployed."
+              exit 1
+            fi
+          '
 
       - name: Deploy to Cloudflare Pages
         if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
-        run: npx --yes wrangler pages deploy docs --project-name game-cdn-archive --branch main
+        env:
+          GHA_RUN_RETRIES: 2
+          GHA_RUN_RETRY_DELAY: 20
+        run: bash scripts/gha_run_step.sh "Deploy to Cloudflare Pages" npx --yes wrangler pages deploy docs --project-name game-cdn-archive --branch main
 
       - name: Notify Telegram result
         if: always()
@@ -296,6 +330,7 @@ jobs:
               http_code="$(curl -sS -o "$body_file" -w "%{http_code}" -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
                 --data-urlencode "chat_id=${chat_id}" \
                 --data-urlencode "text=${message}" \
+                -d "parse_mode=HTML" \
                 -d "disable_web_page_preview=true")"
               curl_status=$?
               body="$(cat "$body_file")"
@@ -313,6 +348,7 @@ jobs:
                   retry_http_code="$(curl -sS -o "$retry_body_file" -w "%{http_code}" -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
                     --data-urlencode "chat_id=${migrate_chat_id}" \
                     --data-urlencode "text=${message}" \
+                    -d "parse_mode=HTML" \
                     -d "disable_web_page_preview=true")"
                   retry_curl_status=$?
                   retry_body="$(cat "$retry_body_file")"
@@ -343,6 +379,39 @@ jobs:
             fi
           }
 
+          html_escape() {
+            TEXT="$1" python3 - <<'PY'
+          import html
+          import os
+
+          print(html.escape(os.environ.get("TEXT", ""), quote=False))
+          PY
+          }
+
+          format_duration() {
+            local total_seconds="$1"
+            local minutes=$((total_seconds / 60))
+            local seconds=$((total_seconds % 60))
+            if [ "$minutes" -gt 0 ]; then
+              printf '%dm %02ds' "$minutes" "$seconds"
+            else
+              printf '%ds' "$seconds"
+            fi
+          }
+
+          case "${{ github.event_name }}" in
+            schedule)
+              trigger="schedule"
+              ;;
+            workflow_dispatch)
+              trigger="manual"
+              ;;
+            *)
+              trigger="${{ github.event_name }}"
+              ;;
+          esac
+          trigger="${NOTIFY_TRIGGER:-$trigger}"
+
           case "$DATA_CHANGED" in
             true)
               change_result="changed and committed"
@@ -355,14 +424,56 @@ jobs:
               ;;
           esac
 
-          message=$(cat <<EOF
-          Game CDN Archive sync finished
-          Status: $JOB_STATUS
-          Data: $change_result
-          Trigger: ${{ github.event_name }}
-          Repository: ${{ github.repository }}
-          Run: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          EOF
-          )
+          duration="unknown"
+          if [[ "${NOTIFY_STARTED_AT:-}" =~ ^[0-9]+$ ]]; then
+            now="$(date +%s)"
+            duration_seconds=$((now - NOTIFY_STARTED_AT))
+            if [ "$duration_seconds" -lt 0 ]; then
+              duration_seconds=0
+            fi
+            duration="$(format_duration "$duration_seconds")"
+          fi
+
+          project="${GITHUB_REPOSITORY#*/}"
+          run_url="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          project_html="$(html_escape "$project")"
+          status_html="$(html_escape "$JOB_STATUS")"
+          data_html="$(html_escape "$change_result")"
+          trigger_html="$(html_escape "$trigger")"
+          duration_html="$(html_escape "$duration")"
+
+          if [ "$JOB_STATUS" = "success" ]; then
+            title="Game CDN Archive sync finished"
+          else
+            title="Game CDN Archive sync failed"
+          fi
+
+          message="$title
+          Project: $project_html
+          Status: $status_html
+          Data: $data_html
+          Trigger: $trigger_html
+          Duration: $duration_html"
+
+          if [ "$JOB_STATUS" != "success" ]; then
+            if [ -n "${FAILED_STEP_NAME:-}" ]; then
+              failed_step_html="$(html_escape "$FAILED_STEP_NAME")"
+              message="$message
+          Failed step: $failed_step_html"
+            fi
+            if [ -n "${FAILED_STEP_EXIT_CODE:-}" ]; then
+              exit_code_html="$(html_escape "$FAILED_STEP_EXIT_CODE")"
+              message="$message
+          Exit code: $exit_code_html"
+            fi
+            if [ -n "${FAILED_STEP_ERROR:-}" ]; then
+              error_html="$(html_escape "$FAILED_STEP_ERROR")"
+              message="$message
+          Error: $error_html"
+            fi
+          fi
+
+          message="$message
+          Run: <a href=\"$run_url\">#$GITHUB_RUN_ID</a>"
 
           send_telegram result "$message"

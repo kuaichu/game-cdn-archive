@@ -72,6 +72,30 @@ Deploy with Wrangler:
 npx wrangler pages deploy docs --project-name game-cdn-archive --branch main
 ```
 
+## Automation
+
+The scheduled sync currently runs twice per day:
+
+- `07:18` Asia/Shanghai
+- `12:18` Asia/Shanghai
+
+The GitHub Actions workflow can also post Telegram notifications when the
+following repository secrets are configured:
+
+| Secret | Purpose |
+| --- | --- |
+| `TELEGRAM_BOT_TOKEN` | Bot token used for notifications |
+| `TELEGRAM_CHAT_ID` | One chat ID, or multiple IDs separated by `,` or `;` |
+
+If Telegram reports that a legacy group has been upgraded to a supergroup, the
+workflow retries the notification against the migrated chat ID automatically and
+prints a warning in the Actions log so the secret can be updated later.
+
+Network-heavy sync steps and Cloudflare deployment are retried automatically up
+to `3` total attempts. If a step still fails, the final Telegram message
+includes the failed step name, exit code, and a compact error summary extracted
+from the last attempt log.
+
 ## Repository Layout
 
 ```text
