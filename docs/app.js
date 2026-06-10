@@ -2,6 +2,7 @@ const state = {
   gameId: "nte",
   mode: "full",
   version: null,
+  manualVersions: {},
   compareVersion: null,
   diffFilter: "all",
   query: "",
@@ -60,12 +61,14 @@ const saveView = () => {
     localStorage.setItem(VIEW_STORAGE_KEY, JSON.stringify({
       gameId: state.gameId,
       mode: state.mode,
-      version: state.version,
+      manualVersions: state.manualVersions,
     }));
   } catch {
     // The page still works when storage is blocked or unavailable.
   }
 };
+
+const preferredVersionForGame = (gameId = state.gameId) => state.manualVersions?.[gameId] || null;
 
 const icons = {
   box: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 8-9-5-9 5 9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>',
@@ -794,7 +797,7 @@ const renderGameRail = () => {
       state.wuwaFilePath = "";
       state.wuwaExpandedFile = "";
       $("#fileSearch").value = "";
-      await ensureGameData();
+      await ensureGameData(preferredVersionForGame(state.gameId));
       state.compareVersion = null;
       state.diffFilter = "all";
       render();
@@ -860,6 +863,7 @@ const renderVersionMenu = () => {
   $$(".version-row").forEach((button) => {
     button.addEventListener("click", () => {
       state.version = button.dataset.version;
+      state.manualVersions[state.gameId] = state.version;
       state.compareVersion = null;
       state.diffFilter = "all";
       state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
@@ -2779,10 +2783,13 @@ Promise.all([
   if (allGames().some((game) => game.id === savedView.gameId)) {
     state.gameId = savedView.gameId;
   }
+  state.manualVersions = savedView.manualVersions && typeof savedView.manualVersions === "object"
+    ? savedView.manualVersions
+    : {};
   state.mode = modesForGame().some(([mode]) => mode === savedView.mode)
     ? savedView.mode
     : modesForGame()[0][0];
   bindStaticActions();
-  await ensureGameData(savedView.version);
+  await ensureGameData(preferredVersionForGame(state.gameId));
   render();
 });
