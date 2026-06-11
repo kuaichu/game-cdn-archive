@@ -219,6 +219,17 @@ jobs:
       - name: Check generated JavaScript
         run: bash scripts/gha_run_step.sh "Check generated JavaScript" node --check docs/app.js
 
+      - name: Summarize version updates
+        shell: bash
+        run: |
+          update_summary_file="${RUNNER_TEMP}/game-cdn-version-updates.txt"
+          python scripts/summarize_version_updates.py --output "$update_summary_file"
+          {
+            echo "VERSION_UPDATE_SUMMARY<<__GAME_CDN_VERSION_UPDATES__"
+            cat "$update_summary_file"
+            echo "__GAME_CDN_VERSION_UPDATES__"
+          } >> "$GITHUB_ENV"
+
       - name: Commit changes
         id: commit
         shell: bash
@@ -454,6 +465,16 @@ jobs:
           Data: $data_html
           Trigger: $trigger_html
           Duration: $duration_html"
+
+          if [ -n "${VERSION_UPDATE_SUMMARY:-}" ]; then
+            updates_html="$(html_escape "$VERSION_UPDATE_SUMMARY")"
+            message="$message
+          Updates:
+          $updates_html"
+          elif [ "$DATA_CHANGED" = "true" ]; then
+            message="$message
+          Updates: no game version changes detected"
+          fi
 
           if [ "$JOB_STATUS" != "success" ]; then
             if [ -n "${FAILED_STEP_NAME:-}" ]; then
