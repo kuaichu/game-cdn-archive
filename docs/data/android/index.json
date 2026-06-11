@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-10T09:58:09.194915+00:00",
-  "generated_at": "2026-06-10T09:58:09.194915+00:00",
+  "last_checked_at": "2026-06-11T01:47:33.273178+00:00",
+  "generated_at": "2026-06-11T01:47:33.273178+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -4230,6 +4230,24 @@
       "name": "战双帕弥什",
       "subName": "Punishing: Gray Raven",
       "versions": [
+        {
+          "game_id": "pns",
+          "version": "4.5.0",
+          "channel": "官渠",
+          "url": "https://zspms-txcdn-media.kurogame.com/install/20260602-v4_5-zspms_A1372.apk",
+          "source": "official Punishing: Gray Raven Android download index",
+          "source_url": "https://download.kurogames.com/pns/official/cn/zh-Hans/android_app.json",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2083232369,
+          "last_modified": "Fri, 29 May 2026 07:21:14 GMT",
+          "etag": "8568016C5C9963854571A363BC79641C-400",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "20260602-v4_5-zspms_A1372.apk",
+          "captured_at": "2026-06-11T01:47:33.273178+00:00"
+        },
         {
           "game_id": "pns",
           "version": "4.5.0",
