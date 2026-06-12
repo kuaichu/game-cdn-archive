@@ -571,6 +571,13 @@ def write_json_if_changed(path: Path, data: Any, indent: int = 2) -> bool:
     return True
 
 
+def read_cached_json(path: Path) -> Any | None:
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
 def version_key(version: str) -> tuple[int, ...]:
     return tuple(int(part) for part in version.split("."))
 
@@ -661,6 +668,8 @@ def main() -> None:
     checked_at = datetime.now(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z")
     games_summary = []
     synced_chunks = 0
+    cached_chunks = 0
+    chunk_api_available = True
 
     for game in GAMES:
         game_id = game["id"]
@@ -687,10 +696,36 @@ def main() -> None:
             if stats["has_chunk"]:
                 chunk_versions += 1
                 chunk_url = f"{API_BASE}/chunk/{game_id}_{version}.json"
-                chunk = fetch_json(chunk_url)
+                chunk_path = CHUNK_DATA / f"{game_id}_{version}.json"
+                fetched_chunk = False
+                if chunk_api_available:
+                    try:
+                        chunk = fetch_json(chunk_url)
+                        fetched_chunk = True
+                    except RuntimeError as exc:
+                        chunk_api_available = False
+                        print(
+                            "::warning::HoyoFiles chunk API became unavailable; "
+                            f"using cached chunk indexes for the rest of this run: {exc}"
+                        )
+                        chunk = read_cached_json(chunk_path)
+                else:
+                    chunk = read_cached_json(chunk_path)
+
                 if isinstance(chunk, dict) and chunk.get("retcode") == 0:
-                    write_json_if_changed(CHUNK_DATA / f"{game_id}_{version}.json", chunk, indent=4)
-                    synced_chunks += 1
+                    if fetched_chunk:
+                        write_json_if_changed(chunk_path, chunk, indent=4)
+                        synced_chunks += 1
+                    else:
+                        cached_chunks += 1
+                else:
+                    version_rows[-1]["has_chunk"] = False
+                    chunk_versions -= 1
+                    source = "fetched" if fetched_chunk else "cached"
+                    print(
+                        f"::warning::No usable {source} HoyoFiles chunk index is available "
+                        f"for {game_id} {version}; disabling its chunk view."
+                    )
 
         games_summary.append(
             {
@@ -718,7 +753,10 @@ def main() -> None:
         new_index["generated_at"] = previous.get("generated_at")
 
     write_json_if_changed(GAMES_PATH, new_index)
-    print(f"synced {len(games_summary)} HoYo games, {synced_chunks} chunk indexes")
+    print(
+        f"synced {len(games_summary)} HoYo games, {synced_chunks} chunk indexes"
+        f", reused {cached_chunks} cached chunk indexes"
+    )
 
 
 if __name__ == "__main__":
