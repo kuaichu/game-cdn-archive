@@ -226,7 +226,10 @@ jobs:
           python scripts/summarize_version_updates.py --output "$update_summary_file"
           {
             echo "VERSION_UPDATE_SUMMARY<<__GAME_CDN_VERSION_UPDATES__"
-            cat "$update_summary_file"
+            if [ -s "$update_summary_file" ]; then
+              cat "$update_summary_file"
+              echo
+            fi
             echo "__GAME_CDN_VERSION_UPDATES__"
           } >> "$GITHUB_ENV"
 
