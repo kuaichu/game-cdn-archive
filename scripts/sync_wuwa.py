@@ -8,6 +8,7 @@ import gzip
 import json
 import time
 import urllib.request
+from copy import deepcopy
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
@@ -86,6 +87,61 @@ def fetch_json(url: str):
     raise RuntimeError(f"Failed to fetch JSON from {url}") from last_error
 
 
+def load_cached_versions(output_dir: Path) -> dict:
+    versions_path = output_dir / "versions.json"
+    try:
+        return json.loads(versions_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+
+
+def cached_link_exists(output_dir: Path, value) -> bool:
+    if value is None:
+        return True
+    if isinstance(value, str):
+        if not value.startswith("data/wuwa/"):
+            return True
+        docs_dir = output_dir.parents[1]
+        return (docs_dir / value).exists()
+    if isinstance(value, dict):
+        return all(cached_link_exists(output_dir, item) for item in value.values())
+    if isinstance(value, list):
+        return all(cached_link_exists(output_dir, item) for item in value)
+    return True
+
+
+def summary_from_version(version: dict) -> dict:
+    summary = {
+        "version": version["version"],
+        "channel": version.get("channel", ""),
+        "region": version.get("region", ""),
+        "file_count": int(version.get("file_count") or len(version.get("files") or [])),
+        "cdn_count": len(version.get("cdn_urls") or []),
+        "patch_routes": len(version.get("patches") or []),
+        "size": int(version.get("size") or 0),
+        "uncompressed_size": int(version.get("uncompressed_size") or 0),
+    }
+    for key in ["source_note", "release_stage"]:
+        if version.get(key):
+            summary[key] = version[key]
+    return summary
+
+
+def cached_version(
+    cached_versions: dict,
+    output_dir: Path,
+    version: str,
+    reason: Exception,
+):
+    cached = cached_versions.get(version)
+    if not isinstance(cached, dict):
+        return None
+    if not cached_link_exists(output_dir, cached.get("links")):
+        return None
+    print(f"::warning::Reusing cached Wuthering Waves {version} data: {reason}")
+    return summary_from_version(cached), deepcopy(cached)
+
+
 def join_url(base: str, path: str) -> str:
     return f"{base.rstrip('/')}/{path.lstrip('/')}"
 
@@ -157,7 +213,13 @@ def write_lists(output_dir: Path, version: str, items: list[dict]) -> dict[str, 
     return write_named_lists(output_dir, f"{version}-files", f"WutheringWaves_{version}", items)
 
 
-def build_channel(discovery: dict, channel: str, region: str, output_dir: Path):
+def build_channel(
+    discovery: dict,
+    channel: str,
+    region: str,
+    output_dir: Path,
+    cached_versions: dict,
+):
     index_url = discovery[channel][region]
     launcher_index = fetch_json(index_url)
     default = launcher_index["default"]
@@ -167,7 +229,14 @@ def build_channel(discovery: dict, channel: str, region: str, output_dir: Path):
         raise RuntimeError("No CDN urls found")
 
     index_file_url = join_url(cdn_urls[0], config["indexFile"])
-    resource_index = fetch_json(index_file_url)
+    try:
+        resource_index = fetch_json(index_file_url)
+    except RuntimeError as exc:
+        cached = cached_version(cached_versions, output_dir, config["version"], exc)
+        if cached:
+            summary, version = cached
+            return summary, version, index_url
+        raise
     raw_items = resource_index.get("resource") or []
     items = [normalize_resource(item, cdn_urls, config["baseUrl"]) for item in raw_items]
     links = write_lists(output_dir, config["version"], items)
@@ -218,8 +287,14 @@ def build_channel(discovery: dict, channel: str, region: str, output_dir: Path):
     return summary, version, index_url
 
 
-def build_historical_cn_live(spec: dict, output_dir: Path):
-    resource_index = fetch_json(spec["resource_index"])
+def build_historical_cn_live(spec: dict, output_dir: Path, cached_versions: dict):
+    try:
+        resource_index = fetch_json(spec["resource_index"])
+    except RuntimeError as exc:
+        cached = cached_version(cached_versions, output_dir, spec["version"], exc)
+        if cached:
+            return cached
+        raise
     raw_items = resource_index.get("resource") or []
     items = [normalize_resource(item, CN_LIVE_CDNS, spec["base_url"]) for item in raw_items]
     links = write_lists(output_dir, spec["version"], items)
@@ -258,44 +333,58 @@ def index_path_from_url(url: str) -> str:
     return urlsplit(url).path.lstrip("/")
 
 
-def build_manual_cn_preload(spec: dict, output_dir: Path):
-    resource_index = fetch_json(spec["resource_index"])
+def build_manual_cn_preload(spec: dict, output_dir: Path, cached_versions: dict):
+    try:
+        resource_index = fetch_json(spec["resource_index"])
+    except RuntimeError as exc:
+        cached = cached_version(cached_versions, output_dir, spec["version"], exc)
+        if cached:
+            return cached
+        raise
     raw_items = resource_index.get("resource") or []
     items = [normalize_resource(item, CN_LIVE_CDNS, spec["base_url"]) for item in raw_items]
-    links = write_lists(output_dir, spec["version"], items)
     total_size = sum(item["size"] for item in items)
 
     patch_routes = []
     patch_parts_all = []
-    for patch in spec.get("patches", []):
-        patch_index = fetch_json(patch["index_url"])
-        patch_raw = patch_index.get("resource") or []
-        parts = [
-            normalize_patch_resource(item, CN_LIVE_CDNS, patch["base_url"])
-            for item in patch_raw
-            if str(item.get("dest") or "").endswith(".krpdiff")
-        ]
-        patch_parts_all.extend(parts)
-        patch_links = write_named_lists(
+    try:
+        for patch in spec.get("patches", []):
+            patch_index = fetch_json(patch["index_url"])
+            patch_raw = patch_index.get("resource") or []
+            parts = [
+                normalize_patch_resource(item, CN_LIVE_CDNS, patch["base_url"])
+                for item in patch_raw
+                if str(item.get("dest") or "").endswith(".krpdiff")
+            ]
+            patch_parts_all.extend(parts)
+            patch_routes.append(
+                {
+                    "from": patch["from"],
+                    "to": spec["version"],
+                    "size": sum(item["size"] for item in parts),
+                    "uncompressed_size": 0,
+                    "index_file_md5": "",
+                    "index_file": index_path_from_url(patch["index_url"]),
+                    "index_url": patch["index_url"],
+                    "base_url": patch["base_url"],
+                    "parts": parts,
+                }
+            )
+    except RuntimeError as exc:
+        cached = cached_version(cached_versions, output_dir, spec["version"], exc)
+        if cached:
+            return cached
+        raise
+
+    links = write_lists(output_dir, spec["version"], items)
+    for route in patch_routes:
+        parts = route["parts"]
+        route["links"] = write_named_lists(
             output_dir,
-            f"{spec['version']}_{patch['from']}_patches",
-            f"WutheringWaves_{spec['version']}_patches/{patch['from']}_to_{spec['version']}",
+            f"{spec['version']}_{route['from']}_patches",
+            f"WutheringWaves_{spec['version']}_patches/{route['from']}_to_{spec['version']}",
             parts,
         ) if parts else None
-        patch_routes.append(
-            {
-                "from": patch["from"],
-                "to": spec["version"],
-                "size": sum(item["size"] for item in parts),
-                "uncompressed_size": 0,
-                "index_file_md5": "",
-                "index_file": index_path_from_url(patch["index_url"]),
-                "index_url": patch["index_url"],
-                "base_url": patch["base_url"],
-                "parts": parts,
-                "links": patch_links,
-            }
-        )
 
     combined_patch_links = write_named_lists(
         output_dir,
@@ -348,9 +437,10 @@ def main() -> None:
     args = parser.parse_args()
 
     args.output.mkdir(parents=True, exist_ok=True)
+    cached_versions = load_cached_versions(args.output)
     discovery = fetch_json(DISCOVERY_URL)
     summary, version, selected_index_url = build_channel(
-        discovery, args.channel, args.region, args.output
+        discovery, args.channel, args.region, args.output, cached_versions
     )
     summaries = [summary]
     versions = {version["version"]: version}
@@ -359,13 +449,17 @@ def main() -> None:
         for spec in HISTORICAL_CN_LIVE_INDEXES:
             if spec["version"] in versions:
                 continue
-            historical_summary, historical_version = build_historical_cn_live(spec, args.output)
+            historical_summary, historical_version = build_historical_cn_live(
+                spec, args.output, cached_versions
+            )
             summaries.append(historical_summary)
             versions[historical_version["version"]] = historical_version
         for spec in MANUAL_CN_PRELOAD_INDEXES:
             if spec["version"] in versions:
                 continue
-            preload_summary, preload_version = build_manual_cn_preload(spec, args.output)
+            preload_summary, preload_version = build_manual_cn_preload(
+                spec, args.output, cached_versions
+            )
             summaries.append(preload_summary)
             versions[preload_version["version"]] = preload_version
 
