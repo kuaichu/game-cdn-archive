@@ -85,6 +85,18 @@ def main() -> None:
                 rows.append(old)
                 continue
             row = normalize_paths(process_version(version, temp_root, timeout=30))
+            if row.get("status") == 0 and old:
+                print(
+                    f"::warning::Reusing cached NTE {version} metadata after transient "
+                    f"ResList fetch failure: {row.get('error') or 'unknown network error'}"
+                )
+                rows.append(old)
+                continue
+            if row.get("status") == 0:
+                raise RuntimeError(
+                    f"could not fetch uncached NTE ResList for {version}: "
+                    f"{row.get('error') or 'unknown network error'}"
+                )
             rows.append(row)
         copy_url_lists(temp_root)
 

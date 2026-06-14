@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import socket
 import urllib.error
 import urllib.request
 import zipfile
@@ -14,10 +15,16 @@ from build_urls_from_reslist import DEFAULT_BASE_URL, parse_patchlist, parse_res
 from decode_patcherxml0 import decode_patcherxml0
 
 
-URL_TEMPLATE = (
-    "https://yhcdn1.wmupd.com/clientRes/publish_PC/"
-    "Version/Windows/version/{version}/ResList.bin.zip"
-)
+URL_TEMPLATES = [
+    (
+        "https://yhcdn1.wmupd.com/clientRes/publish_PC/"
+        "Version/Windows/version/{version}/ResList.bin.zip"
+    ),
+    (
+        "https://yhcdn2.wmupd.com/clientRes/publish_PC/"
+        "Version/Windows/version/{version}/ResList.bin.zip"
+    ),
+]
 
 
 def fetch(url: str, timeout: int) -> tuple[int, bytes | None, dict[str, str]]:
@@ -27,6 +34,31 @@ def fetch(url: str, timeout: int) -> tuple[int, bytes | None, dict[str, str]]:
             return resp.status, resp.read(), dict(resp.headers.items())
     except urllib.error.HTTPError as exc:
         return exc.code, None, dict(exc.headers.items())
+    except (TimeoutError, socket.timeout, urllib.error.URLError, OSError) as exc:
+        return 0, None, {"X-Fetch-Error": str(exc)}
+
+
+def fetch_reslist(version: str, timeout: int) -> tuple[str, int, bytes | None, dict[str, str]]:
+    fallback: tuple[str, int, bytes | None, dict[str, str]] | None = None
+    errors = []
+    for template in URL_TEMPLATES:
+        url = template.format(version=version)
+        status, body, headers = fetch(url, timeout)
+        if status == 200 and body is not None:
+            return url, status, body, headers
+        if status == 0:
+            errors.append(f"{url}: {headers.get('X-Fetch-Error', 'unknown network error')}")
+            continue
+        if fallback is None:
+            fallback = (url, status, body, headers)
+    if fallback:
+        return fallback
+    return (
+        URL_TEMPLATES[0].format(version=version),
+        0,
+        None,
+        {"X-Fetch-Error": "; ".join(errors) or "all NTE ResList endpoints failed"},
+    )
 
 
 def write_index(prefix: Path, name: str, items: list[dict[str, str | int]], kind: str) -> dict[str, int | str]:
@@ -53,13 +85,14 @@ def write_index(prefix: Path, name: str, items: list[dict[str, str | int]], kind
 
 
 def process_version(version: str, out_root: Path, timeout: int) -> dict:
-    url = URL_TEMPLATE.format(version=version)
+    url, status, body, headers = fetch_reslist(version, timeout)
     row: dict = {"version": version, "url": url}
 
-    status, body, headers = fetch(url, timeout)
     row["status"] = status
     row["last_modified"] = headers.get("Last-Modified")
     row["content_length"] = int(headers.get("Content-Length", "0") or "0")
+    if headers.get("X-Fetch-Error"):
+        row["error"] = headers["X-Fetch-Error"]
     if status != 200 or body is None:
         return row
 
