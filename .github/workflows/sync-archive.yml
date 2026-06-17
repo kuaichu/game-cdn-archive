@@ -173,6 +173,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Update checkout to latest main
+        run: bash scripts/gha_run_step.sh "Update checkout to latest main" git pull --ff-only origin main
+
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
@@ -250,6 +253,18 @@ jobs:
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add docs/data docs/app.js docs/index.html scripts/update_nte_static.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py scripts/sync_wuwa.py scripts/sync_arknights_pc.py scripts/sync_android_apks.py
             git commit -m "Auto update archive data"
+            for attempt in 1 2 3; do
+              if git push; then
+                echo "changed=true" >> "$GITHUB_OUTPUT"
+                exit 0
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                break
+              fi
+              echo "::warning::Push failed on attempt ${attempt}/3; rebasing on latest origin/main before retry."
+              git fetch origin main
+              git rebase origin/main
+            done
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           '
