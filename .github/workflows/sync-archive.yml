@@ -21,6 +21,8 @@ jobs:
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_CHANNEL_CHAT_ID: ${{ secrets.TELEGRAM_CHANNEL_CHAT_ID }}
+      TELEGRAM_TRANSIENT_DELETE_AFTER_SECONDS: ${{ vars.TELEGRAM_TRANSIENT_DELETE_AFTER_SECONDS }}
 
     steps:
       - name: Notify Telegram start
@@ -158,6 +160,11 @@ jobs:
             echo "NOTIFY_TRIGGER=${trigger}"
             echo "NOTIFY_STARTED_AT=$(date +%s)"
           } >> "$GITHUB_ENV"
+
+          if [ "$trigger" = "schedule" ]; then
+            echo "Skip persistent start notification for scheduled runs; final result notification will be sent instead."
+            exit 0
+          fi
 
           message=$(cat <<EOF
           Game CDN Archive sync started
@@ -298,7 +305,7 @@ jobs:
           JOB_STATUS: ${{ job.status }}
           DATA_CHANGED: ${{ steps.commit.outputs.changed }}
         run: |
-          if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || { [ -z "$TELEGRAM_CHAT_ID" ] && [ -z "$TELEGRAM_CHANNEL_CHAT_ID" ]; }; then
             echo "Telegram secrets are not configured, skip result notification."
             exit 0
           fi
@@ -330,6 +337,19 @@ jobs:
           PY
           }
 
+          telegram_message_id() {
+            TELEGRAM_BODY="$1" python3 - <<'PY'
+          import json
+          import os
+
+          try:
+              message_id = (json.loads(os.environ.get("TELEGRAM_BODY", "")).get("result") or {}).get("message_id")
+          except Exception:
+              message_id = None
+          print(message_id or "")
+          PY
+          }
+
           telegram_migrate_to_chat_id() {
             TELEGRAM_BODY="$1" python3 - <<'PY'
           import json
@@ -344,11 +364,48 @@ jobs:
           PY
           }
 
+          delete_telegram_message() {
+            local label="$1"
+            local chat_id="$2"
+            local message_id="$3"
+
+            if [ -z "$chat_id" ] || [ -z "$message_id" ]; then
+              return 0
+            fi
+
+            body_file="$(mktemp)"
+            http_code="$(curl -sS -o "$body_file" -w "%{http_code}" -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/deleteMessage" \
+              --data-urlencode "chat_id=${chat_id}" \
+              --data-urlencode "message_id=${message_id}")"
+            curl_status=$?
+            body="$(cat "$body_file")"
+            rm -f "$body_file"
+
+            if [ "$curl_status" -ne 0 ]; then
+              echo "::warning::Failed to delete Telegram ${label} notification ${message_id}: curl exited with ${curl_status}."
+              return 0
+            fi
+
+            if ! [[ "$http_code" =~ ^[0-9]{3}$ ]] || [ "$http_code" -lt 200 ] || [ "$http_code" -ge 300 ] || [ "$(telegram_response_ok "$body")" != "true" ]; then
+              description="$(telegram_response_description "$body")"
+              echo "::warning::Failed to delete Telegram ${label} notification ${message_id} (HTTP ${http_code}): ${description}"
+            fi
+          }
+
           send_telegram() {
             local label="$1"
             local message="$2"
+            local chat_ids="$3"
+            local delete_after_seconds="${4:-0}"
             local target_index=0
             local sent_any=false
+            local delete_queue=""
+
+            if [[ "$delete_after_seconds" =~ ^[0-9]+$ ]] && [ "$delete_after_seconds" -gt 0 ]; then
+              delete_queue="$(mktemp)"
+            else
+              delete_after_seconds=0
+            fi
 
             while IFS= read -r chat_id; do
               chat_id="${chat_id#"${chat_id%%[![:space:]]*}"}"
@@ -404,11 +461,27 @@ jobs:
               if [ "$(telegram_response_ok "$body")" != "true" ]; then
                 description="$(telegram_response_description "$body")"
                 echo "::warning::Telegram ${label} notification to target #${target_index} returned an unexpected response: ${description}"
+              elif [ -n "$delete_queue" ]; then
+                message_id="$(telegram_message_id "$body")"
+                if [ -n "$message_id" ]; then
+                  printf '%s\t%s\n' "$chat_id" "$message_id" >> "$delete_queue"
+                fi
               fi
-            done < <(printf '%s\n' "$TELEGRAM_CHAT_ID" | tr ',;' '\n')
+            done < <(printf '%s\n' "$chat_ids" | tr ',;' '\n')
 
             if [ "$sent_any" = false ]; then
-              echo "::warning::TELEGRAM_CHAT_ID did not contain a usable chat id."
+              echo "::warning::Telegram ${label} target list did not contain a usable chat id."
+            fi
+
+            if [ -n "$delete_queue" ]; then
+              if [ -s "$delete_queue" ]; then
+                echo "Telegram ${label} notification will be deleted in ${delete_after_seconds}s."
+                sleep "$delete_after_seconds"
+                while IFS=$'\t' read -r sent_chat_id sent_message_id; do
+                  delete_telegram_message "$label" "$sent_chat_id" "$sent_message_id"
+                done < "$delete_queue"
+              fi
+              rm -f "$delete_queue"
             fi
           }
 
@@ -519,4 +592,19 @@ jobs:
           message="$message
           Run: <a href=\"$run_url\">#$GITHUB_RUN_ID</a>"
 
-          send_telegram result "$message"
+          persistent_targets="${TELEGRAM_CHANNEL_CHAT_ID:-$TELEGRAM_CHAT_ID}"
+          transient_targets="${TELEGRAM_CHAT_ID:-$TELEGRAM_CHANNEL_CHAT_ID}"
+          delete_after_seconds="${TELEGRAM_TRANSIENT_DELETE_AFTER_SECONDS:-90}"
+          notification_targets="$persistent_targets"
+          notification_delete_after=0
+
+          if [ "$JOB_STATUS" = "success" ] && [ -z "${VERSION_UPDATE_SUMMARY:-}" ]; then
+            notification_targets="$transient_targets"
+            notification_delete_after="$delete_after_seconds"
+            message="$message
+          Note: no game version updates detected; this temporary notice will be deleted."
+          elif [ "$JOB_STATUS" != "success" ]; then
+            notification_targets="$transient_targets"
+          fi
+
+          send_telegram result "$message" "$notification_targets" "$notification_delete_after"
