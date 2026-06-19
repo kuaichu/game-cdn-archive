@@ -1,0 +1,104 @@
+name: Monthly update report
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "45 15 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  monthly-report:
+    runs-on: ubuntu-latest
+    env:
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      TELEGRAM_CHANNEL_CHAT_ID: ${{ secrets.TELEGRAM_CHANNEL_CHAT_ID }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Build monthly report
+        shell: bash
+        run: |
+          report_file="${RUNNER_TEMP}/game-cdn-monthly-report.txt"
+          force_args=()
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            force_args+=(--force)
+          fi
+          python scripts/summarize_monthly_updates.py --output "$report_file" "${force_args[@]}"
+          if [ ! -s "$report_file" ]; then
+            echo "Monthly report is not due today."
+            echo "MONTHLY_REPORT_READY=false" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          {
+            echo "MONTHLY_REPORT_READY=true"
+            echo "MONTHLY_REPORT_BODY<<__GAME_CDN_MONTHLY_REPORT__"
+            cat "$report_file"
+            echo
+            echo "__GAME_CDN_MONTHLY_REPORT__"
+          } >> "$GITHUB_ENV"
+
+      - name: Notify Telegram monthly report
+        if: env.MONTHLY_REPORT_READY == 'true'
+        shell: bash
+        run: |
+          if [ -z "$TELEGRAM_BOT_TOKEN" ]; then
+            echo "TELEGRAM_BOT_TOKEN is not configured, skip monthly report."
+            exit 0
+          fi
+
+          targets="${TELEGRAM_CHANNEL_CHAT_ID:-$TELEGRAM_CHAT_ID}"
+          if [ -z "$targets" ]; then
+            echo "Telegram chat secrets are not configured, skip monthly report."
+            exit 0
+          fi
+
+          send_telegram() {
+            local message="$1"
+            local target_index=0
+            local sent_any=false
+
+            while IFS= read -r chat_id; do
+              chat_id="${chat_id#"${chat_id%%[![:space:]]*}"}"
+              chat_id="${chat_id%"${chat_id##*[![:space:]]}"}"
+              if [ -z "$chat_id" ]; then
+                continue
+              fi
+
+              target_index=$((target_index + 1))
+              sent_any=true
+              body_file="$(mktemp)"
+              http_code="$(curl -sS -o "$body_file" -w "%{http_code}" -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+                --data-urlencode "chat_id=${chat_id}" \
+                --data-urlencode "text=${message}" \
+                -d "disable_web_page_preview=true")"
+              curl_status=$?
+              body="$(cat "$body_file")"
+              rm -f "$body_file"
+
+              if [ "$curl_status" -ne 0 ]; then
+                echo "::warning::Failed to send monthly report to target #${target_index}: curl exited with ${curl_status}."
+                continue
+              fi
+              if ! [[ "$http_code" =~ ^[0-9]{3}$ ]] || [ "$http_code" -lt 200 ] || [ "$http_code" -ge 300 ]; then
+                echo "::warning::Failed to send monthly report to target #${target_index} (HTTP ${http_code}): ${body}"
+              fi
+            done < <(printf '%s\n' "$targets" | tr ',;' '\n')
+
+            if [ "$sent_any" = false ]; then
+              echo "::warning::Monthly report target list did not contain a usable chat id."
+            fi
+          }
+
+          send_telegram "$MONTHLY_REPORT_BODY"

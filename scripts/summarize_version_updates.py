@@ -40,6 +40,9 @@ def load_json(path: Path) -> Any | None:
 
 
 def load_json_from_git(ref: str, path: str) -> Any | None:
+    if not ref:
+        return None
+
     try:
         data = subprocess.check_output(
             ["git", "show", f"{ref}:{path}"],
@@ -151,7 +154,7 @@ def records_for(data: Any, source: Source) -> dict[str, tuple[str, list[str]]]:
     return single_records(data, source, fallback)
 
 
-def summarize(base_ref: str, root: Path) -> list[str]:
+def summarize(base_ref: str, root: Path, max_lines: int = MAX_LINES) -> list[str]:
     lines: list[str] = []
 
     for source in SOURCES:
@@ -178,9 +181,9 @@ def summarize(base_ref: str, root: Path) -> list[str]:
             else:
                 lines.append(f"{label} 新增归档版本: {', '.join(new_versions)}")
 
-    if len(lines) > MAX_LINES:
-        hidden = len(lines) - MAX_LINES
-        lines = lines[:MAX_LINES] + [f"...另有 {hidden} 条版本更新"]
+    if max_lines > 0 and len(lines) > max_lines:
+        hidden = len(lines) - max_lines
+        lines = lines[:max_lines] + [f"...另有 {hidden} 条版本更新"]
 
     return lines
 
@@ -189,10 +192,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--base-ref", default="HEAD", help="Git ref used as the previous data snapshot.")
     parser.add_argument("--root", default=".", help="Repository root.")
+    parser.add_argument("--max-lines", type=int, default=MAX_LINES, help="Maximum update lines to include; use 0 for no limit.")
     parser.add_argument("--output", help="Optional file to write the summary to.")
     args = parser.parse_args()
 
-    lines = summarize(args.base_ref, Path(args.root))
+    lines = summarize(args.base_ref, Path(args.root), max_lines=args.max_lines)
     text = "\n".join(lines)
 
     if args.output:
