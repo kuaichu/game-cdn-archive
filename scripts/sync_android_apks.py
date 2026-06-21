@@ -162,22 +162,22 @@ KNOWN_APKS = [
     {
         "game_id": "nap",
         "version": "2.8.0",
-        "channel": "mktbackup2",
-        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260415151146_HP6JUMY1mL9VnQWt/mktbackup2/ZenlessZoneZero_2.8.apk",
+        "channel": "gw",
+        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260415151146_HP6JUMY1mL9VnQWt/gw/ZenlessZoneZero_2.8.apk",
         "source": "official CDN URL captured manually",
     },
     {
         "game_id": "nap",
         "version": "2.4.0",
-        "channel": "gf_1_7",
-        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20251107154705_0ujPjXffZwY0voqI/gf_1_7/ZenlessZoneZero_2.4.apk",
+        "channel": "gw",
+        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20251107154705_0ujPjXffZwY0voqI/gw/ZenlessZoneZero_2.4.apk",
         "source": "official CDN URL captured manually",
     },
     {
         "game_id": "nap",
         "version": "2.3.0",
-        "channel": "oonrzywymxk1",
-        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20250926175650_zf2LhFSf10NBg5iB/oonrzywymxk1/ZenlessZoneZero_2.3.apk",
+        "channel": "gw",
+        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20250926175650_zf2LhFSf10NBg5iB/gw/ZenlessZoneZero_2.3.apk",
         "source": "official CDN URL captured manually",
     },
     {
@@ -190,8 +190,15 @@ KNOWN_APKS = [
     {
         "game_id": "nap",
         "version": "1.3.0",
-        "channel": "mktbackup2",
-        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20241025155348_P1CiQgR6Uw0z3Pb8/mktbackup2/ZenlessZoneZero_1.3.apk",
+        "channel": "gw",
+        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20241025155348_P1CiQgR6Uw0z3Pb8/gw/ZenlessZoneZero_1.3.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "nap",
+        "version": "1.1.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240803114639_42wr7vZPfbOKwfpF/gw/ZenlessZoneZero_1.1.apk",
         "source": "official CDN URL captured manually",
     },
     {
@@ -428,15 +435,29 @@ KNOWN_APKS = [
     {
         "game_id": "hkrpg",
         "version": "4.3.0",
-        "channel": "mihoyo_1",
-        "url": "https://autopatchcn.bhsr.com/client/cn/20260523161433_yrgZsgGJ4R1J210J/mihoyo_1/StarRail_4.3.0.apk",
+        "channel": "gw_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20260523161433_yrgZsgGJ4R1J210J/gw_An/StarRail_4.3.0.apk",
         "source": "official CDN URL captured manually",
     },
     {
         "game_id": "hkrpg",
-        "version": "3.8.0",
-        "channel": "backup1_An",
-        "url": "https://autopatchcn.bhsr.com/client/cn/20251205193454_2JAzO0tkfc1lPb0c/backup1_An/StarRail_3.8.0.apk",
+        "version": "4.2.0",
+        "channel": "gw_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20260416124017_vC5LFbbmEbWL9Mfj/gw_An/StarRail_4.2.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "4.1.0",
+        "channel": "gw_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20260313150403_51kgo91xDOG26jZm/gw_An/StarRail_4.1.0.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
+        "version": "4.0.0",
+        "channel": "gw_An",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20260206151023_5staKzOVKQTxO5Ty/gw_An/StarRail_4.0.0.apk",
         "source": "official CDN URL captured manually",
     },
     {
@@ -455,13 +476,6 @@ KNOWN_APKS = [
     },
     {
         "game_id": "hkrpg",
-        "version": "3.7.0",
-        "channel": "mihoyo_1",
-        "url": "https://autopatchcn.bhsr.com/client/cn/20251025162622_alR6Tz1Le986Lu9q/mihoyo_1/StarRail_3.7.0.apk",
-        "source": "official CDN URL captured manually",
-    },
-    {
-        "game_id": "hkrpg",
         "version": "3.6.0",
         "channel": "gw_An",
         "url": "https://autopatchcn.bhsr.com/client/cn/20250913175807_IPNyJ3QQa0TlG771/gw_An/StarRail_3.6.0.apk",
@@ -472,13 +486,6 @@ KNOWN_APKS = [
         "version": "3.5.0",
         "channel": "gw_An",
         "url": "https://autopatchcn.bhsr.com/client/cn/20250801095521_kFIVD1SzuosxW9vr/gw_An/StarRail_3.5.0.apk",
-        "source": "official CDN URL captured manually",
-    },
-    {
-        "game_id": "hkrpg",
-        "version": "3.5.0",
-        "channel": "ad_dyst12_An",
-        "url": "https://autopatchcn.bhsr.com/client/cn/20250801095521_kFIVD1SzuosxW9vr/ad_dyst12_An/StarRail_3.5.0.apk",
         "source": "official CDN URL captured manually",
     },
     {
@@ -507,13 +514,6 @@ KNOWN_APKS = [
         "version": "3.1.0",
         "channel": "gw_An",
         "url": "https://autopatchcn.bhsr.com/client/cn/20250214151706_oIzdt9FPrcWYnq4F/gw_An/StarRail_3.1.0.apk",
-        "source": "official CDN URL captured manually",
-    },
-    {
-        "game_id": "hkrpg",
-        "version": "3.1.0",
-        "channel": "mihoyo_1",
-        "url": "https://autopatchcn.bhsr.com/client/cn/20250214151706_oIzdt9FPrcWYnq4F/mihoyo_1/StarRail_3.1.0.apk",
         "source": "official CDN URL captured manually",
     },
     {
@@ -609,6 +609,13 @@ KNOWN_APKS = [
     },
     {
         "game_id": "hkrpg",
+        "version": "1.4.0",
+        "channel": "mihoyo",
+        "url": "https://autopatchcn.bhsr.com/client/cn/20230926141222_ZKWHBONxYlx8PGYQ/StarRail_1.4.0_mihoyo.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hkrpg",
         "version": "1.3.0",
         "channel": "gw",
         "url": "https://autopatchcn.bhsr.com/client/cn/20230818153431_sMKzYZ9EOeT15oNn/StarRail_1.3.0_gw.apk",
@@ -633,13 +640,6 @@ KNOWN_APKS = [
         "version": "1.2.0",
         "channel": "mihoyo_8",
         "url": "https://autopatchcn.bhsr.com/client/cn/20230709224719_3CcrEpEKT9iaObJh/StarRail_1.2.0_mihoyo_8.apk",
-        "source": "official CDN URL captured manually",
-    },
-    {
-        "game_id": "hkrpg",
-        "version": "1.1.0",
-        "channel": "mihoyo_1",
-        "url": "https://autopatchcn.bhsr.com/client/cn/20230527110540_Kt2XHQtmHSq920j9/StarRail_1.1.0_mihoyo_1.apk",
         "source": "official CDN URL captured manually",
     },
     {
@@ -1056,15 +1056,8 @@ KNOWN_APKS = [
     {
         "game_id": "nap",
         "version": "1.0.0",
-        "channel": "mktbackup2",
-        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240623113017_aqRjyJNQjPi1XNZN/mktbackup2/ZenlessZoneZero_1.0.apk",
-        "source": "official CDN URL recovered from archive.org CDX search",
-    },
-    {
-        "game_id": "nap",
-        "version": "1.0.0",
-        "channel": "oonrzywymxk1",
-        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240623113017_aqRjyJNQjPi1XNZN/oonrzywymxk1/ZenlessZoneZero_1.0.apk",
+        "channel": "gw",
+        "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240623113017_aqRjyJNQjPi1XNZN/gw/ZenlessZoneZero_1.0.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
     },
     {
@@ -1734,6 +1727,28 @@ def channel_from_url(url: str) -> str:
     return "official"
 
 
+def preferred_mihoyo_android_url(game_id: str, url: str, headers: dict | None = None) -> str:
+    preferred_channels = {"hkrpg": "gw_An", "nap": "gw"}
+    preferred_channel = preferred_channels.get(game_id)
+    if not preferred_channel:
+        return url
+
+    parsed = urllib.parse.urlsplit(url)
+    parts = parsed.path.split("/")
+    if len(parts) < 2 or parts[-2] == preferred_channel:
+        return url
+
+    candidate_parts = list(parts)
+    candidate_parts[-2] = preferred_channel
+    candidate = urllib.parse.urlunsplit(
+        (parsed.scheme, parsed.netloc, "/".join(candidate_parts), parsed.query, parsed.fragment)
+    )
+    meta = head_url(candidate, headers=headers)
+    if int(meta.get("status") or 0) == 200 and int(meta.get("size") or 0) > 0:
+        return candidate
+    return url
+
+
 def request_headers(extra_headers: dict | None = None, range_header: str | None = None) -> dict:
     headers = dict(DEFAULT_HEADERS)
     if extra_headers:
@@ -1841,6 +1856,7 @@ def discover_download_porter_apks() -> list[dict]:
         final_url = resolve_download_porter_url(item["url"], headers=item.get("headers"))
         if not final_url:
             continue
+        final_url = preferred_mihoyo_android_url(item["game_id"], final_url, headers=item.get("headers"))
         try:
             version = version_from_url(final_url)
         except ValueError as exc:
