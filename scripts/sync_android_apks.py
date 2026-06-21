@@ -203,6 +203,13 @@ KNOWN_APKS = [
     },
     {
         "game_id": "hk4e",
+        "version": "6.5.1",
+        "channel": "mihoyo",
+        "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260407194724_1DXQWNzQpbVonNKu/mihoyo/yuanshen_6.5.1.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "hk4e",
         "version": "6.4.0",
         "channel": "mihoyo",
         "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260209151532_ootIRmm1n6FxPqzy/mihoyo/yuanshen_6.4.0.apk",
