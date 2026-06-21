@@ -1,8 +1,8 @@
 {
   "source": "https://hoyo-files.amarea.cn",
   "api_base": "https://autopatch.amarea.cn/pkg_version",
-  "last_checked_at": "2026-06-21T04:50:04.130Z",
-  "generated_at": "2026-06-15T10:35:41.555Z",
+  "last_checked_at": "2026-06-21T06:46:14.861Z",
+  "generated_at": "2026-06-21T06:46:39.370Z",
   "games": [
     {
       "id": "hk4e",
@@ -1147,6 +1147,22 @@
           "has_decompressed_path": true
         },
         {
+          "version": "7.4.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 17342008186,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
+          "version": "7.5.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 17891545746,
+          "has_chunk": false,
+          "has_decompressed_path": true
+        },
+        {
           "version": "7.6.0",
           "package_items": 1,
           "update_items": 0,
@@ -1267,13 +1283,13 @@
           "has_decompressed_path": false
         }
       ],
-      "version_count": 51,
+      "version_count": 53,
       "first_version": "3.7.0",
       "latest_version": "8.9.0",
-      "direct_items": 46,
+      "direct_items": 48,
       "update_items": 1,
       "chunk_versions": 8,
-      "direct_bytes": 333637909583,
+      "direct_bytes": 368871463515,
       "versions_url": "https://autopatch.amarea.cn/pkg_version/bh3_versions.json"
     }
   ]
