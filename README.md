@@ -24,10 +24,10 @@ Current repository snapshot as of `2026-06-09`:
 
 | Area | Current progress |
 | --- | --- |
-| NTE / 异环 PC | Indexed official Windows manifests from `1.0.0` through `1.1.8`; file lists, patch diffs, and size trend views are live in the static site |
+| NTE / 异环 PC | Indexed official Windows manifests from `1.0.0` through `1.1.13`; file lists, patch diffs, and size trend views are live in the static site |
 | Endfield / 终末地 PC | Imported `6` official CN launcher-history snapshots from the upstream archive; official signed package URLs and archive mirrors are both preserved |
 | Wuthering Waves / 鸣潮 PC | Indexed current launcher resources and recovered multiple historical CN live resource indexes; preload patch routes and `.krpdiff` lists are preserved when official indexes expose them |
-| HoYo CN PC catalog | Migrated public HoyoFiles metadata for `原神 1.0.0-6.6.0` (`54` versions), `崩铁 1.0.5-4.3.0` (`28` versions), `绝区零 1.0.0-2.8.0` (`17` versions), and `崩坏3 3.7.0-8.9.0` (`51` versions) |
+| HoYo CN PC catalog | Migrated public HoyoFiles metadata for `原神 1.0.0-6.6.0` (`54` versions), `崩铁 1.0.5-4.3.0` (`28` versions), `绝区零 1.0.0-3.0.0` (`17` versions), and `崩坏3 3.7.0-8.9.0` (`51` versions) |
 | Android APK archive | Preserves `95+` confirmed official APK CDN records across multiple games, including `原神 30` versions (`1.2.0-6.6.0`) and `崩铁 26` version buckets / `35` total channel records (`0.90.0-4.3.0`) |
 
 ## Android APK Progress
@@ -40,7 +40,7 @@ ranges are:
 | --- | --- | --- |
 | 原神 / Genshin Impact | `1.2.0` -> `6.6.0` (`30` versions) | Historical official CDN URLs only; no mirror hosting |
 | 崩坏：星穹铁道 / Honkai: Star Rail | `0.90.0` -> `4.3.0` (`26` version buckets / `35` channel records) | Parallel channels such as `gw`, `mihoyo`, `mihoyo_1`, `gw_An`, and `backup1_An` are preserved side by side |
-| 绝区零 / Zenless Zone Zero | `1.3.0` -> `2.8.0` (`5` version buckets / `6` channel records) | Mixed official channels preserved when the URLs differ |
+| 绝区零 / Zenless Zone Zero | `1.3.0` -> `3.0.0` (`5` version buckets / `6` channel records) | Mixed official channels preserved when the URLs differ |
 | 崩坏3 / Honkai Impact 3 | `1.0.0` -> `8.9.0` (`19` versions) | Early dead links are preserved when an official URL can still be confirmed |
 | 鸣潮 / Wuthering Waves | `2.7.0` -> `3.4.0` (`4` versions) | Latest APK can be refreshed from Kuro's official JSON endpoint while older captured CDN URLs remain archived |
 | 异环 / Neverness to Everness | `1.0.2` | Current official Android package only |
