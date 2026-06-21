@@ -10,12 +10,12 @@ reproduction. It does not mirror, repackage, or redistribute game binaries.
 
 | Game | Platform | Status |
 | --- | --- | --- |
-| Neverness to Everness / 异环 | Windows PC | Version manifests decoded and indexed through `1.1.8` |
+| Neverness to Everness / 异环 | Windows PC | Version manifests decoded and indexed through `1.1.13` |
 | Arknights: Endfield / 明日方舟：终末地 | Windows PC | Official launcher API history and archive mirrors indexed through `1.3.4` |
 | Wuthering Waves / 鸣潮 | Windows PC | Official launcher resource index and CDN mirrors indexed through `3.4.0` preload/live resources |
 | Genshin Impact / 原神 | Windows PC | HoyoFiles version metadata migrated through `6.6.0` |
 | Honkai: Star Rail / 崩坏：星穹铁道 | Windows PC | HoyoFiles version metadata migrated through `4.3.0` |
-| Zenless Zone Zero / 绝区零 | Windows PC | HoyoFiles version metadata migrated through `2.8.0` |
+| Zenless Zone Zero / 绝区零 | Windows PC | HoyoFiles version metadata migrated through `3.0.0` |
 | Honkai Impact 3 / 崩坏3 | Windows PC | HoyoFiles version metadata migrated through `8.9.0` |
 
 ## Progress Snapshot
