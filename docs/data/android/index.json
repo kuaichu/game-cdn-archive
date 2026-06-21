@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-21T04:53:43.250805+00:00",
-  "generated_at": "2026-06-21T04:45:20.759776+00:00",
+  "last_checked_at": "2026-06-21T05:05:41.980130+00:00",
+  "generated_at": "2026-06-21T05:05:41.980130+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -466,6 +466,23 @@
         },
         {
           "game_id": "wuwa",
+          "version": "3.2.1",
+          "channel": "kuro_tf49",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20260324174322_3Ap1c8k6juCzDfI1JV/KR_TF_49-%E9%B8%A3%E6%BD%AE_3.2.1_164300475_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_83e2cdd963fff1e42e1d1a3e6c895a32_shelled.apk",
+          "source": "official CDN URL provided by user",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2000067295,
+          "last_modified": "Tue, 24 Mar 2026 09:43:30 GMT",
+          "etag": "734d554f7c195ae025a734adbe11358a-39",
+          "md5": "553b8e804a1087e96e83e9d150cce001",
+          "crc64": "13689369763496483758",
+          "error": "",
+          "filename": "KR_TF_49-鸣潮_3.2.1_164300475_33_库洛_投放包_1_83e2cdd963fff1e42e1d1a3e6c895a32_shelled.apk",
+          "captured_at": "2026-06-21T05:05:41.980130+00:00"
+        },
+        {
+          "game_id": "wuwa",
           "version": "3.0.1",
           "channel": "kuro_tf52",
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20251230153335_DIaYUy2QRRUcV9JRgM/KR_TF_52-%E9%B8%A3%E6%BD%AE_3.0.1_157207705_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_0812c3eaf14c876481e41cb9783e11cf_shelled.apk",
@@ -764,6 +781,11 @@
           "urls": "data/android/lists/wuwa_3.3.2_android.urls.txt",
           "aria2": "data/android/lists/wuwa_3.3.2_android.aria2.txt",
           "json": "data/android/lists/wuwa_3.3.2_android.json"
+        },
+        "3.2.1": {
+          "urls": "data/android/lists/wuwa_3.2.1_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.2.1_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.2.1_android.json"
         },
         "3.0.1": {
           "urls": "data/android/lists/wuwa_3.0.1_android.urls.txt",
