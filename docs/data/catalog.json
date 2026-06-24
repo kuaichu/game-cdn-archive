@@ -12,7 +12,7 @@
     "config_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/config.xml",
     "object_template": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Res/{first}/{md5}.{size}"
   },
-  "generated_at": "2026-06-21 01:42:20 +0000",
+  "generated_at": "2026-06-24 00:13:23 +0000",
   "versions": [
     {
       "version": "1.0.0",
@@ -200,7 +200,7 @@
       "version": "1.0.10",
       "status": 404,
       "last_modified": null,
-      "content_length": 485,
+      "content_length": 489,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.10/ResList.bin.zip"
     },
     {
@@ -437,7 +437,7 @@
       "version": "1.0.23",
       "status": 404,
       "last_modified": null,
-      "content_length": 485,
+      "content_length": 489,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.23/ResList.bin.zip"
     },
     {
@@ -510,7 +510,7 @@
       "version": "1.0.27",
       "status": 404,
       "last_modified": null,
-      "content_length": 485,
+      "content_length": 489,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.27/ResList.bin.zip"
     },
     {
@@ -820,7 +820,29 @@
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.13/ResList.bin.zip",
       "reslist_bytes": 70133
+    },
+    {
+      "version": "1.1.14",
+      "status": 200,
+      "last_modified": "Tue, 23 Jun 2026 20:00:02 GMT",
+      "content_length": 71461,
+      "full": {
+        "items": 73,
+        "bytes": 56808349995,
+        "json": "data/url_lists/1.1.14-full.json",
+        "urls": "data/url_lists/1.1.14-full.urls.txt",
+        "aria2": "data/url_lists/1.1.14-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 937,
+        "bytes": 111393447118,
+        "json": "data/url_lists/1.1.14-patches.json",
+        "urls": "data/url_lists/1.1.14-patches.urls.txt",
+        "aria2": "data/url_lists/1.1.14-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.14/ResList.bin.zip",
+      "reslist_bytes": 71461
     }
   ],
-  "last_checked_at": "2026-06-23 07:57:42 +0000"
+  "last_checked_at": "2026-06-24 00:12:53 +0000"
 }
