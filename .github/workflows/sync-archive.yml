@@ -2,6 +2,20 @@ name: Update archive data
 
 on:
   workflow_dispatch:
+    inputs:
+      scope:
+        description: "Refresh scope"
+        required: false
+        default: "all"
+        type: choice
+        options:
+          - all
+          - android
+          - nte
+          - hoyofiles
+          - endfield
+          - wuwa
+          - arknights
   schedule:
     - cron: "18 23 * * *"
     - cron: "18 4 * * *"
@@ -23,6 +37,7 @@ jobs:
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       TELEGRAM_CHANNEL_CHAT_ID: ${{ secrets.TELEGRAM_CHANNEL_CHAT_ID }}
       TELEGRAM_TRANSIENT_DELETE_AFTER_SECONDS: ${{ vars.TELEGRAM_TRANSIENT_DELETE_AFTER_SECONDS }}
+      SYNC_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.scope || 'all' }}
 
     steps:
       - name: Notify Telegram start
@@ -229,6 +244,7 @@ jobs:
           run_url="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
           {
             echo "NOTIFY_TRIGGER=${trigger}"
+            echo "NOTIFY_SCOPE=${SYNC_SCOPE:-all}"
             echo "NOTIFY_STARTED_AT=$(date +%s)"
           } >> "$GITHUB_ENV"
 
@@ -242,6 +258,7 @@ jobs:
           Project: $project
           Status: running
           Trigger: $trigger
+          Scope: ${SYNC_SCOPE:-all}
           Run: <a href="$run_url">#$GITHUB_RUN_ID</a>
           EOF
           )
@@ -264,39 +281,46 @@ jobs:
         run: bash scripts/gha_run_step.sh "Install Python dependencies" pip install -r requirements.txt
 
       - name: Refresh NTE data
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'nte'
         env:
           GHA_RUN_RETRIES: 2
           GHA_RUN_RETRY_DELAY: 20
         run: bash scripts/gha_run_step.sh "Refresh NTE data" python scripts/update_nte_static.py
 
       - name: Refresh HoyoFiles data
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'hoyofiles'
         env:
           GHA_RUN_RETRIES: 2
           GHA_RUN_RETRY_DELAY: 20
         run: bash scripts/gha_run_step.sh "Refresh HoyoFiles data" python scripts/sync_hoyofiles.py
 
       - name: Clone Endfield upstream archive
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'endfield'
         env:
           GHA_RUN_RETRIES: 2
           GHA_RUN_RETRY_DELAY: 20
         run: bash scripts/gha_run_step.sh "Clone Endfield upstream archive" git clone --depth 1 https://github.com/daydreamer-json/ak-endfield-api-archive.git /tmp/ak-endfield-api-archive
 
       - name: Refresh Endfield data
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'endfield'
         run: bash scripts/gha_run_step.sh "Refresh Endfield data" python scripts/import_endfield_archive.py /tmp/ak-endfield-api-archive
 
       - name: Refresh Wuthering Waves data
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'wuwa'
         env:
           GHA_RUN_RETRIES: 2
           GHA_RUN_RETRY_DELAY: 20
         run: bash scripts/gha_run_step.sh "Refresh Wuthering Waves data" python scripts/sync_wuwa.py
 
       - name: Refresh Arknights PC data
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'arknights'
         env:
           GHA_RUN_RETRIES: 2
           GHA_RUN_RETRY_DELAY: 20
         run: bash scripts/gha_run_step.sh "Refresh Arknights PC data" python scripts/sync_arknights_pc.py
 
       - name: Refresh Android APK data
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'android'
         env:
           GHA_RUN_RETRIES: 2
           GHA_RUN_RETRY_DELAY: 20
@@ -595,6 +619,7 @@ jobs:
               ;;
           esac
           trigger="${NOTIFY_TRIGGER:-$trigger}"
+          scope="${NOTIFY_SCOPE:-${SYNC_SCOPE:-all}}"
 
           case "$DATA_CHANGED" in
             true)
@@ -624,6 +649,7 @@ jobs:
           status_html="$(html_escape "$JOB_STATUS")"
           data_html="$(html_escape "$change_result")"
           trigger_html="$(html_escape "$trigger")"
+          scope_html="$(html_escape "$scope")"
           duration_html="$(html_escape "$duration")"
 
           if [ "$JOB_STATUS" = "success" ]; then
@@ -637,6 +663,7 @@ jobs:
           Status: $status_html
           Data: $data_html
           Trigger: $trigger_html
+          Scope: $scope_html
           Duration: $duration_html"
 
           if [ -n "${VERSION_UPDATE_SUMMARY:-}" ]; then
