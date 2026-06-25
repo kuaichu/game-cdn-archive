@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-25T15:50:10.322052+00:00",
-  "generated_at": "2026-06-25T15:39:32.833316+00:00",
+  "last_checked_at": "2026-06-25T16:15:47.325355+00:00",
+  "generated_at": "2026-06-25T16:15:47.325355+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -692,6 +692,23 @@
         },
         {
           "game_id": "wuwa",
+          "version": "1.4.1",
+          "channel": "guanqu",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20241218101210_mXF3n2h554PXA0v26h/%E9%B8%A3%E6%BD%AE_1.4.1_120822930__%E5%AE%98%E6%B8%A0_5090cedd91198d837dde7bb6681d6176_shelled.apk",
+          "source": "official CDN URL captured manually",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1964197566,
+          "last_modified": "Wed, 18 Dec 2024 02:12:15 GMT",
+          "etag": "d82d3411136b867aa6f4187a103ab7a4-38",
+          "md5": "5090cedd91198d837dde7bb6681d6176",
+          "crc64": "4484723890095404021",
+          "error": "",
+          "filename": "鸣潮_1.4.1_120822930__官渠_5090cedd91198d837dde7bb6681d6176_shelled.apk",
+          "captured_at": "2026-06-25T16:15:47.325355+00:00"
+        },
+        {
+          "game_id": "wuwa",
           "version": "1.4.0",
           "channel": "guanqu",
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20241104113431_7qYSFuM4phMLA1bfTp/%E9%B8%A3%E6%BD%AE_1.4.0_120822928__%E5%AE%98%E6%B8%A0_5146be995ac1f9d4e918426bae7c869d_shelled.apk",
@@ -861,6 +878,11 @@
           "urls": "data/android/lists/wuwa_2.0.0_android.urls.txt",
           "aria2": "data/android/lists/wuwa_2.0.0_android.aria2.txt",
           "json": "data/android/lists/wuwa_2.0.0_android.json"
+        },
+        "1.4.1": {
+          "urls": "data/android/lists/wuwa_1.4.1_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_1.4.1_android.aria2.txt",
+          "json": "data/android/lists/wuwa_1.4.1_android.json"
         },
         "1.4.0": {
           "urls": "data/android/lists/wuwa_1.4.0_android.urls.txt",

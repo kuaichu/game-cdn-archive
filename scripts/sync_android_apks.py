@@ -949,6 +949,13 @@ KNOWN_APKS = [
     },
     {
         "game_id": "wuwa",
+        "version": "1.4.1",
+        "channel": "guanqu",
+        "url": "https://mirrors-package-mc.aki-game.com/client/download/20241218101210_mXF3n2h554PXA0v26h/%E9%B8%A3%E6%BD%AE_1.4.1_120822930__%E5%AE%98%E6%B8%A0_5090cedd91198d837dde7bb6681d6176_shelled.apk",
+        "source": "official CDN URL captured manually",
+    },
+    {
+        "game_id": "wuwa",
         "version": "2.0.0",
         "channel": "guanqu",
         "url": "https://mirrors-package-mc.aki-game.com/client/download/20241224103726_DxOIeFzo0WOzqOufSL/%E9%B8%A3%E6%BD%AE_2.0.0_124936468__%E5%AE%98%E6%B8%A0_e9e27e3beccb245e79c81bb77a019bc7_shelled.apk",
@@ -1567,6 +1574,13 @@ DOWNLOAD_PORTER_APIS = [
         "channel": "guanqu",
         "url": "https://mirrors-package-mc.aki-game.com/client/download/20241104113431_7qYSFuM4phMLA1bfTp/%E9%B8%A3%E6%BD%AE_1.4.0_120822928__%E5%AE%98%E6%B8%A0_5146be995ac1f9d4e918426bae7c869d_shelled.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    {
+        "game_id": "wuwa",
+        "version": "1.4.1",
+        "channel": "guanqu",
+        "url": "https://mirrors-package-mc.aki-game.com/client/download/20241218101210_mXF3n2h554PXA0v26h/%E9%B8%A3%E6%BD%AE_1.4.1_120822930__%E5%AE%98%E6%B8%A0_5090cedd91198d837dde7bb6681d6176_shelled.apk",
+        "source": "official CDN URL captured manually",
     },
     {
         "game_id": "wuwa",
