@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-25T15:23:31.026899+00:00",
-  "generated_at": "2026-06-23T01:31:39.795464+00:00",
+  "last_checked_at": "2026-06-25T15:39:32.833316+00:00",
+  "generated_at": "2026-06-25T15:39:32.833316+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -674,16 +674,21 @@
           "channel": "guanqu",
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20241224103726_DxOIeFzo0WOzqOufSL/%E9%B8%A3%E6%BD%AE_2.0.0_124936468__%E5%AE%98%E6%B8%A0_e9e27e3beccb245e79c81bb77a019bc7_shelled.apk",
           "source": "official CDN URL recovered from archive.org CDX search",
-          "status": 404,
-          "content_type": "text/html",
-          "size": 0,
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": null,
           "last_modified": "",
           "etag": "",
           "md5": "e9e27e3beccb245e79c81bb77a019bc7",
           "crc64": "",
-          "error": "APK object unavailable",
+          "error": "",
+          "error_info": "return by bot js challenge",
+          "byte_error_code": "00095",
+          "exception_info": "js challenge by advanced access control",
+          "probe_status": "bot_challenge_assumed_available",
+          "probe_note": "CDN returned a browser bot challenge during CI probing; keeping the manually archived official APK URL as available.",
           "filename": "鸣潮_2.0.0_124936468__官渠_e9e27e3beccb245e79c81bb77a019bc7_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-25T15:39:32.833316+00:00"
         },
         {
           "game_id": "wuwa",
@@ -691,16 +696,21 @@
           "channel": "guanqu",
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20241104113431_7qYSFuM4phMLA1bfTp/%E9%B8%A3%E6%BD%AE_1.4.0_120822928__%E5%AE%98%E6%B8%A0_5146be995ac1f9d4e918426bae7c869d_shelled.apk",
           "source": "official CDN URL recovered from archive.org CDX search",
-          "status": 404,
-          "content_type": "text/html",
-          "size": 0,
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": null,
           "last_modified": "",
           "etag": "",
           "md5": "5146be995ac1f9d4e918426bae7c869d",
           "crc64": "",
-          "error": "APK object unavailable",
+          "error": "",
+          "error_info": "return by bot js challenge",
+          "byte_error_code": "00095",
+          "exception_info": "js challenge by advanced access control",
+          "probe_status": "bot_challenge_assumed_available",
+          "probe_note": "CDN returned a browser bot challenge during CI probing; keeping the manually archived official APK URL as available.",
           "filename": "鸣潮_1.4.0_120822928__官渠_5146be995ac1f9d4e918426bae7c869d_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-25T15:39:32.833316+00:00"
         },
         {
           "game_id": "wuwa",

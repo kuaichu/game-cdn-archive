@@ -2319,6 +2319,18 @@ def filename_from_url(url: str) -> str:
     return urllib.parse.unquote(Path(path).name)
 
 
+def should_reprobe_unavailable_apk(seed: dict, previous: dict | None) -> bool:
+    if not previous or previous.get("error") != "APK object unavailable":
+        return False
+    if seed.get("reprobe_unavailable"):
+        return True
+    parsed = urllib.parse.urlparse(seed["url"])
+    return (
+        parsed.netloc == "mirrors-package-mc.aki-game.com"
+        and parsed.path.lower().endswith(".apk")
+    )
+
+
 def md5_from_filename(filename: str) -> str:
     if not filename.endswith(".apk"):
         return ""
@@ -2450,7 +2462,7 @@ def main() -> None:
             if key not in {"metadata_url", "filename_url", "force_refresh", "headers", "reprobe_unavailable"}
         }
         previous = None if seed.get("force_refresh") else previous_by_url.get(seed["url"])
-        if previous and seed.get("reprobe_unavailable") and previous.get("error") == "APK object unavailable":
+        if should_reprobe_unavailable_apk(seed, previous):
             previous = None
         if previous:
             entry = {**previous, **public_seed}
