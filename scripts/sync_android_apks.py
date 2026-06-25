@@ -917,6 +917,7 @@ KNOWN_APKS = [
         "channel": "official",
         "url": "https://mirrors-package-mc.aki-game.com/client/download/20240515180358_GMXTiY9I3QUipDJypL/%E9%B8%A3%E6%BD%AE_1.0.0_official.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
+        "reprobe_unavailable": True,
     },
     {
         "game_id": "wuwa",
@@ -1537,6 +1538,7 @@ DOWNLOAD_PORTER_APIS = [
         "channel": "official",
         "url": "https://mirrors-package-mc.aki-game.com/client/download/20240515180358_GMXTiY9I3QUipDJypL/%E9%B8%A3%E6%BD%AE_1.0.0_official.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
+        "reprobe_unavailable": True,
     },
     {
         "game_id": "wuwa",
@@ -1801,7 +1803,7 @@ def curl_head(url: str, headers: dict | None = None, timeout: int = 30) -> dict:
     command = ["curl", "-I", "-L", "-s", "--max-time", str(timeout), *curl_header_args(request_headers(headers)), url]
     raw = subprocess.check_output(command).decode("utf-8", "ignore")
     parsed = parse_headers(raw)
-    return {
+    result = {
         "status": int(parsed.get("status") or 0),
         "content_type": str(parsed.get("content-type", "")),
         "size": int(parsed.get("content-length") or 0),
@@ -1811,6 +1813,14 @@ def curl_head(url: str, headers: dict | None = None, timeout: int = 30) -> dict:
         "crc64": str(parsed.get("x-cos-hash-crc64ecma", "") or parsed.get("x-oss-hash-crc64ecma", "")),
         "error": "",
     }
+    for source_key, result_key in (
+        ("error-info", "error_info"),
+        ("byte-error-code", "byte_error_code"),
+        ("x-exception-info", "exception_info"),
+    ):
+        if parsed.get(source_key):
+            result[result_key] = str(parsed[source_key])
+    return result
 
 
 def curl_content_length(url: str, headers: dict | None = None, timeout: int = 30) -> int:
@@ -2236,6 +2246,20 @@ def head_url(url: str, headers: dict | None = None) -> dict:
             return meta
         if meta.get("size") and "text/html" not in str(meta.get("content_type", "")).lower():
             return meta
+        challenge_text = " ".join(
+            str(meta.get(key, ""))
+            for key in ("error_info", "exception_info")
+        ).lower()
+        if int(meta.get("status") or 0) == 200 and "challenge" in challenge_text:
+            return {
+                **meta,
+                "status": 200,
+                "content_type": "application/vnd.android.package-archive",
+                "size": None,
+                "error": "",
+                "probe_status": "bot_challenge_assumed_available",
+                "probe_note": "CDN returned a browser bot challenge during CI probing; keeping the manually archived official APK URL as available.",
+            }
         try:
             probed_size = content_length(url, headers=extra_headers)
         except Exception:
@@ -2423,9 +2447,11 @@ def main() -> None:
         public_seed = {
             key: value
             for key, value in seed.items()
-            if key not in {"metadata_url", "filename_url", "force_refresh", "headers"}
+            if key not in {"metadata_url", "filename_url", "force_refresh", "headers", "reprobe_unavailable"}
         }
         previous = None if seed.get("force_refresh") else previous_by_url.get(seed["url"])
+        if previous and seed.get("reprobe_unavailable") and previous.get("error") == "APK object unavailable":
+            previous = None
         if previous:
             entry = {**previous, **public_seed}
             filename = entry.get("filename") or filename_from_url(seed["url"])

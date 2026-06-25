@@ -146,6 +146,11 @@ const fmtBytes = (bytes) => {
   return `${value.toFixed(unit === 0 ? 0 : 2)} ${units[unit]}`;
 };
 
+const fmtKnownBytes = (bytes, fallback = "大小未知") => {
+  const value = Number(bytes || 0);
+  return value > 0 ? fmtBytes(value) : fallback;
+};
+
 const androidIcons = {
   aethergazer: "assets/icons/aethergazer.ico",
   arknights: "assets/icons/arknights.ico",
@@ -308,13 +313,17 @@ const androidSummaries = () => {
       version: entry.version,
       apk_count: 0,
       size: 0,
+      known_size_count: 0,
       channels: [],
       status: entry.status,
       last_modified: entry.last_modified,
       unavailable_count: 0,
     };
     row.apk_count += 1;
-    row.size += Number(entry.size || 0);
+    if (Number(entry.size || 0) > 0) {
+      row.size += Number(entry.size || 0);
+      row.known_size_count += 1;
+    }
     if (entry.error || Number(entry.status || 0) < 200 || Number(entry.status || 0) >= 400) {
       row.unavailable_count += 1;
     }
@@ -891,7 +900,7 @@ const versionButton = (item) => {
           <span class="cap green">APK</span>
           <span class="cap blue">${Number(item.apk_count || 0).toLocaleString()} 个包</span>
           <span class="cap green">${escapeHtml((item.channels || []).join(" / ") || "官方渠道")}</span>
-          <span class="cap slate">${fmtBytes(item.size || 0)}</span>
+          <span class="cap slate">${fmtKnownBytes(item.size)}</span>
           ${versionAvailabilityCap(item)}
         </span>
       </button>
@@ -1025,7 +1034,7 @@ const androidStats = () => {
     ["平台", "Android"],
     ["APK 数", `${entries.length.toLocaleString()} 个`],
     ["渠道", entry?.channels?.join(" / ") || "-"],
-    ["APK 大小", fmtBytes(entry?.size || 0)],
+    ["APK 大小", fmtKnownBytes(entry?.size)],
     ["状态", entry?.status ? `HTTP ${entry.status}` : "-"],
   ];
 };
@@ -1341,6 +1350,7 @@ const androidItem = (entry, index = 0, total = 0) => ({
   title: entry.filename || `${currentGame().name}_${entry.version}.apk`,
   subtitle: `${entry.channel || "官方渠道"} / ${entry.last_modified || entry.source || "official CDN"}`,
   size: Number(entry.size || 0),
+  sizeLabel: fmtKnownBytes(entry.size),
   hash: entry.md5 || entry.etag || "",
   url: entry.url,
   extraLinks: entry.archive_url ? [{ url: entry.archive_url, label: "签名留档" }] : [],
@@ -2448,7 +2458,7 @@ const fileCard = (item) => {
           <strong>${escapeHtml(item.title)}</strong>
         </div>
         <div class="file-meta">
-          <span>${fmtBytes(item.size)}</span>
+          <span>${escapeHtml(item.sizeLabel || fmtBytes(item.size))}</span>
           <span># ${escapeHtml(hashText)}</span>
         </div>
         <div class="file-path">${escapeHtml(item.subtitle)}</div>
