@@ -1,8 +1,8 @@
 {
   "source": "https://hoyo-files.amarea.cn",
   "api_base": "https://autopatch.amarea.cn/pkg_version",
-  "last_checked_at": "2026-06-29T01:35:06.059Z",
-  "generated_at": "2026-06-21T06:46:39.370Z",
+  "last_checked_at": "2026-06-29T09:08:48.741Z",
+  "generated_at": "2026-06-29T09:11:52.744Z",
   "games": [
     {
       "id": "hk4e",
@@ -441,14 +441,22 @@
           "direct_bytes": 0,
           "has_chunk": true,
           "has_decompressed_path": false
+        },
+        {
+          "version": "6.7.0",
+          "package_items": 0,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": true,
+          "has_decompressed_path": false
         }
       ],
-      "version_count": 54,
+      "version_count": 55,
       "first_version": "1.0.0",
-      "latest_version": "6.6.0",
+      "latest_version": "6.7.0",
       "direct_items": 323,
       "update_items": 374,
-      "chunk_versions": 23,
+      "chunk_versions": 24,
       "direct_bytes": 5198776700234,
       "versions_url": "https://autopatch.amarea.cn/pkg_version/hk4e_versions.json"
     },
