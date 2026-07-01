@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-06-30T08:08:25.368393+00:00",
-  "generated_at": "2026-06-29T09:12:20.227042+00:00",
+  "last_checked_at": "2026-07-01T01:38:11.022516+00:00",
+  "generated_at": "2026-07-01T01:38:11.022516+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -1146,6 +1146,24 @@
       "versions": [
         {
           "game_id": "hk4e",
+          "version": "6.7.0",
+          "channel": "mihoyo",
+          "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260623115935_3uIVP7RHonRpZW88/mihoyo/yuanshen_6.7.0.apk",
+          "source": "official download porter latest endpoint",
+          "source_url": "https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/android_default",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 466303603,
+          "last_modified": "Tue, 23 Jun 2026 12:04:52 GMT",
+          "etag": "b21ec56bcb12b2917a357600652e93e5",
+          "md5": "",
+          "crc64": "14601308456718178782",
+          "error": "",
+          "filename": "yuanshen_6.7.0.apk",
+          "captured_at": "2026-07-01T01:38:11.022516+00:00"
+        },
+        {
+          "game_id": "hk4e",
           "version": "6.6.0",
           "channel": "mihoyo",
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260509191652_EElRT82l302SABA2/mihoyo/yuanshen_6.6.0.apk",
@@ -2056,6 +2074,11 @@
         }
       ],
       "links": {
+        "6.7.0": {
+          "urls": "data/android/lists/hk4e_6.7.0_android.urls.txt",
+          "aria2": "data/android/lists/hk4e_6.7.0_android.aria2.txt",
+          "json": "data/android/lists/hk4e_6.7.0_android.json"
+        },
         "6.6.0": {
           "urls": "data/android/lists/hk4e_6.6.0_android.urls.txt",
           "aria2": "data/android/lists/hk4e_6.6.0_android.aria2.txt",
