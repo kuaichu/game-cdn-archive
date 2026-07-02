@@ -1,12 +1,30 @@
 {
-  "last_checked_at": "2026-07-01T08:24:50.526501+00:00",
-  "generated_at": "2026-07-01T01:38:11.022516+00:00",
+  "last_checked_at": "2026-07-02T01:32:24.791217+00:00",
+  "generated_at": "2026-07-02T01:32:24.791217+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
       "name": "异环",
       "subName": "Neverness to Everness",
       "versions": [
+        {
+          "game_id": "nte",
+          "version": "1.2.0",
+          "channel": "official",
+          "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
+          "source": "official website Android download config; versionName read from AndroidManifest.xml",
+          "source_url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/yh-gameDownload.js",
+          "status": 200,
+          "content_type": "application/octet-stream",
+          "size": 1177407809,
+          "last_modified": "Mon, 29 Jun 2026 06:05:29 GMT",
+          "etag": "D2666816B3E4467FC4D3A411F3962322-113",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "yh_gw_20260702.apk",
+          "captured_at": "2026-07-02T01:32:24.791217+00:00"
+        },
         {
           "game_id": "nte",
           "version": "1.0.2",
@@ -26,6 +44,11 @@
         }
       ],
       "links": {
+        "1.2.0": {
+          "urls": "data/android/lists/nte_1.2.0_android.urls.txt",
+          "aria2": "data/android/lists/nte_1.2.0_android.aria2.txt",
+          "json": "data/android/lists/nte_1.2.0_android.json"
+        },
         "1.0.2": {
           "urls": "data/android/lists/nte_1.0.2_android.urls.txt",
           "aria2": "data/android/lists/nte_1.0.2_android.aria2.txt",
