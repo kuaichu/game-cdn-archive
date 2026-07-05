@@ -8,6 +8,7 @@ import json
 import os
 import re
 import subprocess
+import tempfile
 import urllib.parse
 import urllib.error
 import urllib.request
@@ -21,6 +22,12 @@ DEFAULT_HEADERS = {
     "(KHTML, like Gecko) Chrome/125.0 Safari/537.36",
     "Accept": "*/*",
 }
+
+TOMYJAN_WUWA_ANDROID_REPO = "https://github.com/TomyJan/GenshinImpact-Client-Version.git"
+TOMYJAN_WUWA_ANDROID_SUBDIR = Path("WW") / "Android" / "Game" / "CN"
+TOMYJAN_WUWA_ANDROID_SOURCE = (
+    "https://github.com/TomyJan/GenshinImpact-Client-Version/tree/master/WW/Android/Game/CN"
+)
 
 
 KNOWN_APKS = [
@@ -796,6 +803,13 @@ KNOWN_APKS = [
     },
     {
         "game_id": "bh3",
+        "version": "1.7.0",
+        "channel": "guofu",
+        "url": "http://app.bh3.com/public/Android/20170828-android_versions_v1_7_The_Awakening_of_SliverWolf_guofu.apk",
+        "source": "Wayback Machine historical URL; original domain no longer resolves",
+    },
+    {
+        "game_id": "bh3",
         "version": "1.6.0",
         "channel": "guofu",
         "url": "http://app.bh3.com/public/Android/20170630-android_versions-v1_6_TogetherinSummer_guofu.apk",
@@ -1446,7 +1460,7 @@ KNOWN_APKS = [
         "game_id": "bh3",
         "version": "3.6.0",
         "channel": "guofu",
-        "url": "https://app.bh3.com/public/Android/20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja%%20Noir_guofu.apk",
+        "url": "https://app.bh3.com/public/Android/20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja's%20Noir_guofu.apk",
         "source": "Wayback Machine historical URL; original domain no longer resolves",
     },
 
@@ -2141,6 +2155,10 @@ def apply_updated_at(entry: dict, seed: dict) -> None:
     if updated_at:
         entry["updated_at"] = updated_at
         entry["updated_at_source"] = "filename_timestamp"
+        return
+    if seed.get("archive_snapshot_at"):
+        entry["updated_at"] = seed["archive_snapshot_at"]
+        entry["updated_at_source"] = "tomyjan_snapshot_timestamp"
 
 
 def linked_script_urls(text: str, page_url: str) -> list[str]:
@@ -2485,6 +2503,134 @@ def discover_kuro_apks() -> list[dict]:
             "source_url": item["url"],
         })
     return entries
+
+
+def quote_url_path(url: str) -> str:
+    parsed = urllib.parse.urlsplit(url.strip())
+    quoted_path = urllib.parse.quote(urllib.parse.unquote(parsed.path), safe="/:@!$&'()*+,;=-._~")
+    return urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, quoted_path, parsed.query, parsed.fragment))
+
+
+def iso_from_tomyjan_snapshot(stem: str) -> str | None:
+    if not re.fullmatch(r"\d{14}", stem):
+        return None
+    try:
+        return datetime.strptime(stem, "%Y%m%d%H%M%S").replace(tzinfo=timezone.utc).isoformat()
+    except ValueError:
+        return None
+
+
+def wuwa_android_version_from_filename(filename: str) -> str | None:
+    patterns = [
+        r"(?:云·)?鸣潮_(\d+\.\d+\.\d+)",
+        r"mc_(\d+\.\d+\.\d+)",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, filename, re.IGNORECASE)
+        if match:
+            return normalize_version(match.group(1))
+    return None
+
+
+def wuwa_android_channel_from_filename(filename: str) -> str:
+    if filename.startswith("云·鸣潮_"):
+        return "cloud"
+    tf_match = re.match(r"KR_TF_(\d+)-", filename, re.IGNORECASE)
+    if tf_match:
+        suffix = "_jiequ" if "街区" in filename else ""
+        return f"kuro_tf{tf_match.group(1)}{suffix}"
+    bbs_match = re.match(r"(KR_BBS\d+)-", filename, re.IGNORECASE)
+    if bbs_match:
+        return bbs_match.group(1).lower()
+    if "官渠" in filename:
+        return "guanqu"
+    if "库洛" in filename:
+        return "kuro"
+    return "official"
+
+
+def clone_tomyjan_wuwa_android_source() -> tempfile.TemporaryDirectory[str]:
+    temp_dir = tempfile.TemporaryDirectory(prefix="wuwa-android-tomyjan-")
+    target = Path(temp_dir.name) / "repo"
+    subprocess.run(
+        [
+            "git",
+            "clone",
+            "--depth",
+            "1",
+            "--filter=blob:none",
+            "--sparse",
+            TOMYJAN_WUWA_ANDROID_REPO,
+            str(target),
+        ],
+        check=True,
+    )
+    subprocess.run(
+        [
+            "git",
+            "-C",
+            str(target),
+            "sparse-checkout",
+            "set",
+            str(TOMYJAN_WUWA_ANDROID_SUBDIR).replace("\\", "/"),
+        ],
+        check=True,
+    )
+    return temp_dir
+
+
+def discover_tomyjan_wuwa_android_apks() -> list[dict]:
+    temp_dir: tempfile.TemporaryDirectory[str] | None = None
+    source_dir_env = os.environ.get("TOMYJAN_WUWA_ANDROID_SOURCE_DIR")
+    try:
+        if source_dir_env:
+            source_dir = Path(source_dir_env)
+        else:
+            temp_dir = clone_tomyjan_wuwa_android_source()
+            source_dir = Path(temp_dir.name) / "repo" / TOMYJAN_WUWA_ANDROID_SUBDIR
+        if not source_dir.exists():
+            print(f"TomyJan WuWa Android archive missing: {source_dir}")
+            return []
+
+        entries: list[dict] = []
+        for path in sorted(source_dir.glob("*.json")):
+            try:
+                payload = json.loads(path.read_text(encoding="utf-8"))
+            except Exception as exc:
+                print(f"TomyJan WuWa Android snapshot unreadable {path.name}: {exc}")
+                continue
+            raw_url = str(payload.get("link") or "").strip()
+            if not raw_url:
+                print(f"TomyJan WuWa Android snapshot missing link: {path.name}")
+                continue
+            url = quote_url_path(raw_url)
+            filename = filename_from_url(url)
+            version = wuwa_android_version_from_filename(filename)
+            if not version:
+                print(f"TomyJan WuWa Android snapshot has unknown version: {path.name} {filename}")
+                continue
+            snapshot_at = iso_from_tomyjan_snapshot(path.stem)
+            entry = {
+                "game_id": "wuwa",
+                "version": version,
+                "channel": wuwa_android_channel_from_filename(filename),
+                "url": url,
+                "source": "TomyJan/GenshinImpact-Client-Version WuWa Android CN archive",
+                "source_url": f"{TOMYJAN_WUWA_ANDROID_SOURCE}/{path.name}",
+                "archive_source": TOMYJAN_WUWA_ANDROID_SOURCE,
+                "archive_file": str(TOMYJAN_WUWA_ANDROID_SUBDIR / path.name).replace("\\", "/"),
+                "dedupe_same_hash": False,
+            }
+            if snapshot_at:
+                entry["archive_snapshot_at"] = snapshot_at
+            entries.append(entry)
+        return entries
+    except Exception as exc:
+        print(f"TomyJan WuWa Android archive unavailable: {exc}")
+        return []
+    finally:
+        if temp_dir:
+            temp_dir.cleanup()
 
 
 def discover_hypergryph_apks() -> list[dict]:
@@ -2924,6 +3070,8 @@ def main() -> None:
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_kuro_apks():
         seeds_by_url.setdefault(seed["url"], seed)
+    for seed in discover_tomyjan_wuwa_android_apks():
+        seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_hypergryph_apks():
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_direct_apks():
@@ -2932,6 +3080,9 @@ def main() -> None:
         seeds_by_url[seed["url"]] = seed
     for seed in discover_webpage_apks():
         seeds_by_url[seed["url"]] = seed
+    for previous in previous_by_url.values():
+        if previous.get("url"):
+            seeds_by_url.setdefault(previous["url"], previous)
 
     for seed in seeds_by_url.values():
         cached_previous = previous_by_url.get(seed["url"])
@@ -2939,7 +3090,15 @@ def main() -> None:
         public_seed = {
             key: value
             for key, value in seed.items()
-            if key not in {"metadata_url", "filename_url", "force_refresh", "headers", "reprobe_unavailable"}
+            if key
+            not in {
+                "metadata_url",
+                "filename_url",
+                "force_refresh",
+                "headers",
+                "reprobe_unavailable",
+                "dedupe_same_hash",
+            }
         }
         previous = None if seed.get("force_refresh") or reprobe_all_apks else cached_previous
         if should_reprobe_unavailable_apk(seed, previous):
@@ -2980,7 +3139,11 @@ def main() -> None:
                     entry["archive_url"] = same_source.get("archive_url") or entry["archive_url"]
                 if same_source.get("archive_note") or entry.get("archive_note"):
                     entry["archive_note"] = same_source.get("archive_note") or entry["archive_note"]
-        same_hash_index = same_apk_hash_entry_index(entry, entries) if entry.get("source_url") else None
+        same_hash_index = (
+            same_apk_hash_entry_index(entry, entries)
+            if entry.get("source_url") and seed.get("dedupe_same_hash", True)
+            else None
+        )
         if same_hash_index is not None:
             existing = entries[same_hash_index]
             if should_replace_same_hash_entry(entry, existing):
