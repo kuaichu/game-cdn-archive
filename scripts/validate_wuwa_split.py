@@ -11,7 +11,7 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 WUWA_DIR = REPO_ROOT / "docs" / "data" / "wuwa"
-EXPECTED_TOTAL_FILES = 10178
+EXPECTED_TOTAL_FILES = 15485
 REQUIRED_VERSION_FIELDS = ("version", "channel", "region", "files", "patches")
 REQUIRED_FILE_FIELDS = ("dest", "md5", "size", "url")
 
