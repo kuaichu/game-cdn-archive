@@ -409,10 +409,20 @@ h2 {
 
 .version-group-head {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  border: 0;
   padding: 4px 8px 8px;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.version-group-head:hover {
+  color: var(--cyan);
 }
 
 .version-group-head strong {
@@ -420,9 +430,41 @@ h2 {
   font-size: 14px;
 }
 
-.version-group-head span {
+.group-meta {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
   color: var(--muted);
   font-size: 12px;
+}
+
+.group-meta span:last-child {
+  color: var(--cyan);
+  font-weight: 800;
+}
+
+.group-title {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 7px;
+}
+
+.group-chevron {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1;
+  transform: rotate(0deg);
+  transition: transform 0.16s ease;
+}
+
+.version-group.collapsed .group-chevron {
+  transform: rotate(-90deg);
+}
+
+.version-group-body[hidden] {
+  display: none;
 }
 
 .version-row {

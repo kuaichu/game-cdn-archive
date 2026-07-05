@@ -4,6 +4,7 @@ const state = {
   version: null,
   manualVersions: {},
   latestVersions: {},
+  collapsedVersionGroups: {},
   compareVersion: null,
   diffFilter: "all",
   query: "",
@@ -64,6 +65,7 @@ const saveView = () => {
       mode: state.mode,
       manualVersions: state.manualVersions,
       latestVersions: state.latestVersions,
+      collapsedVersionGroups: state.collapsedVersionGroups,
     }));
   } catch {
     // The page still works when storage is blocked or unavailable.
@@ -71,6 +73,7 @@ const saveView = () => {
 };
 
 const versionContextKey = (gameId = state.gameId, mode = state.mode) => `${gameId}:${mode}`;
+const versionGroupKey = (family, gameId = state.gameId, mode = state.mode) => `${versionContextKey(gameId, mode)}:${family}`;
 
 const preferredVersionForContext = (gameId = state.gameId, mode = state.mode) =>
   state.manualVersions?.[versionContextKey(gameId, mode)] || state.manualVersions?.[gameId] || null;
@@ -78,6 +81,19 @@ const preferredVersionForContext = (gameId = state.gameId, mode = state.mode) =>
 const rememberVersionSelection = (version = state.version) => {
   if (!version) return;
   state.manualVersions[versionContextKey()] = version;
+};
+
+const isVersionGroupCollapsed = (family) =>
+  Boolean(state.collapsedVersionGroups?.[versionGroupKey(family)]);
+
+const setVersionGroupCollapsed = (family, collapsed) => {
+  const key = versionGroupKey(family);
+  if (collapsed) {
+    state.collapsedVersionGroups[key] = true;
+  } else {
+    delete state.collapsedVersionGroups[key];
+  }
+  saveView();
 };
 
 const selectVersionForContext = (versions, preferredVersion = null) => {
@@ -896,16 +912,36 @@ const renderVersionMenu = () => {
     }, new Map());
 
   $("#versionMenu").innerHTML = [...groups.entries()]
-    .map(([family, items]) => `
-      <div class="version-group">
-        <div class="version-group-head">
-          <strong>${family} ${isNte() || isEndfield() ? "大版本" : "版本"}</strong>
-          <span>${items.length} 个可用版本</span>
+    .map(([family, items]) => {
+      const collapsed = isVersionGroupCollapsed(family);
+      return `
+      <div class="version-group ${collapsed ? "collapsed" : ""}">
+        <button class="version-group-head" type="button" data-family="${family}" aria-expanded="${!collapsed}" title="${collapsed ? "展开" : "收纳"} ${family} 版本">
+          <span class="group-title">
+            <span class="group-chevron" aria-hidden="true">⌄</span>
+            <strong>${family} ${isNte() || isEndfield() ? "大版本" : "版本"}</strong>
+          </span>
+          <span class="group-meta">
+            <span>${items.length} 个可用版本</span>
+            <span>${collapsed ? "展开" : "收纳"}</span>
+          </span>
+        </button>
+        <div class="version-group-body" ${collapsed ? "hidden" : ""}>
+          ${items.map((item) => versionButton(item)).join("")}
         </div>
-        ${items.map((item) => versionButton(item)).join("")}
       </div>
-    `)
+    `;
+    })
     .join("");
+
+  $$(".version-group-head").forEach((button) => {
+    button.addEventListener("click", () => {
+      const family = button.dataset.family;
+      const collapsed = button.getAttribute("aria-expanded") === "true";
+      setVersionGroupCollapsed(family, collapsed);
+      renderVersionMenu();
+    });
+  });
 
   $$(".version-row").forEach((button) => {
     button.addEventListener("click", () => {
@@ -2848,6 +2884,9 @@ Promise.all([
     : {};
   state.latestVersions = savedView.latestVersions && typeof savedView.latestVersions === "object"
     ? savedView.latestVersions
+    : {};
+  state.collapsedVersionGroups = savedView.collapsedVersionGroups && typeof savedView.collapsedVersionGroups === "object"
+    ? savedView.collapsedVersionGroups
     : {};
   state.mode = modesForGame().some(([mode]) => mode === savedView.mode)
     ? savedView.mode
