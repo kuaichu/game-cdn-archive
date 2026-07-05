@@ -6,7 +6,10 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+import time
 from copy import deepcopy
+from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -18,12 +21,39 @@ for path in (ROOT, SCRIPTS):
         sys.path.insert(0, str(path))
 
 from adapters.wuwa import WuwaAvailabilityAdapter  # noqa: E402
+from probe_scheduler import ProbeScheduleConfig, schedule_probe_candidates, should_probe_previous  # noqa: E402
 from scripts.availability_schema import ProbeResult, availability_block, probe_fact_defaults  # noqa: E402
 
 
 DEFAULT_ROOT = ROOT / "docs" / "data" / "wuwa"
 GENERATED_BY = "scripts/build_wuwa_availability.py"
 STATES = ("available", "mirror_only", "unavailable", "unknown")
+METADATA_METHODS = {"WUWA_METADATA", "WUWA_METADATA_SUMMARY", "WUWA_UNPROBED_CANDIDATE"}
+
+
+@dataclass
+class ProbeStats:
+    requested: int = 0
+    cache_hits: int = 0
+    failed_probe_results: int = 0
+    unavailable_records: int = 0
+    live_records: int = 0
+    started_at: float = field(default_factory=time.perf_counter)
+
+    @property
+    def elapsed_seconds(self) -> float:
+        return time.perf_counter() - self.started_at
+
+
+@dataclass
+class PreferredUrlChange:
+    version: str
+    path: str
+    old_url: str
+    new_url: str
+    reason: str
+    state: str
+    first_failed: str
 
 
 def load_json(path: Path) -> Any:
@@ -63,6 +93,16 @@ def old_state(record: dict[str, Any]) -> str:
     return "unavailable"
 
 
+def old_preferred_url(record: dict[str, Any]) -> str:
+    availability = record.get("availability") if isinstance(record.get("availability"), dict) else {}
+    interpretation = availability.get("interpretation") if isinstance(availability, dict) else {}
+    preferred = interpretation.get("preferred_url") if isinstance(interpretation, dict) else ""
+    if preferred:
+        return str(preferred)
+    urls = unique_candidates(record)
+    return urls[0] if urls else ""
+
+
 def metadata_error(record: dict[str, Any]) -> str:
     if not size_present(record):
         return "metadata_size_missing"
@@ -91,7 +131,25 @@ def metadata_probe(url: str, record: dict[str, Any], checked_at: str) -> ProbeRe
     }
 
 
-def probes_from_record(record: dict[str, Any], checked_at: str) -> list[ProbeResult]:
+def unprobed_candidate(url: str, record: dict[str, Any], checked_at: str) -> ProbeResult:
+    return {
+        "url": url,
+        "probe": probe_fact_defaults(
+            ok=False,
+            status=0,
+            method="WUWA_UNPROBED_CANDIDATE",
+            checked_at=checked_at,
+            final_url=url,
+            content_type="",
+            size=int_value(record.get("size")),
+            error="not_probed",
+            stale=False,
+            scheduler_confidence="low",
+        ),
+    }
+
+
+def metadata_probes_from_record(record: dict[str, Any], checked_at: str) -> list[ProbeResult]:
     urls = unique_candidates(record)
     if not urls:
         label = str(record.get("dest") or record.get("name") or "unknown").replace("\\", "/").strip("/") or "unknown"
@@ -99,23 +157,90 @@ def probes_from_record(record: dict[str, Any], checked_at: str) -> list[ProbeRes
     return [metadata_probe(url, record, checked_at) for url in urls]
 
 
-def summary_probe(version: str, checked_at: str) -> ProbeResult:
-    url = f"wuwa-metadata://{version}"
+def summary_probe(version: str, checked_at: str, *, live: bool) -> ProbeResult:
+    url = f"wuwa-{'live' if live else 'metadata'}://{version}"
     return {
         "url": url,
         "probe": probe_fact_defaults(
-            ok=False,
+            ok=live,
             status=0,
-            method="WUWA_METADATA_SUMMARY",
+            method="WUWA_LIVE_SUMMARY" if live else "WUWA_METADATA_SUMMARY",
             checked_at=checked_at,
             final_url=url,
             content_type="",
             size=0,
-            error="not_probed",
+            error="" if live else "not_probed",
             stale=False,
-            scheduler_confidence="medium",
+            scheduler_confidence="high" if live else "medium",
         ),
     }
+
+
+def is_live_probe(probe: ProbeResult) -> bool:
+    method = str((probe.get("probe") or {}).get("method") or "")
+    return bool(method and method not in METADATA_METHODS and not method.startswith("WUWA_"))
+
+
+def live_previous_by_url(records: Iterable[dict[str, Any]]) -> dict[str, ProbeResult]:
+    previous: dict[str, ProbeResult] = {}
+    for record in records:
+        availability = record.get("availability") if isinstance(record, dict) else None
+        candidates = availability.get("candidates") if isinstance(availability, dict) else None
+        if not isinstance(candidates, list):
+            continue
+        for candidate in candidates:
+            if not isinstance(candidate, dict) or not candidate.get("url") or not isinstance(candidate.get("probe"), dict):
+                continue
+            probe = {"url": str(candidate["url"]), "probe": candidate["probe"]}
+            if is_live_probe(probe):  # type: ignore[arg-type]
+                previous[str(candidate["url"])] = probe  # type: ignore[assignment]
+    return previous
+
+
+def probe_one_candidate(
+    url: str,
+    previous: dict[str, ProbeResult],
+    config: ProbeScheduleConfig,
+    stats: ProbeStats,
+) -> ProbeResult:
+    now = datetime.now(timezone.utc)
+    prior = previous.get(url)
+    will_request = should_probe_previous(prior, now, config)
+    if will_request:
+        stats.requested += 1
+    else:
+        stats.cache_hits += 1
+    result = schedule_probe_candidates([url], previous=previous, config=config)[0]
+    previous[url] = result
+    if not result["probe"].get("ok"):
+        stats.failed_probe_results += 1
+    return result
+
+
+def live_probes_from_record(
+    record: dict[str, Any],
+    checked_at: str,
+    previous: dict[str, ProbeResult],
+    config: ProbeScheduleConfig,
+    stats: ProbeStats,
+) -> list[ProbeResult]:
+    urls = unique_candidates(record)
+    if not urls:
+        return metadata_probes_from_record(record, checked_at)
+
+    probes: list[ProbeResult] = []
+    for url in urls:
+        result = probe_one_candidate(url, previous, config, stats)
+        probes.append(result)
+        if result["probe"].get("ok"):
+            break
+
+    probed_urls = {probe["url"] for probe in probes}
+    for url in urls:
+        if url not in probed_urls:
+            probes.append(unprobed_candidate(url, record, checked_at))
+    stats.live_records += 1
+    return probes
 
 
 def iter_patch_parts(row: dict[str, Any]) -> Iterable[dict[str, Any]]:
@@ -151,20 +276,69 @@ def reason_counts(items: Iterable[dict[str, Any]]) -> dict[str, int]:
     return dict(sorted(counts.items()))
 
 
-def apply_item_availability(item: dict[str, Any], checked_at: str, adapter: WuwaAvailabilityAdapter) -> None:
-    probes = probes_from_record(item, checked_at)
+def first_failed_probe(probes: list[ProbeResult]) -> str:
+    for probe in probes:
+        facts = probe.get("probe") or {}
+        if not facts.get("ok") and str(facts.get("method") or "") != "WUWA_UNPROBED_CANDIDATE":
+            status = facts.get("status")
+            error = facts.get("error") or "probe failed"
+            return f"{probe.get('url')} status={status} error={error}"
+    return ""
+
+
+def apply_item_availability(
+    item: dict[str, Any],
+    version: str,
+    checked_at: str,
+    adapter: WuwaAvailabilityAdapter,
+    source_kind: str,
+    previous: dict[str, ProbeResult],
+    config: ProbeScheduleConfig,
+    stats: ProbeStats,
+    changes: list[PreferredUrlChange],
+) -> None:
+    old_url = old_preferred_url(item)
+    if source_kind == "live_probe":
+        probes = live_probes_from_record(item, checked_at, previous, config, stats)
+    else:
+        probes = metadata_probes_from_record(item, checked_at)
     interpretation = adapter.interpret(probes, item)
+    if interpretation["state"] == "unavailable":
+        stats.unavailable_records += 1
     item["availability"] = availability_block(
         candidates=probes,
-        source_kind="metadata_inference",
+        source_kind=source_kind,  # type: ignore[arg-type]
         interpretation=interpretation,
         generated_by=GENERATED_BY,
     )
+    new_url = interpretation.get("preferred_url") or ""
+    if old_url != new_url:
+        changes.append(
+            PreferredUrlChange(
+                version=version,
+                path=str(item.get("dest") or item.get("name") or ""),
+                old_url=old_url,
+                new_url=new_url,
+                reason=str(interpretation.get("reason") or ""),
+                state=str(interpretation.get("state") or ""),
+                first_failed=first_failed_probe(probes),
+            )
+        )
 
 
-def apply_items_availability(items: list[dict[str, Any]], checked_at: str, adapter: WuwaAvailabilityAdapter) -> None:
+def apply_items_availability(
+    items: list[dict[str, Any]],
+    version: str,
+    checked_at: str,
+    adapter: WuwaAvailabilityAdapter,
+    source_kind: str,
+    previous: dict[str, ProbeResult],
+    config: ProbeScheduleConfig,
+    stats: ProbeStats,
+    changes: list[PreferredUrlChange],
+) -> None:
     for item in items:
-        apply_item_availability(item, checked_at, adapter)
+        apply_item_availability(item, version, checked_at, adapter, source_kind, previous, config, stats, changes)
 
 
 def docs_path(root: Path, link: str) -> Path:
@@ -193,27 +367,43 @@ def apply_summary_availability(
     reasons: dict[str, int],
     checked_at: str,
     adapter: WuwaAvailabilityAdapter,
+    source_kind: str,
 ) -> None:
     version = str(summary.get("version") or version_row.get("version") or "unknown")
     summary["availability_counts"] = counts
     summary["availability_reasons"] = reasons
     version_row["availability_counts"] = counts
     version_row["availability_reasons"] = reasons
-    probe = summary_probe(version, checked_at)
+    probe = summary_probe(version, checked_at, live=source_kind == "live_probe")
     interpretation = adapter.interpret([probe], summary)
     summary["availability"] = availability_block(
         candidates=[probe],
-        source_kind="metadata_inference",
+        source_kind=source_kind,  # type: ignore[arg-type]
         interpretation=interpretation,
         generated_by=GENERATED_BY,
     )
+
+
+def selected_live_versions(index: dict[str, Any], *, live_probe: bool, canary_version: str, all_versions: bool) -> set[str]:
+    if not live_probe:
+        return set()
+    summaries = [item for item in index.get("versions") or [] if isinstance(item, dict)]
+    if all_versions:
+        return {str(item.get("version") or "") for item in summaries if item.get("version")}
+    if canary_version and canary_version != "latest":
+        return {canary_version}
+    latest = str((summaries[0] or {}).get("version") or "") if summaries else ""
+    return {latest} if latest else set()
 
 
 def apply_availability(
     root: Path,
     index: dict[str, Any],
     versions: dict[str, dict[str, Any]],
-) -> tuple[dict[str, int], dict[str, int], dict[str, int], list[str], dict[Path, list[dict[str, Any]]]]:
+    *,
+    live_versions: set[str],
+    config: ProbeScheduleConfig,
+) -> tuple[dict[str, int], dict[str, int], dict[str, int], list[str], dict[Path, list[dict[str, Any]]], ProbeStats, list[PreferredUrlChange]]:
     adapter = WuwaAvailabilityAdapter()
     checked_at = str(index.get("last_checked_at") or index.get("generated_at") or "")
     summaries = index.get("versions") or []
@@ -222,6 +412,12 @@ def apply_availability(
     summary_totals = {state: 0 for state in STATES}
     errors: list[str] = []
     list_shards: dict[Path, list[dict[str, Any]]] = {}
+    changes: list[PreferredUrlChange] = []
+    stats = ProbeStats()
+    previous: dict[str, ProbeResult] = {}
+
+    for row in versions.values():
+        previous.update(live_previous_by_url(iter_file_items(row)))
 
     for summary in summaries:
         if not isinstance(summary, dict):
@@ -232,12 +428,13 @@ def apply_availability(
             errors.append(f"{version}:missing_version_shard")
             continue
 
+        source_kind = "live_probe" if version in live_versions else "metadata_inference"
         items = iter_file_items(row)
         legacy_counts = count_states(items, legacy=True)
-        apply_items_availability(items, checked_at, adapter)
+        apply_items_availability(items, version, checked_at, adapter, source_kind, previous, config, stats, changes)
         new_counts = count_states(items, legacy=False)
         reasons = reason_counts(items)
-        apply_summary_availability(summary, row, new_counts, reasons, checked_at, adapter)
+        apply_summary_availability(summary, row, new_counts, reasons, checked_at, adapter, source_kind)
 
         for state, count in legacy_counts.items():
             before_totals[state] = before_totals.get(state, 0) + count
@@ -246,19 +443,19 @@ def apply_availability(
         summary_state = str(((summary.get("availability") or {}).get("interpretation") or {}).get("state") or "unknown")
         summary_totals[summary_state] = summary_totals.get(summary_state, 0) + 1
 
-        if legacy_counts != new_counts:
+        if source_kind == "metadata_inference" and legacy_counts != new_counts:
             errors.append(f"{version}:legacy_counts={legacy_counts}:new_counts={new_counts}")
 
         path, file_items = load_list_items(root, (row.get("links") or {}).get("files"))
         if path is not None:
-            apply_items_availability(file_items, checked_at, adapter)
+            apply_items_availability(file_items, version, checked_at, adapter, source_kind, previous, config, stats, changes)
             list_shards[path] = file_items
         for route in row.get("patches") or []:
             if not isinstance(route, dict):
                 continue
             path, patch_items = load_list_items(root, route.get("links"))
             if path is not None:
-                apply_items_availability(patch_items, checked_at, adapter)
+                apply_items_availability(patch_items, version, checked_at, adapter, source_kind, previous, config, stats, changes)
                 list_shards[path] = patch_items
 
     return (
@@ -267,6 +464,8 @@ def apply_availability(
         {key: value for key, value in summary_totals.items() if value},
         errors,
         list_shards,
+        stats,
+        changes,
     )
 
 
@@ -280,29 +479,104 @@ def load_versions(root: Path) -> dict[str, dict[str, Any]]:
     return versions
 
 
+def print_changes(changes: list[PreferredUrlChange]) -> None:
+    print(f"preferred_url_changes={len(changes)}")
+    if not changes:
+        print("preferred_url_change_list=NONE")
+        return
+    for change in changes:
+        print(
+            "preferred_url_change="
+            + json.dumps(
+                {
+                    "version": change.version,
+                    "file": change.path,
+                    "old_url": change.old_url,
+                    "new_url": change.new_url,
+                    "state": change.state,
+                    "reason": change.reason,
+                    "first_failed": change.first_failed,
+                },
+                ensure_ascii=False,
+                separators=(",", ":"),
+            )
+        )
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--root", type=Path, default=DEFAULT_ROOT)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--live-probe", action="store_true", help="Probe WuWa CDN candidates for the canary version only by default.")
+    parser.add_argument("--canary-version", default="latest")
+    parser.add_argument("--all-versions", action="store_true", help="Probe every WuWa version. Use only after canary review.")
+    parser.add_argument("--force-full-live", action="store_true", help="Ignore cached live WuWa probes for selected versions.")
+    parser.add_argument("--request-interval", type=float, default=None)
+    parser.add_argument("--timeout", type=int, default=None)
     args = parser.parse_args()
 
     index_path = args.root / "index.json"
     index = deepcopy(load_json(index_path))
     versions = deepcopy(load_versions(args.root))
+    live_versions = selected_live_versions(
+        index,
+        live_probe=args.live_probe,
+        canary_version=args.canary_version,
+        all_versions=args.all_versions,
+    )
+    config = ProbeScheduleConfig.wuwa_from_env()
+    if args.force_full_live:
+        config = ProbeScheduleConfig(
+            ttl_hours=config.ttl_hours,
+            failed_ttl_hours=config.failed_ttl_hours,
+            grace_hours=config.grace_hours,
+            rotation_limit=config.rotation_limit,
+            force_full=True,
+            timeout=config.timeout,
+            request_interval_seconds=config.request_interval_seconds,
+        )
+    if args.timeout is not None or args.request_interval is not None:
+        config = ProbeScheduleConfig(
+            ttl_hours=config.ttl_hours,
+            failed_ttl_hours=config.failed_ttl_hours,
+            grace_hours=config.grace_hours,
+            rotation_limit=config.rotation_limit,
+            force_full=config.force_full,
+            timeout=args.timeout if args.timeout is not None else config.timeout,
+            request_interval_seconds=args.request_interval if args.request_interval is not None else config.request_interval_seconds,
+        )
 
-    before_totals, after_totals, summary_totals, errors, list_shards = apply_availability(args.root, index, versions)
+    before_totals, after_totals, summary_totals, errors, list_shards, stats, changes = apply_availability(
+        args.root,
+        index,
+        versions,
+        live_versions=live_versions,
+        config=config,
+    )
 
     print("WuWa availability migration")
-    print("source_kind=metadata_inference")
-    print("live_probe_performed=NO")
-    print("baseline=current frontend has no per-file live availability; URL presence + positive size remains available")
+    print(f"live_probe_performed={'YES' if args.live_probe else 'NO'}")
+    print(f"live_versions={','.join(sorted(live_versions)) if live_versions else 'NONE'}")
+    print(f"all_versions={'YES' if args.all_versions else 'NO'}")
+    print("fallback_strategy=bounded_primary_then_ordered_backups")
+    print(f"timeout_seconds={config.timeout}")
+    print(f"request_interval_seconds={config.request_interval_seconds}")
+    print(f"force_full_live={'YES' if config.force_full else 'NO'}")
+    print("baseline=current frontend has no per-file live availability; old preferred_url is metadata primary candidate")
     print(f"versions={len(index.get('versions') or [])}")
     print(f"version_shards={len(versions)}")
     print(f"list_shards={len(list_shards)}")
     print(f"before_file_states={before_totals}")
     print(f"after_file_states={after_totals}")
     print(f"summary_contract_states={summary_totals}")
+    print(f"live_records={stats.live_records}")
+    print(f"request_total={stats.requested}")
+    print(f"cache_hits={stats.cache_hits}")
+    print(f"failed_probe_results={stats.failed_probe_results}")
+    print(f"unavailable_records={stats.unavailable_records}")
+    print(f"elapsed_seconds={stats.elapsed_seconds:.3f}")
     print(f"semantic_match={'PASS' if not errors else 'FAIL'}")
+    print_changes(changes)
     if errors:
         print("\n".join(f"semantic_error={error}" for error in errors[:100]))
         raise SystemExit(1)

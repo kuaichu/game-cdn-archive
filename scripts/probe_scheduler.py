@@ -8,6 +8,7 @@ all network I/O to scripts/url_probe.py.
 from __future__ import annotations
 
 import os
+import time
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from typing import Any
@@ -77,6 +78,7 @@ class ProbeScheduleConfig:
     rotation_limit: int = 300
     force_full: bool = False
     timeout: int = 20
+    request_interval_seconds: float = 0.0
 
     @classmethod
     def from_env(cls) -> "ProbeScheduleConfig":
@@ -87,6 +89,7 @@ class ProbeScheduleConfig:
             rotation_limit=env_int("URL_STATUS_ROTATION_LIMIT", 300),
             force_full=env_flag("URL_STATUS_FORCE_FULL", False),
             timeout=env_int("URL_STATUS_TIMEOUT", 20),
+            request_interval_seconds=float(os.environ.get("URL_STATUS_REQUEST_INTERVAL_SECONDS") or 0),
         )
 
     @classmethod
@@ -99,6 +102,20 @@ class ProbeScheduleConfig:
             rotation_limit=env_int("ANDROID_APK_ROTATION_LIMIT", 300),
             force_full=env_flag("URL_STATUS_FORCE_FULL", False),
             timeout=env_int("ANDROID_APK_PROBE_TIMEOUT", env_int("URL_STATUS_TIMEOUT", 20)),
+            request_interval_seconds=float(os.environ.get("ANDROID_APK_REQUEST_INTERVAL_SECONDS") or 0),
+        )
+
+    @classmethod
+    def wuwa_from_env(cls) -> "ProbeScheduleConfig":
+        ttl_hours = env_int("WUWA_CDN_PROBE_TTL_HOURS", 24)
+        return cls(
+            ttl_hours=ttl_hours,
+            failed_ttl_hours=env_int("WUWA_CDN_FAILED_REPROBE_TTL_HOURS", min(ttl_hours, 12) if ttl_hours > 0 else 0),
+            grace_hours=env_int("WUWA_CDN_GRACE_HOURS", max(ttl_hours * 7, 168) if ttl_hours > 0 else 168),
+            rotation_limit=env_int("WUWA_CDN_ROTATION_LIMIT", 1000),
+            force_full=env_flag("WUWA_CDN_FORCE_FULL", env_flag("URL_STATUS_FORCE_FULL", False)),
+            timeout=env_int("WUWA_CDN_PROBE_TIMEOUT", env_int("URL_STATUS_TIMEOUT", 12)),
+            request_interval_seconds=float(os.environ.get("WUWA_CDN_REQUEST_INTERVAL_SECONDS") or 0.05),
         )
 
 
@@ -164,10 +181,13 @@ def schedule_probe_candidates(
         selected = set(new_urls)
         selected.update(url for _, _, url in sorted(stale_existing, reverse=True)[:remaining_slots])
 
-    probed_by_url = {
-        result["url"]: annotate_probe(result, now, config.ttl_hours, config.grace_hours)
-        for result in (probe_candidates(sorted(selected), timeout=config.timeout) if selected else [])
-    }
+    probed_by_url: dict[str, ProbeResult] = {}
+    if selected:
+        for index, url in enumerate(sorted(selected)):
+            if index and config.request_interval_seconds > 0:
+                time.sleep(config.request_interval_seconds)
+            result = probe_candidates([url], timeout=config.timeout)[0]
+            probed_by_url[result["url"]] = annotate_probe(result, now, config.ttl_hours, config.grace_hours)
 
     results: list[ProbeResult] = []
     for url in urls:

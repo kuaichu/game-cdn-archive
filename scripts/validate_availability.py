@@ -443,9 +443,9 @@ def validate_wuwa(root: Path) -> list[str]:
         errors.extend(validate_availability(summary, summary_path, adapter))
         source = (summary.get("availability") or {}).get("source") or {}
         interpretation = (summary.get("availability") or {}).get("interpretation") or {}
-        if source.get("kind") != "metadata_inference":
-            errors.append(f"{summary_path}:source_kind_not_metadata_inference:{source.get('kind')}")
-        if interpretation.get("confidence") == "high" or source.get("confidence") == "high":
+        if source.get("kind") not in {"metadata_inference", "live_probe"}:
+            errors.append(f"{summary_path}:source_kind_not_wuwa_allowed:{source.get('kind')}")
+        if source.get("kind") == "metadata_inference" and (interpretation.get("confidence") == "high" or source.get("confidence") == "high"):
             errors.append(f"{summary_path}:metadata_high_confidence")
 
         shard_path = root / "versions" / f"{version}.json"
@@ -461,9 +461,9 @@ def validate_wuwa(root: Path) -> list[str]:
             errors.extend(validate_availability(item, item_path, adapter))
             item_source = (item.get("availability") or {}).get("source") or {}
             item_interpretation = (item.get("availability") or {}).get("interpretation") or {}
-            if item_source.get("kind") != "metadata_inference":
-                errors.append(f"{item_path}:source_kind_not_metadata_inference:{item_source.get('kind')}")
-            if item_interpretation.get("confidence") == "high" or item_source.get("confidence") == "high":
+            if item_source.get("kind") not in {"metadata_inference", "live_probe"}:
+                errors.append(f"{item_path}:source_kind_not_wuwa_allowed:{item_source.get('kind')}")
+            if item_source.get("kind") == "metadata_inference" and (item_interpretation.get("confidence") == "high" or item_source.get("confidence") == "high"):
                 errors.append(f"{item_path}:metadata_high_confidence")
 
         list_sections: list[tuple[str, Any]] = [("files", (row.get("links") or {}).get("files"))]
@@ -489,9 +489,9 @@ def validate_wuwa(root: Path) -> list[str]:
                 errors.extend(validate_availability(item, item_path, adapter))
                 item_source = (item.get("availability") or {}).get("source") or {}
                 item_interpretation = (item.get("availability") or {}).get("interpretation") or {}
-                if item_source.get("kind") != "metadata_inference":
-                    errors.append(f"{item_path}:source_kind_not_metadata_inference:{item_source.get('kind')}")
-                if item_interpretation.get("confidence") == "high" or item_source.get("confidence") == "high":
+                if item_source.get("kind") not in {"metadata_inference", "live_probe"}:
+                    errors.append(f"{item_path}:source_kind_not_wuwa_allowed:{item_source.get('kind')}")
+                if item_source.get("kind") == "metadata_inference" and (item_interpretation.get("confidence") == "high" or item_source.get("confidence") == "high"):
                     errors.append(f"{item_path}:metadata_high_confidence")
     return errors
 

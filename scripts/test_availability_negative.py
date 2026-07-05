@@ -172,6 +172,24 @@ def wuwa_metadata_probe(url: str, *, size: int, ok: bool = True, error: str = ""
     }
 
 
+def wuwa_live_probe(url: str, *, ok: bool, status: int, size: int = 1024, error: str = "", method: str = "HEAD") -> ProbeResult:
+    return {
+        "url": url,
+        "probe": probe_fact_defaults(
+            ok=ok,
+            status=status,
+            method=method,
+            checked_at="2026-07-06T00:00:00.000Z",
+            final_url=url,
+            content_type="application/octet-stream" if ok else "",
+            size=size,
+            error=error,
+            stale=False,
+            scheduler_confidence="high" if ok else "low",
+        ),
+    }
+
+
 def first_package(versions: dict[str, Any]) -> dict[str, Any]:
     for row in versions.values():
         packages = row.get("packages") if isinstance(row, dict) else None
@@ -489,6 +507,54 @@ def assert_wuwa_metadata_paths() -> None:
     }
     if dead_result != expected_dead:
         raise AssertionError(f"unexpected WuWa all-dead interpretation: {dead_result!r}")
+
+    live_result = adapter.interpret(
+        [
+            wuwa_live_probe(primary_url, ok=False, status=404, size=0, error="HTTP 404"),
+            wuwa_live_probe(fallback_url, ok=True, status=200, size=1024),
+        ],
+        record,
+    )
+    expected_live = {
+        "state": "available",
+        "reason": "multi_cdn_preferred",
+        "preferred_url": fallback_url,
+        "confidence": "high",
+        "retained": False,
+        "display_label": "可用",
+    }
+    if live_result != expected_live:
+        raise AssertionError(f"unexpected WuWa live fallback interpretation: {live_result!r}")
+    live_record = deepcopy(record)
+    live_record["availability"] = availability_block(
+        [
+            wuwa_live_probe(primary_url, ok=False, status=404, size=0, error="HTTP 404"),
+            wuwa_live_probe(fallback_url, ok=True, status=200, size=1024),
+        ],
+        "live_probe",
+        live_result,
+        "scripts/test_availability_negative.py",
+    )
+    if live_record["availability"]["source"]["kind"] != "live_probe":
+        raise AssertionError(f"unexpected WuWa live source kind: {live_record['availability']!r}")
+
+    all_failed_result = adapter.interpret(
+        [
+            wuwa_live_probe(primary_url, ok=False, status=404, size=0, error="HTTP 404"),
+            wuwa_live_probe(fallback_url, ok=False, status=0, size=0, error="timeout"),
+        ],
+        record,
+    )
+    expected_all_failed = {
+        "state": "unavailable",
+        "reason": "http_404",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": False,
+        "display_label": "链接失效",
+    }
+    if all_failed_result != expected_all_failed:
+        raise AssertionError(f"unexpected WuWa live all-failed interpretation: {all_failed_result!r}")
 
 
 def mutated_versions_with(path_parts: tuple[str, ...], value: Any) -> dict[str, Any]:
@@ -919,6 +985,7 @@ def main() -> None:
     print("endfield_upstream_archive=PASS")
     print("nte_live_probe_and_metadata=PASS")
     print("wuwa_metadata_multicdn=PASS")
+    print("wuwa_live_multicdn=PASS")
     print("closed_vocab_rejection=PASS")
     print("result=PASS")
 

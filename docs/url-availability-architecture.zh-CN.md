@@ -42,6 +42,8 @@ docs/data/url_status.json
 
 它会跳过字段名为 `urls` 的数组。这一点对 WuWa 很重要，因为 WuWa 文件记录里可能同时有主 `url` 和多 CDN 的 `urls` 数组。当前健康索引只检查主 URL，不会逐个检查所有备用 CDN URL。
 
+WuWa 的多 CDN 可用性现在由 WuWa 自己的 availability 构建步骤处理，而不是由 `url_status.json` 处理。`scripts/build_wuwa_availability.py --live-probe` 会通过 `probe_scheduler.py` 调用共享的 `url_probe.py` 探测原语，按有界 fallback 策略探测候选 URL，并把探测事实写回 WuWa 的 version/list JSON。跨数据集的 `url_status.json` 仍然只是离线审计索引，不能被当成 WuWa CDN 择优的前端数据源。
+
 每个被选中的 URL 会按下面流程探测：
 
 1. 先尝试 `HEAD`。
@@ -134,6 +136,8 @@ WuWa 文件记录里可能包含：
 - 包含多个 CDN 候选的 `urls` 数组。
 
 当前跨数据集健康探测会看到主 `url`，但不会检查 `urls` 里的每一个 URL。
+
+迁移后的 WuWa availability 路径会把每个候选都写进标准的 `availability.candidates` 数组。结构化阶段使用 `source.kind=metadata_inference`；live canary 阶段会对选中的版本使用 `source.kind=live_probe`。实时探测是有界的：先探主 URL，主 URL 可用就立刻停止；只有主 URL 失败时，才按顺序探备用 CDN。全版本放开保留为 canary 复核后的独立步骤。
 
 WuWa 也有自己的 `fetch_head_metadata()` helper，用于读取 header 元数据。它和 HoYo 的 helper 名字相似，但不是共享实现。
 

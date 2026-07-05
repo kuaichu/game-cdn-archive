@@ -51,6 +51,14 @@ It intentionally skips fields named `urls`. This matters for WuWa because WuWa
 file records can contain a primary `url` plus a multi-CDN `urls` array. The
 current health index checks the primary URL, not every alternate CDN URL.
 
+WuWa multi-CDN availability is now handled by the WuWa availability build step,
+not by `url_status.json`. `scripts/build_wuwa_availability.py --live-probe`
+uses the shared `url_probe.py` primitive through `probe_scheduler.py`, probes
+candidate URLs with bounded fallback, and writes the resulting facts into WuWa
+version/list JSON. The cross-cutting `url_status.json` remains an offline audit
+index and must not be treated as the frontend source of truth for WuWa CDN
+selection.
+
 For each selected URL, the probe logic is:
 
 1. Try `HEAD`.
@@ -157,6 +165,14 @@ WuWa records can include:
 
 The current cross-cutting health probe sees the primary `url`, but not every URL
 inside `urls`.
+
+The migrated WuWa availability path stores every candidate in the canonical
+`availability.candidates` array. The structural pass uses
+`source.kind=metadata_inference`; the live canary pass uses
+`source.kind=live_probe` for the selected version. Live probing is deliberately
+bounded: probe the primary URL first, stop immediately when it is usable, and
+only probe backup CDNs after a primary failure. Full-version rollout is kept as
+a separate step after canary review.
 
 WuWa also has its own `fetch_head_metadata()` helper for header metadata. It is
 similar in name to HoYo's helper but is not a shared implementation.

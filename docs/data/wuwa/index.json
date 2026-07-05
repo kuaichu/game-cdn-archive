@@ -33,39 +33,39 @@
         "available": 693
       },
       "availability_reasons": {
-        "not_probed": 693
+        "http_2xx": 693
       },
       "availability": {
         "candidates": [
           {
-            "url": "wuwa-metadata://3.4.1",
+            "url": "wuwa-live://3.4.1",
             "probe": {
-              "ok": false,
+              "ok": true,
               "status": 0,
-              "method": "WUWA_METADATA_SUMMARY",
+              "method": "WUWA_LIVE_SUMMARY",
               "checked_at": "2026-07-05T08:48:50.203917+00:00",
-              "final_url": "wuwa-metadata://3.4.1",
+              "final_url": "wuwa-live://3.4.1",
               "content_type": "",
               "size": 0,
               "last_modified": "",
               "etag": "",
-              "error": "not_probed",
+              "error": "",
               "bot_challenge": false,
               "stale": false,
               "age_hours": null,
-              "scheduler_confidence": "medium"
+              "scheduler_confidence": "high"
             }
           }
         ],
         "source": {
-          "kind": "metadata_inference",
-          "confidence": "medium"
+          "kind": "live_probe",
+          "confidence": "high"
         },
         "interpretation": {
           "state": "available",
           "reason": "not_probed",
           "preferred_url": "",
-          "confidence": "medium",
+          "confidence": "high",
           "retained": false,
           "display_label": "可用"
         },
