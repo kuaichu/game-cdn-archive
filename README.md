@@ -39,7 +39,7 @@ Current repository snapshot from generated data checked on `2026-07-05 03:09:32 
 | Arknights / 明日方舟 PC | Indexed official launcher package metadata through `74.0.0`; 19 package items in the latest snapshot |
 | Wuthering Waves / 鸣潮 PC | Indexed `6` CN launcher/resource-index snapshots through `3.4.1`; file URLs, CDN mirrors, and patch routes are preserved when official indexes expose them |
 | HoYo CN PC catalog | Migrated public HoyoFiles metadata for 原神 `1.0.0-6.7.0` (`55` versions), 崩坏：星穹铁道 `1.0.5-4.3.0` (`28` versions), 绝区零 `1.0.0-3.0.0` (`18` versions), 崩坏3 `3.7.0-8.9.0` (`53` versions) |
-| Android APK archive | Preserves `199` confirmed or historically verified official APK CDN records across `15` games |
+| Android APK archive | Preserves `200` confirmed or historically verified official APK CDN records across `15` games |
 <!-- README_PROGRESS_SNAPSHOT_END -->
 
 ## Android APK Progress
@@ -53,11 +53,11 @@ ranges are:
 
 | Game | Indexed versions | Records | Notes |
 | --- | --- | --- | --- |
-| 深空之眼 / Aether Gazer | `0.285.0` -> `0.305.3` | `4` version buckets / `4` records | `0` available; `4` unavailable or historical dead-link records |
+| 深空之眼 / Aether Gazer | `0.285.0` -> `0.305.3` | `5` version buckets / `5` records | `1` available; `4` unavailable or historical dead-link records |
 | 明日方舟 / Arknights | `1150.0.0` -> `2741.0.0` | `20` version buckets / `20` records | `1` available; `19` unavailable or historical dead-link records |
-| 崩坏3 / Honkai Impact 3rd | `0.9.9` -> `8.9.0` | `39` version buckets / `39` records | `13` available; `26` unavailable or historical dead-link records |
+| 崩坏3 / Honkai Impact 3rd | `0.9.9` -> `8.9.0` | `39` version buckets / `39` records | `15` available; `24` unavailable or historical dead-link records |
 | 碧蓝档案 / Blue Archive | `2.1.2` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
-| 卡拉比丘 / Calabiyau | `1.1.5.2` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
+| 卡拉比丘 / Calabiyau | `1.1.6.4` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 明日方舟：终末地 / Arknights: Endfield | `1.3.4` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 少女前线2：追放 / Girls' Frontline 2: Exilium | `3.0.0` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 原神 / Genshin Impact | `0.9.3` -> `6.7.0` | `54` version buckets / `54` records | `50` available; `4` unavailable or historical dead-link records |

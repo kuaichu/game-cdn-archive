@@ -41,7 +41,7 @@ KNOWN_APKS = [
     },
     {
         "game_id": "calabiyau",
-        "version": "1.1.5.2",
+        "version": "1.1.6.4",
         "channel": "official",
         "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
         "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
@@ -2734,6 +2734,26 @@ def same_source_previous(candidate: dict, previous_entries: list[dict]) -> dict 
     return None
 
 
+def prefer_newer_previous_for_manual_seed(seed: dict, previous: dict | None) -> dict:
+    if not previous:
+        return seed
+    if not str(seed.get("source", "")).startswith("official CDN URL captured manually"):
+        return seed
+    if previous.get("game_id") != seed.get("game_id") or previous.get("url") != seed.get("url"):
+        return seed
+    current_version = str(seed.get("version") or "")
+    previous_version = str(previous.get("version") or "")
+    if not current_version or not previous_version:
+        return seed
+    if version_key(previous_version) <= version_key(current_version):
+        return seed
+    preserved = dict(seed)
+    for key in ("version", "source", "source_url", "updated_at", "updated_at_source"):
+        if previous.get(key):
+            preserved[key] = previous[key]
+    return preserved
+
+
 def write_lists(output_dir: Path, game_id: str, version: str, entries: list[dict]) -> dict[str, str]:
     lists_dir = output_dir / "lists"
     lists_dir.mkdir(parents=True, exist_ok=True)
@@ -2826,12 +2846,13 @@ def main() -> None:
         seeds_by_url[seed["url"]] = seed
 
     for seed in seeds_by_url.values():
+        cached_previous = previous_by_url.get(seed["url"])
+        seed = prefer_newer_previous_for_manual_seed(seed, cached_previous)
         public_seed = {
             key: value
             for key, value in seed.items()
             if key not in {"metadata_url", "filename_url", "force_refresh", "headers", "reprobe_unavailable"}
         }
-        cached_previous = previous_by_url.get(seed["url"])
         previous = None if seed.get("force_refresh") or reprobe_all_apks else cached_previous
         if should_reprobe_unavailable_apk(seed, previous):
             previous = None
