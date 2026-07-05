@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-07-05T07:42:20.144542+00:00",
-  "generated_at": "2026-07-05T07:42:20.144542+00:00",
+  "last_checked_at": "2026-07-05T16:14:20.030241+00:00",
+  "generated_at": "2026-07-05T16:14:20.030241+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -600,6 +600,26 @@
         },
         {
           "game_id": "wuwa",
+          "version": "3.4.0",
+          "channel": "kuro_bbs01",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20260602140107_IWq564494HEOb1qCLN/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.4.0_170559099_33_%E5%AE%98%E6%B8%A0_0151cd62aef4c25ab11e32a40e05ddc4_shelled.apk",
+          "source": "TomyJan WW Android CN archive",
+          "source_url": "https://github.com/TomyJan/GenshinImpact-Client-Version/blob/main/WW/Android/Game/CN/20260607212015.json",
+          "updated_at": "2026-06-07T21:20:15+00:00",
+          "updated_at_source": "tomyjan_archive_filename",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2016398059,
+          "last_modified": "Tue, 02 Jun 2026 06:01:13 GMT",
+          "etag": "a3c119e3b6e502892709185ba3cc85d9-39",
+          "md5": "eb3a7f2dd2537c9b5939db158fa85811",
+          "crc64": "11542736326761185671",
+          "error": "",
+          "filename": "KR_BBS01-鸣潮_3.4.0_170559099_33_官渠_0151cd62aef4c25ab11e32a40e05ddc4_shelled.apk",
+          "captured_at": "2026-07-05T16:14:20.030241+00:00"
+        },
+        {
+          "game_id": "wuwa",
           "version": "3.3.2",
           "channel": "官渠",
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20260516183706_FRC8o8CQS9L44Ra4WW/%E9%B8%A3%E6%BD%AE_3.3.2_168377155_33_%E5%AE%98%E6%B8%A0_32e97887831ba8ca620f93b4aa2ad0ff_shelled.apk",
@@ -619,6 +639,66 @@
         },
         {
           "game_id": "wuwa",
+          "version": "3.3.1",
+          "channel": "kuro_bbs01",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20260507180953_zprIat2NkosqCyS9ZP/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.3.1_168377154_33_%E5%AE%98%E6%B8%A0_90247475e898b22c8cb5a3aebccb3636_shelled.apk",
+          "source": "TomyJan WW Android CN archive",
+          "source_url": "https://github.com/TomyJan/GenshinImpact-Client-Version/blob/main/WW/Android/Game/CN/20260507112013.json",
+          "updated_at": "2026-05-07T11:20:13+00:00",
+          "updated_at_source": "tomyjan_archive_filename",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2012916532,
+          "last_modified": "Thu, 07 May 2026 10:09:58 GMT",
+          "etag": "960c13c8ff22aadab52d9248fc37231a-39",
+          "md5": "861e56ea30d57b9663d6455c28a2894a",
+          "crc64": "2423796909161964168",
+          "error": "",
+          "filename": "KR_BBS01-鸣潮_3.3.1_168377154_33_官渠_90247475e898b22c8cb5a3aebccb3636_shelled.apk",
+          "captured_at": "2026-07-05T16:14:20.030241+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "3.3.0",
+          "channel": "kuro_bbs01",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20260422161038_SQ6GRF62tYrLXq8CiY/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.3.0_166672158_33_%E5%AE%98%E6%B8%A0_54ca20e17f5b80c7682d7e2e1d92a3ba_shelled.apk",
+          "source": "TomyJan WW Android CN archive",
+          "source_url": "https://github.com/TomyJan/GenshinImpact-Client-Version/blob/main/WW/Android/Game/CN/20260429211429.json",
+          "updated_at": "2026-04-29T21:14:29+00:00",
+          "updated_at_source": "tomyjan_archive_filename",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2012961588,
+          "last_modified": "Wed, 22 Apr 2026 08:10:44 GMT",
+          "etag": "8b0ce3a5f6e00cda03e3596ba10ba7e6-39",
+          "md5": "a50a9a38040e91ecbf7753628832f146",
+          "crc64": "16538252310046638605",
+          "error": "",
+          "filename": "KR_BBS01-鸣潮_3.3.0_166672158_33_官渠_54ca20e17f5b80c7682d7e2e1d92a3ba_shelled.apk",
+          "captured_at": "2026-07-05T16:14:20.030241+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "3.2.2",
+          "channel": "kuro_bbs01",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20260409183406_66vj7BEaI4OKy7wLbL/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.2.2_166208222_33_%E5%AE%98%E6%B8%A0_395dff2230b8576e6e41a85781fc3688_shelled.apk",
+          "source": "TomyJan WW Android CN archive",
+          "source_url": "https://github.com/TomyJan/GenshinImpact-Client-Version/blob/main/WW/Android/Game/CN/20260414033129.json",
+          "updated_at": "2026-04-14T03:31:29+00:00",
+          "updated_at_source": "tomyjan_archive_filename",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2000239412,
+          "last_modified": "Thu, 09 Apr 2026 10:34:12 GMT",
+          "etag": "deffe3bd75922c2907236ce31284bd72-39",
+          "md5": "f8eaea9ca0c0ffd78538d56da806fb20",
+          "crc64": "2298170705880776765",
+          "error": "",
+          "filename": "KR_BBS01-鸣潮_3.2.2_166208222_33_官渠_395dff2230b8576e6e41a85781fc3688_shelled.apk",
+          "captured_at": "2026-07-05T16:14:20.030241+00:00"
+        },
+        {
+          "game_id": "wuwa",
           "version": "3.2.1",
           "channel": "kuro_tf49",
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20260324174322_3Ap1c8k6juCzDfI1JV/KR_TF_49-%E9%B8%A3%E6%BD%AE_3.2.1_164300475_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_83e2cdd963fff1e42e1d1a3e6c895a32_shelled.apk",
@@ -635,6 +715,66 @@
           "captured_at": "2026-06-21T05:05:41.980130+00:00",
           "updated_at": "2026-03-24T09:43:30+00:00",
           "updated_at_source": "apk_last_modified"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "3.1.2",
+          "channel": "kuro_bbs01",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20260302193739_clU3qmK4n4hBb16eKs/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.1.2_159500877_33_%E5%AE%98%E6%B8%A0_93e546dcfcbb9d78f723d689fcf89f43_shelled.apk",
+          "source": "TomyJan WW Android CN archive",
+          "source_url": "https://github.com/TomyJan/GenshinImpact-Client-Version/blob/main/WW/Android/Game/CN/20260303044309.json",
+          "updated_at": "2026-03-03T04:43:09+00:00",
+          "updated_at_source": "tomyjan_archive_filename",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1979214559,
+          "last_modified": "Mon, 02 Mar 2026 11:37:44 GMT",
+          "etag": "7c52c430dbde06605f2a4785bf8f693f-38",
+          "md5": "6404214c93232aa09580e21f41f7a4d8",
+          "crc64": "9814864883786980639",
+          "error": "",
+          "filename": "KR_BBS01-鸣潮_3.1.2_159500877_33_官渠_93e546dcfcbb9d78f723d689fcf89f43_shelled.apk",
+          "captured_at": "2026-07-05T16:14:20.030241+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "3.1.0",
+          "channel": "kuro_bbs01",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20260127145645_22ez1yquSrG2jeCbU1/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.1.0_159500875_33_%E5%AE%98%E6%B8%A0_a910c7f92281000b5f4966fda8f875db_shelled.apk",
+          "source": "TomyJan WW Android CN archive",
+          "source_url": "https://github.com/TomyJan/GenshinImpact-Client-Version/blob/main/WW/Android/Game/CN/20260204204522.json",
+          "updated_at": "2026-02-04T20:45:22+00:00",
+          "updated_at_source": "tomyjan_archive_filename",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1979279926,
+          "last_modified": "Tue, 27 Jan 2026 06:56:50 GMT",
+          "etag": "dfc78358744ed95766fd5b809ec62f63-38",
+          "md5": "ae6af3b2a325be656af964f3cd108199",
+          "crc64": "16374584829945636284",
+          "error": "",
+          "filename": "KR_BBS01-鸣潮_3.1.0_159500875_33_官渠_a910c7f92281000b5f4966fda8f875db_shelled.apk",
+          "captured_at": "2026-07-05T16:14:20.030241+00:00"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "3.0.2",
+          "channel": "kuro_bbs01",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20260107142941_iJxCs1X9UH11ysEV7a/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.0.2_158175629_33_%E5%AE%98%E6%B8%A0_797008d468a96d7ebf4e0f54262040a3_shelled.apk",
+          "source": "TomyJan WW Android CN archive",
+          "source_url": "https://github.com/TomyJan/GenshinImpact-Client-Version/blob/main/WW/Android/Game/CN/20260108043342.json",
+          "updated_at": "2026-01-08T04:33:42+00:00",
+          "updated_at_source": "tomyjan_archive_filename",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2010482827,
+          "last_modified": "Wed, 07 Jan 2026 06:29:47 GMT",
+          "etag": "f051528ed791c15a2235f51508477f44-39",
+          "md5": "31f64ed8bc1197fa3868e83e6a7ecc6a",
+          "crc64": "12568691266997859063",
+          "error": "",
+          "filename": "KR_BBS01-鸣潮_3.0.2_158175629_33_官渠_797008d468a96d7ebf4e0f54262040a3_shelled.apk",
+          "captured_at": "2026-07-05T16:14:20.030241+00:00"
         },
         {
           "game_id": "wuwa",
@@ -676,6 +816,26 @@
         },
         {
           "game_id": "wuwa",
+          "version": "2.8.1",
+          "channel": "kuro_bbs01",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20251203180038_hxX5WduqbdOw2mTXu6/KR_BBS01-%E9%B8%A3%E6%BD%AE_2.8.1_155009884_33_%E5%AE%98%E6%B8%A0_5dd428953dedb3a446e82a3fb9650ccb_shelled.apk",
+          "source": "TomyJan WW Android CN archive",
+          "source_url": "https://github.com/TomyJan/GenshinImpact-Client-Version/blob/main/WW/Android/Game/CN/20251207143304.json",
+          "updated_at": "2025-12-07T14:33:04+00:00",
+          "updated_at_source": "tomyjan_archive_filename",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2007615631,
+          "last_modified": "Wed, 03 Dec 2025 10:00:44 GMT",
+          "etag": "b819f83501786b7ae15683ab17cec347-39",
+          "md5": "2f91fb4d5227e18ffdc26d9d76f1f50a",
+          "crc64": "17109950491106438099",
+          "error": "",
+          "filename": "KR_BBS01-鸣潮_2.8.1_155009884_33_官渠_5dd428953dedb3a446e82a3fb9650ccb_shelled.apk",
+          "captured_at": "2026-07-05T16:14:20.030241+00:00"
+        },
+        {
+          "game_id": "wuwa",
           "version": "2.7.0",
           "channel": "官渠",
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20250928105540_sgxqWxKbrnRT8KgK16/%E9%B8%A3%E6%BD%AE_2.7.0_149269354_33_%E5%AE%98%E6%B8%A0_a8cc769870e6ffbad35575179e98b30d_shelled.apk",
@@ -692,6 +852,26 @@
           "captured_at": "2026-06-06T07:29:12.631982+00:00",
           "updated_at": "2025-09-28T02:55:45+00:00",
           "updated_at_source": "apk_last_modified"
+        },
+        {
+          "game_id": "wuwa",
+          "version": "2.6.1",
+          "channel": "kuro_bbs01",
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20250903110015_L5uNhWuDB2IbzQchD0/KR_BBS01-%E9%B8%A3%E6%BD%AE_2.6.1_147279506__%E5%AE%98%E6%B8%A0_ec5f05ed6982de0e45993f040d5e2924_shelled.apk",
+          "source": "TomyJan WW Android CN archive",
+          "source_url": "https://github.com/TomyJan/GenshinImpact-Client-Version/blob/main/WW/Android/Game/CN/20250904033234.json",
+          "updated_at": "2025-09-04T03:32:34+00:00",
+          "updated_at_source": "tomyjan_archive_filename",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2016008495,
+          "last_modified": "Wed, 03 Sep 2025 03:00:20 GMT",
+          "etag": "1214dcbb68f17f2f0af5644ad7301c06-39",
+          "md5": "9e136a90f3bd93b651be0cc73c273194",
+          "crc64": "6231587286691934906",
+          "error": "",
+          "filename": "KR_BBS01-鸣潮_2.6.1_147279506__官渠_ec5f05ed6982de0e45993f040d5e2924_shelled.apk",
+          "captured_at": "2026-07-05T16:14:20.030241+00:00"
         },
         {
           "game_id": "wuwa",
@@ -1118,6 +1298,51 @@
           "urls": "data/android/lists/wuwa_0.7.0_android.urls.txt",
           "aria2": "data/android/lists/wuwa_0.7.0_android.aria2.txt",
           "json": "data/android/lists/wuwa_0.7.0_android.json"
+        },
+        "2.6.1": {
+          "urls": "data/android/lists/wuwa_2.6.1_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_2.6.1_android.aria2.txt",
+          "json": "data/android/lists/wuwa_2.6.1_android.json"
+        },
+        "2.8.1": {
+          "urls": "data/android/lists/wuwa_2.8.1_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_2.8.1_android.aria2.txt",
+          "json": "data/android/lists/wuwa_2.8.1_android.json"
+        },
+        "3.0.2": {
+          "urls": "data/android/lists/wuwa_3.0.2_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.0.2_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.0.2_android.json"
+        },
+        "3.1.0": {
+          "urls": "data/android/lists/wuwa_3.1.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.1.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.1.0_android.json"
+        },
+        "3.1.2": {
+          "urls": "data/android/lists/wuwa_3.1.2_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.1.2_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.1.2_android.json"
+        },
+        "3.2.2": {
+          "urls": "data/android/lists/wuwa_3.2.2_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.2.2_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.2.2_android.json"
+        },
+        "3.3.0": {
+          "urls": "data/android/lists/wuwa_3.3.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.3.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.3.0_android.json"
+        },
+        "3.3.1": {
+          "urls": "data/android/lists/wuwa_3.3.1_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.3.1_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.3.1_android.json"
+        },
+        "3.4.0": {
+          "urls": "data/android/lists/wuwa_3.4.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.4.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.4.0_android.json"
         }
       }
     },

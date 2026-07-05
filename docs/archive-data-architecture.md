@@ -287,7 +287,7 @@ docs/data/android/
     ...
 ```
 
-The current Android archive covers `15` games and `210` records.
+The current Android archive covers `15` games and `219` records.
 
 Important script:
 
@@ -299,6 +299,8 @@ Important architecture points:
 - Per-version download helper lists are separated.
 - The sync combines manual seeds, official latest endpoints, redirect
   discovery, JSON endpoint discovery, and webpage scraping.
+- WuWa Android also includes selected TomyJan `WW/Android/Game/CN` archive
+  seeds for missing version buckets.
 - Existing records are re-probed and preserved even when old URLs expire.
 
 Current status:
