@@ -17,6 +17,7 @@ const state = {
   arknightsIndex: null,
   arknightsVersions: null,
   androidIndex: null,
+  hoyoLegacyCandidates: {},
   wuwaEntries: new Map(),
   wuwaFilePath: "",
   wuwaExpandedFile: "",
@@ -41,7 +42,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260705-version-restore";
+const ASSET_VERSION = "20260705-hoyo-legacy-candidates";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -49,6 +50,16 @@ const cacheBusted = (url) => {
 };
 
 const fetchJson = (url) => fetch(cacheBusted(url)).then((response) => response.json());
+
+const fetchOptionalJson = async (url) => {
+  try {
+    const response = await fetch(cacheBusted(url));
+    if (!response.ok) return null;
+    return response.json();
+  } catch {
+    return null;
+  }
+};
 
 const loadSavedView = () => {
   try {
@@ -152,6 +163,8 @@ const hoyoModes = [
   ["chunk", "Chunk 信息"],
   ["compare", "版本对比"],
 ];
+
+const hoyoLegacyMode = ["legacy", "候选线索"];
 
 const endfieldModes = [
   ["packages", "完整包"],
@@ -262,14 +275,17 @@ const newerDateValue = (current, candidate) => {
 };
 
 const compareVersions = (left, right) => {
+  if (left === right) return 0;
   const leftParts = left.split(".").map(Number);
   const rightParts = right.split(".").map(Number);
   const length = Math.max(leftParts.length, rightParts.length);
   for (let index = 0; index < length; index += 1) {
-    const diff = (leftParts[index] || 0) - (rightParts[index] || 0);
+    const leftPart = Number.isFinite(leftParts[index]) ? leftParts[index] : -1;
+    const rightPart = Number.isFinite(rightParts[index]) ? rightParts[index] : -1;
+    const diff = leftPart - rightPart;
     if (diff !== 0) return diff;
   }
-  return 0;
+  return String(left).localeCompare(String(right));
 };
 
 const escapeHtml = (value) =>
@@ -387,11 +403,26 @@ const androidSummaries = () => {
   return [...byVersion.values()];
 };
 const hasAndroidApks = () => androidSummaries().length > 0;
+const hoyoLegacyPayload = () => state.hoyoLegacyCandidates?.[state.gameId] || null;
+const hoyoLegacyRecords = () => hoyoLegacyPayload()?.records || [];
+const hasHoyoLegacyCandidates = () => currentGame().kind === "hoyo" && hoyoLegacyRecords().length > 0;
+const hoyoLegacySummaries = () => {
+  const records = hoyoLegacyRecords();
+  if (!records.length) return [];
+  return [{
+    version: "legacy",
+    label: "候选线索",
+    records_count: records.length,
+    generated_at_from_path: records.map((record) => record.generated_at_from_path).filter(Boolean).sort()[0] || "",
+    unavailable_count: records.filter((record) => Number(record.current?.status_code || 0) >= 400).length,
+  }];
+};
 const modesForGame = () => {
   const modes = isAndroidOnly()
     ? []
     : isNte() ? nteModes : isEndfield() ? endfieldModes : isWuwa() ? wuwaModes : isArknights() ? arknightsModes : hoyoModes;
-  return hasAndroidApks() ? [...modes, androidMode] : modes;
+  const withLegacy = hasHoyoLegacyCandidates() ? [...modes, hoyoLegacyMode] : modes;
+  return hasAndroidApks() ? [...withLegacy, androidMode] : withLegacy;
 };
 
 const nteVersions = () => state.nteCatalog.versions.filter((item) => item.status === 200 && item.full);
@@ -503,6 +534,7 @@ const versionAvailabilityCap = (item) => {
 
 const availableSummaries = () => {
   if (state.mode === "android") return androidSummaries();
+  if (state.mode === "legacy") return hoyoLegacySummaries();
   if (isNte()) return nteVersions();
   if (isEndfield()) return endfieldSummaries();
   if (isWuwa()) return wuwaSummaries();
@@ -590,6 +622,7 @@ const defaultCompareVersion = () => {
 };
 
 const versionFamily = (version) => {
+  if (version === "legacy") return "候选线索";
   const parts = version.split(".");
   return isNte() || isEndfield() ? parts.slice(0, 2).join(".") : `${parts[0]}.x`;
 };
@@ -597,6 +630,9 @@ const versionFamily = (version) => {
 const commandFor = () => {
   if (state.mode === "compare") {
     return "版本对比模式不需要下载命令";
+  }
+  if (state.mode === "legacy") {
+    return "候选线索模式不生成 aria2 列表；请在卡片中逐条复制或打开原始官方 CDN URL";
   }
   if (state.mode === "android") {
     const links = androidGame()?.links?.[state.version];
@@ -914,14 +950,16 @@ const renderVersionMenu = () => {
   $("#versionMenu").innerHTML = [...groups.entries()]
     .map(([family, items]) => {
       const collapsed = isVersionGroupCollapsed(family);
+      const titleSuffix = state.mode === "legacy" ? "" : isNte() || isEndfield() ? "大版本" : "版本";
+      const countLabel = state.mode === "legacy" ? `${items[0]?.records_count || items.length} 条线索` : `${items.length} 个可用版本`;
       return `
       <div class="version-group ${collapsed ? "collapsed" : ""}">
         <button class="version-group-head" type="button" data-family="${family}" aria-expanded="${!collapsed}" title="${collapsed ? "展开" : "收纳"} ${family} 版本">
           <span class="group-title">
             <span class="group-chevron" aria-hidden="true"></span>
-            <strong>${family} ${isNte() || isEndfield() ? "大版本" : "版本"}</strong>
+            <strong>${escapeHtml(`${family}${titleSuffix ? ` ${titleSuffix}` : ""}`)}</strong>
           </span>
-          <span class="group-meta">${items.length} 个可用版本</span>
+          <span class="group-meta">${escapeHtml(countLabel)}</span>
         </button>
         <div class="version-group-body" ${collapsed ? "hidden" : ""}>
           ${items.map((item) => versionButton(item)).join("")}
@@ -962,6 +1000,19 @@ const renderVersionMenu = () => {
 };
 
 const versionButton = (item) => {
+  if (state.mode === "legacy") {
+    return `
+      <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
+        <span class="version-number">${escapeHtml(item.label || item.version)}</span>
+        <span class="caps">
+          <span class="cap amber">${Number(item.records_count || 0).toLocaleString()} 条</span>
+          <span class="cap slate">${fmtDateTime(item.generated_at_from_path)}</span>
+          <span class="cap red">${Number(item.unavailable_count || 0).toLocaleString()} 个 404</span>
+          <span class="cap violet">未确认版本</span>
+        </span>
+      </button>
+    `;
+  }
   const family = item.version.split(".").slice(0, 2).join(".");
   const isBase = item.version === `${family}.0`;
   if (state.mode === "android") {
@@ -1048,7 +1099,9 @@ const versionButton = (item) => {
 };
 
 const renderStats = () => {
-  const stats = state.mode === "android"
+  const stats = state.mode === "legacy"
+    ? hoyoLegacyStats()
+    : state.mode === "android"
     ? androidStats()
     : isNte() ? nteStats() : isEndfield() ? endfieldStats() : isWuwa() ? wuwaStats() : isArknights() ? arknightsStats() : hoyoStats();
   $("#stats").innerHTML = stats.map(([label, value]) => `<div class="stat"><span>${label}</span><strong>${value}</strong></div>`).join("");
@@ -1170,6 +1223,22 @@ const hoyoStats = () => {
   return stats;
 };
 
+const hoyoLegacyStats = () => {
+  const payload = hoyoLegacyPayload();
+  const records = hoyoLegacyRecords();
+  const firstGenerated = records.map((record) => record.generated_at_from_path).filter(Boolean).sort()[0] || "";
+  const platforms = [...new Set(records.map((record) => record.platform).filter(Boolean))];
+  const unavailable = records.filter((record) => Number(record.current?.status_code || 0) >= 400).length;
+  return [
+    ["当前视图", "候选线索"],
+    ["来源游戏", payload?.game_name || currentGame().name],
+    ["候选资源", `${records.length.toLocaleString()} 条`],
+    ["平台", platforms.join(" / ") || "-"],
+    ["路径时间", fmtDateTime(firstGenerated)],
+    ["当前状态", unavailable ? `${unavailable} 个 404` : "待确认"],
+  ];
+};
+
 const wuwaStats = () => {
   const summary = wuwaSummaries().find((item) => item.version === state.version);
   const stats = [
@@ -1209,6 +1278,16 @@ const renderLinks = () => {
     $("#urlsLink").href = "#";
     $("#aria2Link").href = "#";
     $("#jsonLink").href = "#";
+    return;
+  }
+
+  if (state.mode === "legacy") {
+    $("#urlsLink").classList.add("disabled");
+    $("#aria2Link").classList.add("disabled");
+    $("#jsonLink").classList.remove("disabled");
+    $("#urlsLink").href = "#";
+    $("#aria2Link").href = "#";
+    $("#jsonLink").href = `data/hoyo/${state.gameId}_legacy_candidates.json`;
     return;
   }
 
@@ -1276,13 +1355,15 @@ const renderLinks = () => {
 
 const renderPanelTitle = () => {
   const modeLabel = modesForGame().find(([id]) => id === state.mode)?.[1] || "文件列表";
-  $("#selectedVersion").textContent = state.version || "-";
+  const displayVersion = state.mode === "legacy" ? "候选线索" : state.version || "-";
+  $("#selectedVersion").textContent = displayVersion;
   $("#copyCommandBtn").innerHTML = `${icons.copy}<span>复制下载命令</span>`;
   $("#commandText").textContent = commandFor();
   $("#panelKicker").textContent = state.mode === "android"
     ? "Android APK"
+    : state.mode === "legacy" ? "Historical candidates"
     : isNte() ? "NTE files" : isEndfield() ? "Endfield files" : isWuwa() ? "Wuwa files" : isArknights() ? "Arknights packages" : "Hoyo files";
-  $("#panelTitle").textContent = `${state.version} ${modeLabel}`;
+  $("#panelTitle").textContent = state.mode === "legacy" ? displayVersion : `${displayVersion} ${modeLabel}`;
 };
 
 const loadNteEntries = async (version = state.version, mode = state.mode) => {
@@ -1480,6 +1561,26 @@ const hoyoDirectItem = (item, badge, sublabel = "") => ({
   size: item.size,
   hash: item.checksum,
   url: item.url,
+});
+
+const hoyoLegacyItems = () => hoyoLegacyRecords().map((record) => {
+  const currentStatus = record.current?.status_code ? `当前 HTTP ${record.current.status_code}` : "当前状态未知";
+  const archiveStatus = record.archive?.status_code ? `CDX ${record.archive.status_code}` : "CDX 未确认";
+  return {
+    badge: `${record.platform || "未知平台"} 候选`,
+    title: record.filename || record.url,
+    subtitle: record.url,
+    sizeLabel: `${currentStatus} / ${archiveStatus}`,
+    hash: record.archive?.digest || "",
+    url: record.url,
+    extraLinks: record.archive?.timestamp
+      ? [{
+        url: `https://web.archive.org/web/${record.archive.timestamp}/${record.url}`,
+        label: "CDX 快照",
+      }]
+      : [],
+    count: fmtDateTime(record.generated_at_from_path),
+  };
 });
 
 const endfieldPackageItems = () => {
@@ -2639,6 +2740,16 @@ const renderList = async () => {
     return;
   }
 
+  if (state.mode === "legacy") {
+    const entries = hoyoLegacyItems();
+    const filtered = filterEntries(entries);
+    $("#fileList").innerHTML = filtered
+      .map((entry, index) => fileCard({ ...entry, count: entry.count || `${index + 1}/${filtered.length}` }))
+      .join("") || `<div class="empty">当前游戏没有候选线索</div>`;
+    bindCardActions();
+    return;
+  }
+
   if (isNte()) {
     if (state.mode === "reslist") {
       renderNteResList();
@@ -2715,6 +2826,11 @@ const filterEntries = (entries) => {
 };
 
 const ensureGameData = async (preferredVersion = null) => {
+  if (state.mode === "legacy") {
+    const versions = hoyoLegacySummaries();
+    state.version = selectVersionForContext(versions, preferredVersion);
+    return;
+  }
   if (state.mode === "android") {
     const versions = androidSummaries().slice().sort((a, b) => compareVersions(b.version, a.version));
     state.version = selectVersionForContext(versions, preferredVersion);
@@ -2751,7 +2867,18 @@ const ensureGameData = async (preferredVersion = null) => {
 
 const renderNotice = () => {
   const notice = $("#notes");
-  if (state.mode === "android") {
+  if (state.mode === "legacy") {
+    notice.innerHTML = `
+      <div class="notice-copy">
+        <strong>未确认候选线索</strong>
+        <span>这里保存用户发现的官方 CDN 历史路径。它们不计入正式版本列表，也不代表当前可下载；页面保留路径时间、当前探测状态与 CDX 证据，方便后续版本考古。</span>
+      </div>
+      <div class="source-links">
+        <a class="source-link" href="data/hoyo/${state.gameId}_legacy_candidates.json" target="_blank" rel="noreferrer">候选 JSON</a>
+        <a class="source-link" href="${REPOSITORY_URL}" target="_blank" rel="noreferrer">本站仓库</a>
+      </div>
+    `;
+  } else if (state.mode === "android") {
     const androidNotice = isEndfield()
       ? "页面保存已确认的官方 Android APK 下载入口；终末地使用官方 launcher latest 入口，同时留档同步时解析到的 Hycdn 临时签名目标。签名目标可能过期，但仍保留历史记录价值。该列表从当前可确认版本开始滚动保存，不代表完整历史。"
       : "页面保存已确认的官方 Android APK CDN URL；同步任务会解析支持的官方最新下载入口，发现新 APK 后记录大小、Last-Modified、ETag 与可用状态。该列表从当前可确认版本开始滚动保存，不代表完整历史。";
@@ -2863,7 +2990,8 @@ Promise.all([
   fetchJson("./data/arknights/index.json"),
   fetchJson("./data/arknights/versions.json"),
   fetchJson("./data/android/index.json"),
-]).then(async ([nteCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, wuwaVersions, arknightsIndex, arknightsVersions, androidIndex]) => {
+  fetchOptionalJson("./data/hoyo/nap_legacy_candidates.json"),
+]).then(async ([nteCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, wuwaVersions, arknightsIndex, arknightsVersions, androidIndex, napLegacyCandidates]) => {
   state.nteCatalog = nteCatalog;
   state.hoyoIndex = hoyoIndex;
   state.endfieldIndex = endfieldIndex;
@@ -2873,6 +3001,9 @@ Promise.all([
   state.arknightsIndex = arknightsIndex;
   state.arknightsVersions = arknightsVersions;
   state.androidIndex = androidIndex;
+  state.hoyoLegacyCandidates = napLegacyCandidates?.game_id
+    ? { [napLegacyCandidates.game_id]: napLegacyCandidates }
+    : {};
   const savedView = loadSavedView();
   if (allGames().some((game) => game.id === savedView.gameId)) {
     state.gameId = savedView.gameId;
