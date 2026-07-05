@@ -1,0 +1,18 @@
+WuWa split validation
+source=\\10.0.0.240\Server\Projects\Active\game-cdn-archive\docs\data\wuwa\versions.json
+index=\\10.0.0.240\Server\Projects\Active\game-cdn-archive\docs\data\wuwa\index.json
+shard_dir=\\10.0.0.240\Server\Projects\Active\game-cdn-archive\docs\data\wuwa\versions
+aggregate_versions=10
+index_versions=10
+version_set_match=PASS
+all_shards_present=PASS
+canonical_reconstruction=PASS
+file_counts=PASS
+patch_counts=PASS
+sample_versions=3.4.1,2.3.1,1.0.0
+sample_field_diff[3.4.1]=PASS
+sample_field_diff[2.3.1]=PASS
+sample_field_diff[1.0.0]=PASS
+aggregate_total_files=6139
+shard_total_files=6139
+result=PASS
