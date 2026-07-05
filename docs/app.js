@@ -3,6 +3,7 @@ const state = {
   mode: "full",
   version: null,
   manualVersions: {},
+  latestVersions: {},
   compareVersion: null,
   diffFilter: "all",
   query: "",
@@ -39,7 +40,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260608-wuwa-preload";
+const ASSET_VERSION = "20260705-version-restore";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -62,13 +63,33 @@ const saveView = () => {
       gameId: state.gameId,
       mode: state.mode,
       manualVersions: state.manualVersions,
+      latestVersions: state.latestVersions,
     }));
   } catch {
     // The page still works when storage is blocked or unavailable.
   }
 };
 
-const preferredVersionForGame = (gameId = state.gameId) => state.manualVersions?.[gameId] || null;
+const versionContextKey = (gameId = state.gameId, mode = state.mode) => `${gameId}:${mode}`;
+
+const preferredVersionForContext = (gameId = state.gameId, mode = state.mode) =>
+  state.manualVersions?.[versionContextKey(gameId, mode)] || state.manualVersions?.[gameId] || null;
+
+const rememberVersionSelection = (version = state.version) => {
+  if (!version) return;
+  state.manualVersions[versionContextKey()] = version;
+};
+
+const selectVersionForContext = (versions, preferredVersion = null) => {
+  const latest = versions[0]?.version || null;
+  if (!latest) return null;
+  const key = versionContextKey();
+  const lastSeenLatest = state.latestVersions?.[key] || null;
+  const hasNewLatest = lastSeenLatest && compareVersions(latest, lastSeenLatest) > 0;
+  const preferredAvailable = versions.some((item) => item.version === preferredVersion);
+  state.latestVersions[key] = latest;
+  return hasNewLatest ? latest : preferredAvailable ? preferredVersion : latest;
+};
 
 const icons = {
   box: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 8-9-5-9 5 9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>',
@@ -821,7 +842,7 @@ const renderGameRail = () => {
       state.wuwaFilePath = "";
       state.wuwaExpandedFile = "";
       $("#fileSearch").value = "";
-      await ensureGameData(preferredVersionForGame(state.gameId));
+      await ensureGameData(preferredVersionForContext(state.gameId, state.mode));
       state.compareVersion = null;
       state.diffFilter = "all";
       render();
@@ -855,7 +876,7 @@ const renderModes = () => {
       state.nteExpandedFile = "";
       state.wuwaFilePath = "";
       state.wuwaExpandedFile = "";
-      await ensureGameData(state.version);
+      await ensureGameData(preferredVersionForContext(state.gameId, state.mode));
       $$(".mode-tab").forEach((item) => item.classList.toggle("active", item === button));
       render();
     });
@@ -887,7 +908,7 @@ const renderVersionMenu = () => {
   $$(".version-row").forEach((button) => {
     button.addEventListener("click", () => {
       state.version = button.dataset.version;
-      state.manualVersions[state.gameId] = state.version;
+      rememberVersionSelection();
       state.compareVersion = null;
       state.diffFilter = "all";
       state.hoyoFileVisible = HOYO_FILE_PAGE_SIZE;
@@ -2650,27 +2671,27 @@ const filterEntries = (entries) => {
 const ensureGameData = async (preferredVersion = null) => {
   if (state.mode === "android") {
     const versions = androidSummaries().slice().sort((a, b) => compareVersions(b.version, a.version));
-    state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
+    state.version = selectVersionForContext(versions, preferredVersion);
     return;
   }
   if (isNte()) {
     const versions = nteVersions().sort((a, b) => compareVersions(b.version, a.version));
-    state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
+    state.version = selectVersionForContext(versions, preferredVersion);
     return;
   }
   if (isEndfield()) {
     const versions = endfieldSummaries().sort((a, b) => compareVersions(b.version, a.version));
-    state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
+    state.version = selectVersionForContext(versions, preferredVersion);
     return;
   }
   if (isWuwa()) {
     const versions = wuwaSummaries().sort((a, b) => compareVersions(b.version, a.version));
-    state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
+    state.version = selectVersionForContext(versions, preferredVersion);
     return;
   }
   if (isArknights()) {
     const versions = arknightsSummaries().sort((a, b) => compareVersions(b.version, a.version));
-    state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
+    state.version = selectVersionForContext(versions, preferredVersion);
     return;
   }
   if (!state.hoyoVersions.has(state.gameId)) {
@@ -2679,7 +2700,7 @@ const ensureGameData = async (preferredVersion = null) => {
   const versions = hoyoSummaries()
     .filter((item) => item.package_items || item.update_items || item.has_chunk)
     .sort((a, b) => compareVersions(b.version, a.version));
-  state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
+  state.version = selectVersionForContext(versions, preferredVersion);
 };
 
 const renderNotice = () => {
@@ -2813,10 +2834,13 @@ Promise.all([
   state.manualVersions = savedView.manualVersions && typeof savedView.manualVersions === "object"
     ? savedView.manualVersions
     : {};
+  state.latestVersions = savedView.latestVersions && typeof savedView.latestVersions === "object"
+    ? savedView.latestVersions
+    : {};
   state.mode = modesForGame().some(([mode]) => mode === savedView.mode)
     ? savedView.mode
     : modesForGame()[0][0];
   bindStaticActions();
-  await ensureGameData(preferredVersionForGame(state.gameId));
+  await ensureGameData(preferredVersionForContext(state.gameId, state.mode));
   render();
 });
