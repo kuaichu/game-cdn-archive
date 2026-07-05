@@ -1033,6 +1033,17 @@
       "domain": "autopatchcn.juequling.com",
       "versions": [
         {
+          "version": "0.2.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 0,
+          "has_chunk": false,
+          "has_decompressed_path": false,
+          "last_modified_status": 404,
+          "last_modified_url": "https://autopatchcn.juequling.com/download/windows/0.2.0/j0fGHf10yF5n/JueQuLing(Beta).zip",
+          "last_modified_source": "pc_package"
+        },
+        {
           "version": "1.0.0",
           "package_items": 10,
           "update_items": 0,
@@ -1249,10 +1260,10 @@
           "last_modified_source": "pc_package"
         }
       ],
-      "version_count": 18,
-      "first_version": "1.0.0",
+      "version_count": 19,
+      "first_version": "0.2.0",
       "latest_version": "3.0.0",
-      "direct_items": 248,
+      "direct_items": 249,
       "update_items": 165,
       "chunk_versions": 16,
       "direct_bytes": 1890230150381,

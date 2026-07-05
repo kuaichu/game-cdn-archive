@@ -52,6 +52,30 @@ GAMES = [
 
 
 MANUAL_HOYO_VERSION_PATCHES: dict[str, dict[str, dict[str, Any]]] = {
+    "nap": {
+        "0.2.0": {
+            "game": {
+                "full": {
+                    "name": "JueQuLing(Beta).zip",
+                    "url": "https://autopatchcn.juequling.com/download/windows/0.2.0/j0fGHf10yF5n/JueQuLing(Beta).zip",
+                    "checksum": "",
+                    "size": 0,
+                    "source": "User-provided historical beta URL; original URL now returns 404",
+                    "archive": {
+                        "original": "https://autopatchcn.juequling.com/download/windows/0.2.0/j0fGHf10yF5n/JueQuLing(Beta).zip%0A",
+                        "timestamp": "20240703060935",
+                        "status": 404,
+                        "length": 689,
+                        "digest": "ATFH4E36D2P65LMWU7PULO3H2WVT3YMQ",
+                        "mimetype": "text/html",
+                    },
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        }
+    },
     "bh3": {
         "3.7.0": {
             "game": {
