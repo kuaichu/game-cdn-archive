@@ -10,6 +10,9 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit, urlunsplit
 
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DOCS_ROOT = REPO_ROOT / "docs"
+DEFAULT_OUTPUT = REPO_ROOT / "docs" / "data" / "endfield"
 SOURCE_REPO = "https://github.com/daydreamer-json/ak-endfield-api-archive"
 SOURCE_SITE = "https://ak-endfield-api-archive.daydreamer-json.cc/"
 OFFICIAL_API = (
@@ -77,15 +80,26 @@ def write_download_lists(
             aria2_lines.append(f"  checksum=md5={item['md5']}")
         aria2_lines.append("")
     aria2_path.write_text("\n".join(aria2_lines), encoding="utf-8")
-    prefix = "data/endfield/lists"
+    prefix = data_prefix(lists_dir)
     return {
-        "urls": f"{prefix}/{urls_path.name}",
-        "aria2": f"{prefix}/{aria2_path.name}",
+        "urls": f"{prefix}{urls_path.name}",
+        "aria2": f"{prefix}{aria2_path.name}",
     }
+
+
+def data_prefix(path: Path) -> str:
+    path = path.resolve()
+    try:
+        relative = path.relative_to(DOCS_ROOT)
+    except ValueError as exc:
+        raise ValueError(f"{path} must be inside {DOCS_ROOT}") from exc
+    return relative.as_posix().rstrip("/") + "/"
 
 
 def merge_manual_versions(output_dir: Path, versions: dict, summaries: list[dict]) -> tuple[dict, list[dict]]:
     manual_path = output_dir / "manual_versions.json"
+    if not manual_path.exists() and output_dir.resolve() != DEFAULT_OUTPUT.resolve():
+        manual_path = DEFAULT_OUTPUT / "manual_versions.json"
     if not manual_path.exists():
         return versions, summaries
 
@@ -142,7 +156,7 @@ def main() -> None:
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path(__file__).resolve().parents[1] / "docs" / "data" / "endfield",
+        default=DEFAULT_OUTPUT,
     )
     args = parser.parse_args()
 

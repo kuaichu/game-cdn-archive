@@ -305,6 +305,10 @@ jobs:
         if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'endfield'
         run: bash scripts/gha_run_step.sh "Refresh Endfield data" python scripts/import_endfield_archive.py /tmp/ak-endfield-api-archive
 
+      - name: Validate Endfield data
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'endfield'
+        run: bash scripts/gha_run_step.sh "Validate Endfield data" python scripts/validate_endfield_archive.py
+
       - name: Refresh Wuthering Waves data
         if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'wuwa'
         env:
@@ -373,7 +377,7 @@ jobs:
             fi
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add README.md docs/data docs/app.js docs/index.html scripts/update_nte_static.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py scripts/sync_wuwa.py scripts/sync_arknights_pc.py scripts/validate_arknights_pc.py scripts/sync_android_apks.py scripts/probe_url_status.py scripts/update_readme_summary.py
+            git add README.md docs/data docs/app.js docs/index.html scripts/update_nte_static.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py scripts/validate_endfield_archive.py scripts/sync_wuwa.py scripts/sync_arknights_pc.py scripts/validate_arknights_pc.py scripts/sync_android_apks.py scripts/probe_url_status.py scripts/update_readme_summary.py
             git commit -m "Auto update archive data"
             for attempt in 1 2 3; do
               if git push; then
