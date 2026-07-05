@@ -52,6 +52,8 @@ def summary_from_version(version: dict) -> dict:
         "source_repo",
         "source_commit",
         "imported_at",
+        "release_date",
+        "release_date_source",
         "last_modified",
         "last_modified_source",
         "last_modified_url",

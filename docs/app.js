@@ -253,6 +253,8 @@ const fmtDateTime = (value) => {
 
 const pcTimeLabel = (source) => source === "pc_package" || source === "pc_file" ? "文件时间" : "索引时间";
 
+const wuwaVersionDate = (summary) => summary?.release_date || summary?.last_modified || "";
+
 const fmtRelativeTime = (value) => {
   const date = parseDateValue(value);
   if (!date) return "-";
@@ -1063,11 +1065,12 @@ const versionButton = (item) => {
     `;
   }
   if (isWuwa()) {
+    const versionDate = wuwaVersionDate(item);
     return `
       <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
         <span class="version-number">${item.version}</span>
         <span class="caps">
-          ${item.last_modified ? `<span class="cap slate">${fmtDateTime(item.last_modified)}</span>` : ""}
+          ${versionDate ? `<span class="cap slate">${fmtDateTime(versionDate)}</span>` : ""}
           <span class="cap blue">${Number(item.file_count || 0).toLocaleString()} 个文件</span>
           <span class="cap green">${item.cdn_count || 0} CDN</span>
           ${item.patch_routes ? `<span class="cap amber">${item.patch_routes} 条更新路线</span>` : ""}
@@ -1245,6 +1248,7 @@ const hoyoLegacyStats = () => {
 
 const wuwaStats = () => {
   const summary = wuwaSummaries().find((item) => item.version === state.version);
+  const versionDate = wuwaVersionDate(summary);
   const stats = [
     ["当前版本", state.version],
     ["区服", `${summary?.region?.toUpperCase() || "-"} ${summary?.channel || "-"}`],
@@ -1252,8 +1256,11 @@ const wuwaStats = () => {
     ["总大小", fmtBytes(summary?.size || 0)],
     ["CDN", `${summary?.cdn_count || 0} 个 / 更新路线 ${summary?.patch_routes || 0} 条`],
   ];
-  if (summary?.last_modified) {
-    stats.splice(2, 0, [pcTimeLabel(summary.last_modified_source), fmtDateTime(summary.last_modified)]);
+  if (versionDate) {
+    const label = summary?.release_date_source === "tomyjan_git_first_added"
+      ? "归档时间"
+      : pcTimeLabel(summary?.last_modified_source);
+    stats.splice(2, 0, [label, fmtDateTime(versionDate)]);
   }
   return stats;
 };

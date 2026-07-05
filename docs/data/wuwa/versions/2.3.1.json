@@ -7948,5 +7948,8 @@
   "last_modified_source": "resource_index",
   "last_modified_status": 200,
   "last_modified": "Fri, 16 May 2025 08:30:32 GMT",
-  "source": "self-collected"
+  "source": "self-collected",
+  "release_date": "Fri, 16 May 2025 08:30:32 GMT",
+  "release_date_source": "resource_index_last_modified",
+  "release_date_note": "Derived from the HTTP Last-Modified header of the official WuWa CDN resource."
 }

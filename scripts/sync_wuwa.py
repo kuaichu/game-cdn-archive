@@ -168,10 +168,18 @@ def apply_last_modified(version: dict, summary: dict) -> None:
             version["last_modified_status"] = metadata["status"]
         if metadata.get("last_modified"):
             version["last_modified"] = metadata["last_modified"]
+            version.setdefault("release_date", metadata["last_modified"])
+            version.setdefault("release_date_source", f"{source}_last_modified")
+            version.setdefault(
+                "release_date_note",
+                "Derived from the HTTP Last-Modified header of the official WuWa CDN resource.",
+            )
             summary["last_modified"] = metadata["last_modified"]
             summary["last_modified_source"] = source
             summary["last_modified_url"] = url
             summary["last_modified_status"] = metadata.get("status")
+            summary.setdefault("release_date", version["release_date"])
+            summary.setdefault("release_date_source", version["release_date_source"])
             return
 
 
@@ -239,7 +247,16 @@ def summary_from_version(version: dict) -> dict:
         "size": int(version.get("size") or 0),
         "uncompressed_size": int(version.get("uncompressed_size") or 0),
     }
-    for key in ["source", "source_note", "release_stage", "source_repo", "source_commit", "imported_at"]:
+    for key in [
+        "source",
+        "source_note",
+        "release_stage",
+        "source_repo",
+        "source_commit",
+        "imported_at",
+        "release_date",
+        "release_date_source",
+    ]:
         if version.get(key):
             summary[key] = version[key]
     for key in ["last_modified", "last_modified_source", "last_modified_url", "last_modified_status"]:
