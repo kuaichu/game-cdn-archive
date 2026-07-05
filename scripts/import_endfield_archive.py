@@ -72,20 +72,68 @@ def write_download_lists(
     )
     aria2_lines = []
     for item in items:
-        aria2_lines.extend(
-            [
-                item["preferred_url"],
-                f"  out={item['name']}",
-                f"  checksum=md5={item['md5']}",
-                "",
-            ]
-        )
+        aria2_lines.extend([item["preferred_url"], f"  out={item['name']}"])
+        if item.get("md5"):
+            aria2_lines.append(f"  checksum=md5={item['md5']}")
+        aria2_lines.append("")
     aria2_path.write_text("\n".join(aria2_lines), encoding="utf-8")
     prefix = "data/endfield/lists"
     return {
         "urls": f"{prefix}/{urls_path.name}",
         "aria2": f"{prefix}/{aria2_path.name}",
     }
+
+
+def merge_manual_versions(output_dir: Path, versions: dict, summaries: list[dict]) -> tuple[dict, list[dict]]:
+    manual_path = output_dir / "manual_versions.json"
+    if not manual_path.exists():
+        return versions, summaries
+
+    manual_versions = load_json(manual_path)
+    for version, row in manual_versions.items():
+        packages = row.get("packages") or []
+        for item in packages:
+            item.setdefault("official_available", True)
+            item.setdefault("mirror_url", None)
+            item.setdefault("preferred_url", item.get("official_url") or item.get("url") or "")
+            item.setdefault("md5", "")
+            item.setdefault("size", 0)
+
+        patches = row.get("patches") or []
+        flat_patch_parts = []
+        for route in patches:
+            flat_patch_parts.extend(route.get("parts") or [])
+
+        row["version"] = version
+        row["packed_size"] = int(row.get("packed_size") or sum(int(item.get("size") or 0) for item in packages))
+        row["unpacked_size"] = int(row.get("unpacked_size") or 0)
+        row["links"] = {
+            "packages": write_download_lists(output_dir, version, "packages", packages),
+            "patches": write_download_lists(output_dir, version, "patches", flat_patch_parts)
+            if flat_patch_parts
+            else None,
+        }
+        versions[version] = row
+
+        summaries = [item for item in summaries if item.get("version") != version]
+        summaries.append(
+            {
+                "version": version,
+                "released_at": row.get("released_at") or row.get("observed_at") or "",
+                "package_items": len(packages),
+                "patch_routes": len(patches),
+                "packed_size": row["packed_size"],
+                "unpacked_size": row["unpacked_size"],
+                "mirror_items": sum(bool(item.get("mirror_url")) for item in packages),
+            }
+        )
+
+    versions = {
+        version: versions[version]
+        for version in sorted(versions, key=version_key, reverse=True)
+    }
+    summaries = sorted(summaries, key=lambda item: version_key(item["version"]), reverse=True)
+    return versions, summaries
 
 
 def main() -> None:
@@ -196,6 +244,8 @@ def main() -> None:
                 "mirror_items": mirror_items,
             }
         )
+
+    versions, summaries = merge_manual_versions(output_dir, versions, summaries)
 
     latest_observation = max(
         [record["updatedAt"] for record in full_records + patch_records],
