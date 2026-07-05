@@ -327,7 +327,6 @@ jobs:
         run: bash scripts/gha_run_step.sh "Refresh Android APK data" python scripts/sync_android_apks.py
 
       - name: Probe archived URL health
-        if: env.SYNC_SCOPE == 'all'
         env:
           GHA_RUN_RETRIES: 2
           GHA_RUN_RETRY_DELAY: 20
