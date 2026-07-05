@@ -85,6 +85,11 @@ def infer_file_context(path: Path) -> dict[str, Any]:
     kind = source_kind(path)
     context: dict[str, Any] = {"source": kind, "file": data_path(path)}
     if kind == "hoyo":
+        parts = path.relative_to(DATA_DIR).parts
+        if len(parts) == 4 and parts[1] == "versions":
+            context["game_id"] = parts[2]
+            context["version"] = path.stem
+            return context
         match = re.fullmatch(r"(.+)_versions\.json", path.name)
         if match:
             context["game_id"] = match.group(1)

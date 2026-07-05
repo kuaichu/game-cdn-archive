@@ -132,7 +132,7 @@ docs/
     url_lists/              Per-version URL, aria2, and JSON indexes
     hoyo/
       games.json            Migrated HoyoFiles game/version summary
-      *_versions.json       Per-game package/update/chunk metadata
+      versions/             Per-game, per-version package/update metadata shards
       chunk/                Per-version Chunk manifest summaries
     endfield/
       index.json            Compact game/version summary

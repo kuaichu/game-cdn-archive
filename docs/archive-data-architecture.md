@@ -15,7 +15,7 @@ questions before future changes:
 | Endfield / 终末地 PC | Semi-split: compact `index.json`, aggregate `versions.json`, generated lists | Has validator and staging promotion tool | Validated, but version payload is still aggregate. |
 | Arknights / 明日方舟 PC | Semi-split: compact `index.json`, aggregate `versions.json`, generated lists | Has validator and staging promotion tool | Smallest pipeline; used as low-risk proof of the workflow. |
 | NTE / 异环 PC | Legacy/generated catalog plus per-version URL lists | No dedicated staging/promote validator yet | Existing downloader/reslist tools are separate from the new validator pattern. |
-| HoYo PC catalog | Aggregate per-game `*_versions.json`, plus chunk shards | No dedicated staging/promote validator yet | Chunk data is already separated, but package metadata remains aggregate. |
+| HoYo PC catalog | Split: compact `games.json`, per-version shards, plus chunk shards | Has structural split validator | Package/update metadata now follows the WuWa-style selected-version load path. |
 | Android APK archive | Aggregate `index.json`, per-version list files | No dedicated staging/promote validator yet | Covers many games in one data set; should be split by game/source before major changes. |
 | URL health index | Aggregate `url_status.json` | Probe script only | Cross-cutting health metadata, not a game archive source. |
 
@@ -43,7 +43,9 @@ The preferred direction is:
 compact index -> selected version metadata -> selected file/download list
 ```
 
-WuWa follows this most closely today.
+WuWa and HoYo follow this most closely today. HoYo reads
+`docs/data/hoyo/versions/{game}/{version}.json` only after a version is
+selected.
 
 ## WuWa PC
 
@@ -231,15 +233,24 @@ Current status:
 
 ## HoYo PC Catalog
 
-HoYo uses aggregate per-game metadata plus chunk shards.
+HoYo uses compact game summaries plus per-version metadata shards.
 
 ```text
 docs/data/hoyo/
   games.json
-  hk4e_versions.json
-  hkrpg_versions.json
-  nap_versions.json
-  bh3_versions.json
+  versions/
+    hk4e/
+      6.7.0.json
+      ...
+    hkrpg/
+      4.3.0.json
+      ...
+    nap/
+      3.0.0.json
+      ...
+    bh3/
+      8.9.0.json
+      ...
   chunk/
     hk4e_6.7.0.json
     hkrpg_4.3.0.json
@@ -258,20 +269,25 @@ Current version counts:
 Important script:
 
 - `scripts/sync_hoyofiles.py`
+- `scripts/validate_hoyo_split.py`
 
 Important architecture points:
 
 - `games.json` is the compact game/version summary.
-- Per-game `*_versions.json` files are aggregate payloads.
+- `versions/{game}/{version}.json` is the full per-version package/update
+  metadata record.
 - Chunk metadata is already separated into `chunk/{game}_{version}.json`.
 - The frontend can also query the HoyoFiles file-list API on demand.
+- The frontend loads selected version shards on demand instead of reading a
+  full per-game aggregate payload.
 
 Current status:
 
-- Partly separated due to chunk shards.
-- No structural validator/promote pipeline yet.
-- Future work should be per game, not all HoYo games at once.
-- A safe first target would be one game, one validator, no format migration.
+- Split into compact summaries, version shards, and chunk shards.
+- Has a structural split validator.
+- Does not yet have staging/promote tooling.
+- Future sync changes should still be staged or diff-inspected before
+  promotion because the source API can change.
 
 ## Android APK Archive
 
@@ -301,6 +317,9 @@ Important architecture points:
   discovery, JSON endpoint discovery, and webpage scraping.
 - WuWa Android also includes selected TomyJan `WW/Android/Game/CN` archive
   seeds for missing version buckets.
+- WuWa Android covers the currently known major version lines. Some PC patch
+  versions do not have matching APK records in TomyJan's Android archive, and
+  that is acceptable unless a specific APK URL is later found.
 - Existing records are re-probed and preserved even when old URLs expire.
 
 Current status:
@@ -346,6 +365,7 @@ Minimum checks after any frontend or data-shape change:
 ```bash
 node --check docs/app.js
 python scripts/validate_wuwa_split.py
+python scripts/validate_hoyo_split.py
 python scripts/validate_endfield_archive.py
 python scripts/validate_arknights_pc.py
 ```

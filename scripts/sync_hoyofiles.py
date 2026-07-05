@@ -17,6 +17,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 HOYO_DATA = ROOT / "docs" / "data" / "hoyo"
 CHUNK_DATA = HOYO_DATA / "chunk"
+VERSION_SHARD_DATA = HOYO_DATA / "versions"
 GAMES_PATH = HOYO_DATA / "games.json"
 
 API_BASE = "https://autopatch.amarea.cn/pkg_version"
@@ -663,6 +664,23 @@ def write_json_if_changed(path: Path, data: Any, indent: int = 2) -> bool:
     return True
 
 
+def write_version_shards(game_id: str, versions: dict[str, Any]) -> None:
+    shard_dir = VERSION_SHARD_DATA / game_id
+    shard_dir.mkdir(parents=True, exist_ok=True)
+    legacy_path = HOYO_DATA / f"{game_id}_versions.json"
+    if legacy_path.exists():
+        legacy_path.unlink()
+    expected = set()
+    for version, row in versions.items():
+        expected.add(f"{version}.json")
+        payload = {"version": version, **row} if isinstance(row, dict) else {"version": version, "payload": row}
+        write_json_if_changed(shard_dir / f"{version}.json", payload)
+
+    for old_path in shard_dir.glob("*.json"):
+        if old_path.name not in expected:
+            old_path.unlink()
+
+
 def read_cached_json(path: Path) -> Any | None:
     try:
         return json.loads(path.read_text(encoding="utf-8"))
@@ -790,6 +808,7 @@ def version_stats(row: dict[str, Any]) -> dict[str, Any]:
         "direct_bytes": direct_bytes,
         "has_chunk": bool(row.get("chunk")),
         "has_decompressed_path": bool(row.get("decompressed_path")),
+        "unavailable_items": sum(1 for item in hoyo_download_items(row) if int(item.get("size") or 0) <= 0),
     }
 
 
@@ -828,6 +847,7 @@ def stable_compare_games(index: dict[str, Any]) -> dict[str, Any]:
 def main() -> None:
     HOYO_DATA.mkdir(parents=True, exist_ok=True)
     CHUNK_DATA.mkdir(parents=True, exist_ok=True)
+    VERSION_SHARD_DATA.mkdir(parents=True, exist_ok=True)
 
     previous = json.loads(GAMES_PATH.read_text(encoding="utf-8")) if GAMES_PATH.exists() else {}
     checked_at = datetime.now(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z")
@@ -848,7 +868,7 @@ def main() -> None:
             raise RuntimeError(f"unexpected version payload for {game_id}")
         merge_manual_version_patches(game_id, versions)
 
-        write_json_if_changed(HOYO_DATA / f"{game_id}_versions.json", versions, indent=4)
+        write_version_shards(game_id, versions)
 
         version_rows = []
         direct_items = 0

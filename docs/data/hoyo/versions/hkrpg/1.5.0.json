@@ -1,0 +1,56 @@
+{
+  "version": "1.5.0",
+  "game": {
+    "full": {
+      "name": "StarRail_1.5.0.zip",
+      "url": "https://autopatchcn.bhsr.com/client/cn/20231103101022_A4CvNRMprqjemK7k/PC/StarRail_1.5.0.zip",
+      "checksum": "2b5d401eebf9998cfda1bf04f933c2b1",
+      "size": 20484036990
+    }
+  },
+  "voice": {
+    "zh-cn": {
+      "name": "Chinese.zip",
+      "url": "https://autopatchcn.bhsr.com/client/cn/20231103101022_A4CvNRMprqjemK7k/PC/Chinese.zip",
+      "checksum": "5b9e8df354d5fce4f9c3d2e06c4f8756",
+      "size": 3239856873
+    },
+    "zh-tw": {
+      "name": "Chinese.zip",
+      "url": "https://autopatchcn.bhsr.com/client/cn/20231103101022_A4CvNRMprqjemK7k/PC/Chinese.zip",
+      "checksum": "5b9e8df354d5fce4f9c3d2e06c4f8756",
+      "size": 3239856873
+    },
+    "en-us": {
+      "name": "English.zip",
+      "url": "https://autopatchcn.bhsr.com/client/cn/20231103101022_A4CvNRMprqjemK7k/PC/English.zip",
+      "checksum": "cc57a7ec5e4fd553eea14a598792492b",
+      "size": 3841377915
+    },
+    "ja-jp": {
+      "name": "Japanese.zip",
+      "url": "https://autopatchcn.bhsr.com/client/cn/20231103101022_A4CvNRMprqjemK7k/PC/Japanese.zip",
+      "checksum": "5a3714636e54682c5b50d45959e53278",
+      "size": 3983096123
+    },
+    "ko-kr": {
+      "name": "Korean.zip",
+      "url": "https://autopatchcn.bhsr.com/client/cn/20231103101022_A4CvNRMprqjemK7k/PC/Korean.zip",
+      "checksum": "93cc9b33916bab709dc05490e4601e74",
+      "size": 3141309494
+    }
+  },
+  "update": {
+    "1.4.0": {
+      "game": {
+        "name": "game_1.4.0_1.5.0_hdiff_TnhRMscqGdQuNyDU.zip",
+        "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_1.4.0_1.5.0_hdiff_TnhRMscqGdQuNyDU.zip",
+        "checksum": "",
+        "size": 8744071329
+      },
+      "voice": {}
+    }
+  },
+  "decompressed_path": null,
+  "chunk": null
+}

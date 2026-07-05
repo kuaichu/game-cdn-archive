@@ -1,0 +1,34 @@
+{
+  "version": "1.2.0",
+  "game": {
+    "full": {
+      "name": "StarRail_1.2.0.zip",
+      "url": "https://autopatchcn.bhsr.com/client/cn/20230709224719_3CcrEpEKT9iaObJh/StarRail_1.2.0.zip",
+      "checksum": "db3ed7b4b6d328d8394e1fa27391ee3f",
+      "size": 15101507952
+    }
+  },
+  "voice": {},
+  "update": {
+    "1.1.0": {
+      "game": {
+        "name": "game_1.1.0_1.2.0_hdiff_HfBvygO7Z9aNPUmR.zip",
+        "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_1.1.0_1.2.0_hdiff_HfBvygO7Z9aNPUmR.zip",
+        "checksum": "",
+        "size": 11914862849
+      },
+      "voice": {}
+    },
+    "1.0.5": {
+      "game": {
+        "name": "game_1.0.5_1.2.0_hdiff_7qUejt4fMExIlrQp.zip",
+        "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_1.0.5_1.2.0_hdiff_7qUejt4fMExIlrQp.zip",
+        "checksum": "",
+        "size": 13178454294
+      },
+      "voice": {}
+    }
+  },
+  "decompressed_path": null,
+  "chunk": null
+}

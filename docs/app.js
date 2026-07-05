@@ -23,6 +23,7 @@ const state = {
   wuwaFilePath: "",
   wuwaExpandedFile: "",
   hoyoVersions: new Map(),
+  hoyoVersionPromises: new Map(),
   hoyoFileEntries: new Map(),
   hoyoFileVisible: 150,
   hoyoFilePath: "",
@@ -43,7 +44,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260705-hoyo-legacy-candidates";
+const ASSET_VERSION = "20260706-hoyo-split";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -433,9 +434,28 @@ const nteVersion = () => state.nteCatalog.versions.find((item) => item.version =
 const nteFiles = () => nteVersion()?.[state.mode];
 
 const hoyoSummary = () => state.hoyoIndex.games.find((game) => game.id === state.gameId);
-const hoyoVersionMap = () => state.hoyoVersions.get(state.gameId);
+const hoyoVersionMap = () => state.hoyoVersions.get(state.gameId) || {};
 const hoyoVersion = () => hoyoVersionMap()?.[state.version] || null;
 const hoyoSummaries = () => hoyoSummary()?.versions || [];
+
+const hoyoVersionUrl = (gameId, version) => (
+  `data/hoyo/versions/${encodeURIComponent(gameId)}/${encodeURIComponent(version)}.json`
+);
+
+const loadHoyoVersion = async (version = state.version, gameId = state.gameId) => {
+  if (!version || !gameId) return null;
+  const cached = state.hoyoVersions.get(gameId) || {};
+  if (cached[version]) return cached[version];
+  const key = `${gameId}:${version}`;
+  if (!state.hoyoVersionPromises.has(key)) {
+    state.hoyoVersionPromises.set(key, fetchJson(hoyoVersionUrl(gameId, version)));
+  }
+  const row = await state.hoyoVersionPromises.get(key);
+  const next = state.hoyoVersions.get(gameId) || {};
+  next[version] = row;
+  state.hoyoVersions.set(gameId, next);
+  return row;
+};
 
 const endfieldVersion = () => state.endfieldVersions?.[state.version] || null;
 const endfieldSummaries = () => state.endfieldIndex?.versions || [];
@@ -502,6 +522,10 @@ const hoyoDownloadItems = (row) => {
 };
 
 const hoyoUnavailableCount = (version) => {
+  const summary = hoyoSummaries().find((item) => item.version === version);
+  if (summary && Number.isFinite(Number(summary.unavailable_items))) {
+    return Number(summary.unavailable_items || 0);
+  }
   const row = hoyoVersionMap()?.[version];
   return hoyoDownloadItems(row).filter((item) => Number(item.size || 0) <= 0).length;
 };
@@ -999,6 +1023,8 @@ const renderVersionMenu = () => {
       $("#selectButton").setAttribute("aria-expanded", "false");
       if (isWuwa()) {
         await loadWuwaVersion();
+      } else if (currentGame().kind === "hoyo") {
+        await loadHoyoVersion();
       }
       render();
     });
@@ -1360,7 +1386,7 @@ const renderLinks = () => {
   $("#aria2Link").href = "#";
   $("#jsonLink").href = state.mode === "files"
     ? hoyoFileListUrl(state.version)
-    : `data/hoyo/${state.gameId}_versions.json`;
+    : hoyoVersionUrl(state.gameId, state.version);
   $("#jsonLink").classList.remove("disabled");
 };
 
@@ -1653,8 +1679,8 @@ const arknightsPackageItems = () => {
 
 const normalizeVersionText = (value) => String(value || "").replace(/\d+\.\d+\.\d+/g, "{version}");
 
-const hoyoArchiveComparableItems = (version) => {
-  const row = hoyoVersionMap()?.[version];
+const hoyoArchiveComparableItems = async (version) => {
+  const row = await loadHoyoVersion(version);
   if (!row) return [];
   const items = [];
   const addItem = (item, badge, sublabel = "") => {
@@ -2880,13 +2906,11 @@ const ensureGameData = async (preferredVersion = null) => {
     state.version = selectVersionForContext(versions, preferredVersion);
     return;
   }
-  if (!state.hoyoVersions.has(state.gameId)) {
-    state.hoyoVersions.set(state.gameId, await fetchJson(`data/hoyo/${state.gameId}_versions.json`));
-  }
   const versions = hoyoSummaries()
     .filter((item) => item.package_items || item.update_items || item.has_chunk)
     .sort((a, b) => compareVersions(b.version, a.version));
   state.version = selectVersionForContext(versions, preferredVersion);
+  await loadHoyoVersion();
 };
 
 const renderNotice = () => {
