@@ -21,8 +21,9 @@ from adapters.arknights import ArknightsAvailabilityAdapter  # noqa: E402
 from adapters.android import AndroidAvailabilityAdapter  # noqa: E402
 from adapters.endfield import EndfieldAvailabilityAdapter  # noqa: E402
 from adapters.hoyo import HoyoAvailabilityAdapter  # noqa: E402
+from adapters.nte import NteAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import ProbeResult, availability_block, probe_fact_defaults  # noqa: E402
-from scripts.validate_availability import validate_android, validate_arknights, validate_endfield, validate_hoyo  # noqa: E402
+from scripts.validate_availability import validate_android, validate_arknights, validate_endfield, validate_hoyo, validate_nte  # noqa: E402
 
 
 ARKNIGHTS_ROOT = ROOT / "docs" / "data" / "arknights"
@@ -112,6 +113,42 @@ def endfield_upstream_probe(url: str, *, ok: bool, size: int = 1024, error: str 
             error=error,
             stale=False,
             scheduler_confidence="medium",
+        ),
+    }
+
+
+def nte_live_probe(url: str, *, ok: bool, status: int, size: int = 0, error: str = "") -> ProbeResult:
+    return {
+        "url": url,
+        "probe": probe_fact_defaults(
+            ok=ok,
+            status=status,
+            method="GET",
+            checked_at="2026-07-06T00:00:00.000Z",
+            final_url=url,
+            content_type="application/zip" if ok else "",
+            size=size,
+            error=error,
+            stale=False,
+            scheduler_confidence="high" if status else "low",
+        ),
+    }
+
+
+def nte_metadata_probe(url: str, *, size: int, ok: bool = True) -> ProbeResult:
+    return {
+        "url": url,
+        "probe": probe_fact_defaults(
+            ok=ok,
+            status=0,
+            method="RESLIST_METADATA",
+            checked_at="2026-07-06T00:00:00.000Z",
+            final_url=url,
+            content_type="",
+            size=size,
+            error="" if ok else "size_zero",
+            stale=False,
+            scheduler_confidence="medium" if ok else "low",
         ),
     }
 
@@ -305,6 +342,64 @@ def assert_endfield_upstream_paths() -> None:
     }
     if official_result != expected_official:
         raise AssertionError(f"unexpected Endfield official interpretation: {official_result!r}")
+
+
+def assert_nte_paths() -> None:
+    adapter = NteAvailabilityAdapter()
+    reslist_url = "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.2/ResList.bin.zip"
+    object_url = "https://yhcdn1.wmupd.com/clientRes/publish_PC/Res/a/abc.1024"
+
+    missing_record = {"version": "1.0.2", "status": 404, "reslist_url": reslist_url}
+    missing_result = adapter.interpret([
+        nte_live_probe(reslist_url, ok=False, status=404, size=488, error="HTTP 404")
+    ], missing_record)
+    expected_missing = {
+        "state": "unavailable",
+        "reason": "http_404",
+        "preferred_url": "",
+        "confidence": "high",
+        "retained": False,
+        "display_label": "链接失效",
+    }
+    if missing_result != expected_missing:
+        raise AssertionError(f"unexpected NTE missing ResList interpretation: {missing_result!r}")
+    missing_record["availability"] = availability_block(
+        [nte_live_probe(reslist_url, ok=False, status=404, size=488, error="HTTP 404")],
+        "live_probe",
+        missing_result,
+        "scripts/test_availability_negative.py",
+    )
+    if missing_record["availability"]["source"]["kind"] != "live_probe":
+        raise AssertionError(f"unexpected NTE ResList source kind: {missing_record['availability']!r}")
+
+    object_record = {
+        "filename": "Client/Test.bin",
+        "filesize": 1024,
+        "md5": "abc",
+        "object": "abc.1024",
+        "url": object_url,
+    }
+    object_result = adapter.interpret([nte_metadata_probe(object_url, size=1024)], object_record)
+    expected_object = {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": object_url,
+        "confidence": "medium",
+        "retained": False,
+        "display_label": "可用",
+    }
+    if object_result != expected_object:
+        raise AssertionError(f"unexpected NTE object interpretation: {object_result!r}")
+    object_record["availability"] = availability_block(
+        [nte_metadata_probe(object_url, size=1024)],
+        "metadata_inference",
+        object_result,
+        "scripts/test_availability_negative.py",
+    )
+    if object_record["availability"]["source"]["kind"] != "metadata_inference":
+        raise AssertionError(f"unexpected NTE object source kind: {object_record['availability']!r}")
+    if object_record["availability"]["source"]["confidence"] == "high":
+        raise AssertionError(f"NTE object metadata inference must not use high confidence: {object_record['availability']!r}")
 
 
 def mutated_versions_with(path_parts: tuple[str, ...], value: Any) -> dict[str, Any]:
@@ -519,11 +614,91 @@ def assert_endfield_validator_rejects(path_parts: tuple[str, ...], value: Any, e
         raise AssertionError(f"Endfield validator did not reject {'.'.join(path_parts)}={value!r}; errors={errors!r}")
 
 
+def valid_nte_root(root: Path) -> None:
+    version = "1.0.0"
+    reslist_url = "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.0/ResList.bin.zip"
+    object_url = "https://yhcdn1.wmupd.com/clientRes/publish_PC/Res/a/abc.1024"
+    item = {
+        "filename": "Client/Test.bin",
+        "filesize": 1024,
+        "md5": "abc",
+        "object": "abc.1024",
+        "url": object_url,
+    }
+    item_probe = nte_metadata_probe(object_url, size=1024)
+    item_interpretation = NteAvailabilityAdapter().interpret([item_probe], item)
+    item["availability"] = availability_block(
+        [item_probe],
+        "metadata_inference",
+        item_interpretation,
+        "scripts/test_availability_negative.py",
+    )
+
+    row = {
+        "version": version,
+        "status": 200,
+        "reslist_url": reslist_url,
+        "last_modified": "Mon, 06 Jul 2026 00:00:00 GMT",
+        "reslist_bytes": 1024,
+        "full": {
+            "items": 1,
+            "bytes": 1024,
+            "json": "data/url_lists/1.0.0-full.json",
+            "urls": "data/url_lists/1.0.0-full.urls.txt",
+            "aria2": "data/url_lists/1.0.0-full.files.aria2.txt",
+        },
+        "patches": {
+            "items": 0,
+            "bytes": 0,
+            "json": "data/url_lists/1.0.0-patches.json",
+            "urls": "data/url_lists/1.0.0-patches.urls.txt",
+            "aria2": "data/url_lists/1.0.0-patches.patches.aria2.txt",
+        },
+    }
+    row_probe = nte_live_probe(reslist_url, ok=True, status=200, size=1024)
+    row_interpretation = NteAvailabilityAdapter().interpret([row_probe], row)
+    row["availability"] = availability_block(
+        [row_probe],
+        "live_probe",
+        row_interpretation,
+        "scripts/test_availability_negative.py",
+    )
+    row["availability_counts"] = {"full": {"available": 1}, "patches": {}}
+    row["availability_reasons"] = {"full": {"not_probed": 1}, "patches": {}}
+
+    write_json(root / "catalog.json", {"versions": [row]})
+    list_dir = root / "url_lists"
+    list_dir.mkdir(parents=True, exist_ok=True)
+    write_json(list_dir / "1.0.0-full.json", [item])
+    write_json(list_dir / "1.0.0-patches.json", [])
+
+
+def mutate_nte_item(root: Path, path_parts: tuple[str, ...], value: Any) -> None:
+    valid_nte_root(root)
+    shard_path = root / "url_lists" / "1.0.0-full.json"
+    items = load_json(shard_path)
+    target: Any = items[0]
+    for part in path_parts[:-1]:
+        target = target[part]
+    target[path_parts[-1]] = value
+    write_json(shard_path, items)
+
+
+def assert_nte_validator_rejects(path_parts: tuple[str, ...], value: Any, expected_token: str) -> None:
+    with tempfile.TemporaryDirectory(prefix="nte-availability-negative-") as temp:
+        temp_root = Path(temp)
+        mutate_nte_item(temp_root, path_parts, value)
+        errors = validate_nte(temp_root)
+    if not any(expected_token in error for error in errors):
+        raise AssertionError(f"NTE validator did not reject {'.'.join(path_parts)}={value!r}; errors={errors!r}")
+
+
 def main() -> None:
     assert_arknights_failed_probe_maps_to_unavailable()
     assert_android_negative_paths()
     assert_hoyo_metadata_paths()
     assert_endfield_upstream_paths()
+    assert_nte_paths()
     assert_validator_rejects(("availability", "interpretation", "state"), "foobar", ":state:foobar")
     assert_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
     assert_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
@@ -540,6 +715,10 @@ def main() -> None:
     assert_endfield_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
     assert_endfield_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
     assert_endfield_validator_rejects(("availability", "interpretation", "confidence"), "certain", ":confidence:certain")
+    assert_nte_validator_rejects(("availability", "interpretation", "state"), "foobar", ":state:foobar")
+    assert_nte_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
+    assert_nte_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
+    assert_nte_validator_rejects(("availability", "interpretation", "confidence"), "certain", ":confidence:certain")
 
     print("Availability negative-path checks")
     print("arknights_failed_probe=PASS")
@@ -548,6 +727,7 @@ def main() -> None:
     print("android_retained_historical=PASS")
     print("hoyo_metadata_inference=PASS")
     print("endfield_upstream_archive=PASS")
+    print("nte_live_probe_and_metadata=PASS")
     print("closed_vocab_rejection=PASS")
     print("result=PASS")
 

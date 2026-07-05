@@ -21,6 +21,7 @@ from adapters.arknights import ArknightsAvailabilityAdapter  # noqa: E402
 from adapters.android import AndroidAvailabilityAdapter  # noqa: E402
 from adapters.endfield import EndfieldAvailabilityAdapter  # noqa: E402
 from adapters.hoyo import HoyoAvailabilityAdapter  # noqa: E402
+from adapters.nte import NteAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import (  # noqa: E402
     AVAILABILITY_REASONS,
     AVAILABILITY_STATES,
@@ -33,6 +34,7 @@ DEFAULT_ARKNIGHTS = ROOT / "docs" / "data" / "arknights"
 DEFAULT_ANDROID = ROOT / "docs" / "data" / "android"
 DEFAULT_ENDFIELD = ROOT / "docs" / "data" / "endfield"
 DEFAULT_HOYO = ROOT / "docs" / "data" / "hoyo"
+DEFAULT_NTE = ROOT / "docs" / "data"
 FORBIDDEN_ADAPTER_MODULES = {"urllib", "requests", "http", "http.client", "subprocess", "socket"}
 FORBIDDEN_ADAPTER_NAMES = {"urlopen", "Request", "HTTPConnection", "HTTPSConnection", "curl", "fetch"}
 
@@ -349,12 +351,62 @@ def validate_endfield(root: Path) -> list[str]:
     return errors
 
 
+def validate_nte(root: Path) -> list[str]:
+    errors: list[str] = []
+    catalog_path = root / "catalog.json"
+    catalog = load_json(catalog_path)
+    adapter = NteAvailabilityAdapter()
+    if not isinstance(catalog, dict):
+        return ["nte:catalog_not_object"]
+    versions = catalog.get("versions")
+    if not isinstance(versions, list):
+        return ["nte:versions_missing"]
+
+    for row in versions:
+        if not isinstance(row, dict):
+            errors.append("nte:version_not_object")
+            continue
+        version = str(row.get("version") or "")
+        summary_path = f"nte:{version}:summary"
+        errors.extend(validate_availability(row, summary_path, adapter))
+        source = (row.get("availability") or {}).get("source") or {}
+        if source.get("kind") != "live_probe":
+            errors.append(f"{summary_path}:source_kind_not_live_probe:{source.get('kind')}")
+
+        for section_name in ("full", "patches"):
+            section = row.get(section_name)
+            if not isinstance(section, dict) or not section.get("json"):
+                continue
+            shard_path = root / Path(str(section["json"])).relative_to("data")
+            if not shard_path.exists():
+                errors.append(f"nte:{version}:{section_name}:shard_missing:{shard_path}")
+                continue
+            items = load_json(shard_path)
+            if not isinstance(items, list):
+                errors.append(f"nte:{version}:{section_name}:shard_not_list")
+                continue
+            for index, item in enumerate(items, start=1):
+                if not isinstance(item, dict):
+                    errors.append(f"nte:{version}:{section_name}:item_{index}_not_object")
+                    continue
+                item_path = f"nte:{version}:{section_name}:item_{index}"
+                errors.extend(validate_availability(item, item_path, adapter))
+                item_source = (item.get("availability") or {}).get("source") or {}
+                item_interpretation = (item.get("availability") or {}).get("interpretation") or {}
+                if item_source.get("kind") != "metadata_inference":
+                    errors.append(f"{item_path}:source_kind_not_metadata_inference:{item_source.get('kind')}")
+                if item_interpretation.get("confidence") == "high" or item_source.get("confidence") == "high":
+                    errors.append(f"{item_path}:metadata_high_confidence")
+    return errors
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--arknights-root", type=Path, default=DEFAULT_ARKNIGHTS)
     parser.add_argument("--android-root", type=Path, default=DEFAULT_ANDROID)
     parser.add_argument("--endfield-root", type=Path, default=DEFAULT_ENDFIELD)
     parser.add_argument("--hoyo-root", type=Path, default=DEFAULT_HOYO)
+    parser.add_argument("--nte-root", type=Path, default=DEFAULT_NTE)
     args = parser.parse_args()
 
     errors = []
@@ -363,12 +415,14 @@ def main() -> None:
     errors.extend(validate_android(args.android_root))
     errors.extend(validate_endfield(args.endfield_root))
     errors.extend(validate_hoyo(args.hoyo_root))
+    errors.extend(validate_nte(args.nte_root))
 
     print("Availability validation")
     print(f"arknights_root={args.arknights_root.resolve()}")
     print(f"android_root={args.android_root.resolve()}")
     print(f"endfield_root={args.endfield_root.resolve()}")
     print(f"hoyo_root={args.hoyo_root.resolve()}")
+    print(f"nte_root={args.nte_root.resolve()}")
     print(f"errors={len(errors)}")
     if errors:
         print("result=FAIL")

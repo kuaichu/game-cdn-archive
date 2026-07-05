@@ -443,6 +443,10 @@ const modesForGame = () => {
 const nteVersions = () => state.nteCatalog.versions.filter((item) => item.status === 200 && item.full);
 const nteVersion = () => state.nteCatalog.versions.find((item) => item.version === state.version);
 const nteFiles = () => nteVersion()?.[state.mode];
+const nteAvailability = (record) => record?.availability?.interpretation || null;
+const nteAvailabilityLabel = (record) => nteAvailability(record)?.display_label || (
+  Number(record?.status || 0) >= 400 ? "链接失效" : record?.status === 200 ? "可用" : "状态未知"
+);
 
 const hoyoSummary = () => state.hoyoIndex.games.find((game) => game.id === state.gameId);
 const hoyoVersionMap = () => state.hoyoVersions.get(state.gameId) || {};
@@ -591,6 +595,18 @@ const versionAvailabilityCap = (item) => {
     if (!count) return "";
     const label = count >= Number(item.apk_count || 0) ? "链接失效" : `含失效 ${count}`;
     return `<span class="cap red">${label}</span>`;
+  }
+  if (isNte()) {
+    const interpretation = nteAvailability(item);
+    if (interpretation?.state === "available") {
+      return `<span class="cap green">${escapeHtml(interpretation.display_label)}</span>`;
+    }
+    if (interpretation?.state === "unavailable") {
+      return `<span class="cap red">${escapeHtml(interpretation.display_label)}</span>`;
+    }
+    if (interpretation?.state === "unknown") {
+      return `<span class="cap slate">${escapeHtml(interpretation.display_label)}</span>`;
+    }
   }
   if (isEndfield()) {
     const status = endfieldOfficialStatus(item.version);
@@ -1123,6 +1139,7 @@ const versionButton = (item) => {
           <span class="cap blue">完整</span>
           <span class="cap violet">清单</span>
           <span class="cap green">直链</span>
+          ${versionAvailabilityCap(item)}
         </span>
       </button>
     `;
@@ -1286,6 +1303,7 @@ const nteStats = () => {
     ["当前版本", version.version],
     ["版本族", `${family} ${isBase ? "大版本" : "补丁版"}`],
     ["清单时间", fmtDateTime(version.last_modified)],
+    ["可用性", nteAvailabilityLabel(version)],
     ["完整文件", `${version.full.items} 个 / ${fmtBytes(version.full.bytes)}`],
     ["补丁文件", `${version.patches.items} 个 / ${fmtBytes(version.patches.bytes)}`],
   ];
@@ -1554,29 +1572,35 @@ const nteCdn2Url = (url) => {
 };
 
 const nteItem = (entry, index, total) => {
+  const availability = nteAvailability(entry);
+  const availabilityLabel = availability?.display_label || (Number(entry.filesize || 0) > 0 ? "可用" : "链接失效");
   if (state.mode === "patches") {
     const patch = entry.patch || "";
     return {
       badge: "补丁分片",
       title: patch || entry.url.split("/").at(-1),
-      subtitle: `${entry.oldfile || "-"}  ->  ${entry.newfile || "-"}`,
+      subtitle: `${availabilityLabel} / ${entry.oldfile || "-"}  ->  ${entry.newfile || "-"}`,
       size: entry.filesize,
       hash: patch.split(".")[0] || "-",
-      url: entry.url,
+      url: availability?.preferred_url || entry.url,
       mirrorUrl: nteCdn2Url(entry.url),
       mirrorLabel: "CDN2",
+      availabilityState: availability?.state || "",
+      availabilityLabel,
       count: `${index + 1}/${total}`,
     };
   }
   return {
     badge: "完整文件",
     title: entry.filename?.split(/[\\/]/).at(-1) || entry.object,
-    subtitle: entry.filename || entry.object,
+    subtitle: `${availabilityLabel} / ${entry.filename || entry.object}`,
     size: entry.filesize,
     hash: entry.md5,
-    url: entry.url,
+    url: availability?.preferred_url || entry.url,
     mirrorUrl: nteCdn2Url(entry.url),
     mirrorLabel: "CDN2",
+    availabilityState: availability?.state || "",
+    availabilityLabel,
     count: `${index + 1}/${total}`,
   };
 };
@@ -2369,13 +2393,14 @@ const renderEndfieldArchive = () => {
 
 const renderNteResList = () => {
   const version = nteVersion();
+  const versionAvailability = nteAvailabilityLabel(version);
   const rows = [
-    ["ResList.bin.zip", "官方版本清单入口", version.reslist_bytes, "PatcherXML0", version.reslist_url],
-    ["完整 URL 列表", `${version.full.items} 个文件`, version.full.bytes, "urls.txt", version.full.urls],
-    ["完整 aria2 列表", "保留原始目录结构", version.full.bytes, "aria2", version.full.aria2],
-    ["完整 JSON 索引", "filename / filesize / md5 / url", version.full.bytes, "json", version.full.json],
-    ["补丁 URL 列表", `${version.patches.items} 个补丁对象`, version.patches.bytes, "patch", version.patches.urls],
-    ["补丁 aria2 列表", "lastdiff 解出的 patch 对象", version.patches.bytes, "aria2", version.patches.aria2],
+    ["ResList.bin.zip", `${versionAvailability} / 官方版本清单入口`, version.reslist_bytes, "PatcherXML0", version.reslist_url],
+    ["完整 URL 列表", `可用 / ${version.full.items} 个文件`, version.full.bytes, "urls.txt", version.full.urls],
+    ["完整 aria2 列表", "可用 / 保留原始目录结构", version.full.bytes, "aria2", version.full.aria2],
+    ["完整 JSON 索引", "可用 / filename / filesize / md5 / url", version.full.bytes, "json", version.full.json],
+    ["补丁 URL 列表", `可用 / ${version.patches.items} 个补丁对象`, version.patches.bytes, "patch", version.patches.urls],
+    ["补丁 aria2 列表", "可用 / lastdiff 解出的 patch 对象", version.patches.bytes, "aria2", version.patches.aria2],
   ];
 
   $("#fileList").innerHTML = rows

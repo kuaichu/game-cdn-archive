@@ -33,6 +33,54 @@
         "json": "data/url_lists/1.0.0-patches.json",
         "urls": "data/url_lists/1.0.0-patches.urls.txt",
         "aria2": "data/url_lists/1.0.0-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.0/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.0/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 22571,
+              "last_modified": "Tue, 14 Apr 2026 04:08:28 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.0/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 56
+        },
+        "patches": {}
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 56
+        },
+        "patches": {}
       }
     },
     {
@@ -54,6 +102,58 @@
         "json": "data/url_lists/1.0.1-patches.json",
         "urls": "data/url_lists/1.0.1-patches.urls.txt",
         "aria2": "data/url_lists/1.0.1-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.1/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.1/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 24603,
+              "last_modified": "Fri, 17 Apr 2026 02:00:39 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.1/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 64
+        },
+        "patches": {
+          "available": 1
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 64
+        },
+        "patches": {
+          "not_probed": 1
+        }
       }
     },
     {
@@ -61,7 +161,43 @@
       "status": 404,
       "last_modified": null,
       "content_length": 488,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.2/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.2/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.2/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.2/ResList.bin.zip",
+              "content_type": "",
+              "size": 488,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.0.3",
@@ -82,6 +218,58 @@
         "json": "data/url_lists/1.0.3-patches.json",
         "urls": "data/url_lists/1.0.3-patches.urls.txt",
         "aria2": "data/url_lists/1.0.3-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.3/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.3/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 27163,
+              "last_modified": "Mon, 20 Apr 2026 16:52:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.3/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 66
+        },
+        "patches": {
+          "available": 25
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 66
+        },
+        "patches": {
+          "not_probed": 25
+        }
       }
     },
     {
@@ -89,7 +277,43 @@
       "status": 404,
       "last_modified": null,
       "content_length": 488,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.4/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.4/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.4/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.4/ResList.bin.zip",
+              "content_type": "",
+              "size": 488,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.0.5",
@@ -110,6 +334,58 @@
         "json": "data/url_lists/1.0.5-patches.json",
         "urls": "data/url_lists/1.0.5-patches.urls.txt",
         "aria2": "data/url_lists/1.0.5-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.5/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.5/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 30923,
+              "last_modified": "Wed, 22 Apr 2026 11:52:58 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.5/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 70
+        },
+        "patches": {
+          "available": 78
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 70
+        },
+        "patches": {
+          "not_probed": 78
+        }
       }
     },
     {
@@ -131,6 +407,58 @@
         "json": "data/url_lists/1.0.6-patches.json",
         "urls": "data/url_lists/1.0.6-patches.urls.txt",
         "aria2": "data/url_lists/1.0.6-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.6/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.6/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 31947,
+              "last_modified": "Wed, 22 Apr 2026 15:32:38 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.6/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 70
+        },
+        "patches": {
+          "available": 99
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 70
+        },
+        "patches": {
+          "not_probed": 99
+        }
       }
     },
     {
@@ -152,6 +480,58 @@
         "json": "data/url_lists/1.0.7-patches.json",
         "urls": "data/url_lists/1.0.7-patches.urls.txt",
         "aria2": "data/url_lists/1.0.7-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.7/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.7/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 32875,
+              "last_modified": "Thu, 23 Apr 2026 06:25:37 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.7/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 70
+        },
+        "patches": {
+          "available": 122
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 70
+        },
+        "patches": {
+          "not_probed": 122
+        }
       }
     },
     {
@@ -173,6 +553,58 @@
         "json": "data/url_lists/1.0.8-patches.json",
         "urls": "data/url_lists/1.0.8-patches.urls.txt",
         "aria2": "data/url_lists/1.0.8-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.8/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.8/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 33803,
+              "last_modified": "Fri, 24 Apr 2026 00:34:48 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.8/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 70
+        },
+        "patches": {
+          "available": 145
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 70
+        },
+        "patches": {
+          "not_probed": 145
+        }
       }
     },
     {
@@ -194,6 +626,58 @@
         "json": "data/url_lists/1.0.9-patches.json",
         "urls": "data/url_lists/1.0.9-patches.urls.txt",
         "aria2": "data/url_lists/1.0.9-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.9/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.9/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 34971,
+              "last_modified": "Sat, 25 Apr 2026 00:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.9/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 70
+        },
+        "patches": {
+          "available": 173
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 70
+        },
+        "patches": {
+          "not_probed": 173
+        }
       }
     },
     {
@@ -201,7 +685,43 @@
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.10/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.10/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.10/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.10/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.0.11",
@@ -222,6 +742,58 @@
         "json": "data/url_lists/1.0.11-patches.json",
         "urls": "data/url_lists/1.0.11-patches.urls.txt",
         "aria2": "data/url_lists/1.0.11-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.11/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.11/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 37339,
+              "last_modified": "Sat, 25 Apr 2026 22:30:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.11/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 70
+        },
+        "patches": {
+          "available": 221
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 70
+        },
+        "patches": {
+          "not_probed": 221
+        }
       }
     },
     {
@@ -229,7 +801,43 @@
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.12/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.12/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.12/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.12/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.0.13",
@@ -250,6 +858,58 @@
         "json": "data/url_lists/1.0.13-patches.json",
         "urls": "data/url_lists/1.0.13-patches.urls.txt",
         "aria2": "data/url_lists/1.0.13-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.13/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.13/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 37627,
+              "last_modified": "Sun, 26 Apr 2026 02:04:33 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.13/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 70
+        },
+        "patches": {
+          "available": 227
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 70
+        },
+        "patches": {
+          "not_probed": 227
+        }
       }
     },
     {
@@ -271,6 +931,58 @@
         "json": "data/url_lists/1.0.14-patches.json",
         "urls": "data/url_lists/1.0.14-patches.urls.txt",
         "aria2": "data/url_lists/1.0.14-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.14/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.14/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 38331,
+              "last_modified": "Mon, 27 Apr 2026 21:30:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.14/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 70
+        },
+        "patches": {
+          "available": 245
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 70
+        },
+        "patches": {
+          "not_probed": 245
+        }
       }
     },
     {
@@ -292,6 +1004,58 @@
         "json": "data/url_lists/1.0.15-patches.json",
         "urls": "data/url_lists/1.0.15-patches.urls.txt",
         "aria2": "data/url_lists/1.0.15-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.15/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.15/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 39243,
+              "last_modified": "Wed, 29 Apr 2026 22:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.15/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 71
+        },
+        "patches": {
+          "available": 264
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 71
+        },
+        "patches": {
+          "not_probed": 264
+        }
       }
     },
     {
@@ -314,7 +1078,59 @@
         "aria2": "data/url_lists/1.0.16-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.16/ResList.bin.zip",
-      "reslist_bytes": 40235
+      "reslist_bytes": 40235,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.16/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.16/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 40235,
+              "last_modified": "Thu, 30 Apr 2026 21:40:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.16/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 71
+        },
+        "patches": {
+          "available": 288
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 71
+        },
+        "patches": {
+          "not_probed": 288
+        }
+      }
     },
     {
       "version": "1.0.17",
@@ -336,7 +1152,59 @@
         "aria2": "data/url_lists/1.0.17-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.17/ResList.bin.zip",
-      "reslist_bytes": 41227
+      "reslist_bytes": 41227,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.17/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.17/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 41227,
+              "last_modified": "Mon, 04 May 2026 12:51:06 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.17/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 71
+        },
+        "patches": {
+          "available": 312
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 71
+        },
+        "patches": {
+          "not_probed": 312
+        }
+      }
     },
     {
       "version": "1.0.18",
@@ -358,7 +1226,59 @@
         "aria2": "data/url_lists/1.0.18-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.18/ResList.bin.zip",
-      "reslist_bytes": 42784
+      "reslist_bytes": 42784,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.18/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.18/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 42784,
+              "last_modified": "Wed, 06 May 2026 22:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.18/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 71
+        },
+        "patches": {
+          "available": 341
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 71
+        },
+        "patches": {
+          "not_probed": 341
+        }
+      }
     },
     {
       "version": "1.0.19",
@@ -380,14 +1300,102 @@
         "aria2": "data/url_lists/1.0.19-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.19/ResList.bin.zip",
-      "reslist_bytes": 44144
+      "reslist_bytes": 44144,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.19/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.19/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 44144,
+              "last_modified": "Fri, 08 May 2026 20:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.19/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 71
+        },
+        "patches": {
+          "available": 371
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 71
+        },
+        "patches": {
+          "not_probed": 371
+        }
+      }
     },
     {
       "version": "1.0.20",
       "status": 404,
       "last_modified": null,
       "content_length": 485,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.20/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.20/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.20/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.20/ResList.bin.zip",
+              "content_type": "",
+              "size": 485,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.0.21",
@@ -409,7 +1417,59 @@
         "aria2": "data/url_lists/1.0.21-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.21/ResList.bin.zip",
-      "reslist_bytes": 45296
+      "reslist_bytes": 45296,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.21/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.21/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 45296,
+              "last_modified": "Sat, 09 May 2026 21:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.21/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 71
+        },
+        "patches": {
+          "available": 398
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 71
+        },
+        "patches": {
+          "not_probed": 398
+        }
+      }
     },
     {
       "version": "1.0.22",
@@ -431,14 +1491,102 @@
         "aria2": "data/url_lists/1.0.22-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.22/ResList.bin.zip",
-      "reslist_bytes": 45984
+      "reslist_bytes": 45984,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.22/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.22/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 45984,
+              "last_modified": "Tue, 12 May 2026 20:00:04 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.22/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 71
+        },
+        "patches": {
+          "available": 412
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 71
+        },
+        "patches": {
+          "not_probed": 412
+        }
+      }
     },
     {
       "version": "1.0.23",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.23/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.23/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.23/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.23/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.0.24",
@@ -460,7 +1608,59 @@
         "aria2": "data/url_lists/1.0.24-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.24/ResList.bin.zip",
-      "reslist_bytes": 47744
+      "reslist_bytes": 47744,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.24/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.24/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 47744,
+              "last_modified": "Sat, 16 May 2026 20:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.24/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 71
+        },
+        "patches": {
+          "available": 451
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 71
+        },
+        "patches": {
+          "not_probed": 451
+        }
+      }
     },
     {
       "version": "1.0.25",
@@ -482,7 +1682,59 @@
         "aria2": "data/url_lists/1.0.25-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.25/ResList.bin.zip",
-      "reslist_bytes": 48720
+      "reslist_bytes": 48720,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.25/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.25/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 48720,
+              "last_modified": "Tue, 19 May 2026 20:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.25/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 71
+        },
+        "patches": {
+          "available": 475
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 71
+        },
+        "patches": {
+          "not_probed": 475
+        }
+      }
     },
     {
       "version": "1.0.26",
@@ -504,35 +1756,231 @@
         "aria2": "data/url_lists/1.0.26-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.26/ResList.bin.zip",
-      "reslist_bytes": 49728
+      "reslist_bytes": 49728,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.26/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.26/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 49728,
+              "last_modified": "Fri, 22 May 2026 22:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.26/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 71
+        },
+        "patches": {
+          "available": 499
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 71
+        },
+        "patches": {
+          "not_probed": 499
+        }
+      }
     },
     {
       "version": "1.0.27",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.27/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.27/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.27/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.27/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.0.28",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.28/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.28/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.28/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.28/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.0.29",
       "status": 404,
       "last_modified": null,
       "content_length": 485,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.29/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.29/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.29/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.29/ResList.bin.zip",
+              "content_type": "",
+              "size": 485,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.0.30",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.30/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.30/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.30/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.30/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.0",
@@ -553,6 +2001,58 @@
         "json": "data/url_lists/1.1.0-patches.json",
         "urls": "data/url_lists/1.1.0-patches.urls.txt",
         "aria2": "data/url_lists/1.1.0-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.0/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.0/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 87114,
+              "last_modified": "Wed, 27 May 2026 22:05:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.0/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 1201
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 1201
+        }
       }
     },
     {
@@ -574,6 +2074,58 @@
         "json": "data/url_lists/1.1.1-patches.json",
         "urls": "data/url_lists/1.1.1-patches.urls.txt",
         "aria2": "data/url_lists/1.1.1-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.1/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.1/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 57280,
+              "last_modified": "Wed, 27 May 2026 23:25:33 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.1/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 614
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 614
+        }
       }
     },
     {
@@ -595,6 +2147,58 @@
         "json": "data/url_lists/1.1.2-patches.json",
         "urls": "data/url_lists/1.1.2-patches.urls.txt",
         "aria2": "data/url_lists/1.1.2-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.2/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.2/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 58544,
+              "last_modified": "Thu, 28 May 2026 22:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.2/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 644
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 644
+        }
       }
     },
     {
@@ -616,6 +2220,58 @@
         "json": "data/url_lists/1.1.3-patches.json",
         "urls": "data/url_lists/1.1.3-patches.urls.txt",
         "aria2": "data/url_lists/1.1.3-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.3/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.3/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 58736,
+              "last_modified": "Fri, 29 May 2026 21:07:24 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.3/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 643
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 643
+        }
       }
     },
     {
@@ -637,6 +2293,58 @@
         "json": "data/url_lists/1.1.4-patches.json",
         "urls": "data/url_lists/1.1.4-patches.urls.txt",
         "aria2": "data/url_lists/1.1.4-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.4/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.4/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 60357,
+              "last_modified": "Mon, 01 Jun 2026 20:33:12 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.4/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 682
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 682
+        }
       }
     },
     {
@@ -658,6 +2366,58 @@
         "json": "data/url_lists/1.1.5-patches.json",
         "urls": "data/url_lists/1.1.5-patches.urls.txt",
         "aria2": "data/url_lists/1.1.5-patches.patches.aria2.txt"
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.5/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.5/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 61973,
+              "last_modified": "Wed, 03 Jun 2026 20:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.5/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 721
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 721
+        }
       }
     },
     {
@@ -665,7 +2425,43 @@
       "status": 404,
       "last_modified": null,
       "content_length": 484,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.6/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.6/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.6/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.6/ResList.bin.zip",
+              "content_type": "",
+              "size": 484,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.7",
@@ -687,7 +2483,59 @@
         "aria2": "data/url_lists/1.1.7-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.7/ResList.bin.zip",
-      "reslist_bytes": 63669
+      "reslist_bytes": 63669,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.7/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.7/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 63669,
+              "last_modified": "Fri, 05 Jun 2026 20:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.7/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 760
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 760
+        }
+      }
     },
     {
       "version": "1.1.8",
@@ -709,7 +2557,59 @@
         "aria2": "data/url_lists/1.1.8-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.8/ResList.bin.zip",
-      "reslist_bytes": 64805
+      "reslist_bytes": 64805,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.8/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.8/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 64805,
+              "last_modified": "Sat, 06 Jun 2026 06:28:17 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.8/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 787
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 787
+        }
+      }
     },
     {
       "version": "1.1.9",
@@ -731,7 +2631,59 @@
         "aria2": "data/url_lists/1.1.9-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.9/ResList.bin.zip",
-      "reslist_bytes": 66261
+      "reslist_bytes": 66261,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.9/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.9/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 66261,
+              "last_modified": "Tue, 09 Jun 2026 22:30:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.9/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 822
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 822
+        }
+      }
     },
     {
       "version": "1.1.10",
@@ -753,7 +2705,59 @@
         "aria2": "data/url_lists/1.1.10-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.10/ResList.bin.zip",
-      "reslist_bytes": 66469
+      "reslist_bytes": 66469,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.10/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.10/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 66469,
+              "last_modified": "Thu, 11 Jun 2026 20:00:00 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.10/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 825
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 825
+        }
+      }
     },
     {
       "version": "1.1.11",
@@ -775,7 +2779,59 @@
         "aria2": "data/url_lists/1.1.11-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.11/ResList.bin.zip",
-      "reslist_bytes": 67749
+      "reslist_bytes": 67749,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.11/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.11/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 67749,
+              "last_modified": "Wed, 17 Jun 2026 22:02:09 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.11/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 852
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 852
+        }
+      }
     },
     {
       "version": "1.1.12",
@@ -797,7 +2853,59 @@
         "aria2": "data/url_lists/1.1.12-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.12/ResList.bin.zip",
-      "reslist_bytes": 69061
+      "reslist_bytes": 69061,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.12/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.12/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 69061,
+              "last_modified": "Thu, 18 Jun 2026 20:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.12/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 880
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 880
+        }
+      }
     },
     {
       "version": "1.1.13",
@@ -819,7 +2927,59 @@
         "aria2": "data/url_lists/1.1.13-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.13/ResList.bin.zip",
-      "reslist_bytes": 70133
+      "reslist_bytes": 70133,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.13/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.13/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 70133,
+              "last_modified": "Sat, 20 Jun 2026 20:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.13/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 907
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 907
+        }
+      }
     },
     {
       "version": "1.1.14",
@@ -841,154 +3001,962 @@
         "aria2": "data/url_lists/1.1.14-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.14/ResList.bin.zip",
-      "reslist_bytes": 71461
+      "reslist_bytes": 71461,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.14/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.14/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 71461,
+              "last_modified": "Tue, 23 Jun 2026 20:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.14/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 937
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 937
+        }
+      }
     },
     {
       "version": "1.1.15",
       "status": 404,
       "last_modified": null,
       "content_length": 485,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.15/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.15/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.15/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.15/ResList.bin.zip",
+              "content_type": "",
+              "size": 485,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.16",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.16/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.16/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.16/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.16/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.17",
       "status": 404,
       "last_modified": null,
       "content_length": 485,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.17/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.17/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.17/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.17/ResList.bin.zip",
+              "content_type": "",
+              "size": 485,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.18",
       "status": 404,
       "last_modified": null,
       "content_length": 485,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.18/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.18/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.18/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.18/ResList.bin.zip",
+              "content_type": "",
+              "size": 485,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.19",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.19/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.19/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.19/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.19/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.20",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.20/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.20/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.20/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.20/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.21",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.21/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.21/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.21/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.21/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.22",
       "status": 404,
       "last_modified": null,
       "content_length": 485,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.22/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.22/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.22/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.22/ResList.bin.zip",
+              "content_type": "",
+              "size": 485,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.23",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.23/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.23/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.23/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.23/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.24",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.24/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.24/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.24/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.24/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.25",
       "status": 404,
       "last_modified": null,
       "content_length": 485,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.25/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.25/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.25/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.25/ResList.bin.zip",
+              "content_type": "",
+              "size": 485,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.26",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.26/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.26/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.26/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.26/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.27",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.27/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.27/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.27/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.27/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.28",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.28/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.28/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.28/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.28/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.29",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.29/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.29/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.29/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.29/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.1.30",
       "status": 404,
       "last_modified": null,
       "content_length": 485,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.30/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.30/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.30/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.30/ResList.bin.zip",
+              "content_type": "",
+              "size": 485,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.2.0",
       "status": 404,
       "last_modified": null,
       "content_length": 488,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.0/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.0/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.0/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.0/ResList.bin.zip",
+              "content_type": "",
+              "size": 488,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.2.1",
       "status": 404,
       "last_modified": null,
       "content_length": 488,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.1/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.1/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.1/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.1/ResList.bin.zip",
+              "content_type": "",
+              "size": 488,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.2.2",
       "status": 404,
       "last_modified": null,
       "content_length": 488,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.2/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.2/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.2/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.2/ResList.bin.zip",
+              "content_type": "",
+              "size": 488,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.2.3",
       "status": 404,
       "last_modified": null,
       "content_length": 488,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.3/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.3/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.3/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.3/ResList.bin.zip",
+              "content_type": "",
+              "size": 488,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.2.4",
       "status": 404,
       "last_modified": null,
       "content_length": 484,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.4/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.4/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.4/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.4/ResList.bin.zip",
+              "content_type": "",
+              "size": 484,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.2.5",
@@ -1010,7 +3978,59 @@
         "aria2": "data/url_lists/1.2.5-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.5/ResList.bin.zip",
-      "reslist_bytes": 77578
+      "reslist_bytes": 77578,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.5/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.5/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 77578,
+              "last_modified": "Wed, 01 Jul 2026 22:09:19 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.5/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 1021
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 1021
+        }
+      }
     },
     {
       "version": "1.2.6",
@@ -1032,14 +4052,102 @@
         "aria2": "data/url_lists/1.2.6-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.6/ResList.bin.zip",
-      "reslist_bytes": 78826
+      "reslist_bytes": 78826,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.6/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.6/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 78826,
+              "last_modified": "Thu, 02 Jul 2026 00:44:32 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.6/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 1045
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 1045
+        }
+      }
     },
     {
       "version": "1.2.7",
       "status": 404,
       "last_modified": null,
       "content_length": 488,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.7/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.7/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.7/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.7/ResList.bin.zip",
+              "content_type": "",
+              "size": 488,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.2.8",
@@ -1061,7 +4169,59 @@
         "aria2": "data/url_lists/1.2.8-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.8/ResList.bin.zip",
-      "reslist_bytes": 80458
+      "reslist_bytes": 80458,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.8/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.8/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 80458,
+              "last_modified": "Thu, 02 Jul 2026 21:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.8/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 1080
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 1080
+        }
+      }
     },
     {
       "version": "1.2.9",
@@ -1083,14 +4243,102 @@
         "aria2": "data/url_lists/1.2.9-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.9/ResList.bin.zip",
-      "reslist_bytes": 82026
+      "reslist_bytes": 82026,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.9/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.9/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 82026,
+              "last_modified": "Sat, 04 Jul 2026 00:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.9/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 1117
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 1117
+        }
+      }
     },
     {
       "version": "1.2.10",
       "status": 404,
       "last_modified": null,
       "content_length": 489,
-      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.10/ResList.bin.zip"
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.10/ResList.bin.zip",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.10/ResList.bin.zip",
+            "probe": {
+              "ok": false,
+              "status": 404,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.10/ResList.bin.zip",
+              "content_type": "",
+              "size": 489,
+              "last_modified": "",
+              "etag": "",
+              "error": "HTTP 404",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "http_404",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      }
     },
     {
       "version": "1.2.11",
@@ -1112,7 +4360,59 @@
         "aria2": "data/url_lists/1.2.11-patches.patches.aria2.txt"
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.11/ResList.bin.zip",
-      "reslist_bytes": 84250
+      "reslist_bytes": 84250,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.11/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-05 07:36:12 +0000",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.11/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 84250,
+              "last_modified": "Sat, 04 Jul 2026 21:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.11/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_nte_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 73
+        },
+        "patches": {
+          "available": 1171
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 73
+        },
+        "patches": {
+          "not_probed": 1171
+        }
+      }
     }
   ],
   "last_checked_at": "2026-07-05 07:36:12 +0000"
