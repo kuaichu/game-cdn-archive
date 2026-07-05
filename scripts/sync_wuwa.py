@@ -180,7 +180,37 @@ def load_cached_versions(output_dir: Path) -> dict:
     try:
         return json.loads(versions_path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
-        return {}
+        pass
+
+    shard_dir = output_dir / "versions"
+    cached: dict = {}
+    if not shard_dir.exists():
+        return cached
+    for shard_path in shard_dir.glob("*.json"):
+        try:
+            version = json.loads(shard_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        version_id = version.get("version") or shard_path.stem
+        if isinstance(version_id, str) and isinstance(version, dict):
+            cached[version_id] = version
+    return cached
+
+
+def version_shard_path(output_dir: Path, version: str) -> Path:
+    if "/" in version or "\\" in version:
+        raise ValueError(f"Unsafe Wuthering Waves version name: {version!r}")
+    return output_dir / "versions" / f"{version}.json"
+
+
+def write_version_shards(output_dir: Path, versions: dict) -> None:
+    shard_dir = output_dir / "versions"
+    shard_dir.mkdir(parents=True, exist_ok=True)
+    for version, payload in versions.items():
+        version_shard_path(output_dir, version).write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
 
 
 def cached_link_exists(output_dir: Path, value) -> bool:
@@ -644,12 +674,10 @@ def main() -> None:
     (args.output / "index.json").write_text(
         json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
-    (args.output / "versions.json").write_text(
-        json.dumps(versions, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
-    )
+    write_version_shards(args.output, versions)
     print(
         f"Wrote Wuthering Waves {args.region} {args.channel} "
-        f"{len(summaries)} versions"
+        f"{len(summaries)} version shards"
     )
 
 

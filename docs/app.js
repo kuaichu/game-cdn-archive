@@ -13,7 +13,8 @@ const state = {
   endfieldIndex: null,
   endfieldVersions: null,
   wuwaIndex: null,
-  wuwaVersions: null,
+  wuwaVersions: {},
+  wuwaVersionPromises: new Map(),
   arknightsIndex: null,
   arknightsVersions: null,
   androidIndex: null,
@@ -437,7 +438,7 @@ const hoyoSummaries = () => hoyoSummary()?.versions || [];
 const endfieldVersion = () => state.endfieldVersions?.[state.version] || null;
 const endfieldSummaries = () => state.endfieldIndex?.versions || [];
 
-const wuwaVersion = () => state.wuwaVersions?.[state.version] || null;
+const wuwaVersion = (version = state.version) => state.wuwaVersions?.[version] || null;
 const wuwaSummaries = () => state.wuwaIndex?.versions || [];
 const arknightsVersion = () => state.arknightsVersions?.[state.version] || null;
 const arknightsSummaries = () => state.arknightsIndex?.versions || [];
@@ -980,7 +981,7 @@ const renderVersionMenu = () => {
   });
 
   $$(".version-row").forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
       state.version = button.dataset.version;
       rememberVersionSelection();
       state.compareVersion = null;
@@ -994,6 +995,9 @@ const renderVersionMenu = () => {
       state.wuwaExpandedFile = "";
       $("#versionMenu").hidden = true;
       $("#selectButton").setAttribute("aria-expanded", "false");
+      if (isWuwa()) {
+        await loadWuwaVersion();
+      }
       render();
     });
   });
@@ -1337,7 +1341,7 @@ const renderLinks = () => {
     $("#jsonLink").classList.remove("disabled");
     $("#urlsLink").href = links?.urls || "#";
     $("#aria2Link").href = links?.aria2 || "#";
-    $("#jsonLink").href = links?.json || "data/wuwa/versions.json";
+    $("#jsonLink").href = links?.json || `data/wuwa/versions/${encodeURIComponent(state.version)}.json`;
     scriptButton.hidden = disabled;
     scriptButton.disabled = disabled;
     return;
@@ -1379,7 +1383,7 @@ const loadNteEntries = async (version = state.version, mode = state.mode) => {
 };
 
 const loadWuwaEntries = async (version = state.version) => {
-  const row = state.wuwaVersions?.[version];
+  const row = await loadWuwaVersion(version);
   const fileList = row?.links?.files?.json;
   if (!fileList) return [];
   const key = `${version}:files`;
@@ -1387,6 +1391,18 @@ const loadWuwaEntries = async (version = state.version) => {
     state.wuwaEntries.set(key, await fetchJson(fileList));
   }
   return state.wuwaEntries.get(key);
+};
+
+const loadWuwaVersion = async (version = state.version) => {
+  if (!version) return null;
+  if (state.wuwaVersions?.[version]) return state.wuwaVersions[version];
+  if (!state.wuwaVersionPromises.has(version)) {
+    const url = `data/wuwa/versions/${encodeURIComponent(version)}.json`;
+    state.wuwaVersionPromises.set(version, fetchJson(url));
+  }
+  const row = await state.wuwaVersionPromises.get(version);
+  state.wuwaVersions[version] = row;
+  return row;
 };
 
 const loadHoyoChunk = async () => {
@@ -2360,8 +2376,8 @@ const bindWuwaBrowserActions = () => {
   });
 };
 
-const renderWuwaPatches = () => {
-  const version = wuwaVersion();
+const renderWuwaPatches = async () => {
+  const version = await loadWuwaVersion();
   const patchFiles = (version?.patches || []).flatMap((route) => route.parts?.length
     ? route.parts.map((entry) => wuwaPatchItem(route, entry))
     : []);
@@ -2797,7 +2813,7 @@ const renderList = async () => {
     if (state.mode === "files") {
       await renderWuwaFiles();
     } else {
-      renderWuwaPatches();
+      await renderWuwaPatches();
     }
     return;
   }
@@ -2849,6 +2865,7 @@ const ensureGameData = async (preferredVersion = null) => {
   if (isWuwa()) {
     const versions = wuwaSummaries().sort((a, b) => compareVersions(b.version, a.version));
     state.version = selectVersionForContext(versions, preferredVersion);
+    await loadWuwaVersion();
     return;
   }
   if (isArknights()) {
@@ -2986,18 +3003,17 @@ Promise.all([
   fetchJson("./data/endfield/index.json"),
   fetchJson("./data/endfield/versions.json"),
   fetchJson("./data/wuwa/index.json"),
-  fetchJson("./data/wuwa/versions.json"),
   fetchJson("./data/arknights/index.json"),
   fetchJson("./data/arknights/versions.json"),
   fetchJson("./data/android/index.json"),
   fetchOptionalJson("./data/hoyo/nap_legacy_candidates.json"),
-]).then(async ([nteCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, wuwaVersions, arknightsIndex, arknightsVersions, androidIndex, napLegacyCandidates]) => {
+]).then(async ([nteCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, arknightsIndex, arknightsVersions, androidIndex, napLegacyCandidates]) => {
   state.nteCatalog = nteCatalog;
   state.hoyoIndex = hoyoIndex;
   state.endfieldIndex = endfieldIndex;
   state.endfieldVersions = endfieldVersions;
   state.wuwaIndex = wuwaIndex;
-  state.wuwaVersions = wuwaVersions;
+  state.wuwaVersions = {};
   state.arknightsIndex = arknightsIndex;
   state.arknightsVersions = arknightsVersions;
   state.androidIndex = androidIndex;
