@@ -16,13 +16,13 @@ reproduction. It does not mirror, repackage, or redistribute game binaries.
 | Neverness to Everness / 异环 | Windows PC | Version manifests decoded and indexed through `1.2.11` (40 available / 74 probed) |
 | Arknights: Endfield / 明日方舟：终末地 | Windows PC | Official launcher API history and archive mirrors indexed through `1.3.3` (7 versions) |
 | Arknights / 明日方舟 | Windows PC | Official launcher package metadata indexed through `74.0.0` (1 versions) |
-| Wuthering Waves / 鸣潮 | Windows PC | Official launcher resource indexes and CDN mirrors indexed through `3.4.1` (10 versions) |
+| Wuthering Waves / 鸣潮 | Windows PC | Official launcher resource indexes and CDN mirrors indexed through `3.4.1` (41 versions) |
 | Genshin Impact / 原神 | Windows PC | HoyoFiles version metadata migrated through `6.7.0` (55 versions) |
 | Honkai: Star Rail / 崩坏：星穹铁道 | Windows PC | HoyoFiles version metadata migrated through `4.3.0` (28 versions) |
 | Zenless Zone Zero / 绝区零 | Windows PC | HoyoFiles version metadata migrated through `3.0.0` (19 versions) |
 | Honkai Impact 3 / 崩坏3 | Windows PC | HoyoFiles version metadata migrated through `8.9.0` (53 versions) |
 
-_Last refreshed from generated archive data: NTE `2026-07-05 07:36:12 +0000`; HoYo `2026-07-05T07:37:51.150Z`; Endfield `2026-07-05T07:41:56.992001+00:00`; Arknights `2026-07-05T07:42:17.897859+00:00`; WuWa `2026-07-05T08:48:50.203917+00:00`._
+_Last refreshed from generated archive data: NTE `2026-07-05 07:36:12 +0000`; HoYo `2026-07-05T07:37:51.150Z`; Endfield `2026-07-05T07:41:56.992001+00:00`; Arknights `2026-07-05T07:42:17.897859+00:00`; WuWa `2026-07-05T11:54:33.814Z`._
 <!-- README_VERSION_SUMMARY_END -->
 
 ## Progress Snapshot
@@ -37,7 +37,7 @@ Current repository snapshot from generated data checked on `2026-07-05 07:36:12 
 | NTE / 异环 PC | Indexed official Windows manifests from `1.0.0` through `1.2.11`; 40 available versions out of 74 probed entries |
 | Endfield / 终末地 PC | Imported `7` CN launcher-history snapshots through `1.3.3`; official signed package URLs and archive mirrors are both preserved |
 | Arknights / 明日方舟 PC | Indexed official launcher package metadata through `74.0.0`; 19 package items in the latest snapshot |
-| Wuthering Waves / 鸣潮 PC | Indexed `10` CN launcher/resource-index snapshots through `3.4.1`; file URLs, CDN mirrors, and patch routes are preserved when official indexes expose them |
+| Wuthering Waves / 鸣潮 PC | Indexed `41` CN launcher/resource-index snapshots through `3.4.1`; file URLs, CDN mirrors, and patch routes are preserved when official indexes expose them |
 | HoYo CN PC catalog | Migrated public HoyoFiles metadata for 原神 `1.0.0-6.7.0` (`55` versions), 崩坏：星穹铁道 `1.0.5-4.3.0` (`28` versions), 绝区零 `0.2.0-3.0.0` (`19` versions), 崩坏3 `3.7.0-8.9.0` (`53` versions) |
 | Android APK archive | Preserves `210` confirmed or historically verified official APK CDN records across `15` games |
 <!-- README_PROGRESS_SNAPSHOT_END -->
@@ -282,26 +282,23 @@ the MIT License.
 
 ## Wuthering Waves Sync
 
-The Wuthering Waves view is generated from the launcher discovery metadata
-documented by [`yuhkix/wuwa-downloader`](https://github.com/yuhkix/wuwa-downloader).
-The sync script follows the current CN live launcher index, reads the official
-resource index, and preserves each file's official CDN URLs, size, and MD5:
+The Wuthering Waves view combines the current CN live launcher index with the
+historical CN client snapshots archived by
+[`TomyJan/GenshinImpact-Client-Version`](https://github.com/TomyJan/GenshinImpact-Client-Version/tree/master/WW/Win/Game/CN).
+The archive importer reads `REL*.json` and `REL*_Res.json` pairs, then preserves
+each file's official CDN URLs, size, and MD5:
 
 ```bash
+python scripts/import_wuwa_tomyjan_archive.py
 python scripts/sync_wuwa.py
 ```
 
-The generated file list includes all CDN mirrors exposed by the launcher. The
-site uses the first CDN as `CDN1` and exposes the remaining mirrors as alternate
-download buttons. Patch routes are shown as launcher-provided update index
-entries; they are indexed for research and are not repackaged by this
-repository.
-
-Some historical CN live resource indexes are also preserved when their
-version-specific official URLs can be independently recovered and verified. The
-current recovered set includes `2.3.1`, `2.6.2`, `2.8.0`, and `3.2.2`, plus the
-current launcher version. These are complete resource indexes, not a guaranteed
-full-version history.
+The generated file list includes all CDN mirrors exposed by each launcher
+snapshot. The site uses the first CDN as `CDN1` and exposes the remaining
+mirrors as alternate download buttons. The live sync then refreshes the current
+official launcher version and patch routes. Patch routes are launcher-provided
+update index entries; they are indexed for research and are not repackaged by
+this repository.
 
 The Wuthering Waves navigation icon is sourced from the official App Store
 listing published by HK KURO GAMES LIMITED.

@@ -1,17 +1,31 @@
 {
-  "source": "https://github.com/yuhkix/wuwa-downloader",
-  "discovery_url": "https://gist.githubusercontent.com/yuhkix/b8796681ac2cd3bab11b7e8cdc022254/raw/4435fd290c07f7f766a6d2ab09ed3096d83b02e3/wuwa.json",
+  "source": "Official Kuro Game launcher CDN API + TomyJan WuWa CN archive",
+  "archive_source": "https://github.com/TomyJan/GenshinImpact-Client-Version/tree/master/WW/Win/Game/CN",
   "selected_launcher_index": "https://prod-cn-alicdn-gamestarter.kurogame.com/launcher/game/G152/10003_Y8xXrXk65DqFHEDgApn3cpK5lfczpFx5/index.json",
-  "last_checked_at": "2026-07-05T08:48:50.203917+00:00",
-  "generated_at": "2026-07-05T08:48:50.203917+00:00",
+  "last_checked_at": "2026-07-05T11:54:33.814Z",
+  "generated_at": "2026-07-05T11:54:33.814Z",
   "game": {
     "id": "wuwa",
     "name": "鸣潮",
     "subName": "Wuthering Waves",
     "shortName": "WW",
+    "kind": "wuwa",
     "icon": "assets/icons/wuwa.png",
-    "kind": "wuwa"
+    "platform": "Windows PC",
+    "region": "cn",
+    "config_url": "https://prod-cn-alicdn-gamestarter.kurogame.com/launcher/game/G152/10003_Y8xXrXk65DqFHEDgApn3cpK5lfczpFx5/index.json"
   },
+  "current_version": "3.4.1",
+  "version_count": 41,
+  "first_version": "1.0.0",
+  "latest_version": "3.4.1",
+  "total_file_bytes": 2821479463757,
+  "total_patch_route_bytes": 4417197892732,
+  "cdn_urls": [
+    "https://pcdownload-aliyun.aki-game.com",
+    "https://pcdownload-huoshan.aki-game.com",
+    "https://pcdownload-qcloud.aki-game.com"
+  ],
   "versions": [
     {
       "version": "3.4.1",
@@ -22,10 +36,16 @@
       "patch_routes": 42,
       "size": 112192502293,
       "uncompressed_size": 112192502293,
-      "last_modified": "Tue, 16 Jun 2026 16:25:46 GMT",
-      "last_modified_source": "resource_index",
-      "last_modified_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.1/NWGqGHYNAOKIDfGQPIItDWmMRdXFPLDN/resource/10003/3.4.1/indexFile.json",
-      "last_modified_status": 200
+      "index_file_md5": "0e4d053ed2786ba75f25b1c7d1b3f697",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.1/NWGqGHYNAOKIDfGQPIItDWmMRdXFPLDN/resource/10003/3.4.1/indexFile.json",
+      "base_url": "launcher/game/G152/10003/3.4.1/NWGqGHYNAOKIDfGQPIItDWmMRdXFPLDN/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/3.4.1-files.json",
+          "urls": "data/wuwa/lists/3.4.1-files.urls.txt",
+          "aria2": "data/wuwa/lists/3.4.1-files.aria2.txt"
+        }
+      }
     },
     {
       "version": "3.4.0",
@@ -36,12 +56,39 @@
       "patch_routes": 1,
       "size": 112192002858,
       "uncompressed_size": 112192002858,
+      "index_file_md5": "00e168c94563b9d36cbd9a53bc5fa3d2",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/indexFile.json",
+      "base_url": "launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/3.4.0-files.json",
+          "urls": "data/wuwa/lists/3.4.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/3.4.0-files.aria2.txt"
+        }
+      },
       "source_note": "captured from official predownload CDN directory",
-      "release_stage": "preload",
-      "last_modified": "Sun, 24 May 2026 03:31:24 GMT",
-      "last_modified_source": "resource_index",
-      "last_modified_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/indexFile.json",
-      "last_modified_status": 200
+      "release_stage": "preload"
+    },
+    {
+      "version": "3.3.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 696,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 107107240364,
+      "uncompressed_size": 107107240364,
+      "index_file_md5": "ce2b92cf36173b793a419c0d02f5d0ef",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.3.0/LwvQueHvaDihmfrFKvPkzsBMsZoMxIAD/resource/10003/3.3.0/indexFile.json",
+      "base_url": "launcher/game/G152/10003/3.3.0/LwvQueHvaDihmfrFKvPkzsBMsZoMxIAD/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/3.3.0-files.json",
+          "urls": "data/wuwa/lists/3.3.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/3.3.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
     },
     {
       "version": "3.2.2",
@@ -52,11 +99,185 @@
       "patch_routes": 0,
       "size": 123336019944,
       "uncompressed_size": 123336019944,
-      "source_note": "recovered from Wayback launcher index snapshot 20260418145837",
-      "last_modified": "Thu, 09 Apr 2026 03:25:22 GMT",
-      "last_modified_source": "resource_index",
-      "last_modified_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.2.2/sUfHBBTqFSGticVyXaeclYjVwoLQhMEE/resource/10003/3.2.2/indexFile.json",
-      "last_modified_status": 200
+      "index_file_md5": "b92e358027a080c53127ed3efdccfc7b",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.2.2/sUfHBBTqFSGticVyXaeclYjVwoLQhMEE/resource/10003/3.2.2/indexFile.json",
+      "base_url": "launcher/game/G152/10003/3.2.2/sUfHBBTqFSGticVyXaeclYjVwoLQhMEE/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/3.2.2-files.json",
+          "urls": "data/wuwa/lists/3.2.2-files.urls.txt",
+          "aria2": "data/wuwa/lists/3.2.2-files.aria2.txt"
+        }
+      },
+      "source_note": "recovered from Wayback launcher index snapshot 20260418145837"
+    },
+    {
+      "version": "3.2.1",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 681,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 123327875987,
+      "uncompressed_size": 123327875987,
+      "index_file_md5": "e664c66b42df6d44163c944b0cb6355f",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.2.1/xmHnEznrUpZTltpCCmmFEpqOSXQokFPZ/resource/10003/3.2.1/indexFile.json",
+      "base_url": "launcher/game/G152/10003/3.2.1/xmHnEznrUpZTltpCCmmFEpqOSXQokFPZ/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/3.2.1-files.json",
+          "urls": "data/wuwa/lists/3.2.1-files.urls.txt",
+          "aria2": "data/wuwa/lists/3.2.1-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "3.1.3",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 675,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 134336999153,
+      "uncompressed_size": 134336999153,
+      "index_file_md5": "37fbd16fc649343c8cead33f63889ee1",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.1.3/PvNFtCqixwXEUMPAdKgOmuOLufiSFQRM/resource/10003/3.1.3/indexFile.json",
+      "base_url": "launcher/game/G152/10003/3.1.3/PvNFtCqixwXEUMPAdKgOmuOLufiSFQRM/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/3.1.3-files.json",
+          "urls": "data/wuwa/lists/3.1.3-files.urls.txt",
+          "aria2": "data/wuwa/lists/3.1.3-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "3.1.2",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 675,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 134336977657,
+      "uncompressed_size": 134336977657,
+      "index_file_md5": "0373273fa73bb50859ed350c9a32eb5d",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.1.2/QwQHXcHHWkmTvIzxQbcwdSEdFYtFSqpF/resource/10003/3.1.2/indexFile.json",
+      "base_url": "launcher/game/G152/10003/3.1.2/QwQHXcHHWkmTvIzxQbcwdSEdFYtFSqpF/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/3.1.2-files.json",
+          "urls": "data/wuwa/lists/3.1.2-files.urls.txt",
+          "aria2": "data/wuwa/lists/3.1.2-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "3.1.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 675,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 134336973526,
+      "uncompressed_size": 134336973526,
+      "index_file_md5": "86c89cbf5296e591ab2b12478cd7dabd",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.1.0/YkPEOzYygqgsEPNjXfTVdGufTzzepKlS/resource/10003/3.1.0/indexFile.json",
+      "base_url": "launcher/game/G152/10003/3.1.1/YkPEOzYygqgsEPNjXfTVdGufTzzepKlS/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/3.1.0-files.json",
+          "urls": "data/wuwa/lists/3.1.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/3.1.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "3.0.3",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 667,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 120746537144,
+      "uncompressed_size": 120746537144,
+      "index_file_md5": "8017065ef398993e8ddda1af67280fe1",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.0.3/HasFopuwqJDCPMNgBwRKRZfVNHGKkjJo/resource/10003/3.0.3/indexFile.json",
+      "base_url": "launcher/game/G152/10003/3.0.3/HasFopuwqJDCPMNgBwRKRZfVNHGKkjJo/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/3.0.3-files.json",
+          "urls": "data/wuwa/lists/3.0.3-files.urls.txt",
+          "aria2": "data/wuwa/lists/3.0.3-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "3.0.2",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 666,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 120746147920,
+      "uncompressed_size": 120746147920,
+      "index_file_md5": "ac5538aeab348f958af3f5b4c49eee03",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.0.2/hMFUrqiBsesqEIAmLyMQZyqkiKqEDFEP/resource/10003/3.0.2/indexFile.json",
+      "base_url": "launcher/game/G152/10003/3.0.2/hMFUrqiBsesqEIAmLyMQZyqkiKqEDFEP/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/3.0.2-files.json",
+          "urls": "data/wuwa/lists/3.0.2-files.urls.txt",
+          "aria2": "data/wuwa/lists/3.0.2-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "3.0.1",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 666,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 120746120700,
+      "uncompressed_size": 120746120700,
+      "index_file_md5": "875625dc14adc940965de9123e201153",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.0.1/BhEXuEVBvxVfOaBGQFqaUbCEvgOBtyso/resource/10003/3.0.1/indexFile.json",
+      "base_url": "launcher/game/G152/10003/3.0.1/BhEXuEVBvxVfOaBGQFqaUbCEvgOBtyso/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/3.0.1-files.json",
+          "urls": "data/wuwa/lists/3.0.1-files.urls.txt",
+          "aria2": "data/wuwa/lists/3.0.1-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "3.0.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 666,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 120746140987,
+      "uncompressed_size": 120746140987,
+      "index_file_md5": "c2706e84d8db8b3e80daccc81c66d1b8",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.0.0/QDYPElFKaZpJXkogwRukzDzAfaEsoupi/resource/10003/3.0.0/indexFile.json",
+      "base_url": "launcher/game/G152/10003/3.0.0/QDYPElFKaZpJXkogwRukzDzAfaEsoupi/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/3.0.0-files.json",
+          "urls": "data/wuwa/lists/3.0.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/3.0.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
     },
     {
       "version": "2.8.0",
@@ -67,11 +288,38 @@
       "patch_routes": 0,
       "size": 88827190223,
       "uncompressed_size": 88827190223,
-      "source_note": "recovered from Wayback launcher index snapshot 20251125142709",
-      "last_modified": "Thu, 06 Nov 2025 15:13:25 GMT",
-      "last_modified_source": "resource_index",
-      "last_modified_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/2.8.0/QqtoWZIMsZkiMQSwcmrYEFqYozeLagjd/resource/10003/2.8.0/indexFile.json",
-      "last_modified_status": 200
+      "index_file_md5": "b0df95e9dc462576257e209df03770a2",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/2.8.0/QqtoWZIMsZkiMQSwcmrYEFqYozeLagjd/resource/10003/2.8.0/indexFile.json",
+      "base_url": "launcher/game/G152/10003/2.8.0/QqtoWZIMsZkiMQSwcmrYEFqYozeLagjd/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.8.0-files.json",
+          "urls": "data/wuwa/lists/2.8.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.8.0-files.aria2.txt"
+        }
+      },
+      "source_note": "recovered from Wayback launcher index snapshot 20251125142709"
+    },
+    {
+      "version": "2.7.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 667,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 83057842295,
+      "uncompressed_size": 83057842295,
+      "index_file_md5": "a47667c70dbe7f539f26dbc07278406d",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/2.7.0/VNpaiLhzRkbHBNdinWAGQduNUBYeHaTD/resource/10003/2.7.0/indexFile.json",
+      "base_url": "launcher/game/G152/10003/2.7.1/VNpaiLhzRkbHBNdinWAGQduNUBYeHaTD/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.7.0-files.json",
+          "urls": "data/wuwa/lists/2.7.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.7.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
     },
     {
       "version": "2.6.2",
@@ -82,11 +330,143 @@
       "patch_routes": 0,
       "size": 71837979399,
       "uncompressed_size": 71837979399,
-      "source_note": "recovered from Wayback launcher index snapshot 20250922105631",
-      "last_modified": "Tue, 09 Sep 2025 15:16:44 GMT",
-      "last_modified_source": "resource_index",
-      "last_modified_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/2.6.2/DYINNoSACrMDUahXEhMxmWqVOHJjvFSH/resource/10003/2.6.2/indexFile.json",
-      "last_modified_status": 200
+      "index_file_md5": "b4c1432f523a85e3162aa2c9d2691974",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/2.6.2/DYINNoSACrMDUahXEhMxmWqVOHJjvFSH/resource/10003/2.6.2/indexFile.json",
+      "base_url": "launcher/game/G152/10003/2.6.2/DYINNoSACrMDUahXEhMxmWqVOHJjvFSH/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.6.2-files.json",
+          "urls": "data/wuwa/lists/2.6.2-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.6.2-files.aria2.txt"
+        }
+      },
+      "source_note": "recovered from Wayback launcher index snapshot 20250922105631"
+    },
+    {
+      "version": "2.6.1",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 659,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 71837974719,
+      "uncompressed_size": 71837974719,
+      "index_file_md5": "ed9cacc04e2fe799e0078b644ac40a29",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/2.6.1/utYNcBqpuWmyrrjvOLhAKKTDgxXEbpLz/resource/10003/2.6.1/indexFile.json",
+      "base_url": "launcher/game/G152/10003/2.6.1/utYNcBqpuWmyrrjvOLhAKKTDgxXEbpLz/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.6.1-files.json",
+          "urls": "data/wuwa/lists/2.6.1-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.6.1-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "2.6.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 659,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 71836015175,
+      "uncompressed_size": 71836015175,
+      "index_file_md5": "8197f169214b5229cb3979a3790dd715",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/2.6.0/PvvUtPgrOKbiVwNKSABGishwOHYgFPUf/resource/10003/2.6.0/indexFile.json",
+      "base_url": "launcher/game/G152/10003/2.6.0/PvvUtPgrOKbiVwNKSABGishwOHYgFPUf/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.6.0-files.json",
+          "urls": "data/wuwa/lists/2.6.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.6.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "2.5.1",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 664,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 65604529375,
+      "uncompressed_size": 65604529375,
+      "index_file_md5": "ca3265d9eaf5a0e9fab59f64cede5533",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/2.5.1/ZIPkpiKaiqccXdHEiydXmehBeQBewVng/resource/10003/2.5.1/indexFile.json",
+      "base_url": "launcher/game/G152/10003/2.5.1/ZIPkpiKaiqccXdHEiydXmehBeQBewVng/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.5.1-files.json",
+          "urls": "data/wuwa/lists/2.5.1-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.5.1-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "2.5.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 664,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 65604492495,
+      "uncompressed_size": 65604492495,
+      "index_file_md5": "a615755abaa2e697e8b2fb2006b6c5e6",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/2.5.0/ieSwSdtdphmQnCTauimbDmdmjpiqYecF/resource/10003/2.5.0/indexFile.json",
+      "base_url": "launcher/game/G152/10003/2.5.0/ieSwSdtdphmQnCTauimbDmdmjpiqYecF/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.5.0-files.json",
+          "urls": "data/wuwa/lists/2.5.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.5.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "2.4.1",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 657,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 60949962698,
+      "uncompressed_size": 60949962698,
+      "index_file_md5": "b74b75af30808a71466aeb0a7c23965e",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/2.4.1/xvTPiuTswLtxvELyyJRZPTioGWgVdimY/resource/10003/2.4.1/indexFile.json",
+      "base_url": "launcher/game/G152/2.4.1/xvTPiuTswLtxvELyyJRZPTioGWgVdimY/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.4.1-files.json",
+          "urls": "data/wuwa/lists/2.4.1-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.4.1-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "2.4.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 657,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 60949951570,
+      "uncompressed_size": 60949951570,
+      "index_file_md5": "52be7e335d58a2a046b7925f7d5cad07",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/2.4.0/pNgonzITOYtApzTGzSYZHYlUqZllvwjD/resource/10003/2.4.0/indexFile.json",
+      "base_url": "launcher/game/G152/2.4.0/pNgonzITOYtApzTGzSYZHYlUqZllvwjD/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.4.0-files.json",
+          "urls": "data/wuwa/lists/2.4.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.4.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
     },
     {
       "version": "2.3.1",
@@ -97,41 +477,332 @@
       "patch_routes": 0,
       "size": 47174353468,
       "uncompressed_size": 47174353468,
-      "source_note": "recorded by external manual-install archive",
-      "last_modified": "Fri, 16 May 2025 08:30:32 GMT",
-      "last_modified_source": "resource_index",
-      "last_modified_url": "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/2.3.1/xAgwspCwdYJOMlAPyLUCRnoCkGlYgUkv/resource.json",
-      "last_modified_status": 200
+      "index_file_md5": "b53a7fd17d02b706b13ae63b063fe168",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/2.3.1/xAgwspCwdYJOMlAPyLUCRnoCkGlYgUkv/resource/10003/2.3.1/indexFile.json",
+      "base_url": "launcher/game/G152/2.3.1/xAgwspCwdYJOMlAPyLUCRnoCkGlYgUkv/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.3.1-files.json",
+          "urls": "data/wuwa/lists/2.3.1-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.3.1-files.aria2.txt"
+        }
+      },
+      "source_note": "recorded by external manual-install archive"
+    },
+    {
+      "version": "2.3.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 660,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 47174333004,
+      "uncompressed_size": 47174333004,
+      "index_file_md5": "89b3a6018df270d9b1aac995198f877e",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/2.3.0/RABESsjbHjMStTvIbpwBbjDnnheQBwOs/resource/10003/2.3.0/indexFile.json",
+      "base_url": "launcher/game/G152/2.3.0/RABESsjbHjMStTvIbpwBbjDnnheQBwOs/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.3.0-files.json",
+          "urls": "data/wuwa/lists/2.3.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.3.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
     },
     {
       "version": "2.2.1",
       "channel": "live",
       "region": "cn",
-      "file_count": 549,
+      "file_count": 646,
       "cdn_count": 3,
       "patch_routes": 0,
-      "size": 34102430362,
-      "uncompressed_size": 34102430362,
-      "source_note": "recovered from pcstarter game index referenced by launcher 2.0.0.0",
-      "last_modified": "Mon, 24 Feb 2025 08:44:55 GMT",
-      "last_modified_source": "resource_index",
-      "last_modified_url": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/2.2.1/WpwvP26jdT38AzADIHmpNI95bpCszODv/resource.json",
-      "last_modified_status": 200
+      "size": 44803264112,
+      "uncompressed_size": 44803264112,
+      "index_file_md5": "dd59f0a76b8aefc4f15c7f37e5cd21b5",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/2.2.1/vZcKpOmdyclKaqmPSXNwvxKrcyqCzbmM/resource/10003/2.2.1/indexFile.json",
+      "base_url": "launcher/game/G152/2.2.1/vZcKpOmdyclKaqmPSXNwvxKrcyqCzbmM/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.2.1-files.json",
+          "urls": "data/wuwa/lists/2.2.1-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.2.1-files.aria2.txt"
+        }
+      },
+      "source_note": "recovered from pcstarter game index referenced by launcher 2.0.0.0"
     },
     {
       "version": "2.2.0",
       "channel": "live",
       "region": "cn",
-      "file_count": 549,
+      "file_count": 646,
       "cdn_count": 3,
       "patch_routes": 0,
-      "size": 34102399018,
-      "uncompressed_size": 34102399018,
-      "source_note": "recovered from pcstarter game index referenced by launcher 2.0.0.0",
-      "last_modified": "Fri, 21 Feb 2025 07:28:05 GMT",
-      "last_modified_source": "resource_index",
-      "last_modified_url": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/2.2.0/4qOQXRgFtEbYo6glSpYrG6N5yMuscF97/resource.json",
-      "last_modified_status": 200
+      "size": 44803256944,
+      "uncompressed_size": 44803256944,
+      "index_file_md5": "8be5047ce72fac7622d05a88c7d87173",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/2.2.0/ifrkqjQOAZQkvNXJcAgTKlbRegvLoMZH/resource/10003/2.2.0/indexFile.json",
+      "base_url": "launcher/game/G152/2.2.0/ifrkqjQOAZQkvNXJcAgTKlbRegvLoMZH/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.2.0-files.json",
+          "urls": "data/wuwa/lists/2.2.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.2.0-files.aria2.txt"
+        }
+      },
+      "source_note": "recovered from pcstarter game index referenced by launcher 2.0.0.0"
+    },
+    {
+      "version": "2.1.1",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 640,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 47944901626,
+      "uncompressed_size": 47944901626,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/2.1.1/cxd9svobNGG332zR8sIUr8KIjDtnEHto/resource.json",
+      "base_url": "pcstarter/prod/game/G152/2.1.1/cxd9svobNGG332zR8sIUr8KIjDtnEHto/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.1.1-files.json",
+          "urls": "data/wuwa/lists/2.1.1-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.1.1-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "2.1.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 553,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 47723980949,
+      "uncompressed_size": 47723980949,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/2.1.0/6KQ52xSK2ndELoez6xDaopwdKY5m0hum/resource.json",
+      "base_url": "pcstarter/prod/game/G152/2.1.0/6KQ52xSK2ndELoez6xDaopwdKY5m0hum/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.1.0-files.json",
+          "urls": "data/wuwa/lists/2.1.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.1.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "2.0.3",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 535,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 44459253528,
+      "uncompressed_size": 44459253528,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/2.0.3/dTSDntvSpAr3nja6SLo6uwpYiAhIu8PL/resource.json",
+      "base_url": "pcstarter/prod/game/G152/2.0.3/dTSDntvSpAr3nja6SLo6uwpYiAhIu8PL/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.0.3-files.json",
+          "urls": "data/wuwa/lists/2.0.3-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.0.3-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "2.0.2",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 535,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 44459244824,
+      "uncompressed_size": 44459244824,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/2.0.2/zyRnMqcYy1bDGLh9TiPPeKWGm1D0ukqE/resource.json",
+      "base_url": "pcstarter/prod/game/G152/2.0.2/zyRnMqcYy1bDGLh9TiPPeKWGm1D0ukqE/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.0.2-files.json",
+          "urls": "data/wuwa/lists/2.0.2-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.0.2-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "2.0.1",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 535,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 44459244560,
+      "uncompressed_size": 44459244560,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/2.0.1/eheTjBIMkdXSFbUSA6jUCDwzfJC3ERBM/resource.json",
+      "base_url": "pcstarter/prod/game/G152/2.0.1/eheTjBIMkdXSFbUSA6jUCDwzfJC3ERBM/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.0.1-files.json",
+          "urls": "data/wuwa/lists/2.0.1-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.0.1-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "2.0.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 535,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 44459244186,
+      "uncompressed_size": 44459244186,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/2.0.0/WatnFnudCyaviYfWSRMGpaunniRKFbf2/resource.json",
+      "base_url": "pcstarter/prod/game/G152/2.0.0/WatnFnudCyaviYfWSRMGpaunniRKFbf2/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/2.0.0-files.json",
+          "urls": "data/wuwa/lists/2.0.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/2.0.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "1.4.3",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 510,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 30155279987,
+      "uncompressed_size": 30155279987,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/1.4.3/2ZzvVjzQwdW0n1WJfwVPMB02ykAWqSnu/resource.json",
+      "base_url": "pcstarter/prod/game/G152/1.4.3/2ZzvVjzQwdW0n1WJfwVPMB02ykAWqSnu/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/1.4.3-files.json",
+          "urls": "data/wuwa/lists/1.4.3-files.urls.txt",
+          "aria2": "data/wuwa/lists/1.4.3-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "1.4.2",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 510,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 30155279475,
+      "uncompressed_size": 30155279475,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/1.4.2/mwyeTRLLUKWMUpXet5ssKyIPsXdX5WF4/resource.json",
+      "base_url": "pcstarter/prod/game/G152/1.4.2/mwyeTRLLUKWMUpXet5ssKyIPsXdX5WF4/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/1.4.2-files.json",
+          "urls": "data/wuwa/lists/1.4.2-files.urls.txt",
+          "aria2": "data/wuwa/lists/1.4.2-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "1.4.1",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 507,
+      "cdn_count": 4,
+      "patch_routes": 0,
+      "size": 30155485377,
+      "uncompressed_size": 30155485377,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/1.4.1/JsqiYbikxML33VEvDCnfhMml30ZouTWM/resource.json",
+      "base_url": "pcstarter/prod/game/G152/1.4.1/JsqiYbikxML33VEvDCnfhMml30ZouTWM/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/1.4.1-files.json",
+          "urls": "data/wuwa/lists/1.4.1-files.urls.txt",
+          "aria2": "data/wuwa/lists/1.4.1-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "1.4.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 507,
+      "cdn_count": 4,
+      "patch_routes": 0,
+      "size": 30155485377,
+      "uncompressed_size": 30155485377,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/1.4.0/EYvxh8s8wHyL10WlhmfB52qa6N1CQDfO/resource.json",
+      "base_url": "pcstarter/prod/game/G152/1.4.0/EYvxh8s8wHyL10WlhmfB52qa6N1CQDfO/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/1.4.0-files.json",
+          "urls": "data/wuwa/lists/1.4.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/1.4.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "1.3.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 509,
+      "cdn_count": 5,
+      "patch_routes": 0,
+      "size": 28401202451,
+      "uncompressed_size": 28401202451,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/1.3.0/xZnXWq0k2gcdGmGs9XJgVaNGxD9OG2Ep/resource.json",
+      "base_url": "pcstarter/prod/game/G152/1.3.0/xZnXWq0k2gcdGmGs9XJgVaNGxD9OG2Ep/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/1.3.0-files.json",
+          "urls": "data/wuwa/lists/1.3.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/1.3.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "1.2.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 512,
+      "cdn_count": 2,
+      "patch_routes": 0,
+      "size": 24948003319,
+      "uncompressed_size": 24948003319,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/1.2.0/q2NeSDor6HI5AKPoesZar8951wbbKaGv/resource.json",
+      "base_url": "pcstarter/prod/game/G152/1.2.0/q2NeSDor6HI5AKPoesZar8951wbbKaGv/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/1.2.0-files.json",
+          "urls": "data/wuwa/lists/1.2.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/1.2.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
     },
     {
       "version": "1.1.1",
@@ -142,11 +813,59 @@
       "patch_routes": 0,
       "size": 22835542606,
       "uncompressed_size": 22835542606,
-      "source_note": "recovered from pcstarter game index snapshot 20240609102130",
-      "last_modified": "Fri, 07 Jun 2024 04:18:50 GMT",
-      "last_modified_source": "resource_index",
-      "last_modified_url": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/1.1.1/a1vBvQhjfBJ6o7uxNFYORQUqH1xIb5pQ/resource.json",
-      "last_modified_status": 200
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/1.1.1/a1vBvQhjfBJ6o7uxNFYORQUqH1xIb5pQ/resource.json",
+      "base_url": "pcstarter/prod/game/G152/1.1.1/a1vBvQhjfBJ6o7uxNFYORQUqH1xIb5pQ/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/1.1.1-files.json",
+          "urls": "data/wuwa/lists/1.1.1-files.urls.txt",
+          "aria2": "data/wuwa/lists/1.1.1-files.aria2.txt"
+        }
+      },
+      "source_note": "recovered from pcstarter game index snapshot 20240609102130"
+    },
+    {
+      "version": "1.1.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 490,
+      "cdn_count": 2,
+      "patch_routes": 0,
+      "size": 22885295841,
+      "uncompressed_size": 22885295841,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/1.1.0/KGaeQlPRMXB2d7mh7cPFWnV8lvCd4tdq/resource.json",
+      "base_url": "pcstarter/prod/game/G152/1.1.0/KGaeQlPRMXB2d7mh7cPFWnV8lvCd4tdq/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/1.1.0-files.json",
+          "urls": "data/wuwa/lists/1.1.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/1.1.0-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
+    },
+    {
+      "version": "1.0.2",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 494,
+      "cdn_count": 2,
+      "patch_routes": 0,
+      "size": 19834662353,
+      "uncompressed_size": 19834662353,
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-huoshan.aki-game.com/pcstarter/prod/game/G152/1.0.2/vs1OuYFIFHCqDUwXEo6GCiiwJ5I5ELZU/resource.json",
+      "base_url": "pcstarter/prod/game/G152/1.0.2/vs1OuYFIFHCqDUwXEo6GCiiwJ5I5ELZU/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/1.0.2-files.json",
+          "urls": "data/wuwa/lists/1.0.2-files.urls.txt",
+          "aria2": "data/wuwa/lists/1.0.2-files.aria2.txt"
+        }
+      },
+      "source_note": "imported from TomyJan/GenshinImpact-Client-Version WuWa CN archive"
     },
     {
       "version": "1.0.0",
@@ -157,11 +876,17 @@
       "patch_routes": 0,
       "size": 19834673288,
       "uncompressed_size": 19834673288,
-      "source_note": "recovered from pcstarter Wangsu mirror path",
-      "last_modified": "Mon, 29 Apr 2024 07:59:50 GMT",
-      "last_modified_source": "resource_index",
-      "last_modified_url": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/1.0.0/ODPITqJuybUecE9ERVZsY8uV7uMHGIUw/resource.json",
-      "last_modified_status": 200
+      "index_file_md5": "",
+      "resource_index": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/1.0.0/ODPITqJuybUecE9ERVZsY8uV7uMHGIUw/resource.json",
+      "base_url": "pcstarter/prod/game/G152/1.0.0/ODPITqJuybUecE9ERVZsY8uV7uMHGIUw/zip/",
+      "links": {
+        "files": {
+          "json": "data/wuwa/lists/1.0.0-files.json",
+          "urls": "data/wuwa/lists/1.0.0-files.urls.txt",
+          "aria2": "data/wuwa/lists/1.0.0-files.aria2.txt"
+        }
+      },
+      "source_note": "recovered from pcstarter Wangsu mirror path"
     }
   ]
 }
