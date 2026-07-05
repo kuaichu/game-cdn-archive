@@ -64,7 +64,7 @@ jobs:
                   with urllib.request.urlopen(request, timeout=30) as response:
                       payload = json.loads(response.read().decode("utf-8"))
               except urllib.error.HTTPError as exc:
-                      payload = json.loads(exc.read().decode("utf-8"))
+                  payload = json.loads(exc.read().decode("utf-8"))
               ok = bool(payload.get("success"))
               print(f"{label}: {'ok' if ok else 'failed'}")
               if not ok:
