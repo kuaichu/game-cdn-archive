@@ -67,7 +67,7 @@ ranges are:
 | 战双帕弥什 / Punishing: Gray Raven | `4.5.0` | `1` version buckets / `2` records | `2` available; `0` unavailable or historical dead-link records |
 | 重返未来：1999 / Reverse: 1999 | `1.0.3` -> `3.8.0` | `2` version buckets / `2` records | `1` available; `1` unavailable or historical dead-link records |
 | 尘白禁区 / Snowbreak: Containment Zone | `1.6.0.99` -> `3.6.0.122` | `9` version buckets / `9` records | `4` available; `5` unavailable or historical dead-link records |
-| 鸣潮 / Wuthering Waves | `1.0.0` -> `3.4.1` | `21` version buckets / `21` records | `15` available; `6` unavailable or historical dead-link records |
+| 鸣潮 / Wuthering Waves | `0.7.0` -> `3.4.1` | `22` version buckets / `22` records | `15` available; `7` unavailable or historical dead-link records |
 <!-- README_ANDROID_PROGRESS_END -->
 
 More games can be added later as long as their official launcher manifests or

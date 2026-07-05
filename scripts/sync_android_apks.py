@@ -953,6 +953,22 @@ KNOWN_APKS = [
     # === wuwa (鸣潮) - recovered from CDX ===
     {
         "game_id": "wuwa",
+        "version": "0.7.0",
+        "channel": "kurogame",
+        "url": "https://mirrors-package-mc.kurogame.com/client/download/20230418111737_A4Xe1fhoNEOpWYsVfy/mc_0.7.0_72216273_9e6c7cc5565764257c2866c25d4e3c10_shelled.apk",
+        "source": "Wayback Machine CDX historical URL; original domain no longer resolves",
+        "updated_at": "2023-04-19T09:31:09+00:00",
+        "updated_at_source": "wayback_cdx_timestamp",
+        "archive": {
+            "timestamp": "20230419093109",
+            "status": 200,
+            "mimetype": "application/vnd.android.package-archive",
+            "length": 1781574810,
+            "digest": "4CDBQR6PFKPZA42HKMOZVH44QH7OF2VQ",
+        },
+    },
+    {
+        "game_id": "wuwa",
         "version": "1.0.0",
         "channel": "official",
         "url": "https://mirrors-package-mc.aki-game.com/client/download/20240515180358_GMXTiY9I3QUipDJypL/%E9%B8%A3%E6%BD%AE_1.0.0_official.apk",
@@ -1580,6 +1596,22 @@ DOWNLOAD_PORTER_APIS = [
         "source": "official CDN URL recovered from archive.org CDX search",
     },
     # === wuwa (鸣潮) - recovered from archive.org CDX ===
+    {
+        "game_id": "wuwa",
+        "version": "0.7.0",
+        "channel": "kurogame",
+        "url": "https://mirrors-package-mc.kurogame.com/client/download/20230418111737_A4Xe1fhoNEOpWYsVfy/mc_0.7.0_72216273_9e6c7cc5565764257c2866c25d4e3c10_shelled.apk",
+        "source": "Wayback Machine CDX historical URL; original domain no longer resolves",
+        "updated_at": "2023-04-19T09:31:09+00:00",
+        "updated_at_source": "wayback_cdx_timestamp",
+        "archive": {
+            "timestamp": "20230419093109",
+            "status": 200,
+            "mimetype": "application/vnd.android.package-archive",
+            "length": 1781574810,
+            "digest": "4CDBQR6PFKPZA42HKMOZVH44QH7OF2VQ",
+        },
+    },
     {
         "game_id": "wuwa",
         "version": "1.0.0",
