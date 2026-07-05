@@ -82,7 +82,6 @@ jobs:
           set -euo pipefail
           rm -rf .pages-deploy
           cp -a docs .pages-deploy
-          rm -f .pages-deploy/data/wuwa/versions.json
           oversized="$(find .pages-deploy -type f -size +25M -print)"
           if [ -n "$oversized" ]; then
             echo "Files over Cloudflare Pages 25 MiB limit:"

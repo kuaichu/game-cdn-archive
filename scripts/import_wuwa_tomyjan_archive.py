@@ -16,17 +16,17 @@ from sync_wuwa import (
     GAME_INFO,
     INDEX_PATH,
     LISTS_DIR,
-    VERSIONS_PATH,
     WUWA_DATA,
     full_url,
+    load_versions_archive,
     normalize_cdn,
-    normalize_dest,
     resource_entries,
     summary_for,
     utc_now,
     version_key,
     write_entry_lists,
     write_json_if_changed,
+    write_versions_archive,
 )
 
 ARCHIVE_SOURCE = "https://github.com/TomyJan/GenshinImpact-Client-Version/tree/master/WW/Win/Game/CN"
@@ -144,9 +144,7 @@ def main() -> None:
     WUWA_DATA.mkdir(parents=True, exist_ok=True)
     LISTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    versions: dict[str, Any] = {}
-    if VERSIONS_PATH.exists():
-        versions = load_json(VERSIONS_PATH)
+    versions = load_versions_archive()
 
     imported = 0
     for config_path in sorted(source_dir.glob("REL*.json")):
@@ -184,9 +182,10 @@ def main() -> None:
         "versions": summaries,
     }
 
-    write_json_if_changed(VERSIONS_PATH, ordered_versions)
+    versions_archive = write_versions_archive(ordered_versions, generated_at)
     write_json_if_changed(INDEX_PATH, index_data)
     print(f"Imported {imported} WuWa CN versions from {source_dir}")
+    print(f"Version shards: {versions_archive['shard_count']}")
     if temp_dir:
         temp_dir.cleanup()
 

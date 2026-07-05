@@ -13,6 +13,7 @@ const state = {
   wuwaVersions: null,
   hoyoVersions: new Map(),
   nteEntries: new Map(),
+  wuwaEntries: new Map(),
   chunkEntries: new Map(),
   nteAnalytics: null,
   nteAnalyticsPromise: null,
@@ -104,6 +105,7 @@ const endfieldModes = [
 
 const wuwaModes = [
   ["versions", "版本链路"],
+  ["files", "文件清单"],
   ["compare", "版本对比"],
 ];
 
@@ -233,6 +235,10 @@ const commandFor = () => {
     return `aria2c -c -x16 -s16 data/endfield/lists/${state.version}_${state.mode === "patches" ? "patches" : "packages"}.aria2.txt`;
   }
   if (isWuwa()) {
+    const links = wuwaVersion()?.links?.files;
+    if (state.mode === "files" && links?.aria2) {
+      return `aria2c -c -x16 -s16 ${links.aria2}`;
+    }
     return `python scripts\\sync_wuwa.py`;
   }
   return `aria2c -c -x16 -s16 <从页面复制对应 URL 列表>`;
@@ -479,14 +485,23 @@ const renderLinks = () => {
   }
 
   if (isWuwa()) {
+    if (state.mode === "versions") {
+      $("#urlsLink").classList.add("disabled");
+      $("#aria2Link").classList.add("disabled");
+      $("#jsonLink").classList.remove("disabled");
+      $("#urlsLink").href = "#";
+      $("#aria2Link").href = "#";
+      $("#jsonLink").href = "data/wuwa/versions.json";
+      return;
+    }
     const links = wuwaVersion()?.links?.files;
     const disabled = !links || state.mode === "compare";
     $("#urlsLink").classList.toggle("disabled", disabled);
     $("#aria2Link").classList.toggle("disabled", disabled);
-    $("#jsonLink").classList.toggle("disabled", false);
+    $("#jsonLink").classList.toggle("disabled", disabled);
     $("#urlsLink").href = links?.urls || "#";
     $("#aria2Link").href = links?.aria2 || "#";
-    $("#jsonLink").href = links?.json || "data/wuwa/index.json";
+    $("#jsonLink").href = links?.json || "#";
     return;
   }
 
@@ -519,6 +534,17 @@ const loadNteEntries = async (version = state.version, mode = state.mode) => {
     state.nteEntries.set(key, await response.json());
   }
   return state.nteEntries.get(key);
+};
+
+const loadWuwaEntries = async (version = state.version) => {
+  const row = wuwaVersions().find((item) => item.version === version);
+  const fileJson = row?.links?.files?.json;
+  if (!fileJson) return [];
+  if (!state.wuwaEntries.has(version)) {
+    const response = await fetch(fileJson);
+    state.wuwaEntries.set(version, await response.json());
+  }
+  return state.wuwaEntries.get(version);
 };
 
 const loadHoyoChunk = async () => {
@@ -697,9 +723,23 @@ const nteComparableItems = async (version) => {
   }));
 };
 
+const wuwaComparableItems = async (version) => {
+  const entries = await loadWuwaEntries(version);
+  return entries.map((item) => ({
+    key: item.dest || item.name,
+    title: item.name || item.dest,
+    subtitle: item.dest || item.url,
+    badge: "完整文件",
+    size: Number(item.size || 0),
+    hash: item.md5 || "",
+    url: item.url,
+  }));
+};
+
 const comparableItems = async (version) => {
   if (isNte()) return nteComparableItems(version);
   if (isEndfield()) return endfieldComparableItems(version);
+  if (isWuwa()) return wuwaComparableItems(version);
   return hoyoComparableItems(version);
 };
 
@@ -1017,7 +1057,9 @@ const renderCompare = async () => {
   const modifiedNetBytes = sumModifiedDelta(diff.modified);
   const sourceHint = isNte()
     ? "异环基于完整文件清单做文件级对比。"
-    : "当前基于本站保存的归档条目对比；要做压缩包内部文件级对比，需要额外保存 Chunk/Manifest 文件索引。";
+    : isWuwa()
+      ? "鸣潮基于本站保存的官方 resource 文件清单做文件级对比。"
+      : "当前基于本站保存的归档条目对比；要做压缩包内部文件级对比，需要额外保存 Chunk/Manifest 文件索引。";
 
   const selector = `
     <div class="compare-toolbar">
@@ -1373,7 +1415,24 @@ const renderList = async () => {
   }
 
   if (isWuwa()) {
-    renderWuwaVersionChain();
+    if (state.mode === "versions") {
+      renderWuwaVersionChain();
+      return;
+    }
+    const entries = await loadWuwaEntries();
+    const filtered = filterEntries(entries);
+    $("#fileList").innerHTML = filtered
+      .map((entry, index) => fileCard({
+        badge: "完整文件",
+        title: entry.name || entry.dest,
+        subtitle: entry.dest || entry.url,
+        size: Number(entry.size || 0),
+        hash: entry.md5 || "",
+        url: entry.url,
+        count: `${index + 1}/${filtered.length}`,
+      }))
+      .join("") || `<div class="empty">没有匹配到文件</div>`;
+    bindCardActions();
     return;
   }
 

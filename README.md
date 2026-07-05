@@ -22,7 +22,7 @@ reproduction. It does not mirror, repackage, or redistribute game binaries.
 | Zenless Zone Zero / 绝区零 | Windows PC | HoyoFiles version metadata migrated through `3.0.0` (19 versions) |
 | Honkai Impact 3 / 崩坏3 | Windows PC | HoyoFiles version metadata migrated through `8.9.0` (53 versions) |
 
-_Last refreshed from generated archive data: NTE `2026-07-05 07:36:12 +0000`; HoYo `2026-07-05T07:37:51.150Z`; Endfield `2026-07-05T07:41:56.992001+00:00`; Arknights `2026-07-05T07:42:17.897859+00:00`; WuWa `2026-07-05T11:54:33.814Z`._
+_Last refreshed from generated archive data: NTE `2026-07-05 07:36:12 +0000`; HoYo `2026-07-05T07:37:51.150Z`; Endfield `2026-07-05T07:41:56.992001+00:00`; Arknights `2026-07-05T07:42:17.897859+00:00`; WuWa `2026-07-05T12:46:12.661Z`._
 <!-- README_VERSION_SUMMARY_END -->
 
 ## Progress Snapshot
@@ -140,7 +140,8 @@ docs/
       lists/                Preferred URL and aria2 download lists
     wuwa/
       index.json            Current launcher/resource-index summary
-      versions.json         File URLs, MD5 values, CDN mirrors, and patch routes
+      versions.json         Manifest for sharded full-version metadata
+      versions/             Sharded file URLs, MD5 values, CDN mirrors, and patch routes
       lists/                URL, aria2, and JSON file lists
 scripts/
   archive_reslist_versions.py

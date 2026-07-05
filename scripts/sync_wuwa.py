@@ -17,6 +17,9 @@ WUWA_DATA = ROOT / "docs" / "data" / "wuwa"
 LISTS_DIR = WUWA_DATA / "lists"
 INDEX_PATH = WUWA_DATA / "index.json"
 VERSIONS_PATH = WUWA_DATA / "versions.json"
+VERSIONS_SHARDS_DIR = WUWA_DATA / "versions"
+VERSIONS_SHARD_MAX_BYTES = 24_000_000
+VERSIONS_SHARD_FORMAT = "wuwa_versions_shards_v1"
 
 GAME_CLIENT_INDEX = (
     "https://prod-cn-alicdn-gamestarter.kurogame.com/launcher/game/G152/"
@@ -74,6 +77,14 @@ def write_json_if_changed(path: Path, data: Any, indent: int = 2) -> bool:
     return True
 
 
+def json_text(data: Any, indent: int = 2) -> str:
+    return json.dumps(data, ensure_ascii=False, indent=indent) + "\n"
+
+
+def json_size(data: Any, indent: int = 2) -> int:
+    return len(json_text(data, indent=indent).encode("utf-8"))
+
+
 def write_text_if_changed(path: Path, text: str) -> bool:
     if path.exists() and path.read_text(encoding="utf-8") == text:
         return False
@@ -84,6 +95,100 @@ def write_text_if_changed(path: Path, text: str) -> bool:
 
 def version_key(version: str) -> tuple[int, ...]:
     return tuple(int(part) for part in version.split(".") if part.isdigit())
+
+
+def shard_public_path(path: Path) -> str:
+    return path.relative_to(ROOT / "docs").as_posix()
+
+
+def resolve_public_path(path: str) -> Path:
+    normalized = path.lstrip("/")
+    if normalized.startswith("data/"):
+        return ROOT / "docs" / normalized
+    return WUWA_DATA / normalized
+
+
+def load_versions_archive() -> dict[str, Any]:
+    if not VERSIONS_PATH.exists():
+        return {}
+
+    data = json.loads(VERSIONS_PATH.read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        return {}
+
+    if data.get("format") != VERSIONS_SHARD_FORMAT:
+        return data
+
+    versions: dict[str, Any] = {}
+    for shard in data.get("shards", []):
+        shard_path = resolve_public_path(str(shard.get("path") or ""))
+        if not shard_path.exists():
+            continue
+        shard_data = json.loads(shard_path.read_text(encoding="utf-8"))
+        versions.update(shard_data.get("versions", shard_data))
+    return versions
+
+
+def split_versions_into_shards(versions: dict[str, Any]) -> list[dict[str, Any]]:
+    shards: list[dict[str, Any]] = []
+    current: dict[str, Any] = {}
+
+    for version, version_data in versions.items():
+        candidate = {**current, version: version_data}
+        if current and json_size({"versions": candidate}) > VERSIONS_SHARD_MAX_BYTES:
+            shards.append(current)
+            current = {version: version_data}
+        else:
+            current = candidate
+
+    if current:
+        shards.append(current)
+    return shards
+
+
+def cleanup_old_version_shards(keep: set[Path]) -> None:
+    if not VERSIONS_SHARDS_DIR.exists():
+        return
+    for path in VERSIONS_SHARDS_DIR.glob("versions_*.json"):
+        if path not in keep:
+            path.unlink()
+
+
+def write_versions_archive(versions: dict[str, Any], generated_at: str) -> dict[str, Any]:
+    VERSIONS_SHARDS_DIR.mkdir(parents=True, exist_ok=True)
+    shard_maps = split_versions_into_shards(versions)
+    shard_infos: list[dict[str, Any]] = []
+    written_paths: set[Path] = set()
+
+    for index, shard_versions in enumerate(shard_maps, start=1):
+        shard_path = VERSIONS_SHARDS_DIR / f"versions_{index:03d}.json"
+        shard_data = {
+            "format": VERSIONS_SHARD_FORMAT,
+            "generated_at": generated_at,
+            "versions": shard_versions,
+        }
+        write_json_if_changed(shard_path, shard_data)
+        size = shard_path.stat().st_size
+        written_paths.add(shard_path)
+        shard_infos.append(
+            {
+                "path": shard_public_path(shard_path),
+                "versions": list(shard_versions.keys()),
+                "bytes": size,
+            }
+        )
+
+    cleanup_old_version_shards(written_paths)
+    manifest = {
+        "format": VERSIONS_SHARD_FORMAT,
+        "generated_at": generated_at,
+        "version_count": len(versions),
+        "max_shard_bytes": VERSIONS_SHARD_MAX_BYTES,
+        "shard_count": len(shard_infos),
+        "shards": shard_infos,
+    }
+    write_json_if_changed(VERSIONS_PATH, manifest)
+    return manifest
 
 
 def normalize_cdn(url: str) -> str:
@@ -238,9 +343,7 @@ def main() -> None:
     WUWA_DATA.mkdir(parents=True, exist_ok=True)
     LISTS_DIR.mkdir(parents=True, exist_ok=True)
 
-    old_versions: dict[str, Any] = {}
-    if VERSIONS_PATH.exists():
-        old_versions = json.loads(VERSIONS_PATH.read_text(encoding="utf-8"))
+    old_versions = load_versions_archive()
 
     print("Fetching WuWa CN launcher index...")
     raw = fetch_json(GAME_CLIENT_INDEX)
@@ -276,13 +379,14 @@ def main() -> None:
         "versions": summaries,
     }
 
-    write_json_if_changed(VERSIONS_PATH, ordered_versions)
+    versions_archive = write_versions_archive(ordered_versions, generated_at)
     write_json_if_changed(INDEX_PATH, index_data)
 
     print(f"Current: {current_version}")
     print(f"Files: {current['file_count']}")
     print(f"Patch routes: {len(current['patches'])}")
     print(f"Versions kept: {len(ordered_versions)}")
+    print(f"Version shards: {versions_archive['shard_count']}")
 
 
 if __name__ == "__main__":
