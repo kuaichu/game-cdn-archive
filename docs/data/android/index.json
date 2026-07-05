@@ -3784,9 +3784,66 @@
         },
         {
           "game_id": "bh3",
+          "version": "4.2.0",
+          "channel": "guofu",
+          "url": "https://app.bh3.com/public/Android/20200813-192255-gf_android_ota-versions-v4_2-Rosemarys_Nocturne_guofu.apk",
+          "source": "User-provided historical URL; original domain no longer resolves",
+          "status": 0,
+          "content_type": "",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+          "filename": "20200813-192255-gf_android_ota-versions-v4_2-Rosemarys_Nocturne_guofu.apk",
+          "captured_at": "2026-07-05T09:10:00.000000+00:00",
+          "updated_at": "2020-08-13T19:22:55+00:00",
+          "updated_at_source": "filename_timestamp"
+        },
+        {
+          "game_id": "bh3",
+          "version": "4.1.0",
+          "channel": "guofu",
+          "url": "https://app.bh3.com/public/Android/20200702-194500-gf_android_ota-versions-v4_1-As_Thunders_Filled_the_Sky_guofu.apk",
+          "source": "User-provided historical URL; original domain no longer resolves",
+          "status": 0,
+          "content_type": "",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+          "filename": "20200702-194500-gf_android_ota-versions-v4_1-As_Thunders_Filled_the_Sky_guofu.apk",
+          "captured_at": "2026-07-05T09:10:00.000000+00:00",
+          "updated_at": "2020-07-02T19:45:00+00:00",
+          "updated_at_source": "filename_timestamp"
+        },
+        {
+          "game_id": "bh3",
+          "version": "3.7.0",
+          "channel": "guofu",
+          "url": "https://app.bh3.com/public/Android/20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
+          "source": "User-provided historical URL; original domain no longer resolves",
+          "status": 0,
+          "content_type": "",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+          "filename": "20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
+          "captured_at": "2026-07-05T09:10:00.000000+00:00",
+          "updated_at": "2020-01-09T17:16:48+00:00",
+          "updated_at_source": "filename_timestamp"
+        },
+        {
+          "game_id": "bh3",
           "version": "3.6.0",
           "channel": "guofu",
-          "url": "https://app.bh3.com/public/Android/20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja%%20Noir_guofu.apk",
+          "url": "https://app.bh3.com/public/Android/20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja's%20Noir_guofu.apk",
           "source": "Wayback Machine historical URL; original domain no longer resolves",
           "status": 0,
           "content_type": "",
@@ -3796,7 +3853,7 @@
           "md5": "",
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
-          "filename": "20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja% Noir_guofu.apk",
+          "filename": "20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja's Noir_guofu.apk",
           "captured_at": "2026-06-08T18:34:52.700463+00:00",
           "updated_at": "2019-11-21T20:33:21+00:00",
           "updated_at_source": "filename_timestamp"
@@ -3876,6 +3933,44 @@
           "captured_at": "2026-06-08T18:34:52.700463+00:00",
           "updated_at": "2019-05-31T20:13:55+00:00",
           "updated_at_source": "filename_timestamp"
+        },
+        {
+          "game_id": "bh3",
+          "version": "2.2.0",
+          "channel": "guofu",
+          "url": "https://app.bh3.com/public/Android/20180329-android_versions_v2_2_the_Guardian_of_shenzhou_guofu.apk",
+          "source": "User-provided historical URL; original domain no longer resolves",
+          "status": 0,
+          "content_type": "",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+          "filename": "20180329-android_versions_v2_2_the_Guardian_of_shenzhou_guofu.apk",
+          "captured_at": "2026-07-05T09:10:00.000000+00:00",
+          "updated_at": "2018-03-29T00:00:00+00:00",
+          "updated_at_source": "filename_date"
+        },
+        {
+          "game_id": "bh3",
+          "version": "2.1.1",
+          "channel": "guofu",
+          "url": "https://app.bh3.com/public/Android/20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
+          "source": "User-provided historical URL; original domain no longer resolves",
+          "status": 0,
+          "content_type": "",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+          "filename": "20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
+          "captured_at": "2026-07-05T09:10:00.000000+00:00",
+          "updated_at": "2018-02-08T00:00:00+00:00",
+          "updated_at_source": "filename_date"
         },
         {
           "game_id": "bh3",
@@ -4090,6 +4185,25 @@
           "captured_at": "2026-06-08T18:34:52.700463+00:00",
           "updated_at": "2016-09-27T20:40:34+00:00",
           "updated_at_source": "filename_timestamp"
+        },
+        {
+          "game_id": "bh3",
+          "version": "0.9.1",
+          "channel": "guofu",
+          "url": "http://app.bh3.com:80/public/Android/Bh3_Guofu_Android-v0_9_1_public-0914.apk",
+          "source": "User-provided historical URL; original domain no longer resolves",
+          "status": 0,
+          "content_type": "",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+          "filename": "Bh3_Guofu_Android-v0_9_1_public-0914.apk",
+          "captured_at": "2026-07-05T09:10:00.000000+00:00",
+          "updated_at": "2016-09-14T00:00:00+00:00",
+          "updated_at_source": "filename_date"
         }
       ],
       "links": {
@@ -4203,6 +4317,21 @@
           "aria2": "data/android/lists/bh3_4.3.0_android.aria2.txt",
           "json": "data/android/lists/bh3_4.3.0_android.json"
         },
+        "4.2.0": {
+          "urls": "data/android/lists/bh3_4.2.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_4.2.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_4.2.0_android.json"
+        },
+        "4.1.0": {
+          "urls": "data/android/lists/bh3_4.1.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_4.1.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_4.1.0_android.json"
+        },
+        "3.7.0": {
+          "urls": "data/android/lists/bh3_3.7.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_3.7.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_3.7.0_android.json"
+        },
         "3.6.0": {
           "urls": "data/android/lists/bh3_3.6.0_android.urls.txt",
           "aria2": "data/android/lists/bh3_3.6.0_android.aria2.txt",
@@ -4227,6 +4356,16 @@
           "urls": "data/android/lists/bh3_3.2.0_android.urls.txt",
           "aria2": "data/android/lists/bh3_3.2.0_android.aria2.txt",
           "json": "data/android/lists/bh3_3.2.0_android.json"
+        },
+        "2.2.0": {
+          "urls": "data/android/lists/bh3_2.2.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_2.2.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_2.2.0_android.json"
+        },
+        "2.1.1": {
+          "urls": "data/android/lists/bh3_2.1.1_android.urls.txt",
+          "aria2": "data/android/lists/bh3_2.1.1_android.aria2.txt",
+          "json": "data/android/lists/bh3_2.1.1_android.json"
         },
         "2.0.0": {
           "urls": "data/android/lists/bh3_2.0.0_android.urls.txt",
@@ -4287,6 +4426,11 @@
           "urls": "data/android/lists/bh3_0.9.9_android.urls.txt",
           "aria2": "data/android/lists/bh3_0.9.9_android.aria2.txt",
           "json": "data/android/lists/bh3_0.9.9_android.json"
+        },
+        "0.9.1": {
+          "urls": "data/android/lists/bh3_0.9.1_android.urls.txt",
+          "aria2": "data/android/lists/bh3_0.9.1_android.aria2.txt",
+          "json": "data/android/lists/bh3_0.9.1_android.json"
         }
       }
     },
