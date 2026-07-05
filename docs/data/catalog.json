@@ -12,7 +12,7 @@
     "config_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/config.xml",
     "object_template": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Res/{first}/{md5}.{size}"
   },
-  "generated_at": "2026-07-04 00:19:51 +0000",
+  "generated_at": "2026-07-05 00:15:50 +0000",
   "versions": [
     {
       "version": "1.0.0",
@@ -60,7 +60,7 @@
       "version": "1.0.2",
       "status": 404,
       "last_modified": null,
-      "content_length": 484,
+      "content_length": 488,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.2/ResList.bin.zip"
     },
     {
@@ -517,7 +517,7 @@
       "version": "1.0.28",
       "status": 404,
       "last_modified": null,
-      "content_length": 489,
+      "content_length": 485,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.0.28/ResList.bin.zip"
     },
     {
@@ -664,7 +664,7 @@
       "version": "1.1.6",
       "status": 404,
       "last_modified": null,
-      "content_length": 484,
+      "content_length": 488,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.6/ResList.bin.zip"
     },
     {
@@ -861,7 +861,7 @@
       "version": "1.1.17",
       "status": 404,
       "last_modified": null,
-      "content_length": 485,
+      "content_length": 489,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.17/ResList.bin.zip"
     },
     {
@@ -875,21 +875,21 @@
       "version": "1.1.19",
       "status": 404,
       "last_modified": null,
-      "content_length": 489,
+      "content_length": 485,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.19/ResList.bin.zip"
     },
     {
       "version": "1.1.20",
       "status": 404,
       "last_modified": null,
-      "content_length": 485,
+      "content_length": 489,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.20/ResList.bin.zip"
     },
     {
       "version": "1.1.21",
       "status": 404,
       "last_modified": null,
-      "content_length": 485,
+      "content_length": 489,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.21/ResList.bin.zip"
     },
     {
@@ -938,7 +938,7 @@
       "version": "1.1.28",
       "status": 404,
       "last_modified": null,
-      "content_length": 485,
+      "content_length": 489,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.28/ResList.bin.zip"
     },
     {
@@ -952,7 +952,7 @@
       "version": "1.1.30",
       "status": 404,
       "last_modified": null,
-      "content_length": 485,
+      "content_length": 489,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.1.30/ResList.bin.zip"
     },
     {
@@ -973,21 +973,21 @@
       "version": "1.2.2",
       "status": 404,
       "last_modified": null,
-      "content_length": 488,
+      "content_length": 484,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.2/ResList.bin.zip"
     },
     {
       "version": "1.2.3",
       "status": 404,
       "last_modified": null,
-      "content_length": 484,
+      "content_length": 488,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.3/ResList.bin.zip"
     },
     {
       "version": "1.2.4",
       "status": 404,
       "last_modified": null,
-      "content_length": 484,
+      "content_length": 488,
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.4/ResList.bin.zip"
     },
     {
@@ -1084,7 +1084,36 @@
       },
       "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.9/ResList.bin.zip",
       "reslist_bytes": 82026
+    },
+    {
+      "version": "1.2.10",
+      "status": 404,
+      "last_modified": null,
+      "content_length": 485,
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.10/ResList.bin.zip"
+    },
+    {
+      "version": "1.2.11",
+      "status": 200,
+      "last_modified": "Sat, 04 Jul 2026 21:00:01 GMT",
+      "content_length": 84250,
+      "full": {
+        "items": 73,
+        "bytes": 65840970170,
+        "json": "data/url_lists/1.2.11-full.json",
+        "urls": "data/url_lists/1.2.11-full.urls.txt",
+        "aria2": "data/url_lists/1.2.11-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1171,
+        "bytes": 163554304091,
+        "json": "data/url_lists/1.2.11-patches.json",
+        "urls": "data/url_lists/1.2.11-patches.urls.txt",
+        "aria2": "data/url_lists/1.2.11-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/1.2.11/ResList.bin.zip",
+      "reslist_bytes": 84250
     }
   ],
-  "last_checked_at": "2026-07-04 07:13:22 +0000"
+  "last_checked_at": "2026-07-05 00:14:38 +0000"
 }
