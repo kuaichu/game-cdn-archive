@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 import json
 import time
 import urllib.request
@@ -156,7 +157,15 @@ def build(output_dir: Path) -> None:
 
 
 def main() -> None:
-    build(Path("docs/data/arknights"))
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--output",
+        type=Path,
+        default=Path("docs/data/arknights"),
+        help="Directory to write Arknights PC index, versions, and lists.",
+    )
+    args = parser.parse_args()
+    build(args.output)
 
 
 if __name__ == "__main__":
