@@ -674,8 +674,8 @@ KNOWN_APKS = [
     {
         "game_id": "bh3",
         "version": "7.3.0",
-        "channel": "gw",
-        "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
+        "channel": "guofu",
+        "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_guofu.apk",
         "source": "official CDN URL captured manually",
     },
     {
@@ -1339,8 +1339,8 @@ KNOWN_APKS = [
     {
         "game_id": "bh3",
         "version": "8.6.0",
-        "channel": "guofu",
-        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20251126103029_6BdFwrhJbJwHQQAX/CPS/20251119-224340-gf_android_ota-versions-v8_6-Banquet_Operative_guofu.apk",
+        "channel": "gw",
+        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20251126103029_6BdFwrhJbJwHQQAX/CPS/20251119-224340-gf_android_ota-versions-v8_6-Banquet_Operative_gw.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
     },
     # === bh3 - dead links (app.bh3.com) ===

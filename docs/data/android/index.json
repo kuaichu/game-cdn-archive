@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-07-05T01:59:44.437706+00:00",
-  "generated_at": "2026-07-05T01:59:44.437706+00:00",
+  "last_checked_at": "2026-07-05T02:03:55.017956+00:00",
+  "generated_at": "2026-07-05T02:03:55.017956+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -3150,19 +3150,19 @@
         {
           "game_id": "bh3",
           "version": "8.6.0",
-          "channel": "guofu",
-          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20251126103029_6BdFwrhJbJwHQQAX/CPS/20251119-224340-gf_android_ota-versions-v8_6-Banquet_Operative_guofu.apk",
+          "channel": "gw",
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20251126103029_6BdFwrhJbJwHQQAX/CPS/20251119-224340-gf_android_ota-versions-v8_6-Banquet_Operative_gw.apk",
           "source": "official CDN URL recovered from archive.org CDX search",
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
-          "size": 694020897,
-          "last_modified": "Wed, 26 Nov 2025 02:34:43 GMT",
-          "etag": "6BEB9A600EDB8712D52FDA382477D274-10",
+          "size": 694020894,
+          "last_modified": "Wed, 26 Nov 2025 02:34:42 GMT",
+          "etag": "4EF53A4B86B31F5FCB0F47E220DA6858-10",
           "md5": "",
           "crc64": "",
           "error": "",
-          "filename": "20251119-224340-gf_android_ota-versions-v8_6-Banquet_Operative_guofu.apk",
-          "captured_at": "2026-07-05T01:56:30.192069+00:00"
+          "filename": "20251119-224340-gf_android_ota-versions-v8_6-Banquet_Operative_gw.apk",
+          "captured_at": "2026-07-05T02:03:55.017956+00:00"
         },
         {
           "game_id": "bh3",
@@ -3252,19 +3252,19 @@
         {
           "game_id": "bh3",
           "version": "7.3.0",
-          "channel": "gw",
-          "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
+          "channel": "guofu",
+          "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_guofu.apk",
           "source": "official CDN URL captured manually",
-          "status": 0,
-          "content_type": "",
-          "size": 0,
-          "last_modified": "",
-          "etag": "",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 586476686,
+          "last_modified": "Mon, 29 Jan 2024 03:08:00 GMT",
+          "etag": "C490B72C7307FAEEFECB7F900C127C34-10",
           "md5": "",
           "crc64": "",
-          "error": "HTTP Error 403: Forbidden",
-          "filename": "20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "error": "",
+          "filename": "20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_guofu.apk",
+          "captured_at": "2026-07-05T02:03:55.017956+00:00"
         },
         {
           "game_id": "bh3",
