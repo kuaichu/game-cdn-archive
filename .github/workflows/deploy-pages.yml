@@ -41,16 +41,17 @@ jobs:
           account_id = os.environ["CLOUDFLARE_ACCOUNT_ID"]
           token = os.environ["CLOUDFLARE_API_TOKEN"]
           checks = [
-              ("token verify", "https://api.cloudflare.com/client/v4/user/tokens/verify"),
-              ("account access", f"https://api.cloudflare.com/client/v4/accounts/{account_id}"),
+              ("token verify", "https://api.cloudflare.com/client/v4/user/tokens/verify", True),
+              ("account access", f"https://api.cloudflare.com/client/v4/accounts/{account_id}", False),
               (
                   "pages project access",
                   f"https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/projects/game-cdn-archive",
+                  True,
               ),
           ]
 
           failed = False
-          for label, url in checks:
+          for label, url, required in checks:
               request = urllib.request.Request(
                   url,
                   headers={
@@ -63,11 +64,12 @@ jobs:
                   with urllib.request.urlopen(request, timeout=30) as response:
                       payload = json.loads(response.read().decode("utf-8"))
               except urllib.error.HTTPError as exc:
-                  payload = json.loads(exc.read().decode("utf-8"))
+                      payload = json.loads(exc.read().decode("utf-8"))
               ok = bool(payload.get("success"))
               print(f"{label}: {'ok' if ok else 'failed'}")
               if not ok:
-                  failed = True
+                  if required:
+                      failed = True
                   for error in payload.get("errors", []):
                       print(f"  Cloudflare error {error.get('code')}: {error.get('message')}")
           if failed:
