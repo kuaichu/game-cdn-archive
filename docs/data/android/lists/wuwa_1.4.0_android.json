@@ -7,20 +7,15 @@
     "source": "official CDN URL recovered from archive.org CDX search",
     "status": 200,
     "content_type": "application/vnd.android.package-archive",
-    "size": null,
-    "last_modified": "",
-    "etag": "",
+    "size": 1964099873,
+    "last_modified": "Mon, 04 Nov 2024 03:34:37 GMT",
+    "etag": "1686efa2e230e6486735d128509ddaef-38",
     "md5": "5146be995ac1f9d4e918426bae7c869d",
-    "crc64": "",
+    "crc64": "4245249258417159359",
     "error": "",
-    "error_info": "return by bot js challenge",
-    "byte_error_code": "00095",
-    "exception_info": "js challenge by advanced access control",
-    "probe_status": "bot_challenge_assumed_available",
-    "probe_note": "CDN returned a browser bot challenge during CI probing; keeping the manually archived official APK URL as available.",
     "filename": "鸣潮_1.4.0_120822928__官渠_5146be995ac1f9d4e918426bae7c869d_shelled.apk",
     "captured_at": "2026-06-25T15:39:32.833316+00:00",
-    "updated_at": "2024-11-04T11:34:31+00:00",
-    "updated_at_source": "filename_timestamp"
+    "updated_at": "2024-11-04T03:34:37+00:00",
+    "updated_at_source": "apk_last_modified"
   }
 ]
