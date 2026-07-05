@@ -2,8 +2,8 @@
   "source": "https://github.com/yuhkix/wuwa-downloader",
   "discovery_url": "https://gist.githubusercontent.com/yuhkix/b8796681ac2cd3bab11b7e8cdc022254/raw/4435fd290c07f7f766a6d2ab09ed3096d83b02e3/wuwa.json",
   "selected_launcher_index": "https://prod-cn-alicdn-gamestarter.kurogame.com/launcher/game/G152/10003_Y8xXrXk65DqFHEDgApn3cpK5lfczpFx5/index.json",
-  "last_checked_at": "2026-07-05T07:42:17.756280+00:00",
-  "generated_at": "2026-07-05T07:42:17.756301+00:00",
+  "last_checked_at": "2026-07-05T08:40:15.033786+00:00",
+  "generated_at": "2026-07-05T08:40:15.033786+00:00",
   "game": {
     "id": "wuwa",
     "name": "鸣潮",
@@ -101,6 +101,51 @@
       "last_modified": "Fri, 16 May 2025 08:30:32 GMT",
       "last_modified_source": "resource_index",
       "last_modified_url": "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/2.3.1/xAgwspCwdYJOMlAPyLUCRnoCkGlYgUkv/resource.json",
+      "last_modified_status": 200
+    },
+    {
+      "version": "2.2.1",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 549,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 34102430362,
+      "uncompressed_size": 34102430362,
+      "source_note": "recovered from pcstarter game index referenced by launcher 2.0.0.0",
+      "last_modified": "Mon, 24 Feb 2025 08:44:55 GMT",
+      "last_modified_source": "resource_index",
+      "last_modified_url": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/2.2.1/WpwvP26jdT38AzADIHmpNI95bpCszODv/resource.json",
+      "last_modified_status": 200
+    },
+    {
+      "version": "2.2.0",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 549,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 34102399018,
+      "uncompressed_size": 34102399018,
+      "source_note": "recovered from pcstarter game index referenced by launcher 2.0.0.0",
+      "last_modified": "Fri, 21 Feb 2025 07:28:05 GMT",
+      "last_modified_source": "resource_index",
+      "last_modified_url": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/2.2.0/4qOQXRgFtEbYo6glSpYrG6N5yMuscF97/resource.json",
+      "last_modified_status": 200
+    },
+    {
+      "version": "1.1.1",
+      "channel": "live",
+      "region": "cn",
+      "file_count": 491,
+      "cdn_count": 3,
+      "patch_routes": 0,
+      "size": 22835542606,
+      "uncompressed_size": 22835542606,
+      "source_note": "recovered from pcstarter game index snapshot 20240609102130",
+      "last_modified": "Fri, 07 Jun 2024 04:18:50 GMT",
+      "last_modified_source": "resource_index",
+      "last_modified_url": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/1.1.1/a1vBvQhjfBJ6o7uxNFYORQUqH1xIb5pQ/resource.json",
       "last_modified_status": 200
     }
   ]

@@ -69,6 +69,26 @@ MANUAL_CN_PRELOAD_INDEXES = [
         ],
     }
 ]
+HISTORICAL_PCSTARTER_RESOURCES = [
+    {
+        "version": "1.1.1",
+        "resource_index": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/1.1.1/a1vBvQhjfBJ6o7uxNFYORQUqH1xIb5pQ/resource.json",
+        "base_url": "pcstarter/prod/game/G152/1.1.1/a1vBvQhjfBJ6o7uxNFYORQUqH1xIb5pQ/zip/",
+        "source_note": "recovered from pcstarter game index snapshot 20240609102130",
+    },
+    {
+        "version": "2.2.0",
+        "resource_index": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/2.2.0/4qOQXRgFtEbYo6glSpYrG6N5yMuscF97/resource.json",
+        "base_url": "pcstarter/prod/game/G152/2.2.0/4qOQXRgFtEbYo6glSpYrG6N5yMuscF97/zip/",
+        "source_note": "recovered from pcstarter game index referenced by launcher 2.0.0.0",
+    },
+    {
+        "version": "2.2.1",
+        "resource_index": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/2.2.1/WpwvP26jdT38AzADIHmpNI95bpCszODv/resource.json",
+        "base_url": "pcstarter/prod/game/G152/2.2.1/WpwvP26jdT38AzADIHmpNI95bpCszODv/zip/",
+        "source_note": "recovered from pcstarter game index referenced by launcher 2.0.0.0",
+    },
+]
 
 
 def fetch_json(url: str):
@@ -222,6 +242,20 @@ def normalize_resource(item: dict, cdn_urls: list[str], base_url: str) -> dict:
         "dest": dest,
         "name": Path(dest).name,
         "md5": item.get("md5") or "",
+        "size": int(item.get("size") or 0),
+        "url": urls[0],
+        "urls": urls,
+    }
+
+
+def normalize_pcstarter_resource(item: dict, cdn_urls: list[str], base_url: str) -> dict:
+    dest = item["dest"].replace("\\", "/").lstrip("/")
+    urls = [join_url(join_url(cdn, base_url), dest) for cdn in cdn_urls]
+    return {
+        "dest": dest,
+        "name": Path(dest).name,
+        "md5": item.get("md5") or "",
+        "sample_hash": item.get("sampleHash") or "",
         "size": int(item.get("size") or 0),
         "url": urls[0],
         "urls": urls,
@@ -396,6 +430,49 @@ def build_historical_cn_live(spec: dict, output_dir: Path, cached_versions: dict
     return summary, version
 
 
+def build_pcstarter_resource(spec: dict, output_dir: Path, cached_versions: dict):
+    try:
+        resource_index = fetch_json(spec["resource_index"])
+    except RuntimeError as exc:
+        cached = cached_version(cached_versions, output_dir, spec["version"], exc)
+        if cached:
+            return cached
+        raise
+    raw_items = resource_index.get("resource") or []
+    items = [normalize_pcstarter_resource(item, CN_LIVE_CDNS, spec["base_url"]) for item in raw_items]
+    links = write_lists(output_dir, spec["version"], items)
+    total_size = sum(item["size"] for item in items)
+    version = {
+        "version": spec["version"],
+        "channel": "live",
+        "region": "cn",
+        "resource_index": spec["resource_index"],
+        "base_url": spec["base_url"],
+        "cdn_urls": CN_LIVE_CDNS,
+        "index_file_md5": "",
+        "size": total_size,
+        "uncompressed_size": total_size,
+        "file_count": len(items),
+        "files": items,
+        "patches": [],
+        "source_note": spec["source_note"],
+        "links": {"files": links},
+    }
+    summary = {
+        "version": version["version"],
+        "channel": version["channel"],
+        "region": version["region"],
+        "file_count": len(items),
+        "cdn_count": len(CN_LIVE_CDNS),
+        "patch_routes": 0,
+        "size": total_size,
+        "uncompressed_size": total_size,
+        "source_note": spec["source_note"],
+    }
+    apply_last_modified(version, summary)
+    return summary, version
+
+
 def index_path_from_url(url: str) -> str:
     return urlsplit(url).path.lstrip("/")
 
@@ -522,6 +599,14 @@ def main() -> None:
             )
             summaries.append(historical_summary)
             versions[historical_version["version"]] = historical_version
+        for spec in HISTORICAL_PCSTARTER_RESOURCES:
+            if spec["version"] in versions:
+                continue
+            pcstarter_summary, pcstarter_version = build_pcstarter_resource(
+                spec, args.output, cached_versions
+            )
+            summaries.append(pcstarter_summary)
+            versions[pcstarter_version["version"]] = pcstarter_version
         for spec in MANUAL_CN_PRELOAD_INDEXES:
             if spec["version"] in versions:
                 continue
