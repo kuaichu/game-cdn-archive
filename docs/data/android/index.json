@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-07-05T00:18:32.866292+00:00",
-  "generated_at": "2026-07-02T01:32:24.791217+00:00",
+  "last_checked_at": "2026-07-05T01:50:12.992811+00:00",
+  "generated_at": "2026-07-05T01:50:12.992811+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -62,6 +62,26 @@
       "versions": [
         {
           "game_id": "reverse1999",
+          "version": "3.8.0",
+          "channel": "official",
+          "url": "https://d.bluepoch.com/prepage/Reverse1999_Bluepoch_1006.apk",
+          "source": "official Reverse: 1999 version-page API; versionName read from AndroidManifest.xml",
+          "source_url": "https://re.bluepoch.com/activity/official/websites/version-page",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2035392297,
+          "last_modified": "Thu, 11 Jun 2026 00:35:34 GMT",
+          "etag": "719edc28f92594e52d80fbb6569d7577-243",
+          "md5": "",
+          "crc64": "16344651103232126877",
+          "error": "",
+          "filename": "Reverse1999_Bluepoch_1006.apk",
+          "captured_at": "2026-07-05T01:48:28.912283+00:00",
+          "archive_url": "",
+          "archive_note": ""
+        },
+        {
+          "game_id": "reverse1999",
           "version": "1.0.3",
           "channel": "prepage",
           "url": "https://d.bluepoch.com/prepage/Reverse1999_app1.0.3_res100.0.101_Bluepoch_1006.apk",
@@ -79,6 +99,11 @@
         }
       ],
       "links": {
+        "3.8.0": {
+          "urls": "data/android/lists/reverse1999_3.8.0_android.urls.txt",
+          "aria2": "data/android/lists/reverse1999_3.8.0_android.aria2.txt",
+          "json": "data/android/lists/reverse1999_3.8.0_android.json"
+        },
         "1.0.3": {
           "urls": "data/android/lists/reverse1999_1.0.3_android.urls.txt",
           "aria2": "data/android/lists/reverse1999_1.0.3_android.aria2.txt",
@@ -92,27 +117,28 @@
       "versions": [
         {
           "game_id": "calabiyau",
-          "version": "1.1.5.2",
+          "version": "1.1.6.4",
           "channel": "official",
           "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
-          "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+          "source": "official Calabiyau website HTML; versionName read from AndroidManifest.xml",
+          "source_url": "https://klbqm.idreamsky.com/",
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
-          "size": 1828826033,
-          "last_modified": "Tue, 21 Apr 2026 23:28:01 GMT",
-          "etag": "c684224344083f00b193a3b70d87e982",
+          "size": 1875804958,
+          "last_modified": "Wed, 24 Jun 2026 23:13:41 GMT",
+          "etag": "950a5ed1a3093b7543d6afe62aa55554",
           "md5": "",
-          "crc64": "9821961627708434884",
+          "crc64": "13948144934372544214",
           "error": "",
           "filename": "klbqm_LD0S0N00011.apk",
-          "captured_at": "2026-06-06T20:12:21.605318+00:00"
+          "captured_at": "2026-07-05T01:50:12.992811+00:00"
         }
       ],
       "links": {
-        "1.1.5.2": {
-          "urls": "data/android/lists/calabiyau_1.1.5.2_android.urls.txt",
-          "aria2": "data/android/lists/calabiyau_1.1.5.2_android.aria2.txt",
-          "json": "data/android/lists/calabiyau_1.1.5.2_android.json"
+        "1.1.6.4": {
+          "urls": "data/android/lists/calabiyau_1.1.6.4_android.urls.txt",
+          "aria2": "data/android/lists/calabiyau_1.1.6.4_android.aria2.txt",
+          "json": "data/android/lists/calabiyau_1.1.6.4_android.json"
         }
       }
     },
@@ -221,7 +247,8 @@
           "version": "2.1.2",
           "channel": "Official",
           "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
-          "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+          "source": "official Blue Archive website bundle; versionName read from AndroidManifest.xml",
+          "source_url": "https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/index.29e2b169.js",
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
           "size": 1723356917,
@@ -231,7 +258,7 @@
           "crc64": "",
           "error": "",
           "filename": "BlueArchive.apk",
-          "captured_at": "2026-06-06T20:21:58.318080+00:00"
+          "captured_at": "2026-07-05T01:50:12.992811+00:00"
         }
       ],
       "links": {
@@ -251,7 +278,8 @@
           "version": "3.6.0.122",
           "channel": "jinshan",
           "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
-          "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+          "source": "official Snowbreak download config; version read from APK URL or AndroidManifest.xml",
+          "source_url": "https://www.cbjq.com/api/config/tag/zt/index_download?filter=0",
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
           "size": 1427726880,
@@ -261,7 +289,7 @@
           "crc64": "17658315226039455406",
           "error": "",
           "filename": "CBJQ.3.6.0.122.jinshan_202603301341.apk",
-          "captured_at": "2026-06-06T20:21:58.318080+00:00"
+          "captured_at": "2026-07-05T01:50:12.992811+00:00"
         },
         {
           "game_id": "snowbreak",

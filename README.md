@@ -39,7 +39,7 @@ Current repository snapshot from generated data checked on `2026-07-05 00:14:38 
 | Arknights / 明日方舟 PC | Indexed official launcher package metadata through `74.0.0`; 19 package items in the latest snapshot |
 | Wuthering Waves / 鸣潮 PC | Indexed `6` CN launcher/resource-index snapshots through `3.4.1`; file URLs, CDN mirrors, and patch routes are preserved when official indexes expose them |
 | HoYo CN PC catalog | Migrated public HoyoFiles metadata for 原神 `1.0.0-6.7.0` (`55` versions), 崩坏：星穹铁道 `1.0.5-4.3.0` (`28` versions), 绝区零 `1.0.0-3.0.0` (`18` versions), 崩坏3 `3.7.0-8.9.0` (`53` versions) |
-| Android APK archive | Preserves `199` confirmed or historically verified official APK CDN records across `15` games |
+| Android APK archive | Preserves `200` confirmed or historically verified official APK CDN records across `15` games |
 <!-- README_PROGRESS_SNAPSHOT_END -->
 
 ## Android APK Progress
@@ -57,7 +57,7 @@ ranges are:
 | 明日方舟 / Arknights | `1150.0.0` -> `2741.0.0` | `20` version buckets / `20` records | `20` available; `0` unavailable or historical dead-link records |
 | 崩坏3 / Honkai Impact 3rd | `0.9.9` -> `8.9.0` | `39` version buckets / `39` records | `12` available; `27` unavailable or historical dead-link records |
 | 碧蓝档案 / Blue Archive | `2.1.2` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
-| 卡拉比丘 / Calabiyau | `1.1.5.2` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
+| 卡拉比丘 / Calabiyau | `1.1.6.4` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 明日方舟：终末地 / Arknights: Endfield | `1.3.4` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 少女前线2：追放 / Girls' Frontline 2: Exilium | `3.0.0` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 原神 / Genshin Impact | `0.9.3` -> `6.7.0` | `54` version buckets / `54` records | `50` available; `4` unavailable or historical dead-link records |
@@ -65,7 +65,7 @@ ranges are:
 | 绝区零 / Zenless Zone Zero | `1.0.0` -> `3.0.0` | `10` version buckets / `10` records | `10` available; `0` unavailable or historical dead-link records |
 | 异环 / Neverness to Everness | `1.0.2` -> `1.2.0` | `2` version buckets / `2` records | `2` available; `0` unavailable or historical dead-link records |
 | 战双帕弥什 / Punishing: Gray Raven | `4.5.0` | `1` version buckets / `2` records | `2` available; `0` unavailable or historical dead-link records |
-| 重返未来：1999 / Reverse: 1999 | `1.0.3` | `1` version buckets / `1` records | `0` available; `1` unavailable or historical dead-link records |
+| 重返未来：1999 / Reverse: 1999 | `1.0.3` -> `3.8.0` | `2` version buckets / `2` records | `1` available; `1` unavailable or historical dead-link records |
 | 尘白禁区 / Snowbreak: Containment Zone | `1.6.0.99` -> `3.6.0.122` | `9` version buckets / `9` records | `5` available; `4` unavailable or historical dead-link records |
 | 鸣潮 / Wuthering Waves | `1.0.0` -> `3.4.1` | `21` version buckets / `21` records | `15` available; `6` unavailable or historical dead-link records |
 <!-- README_ANDROID_PROGRESS_END -->

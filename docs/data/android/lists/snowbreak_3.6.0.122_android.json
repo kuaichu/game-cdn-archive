@@ -4,7 +4,8 @@
     "version": "3.6.0.122",
     "channel": "jinshan",
     "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
-    "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+    "source": "official Snowbreak download config; version read from APK URL or AndroidManifest.xml",
+    "source_url": "https://www.cbjq.com/api/config/tag/zt/index_download?filter=0",
     "status": 200,
     "content_type": "application/vnd.android.package-archive",
     "size": 1427726880,
@@ -14,6 +15,6 @@
     "crc64": "17658315226039455406",
     "error": "",
     "filename": "CBJQ.3.6.0.122.jinshan_202603301341.apk",
-    "captured_at": "2026-06-06T20:21:58.318080+00:00"
+    "captured_at": "2026-07-05T01:50:12.992811+00:00"
   }
 ]

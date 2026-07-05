@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Build static Android APK indexes from known official CDN URLs."""
+"""Build static Android APK indexes from official CDN URLs and latest endpoints."""
 
 from __future__ import annotations
 
+import html
 import json
 import re
 import subprocess
@@ -1715,6 +1716,49 @@ HYPERGRYPH_APK_ENDPOINTS = [
     },
 ]
 
+JSON_APK_ENDPOINTS = [
+    {
+        "game_id": "snowbreak",
+        "url": "https://www.cbjq.com/api/config/tag/zt/index_download?filter=0",
+        "field": "adr_download_link",
+        "channel": "jinshan",
+        "source": "official Snowbreak download config; version read from APK URL or AndroidManifest.xml",
+        "headers": {"Referer": "https://www.cbjq.com/"},
+    },
+]
+
+BLUEPOCH_VERSION_PAGE_APIS = [
+    {
+        "game_id": "reverse1999",
+        "url": "https://re.bluepoch.com/activity/official/websites/version-page",
+        "payload": {"gameId": 50001, "pageVersion": "3.8"},
+        "field": "androidDownloadUrl",
+        "channel": "official",
+        "source": "official Reverse: 1999 version-page API; versionName read from AndroidManifest.xml",
+        "headers": {"Referer": "https://re.bluepoch.com/"},
+    },
+]
+
+WEBPAGE_APK_SOURCES = [
+    {
+        "game_id": "calabiyau",
+        "url": "https://klbqm.idreamsky.com/",
+        "channel": "official",
+        "source": "official Calabiyau website HTML; versionName read from AndroidManifest.xml",
+        "url_pattern": r"https://ms-pack\.dl\.gxpan\.cn/[^\"'<>\\\s]+?\.apk",
+        "headers": {"Referer": "https://klbqm.idreamsky.com/"},
+    },
+    {
+        "game_id": "bluearchive",
+        "url": "https://bluearchive-cn.com/",
+        "channel": "Official",
+        "source": "official Blue Archive website bundle; versionName read from AndroidManifest.xml",
+        "url_pattern": r"https://pkg\.bluearchive-cn\.com/[^\"'<>\\\s]+?\.apk",
+        "crawl_scripts": True,
+        "headers": {"Referer": "https://bluearchive-cn.com/"},
+    },
+]
+
 
 def version_key(version: str) -> tuple[int, ...]:
     return tuple(int(part) for part in version.split("."))
@@ -1910,6 +1954,79 @@ def fetch_text(url: str, timeout: int = 30, headers: dict | None = None) -> str:
     request = urllib.request.Request(url, headers=request_headers(headers))
     with urllib.request.urlopen(request, timeout=timeout) as response:
         return response.read().decode("utf-8", "ignore")
+
+
+def fetch_json(
+    url: str,
+    payload: dict | None = None,
+    timeout: int = 30,
+    headers: dict | None = None,
+) -> dict:
+    data = None if payload is None else json.dumps(payload, ensure_ascii=False).encode("utf-8")
+    extra_headers = {"Content-Type": "application/json; charset=utf-8"} if payload is not None else {}
+    if headers:
+        extra_headers.update(headers)
+    request = urllib.request.Request(
+        url,
+        data=data,
+        headers=request_headers(extra_headers),
+        method="POST" if payload is not None else "GET",
+    )
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        return json.loads(response.read().decode("utf-8", "ignore"))
+
+
+def unescape_web_text(text: str) -> str:
+    return (
+        html.unescape(text)
+        .replace("\\/", "/")
+        .replace("\\u002F", "/")
+        .replace("\\u002f", "/")
+    )
+
+
+def extract_first_apk_url(text: str, pattern: str, base_url: str) -> str | None:
+    normalized = unescape_web_text(text)
+    match = re.search(pattern, normalized, re.IGNORECASE)
+    if not match:
+        return None
+    value = match.group(1) if match.groups() else match.group(0)
+    return urllib.parse.urljoin(base_url, value)
+
+
+def linked_script_urls(text: str, page_url: str) -> list[str]:
+    normalized = unescape_web_text(text)
+    base_url = page_url
+    base_match = re.search(r"<base[^>]+href=[\"']([^\"']+)", normalized, re.IGNORECASE)
+    if base_match:
+        base_url = urllib.parse.urljoin(page_url, base_match.group(1))
+    return [
+        urllib.parse.urljoin(base_url, match.group(1))
+        for match in re.finditer(r"<script[^>]+src=[\"']([^\"']+)", normalized, re.IGNORECASE)
+    ]
+
+
+def exact_version_from_url(url: str) -> str | None:
+    filename = filename_from_url(url)
+    patterns = [
+        r"CBJQ[._](\d+(?:\.\d+){1,3})(?:[._])",
+        r"Reverse1999_app(\d+(?:\.\d+){1,3})",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, filename, re.IGNORECASE)
+        if match:
+            return match.group(1)
+    return None
+
+
+def apk_version_from_url_or_manifest(url: str, headers: dict | None = None) -> str | None:
+    exact_version = exact_version_from_url(url)
+    if exact_version:
+        return exact_version
+    try:
+        return version_from_url(url)
+    except ValueError:
+        return remote_apk_manifest_version_name(url, headers=headers)
 
 
 def fetch_range(url: str, start: int, end: int, timeout: int = 60, headers: dict | None = None) -> bytes:
@@ -2254,6 +2371,121 @@ def discover_hypergryph_apks() -> list[dict]:
     return entries
 
 
+def discover_json_endpoint_apks() -> list[dict]:
+    entries: list[dict] = []
+    for item in JSON_APK_ENDPOINTS:
+        try:
+            payload = fetch_json(item["url"], headers=item.get("headers"))
+        except Exception as exc:
+            print(f"JSON APK endpoint unavailable {item['url']}: {exc}")
+            continue
+        apk_url = str(payload.get(item["field"]) or "")
+        if not apk_url:
+            print(f"JSON APK endpoint missing {item['field']}: {item['url']}")
+            continue
+        try:
+            version = apk_version_from_url_or_manifest(apk_url, headers=item.get("headers"))
+        except Exception as exc:
+            print(f"JSON APK manifest unavailable {apk_url}: {exc}")
+            continue
+        if not version:
+            print(f"JSON APK has no version: {apk_url}")
+            continue
+        entries.append({
+            "game_id": item["game_id"],
+            "version": version,
+            "channel": item["channel"],
+            "url": apk_url,
+            "source": item["source"],
+            "source_url": item["url"],
+            "headers": item.get("headers"),
+            "force_refresh": True,
+        })
+    return entries
+
+
+def discover_bluepoch_apks() -> list[dict]:
+    entries: list[dict] = []
+    for item in BLUEPOCH_VERSION_PAGE_APIS:
+        try:
+            payload = fetch_json(item["url"], payload=item["payload"], headers=item.get("headers"))
+        except Exception as exc:
+            print(f"Bluepoch APK API unavailable {item['url']}: {exc}")
+            continue
+        if payload.get("code") not in (None, 200):
+            print(f"Bluepoch APK API returned code {payload.get('code')}: {item['url']}")
+            continue
+        data = payload.get("data") if isinstance(payload.get("data"), dict) else payload
+        apk_url = str(data.get(item["field"]) or "")
+        if not apk_url:
+            print(f"Bluepoch APK API missing {item['field']}: {item['url']}")
+            continue
+        try:
+            version = apk_version_from_url_or_manifest(apk_url, headers=item.get("headers"))
+        except Exception as exc:
+            print(f"Bluepoch APK manifest unavailable {apk_url}: {exc}")
+            continue
+        if not version:
+            print(f"Bluepoch APK has no version: {apk_url}")
+            continue
+        entries.append({
+            "game_id": item["game_id"],
+            "version": version,
+            "channel": item["channel"],
+            "url": apk_url,
+            "source": item["source"],
+            "source_url": item["url"],
+            "headers": item.get("headers"),
+            "force_refresh": True,
+        })
+    return entries
+
+
+def discover_webpage_apks() -> list[dict]:
+    entries: list[dict] = []
+    for item in WEBPAGE_APK_SOURCES:
+        try:
+            page_text = fetch_text(item["url"], headers=item.get("headers"))
+        except Exception as exc:
+            print(f"APK webpage unavailable {item['url']}: {exc}")
+            continue
+        apk_url = extract_first_apk_url(page_text, item["url_pattern"], item["url"])
+        source_url = item["url"]
+        if not apk_url and item.get("crawl_scripts"):
+            for script_url in linked_script_urls(page_text, item["url"]):
+                try:
+                    script_text = fetch_text(script_url, headers=item.get("headers"))
+                except Exception as exc:
+                    print(f"APK webpage script unavailable {script_url}: {exc}")
+                    continue
+                apk_url = extract_first_apk_url(script_text, item["url_pattern"], script_url)
+                if apk_url:
+                    source_url = script_url
+                    break
+        if not apk_url:
+            print(f"APK webpage has no matching APK URL: {item['url']}")
+            continue
+        try:
+            version = apk_version_from_url_or_manifest(apk_url, headers=item.get("headers"))
+        except Exception as exc:
+            print(f"APK webpage manifest unavailable {apk_url}: {exc}")
+            continue
+        if not version:
+            print(f"APK webpage has no version: {apk_url}")
+            continue
+        entries.append({
+            "game_id": item["game_id"],
+            "version": version,
+            "channel": item["channel"],
+            "url": apk_url,
+            "source": item["source"],
+            "source_url": source_url,
+            "headers": item.get("headers"),
+            "force_refresh": True,
+        })
+    return entries
+
+
 def head_url(url: str, headers: dict | None = None) -> dict:
     def range_fallback(meta: dict) -> dict:
         if not url.lower().split("?", 1)[0].endswith(".apk"):
@@ -2468,6 +2700,12 @@ def main() -> None:
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_hypergryph_apks():
         seeds_by_url.setdefault(seed["url"], seed)
+    for seed in discover_json_endpoint_apks():
+        seeds_by_url[seed["url"]] = seed
+    for seed in discover_bluepoch_apks():
+        seeds_by_url[seed["url"]] = seed
+    for seed in discover_webpage_apks():
+        seeds_by_url[seed["url"]] = seed
 
     for seed in seeds_by_url.values():
         public_seed = {
