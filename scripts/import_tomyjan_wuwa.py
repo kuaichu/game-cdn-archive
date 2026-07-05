@@ -75,7 +75,7 @@ def run_git(args: list[str], cwd: Path | None = None) -> str:
 
 def clone_tomyjan() -> Path:
     target = Path(tempfile.mkdtemp(prefix="tomyjan-ww-"))
-    run_git(["clone", "--depth", "1", "--filter=blob:none", "--sparse", TOMYJAN_REPO, str(target)])
+    run_git(["clone", "--filter=blob:none", "--sparse", TOMYJAN_REPO, str(target)])
     run_git(["sparse-checkout", "set", "WW"], cwd=target)
     return target
 
@@ -85,6 +85,44 @@ def repo_commit(source: Path) -> str:
         return run_git(["rev-parse", "HEAD"], cwd=source)
     except subprocess.CalledProcessError:
         return ""
+
+
+def parse_iso_datetime(value: str) -> datetime:
+    return datetime.fromisoformat(value.replace("Z", "+00:00"))
+
+
+def git_first_added_meta(source: Path, path: str) -> tuple[str, str] | None:
+    try:
+        output = run_git(["log", "--diff-filter=A", "--format=%H%x09%cI", "--", path], cwd=source)
+    except subprocess.CalledProcessError:
+        return None
+    rows = [line.split("\t", 1) for line in output.splitlines() if "\t" in line]
+    if not rows:
+        return None
+    commit, committed_at = rows[-1]
+    return committed_at, commit
+
+
+def tomyjan_release_meta(source: Path, version: str) -> dict:
+    candidates = []
+    for path in source_paths(version):
+        meta = git_first_added_meta(source, path)
+        if meta:
+            committed_at, commit = meta
+            candidates.append((parse_iso_datetime(committed_at), committed_at, commit, path))
+    if not candidates:
+        return {}
+    # The version is only complete after both REL and REL_Res have appeared.
+    _, committed_at, commit, path = max(candidates, key=lambda item: item[0])
+    return {
+        "release_date": committed_at,
+        "release_date_source": "tomyjan_git_first_added",
+        "release_date_source_commit": commit,
+        "release_date_note": (
+            f"First git-add timestamp for {path} in TomyJan's WW CN archive; "
+            "this is an archival timestamp, not an official announcement time."
+        ),
+    }
 
 
 def clean_url(url: str) -> str:
@@ -253,8 +291,7 @@ def convert_version(source: Path, version: str, imported_at: str, source_commit:
     if not uncompressed_size:
         uncompressed_size = total_size
 
-    return (
-        {
+    payload = {
             "version": version,
             "channel": "live",
             "region": "cn",
@@ -273,9 +310,9 @@ def convert_version(source: Path, version: str, imported_at: str, source_commit:
             "files": files,
             "patches": patches,
             "source_note": "converted from TomyJan WW/Win/Game/CN archive into staging only",
-        },
-        None,
-    )
+        }
+    payload.update(tomyjan_release_meta(source, version))
+    return payload, None
 
 
 def validate_payload(version: str, payload: dict) -> list[str]:

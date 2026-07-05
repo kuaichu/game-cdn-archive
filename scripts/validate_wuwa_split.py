@@ -12,7 +12,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 WUWA_DIR = REPO_ROOT / "docs" / "data" / "wuwa"
 EXPECTED_TOTAL_FILES = 24865
-REQUIRED_VERSION_FIELDS = ("version", "channel", "region", "files", "patches")
+REQUIRED_VERSION_FIELDS = ("version", "channel", "region", "release_date", "files", "patches")
 REQUIRED_FILE_FIELDS = ("dest", "md5", "size", "url")
 
 
@@ -210,6 +210,8 @@ def build_self_report(args: argparse.Namespace) -> tuple[bool, str]:
             continue
         shard = load_json(shard_path)
         summary = summary_by_version.get(version) or {}
+        if not is_present(summary.get("release_date")):
+            field_errors.append(f"{version}:summary.release_date")
 
         if shard.get("version") != version:
             field_errors.append(f"{version}:version_mismatch:{shard.get('version')}")

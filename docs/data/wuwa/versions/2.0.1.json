@@ -6986,5 +6986,9 @@
       "urls": "data/wuwa/lists/2.0.1-files.urls.txt",
       "aria2": "data/wuwa/lists/2.0.1-files.aria2.txt"
     }
-  }
+  },
+  "release_date": "2025-01-02T08:26:00Z",
+  "release_date_source": "tomyjan_git_first_added",
+  "release_date_source_commit": "1e460e202d1b1facde72f417833b75462f96d74f",
+  "release_date_note": "First git-add timestamp for WW/Win/Game/CN/REL2.0.1.json in TomyJan's WW CN archive; this is an archival timestamp, not an official announcement time."
 }

@@ -8346,5 +8346,9 @@
       "urls": "data/wuwa/lists/3.0.3-files.urls.txt",
       "aria2": "data/wuwa/lists/3.0.3-files.aria2.txt"
     }
-  }
+  },
+  "release_date": "2026-01-14T04:00:30Z",
+  "release_date_source": "tomyjan_git_first_added",
+  "release_date_source_commit": "916a967f152c8a824525a744aa7715dd5f27d189",
+  "release_date_note": "First git-add timestamp for WW/Win/Game/CN/REL3.0.3.json in TomyJan's WW CN archive; this is an archival timestamp, not an official announcement time."
 }
