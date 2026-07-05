@@ -19,6 +19,7 @@ for path in (ROOT, SCRIPTS):
 
 from adapters.arknights import ArknightsAvailabilityAdapter  # noqa: E402
 from adapters.android import AndroidAvailabilityAdapter  # noqa: E402
+from adapters.hoyo import HoyoAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import (  # noqa: E402
     AVAILABILITY_REASONS,
     AVAILABILITY_STATES,
@@ -29,6 +30,7 @@ from scripts.availability_schema import (  # noqa: E402
 
 DEFAULT_ARKNIGHTS = ROOT / "docs" / "data" / "arknights"
 DEFAULT_ANDROID = ROOT / "docs" / "data" / "android"
+DEFAULT_HOYO = ROOT / "docs" / "data" / "hoyo"
 FORBIDDEN_ADAPTER_MODULES = {"urllib", "requests", "http", "http.client", "subprocess", "socket"}
 FORBIDDEN_ADAPTER_NAMES = {"urlopen", "Request", "HTTPConnection", "HTTPSConnection", "curl", "fetch"}
 
@@ -218,20 +220,96 @@ def validate_android(root: Path) -> list[str]:
     return errors
 
 
+def as_list(value: Any) -> list[Any]:
+    if not value:
+        return []
+    return value if isinstance(value, list) else [value]
+
+
+def iter_hoyo_download_items(row: dict[str, Any]) -> list[dict[str, Any]]:
+    items: list[dict[str, Any]] = []
+    game = row.get("game") or {}
+    for key in ("full", "segments"):
+        items.extend(item for item in as_list(game.get(key)) if isinstance(item, dict) and item.get("url"))
+    for voice in (row.get("voice") or {}).values():
+        items.extend(item for item in as_list(voice) if isinstance(item, dict) and item.get("url"))
+    for patch in (row.get("update") or {}).values():
+        items.extend(item for item in as_list((patch or {}).get("game")) if isinstance(item, dict) and item.get("url"))
+        for voice in ((patch or {}).get("voice") or {}).values():
+            items.extend(item for item in as_list(voice) if isinstance(item, dict) and item.get("url"))
+    return items
+
+
+def validate_hoyo(root: Path) -> list[str]:
+    errors: list[str] = []
+    index_path = root / "games.json"
+    index = load_json(index_path)
+    adapter = HoyoAvailabilityAdapter()
+    if not isinstance(index, dict):
+        return ["hoyo:index_not_object"]
+    games = index.get("games")
+    if not isinstance(games, list):
+        return ["hoyo:games_missing"]
+    for game in games:
+        if not isinstance(game, dict):
+            errors.append("hoyo:game_not_object")
+            continue
+        game_id = str(game.get("id") or "")
+        versions = game.get("versions")
+        if not isinstance(versions, list):
+            errors.append(f"hoyo:{game_id}:versions_missing")
+            continue
+        for summary in versions:
+            if not isinstance(summary, dict):
+                errors.append(f"hoyo:{game_id}:summary_not_object")
+                continue
+            version = str(summary.get("version") or "")
+            summary_path = f"hoyo:{game_id}:{version}:summary"
+            errors.extend(validate_availability(summary, summary_path, adapter))
+            source = (summary.get("availability") or {}).get("source") or {}
+            interpretation = (summary.get("availability") or {}).get("interpretation") or {}
+            if source.get("kind") != "metadata_inference":
+                errors.append(f"{summary_path}:source_kind_not_metadata_inference:{source.get('kind')}")
+            if interpretation.get("confidence") == "high" or source.get("confidence") == "high":
+                errors.append(f"{summary_path}:metadata_high_confidence")
+
+            shard_path = root / "versions" / game_id / f"{version}.json"
+            if not shard_path.exists():
+                errors.append(f"hoyo:{game_id}:{version}:shard_missing")
+                continue
+            row = load_json(shard_path)
+            if not isinstance(row, dict):
+                errors.append(f"hoyo:{game_id}:{version}:shard_not_object")
+                continue
+            for index, item in enumerate(iter_hoyo_download_items(row), start=1):
+                item_path = f"hoyo:{game_id}:{version}:item_{index}"
+                errors.extend(validate_availability(item, item_path, adapter))
+                item_source = (item.get("availability") or {}).get("source") or {}
+                item_interpretation = (item.get("availability") or {}).get("interpretation") or {}
+                if item_source.get("kind") != "metadata_inference":
+                    errors.append(f"{item_path}:source_kind_not_metadata_inference:{item_source.get('kind')}")
+                if item_interpretation.get("confidence") == "high" or item_source.get("confidence") == "high":
+                    errors.append(f"{item_path}:metadata_high_confidence")
+    return errors
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--arknights-root", type=Path, default=DEFAULT_ARKNIGHTS)
     parser.add_argument("--android-root", type=Path, default=DEFAULT_ANDROID)
+    parser.add_argument("--hoyo-root", type=Path, default=DEFAULT_HOYO)
     args = parser.parse_args()
 
     errors = []
     errors.extend(validate_adapter_no_network(ROOT / "adapters"))
     errors.extend(validate_arknights(args.arknights_root))
     errors.extend(validate_android(args.android_root))
+    errors.extend(validate_hoyo(args.hoyo_root))
 
     print("Availability validation")
     print(f"arknights_root={args.arknights_root.resolve()}")
     print(f"android_root={args.android_root.resolve()}")
+    print(f"hoyo_root={args.hoyo_root.resolve()}")
     print(f"errors={len(errors)}")
     if errors:
         print("result=FAIL")

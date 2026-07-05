@@ -11,8 +11,8 @@ Status levels:
 
 | Area | Status | Notes |
 | --- | --- | --- |
-| Shared `ProbeResult` / `Interpretation` schema | partial | Implemented in `scripts/availability_schema.py`; first consumers are Arknights and Android. |
-| Stateless URL probe primitive | partial | Implemented in `scripts/url_probe.py`; used by Arknights and Android availability builds. |
+| Shared `ProbeResult` / `Interpretation` schema | partial | Implemented in `scripts/availability_schema.py`; first consumers are Arknights, Android, and HoYo. |
+| Stateless URL probe primitive | partial | Implemented in `scripts/url_probe.py`; used by Arknights and Android availability builds; HoYo uses the same schema with metadata inference and no live probe. |
 | Probe scheduler/cache layer | partial | Implemented in `scripts/probe_scheduler.py`; URL-granular TTL and reuse path exists for migrated consumers. |
 | Arknights adapter | done | `adapters/arknights.py` interprets probe facts only and does not perform HTTP. Verified by `scripts/validate_availability.py`. |
 | Arknights baked availability data | done | Package records in `docs/data/arknights/versions.json` carry precomputed availability while old fields remain. |
@@ -21,7 +21,7 @@ Status levels:
 | Android baked availability data | done | APK records in `docs/data/android/index.json` carry precomputed availability while old fields remain. |
 | Android frontend compatibility | done | Android mode reads `availability.interpretation` first and falls back to legacy `status` / `error` fields. |
 | Android fake-200 APK handling | done | APK URLs returning tiny text/XML/HTML placeholder payloads are tightened to `unavailable` instead of `unknown`. |
-| HoYo adapter | todo | Recommended next slice. |
+| HoYo adapter | done | `adapters/hoyo.py` interprets package/update size metadata only, using `metadata_inference` and non-high confidence. Version shard items and `games.json` summaries carry precomputed availability while old `unavailable_items` remains. |
 | Endfield adapter | todo | Needs official-vs-mirror interpretation. |
 | NTE adapter | todo | Needs ResList/object interpretation. |
 | WuWa multi-CDN adapter | todo | Defer until multi-CDN candidate selection is designed explicitly. |

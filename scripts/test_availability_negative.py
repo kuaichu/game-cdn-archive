@@ -19,8 +19,9 @@ for path in (ROOT, SCRIPTS):
 
 from adapters.arknights import ArknightsAvailabilityAdapter  # noqa: E402
 from adapters.android import AndroidAvailabilityAdapter  # noqa: E402
+from adapters.hoyo import HoyoAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import ProbeResult, availability_block, probe_fact_defaults  # noqa: E402
-from scripts.validate_availability import validate_android, validate_arknights  # noqa: E402
+from scripts.validate_availability import validate_android, validate_arknights, validate_hoyo  # noqa: E402
 
 
 ARKNIGHTS_ROOT = ROOT / "docs" / "data" / "arknights"
@@ -74,6 +75,24 @@ def android_probe(
             error=error,
             stale=False,
             scheduler_confidence="high",
+        ),
+    }
+
+
+def hoyo_metadata_probe(url: str, *, size: int, ok: bool = True, error: str = "") -> ProbeResult:
+    return {
+        "url": url,
+        "probe": probe_fact_defaults(
+            ok=ok,
+            status=0,
+            method="METADATA_SIZE",
+            checked_at="2026-07-06T00:00:00.000Z",
+            final_url=url,
+            content_type="",
+            size=size,
+            error=error,
+            stale=False,
+            scheduler_confidence="medium" if ok else "low",
         ),
     }
 
@@ -170,6 +189,44 @@ def assert_android_negative_paths() -> None:
         raise AssertionError(f"unexpected Android retained interpretation: {result_retained!r}")
 
 
+def assert_hoyo_metadata_paths() -> None:
+    adapter = HoyoAvailabilityAdapter()
+    url = "https://example.invalid/YuanShen_1.0.0.zip"
+
+    zero_record = {"name": "YuanShen_1.0.0.zip", "url": url, "size": 0}
+    zero_probe = hoyo_metadata_probe(url, size=0, ok=False, error="size_zero")
+    zero_result = adapter.interpret([zero_probe], zero_record)
+    expected_zero = {
+        "state": "unavailable",
+        "reason": "size_zero",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": False,
+        "display_label": "链接失效",
+    }
+    if zero_result != expected_zero:
+        raise AssertionError(f"unexpected HoYo size-zero interpretation: {zero_result!r}")
+    zero_record["availability"] = availability_block([zero_probe], "metadata_inference", zero_result, "scripts/test_availability_negative.py")
+    if zero_record["availability"]["source"]["kind"] != "metadata_inference":
+        raise AssertionError(f"unexpected HoYo source kind: {zero_record['availability']!r}")
+    if zero_record["availability"]["source"]["confidence"] == "high":
+        raise AssertionError(f"HoYo metadata inference must not use high confidence: {zero_record['availability']!r}")
+
+    valid_record = {"name": "YuanShen_1.0.0.zip", "url": url, "size": 2 * 1024 * 1024}
+    valid_probe = hoyo_metadata_probe(url, size=2 * 1024 * 1024)
+    valid_result = adapter.interpret([valid_probe], valid_record)
+    expected_valid = {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": url,
+        "confidence": "medium",
+        "retained": False,
+        "display_label": "可用",
+    }
+    if valid_result != expected_valid:
+        raise AssertionError(f"unexpected HoYo valid interpretation: {valid_result!r}")
+
+
 def mutated_versions_with(path_parts: tuple[str, ...], value: Any) -> dict[str, Any]:
     versions = deepcopy(load_json(ARKNIGHTS_ROOT / "versions.json"))
     package = first_package(versions)
@@ -236,9 +293,86 @@ def assert_android_validator_rejects(path_parts: tuple[str, ...], value: Any, ex
         raise AssertionError(f"Android validator did not reject {'.'.join(path_parts)}={value!r}; errors={errors!r}")
 
 
+def valid_hoyo_root(root: Path) -> None:
+    game_id = "hoyo-test"
+    version = "1.0.0"
+    url = "https://example.invalid/YuanShen_1.0.0.zip"
+    item = {
+        "name": "YuanShen_1.0.0.zip",
+        "url": url,
+        "checksum": "",
+        "size": 2 * 1024 * 1024,
+    }
+    item_probe = hoyo_metadata_probe(url, size=2 * 1024 * 1024)
+    item_interpretation = HoyoAvailabilityAdapter().interpret([item_probe], item)
+    item["availability"] = availability_block(
+        [item_probe],
+        "metadata_inference",
+        item_interpretation,
+        "scripts/test_availability_negative.py",
+    )
+
+    summary = {
+        "version": version,
+        "package_items": 1,
+        "update_items": 0,
+        "direct_bytes": item["size"],
+        "has_chunk": False,
+        "has_decompressed_path": False,
+        "unavailable_items": 0,
+    }
+    summary_interpretation = HoyoAvailabilityAdapter().interpret([item_probe], summary)
+    summary["availability"] = availability_block(
+        [item_probe],
+        "metadata_inference",
+        summary_interpretation,
+        "scripts/test_availability_negative.py",
+    )
+    summary["availability_counts"] = {"available": 1}
+
+    write_json(root / "games.json", {
+        "games": [{
+            "id": game_id,
+            "name": "HoYo Test",
+            "versions": [summary],
+        }]
+    })
+    shard = {
+        "version": version,
+        "game": {"full": item},
+        "voice": {},
+        "update": {},
+        "chunk": None,
+    }
+    shard_path = root / "versions" / game_id / f"{version}.json"
+    shard_path.parent.mkdir(parents=True, exist_ok=True)
+    write_json(shard_path, shard)
+
+
+def mutate_hoyo_item(root: Path, path_parts: tuple[str, ...], value: Any) -> None:
+    valid_hoyo_root(root)
+    shard_path = root / "versions" / "hoyo-test" / "1.0.0.json"
+    shard = load_json(shard_path)
+    target: Any = shard["game"]["full"]
+    for part in path_parts[:-1]:
+        target = target[part]
+    target[path_parts[-1]] = value
+    write_json(shard_path, shard)
+
+
+def assert_hoyo_validator_rejects(path_parts: tuple[str, ...], value: Any, expected_token: str) -> None:
+    with tempfile.TemporaryDirectory(prefix="hoyo-availability-negative-") as temp:
+        temp_root = Path(temp)
+        mutate_hoyo_item(temp_root, path_parts, value)
+        errors = validate_hoyo(temp_root)
+    if not any(expected_token in error for error in errors):
+        raise AssertionError(f"HoYo validator did not reject {'.'.join(path_parts)}={value!r}; errors={errors!r}")
+
+
 def main() -> None:
     assert_arknights_failed_probe_maps_to_unavailable()
     assert_android_negative_paths()
+    assert_hoyo_metadata_paths()
     assert_validator_rejects(("availability", "interpretation", "state"), "foobar", ":state:foobar")
     assert_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
     assert_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
@@ -247,12 +381,17 @@ def main() -> None:
     assert_android_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
     assert_android_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
     assert_android_validator_rejects(("availability", "interpretation", "confidence"), "certain", ":confidence:certain")
+    assert_hoyo_validator_rejects(("availability", "interpretation", "state"), "foobar", ":state:foobar")
+    assert_hoyo_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
+    assert_hoyo_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
+    assert_hoyo_validator_rejects(("availability", "interpretation", "confidence"), "certain", ":confidence:certain")
 
     print("Availability negative-path checks")
     print("arknights_failed_probe=PASS")
     print("android_failed_probe=PASS")
     print("android_fake_200=PASS")
     print("android_retained_historical=PASS")
+    print("hoyo_metadata_inference=PASS")
     print("closed_vocab_rejection=PASS")
     print("result=PASS")
 

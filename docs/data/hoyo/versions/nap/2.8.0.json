@@ -6,61 +6,421 @@
         "name": "juequling_2.8.0_AS.zip.001",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.001",
         "checksum": "e7253fb12ea914c3f0752f00b1e3b1a4",
-        "size": 6804209664
+        "size": 6804209664,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.001",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-05T07:37:51.150Z",
+                "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.001",
+                "content_type": "",
+                "size": 6804209664,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.001",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "juequling_2.8.0_AS.zip.002",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.002",
         "checksum": "f06508b0014e8430319260edfe4ddffb",
-        "size": 6804209664
+        "size": 6804209664,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.002",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-05T07:37:51.150Z",
+                "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.002",
+                "content_type": "",
+                "size": 6804209664,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.002",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "juequling_2.8.0_AS.zip.003",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.003",
         "checksum": "f377de3cf1acd9a436bc5c46a51c1ccb",
-        "size": 6804209664
+        "size": 6804209664,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.003",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-05T07:37:51.150Z",
+                "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.003",
+                "content_type": "",
+                "size": 6804209664,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.003",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "juequling_2.8.0_AS.zip.004",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.004",
         "checksum": "7fe02b09cf3214dca9239251bbce2197",
-        "size": 6804209664
+        "size": 6804209664,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.004",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-05T07:37:51.150Z",
+                "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.004",
+                "content_type": "",
+                "size": 6804209664,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.004",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "juequling_2.8.0_AS.zip.005",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.005",
         "checksum": "c903e4a0a2aa8f47e61e9a83ffc57c19",
-        "size": 6804209664
+        "size": 6804209664,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.005",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-05T07:37:51.150Z",
+                "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.005",
+                "content_type": "",
+                "size": 6804209664,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.005",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "juequling_2.8.0_AS.zip.006",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.006",
         "checksum": "b2668676659213aebf9ffb961d457367",
-        "size": 6804209664
+        "size": 6804209664,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.006",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-05T07:37:51.150Z",
+                "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.006",
+                "content_type": "",
+                "size": 6804209664,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.006",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "juequling_2.8.0_AS.zip.007",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.007",
         "checksum": "f27c19c506c13918f4fb042a52721175",
-        "size": 6804209664
+        "size": 6804209664,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.007",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-05T07:37:51.150Z",
+                "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.007",
+                "content_type": "",
+                "size": 6804209664,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.007",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "juequling_2.8.0_AS.zip.008",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.008",
         "checksum": "c7aa8aaeec0b680d3fc962b5451fde59",
-        "size": 6804209664
+        "size": 6804209664,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.008",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-05T07:37:51.150Z",
+                "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.008",
+                "content_type": "",
+                "size": 6804209664,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.008",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "juequling_2.8.0_AS.zip.009",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.009",
         "checksum": "43a9da16796cebf7e42ee257b4b06349",
-        "size": 6804209664
+        "size": 6804209664,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.009",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-05T07:37:51.150Z",
+                "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.009",
+                "content_type": "",
+                "size": 6804209664,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.009",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "juequling_2.8.0_AS.zip.010",
         "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.010",
         "checksum": "34cb74417466503e7d2d751c9c62734f",
-        "size": 6799200604
+        "size": 6799200604,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.010",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-05T07:37:51.150Z",
+                "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.010",
+                "content_type": "",
+                "size": 6799200604,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/VolumeZip/juequling_2.8.0_AS.zip.010",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       }
     ]
   },
@@ -69,25 +429,169 @@
       "name": "audio_zip_Cn.zip",
       "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_Cn.zip",
       "checksum": "424fe327633d9410e6dedb3f06ef0791",
-      "size": 3523630365
+      "size": 3523630365,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_Cn.zip",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-05T07:37:51.150Z",
+              "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_Cn.zip",
+              "content_type": "",
+              "size": 3523630365,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_Cn.zip",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     },
     "en-us": {
       "name": "audio_zip_En.zip",
       "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_En.zip",
       "checksum": "780ef180c94b3a29a0775f927e0b458a",
-      "size": 3750600331
+      "size": 3750600331,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_En.zip",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-05T07:37:51.150Z",
+              "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_En.zip",
+              "content_type": "",
+              "size": 3750600331,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_En.zip",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     },
     "ja-jp": {
       "name": "audio_zip_Jp.zip",
       "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_Jp.zip",
       "checksum": "32990879a8f47be88d7107f5138e243a",
-      "size": 4171125862
+      "size": 4171125862,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_Jp.zip",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-05T07:37:51.150Z",
+              "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_Jp.zip",
+              "content_type": "",
+              "size": 4171125862,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_Jp.zip",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     },
     "ko-kr": {
       "name": "audio_zip_Kr.zip",
       "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_Kr.zip",
       "checksum": "8c5349755f21a232cf21669d00b9e1f2",
-      "size": 3889044127
+      "size": 3889044127,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_Kr.zip",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-05T07:37:51.150Z",
+              "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_Kr.zip",
+              "content_type": "",
+              "size": 3889044127,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260414105950_rr7gTcyn3lXs6uYV/audio_zip_Kr.zip",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     }
   },
   "update": {
@@ -96,32 +600,212 @@
         "name": "game_2.7.0_2.8.0_hdiff_YvTwoQByrAEBynis.zip",
         "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/game_2.7.0_2.8.0_hdiff_YvTwoQByrAEBynis.zip",
         "checksum": "bd987bba9ea9079db59d8d649817f1d7",
-        "size": 8182516863
+        "size": 8182516863,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/game_2.7.0_2.8.0_hdiff_YvTwoQByrAEBynis.zip",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-05T07:37:51.150Z",
+                "final_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/game_2.7.0_2.8.0_hdiff_YvTwoQByrAEBynis.zip",
+                "content_type": "",
+                "size": 8182516863,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/game_2.7.0_2.8.0_hdiff_YvTwoQByrAEBynis.zip",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       "voice": {
         "zh-cn": {
           "name": "audio_zh-cn_2.7.0_2.8.0_hdiff_JZjldcEIckNsLwop.zip",
           "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_zh-cn_2.7.0_2.8.0_hdiff_JZjldcEIckNsLwop.zip",
           "checksum": "9441b97fc475d2f99f8387b8b47ad645",
-          "size": 464938233
+          "size": 464938233,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_zh-cn_2.7.0_2.8.0_hdiff_JZjldcEIckNsLwop.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-05T07:37:51.150Z",
+                  "final_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_zh-cn_2.7.0_2.8.0_hdiff_JZjldcEIckNsLwop.zip",
+                  "content_type": "",
+                  "size": 464938233,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_zh-cn_2.7.0_2.8.0_hdiff_JZjldcEIckNsLwop.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         },
         "ja-jp": {
           "name": "audio_ja-jp_2.7.0_2.8.0_hdiff_QzznxJJkWWCxlkoX.zip",
           "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ja-jp_2.7.0_2.8.0_hdiff_QzznxJJkWWCxlkoX.zip",
           "checksum": "16e61a2a1a5fef4cf89e778a250040c2",
-          "size": 592627378
+          "size": 592627378,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ja-jp_2.7.0_2.8.0_hdiff_QzznxJJkWWCxlkoX.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-05T07:37:51.150Z",
+                  "final_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ja-jp_2.7.0_2.8.0_hdiff_QzznxJJkWWCxlkoX.zip",
+                  "content_type": "",
+                  "size": 592627378,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ja-jp_2.7.0_2.8.0_hdiff_QzznxJJkWWCxlkoX.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         },
         "ko-kr": {
           "name": "audio_ko-kr_2.7.0_2.8.0_hdiff_HXdxJBruXuRFiNUj.zip",
           "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ko-kr_2.7.0_2.8.0_hdiff_HXdxJBruXuRFiNUj.zip",
           "checksum": "54edc7500a476d99cfe35fced40cf68a",
-          "size": 574092319
+          "size": 574092319,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ko-kr_2.7.0_2.8.0_hdiff_HXdxJBruXuRFiNUj.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-05T07:37:51.150Z",
+                  "final_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ko-kr_2.7.0_2.8.0_hdiff_HXdxJBruXuRFiNUj.zip",
+                  "content_type": "",
+                  "size": 574092319,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ko-kr_2.7.0_2.8.0_hdiff_HXdxJBruXuRFiNUj.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         },
         "en-us": {
           "name": "audio_en-us_2.7.0_2.8.0_hdiff_PPSHVSUBqbKGeHSX.zip",
           "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_en-us_2.7.0_2.8.0_hdiff_PPSHVSUBqbKGeHSX.zip",
           "checksum": "71b235031b8b5ca9679efa1cdc8d34b2",
-          "size": 556731067
+          "size": 556731067,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_en-us_2.7.0_2.8.0_hdiff_PPSHVSUBqbKGeHSX.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-05T07:37:51.150Z",
+                  "final_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_en-us_2.7.0_2.8.0_hdiff_PPSHVSUBqbKGeHSX.zip",
+                  "content_type": "",
+                  "size": 556731067,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_en-us_2.7.0_2.8.0_hdiff_PPSHVSUBqbKGeHSX.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         }
       }
     },
@@ -130,32 +814,212 @@
         "name": "game_2.6.0_2.8.0_hdiff_VFngqqDIkbgHeZaq.zip",
         "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/game_2.6.0_2.8.0_hdiff_VFngqqDIkbgHeZaq.zip",
         "checksum": "14d57d4bbc0251bfffd911b5bbca36fe",
-        "size": 9753567921
+        "size": 9753567921,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/game_2.6.0_2.8.0_hdiff_VFngqqDIkbgHeZaq.zip",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-05T07:37:51.150Z",
+                "final_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/game_2.6.0_2.8.0_hdiff_VFngqqDIkbgHeZaq.zip",
+                "content_type": "",
+                "size": 9753567921,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/game_2.6.0_2.8.0_hdiff_VFngqqDIkbgHeZaq.zip",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       "voice": {
         "ja-jp": {
           "name": "audio_ja-jp_2.6.0_2.8.0_hdiff_fSkorpEtmeLPMHdt.zip",
           "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ja-jp_2.6.0_2.8.0_hdiff_fSkorpEtmeLPMHdt.zip",
           "checksum": "72bedf53655c792b992049ac0d8e8848",
-          "size": 851438523
+          "size": 851438523,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ja-jp_2.6.0_2.8.0_hdiff_fSkorpEtmeLPMHdt.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-05T07:37:51.150Z",
+                  "final_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ja-jp_2.6.0_2.8.0_hdiff_fSkorpEtmeLPMHdt.zip",
+                  "content_type": "",
+                  "size": 851438523,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ja-jp_2.6.0_2.8.0_hdiff_fSkorpEtmeLPMHdt.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         },
         "ko-kr": {
           "name": "audio_ko-kr_2.6.0_2.8.0_hdiff_UsVCqBaVJTbrnive.zip",
           "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ko-kr_2.6.0_2.8.0_hdiff_UsVCqBaVJTbrnive.zip",
           "checksum": "c50cb1f35deab9356292de59e5c6a79c",
-          "size": 897082117
+          "size": 897082117,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ko-kr_2.6.0_2.8.0_hdiff_UsVCqBaVJTbrnive.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-05T07:37:51.150Z",
+                  "final_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ko-kr_2.6.0_2.8.0_hdiff_UsVCqBaVJTbrnive.zip",
+                  "content_type": "",
+                  "size": 897082117,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_ko-kr_2.6.0_2.8.0_hdiff_UsVCqBaVJTbrnive.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         },
         "zh-cn": {
           "name": "audio_zh-cn_2.6.0_2.8.0_hdiff_TPIBoxiDcBqvLiQW.zip",
           "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_zh-cn_2.6.0_2.8.0_hdiff_TPIBoxiDcBqvLiQW.zip",
           "checksum": "a5234fc809156d6ce9502cd3a3c3069e",
-          "size": 774328365
+          "size": 774328365,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_zh-cn_2.6.0_2.8.0_hdiff_TPIBoxiDcBqvLiQW.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-05T07:37:51.150Z",
+                  "final_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_zh-cn_2.6.0_2.8.0_hdiff_TPIBoxiDcBqvLiQW.zip",
+                  "content_type": "",
+                  "size": 774328365,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_zh-cn_2.6.0_2.8.0_hdiff_TPIBoxiDcBqvLiQW.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         },
         "en-us": {
           "name": "audio_en-us_2.6.0_2.8.0_hdiff_yVpuaJdiaYQmzedq.zip",
           "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_en-us_2.6.0_2.8.0_hdiff_yVpuaJdiaYQmzedq.zip",
           "checksum": "48a0839b5e49f9777ff5bfaa44d189e2",
-          "size": 831444542
+          "size": 831444542,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_en-us_2.6.0_2.8.0_hdiff_yVpuaJdiaYQmzedq.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-05T07:37:51.150Z",
+                  "final_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_en-us_2.6.0_2.8.0_hdiff_yVpuaJdiaYQmzedq.zip",
+                  "content_type": "",
+                  "size": 831444542,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.juequling.com/pclauncher/nap_cn/audio_en-us_2.6.0_2.8.0_hdiff_yVpuaJdiaYQmzedq.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         }
       }
     }

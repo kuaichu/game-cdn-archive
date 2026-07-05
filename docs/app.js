@@ -370,6 +370,7 @@ const isNte = () => currentGame().kind === "nte";
 const isEndfield = () => currentGame().kind === "endfield";
 const isWuwa = () => currentGame().kind === "wuwa";
 const isArknights = () => currentGame().kind === "arknights";
+const isHoyo = () => currentGame().kind === "hoyo";
 const isAndroidOnly = () => currentGame().kind === "android";
 const androidGame = () => state.androidIndex?.games?.[state.gameId] || null;
 const androidEntries = () => androidGame()?.versions || [];
@@ -531,8 +532,21 @@ const hoyoDownloadItems = (row) => {
   return items.filter((item) => item && typeof item === "object" && item.url);
 };
 
+const hoyoAvailability = (record) => record?.availability?.interpretation || null;
+const hoyoAvailabilityState = (record) => hoyoAvailability(record)?.state || "";
+const hoyoAvailabilityLabel = (record) => hoyoAvailability(record)?.display_label || (
+  Number(record?.size || 0) <= 0 ? "链接失效" : "可用"
+);
+const hoyoAvailabilityCount = (summary, state) => Number(summary?.availability_counts?.[state] || 0);
+
 const hoyoUnavailableCount = (version) => {
   const summary = hoyoSummaries().find((item) => item.version === version);
+  const availabilityState = hoyoAvailabilityState(summary);
+  if (availabilityState) {
+    return availabilityState === "unavailable"
+      ? hoyoAvailabilityCount(summary, "unavailable") || Number(summary?.unavailable_items || 0)
+      : 0;
+  }
   if (summary && Number.isFinite(Number(summary.unavailable_items))) {
     return Number(summary.unavailable_items || 0);
   }
@@ -562,7 +576,14 @@ const versionAvailabilityCap = (item) => {
     const status = endfieldOfficialStatus(item.version);
     return status ? `<span class="cap ${status.color}">${status.label}</span>` : "";
   }
-  if (!isNte() && !isWuwa()) {
+  if (isHoyo()) {
+    const interpretation = hoyoAvailability(item);
+    if (interpretation?.state === "unavailable") {
+      return `<span class="cap red">${escapeHtml(interpretation.display_label)}</span>`;
+    }
+    if (interpretation?.state === "unknown") {
+      return `<span class="cap slate">${escapeHtml(interpretation.display_label)}</span>`;
+    }
     const count = hoyoUnavailableCount(item.version);
     if (count) return `<span class="cap red">${count === 1 ? "链接失效" : `含失效 ${count}`}</span>`;
   }
@@ -1259,6 +1280,7 @@ const hoyoStats = () => {
     ["当前版本", state.version],
     ["分发架构", profile.label],
     ["压缩包", `${summary?.package_items || 0} 个`],
+    ["可用性", hoyoAvailability(summary)?.display_label || (hoyoUnavailableCount(state.version) ? "链接失效" : "可用")],
     ["散文件直链", decompressedPath ? "可用" : "无"],
     ["Chunk", version?.chunk ? version.chunk.tag || "可用" : "无"],
   ];
@@ -1620,6 +1642,7 @@ const hoyoDirectItem = (item, badge, sublabel = "") => ({
   title: item.name,
   subtitle: sublabel || item.url,
   size: item.size,
+  sizeLabel: `${hoyoAvailabilityLabel(item)} / ${fmtKnownBytes(item.size)}`,
   hash: item.checksum,
   url: item.url,
 });
