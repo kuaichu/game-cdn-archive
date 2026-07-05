@@ -918,7 +918,7 @@ const renderVersionMenu = () => {
       <div class="version-group ${collapsed ? "collapsed" : ""}">
         <button class="version-group-head" type="button" data-family="${family}" aria-expanded="${!collapsed}" title="${collapsed ? "展开" : "收纳"} ${family} 版本">
           <span class="group-title">
-            <span class="group-chevron" aria-hidden="true">⌄</span>
+            <span class="group-chevron" aria-hidden="true"></span>
             <strong>${family} ${isNte() || isEndfield() ? "大版本" : "版本"}</strong>
           </span>
           <span class="group-meta">${items.length} 个可用版本</span>
