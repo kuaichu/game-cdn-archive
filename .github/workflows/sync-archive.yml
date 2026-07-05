@@ -326,6 +326,9 @@ jobs:
           GHA_RUN_RETRY_DELAY: 20
         run: bash scripts/gha_run_step.sh "Refresh Android APK data" python scripts/sync_android_apks.py
 
+      - name: Refresh README coverage summary
+        run: bash scripts/gha_run_step.sh "Refresh README coverage summary" python scripts/update_readme_summary.py
+
       - name: Check generated JavaScript
         run: bash scripts/gha_run_step.sh "Check generated JavaScript" node --check docs/app.js
 
@@ -354,7 +357,7 @@ jobs:
             fi
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add docs/data docs/app.js docs/index.html scripts/update_nte_static.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py scripts/sync_wuwa.py scripts/sync_arknights_pc.py scripts/sync_android_apks.py
+            git add README.md docs/data docs/app.js docs/index.html scripts/update_nte_static.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py scripts/sync_wuwa.py scripts/sync_arknights_pc.py scripts/sync_android_apks.py scripts/update_readme_summary.py
             git commit -m "Auto update archive data"
             for attempt in 1 2 3; do
               if git push; then
