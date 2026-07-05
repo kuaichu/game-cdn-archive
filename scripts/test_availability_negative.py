@@ -22,8 +22,9 @@ from adapters.android import AndroidAvailabilityAdapter  # noqa: E402
 from adapters.endfield import EndfieldAvailabilityAdapter  # noqa: E402
 from adapters.hoyo import HoyoAvailabilityAdapter  # noqa: E402
 from adapters.nte import NteAvailabilityAdapter  # noqa: E402
+from adapters.wuwa import WuwaAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import ProbeResult, availability_block, probe_fact_defaults  # noqa: E402
-from scripts.validate_availability import validate_android, validate_arknights, validate_endfield, validate_hoyo, validate_nte  # noqa: E402
+from scripts.validate_availability import validate_android, validate_arknights, validate_endfield, validate_hoyo, validate_nte, validate_wuwa  # noqa: E402
 
 
 ARKNIGHTS_ROOT = ROOT / "docs" / "data" / "arknights"
@@ -147,6 +148,24 @@ def nte_metadata_probe(url: str, *, size: int, ok: bool = True) -> ProbeResult:
             content_type="",
             size=size,
             error="" if ok else "size_zero",
+            stale=False,
+            scheduler_confidence="medium" if ok else "low",
+        ),
+    }
+
+
+def wuwa_metadata_probe(url: str, *, size: int, ok: bool = True, error: str = "") -> ProbeResult:
+    return {
+        "url": url,
+        "probe": probe_fact_defaults(
+            ok=ok,
+            status=0,
+            method="WUWA_METADATA",
+            checked_at="2026-07-06T00:00:00.000Z",
+            final_url=url,
+            content_type="",
+            size=size,
+            error=error,
             stale=False,
             scheduler_confidence="medium" if ok else "low",
         ),
@@ -400,6 +419,76 @@ def assert_nte_paths() -> None:
         raise AssertionError(f"unexpected NTE object source kind: {object_record['availability']!r}")
     if object_record["availability"]["source"]["confidence"] == "high":
         raise AssertionError(f"NTE object metadata inference must not use high confidence: {object_record['availability']!r}")
+
+
+def assert_wuwa_metadata_paths() -> None:
+    adapter = WuwaAvailabilityAdapter()
+    primary_url = "https://pcdownload-aliyun.aki-game.com/game/invalid.pak"
+    fallback_url = "https://pcdownload-huoshan.aki-game.com/game/valid.pak"
+    record = {
+        "dest": "Client/Content/Paks/chunk.pak",
+        "name": "chunk.pak",
+        "md5": "abc",
+        "size": 1024,
+        "url": primary_url,
+        "urls": [primary_url, fallback_url],
+    }
+    fallback_result = adapter.interpret(
+        [
+            wuwa_metadata_probe(primary_url, size=1024, ok=False, error="not_probed"),
+            wuwa_metadata_probe(fallback_url, size=1024, ok=True),
+        ],
+        record,
+    )
+    expected_fallback = {
+        "state": "available",
+        "reason": "multi_cdn_preferred",
+        "preferred_url": fallback_url,
+        "confidence": "medium",
+        "retained": False,
+        "display_label": "可用",
+    }
+    if fallback_result != expected_fallback:
+        raise AssertionError(f"unexpected WuWa fallback interpretation: {fallback_result!r}")
+    record["availability"] = availability_block(
+        [
+            wuwa_metadata_probe(primary_url, size=1024, ok=False, error="not_probed"),
+            wuwa_metadata_probe(fallback_url, size=1024, ok=True),
+        ],
+        "metadata_inference",
+        fallback_result,
+        "scripts/test_availability_negative.py",
+    )
+    if record["availability"]["source"]["kind"] != "metadata_inference":
+        raise AssertionError(f"unexpected WuWa source kind: {record['availability']!r}")
+    if record["availability"]["source"]["confidence"] == "high":
+        raise AssertionError(f"WuWa metadata inference must not use high confidence: {record['availability']!r}")
+
+    dead_record = {
+        "dest": "Client/Content/Paks/dead.pak",
+        "name": "dead.pak",
+        "md5": "def",
+        "size": 0,
+        "url": primary_url,
+        "urls": [primary_url, fallback_url],
+    }
+    dead_result = adapter.interpret(
+        [
+            wuwa_metadata_probe(primary_url, size=0, ok=False, error="size_zero"),
+            wuwa_metadata_probe(fallback_url, size=0, ok=False, error="size_zero"),
+        ],
+        dead_record,
+    )
+    expected_dead = {
+        "state": "unavailable",
+        "reason": "size_zero",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": False,
+        "display_label": "链接失效",
+    }
+    if dead_result != expected_dead:
+        raise AssertionError(f"unexpected WuWa all-dead interpretation: {dead_result!r}")
 
 
 def mutated_versions_with(path_parts: tuple[str, ...], value: Any) -> dict[str, Any]:
@@ -693,12 +782,109 @@ def assert_nte_validator_rejects(path_parts: tuple[str, ...], value: Any, expect
         raise AssertionError(f"NTE validator did not reject {'.'.join(path_parts)}={value!r}; errors={errors!r}")
 
 
+def valid_wuwa_root(root: Path) -> None:
+    version = "1.0.0"
+    url = "https://pcdownload-aliyun.aki-game.com/game/chunk.pak"
+    item = {
+        "dest": "Client/Content/Paks/chunk.pak",
+        "name": "chunk.pak",
+        "md5": "abc",
+        "size": 1024,
+        "url": url,
+        "urls": [url, "https://pcdownload-huoshan.aki-game.com/game/chunk.pak"],
+    }
+    probes = [
+        wuwa_metadata_probe(item["urls"][0], size=1024),
+        wuwa_metadata_probe(item["urls"][1], size=1024),
+    ]
+    item_interpretation = WuwaAvailabilityAdapter().interpret(probes, item)
+    item["availability"] = availability_block(
+        probes,
+        "metadata_inference",
+        item_interpretation,
+        "scripts/test_availability_negative.py",
+    )
+
+    summary_probe = wuwa_metadata_probe(f"wuwa-metadata://{version}", size=0, ok=False, error="not_probed")
+    summary = {
+        "version": version,
+        "channel": "live",
+        "region": "cn",
+        "file_count": 1,
+        "cdn_count": 2,
+        "patch_routes": 0,
+        "size": 1024,
+        "availability_counts": {"available": 1},
+        "availability_reasons": {"not_probed": 1},
+        "links": {
+            "files": {
+                "json": "data/wuwa/lists/1.0.0-files.json",
+                "urls": "data/wuwa/lists/1.0.0-files.urls.txt",
+                "aria2": "data/wuwa/lists/1.0.0-files.aria2.txt",
+            }
+        },
+    }
+    summary_interpretation = WuwaAvailabilityAdapter().interpret([summary_probe], summary)
+    summary["availability"] = availability_block(
+        [summary_probe],
+        "metadata_inference",
+        summary_interpretation,
+        "scripts/test_availability_negative.py",
+    )
+
+    root.mkdir(parents=True, exist_ok=True)
+    write_json(root / "index.json", {"versions": [summary]})
+    shard_path = root / "versions" / f"{version}.json"
+    shard_path.parent.mkdir(parents=True, exist_ok=True)
+    write_json(shard_path, {
+        "version": version,
+        "channel": "live",
+        "region": "cn",
+        "files": [item],
+        "patches": [],
+        "links": summary["links"],
+        "availability_counts": {"available": 1},
+        "availability_reasons": {"not_probed": 1},
+    })
+    list_dir = root / "lists"
+    list_dir.mkdir(parents=True, exist_ok=True)
+    write_json(list_dir / "1.0.0-files.json", [item])
+
+
+def mutate_wuwa_item(root: Path, path_parts: tuple[str, ...], value: Any) -> None:
+    valid_wuwa_root(root)
+    shard_path = root / "versions" / "1.0.0.json"
+    shard = load_json(shard_path)
+    target: Any = shard["files"][0]
+    for part in path_parts[:-1]:
+        target = target[part]
+    target[path_parts[-1]] = value
+    write_json(shard_path, shard)
+    list_path = root / "lists" / "1.0.0-files.json"
+    items = load_json(list_path)
+    target = items[0]
+    for part in path_parts[:-1]:
+        target = target[part]
+    target[path_parts[-1]] = value
+    write_json(list_path, items)
+
+
+def assert_wuwa_validator_rejects(path_parts: tuple[str, ...], value: Any, expected_token: str) -> None:
+    with tempfile.TemporaryDirectory(prefix="wuwa-availability-negative-") as temp:
+        temp_root = Path(temp) / "docs" / "data" / "wuwa"
+        mutate_wuwa_item(temp_root, path_parts, value)
+        errors = validate_wuwa(temp_root)
+    if not any(expected_token in error for error in errors):
+        raise AssertionError(f"WuWa validator did not reject {'.'.join(path_parts)}={value!r}; errors={errors!r}")
+
+
 def main() -> None:
     assert_arknights_failed_probe_maps_to_unavailable()
     assert_android_negative_paths()
     assert_hoyo_metadata_paths()
     assert_endfield_upstream_paths()
     assert_nte_paths()
+    assert_wuwa_metadata_paths()
     assert_validator_rejects(("availability", "interpretation", "state"), "foobar", ":state:foobar")
     assert_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
     assert_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
@@ -719,6 +905,10 @@ def main() -> None:
     assert_nte_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
     assert_nte_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
     assert_nte_validator_rejects(("availability", "interpretation", "confidence"), "certain", ":confidence:certain")
+    assert_wuwa_validator_rejects(("availability", "interpretation", "state"), "foobar", ":state:foobar")
+    assert_wuwa_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
+    assert_wuwa_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
+    assert_wuwa_validator_rejects(("availability", "interpretation", "confidence"), "certain", ":confidence:certain")
 
     print("Availability negative-path checks")
     print("arknights_failed_probe=PASS")
@@ -728,6 +918,7 @@ def main() -> None:
     print("hoyo_metadata_inference=PASS")
     print("endfield_upstream_archive=PASS")
     print("nte_live_probe_and_metadata=PASS")
+    print("wuwa_metadata_multicdn=PASS")
     print("closed_vocab_rejection=PASS")
     print("result=PASS")
 

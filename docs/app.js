@@ -559,6 +559,7 @@ const hoyoUnavailableCount = (version) => {
 };
 
 const endfieldAvailability = (record) => record?.availability?.interpretation || null;
+const wuwaAvailability = (record) => record?.availability?.interpretation || null;
 const endfieldAvailabilityState = (record) => endfieldAvailability(record)?.state || "";
 const endfieldAvailabilityLabel = (record) => endfieldAvailability(record)?.display_label || (
   record?.official_available === false
@@ -1607,32 +1608,44 @@ const nteItem = (entry, index, total) => {
 
 const wuwaFileItem = (entry, index = 0, total = 0) => {
   const urls = entry.urls?.length ? entry.urls : [entry.url].filter(Boolean);
+  const availability = wuwaAvailability(entry);
+  const availabilityLabel = availability?.display_label || (Number(entry.size || 0) > 0 ? "可用" : "链接失效");
+  const preferredUrl = availability?.preferred_url || urls[0] || "";
   return {
     key: entry.dest,
     badge: "游戏文件",
     title: entry.name || entry.dest?.split(/[\\/]/).at(-1) || "-",
-    subtitle: entry.dest || entry.name || "-",
+    subtitle: `${availabilityLabel} / ${entry.dest || entry.name || "-"}`,
     remoteName: entry.dest || entry.name || "",
     size: Number(entry.size || 0),
+    sizeLabel: `${availabilityLabel} / ${fmtBytes(entry.size || 0)}`,
     hash: entry.md5 || "",
-    url: urls[0] || "",
+    url: preferredUrl,
     extraLinks: urls.slice(1).map((url, index) => ({ url, label: `CDN${index + 2}` })),
+    availabilityState: availability?.state || "",
+    availabilityLabel,
     count: total ? `${index + 1}/${total}` : "",
   };
 };
 
 const wuwaPatchItem = (route, entry, index = 0, total = 0) => {
   const urls = entry.urls?.length ? entry.urls : [entry.url].filter(Boolean);
+  const availability = wuwaAvailability(entry);
+  const availabilityLabel = availability?.display_label || (Number(entry.size || 0) > 0 ? "可用" : "链接失效");
+  const preferredUrl = availability?.preferred_url || urls[0] || "";
   return {
     key: `${route.from}->${route.to}:${entry.dest}`,
     badge: "补丁分片",
     title: entry.name || entry.dest?.split(/[\\/]/).at(-1) || "-",
-    subtitle: `${route.from} -> ${route.to} / ${entry.dest || entry.name || "-"}`,
+    subtitle: `${route.from} -> ${route.to} / ${availabilityLabel} / ${entry.dest || entry.name || "-"}`,
     remoteName: entry.dest || entry.name || "",
     size: Number(entry.size || 0),
+    sizeLabel: `${availabilityLabel} / ${fmtBytes(entry.size || 0)}`,
     hash: entry.md5 || "",
-    url: urls[0] || "",
+    url: preferredUrl,
     extraLinks: urls.slice(1).map((url, extraIndex) => ({ url, label: `CDN${extraIndex + 2}` })),
+    availabilityState: availability?.state || "",
+    availabilityLabel,
     count: total ? `${index + 1}/${total}` : "",
   };
 };

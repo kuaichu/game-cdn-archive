@@ -22,6 +22,7 @@ from adapters.android import AndroidAvailabilityAdapter  # noqa: E402
 from adapters.endfield import EndfieldAvailabilityAdapter  # noqa: E402
 from adapters.hoyo import HoyoAvailabilityAdapter  # noqa: E402
 from adapters.nte import NteAvailabilityAdapter  # noqa: E402
+from adapters.wuwa import WuwaAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import (  # noqa: E402
     AVAILABILITY_REASONS,
     AVAILABILITY_STATES,
@@ -35,6 +36,7 @@ DEFAULT_ANDROID = ROOT / "docs" / "data" / "android"
 DEFAULT_ENDFIELD = ROOT / "docs" / "data" / "endfield"
 DEFAULT_HOYO = ROOT / "docs" / "data" / "hoyo"
 DEFAULT_NTE = ROOT / "docs" / "data"
+DEFAULT_WUWA = ROOT / "docs" / "data" / "wuwa"
 FORBIDDEN_ADAPTER_MODULES = {"urllib", "requests", "http", "http.client", "subprocess", "socket"}
 FORBIDDEN_ADAPTER_NAMES = {"urlopen", "Request", "HTTPConnection", "HTTPSConnection", "curl", "fetch"}
 
@@ -400,6 +402,100 @@ def validate_nte(root: Path) -> list[str]:
     return errors
 
 
+def iter_wuwa_patch_parts(row: dict[str, Any]) -> list[dict[str, Any]]:
+    items: list[dict[str, Any]] = []
+    for route in row.get("patches") or []:
+        if not isinstance(route, dict):
+            continue
+        items.extend(item for item in route.get("parts") or [] if isinstance(item, dict))
+    return items
+
+
+def iter_wuwa_file_items(row: dict[str, Any]) -> list[dict[str, Any]]:
+    files = [item for item in row.get("files") or [] if isinstance(item, dict)]
+    return [*files, *iter_wuwa_patch_parts(row)]
+
+
+def wuwa_data_path(root: Path, link: str) -> Path:
+    rel = Path(str(link))
+    if not str(link).startswith("data/wuwa/"):
+        raise ValueError(f"Unexpected WuWa data link: {link}")
+    return root.parents[1] / rel
+
+
+def validate_wuwa(root: Path) -> list[str]:
+    errors: list[str] = []
+    index_path = root / "index.json"
+    index = load_json(index_path)
+    adapter = WuwaAvailabilityAdapter()
+    if not isinstance(index, dict):
+        return ["wuwa:index_not_object"]
+    summaries = index.get("versions")
+    if not isinstance(summaries, list):
+        return ["wuwa:summaries_missing"]
+
+    for summary in summaries:
+        if not isinstance(summary, dict):
+            errors.append("wuwa:summary_not_object")
+            continue
+        version = str(summary.get("version") or "")
+        summary_path = f"wuwa:{version}:summary"
+        errors.extend(validate_availability(summary, summary_path, adapter))
+        source = (summary.get("availability") or {}).get("source") or {}
+        interpretation = (summary.get("availability") or {}).get("interpretation") or {}
+        if source.get("kind") != "metadata_inference":
+            errors.append(f"{summary_path}:source_kind_not_metadata_inference:{source.get('kind')}")
+        if interpretation.get("confidence") == "high" or source.get("confidence") == "high":
+            errors.append(f"{summary_path}:metadata_high_confidence")
+
+        shard_path = root / "versions" / f"{version}.json"
+        if not shard_path.exists():
+            errors.append(f"wuwa:{version}:shard_missing")
+            continue
+        row = load_json(shard_path)
+        if not isinstance(row, dict):
+            errors.append(f"wuwa:{version}:shard_not_object")
+            continue
+        for index, item in enumerate(iter_wuwa_file_items(row), start=1):
+            item_path = f"wuwa:{version}:item_{index}"
+            errors.extend(validate_availability(item, item_path, adapter))
+            item_source = (item.get("availability") or {}).get("source") or {}
+            item_interpretation = (item.get("availability") or {}).get("interpretation") or {}
+            if item_source.get("kind") != "metadata_inference":
+                errors.append(f"{item_path}:source_kind_not_metadata_inference:{item_source.get('kind')}")
+            if item_interpretation.get("confidence") == "high" or item_source.get("confidence") == "high":
+                errors.append(f"{item_path}:metadata_high_confidence")
+
+        list_sections: list[tuple[str, Any]] = [("files", (row.get("links") or {}).get("files"))]
+        for route in row.get("patches") or []:
+            if isinstance(route, dict):
+                list_sections.append(("patches", route.get("links")))
+        for section_name, section in list_sections:
+            if not isinstance(section, dict) or not section.get("json"):
+                continue
+            list_path = wuwa_data_path(root, str(section["json"]))
+            if not list_path.exists():
+                errors.append(f"wuwa:{version}:{section_name}:list_missing:{list_path}")
+                continue
+            items = load_json(list_path)
+            if not isinstance(items, list):
+                errors.append(f"wuwa:{version}:{section_name}:list_not_array")
+                continue
+            for index, item in enumerate(items, start=1):
+                if not isinstance(item, dict):
+                    errors.append(f"wuwa:{version}:{section_name}:list_{index}_not_object")
+                    continue
+                item_path = f"wuwa:{version}:{section_name}:list_{index}"
+                errors.extend(validate_availability(item, item_path, adapter))
+                item_source = (item.get("availability") or {}).get("source") or {}
+                item_interpretation = (item.get("availability") or {}).get("interpretation") or {}
+                if item_source.get("kind") != "metadata_inference":
+                    errors.append(f"{item_path}:source_kind_not_metadata_inference:{item_source.get('kind')}")
+                if item_interpretation.get("confidence") == "high" or item_source.get("confidence") == "high":
+                    errors.append(f"{item_path}:metadata_high_confidence")
+    return errors
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--arknights-root", type=Path, default=DEFAULT_ARKNIGHTS)
@@ -407,6 +503,7 @@ def main() -> None:
     parser.add_argument("--endfield-root", type=Path, default=DEFAULT_ENDFIELD)
     parser.add_argument("--hoyo-root", type=Path, default=DEFAULT_HOYO)
     parser.add_argument("--nte-root", type=Path, default=DEFAULT_NTE)
+    parser.add_argument("--wuwa-root", type=Path, default=DEFAULT_WUWA)
     args = parser.parse_args()
 
     errors = []
@@ -416,6 +513,7 @@ def main() -> None:
     errors.extend(validate_endfield(args.endfield_root))
     errors.extend(validate_hoyo(args.hoyo_root))
     errors.extend(validate_nte(args.nte_root))
+    errors.extend(validate_wuwa(args.wuwa_root))
 
     print("Availability validation")
     print(f"arknights_root={args.arknights_root.resolve()}")
@@ -423,6 +521,7 @@ def main() -> None:
     print(f"endfield_root={args.endfield_root.resolve()}")
     print(f"hoyo_root={args.hoyo_root.resolve()}")
     print(f"nte_root={args.nte_root.resolve()}")
+    print(f"wuwa_root={args.wuwa_root.resolve()}")
     print(f"errors={len(errors)}")
     if errors:
         print("result=FAIL")
