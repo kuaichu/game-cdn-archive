@@ -37,8 +37,31 @@ def env_int(name: str, default: int) -> int:
         return default
 
 
+def env_flag(name: str, default: bool) -> bool:
+    raw = os.environ.get(name)
+    if raw is None:
+        return default
+    return raw.strip().lower() not in {"0", "false", "no", "off"}
+
+
 def iso_now() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z")
+
+
+def parse_iso_datetime(value: Any) -> datetime | None:
+    if not isinstance(value, str) or not value:
+        return None
+    try:
+        return datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def age_hours(value: Any, now: datetime) -> float | None:
+    parsed = parse_iso_datetime(value)
+    if not parsed:
+        return None
+    return max((now - parsed).total_seconds() / 3600, 0)
 
 
 def is_http_url(value: Any) -> bool:
@@ -283,6 +306,107 @@ def probe_url(url: str, timeout: int) -> dict[str, Any]:
     return mark_ok(meta)
 
 
+PROBE_META_KEYS = {
+    "status",
+    "method",
+    "final_url",
+    "content_type",
+    "size",
+    "last_modified",
+    "etag",
+    "error",
+    "ok",
+    "checked_at",
+}
+
+
+def previous_checked_at(previous: dict[str, Any] | None, previous_index: dict[str, Any] | None) -> str:
+    if not previous:
+        return ""
+    return str(previous.get("checked_at") or (previous_index or {}).get("last_checked_at") or "")
+
+
+def record_with_previous_probe(
+    current: dict[str, Any],
+    previous: dict[str, Any],
+    previous_index: dict[str, Any],
+) -> dict[str, Any]:
+    merged = dict(current)
+    for key in PROBE_META_KEYS:
+        if key in previous:
+            merged[key] = previous[key]
+    if not merged.get("checked_at"):
+        merged["checked_at"] = previous_checked_at(previous, previous_index)
+    return merged
+
+
+def due_for_probe(
+    current: dict[str, Any],
+    previous: dict[str, Any] | None,
+    previous_index: dict[str, Any] | None,
+    now: datetime,
+    ttl_hours: int,
+    failed_ttl_hours: int,
+) -> tuple[bool, str]:
+    if previous is None:
+        return True, "new"
+    checked_at = previous_checked_at(previous, previous_index)
+    checked_age = age_hours(checked_at, now)
+    if checked_age is None:
+        return True, "unknown-age"
+    if not previous.get("ok") and checked_age >= failed_ttl_hours:
+        return True, "previously-unavailable"
+    if checked_age >= ttl_hours:
+        return True, "stale"
+    if current.get("expected_size") and previous.get("expected_size") and current.get("expected_size") != previous.get("expected_size"):
+        return True, "metadata-changed"
+    return False, "fresh-cache"
+
+
+def rotation_score(url: str) -> int:
+    return sum((index + 1) * ord(ch) for index, ch in enumerate(url))
+
+
+def select_records_to_probe(
+    records: list[dict[str, Any]],
+    previous_index: dict[str, Any] | None,
+    now: datetime,
+) -> tuple[set[str], dict[str, int]]:
+    previous_by_url = {
+        record.get("url"): record
+        for record in (previous_index or {}).get("records", [])
+        if isinstance(record, dict) and record.get("url")
+    }
+    ttl_hours = env_int("URL_STATUS_TTL_HOURS", 72)
+    failed_ttl_hours = env_int("URL_STATUS_FAILED_TTL_HOURS", 24)
+    full_interval_hours = env_int("URL_STATUS_FULL_INTERVAL_HOURS", 168)
+    rotation_limit = env_int("URL_STATUS_ROTATION_LIMIT", 300)
+    force_full = env_flag("URL_STATUS_FORCE_FULL", False)
+    full_age = age_hours((previous_index or {}).get("last_full_probe_at") or (previous_index or {}).get("last_checked_at"), now)
+
+    if force_full or not previous_index or full_age is None or full_age >= full_interval_hours:
+        return {record["url"] for record in records}, {"full": len(records)}
+
+    selected: set[str] = set()
+    reasons: dict[str, int] = {}
+    rotation_candidates: list[tuple[float, int, str]] = []
+    for record in records:
+        previous = previous_by_url.get(record["url"])
+        should_probe, reason = due_for_probe(record, previous, previous_index, now, ttl_hours, failed_ttl_hours)
+        if should_probe:
+            selected.add(record["url"])
+            reasons[reason] = reasons.get(reason, 0) + 1
+            continue
+        checked_age = age_hours(previous_checked_at(previous, previous_index), now) or 0
+        rotation_candidates.append((checked_age, rotation_score(record["url"]), record["url"]))
+
+    for _, _, url in sorted(rotation_candidates, reverse=True)[:max(rotation_limit, 0)]:
+        selected.add(url)
+    if rotation_limit > 0:
+        reasons["rotation"] = min(rotation_limit, len(rotation_candidates))
+    return selected, reasons
+
+
 def stable_index(index: dict[str, Any]) -> dict[str, Any]:
     stable = deepcopy(index)
     stable.pop("generated_at", None)
@@ -295,13 +419,31 @@ def main() -> None:
     workers = env_int("URL_STATUS_WORKERS", 16)
     records = collect_urls()
     total = len(records)
-    print(f"Probing {total} archived URLs with {workers} workers")
+    previous = None
+    if STATUS_PATH.exists():
+        try:
+            previous = json.loads(STATUS_PATH.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            previous = None
+    now_dt = datetime.now(timezone.utc)
+    now = now_dt.isoformat(timespec="milliseconds").replace("+00:00", "Z")
+    selected_urls, probe_reasons = select_records_to_probe(records, previous, now_dt)
+    previous_by_url = {
+        record.get("url"): record
+        for record in (previous or {}).get("records", [])
+        if isinstance(record, dict) and record.get("url")
+    }
+    print(
+        f"Probing {len(selected_urls)} of {total} archived URLs with {workers} workers "
+        f"(reasons: {probe_reasons})"
+    )
 
-    probed: list[dict[str, Any]] = []
+    probed_by_url: dict[str, dict[str, Any]] = {}
     with concurrent.futures.ThreadPoolExecutor(max_workers=max(workers, 1)) as executor:
         future_by_url = {
             executor.submit(probe_url, record["url"], timeout): record
             for record in records
+            if record["url"] in selected_urls
         }
         for future in concurrent.futures.as_completed(future_by_url):
             record = future_by_url[future]
@@ -319,18 +461,34 @@ def main() -> None:
                     "error": str(exc),
                     "ok": False,
                 }
-            probed.append({**record, **meta})
+            probed_by_url[record["url"]] = {**record, **meta, "checked_at": now}
 
+    probed: list[dict[str, Any]] = []
+    for record in records:
+        if record["url"] in probed_by_url:
+            probed.append(probed_by_url[record["url"]])
+            continue
+        previous_record = previous_by_url.get(record["url"])
+        if previous_record:
+            probed.append(record_with_previous_probe(record, previous_record, previous or {}))
+        else:
+            probed.append({**record, **mark_ok({"status": 0, "error": "not probed"}), "checked_at": now})
     probed.sort(key=lambda item: item["url"])
     by_status: dict[str, int] = {}
     for record in probed:
         key = str(record.get("status") or 0)
         by_status[key] = by_status.get(key, 0) + 1
 
-    now = iso_now()
     index = {
         "source": "generated by scripts/probe_url_status.py from archived direct-download URLs",
         "last_checked_at": now,
+        "last_full_probe_at": (
+            now
+            if len(selected_urls) == total
+            else (previous or {}).get("last_full_probe_at") or (previous or {}).get("last_checked_at") or now
+        ),
+        "last_probe_count": len(selected_urls),
+        "last_probe_reasons": probe_reasons,
         "generated_at": now,
         "total_urls": total,
         "available_urls": sum(1 for record in probed if record.get("ok")),
@@ -338,12 +496,6 @@ def main() -> None:
         "by_status": dict(sorted(by_status.items(), key=lambda item: int(item[0]))),
         "records": probed,
     }
-    previous = None
-    if STATUS_PATH.exists():
-        try:
-            previous = json.loads(STATUS_PATH.read_text(encoding="utf-8"))
-        except json.JSONDecodeError:
-            previous = None
     if isinstance(previous, dict) and stable_index(previous) == stable_index(index):
         index["generated_at"] = previous.get("generated_at", now)
 

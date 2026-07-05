@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-07-05T02:40:42.827797+00:00",
-  "generated_at": "2026-07-05T02:40:42.827797+00:00",
+  "last_checked_at": "2026-07-05T03:04:24.403202+00:00",
+  "generated_at": "2026-07-05T03:04:24.403202+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -154,16 +154,18 @@
           "source_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
           "archive_url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
           "archive_note": "CDN URL captured during sync",
-          "status": 404,
-          "content_type": "text/html",
-          "size": 0,
-          "last_modified": "",
-          "etag": "",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2023625968,
+          "last_modified": "Mon, 23 Mar 2026 04:02:37 GMT",
+          "etag": "339695581774CBDF745D857F8975AA34-193",
           "md5": "",
-          "crc64": "",
-          "error": "APK object unavailable",
+          "crc64": "8155058698090329544",
+          "error": "",
           "filename": "ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
-          "captured_at": "2026-07-05T02:40:42.827797+00:00"
+          "captured_at": "2026-07-05T02:40:42.827797+00:00",
+          "updated_at": "2026-03-23T04:02:37+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "aethergazer",
@@ -643,6 +645,7 @@
           "md5": "d9bb02269dfea9e4084cb4f0f141e4c4",
           "crc64": "",
           "error": "APK object unavailable",
+          "exception_info": "O2|404",
           "filename": "KR_TF_41-鸣潮_2.6.0_145597397__库洛_投放包_1_d9bb02269dfea9e4084cb4f0f141e4c4_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-08-25T10:39:28+00:00",
@@ -682,6 +685,7 @@
           "md5": "0198dea9f935f0df478aeae416b85a83",
           "crc64": "",
           "error": "APK object unavailable",
+          "exception_info": "O2|404",
           "filename": "KR_TF_41-鸣潮_2.4.1_141938334__库洛_投放包_1_0198dea9f935f0df478aeae416b85a83_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-07-09T10:52:31+00:00",

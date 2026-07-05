@@ -324,12 +324,18 @@ jobs:
         env:
           GHA_RUN_RETRIES: 2
           GHA_RUN_RETRY_DELAY: 20
+          ANDROID_APK_REPROBE_TTL_HOURS: 20
         run: bash scripts/gha_run_step.sh "Refresh Android APK data" python scripts/sync_android_apks.py
 
       - name: Probe archived URL health
         env:
           GHA_RUN_RETRIES: 2
           GHA_RUN_RETRY_DELAY: 20
+          URL_STATUS_TTL_HOURS: 72
+          URL_STATUS_FAILED_TTL_HOURS: 24
+          URL_STATUS_FULL_INTERVAL_HOURS: 168
+          URL_STATUS_ROTATION_LIMIT: 300
+          URL_STATUS_WORKERS: 24
         run: bash scripts/gha_run_step.sh "Probe archived URL health" python scripts/probe_url_status.py
 
       - name: Refresh README coverage summary

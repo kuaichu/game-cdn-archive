@@ -53,7 +53,7 @@ ranges are:
 
 | Game | Indexed versions | Records | Notes |
 | --- | --- | --- | --- |
-| 深空之眼 / Aether Gazer | `0.285.0` -> `0.305.3` | `5` version buckets / `5` records | `0` available; `5` unavailable or historical dead-link records |
+| 深空之眼 / Aether Gazer | `0.285.0` -> `0.305.3` | `5` version buckets / `5` records | `1` available; `4` unavailable or historical dead-link records |
 | 明日方舟 / Arknights | `1150.0.0` -> `2741.0.0` | `20` version buckets / `20` records | `1` available; `19` unavailable or historical dead-link records |
 | 崩坏3 / Honkai Impact 3rd | `0.9.9` -> `8.9.0` | `39` version buckets / `39` records | `13` available; `26` unavailable or historical dead-link records |
 | 碧蓝档案 / Blue Archive | `2.1.2` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
@@ -340,6 +340,13 @@ packages/patches.
 ```bash
 python scripts/probe_url_status.py
 ```
+
+The URL health probe is incremental by default: it always checks new URLs,
+periodically re-checks failed URLs, and rotates through older healthy URLs in
+batches so routine syncs do not re-probe every archived file. Set
+`URL_STATUS_FORCE_FULL=1` for an immediate full sweep. Android APK metadata has
+a similar short TTL via `ANDROID_APK_REPROBE_TTL_HOURS`; set it to `0` to force
+a full historical APK re-check.
 
 ### Kuro Android Fallback Note
 

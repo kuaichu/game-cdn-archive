@@ -2662,6 +2662,26 @@ def env_flag(name: str, default: bool) -> bool:
     return raw.strip().lower() not in {"0", "false", "no", "off"}
 
 
+def env_int(name: str, default: int) -> int:
+    raw = os.environ.get(name)
+    if raw is None:
+        return default
+    try:
+        return int(raw)
+    except ValueError:
+        return default
+
+
+def iso_age_hours(value: str | None, now: datetime) -> float | None:
+    if not value:
+        return None
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return max((now - parsed).total_seconds() / 3600, 0)
+
+
 def md5_from_filename(filename: str) -> str:
     if not filename.endswith(".apk"):
         return ""
@@ -2769,9 +2789,21 @@ def main() -> None:
         for entry in game.get("versions", []):
             if entry.get("source_url"):
                 previous_by_source_url.setdefault(entry["source_url"], []).append(entry)
-    generated_at = datetime.now(timezone.utc).isoformat()
+    generated_dt = datetime.now(timezone.utc)
+    generated_at = generated_dt.isoformat()
     entries: list[dict] = []
-    reprobe_all_apks = env_flag("REPROBE_ANDROID_APKS", True)
+    apk_reprobe_ttl_hours = env_int("ANDROID_APK_REPROBE_TTL_HOURS", 20)
+    previous_age = iso_age_hours(previous_index.get("last_checked_at"), generated_dt)
+    reprobe_all_apks = (
+        env_flag("REPROBE_ANDROID_APKS", True)
+        and (apk_reprobe_ttl_hours <= 0 or previous_age is None or previous_age >= apk_reprobe_ttl_hours)
+    )
+    if env_flag("REPROBE_ANDROID_APKS", True) and not reprobe_all_apks:
+        print(
+            "Reusing recently probed historical APK metadata; "
+            f"last full APK check was {previous_age:.1f}h ago "
+            f"(ttl {apk_reprobe_ttl_hours}h)."
+        )
 
     seeds_by_url = {seed["url"]: seed for seed in KNOWN_APKS}
     for seed in discover_download_porter_apks():
