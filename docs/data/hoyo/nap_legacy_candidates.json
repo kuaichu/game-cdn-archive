@@ -1,0 +1,61 @@
+{
+  "game_id": "nap",
+  "game_name": "Zenless Zone Zero",
+  "description": "Unversioned historical official CDN candidates. These records are preserved for archive research only and are not treated as confirmed downloadable versions.",
+  "records": [
+    {
+      "id": "nap-cbt3-candidate-20240408145616-android-apk",
+      "platform": "Android",
+      "version": null,
+      "inferred_test": "cbt3_amplifying_test_candidate",
+      "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240408145616_igYLv9zdfakL58ds/zzz.apk",
+      "filename": "zzz.apk",
+      "generated_at_from_path": "2024-04-08T14:56:16+08:00",
+      "current": {
+        "checked_at": "2026-07-05T18:04:57+08:00",
+        "status_code": 404,
+        "content_type": "text/html",
+        "content_length": 18,
+        "last_modified": "Sat, 28 Sep 2024 02:47:24 GMT",
+        "etag": "\"53AF239EE5D3E261545DEDEDCB6FFD57\""
+      },
+      "archive": {
+        "source": "Internet Archive CDX",
+        "timestamp": "20250430213550",
+        "status_code": 404,
+        "mimetype": "text/html",
+        "digest": "ATFH4E36D2P65LMWU7PULO3H2WVT3YMQ",
+        "length": 652
+      },
+      "source": "User-provided official CDN candidate.",
+      "notes": "Official CDN path and embedded timestamp fit CBT3 preparation, but the exact versionName is unknown. Current URL and known CDX capture are both 404."
+    },
+    {
+      "id": "nap-cbt3-candidate-20240408183253-windows-zip",
+      "platform": "Windows",
+      "version": null,
+      "inferred_test": "cbt3_amplifying_test_candidate",
+      "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240408183253_vTHA2z527fho119q/zzz.zip",
+      "filename": "zzz.zip",
+      "generated_at_from_path": "2024-04-08T18:32:53+08:00",
+      "current": {
+        "checked_at": "2026-07-05T18:04:57+08:00",
+        "status_code": 404,
+        "content_type": "text/html",
+        "content_length": 18,
+        "last_modified": "Sat, 28 Sep 2024 02:47:24 GMT",
+        "etag": "\"53AF239EE5D3E261545DEDEDCB6FFD57\""
+      },
+      "archive": {
+        "source": "Internet Archive CDX",
+        "timestamp": "20250711053336",
+        "status_code": 404,
+        "mimetype": "text/html",
+        "digest": "ATFH4E36D2P65LMWU7PULO3H2WVT3YMQ",
+        "length": 659
+      },
+      "source": "User-provided official CDN candidate.",
+      "notes": "Official CDN path and embedded timestamp fit CBT3 preparation, but the exact versionName is unknown. Current URL and known CDX capture are both 404."
+    }
+  ]
+}
