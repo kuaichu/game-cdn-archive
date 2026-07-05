@@ -156,6 +156,9 @@ scripts/
   probe_url_status.py        Re-probe archived direct download URLs for availability
 ```
 
+For the current per-game data shapes, split status, and validator/promote
+coverage, see [`docs/archive-data-architecture.md`](docs/archive-data-architecture.md).
+
 ## NTE Manifest Notes
 
 The current public launcher uses packed resource lists. They are stored as
