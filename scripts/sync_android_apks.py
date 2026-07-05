@@ -2708,16 +2708,30 @@ def apk_hashes(entry: dict) -> set[str]:
     return hashes
 
 
-def has_same_apk_hash(candidate: dict, entries: list[dict]) -> bool:
+def same_apk_hash_entry_index(candidate: dict, entries: list[dict]) -> int | None:
     candidate_hashes = apk_hashes(candidate)
     if not candidate_hashes:
-        return False
-    for entry in entries:
+        return None
+    for index, entry in enumerate(entries):
         if entry.get("game_id") != candidate.get("game_id"):
             continue
         if apk_hashes(entry) & candidate_hashes:
-            return True
-    return False
+            return index
+    return None
+
+
+def should_replace_same_hash_entry(candidate: dict, existing: dict) -> bool:
+    candidate_version = str(candidate.get("version") or "")
+    existing_version = str(existing.get("version") or "")
+    if not candidate_version or not existing_version:
+        return False
+    if version_key(candidate_version) <= version_key(existing_version):
+        return False
+    # Prefer dynamically discovered current endpoints over stale manual captures
+    # when the CDN serves the same APK bytes under a newer version.
+    if candidate.get("source_url") and str(existing.get("source", "")).startswith("official CDN URL captured manually"):
+        return True
+    return bool(candidate.get("source_url") and existing.get("source_url"))
 
 
 def same_source_previous(candidate: dict, previous_entries: list[dict]) -> dict | None:
@@ -2892,7 +2906,17 @@ def main() -> None:
                     entry["archive_url"] = same_source.get("archive_url") or entry["archive_url"]
                 if same_source.get("archive_note") or entry.get("archive_note"):
                     entry["archive_note"] = same_source.get("archive_note") or entry["archive_note"]
-        if entry.get("source_url") and has_same_apk_hash(entry, entries):
+        same_hash_index = same_apk_hash_entry_index(entry, entries) if entry.get("source_url") else None
+        if same_hash_index is not None:
+            existing = entries[same_hash_index]
+            if should_replace_same_hash_entry(entry, existing):
+                entry["captured_at"] = existing.get("captured_at", entry.get("captured_at", generated_at))
+                print(
+                    "replace duplicate APK hash with newer version: "
+                    f"{entry['game_id']} {existing.get('version')} -> {entry['version']} {entry['url']}"
+                )
+                entries[same_hash_index] = entry
+                continue
             print(f"skip duplicate APK hash: {entry['game_id']} {entry['version']} {entry['url']}")
             continue
         entries.append(entry)

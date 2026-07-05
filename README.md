@@ -63,7 +63,7 @@ ranges are:
 | 原神 / Genshin Impact | `0.9.3` -> `6.7.0` | `54` version buckets / `54` records | `50` available; `4` unavailable or historical dead-link records |
 | 崩坏：星穹铁道 / Honkai: Star Rail | `0.90.0` -> `4.3.0` | `29` version buckets / `33` records | `30` available; `3` unavailable or historical dead-link records |
 | 绝区零 / Zenless Zone Zero | `1.0.0` -> `3.0.0` | `10` version buckets / `10` records | `10` available; `0` unavailable or historical dead-link records |
-| 异环 / Neverness to Everness | `1.0.2` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
+| 异环 / Neverness to Everness | `1.2.0` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 战双帕弥什 / Punishing: Gray Raven | `4.5.0` | `1` version buckets / `2` records | `2` available; `0` unavailable or historical dead-link records |
 | 重返未来：1999 / Reverse: 1999 | `1.0.3` -> `3.8.0` | `2` version buckets / `2` records | `1` available; `1` unavailable or historical dead-link records |
 | 尘白禁区 / Snowbreak: Containment Zone | `1.6.0.99` -> `3.6.0.122` | `9` version buckets / `9` records | `4` available; `5` unavailable or historical dead-link records |
