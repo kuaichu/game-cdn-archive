@@ -239,7 +239,7 @@ def summary_from_version(version: dict) -> dict:
         "size": int(version.get("size") or 0),
         "uncompressed_size": int(version.get("uncompressed_size") or 0),
     }
-    for key in ["source_note", "release_stage"]:
+    for key in ["source", "source_note", "release_stage", "source_repo", "source_commit", "imported_at"]:
         if version.get(key):
             summary[key] = version[key]
     for key in ["last_modified", "last_modified_source", "last_modified_url", "last_modified_status"]:
@@ -261,6 +261,23 @@ def cached_version(
         return None
     print(f"::warning::Reusing cached Wuthering Waves {version} data: {reason}")
     return summary_from_version(cached), deepcopy(cached)
+
+
+def imported_cached_versions(cached_versions: dict, output_dir: Path) -> dict:
+    imported: dict = {}
+    for version, payload in cached_versions.items():
+        if not isinstance(payload, dict):
+            continue
+        if payload.get("source") != "tomyjan-import":
+            continue
+        if not cached_link_exists(output_dir, payload.get("links")):
+            print(
+                f"::warning::Skipping imported Wuthering Waves {version} data "
+                "because one or more linked list files are missing."
+            )
+            continue
+        imported[version] = payload
+    return imported
 
 
 def join_url(base: str, path: str) -> str:
@@ -652,6 +669,15 @@ def main() -> None:
             summaries.append(preload_summary)
             versions[preload_version["version"]] = preload_version
 
+    for version in versions.values():
+        version.setdefault("source", "self-collected")
+
+    for imported_version, imported_payload in imported_cached_versions(cached_versions, args.output).items():
+        if imported_version in versions:
+            continue
+        versions[imported_version] = imported_payload
+
+    summaries = [summary_from_version(version) for version in versions.values()]
     summaries.sort(key=lambda item: version_key(item["version"]), reverse=True)
 
     index = {
