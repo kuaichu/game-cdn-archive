@@ -2,6 +2,9 @@ const state = {
   gameId: "nte",
   mode: "full",
   version: null,
+  manualVersions: {},
+  latestVersions: {},
+  collapsedVersionGroups: {},
   compareVersion: null,
   diffFilter: "all",
   query: "",
@@ -39,10 +42,49 @@ const saveView = () => {
       gameId: state.gameId,
       mode: state.mode,
       version: state.version,
+      manualVersions: state.manualVersions,
+      latestVersions: state.latestVersions,
+      collapsedVersionGroups: state.collapsedVersionGroups,
     }));
   } catch {
     // The page still works when storage is blocked or unavailable.
   }
+};
+
+const versionContextKey = (gameId = state.gameId, mode = state.mode) => `${gameId}:${mode}`;
+const versionGroupKey = (family, gameId = state.gameId, mode = state.mode) => `${versionContextKey(gameId, mode)}:${family}`;
+
+const preferredVersionForContext = (gameId = state.gameId, mode = state.mode) =>
+  state.manualVersions?.[versionContextKey(gameId, mode)] || state.manualVersions?.[gameId] || null;
+
+const rememberVersionSelection = (version = state.version) => {
+  if (!version) return;
+  state.manualVersions[versionContextKey()] = version;
+  state.manualVersions[state.gameId] = version;
+};
+
+const isVersionGroupCollapsed = (family) =>
+  Boolean(state.collapsedVersionGroups?.[versionGroupKey(family)]);
+
+const setVersionGroupCollapsed = (family, collapsed) => {
+  const key = versionGroupKey(family);
+  if (collapsed) {
+    state.collapsedVersionGroups[key] = true;
+  } else {
+    delete state.collapsedVersionGroups[key];
+  }
+  saveView();
+};
+
+const selectVersionForContext = (versions, preferredVersion = null) => {
+  const latest = versions[0]?.version || null;
+  if (!latest) return null;
+  const key = versionContextKey();
+  const lastSeenLatest = state.latestVersions?.[key] || null;
+  const hasNewLatest = lastSeenLatest && compareVersions(latest, lastSeenLatest) > 0;
+  const preferredAvailable = versions.some((item) => item.version === preferredVersion);
+  state.latestVersions[key] = latest;
+  return hasNewLatest ? latest : preferredAvailable ? preferredVersion : latest;
 };
 
 const icons = {
@@ -286,7 +328,7 @@ const renderGameRail = () => {
       state.query = "";
       state.wuwaPath = "";
       $("#fileSearch").value = "";
-      await ensureGameData();
+      await ensureGameData(preferredVersionForContext());
       state.compareVersion = null;
       state.diffFilter = "all";
       render();
@@ -309,11 +351,12 @@ const renderModes = () => {
     .map(([id, label]) => `<button class="mode-tab ${state.mode === id ? "active" : ""}" data-mode="${id}" type="button">${label}</button>`)
     .join("");
   $$(".mode-tab").forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
       state.mode = button.dataset.mode;
       state.compareVersion = null;
       state.diffFilter = "all";
       state.wuwaPath = "";
+      await ensureGameData(preferredVersionForContext());
       $$(".mode-tab").forEach((item) => item.classList.toggle("active", item === button));
       render();
     });
@@ -331,20 +374,39 @@ const renderVersionMenu = () => {
     }, new Map());
 
   $("#versionMenu").innerHTML = [...groups.entries()]
-    .map(([family, items]) => `
-      <div class="version-group">
-        <div class="version-group-head">
-          <strong>${family} ${isNte() || isEndfield() ? "大版本" : "版本"}</strong>
-          <span>${items.length} 个可用版本</span>
+    .map(([family, items]) => {
+      const collapsed = isVersionGroupCollapsed(family);
+      return `
+      <div class="version-group ${collapsed ? "collapsed" : ""}">
+        <button class="version-group-head" type="button" data-family="${escapeHtml(family)}" aria-expanded="${!collapsed}" title="${collapsed ? "展开" : "收纳"} ${escapeHtml(family)} 版本">
+          <span class="group-title">
+            <span class="group-chevron" aria-hidden="true"></span>
+            <strong>${family} ${isNte() || isEndfield() ? "大版本" : "版本"}</strong>
+          </span>
+          <span class="group-meta">${items.length} 个可用版本</span>
+        </button>
+        <div class="version-group-body" ${collapsed ? "hidden" : ""}>
+          ${items.map((item) => versionButton(item)).join("")}
         </div>
-        ${items.map((item) => versionButton(item)).join("")}
       </div>
-    `)
+    `;
+    })
     .join("");
+
+  $$(".version-group-head").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      const family = button.dataset.family;
+      const shouldCollapse = button.getAttribute("aria-expanded") === "true";
+      setVersionGroupCollapsed(family, shouldCollapse);
+      renderVersionMenu();
+    });
+  });
 
   $$(".version-row").forEach((button) => {
     button.addEventListener("click", () => {
       state.version = button.dataset.version;
+      rememberVersionSelection();
       state.compareVersion = null;
       state.diffFilter = "all";
       state.wuwaPath = "";
@@ -1575,17 +1637,17 @@ const filterEntries = (entries) => {
 const ensureGameData = async (preferredVersion = null) => {
   if (isNte()) {
     const versions = nteVersions().sort((a, b) => compareVersions(b.version, a.version));
-    state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
+    state.version = selectVersionForContext(versions, preferredVersion);
     return;
   }
   if (isEndfield()) {
     const versions = endfieldSummaries().sort((a, b) => compareVersions(b.version, a.version));
-    state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
+    state.version = selectVersionForContext(versions, preferredVersion);
     return;
   }
   if (isWuwa()) {
     const versions = wuwaSummaries().sort((a, b) => compareVersions(b.version, a.version));
-    state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
+    state.version = selectVersionForContext(versions, preferredVersion);
     return;
   }
   if (!state.hoyoVersions.has(state.gameId)) {
@@ -1595,7 +1657,7 @@ const ensureGameData = async (preferredVersion = null) => {
   const versions = hoyoSummaries()
     .filter((item) => item.package_items || item.update_items || item.has_chunk)
     .sort((a, b) => compareVersions(b.version, a.version));
-  state.version = versions.some((item) => item.version === preferredVersion) ? preferredVersion : versions[0]?.version || null;
+  state.version = selectVersionForContext(versions, preferredVersion);
 };
 
 const renderNotice = () => {
@@ -1676,10 +1738,22 @@ Promise.all([
   if (allGames().some((game) => game.id === savedView.gameId)) {
     state.gameId = savedView.gameId;
   }
+  state.manualVersions = savedView.manualVersions && typeof savedView.manualVersions === "object"
+    ? savedView.manualVersions
+    : {};
+  state.latestVersions = savedView.latestVersions && typeof savedView.latestVersions === "object"
+    ? savedView.latestVersions
+    : {};
+  state.collapsedVersionGroups = savedView.collapsedVersionGroups && typeof savedView.collapsedVersionGroups === "object"
+    ? savedView.collapsedVersionGroups
+    : {};
+  if (savedView.version && !state.manualVersions[versionContextKey(state.gameId, savedView.mode || modesForGame()[0][0])]) {
+    state.manualVersions[versionContextKey(state.gameId, savedView.mode || modesForGame()[0][0])] = savedView.version;
+  }
   state.mode = modesForGame().some(([mode]) => mode === savedView.mode)
     ? savedView.mode
     : modesForGame()[0][0];
   bindStaticActions();
-  await ensureGameData(savedView.version);
+  await ensureGameData(preferredVersionForContext());
   render();
 });
