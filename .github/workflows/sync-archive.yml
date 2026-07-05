@@ -326,6 +326,13 @@ jobs:
           GHA_RUN_RETRY_DELAY: 20
         run: bash scripts/gha_run_step.sh "Refresh Android APK data" python scripts/sync_android_apks.py
 
+      - name: Probe archived URL health
+        if: env.SYNC_SCOPE == 'all'
+        env:
+          GHA_RUN_RETRIES: 2
+          GHA_RUN_RETRY_DELAY: 20
+        run: bash scripts/gha_run_step.sh "Probe archived URL health" python scripts/probe_url_status.py
+
       - name: Refresh README coverage summary
         run: bash scripts/gha_run_step.sh "Refresh README coverage summary" python scripts/update_readme_summary.py
 
@@ -357,7 +364,7 @@ jobs:
             fi
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add README.md docs/data docs/app.js docs/index.html scripts/update_nte_static.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py scripts/sync_wuwa.py scripts/sync_arknights_pc.py scripts/sync_android_apks.py scripts/update_readme_summary.py
+            git add README.md docs/data docs/app.js docs/index.html scripts/update_nte_static.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py scripts/sync_wuwa.py scripts/sync_arknights_pc.py scripts/sync_android_apks.py scripts/probe_url_status.py scripts/update_readme_summary.py
             git commit -m "Auto update archive data"
             for attempt in 1 2 3; do
               if git push; then

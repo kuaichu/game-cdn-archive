@@ -7,16 +7,16 @@
     "source": "official download porter latest endpoint",
     "source_url": "https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/android_default",
     "status": 200,
-    "content_type": "application/vnd.android.package-archive",
+    "content_type": "application/vnd.android.package-archive;charset=UTF-8",
     "size": 466303603,
-    "last_modified": "Tue, 23 Jun 2026 12:04:52 GMT",
-    "etag": "b21ec56bcb12b2917a357600652e93e5",
+    "last_modified": "Tue, 23 Jun 2026 09:15:02 GMT",
+    "etag": "ljQRmiGZMhGsn-8DvSe4ufhfWoSt",
     "md5": "",
-    "crc64": "14601308456718178782",
+    "crc64": "",
     "error": "",
     "filename": "yuanshen_6.7.0.apk",
     "captured_at": "2026-07-01T01:38:11.022516+00:00",
-    "updated_at": "2026-06-23T12:04:52+00:00",
+    "updated_at": "2026-06-23T09:15:02+00:00",
     "updated_at_source": "apk_last_modified"
   }
 ]

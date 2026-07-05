@@ -39,7 +39,7 @@ Current repository snapshot from generated data checked on `2026-07-05 00:14:38 
 | Arknights / 明日方舟 PC | Indexed official launcher package metadata through `74.0.0`; 19 package items in the latest snapshot |
 | Wuthering Waves / 鸣潮 PC | Indexed `6` CN launcher/resource-index snapshots through `3.4.1`; file URLs, CDN mirrors, and patch routes are preserved when official indexes expose them |
 | HoYo CN PC catalog | Migrated public HoyoFiles metadata for 原神 `1.0.0-6.7.0` (`55` versions), 崩坏：星穹铁道 `1.0.5-4.3.0` (`28` versions), 绝区零 `1.0.0-3.0.0` (`18` versions), 崩坏3 `3.7.0-8.9.0` (`53` versions) |
-| Android APK archive | Preserves `200` confirmed or historically verified official APK CDN records across `15` games |
+| Android APK archive | Preserves `199` confirmed or historically verified official APK CDN records across `15` games |
 <!-- README_PROGRESS_SNAPSHOT_END -->
 
 ## Android APK Progress
@@ -55,18 +55,18 @@ ranges are:
 | --- | --- | --- | --- |
 | 深空之眼 / Aether Gazer | `0.285.0` -> `0.305.3` | `4` version buckets / `4` records | `2` available; `2` unavailable or historical dead-link records |
 | 明日方舟 / Arknights | `1150.0.0` -> `2741.0.0` | `20` version buckets / `20` records | `20` available; `0` unavailable or historical dead-link records |
-| 崩坏3 / Honkai Impact 3rd | `0.9.9` -> `8.9.0` | `39` version buckets / `39` records | `15` available; `24` unavailable or historical dead-link records |
+| 崩坏3 / Honkai Impact 3rd | `0.9.9` -> `8.9.0` | `39` version buckets / `39` records | `13` available; `26` unavailable or historical dead-link records |
 | 碧蓝档案 / Blue Archive | `2.1.2` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 卡拉比丘 / Calabiyau | `1.1.6.4` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 明日方舟：终末地 / Arknights: Endfield | `1.3.4` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 少女前线2：追放 / Girls' Frontline 2: Exilium | `3.0.0` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 原神 / Genshin Impact | `0.9.3` -> `6.7.0` | `54` version buckets / `54` records | `50` available; `4` unavailable or historical dead-link records |
-| 崩坏：星穹铁道 / Honkai: Star Rail | `0.90.0` -> `4.3.0` | `29` version buckets / `33` records | `31` available; `2` unavailable or historical dead-link records |
+| 崩坏：星穹铁道 / Honkai: Star Rail | `0.90.0` -> `4.3.0` | `29` version buckets / `33` records | `30` available; `3` unavailable or historical dead-link records |
 | 绝区零 / Zenless Zone Zero | `1.0.0` -> `3.0.0` | `10` version buckets / `10` records | `10` available; `0` unavailable or historical dead-link records |
-| 异环 / Neverness to Everness | `1.0.2` -> `1.2.0` | `2` version buckets / `2` records | `2` available; `0` unavailable or historical dead-link records |
+| 异环 / Neverness to Everness | `1.0.2` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 战双帕弥什 / Punishing: Gray Raven | `4.5.0` | `1` version buckets / `2` records | `2` available; `0` unavailable or historical dead-link records |
 | 重返未来：1999 / Reverse: 1999 | `1.0.3` -> `3.8.0` | `2` version buckets / `2` records | `1` available; `1` unavailable or historical dead-link records |
-| 尘白禁区 / Snowbreak: Containment Zone | `1.6.0.99` -> `3.6.0.122` | `9` version buckets / `9` records | `5` available; `4` unavailable or historical dead-link records |
+| 尘白禁区 / Snowbreak: Containment Zone | `1.6.0.99` -> `3.6.0.122` | `9` version buckets / `9` records | `4` available; `5` unavailable or historical dead-link records |
 | 鸣潮 / Wuthering Waves | `1.0.0` -> `3.4.1` | `21` version buckets / `21` records | `15` available; `6` unavailable or historical dead-link records |
 <!-- README_ANDROID_PROGRESS_END -->
 
@@ -153,6 +153,7 @@ scripts/
                              Import compact Endfield indexes from the upstream archive
   sync_wuwa.py               Sync Wuthering Waves launcher and resource indexes
   sync_android_apks.py       Refresh metadata for known official Android APK URLs
+  probe_url_status.py        Re-probe archived direct download URLs for availability
 ```
 
 ## NTE Manifest Notes
@@ -322,13 +323,23 @@ python scripts/sync_android_apks.py
 ```
 
 The generated index records URL, filename, channel, HTTP status, size,
-Last-Modified, ETag, and MD5 when the CDN exposes it. Existing entries keep
-their previously captured metadata to avoid noisy churn from CDN header changes.
+Last-Modified, ETag, and MD5 when the CDN exposes it. Existing entries are
+re-probed on each sync so expired historical APK URLs can be marked unavailable
+without losing their original capture time.
 When an APK URL does not carry a version number, the sync script reads the
 APK's `AndroidManifest.xml` `versionName` via HTTP range requests instead of
 guessing from the PC client version.
 This is not a complete historical APK mirror; it is a rolling archive starting
 from the official APK links that can be confirmed now.
+
+Archived direct download URLs can also be re-probed across the generated data
+sets. This writes `docs/data/url_status.json`, a health index for APKs, Hoyo
+packages, NTE files, Wuthering Waves files, Arknights packages, and Endfield
+packages/patches.
+
+```bash
+python scripts/probe_url_status.py
+```
 
 ### Kuro Android Fallback Note
 

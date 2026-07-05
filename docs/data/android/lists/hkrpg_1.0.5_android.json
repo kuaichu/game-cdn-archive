@@ -5,17 +5,17 @@
     "channel": "gw",
     "url": "https://autopatchcn.bhsr.com/client/cn/20230413215209_VC9JD8S2WrcciZFu/StarRail_1.0.5_gw.apk",
     "source": "official CDN URL captured manually",
-    "status": 200,
-    "content_type": "application/vnd.android.package-archive",
-    "size": 161288002,
-    "last_modified": "Mon, 17 Apr 2023 03:00:32 GMT",
-    "etag": "b5a7eceaee09c52eac9be5686b51c97e-2",
+    "status": 404,
+    "content_type": "application/xml",
+    "size": 0,
+    "last_modified": "",
+    "etag": "",
     "md5": "",
     "crc64": "",
-    "error": "",
+    "error": "APK object unavailable",
     "filename": "StarRail_1.0.5_gw.apk",
     "captured_at": "2026-06-08T15:50:12.264806+00:00",
-    "updated_at": "2023-04-17T03:00:32+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at": "2023-04-13T21:52:09+00:00",
+    "updated_at_source": "filename_timestamp"
   }
 ]

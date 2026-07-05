@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 import subprocess
 import urllib.parse
@@ -2559,13 +2560,15 @@ def head_url(url: str, headers: dict | None = None) -> dict:
     def range_fallback(meta: dict) -> dict:
         if not url.lower().split("?", 1)[0].endswith(".apk"):
             return meta
-        if meta.get("size") and "text/html" not in str(meta.get("content_type", "")).lower():
+        status = int(meta.get("status") or 0)
+        content_type = str(meta.get("content_type", "")).lower()
+        if status < 400 and meta.get("size") and "text/html" not in content_type and "application/xml" not in content_type:
             return meta
         challenge_text = " ".join(
             str(meta.get(key, ""))
             for key in ("error_info", "exception_info")
         ).lower()
-        if int(meta.get("status") or 0) == 200 and "challenge" in challenge_text:
+        if status == 200 and "challenge" in challenge_text:
             return {
                 **meta,
                 "status": 200,
@@ -2578,6 +2581,12 @@ def head_url(url: str, headers: dict | None = None) -> dict:
         try:
             probed_size = content_length(url, headers=extra_headers)
         except Exception:
+            if status >= 400:
+                return {
+                    **meta,
+                    "size": 0,
+                    "error": meta.get("error") or "APK object unavailable",
+                }
             return meta
         if probed_size > 1024 * 1024:
             return {
@@ -2644,6 +2653,13 @@ def should_reprobe_unavailable_apk(seed: dict, previous: dict | None) -> bool:
         "autopatchcn.bh3.com",
         "mirrors-package-mc.aki-game.com",
     }
+
+
+def env_flag(name: str, default: bool) -> bool:
+    raw = os.environ.get(name)
+    if raw is None:
+        return default
+    return raw.strip().lower() not in {"0", "false", "no", "off"}
 
 
 def md5_from_filename(filename: str) -> str:
@@ -2755,6 +2771,7 @@ def main() -> None:
                 previous_by_source_url.setdefault(entry["source_url"], []).append(entry)
     generated_at = datetime.now(timezone.utc).isoformat()
     entries: list[dict] = []
+    reprobe_all_apks = env_flag("REPROBE_ANDROID_APKS", True)
 
     seeds_by_url = {seed["url"]: seed for seed in KNOWN_APKS}
     for seed in discover_download_porter_apks():
@@ -2782,7 +2799,8 @@ def main() -> None:
             for key, value in seed.items()
             if key not in {"metadata_url", "filename_url", "force_refresh", "headers", "reprobe_unavailable"}
         }
-        previous = None if seed.get("force_refresh") else previous_by_url.get(seed["url"])
+        cached_previous = previous_by_url.get(seed["url"])
+        previous = None if seed.get("force_refresh") or reprobe_all_apks else cached_previous
         if should_reprobe_unavailable_apk(seed, previous):
             previous = None
         if previous:
@@ -2801,7 +2819,7 @@ def main() -> None:
                 **meta,
                 "md5": meta["md5"] or md5_from_filename(filename),
                 "filename": filename,
-                "captured_at": generated_at,
+                "captured_at": (cached_previous or {}).get("captured_at", generated_at),
             }
         apply_updated_at(entry, seed)
         if entry.get("source_url") and not previous and not seed.get("force_refresh"):
