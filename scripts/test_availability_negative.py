@@ -125,13 +125,27 @@ def assert_android_negative_paths() -> None:
     result_non_apk = adapter.interpret([
         android_probe(url, ok=True, status=200, content_type="text/html", size=20 * 1024 * 1024)
     ], {"game_id": "android-test", "version": "1.0.0", "url": url, "filename": "game.apk"})
-    if result_non_apk["state"] != "unknown" or result_non_apk["reason"] != "content_type_mismatch":
+    if result_non_apk["state"] != "unavailable" or result_non_apk["reason"] != "content_type_mismatch":
         raise AssertionError(f"unexpected Android non-APK interpretation: {result_non_apk!r}")
+
+    result_fake_200 = adapter.interpret([
+        android_probe(url, ok=True, status=200, content_type="text/plain", size=3)
+    ], {"game_id": "android-test", "version": "1.0.0", "url": url, "filename": "game.apk"})
+    expected_fake_200 = {
+        "state": "unavailable",
+        "reason": "content_type_mismatch",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": False,
+        "display_label": "链接失效",
+    }
+    if result_fake_200 != expected_fake_200:
+        raise AssertionError(f"unexpected Android fake-200 interpretation: {result_fake_200!r}")
 
     result_small = adapter.interpret([
         android_probe(url, ok=True, status=200, content_type="application/vnd.android.package-archive", size=16)
     ], {"game_id": "android-test", "version": "1.0.0", "url": url, "filename": "game.apk"})
-    if result_small["state"] != "unknown" or result_small["reason"] != "size_zero":
+    if result_small["state"] != "unavailable" or result_small["reason"] != "size_zero":
         raise AssertionError(f"unexpected Android small APK interpretation: {result_small!r}")
 
     result_retained = adapter.interpret([
@@ -237,6 +251,7 @@ def main() -> None:
     print("Availability negative-path checks")
     print("arknights_failed_probe=PASS")
     print("android_failed_probe=PASS")
+    print("android_fake_200=PASS")
     print("android_retained_historical=PASS")
     print("closed_vocab_rejection=PASS")
     print("result=PASS")

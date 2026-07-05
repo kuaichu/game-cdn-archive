@@ -11,6 +11,14 @@ APK_CONTENT_TYPES = {
     "application/octet-stream",
     "binary/octet-stream",
 }
+INVALID_APK_CONTENT_TYPES = {
+    "text/plain",
+    "text/html",
+    "application/xml",
+    "text/xml",
+}
+
+
 def _lower(value: object) -> str:
     return str(value or "").strip().lower()
 
@@ -31,6 +39,9 @@ def _looks_like_apk_content(content_type: str) -> bool:
     lowered = content_type.split(";", 1)[0].strip().lower()
     return lowered in APK_CONTENT_TYPES
 
+
+def _content_type_base(content_type: str) -> str:
+    return content_type.split(";", 1)[0].strip().lower()
 
 
 def _is_historical_record(record: dict) -> bool:
@@ -77,6 +88,7 @@ class AndroidAvailabilityAdapter:
         error = _lower(probe.get("error"))
         confidence = _confidence(probe)
         apk_url = _looks_like_apk_url(record, probe_result)
+        content_type_base = _content_type_base(content_type)
         apk_like = apk_url and _looks_like_apk_content(content_type)
         usable = bool(probe.get("ok")) and 200 <= status < 400 and apk_like and size > APK_SIZE_THRESHOLD_BYTES
 
@@ -93,6 +105,25 @@ class AndroidAvailabilityAdapter:
                 "display_label": "可用",
             }
 
+        if apk_url and status == 200 and content_type_base in INVALID_APK_CONTENT_TYPES:
+            return {
+                "state": "unavailable",
+                "reason": "content_type_mismatch",
+                "preferred_url": "",
+                "confidence": "low" if confidence == "high" else confidence,
+                "retained": False,
+                "display_label": "链接失效",
+            }
+
+        if apk_url and status == 200 and _looks_like_apk_content(content_type) and size <= APK_SIZE_THRESHOLD_BYTES:
+            return {
+                "state": "unavailable",
+                "reason": "size_zero",
+                "preferred_url": "",
+                "confidence": "low" if confidence == "high" else confidence,
+                "retained": False,
+                "display_label": "链接失效",
+            }
 
         dead = status >= 400 or error.startswith("dns:") or "getaddrinfo" in error or "could not resolve host" in error
         if dead and _is_historical_record(record):

@@ -112,6 +112,17 @@ def old_unavailable(record: dict[str, Any]) -> bool:
     return bool(record.get("error")) or status < 200 or status >= 400
 
 
+def fake_200_tightened(record: dict[str, Any], interpretation: dict[str, Any]) -> bool:
+    if old_unavailable(record):
+        return False
+    status = int_value(record.get("status"))
+    if status != 200:
+        return False
+    if interpretation.get("state") != "unavailable":
+        return False
+    return interpretation.get("reason") in {"content_type_mismatch", "size_zero"}
+
+
 def state_counts(index: dict[str, Any], *, old: bool = False) -> dict[str, int]:
     counts: dict[str, int] = {}
     for game in (index.get("games") or {}).values():
@@ -149,8 +160,39 @@ def apply_availability(index: dict[str, Any], config: ProbeScheduleConfig) -> tu
     return before_counts, state_counts(index)
 
 
-def compare_semantics(original: dict[str, Any], updated: dict[str, Any]) -> tuple[bool, list[str]]:
+def tightened_fake_200_rows(original: dict[str, Any], updated: dict[str, Any]) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    original_records = [
+        entry
+        for game in (original.get("games") or {}).values()
+        for entry in game.get("versions", [])
+        if isinstance(entry, dict)
+    ]
+    updated_records = [
+        entry
+        for game in (updated.get("games") or {}).values()
+        for entry in game.get("versions", [])
+        if isinstance(entry, dict)
+    ]
+    for original, updated_record in zip(original_records, updated_records):
+        interpretation = ((updated_record.get("availability") or {}).get("interpretation") or {})
+        if fake_200_tightened(original, interpretation):
+            rows.append({
+                "game_id": original.get("game_id"),
+                "version": original.get("version"),
+                "channel": original.get("channel"),
+                "filename": original.get("filename"),
+                "content_type": original.get("content_type"),
+                "size": original.get("size"),
+                "previous_state": "unknown",
+                "reason": interpretation.get("reason"),
+            })
+    return rows
+
+
+def compare_semantics(original: dict[str, Any], updated: dict[str, Any]) -> tuple[bool, list[str], list[str]]:
     errors: list[str] = []
+    allowed: list[str] = []
     original_records = [
         entry
         for game in (original.get("games") or {}).values()
@@ -173,12 +215,18 @@ def compare_semantics(original: dict[str, Any], updated: dict[str, Any]) -> tupl
         interpretation = ((updated_record.get("availability") or {}).get("interpretation") or {})
         new_bad = interpretation.get("state") == "unavailable"
         if old_bad != new_bad:
+            if fake_200_tightened(original, interpretation):
+                allowed.append(
+                    f"{original.get('game_id')}:{original.get('version')}:"
+                    f"{original.get('filename')}:unknown->unavailable:{interpretation.get('reason')}"
+                )
+                continue
             errors.append(
                 f"{original.get('game_id')}:{original.get('version')}:"
                 f"old_unavailable={old_bad}:new_state={interpretation.get('state')}:"
                 f"reason={interpretation.get('reason')}"
             )
-    return not errors, errors
+    return not errors, errors, allowed
 
 
 def main() -> None:
@@ -204,7 +252,8 @@ def main() -> None:
         )
 
     before_counts, after_counts = apply_availability(index, config)
-    ok, errors = compare_semantics(original, index)
+    ok, errors, allowed_tightens = compare_semantics(original, index)
+    tightened_rows = tightened_fake_200_rows(original, index)
     total = sum(len((game.get("versions") or [])) for game in (index.get("games") or {}).values())
 
     print("Android availability migration")
@@ -213,6 +262,16 @@ def main() -> None:
     print(f"previous_contract_states={previous_contract_counts}")
     print(f"before_states={before_counts}")
     print(f"after_states={after_counts}")
+    print(f"intentional_tighten_count={len(allowed_tightens)}")
+    if allowed_tightens:
+        print("intentional_tighten_note=fake HTTP 200 APK placeholders are intentionally tightened from unknown to unavailable")
+    for row in tightened_rows:
+        print(
+            "intentional_tighten="
+            f"{row['game_id']} {row['version']} {row['channel']} "
+            f"{row['filename']} content_type={row['content_type']} size={row['size']} "
+            f"{row['previous_state']}->unavailable reason={row['reason']}"
+        )
     print(f"semantic_match={'PASS' if ok else 'FAIL'}")
     if errors:
         print("\n".join(f"semantic_error={error}" for error in errors[:100]))

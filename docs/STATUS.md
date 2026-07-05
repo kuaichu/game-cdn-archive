@@ -20,7 +20,7 @@ Status levels:
 | Android adapter | done | `adapters/android.py` interprets shared probe facts only. APK size/content-type rules and retained historical dead links are verified by negative tests. |
 | Android baked availability data | done | APK records in `docs/data/android/index.json` carry precomputed availability while old fields remain. |
 | Android frontend compatibility | done | Android mode reads `availability.interpretation` first and falls back to legacy `status` / `error` fields. |
-| Android fake-200 APK handling | todo | Tiny placeholder APK responses are still tracked separately for a follow-up tightening commit. |
+| Android fake-200 APK handling | done | APK URLs returning tiny text/XML/HTML placeholder payloads are tightened to `unavailable` instead of `unknown`. |
 | HoYo adapter | todo | Recommended next slice. |
 | Endfield adapter | todo | Needs official-vs-mirror interpretation. |
 | NTE adapter | todo | Needs ResList/object interpretation. |
