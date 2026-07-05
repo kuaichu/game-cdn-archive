@@ -71,4 +71,16 @@ jobs:
 
       - name: Deploy to Cloudflare Pages
         if: steps.commit.outputs.changed == 'true' && env.CLOUDFLARE_API_TOKEN != ''
-        run: npx --yes wrangler pages deploy docs --project-name game-cdn-archive --branch main
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .pages-deploy
+          cp -a docs .pages-deploy
+          rm -f .pages-deploy/data/wuwa/versions.json
+          oversized="$(find .pages-deploy -type f -size +25M -print)"
+          if [ -n "$oversized" ]; then
+            echo "Files over Cloudflare Pages 25 MiB limit:"
+            echo "$oversized"
+            exit 1
+          fi
+          npx --yes wrangler pages deploy .pages-deploy --project-name game-cdn-archive --branch main
