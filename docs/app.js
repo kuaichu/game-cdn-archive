@@ -5,6 +5,7 @@ const state = {
   compareVersion: null,
   diffFilter: "all",
   query: "",
+  wuwaPath: "",
   nteCatalog: null,
   hoyoIndex: null,
   endfieldIndex: null,
@@ -48,6 +49,8 @@ const icons = {
   box: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 8-9-5-9 5 9 5 9-5Z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/></svg>',
   copy: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>',
   down: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>',
+  file: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>',
+  folder: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>',
 };
 
 const nteGame = {
@@ -281,6 +284,7 @@ const renderGameRail = () => {
       state.gameId = button.dataset.game;
       state.mode = modesForGame()[0][0];
       state.query = "";
+      state.wuwaPath = "";
       $("#fileSearch").value = "";
       await ensureGameData();
       state.compareVersion = null;
@@ -309,6 +313,7 @@ const renderModes = () => {
       state.mode = button.dataset.mode;
       state.compareVersion = null;
       state.diffFilter = "all";
+      state.wuwaPath = "";
       $$(".mode-tab").forEach((item) => item.classList.toggle("active", item === button));
       render();
     });
@@ -342,6 +347,7 @@ const renderVersionMenu = () => {
       state.version = button.dataset.version;
       state.compareVersion = null;
       state.diffFilter = "all";
+      state.wuwaPath = "";
       $("#versionMenu").hidden = true;
       $("#selectButton").setAttribute("aria-expanded", "false");
       render();
@@ -545,6 +551,131 @@ const loadWuwaEntries = async (version = state.version) => {
     state.wuwaEntries.set(version, await response.json());
   }
   return state.wuwaEntries.get(version);
+};
+
+const pathParts = (path) => String(path || "").split("/").filter(Boolean);
+
+const joinPath = (parts) => parts.filter(Boolean).join("/");
+
+const wuwaEntryPath = (entry) => String(entry.dest || entry.name || "").replaceAll("\\", "/").replace(/^\/+/, "");
+
+const wuwaCurrentChildren = (entries, currentPath) => {
+  const folders = new Map();
+  const files = [];
+  const prefix = currentPath ? `${currentPath}/` : "";
+
+  entries.forEach((entry) => {
+    const fullPath = wuwaEntryPath(entry);
+    if (!fullPath) return;
+    if (prefix && !fullPath.startsWith(prefix)) return;
+    const rest = prefix ? fullPath.slice(prefix.length) : fullPath;
+    if (!rest) return;
+    const parts = pathParts(rest);
+    if (parts.length > 1) {
+      const name = parts[0];
+      const folderPath = joinPath([currentPath, name]);
+      const current = folders.get(name) || { name, path: folderPath, files: 0, bytes: 0 };
+      current.files += 1;
+      current.bytes += Number(entry.size || 0);
+      folders.set(name, current);
+      return;
+    }
+    files.push(entry);
+  });
+
+  return {
+    folders: [...folders.values()].sort((a, b) => a.name.localeCompare(b.name)),
+    files: files.sort((a, b) => wuwaEntryPath(a).localeCompare(wuwaEntryPath(b))),
+  };
+};
+
+const wuwaBreadcrumb = () => {
+  const parts = pathParts(state.wuwaPath);
+  const steps = [
+    `<button class="breadcrumb-step ${parts.length ? "" : "active"}" type="button" data-wuwa-path="">根目录</button>`,
+  ];
+  parts.forEach((part, index) => {
+    const path = joinPath(parts.slice(0, index + 1));
+    steps.push(`<span class="breadcrumb-sep">/</span>`);
+    steps.push(`<button class="breadcrumb-step ${index === parts.length - 1 ? "active" : ""}" type="button" data-wuwa-path="${escapeHtml(path)}">${escapeHtml(part)}</button>`);
+  });
+  return steps.join("");
+};
+
+const wuwaFolderRow = (folder) => `
+  <button class="browser-row" type="button" data-wuwa-path="${escapeHtml(folder.path)}">
+    <span class="browser-icon folder">${icons.folder}</span>
+    <span class="browser-name">
+      <strong>${escapeHtml(folder.name)}</strong>
+      <small>${escapeHtml(folder.path)}</small>
+    </span>
+    <span class="browser-size">${folder.files.toLocaleString()} 个文件 / ${fmtBytes(folder.bytes)}</span>
+  </button>
+`;
+
+const wuwaFileRow = (entry, index, total) => {
+  const fullPath = wuwaEntryPath(entry);
+  const name = entry.name || fullPath.split("/").at(-1) || fullPath;
+  return `
+    <div class="browser-row">
+      <span class="browser-icon file">${icons.file}</span>
+      <span class="browser-name">
+        <strong>${escapeHtml(name)}</strong>
+        <small>${escapeHtml(fullPath)}</small>
+      </span>
+      <span class="browser-size">${fmtBytes(entry.size)} · ${index + 1}/${total}</span>
+    </div>
+    <div class="browser-detail">
+      <div>
+        <strong>${escapeHtml(entry.md5 || "-")}</strong>
+        <span>${escapeHtml(entry.url || "")}</span>
+      </div>
+      <button class="icon-button copy-link" type="button" data-url="${escapeHtml(entry.url || "")}" title="复制链接">${icons.copy}<span>复制</span></button>
+    </div>
+  `;
+};
+
+const renderWuwaFileBrowser = async () => {
+  const version = wuwaVersion();
+  const entries = await loadWuwaEntries();
+  const mirrors = version?.cdn_count || entries[0]?.urls?.length || 0;
+  const searching = Boolean(state.query);
+  const visibleEntries = searching ? filterEntries(entries) : entries;
+  const { folders, files } = searching
+    ? { folders: [], files: visibleEntries }
+    : wuwaCurrentChildren(entries, state.wuwaPath);
+  const currentLabel = state.wuwaPath || "根目录";
+  const rows = [
+    ...folders.map(wuwaFolderRow),
+    ...files.map((entry, index) => wuwaFileRow(entry, index, files.length)),
+  ].join("");
+
+  $("#fileList").innerHTML = `
+    <div class="notice file-browser-note">
+      <strong>文件索引</strong>
+      <span>鸣潮官方启动器提供散文件索引；当前版本 ${escapeHtml(state.version)} 含 ${entries.length.toLocaleString()} 个文件，页面按目录浏览，下载时可使用 ${mirrors} 个官方 CDN 镜像。</span>
+    </div>
+    <div class="hoyo-browser-head">
+      <div class="hoyo-breadcrumb">
+        ${searching ? `<button class="breadcrumb-step active" type="button">搜索结果</button>` : wuwaBreadcrumb()}
+      </div>
+      <div class="hoyo-browser-count">
+        <span>${searching ? "全路径搜索" : escapeHtml(currentLabel)}</span>
+        <strong>${folders.length.toLocaleString()} 个文件夹 / ${files.length.toLocaleString()} 个文件</strong>
+      </div>
+    </div>
+    <div class="hoyo-browser">
+      ${rows || `<div class="empty">当前目录没有可显示文件</div>`}
+    </div>
+  `;
+
+  $$("[data-wuwa-path]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.wuwaPath = button.dataset.wuwaPath || "";
+      renderList();
+    });
+  });
+  bindCardActions();
 };
 
 const loadHoyoChunk = async () => {
@@ -1419,20 +1550,7 @@ const renderList = async () => {
       renderWuwaVersionChain();
       return;
     }
-    const entries = await loadWuwaEntries();
-    const filtered = filterEntries(entries);
-    $("#fileList").innerHTML = filtered
-      .map((entry, index) => fileCard({
-        badge: "完整文件",
-        title: entry.name || entry.dest,
-        subtitle: entry.dest || entry.url,
-        size: Number(entry.size || 0),
-        hash: entry.md5 || "",
-        url: entry.url,
-        count: `${index + 1}/${filtered.length}`,
-      }))
-      .join("") || `<div class="empty">没有匹配到文件</div>`;
-    bindCardActions();
+    await renderWuwaFileBrowser();
     return;
   }
 
