@@ -18,6 +18,7 @@ for path in (ROOT, SCRIPTS):
         sys.path.insert(0, str(path))
 
 from adapters.arknights import ArknightsAvailabilityAdapter  # noqa: E402
+from adapters.android import AndroidAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import (  # noqa: E402
     AVAILABILITY_REASONS,
     AVAILABILITY_STATES,
@@ -27,6 +28,7 @@ from scripts.availability_schema import (  # noqa: E402
 
 
 DEFAULT_ARKNIGHTS = ROOT / "docs" / "data" / "arknights"
+DEFAULT_ANDROID = ROOT / "docs" / "data" / "android"
 FORBIDDEN_ADAPTER_MODULES = {"urllib", "requests", "http", "http.client", "subprocess", "socket"}
 FORBIDDEN_ADAPTER_NAMES = {"urlopen", "Request", "HTTPConnection", "HTTPSConnection", "curl", "fetch"}
 
@@ -75,7 +77,18 @@ def validate_probe(candidate: dict[str, Any], path: str) -> list[str]:
     probe = candidate.get("probe")
     if not isinstance(probe, dict):
         return [*errors, f"{path}:probe_missing"]
-    required = {"ok", "status", "method", "checked_at", "final_url", "content_type", "size", "error", "stale", "scheduler_confidence"}
+    required = {
+        "ok",
+        "status",
+        "method",
+        "checked_at",
+        "final_url",
+        "content_type",
+        "size",
+        "error",
+        "stale",
+        "scheduler_confidence",
+    }
     missing = sorted(required - set(probe.keys()))
     if missing:
         errors.append(f"{path}:probe_missing:{','.join(missing)}")
@@ -98,6 +111,7 @@ def validate_availability(record: dict[str, Any], path: str, adapter: Any) -> li
     availability = record.get("availability")
     if not isinstance(availability, dict):
         return [f"{path}:availability_missing"]
+
     candidates = availability.get("candidates")
     source = availability.get("source")
     interpretation = availability.get("interpretation")
@@ -110,20 +124,24 @@ def validate_availability(record: dict[str, Any], path: str, adapter: Any) -> li
     if not isinstance(interpretation, dict):
         errors.append(f"{path}:interpretation_missing")
         interpretation = {}
+
     for index, candidate in enumerate(candidates, start=1):
         if not isinstance(candidate, dict):
             errors.append(f"{path}:candidate_{index}_not_object")
             continue
         errors.extend(validate_probe(candidate, f"{path}:candidate_{index}"))
+
     candidate_urls = {candidate.get("url") for candidate in candidates if isinstance(candidate, dict)}
     preferred_url = interpretation.get("preferred_url")
     declared_mirrors = {record.get("mirror_url"), record.get("preferred_url")} - {None, ""}
     if preferred_url and preferred_url not in candidate_urls and preferred_url not in declared_mirrors:
         errors.append(f"{path}:preferred_url_not_candidate")
+
     if source.get("kind") not in SOURCE_KINDS:
         errors.append(f"{path}:source_kind:{source.get('kind')}")
     if source.get("confidence") not in CONFIDENCES:
         errors.append(f"{path}:source_confidence:{source.get('confidence')}")
+
     state = interpretation.get("state")
     reason = interpretation.get("reason")
     confidence = interpretation.get("confidence")
@@ -139,9 +157,16 @@ def validate_availability(record: dict[str, Any], path: str, adapter: Any) -> li
         errors.append(f"{path}:retained_not_bool")
     if interpretation.get("retained") and (state != "unavailable" or reason != "retained_historical"):
         errors.append(f"{path}:retained_requires_unavailable_retained_historical")
-    any_stale = any(isinstance(candidate, dict) and isinstance(candidate.get("probe"), dict) and candidate["probe"].get("stale") for candidate in candidates)
+
+    any_stale = any(
+        isinstance(candidate, dict)
+        and isinstance(candidate.get("probe"), dict)
+        and candidate["probe"].get("stale")
+        for candidate in candidates
+    )
     if any_stale and confidence == "high" and state != "unknown":
         errors.append(f"{path}:stale_probe_high_confidence")
+
     if candidates:
         expected = adapter.interpret(candidates, record)
         expected_keys = {"state", "reason", "preferred_url", "confidence", "retained", "display_label"}
@@ -152,7 +177,8 @@ def validate_availability(record: dict[str, Any], path: str, adapter: Any) -> li
 
 def validate_arknights(root: Path) -> list[str]:
     errors: list[str] = []
-    versions = load_json(root / "versions.json")
+    versions_path = root / "versions.json"
+    versions = load_json(versions_path)
     adapter = ArknightsAvailabilityAdapter()
     if not isinstance(versions, dict):
         return ["arknights:versions_not_object"]
@@ -169,15 +195,43 @@ def validate_arknights(root: Path) -> list[str]:
     return errors
 
 
+def validate_android(root: Path) -> list[str]:
+    errors: list[str] = []
+    index_path = root / "index.json"
+    index = load_json(index_path)
+    adapter = AndroidAvailabilityAdapter()
+    if not isinstance(index, dict):
+        return ["android:index_not_object"]
+    games = index.get("games")
+    if not isinstance(games, dict):
+        return ["android:games_missing"]
+    for game_id, game in games.items():
+        versions = game.get("versions") if isinstance(game, dict) else None
+        if not isinstance(versions, list):
+            errors.append(f"android:{game_id}:versions_missing")
+            continue
+        for index, entry in enumerate(versions, start=1):
+            if not isinstance(entry, dict):
+                errors.append(f"android:{game_id}:{index}:entry_not_object")
+                continue
+            errors.extend(validate_availability(entry, f"android:{game_id}:{index}", adapter))
+    return errors
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--arknights-root", type=Path, default=DEFAULT_ARKNIGHTS)
+    parser.add_argument("--android-root", type=Path, default=DEFAULT_ANDROID)
     args = parser.parse_args()
+
     errors = []
     errors.extend(validate_adapter_no_network(ROOT / "adapters"))
     errors.extend(validate_arknights(args.arknights_root))
+    errors.extend(validate_android(args.android_root))
+
     print("Availability validation")
     print(f"arknights_root={args.arknights_root.resolve()}")
+    print(f"android_root={args.android_root.resolve()}")
     print(f"errors={len(errors)}")
     if errors:
         print("result=FAIL")

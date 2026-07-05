@@ -11,17 +11,17 @@ Status levels:
 
 | Area | Status | Notes |
 | --- | --- | --- |
-| Shared `ProbeResult` / `Interpretation` schema | partial | Implemented in `scripts/availability_schema.py`; first consumer is Arknights. |
-| Stateless URL probe primitive | partial | Implemented in `scripts/url_probe.py`; used by Arknights availability build only. |
-| Probe scheduler/cache layer | partial | Implemented in `scripts/probe_scheduler.py`; URL-granular TTL and reuse path exists for first consumer. |
+| Shared `ProbeResult` / `Interpretation` schema | partial | Implemented in `scripts/availability_schema.py`; first consumers are Arknights and Android. |
+| Stateless URL probe primitive | partial | Implemented in `scripts/url_probe.py`; used by Arknights and Android availability builds. |
+| Probe scheduler/cache layer | partial | Implemented in `scripts/probe_scheduler.py`; URL-granular TTL and reuse path exists for migrated consumers. |
 | Arknights adapter | done | `adapters/arknights.py` interprets probe facts only and does not perform HTTP. Verified by `scripts/validate_availability.py`. |
 | Arknights baked availability data | done | Package records in `docs/data/arknights/versions.json` carry precomputed availability while old fields remain. |
-| Availability negative-path checks | done | `scripts/test_availability_negative.py` verifies Arknights failed probes and validator closed-vocabulary rejection. |
-| Android adapter | todo | Recommended next slice. |
-| Android baked availability data | todo | Not started. |
-| Android frontend compatibility | todo | Not started. |
-| Android fake-200 APK handling | todo | Not started. |
-| HoYo adapter | todo | Recommended after Android. |
+| Availability negative-path checks | done | `scripts/test_availability_negative.py` verifies Arknights and Android failed probes, Android retained historical records, and validator closed-vocabulary rejection. |
+| Android adapter | done | `adapters/android.py` interprets shared probe facts only. APK size/content-type rules and retained historical dead links are verified by negative tests. |
+| Android baked availability data | done | APK records in `docs/data/android/index.json` carry precomputed availability while old fields remain. |
+| Android frontend compatibility | done | Android mode reads `availability.interpretation` first and falls back to legacy `status` / `error` fields. |
+| Android fake-200 APK handling | todo | Tiny placeholder APK responses are still tracked separately for a follow-up tightening commit. |
+| HoYo adapter | todo | Recommended next slice. |
 | Endfield adapter | todo | Needs official-vs-mirror interpretation. |
 | NTE adapter | todo | Needs ResList/object interpretation. |
 | WuWa multi-CDN adapter | todo | Defer until multi-CDN candidate selection is designed explicitly. |

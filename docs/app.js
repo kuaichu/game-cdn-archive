@@ -373,6 +373,16 @@ const isArknights = () => currentGame().kind === "arknights";
 const isAndroidOnly = () => currentGame().kind === "android";
 const androidGame = () => state.androidIndex?.games?.[state.gameId] || null;
 const androidEntries = () => androidGame()?.versions || [];
+const androidAvailability = (entry) => entry?.availability?.interpretation || null;
+const androidAvailabilityState = (entry) => androidAvailability(entry)?.state || "";
+const androidAvailabilityLabel = (entry) => androidAvailability(entry)?.display_label || (
+  entry?.error || Number(entry?.status || 0) < 200 || Number(entry?.status || 0) >= 400 ? "链接失效" : "可用"
+);
+const androidEntryUnavailable = (entry) => {
+  const state = androidAvailabilityState(entry);
+  if (state) return state === "unavailable";
+  return Boolean(entry?.error || Number(entry?.status || 0) < 200 || Number(entry?.status || 0) >= 400);
+};
 const androidSummaries = () => {
   const byVersion = new Map();
   androidEntries().forEach((entry) => {
@@ -393,7 +403,7 @@ const androidSummaries = () => {
       row.size += Number(entry.size || 0);
       row.known_size_count += 1;
     }
-    if (entry.error || Number(entry.status || 0) < 200 || Number(entry.status || 0) >= 400) {
+    if (androidEntryUnavailable(entry)) {
       row.unavailable_count += 1;
     }
     if (entry.channel && !row.channels.includes(entry.channel)) row.channels.push(entry.channel);
@@ -1190,6 +1200,7 @@ const renderSyncStatus = () => {
 const androidStats = () => {
   const entry = androidVersion();
   const entries = androidVersionEntries();
+  const labels = [...new Set(entries.map(androidAvailabilityLabel).filter(Boolean))];
   return [
     ["当前版本", state.version],
     ["平台", "Android"],
@@ -1197,6 +1208,7 @@ const androidStats = () => {
     ["渠道", entry?.channels?.join(" / ") || "-"],
     ["更新时间", fmtDateTime(entry?.updated_at || entry?.last_modified)],
     ["APK 大小", fmtKnownBytes(entry?.size)],
+    ["可用性", labels.join(" / ") || "-"],
     ["状态", entry?.status ? `HTTP ${entry.status}` : "-"],
   ];
 };
@@ -1564,7 +1576,7 @@ const androidItem = (entry, index = 0, total = 0) => ({
   title: entry.filename || `${currentGame().name}_${entry.version}.apk`,
   subtitle: `${entry.channel || "官方渠道"} / ${fmtDateTime(entry.updated_at || entry.last_modified)}`,
   size: Number(entry.size || 0),
-  sizeLabel: fmtKnownBytes(entry.size),
+  sizeLabel: `${androidAvailabilityLabel(entry)} / ${fmtKnownBytes(entry.size)}`,
   hash: entry.md5 || entry.etag || "",
   url: entry.url,
   extraLinks: entry.archive_url ? [{ url: entry.archive_url, label: "签名留档" }] : [],

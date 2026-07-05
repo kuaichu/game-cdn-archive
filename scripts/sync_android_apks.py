@@ -15,6 +15,8 @@ from email.utils import parsedate_to_datetime
 from datetime import datetime, timezone
 from pathlib import Path
 
+from probe_scheduler import ProbeScheduleConfig
+
 
 DEFAULT_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -2991,7 +2993,7 @@ def main() -> None:
     generated_dt = datetime.now(timezone.utc)
     generated_at = generated_dt.isoformat()
     entries: list[dict] = []
-    apk_reprobe_ttl_hours = env_int("ANDROID_APK_REPROBE_TTL_HOURS", 20)
+    apk_reprobe_ttl_hours = ProbeScheduleConfig.android_apks_from_env().ttl_hours
     previous_age = iso_age_hours(previous_index.get("last_checked_at"), generated_dt)
     reprobe_all_apks = (
         env_flag("REPROBE_ANDROID_APKS", True)
