@@ -112,6 +112,8 @@ def refresh_index(output_dir: Path) -> int:
 def update_expected_total(total_files: int) -> None:
     text = VALIDATOR.read_text(encoding="utf-8")
     updated = re.sub(r"^EXPECTED_TOTAL_FILES = \d+$", f"EXPECTED_TOTAL_FILES = {total_files}", text, flags=re.M)
+    if f"EXPECTED_TOTAL_FILES = {total_files}" in text:
+        return
     if text == updated:
         raise RuntimeError("Could not update EXPECTED_TOTAL_FILES in validate_wuwa_split.py")
     VALIDATOR.write_text(updated, encoding="utf-8")
