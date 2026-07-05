@@ -921,10 +921,7 @@ const renderVersionMenu = () => {
             <span class="group-chevron" aria-hidden="true">⌄</span>
             <strong>${family} ${isNte() || isEndfield() ? "大版本" : "版本"}</strong>
           </span>
-          <span class="group-meta">
-            <span>${items.length} 个可用版本</span>
-            <span>${collapsed ? "展开" : "收纳"}</span>
-          </span>
+          <span class="group-meta">${items.length} 个可用版本</span>
         </button>
         <div class="version-group-body" ${collapsed ? "hidden" : ""}>
           ${items.map((item) => versionButton(item)).join("")}
@@ -935,7 +932,8 @@ const renderVersionMenu = () => {
     .join("");
 
   $$(".version-group-head").forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
       const family = button.dataset.family;
       const collapsed = button.getAttribute("aria-expanded") === "true";
       setVersionGroupCollapsed(family, collapsed);

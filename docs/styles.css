@@ -414,7 +414,8 @@ h2 {
   justify-content: space-between;
   gap: 12px;
   border: 0;
-  padding: 4px 8px 8px;
+  border-radius: 6px;
+  padding: 3px 8px 8px;
   background: transparent;
   color: inherit;
   text-align: left;
@@ -422,7 +423,7 @@ h2 {
 }
 
 .version-group-head:hover {
-  color: var(--cyan);
+  background: rgba(255, 255, 255, 0.025);
 }
 
 .version-group-head strong {
@@ -431,32 +432,37 @@ h2 {
 }
 
 .group-meta {
-  display: inline-flex;
   flex-shrink: 0;
-  align-items: center;
-  gap: 8px;
   color: var(--muted);
   font-size: 12px;
-}
-
-.group-meta span:last-child {
-  color: var(--cyan);
-  font-weight: 800;
 }
 
 .group-title {
   display: inline-flex;
   min-width: 0;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
 }
 
 .group-chevron {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(149, 201, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(149, 201, 255, 0.06);
   color: var(--muted);
-  font-size: 15px;
-  line-height: 1;
+  font-size: 13px;
+  line-height: 20px;
   transform: rotate(0deg);
-  transition: transform 0.16s ease;
+  transition: border-color 0.16s ease, color 0.16s ease, transform 0.16s ease;
+}
+
+.version-group-head:hover .group-chevron {
+  border-color: rgba(149, 201, 255, 0.4);
+  color: #95c9ff;
 }
 
 .version-group.collapsed .group-chevron {
