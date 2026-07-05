@@ -19,9 +19,10 @@ for path in (ROOT, SCRIPTS):
 
 from adapters.arknights import ArknightsAvailabilityAdapter  # noqa: E402
 from adapters.android import AndroidAvailabilityAdapter  # noqa: E402
+from adapters.endfield import EndfieldAvailabilityAdapter  # noqa: E402
 from adapters.hoyo import HoyoAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import ProbeResult, availability_block, probe_fact_defaults  # noqa: E402
-from scripts.validate_availability import validate_android, validate_arknights, validate_hoyo  # noqa: E402
+from scripts.validate_availability import validate_android, validate_arknights, validate_endfield, validate_hoyo  # noqa: E402
 
 
 ARKNIGHTS_ROOT = ROOT / "docs" / "data" / "arknights"
@@ -93,6 +94,24 @@ def hoyo_metadata_probe(url: str, *, size: int, ok: bool = True, error: str = ""
             error=error,
             stale=False,
             scheduler_confidence="medium" if ok else "low",
+        ),
+    }
+
+
+def endfield_upstream_probe(url: str, *, ok: bool, size: int = 1024, error: str = "") -> ProbeResult:
+    return {
+        "url": url,
+        "probe": probe_fact_defaults(
+            ok=ok,
+            status=0,
+            method="UPSTREAM_ARCHIVE",
+            checked_at="2026-07-06T00:00:00.000Z",
+            final_url=url,
+            content_type="",
+            size=size,
+            error=error,
+            stale=False,
+            scheduler_confidence="medium",
         ),
     }
 
@@ -225,6 +244,67 @@ def assert_hoyo_metadata_paths() -> None:
     }
     if valid_result != expected_valid:
         raise AssertionError(f"unexpected HoYo valid interpretation: {valid_result!r}")
+
+
+def assert_endfield_upstream_paths() -> None:
+    adapter = EndfieldAvailabilityAdapter()
+    official_url = "https://example.invalid/official.zip.001"
+    mirror_url = "https://github.com/example/archive/releases/download/pkg/official.zip.001"
+
+    mirror_record = {
+        "name": "official.zip.001",
+        "size": 1024,
+        "official_url": official_url,
+        "official_available": False,
+        "mirror_url": mirror_url,
+        "preferred_url": mirror_url,
+    }
+    mirror_result = adapter.interpret([
+        endfield_upstream_probe(official_url, ok=False, error="upstream_marked_unavailable"),
+        endfield_upstream_probe(mirror_url, ok=True, error="mirror_fallback"),
+    ], mirror_record)
+    expected_mirror = {
+        "state": "mirror_only",
+        "reason": "mirror_fallback",
+        "preferred_url": mirror_url,
+        "confidence": "medium",
+        "retained": False,
+        "display_label": "镜像可用",
+    }
+    if mirror_result != expected_mirror:
+        raise AssertionError(f"unexpected Endfield mirror interpretation: {mirror_result!r}")
+    mirror_record["availability"] = availability_block(
+        [
+            endfield_upstream_probe(official_url, ok=False, error="upstream_marked_unavailable"),
+            endfield_upstream_probe(mirror_url, ok=True, error="mirror_fallback"),
+        ],
+        "upstream_archive",
+        mirror_result,
+        "scripts/test_availability_negative.py",
+    )
+    if mirror_record["availability"]["source"]["kind"] != "upstream_archive":
+        raise AssertionError(f"unexpected Endfield source kind: {mirror_record['availability']!r}")
+    if mirror_record["availability"]["source"]["confidence"] == "high":
+        raise AssertionError(f"Endfield upstream archive must not use high confidence: {mirror_record['availability']!r}")
+
+    official_record = {
+        "name": "official.zip.001",
+        "size": 1024,
+        "official_url": official_url,
+        "official_available": True,
+        "preferred_url": official_url,
+    }
+    official_result = adapter.interpret([endfield_upstream_probe(official_url, ok=True)], official_record)
+    expected_official = {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": official_url,
+        "confidence": "medium",
+        "retained": False,
+        "display_label": "可用",
+    }
+    if official_result != expected_official:
+        raise AssertionError(f"unexpected Endfield official interpretation: {official_result!r}")
 
 
 def mutated_versions_with(path_parts: tuple[str, ...], value: Any) -> dict[str, Any]:
@@ -369,10 +449,81 @@ def assert_hoyo_validator_rejects(path_parts: tuple[str, ...], value: Any, expec
         raise AssertionError(f"HoYo validator did not reject {'.'.join(path_parts)}={value!r}; errors={errors!r}")
 
 
+def valid_endfield_root(root: Path) -> None:
+    version = "1.0.0"
+    official_url = "https://example.invalid/official.zip.001"
+    item = {
+        "name": "official.zip.001",
+        "size": 1024,
+        "md5": "",
+        "official_url": official_url,
+        "official_available": True,
+        "preferred_url": official_url,
+    }
+    probe = endfield_upstream_probe(official_url, ok=True)
+    interpretation = EndfieldAvailabilityAdapter().interpret([probe], item)
+    item["availability"] = availability_block(
+        [probe],
+        "upstream_archive",
+        interpretation,
+        "scripts/test_availability_negative.py",
+    )
+    summary_probe = endfield_upstream_probe(f"endfield-upstream://{version}", ok=False, size=0, error="not_probed")
+    summary = {
+        "version": version,
+        "package_items": 1,
+        "patch_routes": 0,
+        "packed_size": 1024,
+        "unpacked_size": 0,
+        "mirror_items": 0,
+        "availability_counts": {"available": 1},
+        "availability_reasons": {"not_probed": 1},
+    }
+    summary_interpretation = EndfieldAvailabilityAdapter().interpret([summary_probe], summary)
+    summary["availability"] = availability_block(
+        [summary_probe],
+        "upstream_archive",
+        summary_interpretation,
+        "scripts/test_availability_negative.py",
+    )
+
+    write_json(root / "index.json", {"versions": [summary]})
+    write_json(root / "versions.json", {
+        version: {
+            "version": version,
+            "packages": [item],
+            "patches": [],
+            "availability_counts": {"available": 1},
+            "availability_reasons": {"not_probed": 1},
+        }
+    })
+
+
+def mutate_endfield_item(root: Path, path_parts: tuple[str, ...], value: Any) -> None:
+    valid_endfield_root(root)
+    versions_path = root / "versions.json"
+    versions = load_json(versions_path)
+    target: Any = versions["1.0.0"]["packages"][0]
+    for part in path_parts[:-1]:
+        target = target[part]
+    target[path_parts[-1]] = value
+    write_json(versions_path, versions)
+
+
+def assert_endfield_validator_rejects(path_parts: tuple[str, ...], value: Any, expected_token: str) -> None:
+    with tempfile.TemporaryDirectory(prefix="endfield-availability-negative-") as temp:
+        temp_root = Path(temp)
+        mutate_endfield_item(temp_root, path_parts, value)
+        errors = validate_endfield(temp_root)
+    if not any(expected_token in error for error in errors):
+        raise AssertionError(f"Endfield validator did not reject {'.'.join(path_parts)}={value!r}; errors={errors!r}")
+
+
 def main() -> None:
     assert_arknights_failed_probe_maps_to_unavailable()
     assert_android_negative_paths()
     assert_hoyo_metadata_paths()
+    assert_endfield_upstream_paths()
     assert_validator_rejects(("availability", "interpretation", "state"), "foobar", ":state:foobar")
     assert_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
     assert_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
@@ -385,6 +536,10 @@ def main() -> None:
     assert_hoyo_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
     assert_hoyo_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
     assert_hoyo_validator_rejects(("availability", "interpretation", "confidence"), "certain", ":confidence:certain")
+    assert_endfield_validator_rejects(("availability", "interpretation", "state"), "foobar", ":state:foobar")
+    assert_endfield_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
+    assert_endfield_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
+    assert_endfield_validator_rejects(("availability", "interpretation", "confidence"), "certain", ":confidence:certain")
 
     print("Availability negative-path checks")
     print("arknights_failed_probe=PASS")
@@ -392,6 +547,7 @@ def main() -> None:
     print("android_fake_200=PASS")
     print("android_retained_historical=PASS")
     print("hoyo_metadata_inference=PASS")
+    print("endfield_upstream_archive=PASS")
     print("closed_vocab_rejection=PASS")
     print("result=PASS")
 

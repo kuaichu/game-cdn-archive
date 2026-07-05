@@ -19,6 +19,7 @@ for path in (ROOT, SCRIPTS):
 
 from adapters.arknights import ArknightsAvailabilityAdapter  # noqa: E402
 from adapters.android import AndroidAvailabilityAdapter  # noqa: E402
+from adapters.endfield import EndfieldAvailabilityAdapter  # noqa: E402
 from adapters.hoyo import HoyoAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import (  # noqa: E402
     AVAILABILITY_REASONS,
@@ -30,6 +31,7 @@ from scripts.availability_schema import (  # noqa: E402
 
 DEFAULT_ARKNIGHTS = ROOT / "docs" / "data" / "arknights"
 DEFAULT_ANDROID = ROOT / "docs" / "data" / "android"
+DEFAULT_ENDFIELD = ROOT / "docs" / "data" / "endfield"
 DEFAULT_HOYO = ROOT / "docs" / "data" / "hoyo"
 FORBIDDEN_ADAPTER_MODULES = {"urllib", "requests", "http", "http.client", "subprocess", "socket"}
 FORBIDDEN_ADAPTER_NAMES = {"urlopen", "Request", "HTTPConnection", "HTTPSConnection", "curl", "fetch"}
@@ -293,10 +295,65 @@ def validate_hoyo(root: Path) -> list[str]:
     return errors
 
 
+def iter_endfield_file_items(row: dict[str, Any]) -> list[dict[str, Any]]:
+    items = [item for item in row.get("packages") or [] if isinstance(item, dict)]
+    for route in row.get("patches") or []:
+        if not isinstance(route, dict):
+            continue
+        items.extend(item for item in route.get("parts") or [] if isinstance(item, dict))
+    return items
+
+
+def validate_endfield(root: Path) -> list[str]:
+    errors: list[str] = []
+    index_path = root / "index.json"
+    versions_path = root / "versions.json"
+    index = load_json(index_path)
+    versions = load_json(versions_path)
+    adapter = EndfieldAvailabilityAdapter()
+    if not isinstance(index, dict):
+        return ["endfield:index_not_object"]
+    if not isinstance(versions, dict):
+        return ["endfield:versions_not_object"]
+    summaries = index.get("versions")
+    if not isinstance(summaries, list):
+        return ["endfield:summaries_missing"]
+
+    for summary in summaries:
+        if not isinstance(summary, dict):
+            errors.append("endfield:summary_not_object")
+            continue
+        version = str(summary.get("version") or "")
+        summary_path = f"endfield:{version}:summary"
+        errors.extend(validate_availability(summary, summary_path, adapter))
+        source = (summary.get("availability") or {}).get("source") or {}
+        interpretation = (summary.get("availability") or {}).get("interpretation") or {}
+        if source.get("kind") != "upstream_archive":
+            errors.append(f"{summary_path}:source_kind_not_upstream_archive:{source.get('kind')}")
+        if interpretation.get("confidence") == "high" or source.get("confidence") == "high":
+            errors.append(f"{summary_path}:upstream_archive_high_confidence")
+
+        row = versions.get(version)
+        if not isinstance(row, dict):
+            errors.append(f"endfield:{version}:version_missing")
+            continue
+        for index, item in enumerate(iter_endfield_file_items(row), start=1):
+            item_path = f"endfield:{version}:item_{index}"
+            errors.extend(validate_availability(item, item_path, adapter))
+            item_source = (item.get("availability") or {}).get("source") or {}
+            item_interpretation = (item.get("availability") or {}).get("interpretation") or {}
+            if item_source.get("kind") != "upstream_archive":
+                errors.append(f"{item_path}:source_kind_not_upstream_archive:{item_source.get('kind')}")
+            if item_interpretation.get("confidence") == "high" or item_source.get("confidence") == "high":
+                errors.append(f"{item_path}:upstream_archive_high_confidence")
+    return errors
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--arknights-root", type=Path, default=DEFAULT_ARKNIGHTS)
     parser.add_argument("--android-root", type=Path, default=DEFAULT_ANDROID)
+    parser.add_argument("--endfield-root", type=Path, default=DEFAULT_ENDFIELD)
     parser.add_argument("--hoyo-root", type=Path, default=DEFAULT_HOYO)
     args = parser.parse_args()
 
@@ -304,11 +361,13 @@ def main() -> None:
     errors.extend(validate_adapter_no_network(ROOT / "adapters"))
     errors.extend(validate_arknights(args.arknights_root))
     errors.extend(validate_android(args.android_root))
+    errors.extend(validate_endfield(args.endfield_root))
     errors.extend(validate_hoyo(args.hoyo_root))
 
     print("Availability validation")
     print(f"arknights_root={args.arknights_root.resolve()}")
     print(f"android_root={args.android_root.resolve()}")
+    print(f"endfield_root={args.endfield_root.resolve()}")
     print(f"hoyo_root={args.hoyo_root.resolve()}")
     print(f"errors={len(errors)}")
     if errors:

@@ -554,7 +554,27 @@ const hoyoUnavailableCount = (version) => {
   return hoyoDownloadItems(row).filter((item) => Number(item.size || 0) <= 0).length;
 };
 
+const endfieldAvailability = (record) => record?.availability?.interpretation || null;
+const endfieldAvailabilityState = (record) => endfieldAvailability(record)?.state || "";
+const endfieldAvailabilityLabel = (record) => endfieldAvailability(record)?.display_label || (
+  record?.official_available === false
+    ? (record?.mirror_url ? "镜像可用" : "链接失效")
+    : record?.official_available === true ? "可用" : "状态未知"
+);
+
 const endfieldOfficialStatus = (version) => {
+  const summary = endfieldSummaries().find((item) => item.version === version);
+  const summaryAvailability = endfieldAvailability(summary);
+  if (summaryAvailability?.state === "mirror_only") {
+    return { color: "amber", label: summaryAvailability.display_label };
+  }
+  if (summaryAvailability?.state === "unavailable") {
+    return { color: "red", label: summaryAvailability.display_label };
+  }
+  if (summaryAvailability?.state === "unknown") {
+    return { color: "slate", label: summaryAvailability.display_label };
+  }
+
   const row = state.endfieldVersions?.[version];
   const items = [...(row?.packages || []), ...(row?.patches || [])];
   const officialExpired = items.filter((item) => item.official_url && item.official_available === false);
@@ -1670,33 +1690,49 @@ const hoyoLegacyItems = () => hoyoLegacyRecords().map((record) => {
 const endfieldPackageItems = () => {
   const version = endfieldVersion();
   if (!version) return [];
-  return version.packages.map((item) => ({
-    badge: item.official_available ? "官方完整分卷" : "完整分卷",
-    title: item.name,
-    subtitle: item.official_available ? "上游探测时官方链接可用" : "上游曾标记官方链接不可用；实际状态可能变化",
-    size: item.size,
-    hash: item.md5,
-    officialUrl: item.official_url,
-    officialAvailable: item.official_available,
-    mirrorUrl: item.mirror_url,
-    preferredUrl: item.preferred_url,
-  }));
+  return version.packages.map((item) => {
+    const availability = endfieldAvailability(item);
+    const availabilityState = availability?.state || (item.official_available ? "available" : item.mirror_url ? "mirror_only" : "unavailable");
+    const availabilityLabel = endfieldAvailabilityLabel(item);
+    return {
+      badge: availabilityState === "available" ? "官方完整分卷" : "完整分卷",
+      title: item.name,
+      subtitle: availabilityState === "available"
+        ? `${availabilityLabel} / 上游归档标记官方链接可用`
+        : `${availabilityLabel} / 上游归档标记官方链接不可用；实际状态可能变化`,
+      size: item.size,
+      hash: item.md5,
+      officialUrl: item.official_url,
+      officialAvailable: availabilityState === "available",
+      mirrorUrl: item.mirror_url,
+      preferredUrl: availability?.preferred_url || item.preferred_url,
+      availabilityState,
+      availabilityLabel,
+    };
+  });
 };
 
 const endfieldPatchItems = () => {
   const version = endfieldVersion();
   if (!version) return [];
-  return version.patches.flatMap((route) => route.parts.map((item) => ({
-    badge: "更新分卷",
-    title: item.name,
-    subtitle: `${route.from} -> ${route.to}${item.official_available ? " / 上游探测可用" : " / 官方状态未知，镜像可用"}`,
-    size: item.size,
-    hash: item.md5,
-    officialUrl: item.official_url,
-    officialAvailable: item.official_available,
-    mirrorUrl: item.mirror_url,
-    preferredUrl: item.preferred_url,
-  })));
+  return version.patches.flatMap((route) => route.parts.map((item) => {
+    const availability = endfieldAvailability(item);
+    const availabilityState = availability?.state || (item.official_available ? "available" : item.mirror_url ? "mirror_only" : "unavailable");
+    const availabilityLabel = endfieldAvailabilityLabel(item);
+    return {
+      badge: "更新分卷",
+      title: item.name,
+      subtitle: `${route.from} -> ${route.to} / ${availabilityLabel}`,
+      size: item.size,
+      hash: item.md5,
+      officialUrl: item.official_url,
+      officialAvailable: availabilityState === "available",
+      mirrorUrl: item.mirror_url,
+      preferredUrl: availability?.preferred_url || item.preferred_url,
+      availabilityState,
+      availabilityLabel,
+    };
+  }));
 };
 
 const arknightsPackageItems = () => {

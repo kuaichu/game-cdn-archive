@@ -22,6 +22,6 @@ Status levels:
 | Android frontend compatibility | done | Android mode reads `availability.interpretation` first and falls back to legacy `status` / `error` fields. |
 | Android fake-200 APK handling | done | APK URLs returning tiny text/XML/HTML placeholder payloads are tightened to `unavailable` instead of `unknown`. |
 | HoYo adapter | done | `adapters/hoyo.py` interprets package/update size metadata only, using `metadata_inference` and non-high confidence. Version shard items and `games.json` summaries carry precomputed availability while old `unavailable_items` remains. |
-| Endfield adapter | todo | Needs official-vs-mirror interpretation. |
+| Endfield adapter | done | `adapters/endfield.py` interprets upstream archive `official_available` / mirror metadata only, using `upstream_archive` and non-high confidence. Index summaries, package records, and patch parts carry precomputed availability while old fields remain. |
 | NTE adapter | todo | Needs ResList/object interpretation. |
 | WuWa multi-CDN adapter | todo | Defer until multi-CDN candidate selection is designed explicitly. |
