@@ -1163,6 +1163,7 @@ KNOWN_APKS = [
         "channel": "305",
         "url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
         "source": "official CDN URL provided by user",
+        "headers": {"Referer": "https://skzy.ys4fun.com/"},
     },
 
 
@@ -2654,7 +2655,9 @@ def should_reprobe_unavailable_apk(seed: dict, previous: dict | None) -> bool:
     parsed = urllib.parse.urlparse(seed["url"])
     return parsed.path.lower().endswith(".apk") and parsed.netloc in {
         "autopatchcn.bh3.com",
+        "download.ys4fun.com",
         "mirrors-package-mc.aki-game.com",
+        "packaging.ys4fun.com",
     }
 
 

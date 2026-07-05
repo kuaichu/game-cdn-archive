@@ -53,7 +53,7 @@ ranges are:
 
 | Game | Indexed versions | Records | Notes |
 | --- | --- | --- | --- |
-| 深空之眼 / Aether Gazer | `0.285.0` -> `0.305.3` | `4` version buckets / `4` records | `0` available; `4` unavailable or historical dead-link records |
+| 深空之眼 / Aether Gazer | `0.285.0` -> `0.305.3` | `4` version buckets / `4` records | `2` available; `2` unavailable or historical dead-link records |
 | 明日方舟 / Arknights | `1150.0.0` -> `2741.0.0` | `20` version buckets / `20` records | `1` available; `19` unavailable or historical dead-link records |
 | 崩坏3 / Honkai Impact 3rd | `0.9.1` -> `8.9.0` | `45` version buckets / `45` records | `15` available; `30` unavailable or historical dead-link records |
 | 碧蓝档案 / Blue Archive | `2.1.2` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
