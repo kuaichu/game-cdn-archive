@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-07-05T03:31:49.029579+00:00",
-  "generated_at": "2026-07-05T03:31:49.029579+00:00",
+  "last_checked_at": "2026-07-05T07:42:20.144542+00:00",
+  "generated_at": "2026-07-05T07:42:20.144542+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -126,7 +126,7 @@
           "version": "1.1.6.4",
           "channel": "official",
           "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
-          "source": "official Calabiyau website HTML; versionName read from AndroidManifest.xml",
+          "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
           "source_url": "https://klbqm.idreamsky.com/",
           "updated_at": "2025-10-22T23:42:15+00:00",
           "updated_at_source": "official_config",
@@ -172,28 +172,6 @@
           "captured_at": "2026-06-08T18:26:03.629191+00:00",
           "updated_at": "2026-03-20T11:01:14+00:00",
           "updated_at_source": "filename_timestamp"
-        },
-        {
-          "game_id": "aethergazer",
-          "version": "0.305.2",
-          "channel": "gwdl",
-          "url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-          "source": "official Aether Gazer Android download endpoint; resolves to a CDN URL",
-          "source_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-          "archive_url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
-          "archive_note": "CDN URL captured during sync",
-          "status": 200,
-          "content_type": "application/vnd.android.package-archive",
-          "size": 2023625968,
-          "last_modified": "Mon, 23 Mar 2026 04:02:37 GMT",
-          "etag": "339695581774CBDF745D857F8975AA34-193",
-          "md5": "",
-          "crc64": "8155058698090329544",
-          "error": "",
-          "filename": "ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
-          "captured_at": "2026-07-05T03:21:54.924219+00:00",
-          "updated_at": "2026-03-23T04:02:37+00:00",
-          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "aethergazer",
@@ -258,11 +236,6 @@
           "urls": "data/android/lists/aethergazer_0.305.3_android.urls.txt",
           "aria2": "data/android/lists/aethergazer_0.305.3_android.aria2.txt",
           "json": "data/android/lists/aethergazer_0.305.3_android.json"
-        },
-        "0.305.2": {
-          "urls": "data/android/lists/aethergazer_0.305.2_android.urls.txt",
-          "aria2": "data/android/lists/aethergazer_0.305.2_android.aria2.txt",
-          "json": "data/android/lists/aethergazer_0.305.2_android.json"
         },
         "0.303.501": {
           "urls": "data/android/lists/aethergazer_0.303.501_android.urls.txt",
@@ -615,7 +588,6 @@
           "md5": "0812c3eaf14c876481e41cb9783e11cf",
           "crc64": "",
           "error": "APK object unavailable",
-          "exception_info": "O2|404",
           "filename": "KR_TF_52-鸣潮_3.0.1_157207705_33_库洛_投放包_1_0812c3eaf14c876481e41cb9783e11cf_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-12-30T15:33:35+00:00",
@@ -693,7 +665,6 @@
           "md5": "d52f6d505a9741173a20005313a7c594",
           "crc64": "",
           "error": "APK object unavailable",
-          "exception_info": "O2|404",
           "filename": "KR_TF_41-鸣潮_2.5.0_142563591__库洛_投放包_1_d52f6d505a9741173a20005313a7c594_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-07-21T17:58:18+00:00",
@@ -713,7 +684,6 @@
           "md5": "0198dea9f935f0df478aeae416b85a83",
           "crc64": "",
           "error": "APK object unavailable",
-          "exception_info": "O2|404",
           "filename": "KR_TF_41-鸣潮_2.4.1_141938334__库洛_投放包_1_0198dea9f935f0df478aeae416b85a83_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-07-09T10:52:31+00:00",
