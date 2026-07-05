@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-07-05T02:03:55.017956+00:00",
-  "generated_at": "2026-07-05T02:03:55.017956+00:00",
+  "last_checked_at": "2026-07-05T02:10:35.258149+00:00",
+  "generated_at": "2026-07-05T02:10:35.258149+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -23,7 +23,9 @@
           "crc64": "",
           "error": "",
           "filename": "yh_gw_20260702.apk",
-          "captured_at": "2026-07-02T01:32:24.791217+00:00"
+          "captured_at": "2026-07-02T01:32:24.791217+00:00",
+          "updated_at": "2026-06-29T06:05:29+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "nte",
@@ -40,7 +42,9 @@
           "crc64": "",
           "error": "",
           "filename": "KwmNRJZa.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2026-04-21T00:31:06+00:00",
+          "updated_at_source": "apk_last_modified"
         }
       ],
       "links": {
@@ -75,7 +79,9 @@
           "crc64": "10184851393196731477",
           "error": "",
           "filename": "Reverse1999_Bluepoch_1000.apk",
-          "captured_at": "2026-07-05T01:59:44.437706+00:00"
+          "captured_at": "2026-07-05T02:10:35.258149+00:00",
+          "updated_at": "2026-06-11T00:35:28+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "reverse1999",
@@ -119,6 +125,8 @@
           "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
           "source": "official Calabiyau website HTML; versionName read from AndroidManifest.xml",
           "source_url": "https://klbqm.idreamsky.com/",
+          "updated_at": "2025-10-22T23:42:15+00:00",
+          "updated_at_source": "official_config",
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
           "size": 1875804958,
@@ -158,7 +166,9 @@
           "crc64": "8155058698090329544",
           "error": "",
           "filename": "ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
-          "captured_at": "2026-06-08T18:26:03.629191+00:00"
+          "captured_at": "2026-06-08T18:26:03.629191+00:00",
+          "updated_at": "2026-03-23T04:02:37+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "aethergazer",
@@ -175,7 +185,9 @@
           "crc64": "11029514340957415713",
           "error": "",
           "filename": "mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
-          "captured_at": "2026-06-06T22:54:29.106555+00:00"
+          "captured_at": "2026-06-06T22:54:29.106555+00:00",
+          "updated_at": "2025-09-11T09:39:36+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "aethergazer",
@@ -192,7 +204,9 @@
           "crc64": "",
           "error": "",
           "filename": "mimir_ali_prod_294_1_ys4fun_20240710095639_M01000000_bi3NUfr4_sign.apk",
-          "captured_at": "2026-06-06T22:54:29.106555+00:00"
+          "captured_at": "2026-06-06T22:54:29.106555+00:00",
+          "updated_at": "2024-07-10T09:56:39+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "aethergazer",
@@ -209,7 +223,9 @@
           "crc64": "",
           "error": "",
           "filename": "mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
-          "captured_at": "2026-06-06T22:54:29.106555+00:00"
+          "captured_at": "2026-06-06T22:54:29.106555+00:00",
+          "updated_at": "2023-05-22T14:05:43+00:00",
+          "updated_at_source": "filename_timestamp"
         }
       ],
       "links": {
@@ -255,7 +271,9 @@
           "crc64": "",
           "error": "",
           "filename": "BlueArchive.apk",
-          "captured_at": "2026-07-05T01:50:12.992811+00:00"
+          "captured_at": "2026-07-05T01:50:12.992811+00:00",
+          "updated_at": "2025-09-23T05:29:37+00:00",
+          "updated_at_source": "apk_last_modified"
         }
       ],
       "links": {
@@ -286,7 +304,9 @@
           "crc64": "17658315226039455406",
           "error": "",
           "filename": "CBJQ.3.6.0.122.jinshan_202603301341.apk",
-          "captured_at": "2026-07-05T01:50:12.992811+00:00"
+          "captured_at": "2026-07-05T01:50:12.992811+00:00",
+          "updated_at": "2026-05-07T03:12:21+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "snowbreak",
@@ -303,7 +323,9 @@
           "crc64": "10364491818576574960",
           "error": "",
           "filename": "CBJQ.3.5.0.79.jinshan_20260118141532.apk",
-          "captured_at": "2026-06-06T21:03:03.258915+00:00"
+          "captured_at": "2026-06-06T21:03:03.258915+00:00",
+          "updated_at": "2026-01-27T08:53:38+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "snowbreak",
@@ -320,7 +342,9 @@
           "crc64": "18155953360359075338",
           "error": "",
           "filename": "CBJQ.3.4.0.92.jinshan_20251212164223.apk",
-          "captured_at": "2026-06-06T21:03:03.258915+00:00"
+          "captured_at": "2026-06-06T21:03:03.258915+00:00",
+          "updated_at": "2025-12-17T02:33:18+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "snowbreak",
@@ -337,7 +361,9 @@
           "crc64": "3748119425235467023",
           "error": "",
           "filename": "CBJQ.3.3.0.82.jinshan.20251029164128.apk",
-          "captured_at": "2026-06-06T21:03:03.258915+00:00"
+          "captured_at": "2026-06-06T21:03:03.258915+00:00",
+          "updated_at": "2025-11-05T04:33:29+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "snowbreak",
@@ -354,7 +380,9 @@
           "crc64": "4265883630572550363",
           "error": "",
           "filename": "CBJQ.3.2.0.136.jinshan_202509221312.apk",
-          "captured_at": "2026-06-06T21:03:03.258915+00:00"
+          "captured_at": "2026-06-06T21:03:03.258915+00:00",
+          "updated_at": "2025-09-22T06:50:13+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "snowbreak",
@@ -371,7 +399,9 @@
           "crc64": "",
           "error": "",
           "filename": "CBJQ_3.0.0_202507031642_jinshan_30020.mtp.apk",
-          "captured_at": "2026-06-06T21:03:03.258915+00:00"
+          "captured_at": "2026-06-06T21:03:03.258915+00:00",
+          "updated_at": "2025-07-03T16:42:00+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "snowbreak",
@@ -388,7 +418,9 @@
           "crc64": "",
           "error": "",
           "filename": "CBJQ.2.5.0.109.jinshan_202501141654.apk",
-          "captured_at": "2026-06-06T21:03:03.258915+00:00"
+          "captured_at": "2026-06-06T21:03:03.258915+00:00",
+          "updated_at": "2025-01-14T16:54:00+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "snowbreak",
@@ -405,7 +437,9 @@
           "crc64": "",
           "error": "",
           "filename": "CBJQ.1.8.0.96.202405271642.apk",
-          "captured_at": "2026-06-06T21:03:03.258915+00:00"
+          "captured_at": "2026-06-06T21:03:03.258915+00:00",
+          "updated_at": "2024-05-27T16:42:00+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "snowbreak",
@@ -422,7 +456,9 @@
           "crc64": "",
           "error": "",
           "filename": "CBJQ.1.6.0.99_202402281240.apk",
-          "captured_at": "2026-06-06T21:03:03.258915+00:00"
+          "captured_at": "2026-06-06T21:03:03.258915+00:00",
+          "updated_at": "2024-02-28T12:40:00+00:00",
+          "updated_at_source": "filename_timestamp"
         }
       ],
       "links": {
@@ -493,7 +529,9 @@
           "crc64": "6854156536120156608",
           "error": "",
           "filename": "鸣潮_3.4.1_171645826_33_官渠_26f4bea7143893d9ea6301e07520f58b_shelled.apk",
-          "captured_at": "2026-06-23T01:31:39.795464+00:00"
+          "captured_at": "2026-06-23T01:31:39.795464+00:00",
+          "updated_at": "2026-06-17T07:57:56+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "wuwa",
@@ -510,7 +548,9 @@
           "crc64": "12982693900871198752",
           "error": "",
           "filename": "鸣潮_3.3.2_168377155_33_官渠_32e97887831ba8ca620f93b4aa2ad0ff_shelled.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2026-05-16T10:37:11+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "wuwa",
@@ -527,7 +567,9 @@
           "crc64": "13689369763496483758",
           "error": "",
           "filename": "KR_TF_49-鸣潮_3.2.1_164300475_33_库洛_投放包_1_83e2cdd963fff1e42e1d1a3e6c895a32_shelled.apk",
-          "captured_at": "2026-06-21T05:05:41.980130+00:00"
+          "captured_at": "2026-06-21T05:05:41.980130+00:00",
+          "updated_at": "2026-03-24T09:43:30+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "wuwa",
@@ -544,7 +586,9 @@
           "crc64": "",
           "error": "",
           "filename": "KR_TF_52-鸣潮_3.0.1_157207705_33_库洛_投放包_1_0812c3eaf14c876481e41cb9783e11cf_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2025-12-30T15:33:35+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -561,7 +605,9 @@
           "crc64": "10516332995218268721",
           "error": "",
           "filename": "鸣潮_3.0.0_156399220_33_官渠_e76c2d8ea383e31af9a8ac20ae3f02e1_shelled.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2025-12-18T08:35:16+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "wuwa",
@@ -578,7 +624,9 @@
           "crc64": "10572048176872661662",
           "error": "",
           "filename": "鸣潮_2.7.0_149269354_33_官渠_a8cc769870e6ffbad35575179e98b30d_shelled.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2025-09-28T02:55:45+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "wuwa",
@@ -595,7 +643,9 @@
           "crc64": "",
           "error": "",
           "filename": "KR_TF_41-鸣潮_2.6.0_145597397__库洛_投放包_1_d9bb02269dfea9e4084cb4f0f141e4c4_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2025-08-25T10:39:28+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -612,7 +662,9 @@
           "crc64": "",
           "error": "",
           "filename": "KR_TF_41-鸣潮_2.5.0_142563591__库洛_投放包_1_d52f6d505a9741173a20005313a7c594_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2025-07-21T17:58:18+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -629,7 +681,9 @@
           "crc64": "",
           "error": "",
           "filename": "KR_TF_41-鸣潮_2.4.1_141938334__库洛_投放包_1_0198dea9f935f0df478aeae416b85a83_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2025-07-09T10:52:31+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -646,7 +700,9 @@
           "crc64": "",
           "error": "",
           "filename": "KR_TF_41-鸣潮_2.4.0_139015362__库洛_投放包_1_82ecc5a3dad3ec68f67500dbf289f2c3_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2025-06-09T19:22:49+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -663,7 +719,9 @@
           "crc64": "",
           "error": "",
           "filename": "KR_TF_41-鸣潮_2.3.0_135127140__库洛_投放包_1_2d29eda4701501e76b018f280b7ccf0_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2025-04-23T18:17:38+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -680,7 +738,9 @@
           "crc64": "7832300854939393280",
           "error": "",
           "filename": "鸣潮_2.2.0_131924627__官渠_fa10fc740c571c2e68366a447b57bff3_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2025-03-20T06:22:30+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "wuwa",
@@ -697,7 +757,9 @@
           "crc64": "16299288753056471903",
           "error": "",
           "filename": "鸣潮_2.1.1_127864672__官渠_eb769f191b1aaaf291dcf9a56fbcd1d7_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2025-03-03T02:17:12+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "wuwa",
@@ -714,7 +776,9 @@
           "crc64": "14228119266706674204",
           "error": "",
           "filename": "鸣潮_2.1.0_127864671__官渠_8b870bacfddc4c4752f6b556c8ae6e1a_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2025-02-07T08:25:22+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "wuwa",
@@ -736,7 +800,9 @@
           "probe_status": "bot_challenge_assumed_available",
           "probe_note": "CDN returned a browser bot challenge during CI probing; keeping the manually archived official APK URL as available.",
           "filename": "鸣潮_2.0.0_124936468__官渠_e9e27e3beccb245e79c81bb77a019bc7_shelled.apk",
-          "captured_at": "2026-06-25T15:39:32.833316+00:00"
+          "captured_at": "2026-06-25T15:39:32.833316+00:00",
+          "updated_at": "2024-12-24T10:37:26+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -753,7 +819,9 @@
           "crc64": "4484723890095404021",
           "error": "",
           "filename": "鸣潮_1.4.1_120822930__官渠_5090cedd91198d837dde7bb6681d6176_shelled.apk",
-          "captured_at": "2026-06-25T16:15:47.325355+00:00"
+          "captured_at": "2026-06-25T16:15:47.325355+00:00",
+          "updated_at": "2024-12-18T02:12:15+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "wuwa",
@@ -775,7 +843,9 @@
           "probe_status": "bot_challenge_assumed_available",
           "probe_note": "CDN returned a browser bot challenge during CI probing; keeping the manually archived official APK URL as available.",
           "filename": "鸣潮_1.4.0_120822928__官渠_5146be995ac1f9d4e918426bae7c869d_shelled.apk",
-          "captured_at": "2026-06-25T15:39:32.833316+00:00"
+          "captured_at": "2026-06-25T15:39:32.833316+00:00",
+          "updated_at": "2024-11-04T11:34:31+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -792,7 +862,9 @@
           "crc64": "9946798042755764081",
           "error": "",
           "filename": "鸣潮_1.3.0_116761876__官渠_56323c8fffdc1701fe2f3d3195a45e9c_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2024-09-19T07:31:44+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "wuwa",
@@ -809,7 +881,9 @@
           "crc64": "17936062525847604453",
           "error": "",
           "filename": "鸣潮_1.2.0_112802763__官渠_81b08709203b7387d166954acc706a48_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2024-08-08T07:24:51+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "wuwa",
@@ -826,7 +900,9 @@
           "crc64": "9273905964516548067",
           "error": "",
           "filename": "鸣潮_1.1.0_108846801__官渠_bbda348a919f317ed975e5486bdbba49_shelled.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2024-06-21T03:06:00+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "wuwa",
@@ -848,7 +924,9 @@
           "probe_status": "bot_challenge_assumed_available",
           "probe_note": "CDN returned a browser bot challenge during CI probing; keeping the manually archived official APK URL as available.",
           "filename": "鸣潮_1.0.0_official.apk",
-          "captured_at": "2026-06-25T15:11:58.040448+00:00"
+          "captured_at": "2026-06-25T15:11:58.040448+00:00",
+          "updated_at": "2024-05-15T18:03:58+00:00",
+          "updated_at_source": "filename_timestamp"
         }
       ],
       "links": {
@@ -979,7 +1057,9 @@
           "crc64": "",
           "error": "",
           "filename": "ZenlessZoneZero_3.0.apk",
-          "captured_at": "2026-06-21T04:43:45.169494+00:00"
+          "captured_at": "2026-06-21T04:43:45.169494+00:00",
+          "updated_at": "2026-06-02T07:48:10+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "nap",
@@ -996,7 +1076,9 @@
           "crc64": "",
           "error": "",
           "filename": "ZenlessZoneZero_2.8.apk",
-          "captured_at": "2026-06-21T04:43:45.169494+00:00"
+          "captured_at": "2026-06-21T04:43:45.169494+00:00",
+          "updated_at": "2026-04-15T08:02:44+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "nap",
@@ -1013,7 +1095,9 @@
           "crc64": "",
           "error": "",
           "filename": "ZenlessZoneZero_2.4.apk",
-          "captured_at": "2026-06-21T04:43:45.169494+00:00"
+          "captured_at": "2026-06-21T04:43:45.169494+00:00",
+          "updated_at": "2025-11-07T09:07:10+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "nap",
@@ -1030,7 +1114,9 @@
           "crc64": "",
           "error": "",
           "filename": "ZenlessZoneZero_2.3.apk",
-          "captured_at": "2026-06-21T04:43:45.169494+00:00"
+          "captured_at": "2026-06-21T04:43:45.169494+00:00",
+          "updated_at": "2025-09-26T11:18:00+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "nap",
@@ -1047,7 +1133,9 @@
           "crc64": "",
           "error": "",
           "filename": "ZenlessZoneZero_2.0.apk",
-          "captured_at": "2026-06-07T00:22:39.219892+00:00"
+          "captured_at": "2026-06-07T00:22:39.219892+00:00",
+          "updated_at": "2025-05-24T03:50:26+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "nap",
@@ -1064,7 +1152,9 @@
           "crc64": "",
           "error": "",
           "filename": "ZenlessZoneZero_1.7.apk",
-          "captured_at": "2026-06-08T18:10:25.866584+00:00"
+          "captured_at": "2026-06-08T18:10:25.866584+00:00",
+          "updated_at": "2025-04-10T05:07:14+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "nap",
@@ -1081,7 +1171,9 @@
           "crc64": "",
           "error": "",
           "filename": "ZenlessZoneZero_1.3.apk",
-          "captured_at": "2026-06-21T04:43:45.169494+00:00"
+          "captured_at": "2026-06-21T04:43:45.169494+00:00",
+          "updated_at": "2024-10-25T08:52:57+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "nap",
@@ -1098,7 +1190,9 @@
           "crc64": "",
           "error": "",
           "filename": "ZenlessZoneZero_1.2.apk",
-          "captured_at": "2026-06-08T18:17:20.519294+00:00"
+          "captured_at": "2026-06-08T18:17:20.519294+00:00",
+          "updated_at": "2024-09-14T04:23:46+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "nap",
@@ -1115,7 +1209,9 @@
           "crc64": "",
           "error": "",
           "filename": "ZenlessZoneZero_1.1.apk",
-          "captured_at": "2026-06-21T04:43:45.169494+00:00"
+          "captured_at": "2026-06-21T04:43:45.169494+00:00",
+          "updated_at": "2024-08-03T07:23:02+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "nap",
@@ -1132,7 +1228,9 @@
           "crc64": "",
           "error": "",
           "filename": "ZenlessZoneZero_1.0.apk",
-          "captured_at": "2026-06-21T04:43:45.169494+00:00"
+          "captured_at": "2026-06-21T04:43:45.169494+00:00",
+          "updated_at": "2024-06-23T03:33:49+00:00",
+          "updated_at_source": "apk_last_modified"
         }
       ],
       "links": {
@@ -1208,7 +1306,9 @@
           "crc64": "14601308456718178782",
           "error": "",
           "filename": "yuanshen_6.7.0.apk",
-          "captured_at": "2026-07-01T01:38:11.022516+00:00"
+          "captured_at": "2026-07-01T01:38:11.022516+00:00",
+          "updated_at": "2026-06-23T12:04:52+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1225,7 +1325,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_6.6.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2026-05-11T03:29:36+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1242,7 +1344,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_6.5.1.apk",
-          "captured_at": "2026-06-21T04:06:35.291146+00:00"
+          "captured_at": "2026-06-21T04:06:35.291146+00:00",
+          "updated_at": "2026-04-09T10:36:48+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1259,7 +1363,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_6.4.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2026-02-09T11:15:01+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1277,7 +1383,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_6.3.0.apk",
-          "captured_at": "2026-06-08T16:40:00.303054+00:00"
+          "captured_at": "2026-06-08T16:40:00.303054+00:00",
+          "updated_at": "2026-01-06T02:26:46+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1294,7 +1402,9 @@
           "crc64": "7411424771478668058",
           "error": "",
           "filename": "yuanshen_6.2.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2025-11-27T02:50:26+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1311,7 +1421,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_6.1.0.apk",
-          "captured_at": "2026-06-21T04:20:30.993878+00:00"
+          "captured_at": "2026-06-21T04:20:30.993878+00:00",
+          "updated_at": "2026-04-19T08:41:48+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1328,7 +1440,9 @@
           "crc64": "1119117697926776587",
           "error": "",
           "filename": "yuanshen_6.0.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2025-09-02T08:07:48+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1345,7 +1459,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_5.8.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2025-07-21T08:46:23+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1363,7 +1479,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_5.7.0.apk",
-          "captured_at": "2026-06-08T16:40:00.303054+00:00"
+          "captured_at": "2026-06-08T16:40:00.303054+00:00",
+          "updated_at": "2025-06-09T03:35:55+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1380,7 +1498,9 @@
           "crc64": "11571207368077690098",
           "error": "",
           "filename": "yuanshen_5.6.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2025-05-01T13:05:56+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1397,7 +1517,9 @@
           "crc64": "13006711456810827503",
           "error": "",
           "filename": "yuanshen_5.5.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2025-03-19T10:09:17+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1414,7 +1536,9 @@
           "crc64": "4297153437914766955",
           "error": "",
           "filename": "yuanshen_5.4.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2025-02-06T09:12:49+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1431,7 +1555,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_5.3.0.apk",
-          "captured_at": "2026-06-08T14:20:17.233052+00:00"
+          "captured_at": "2026-06-08T14:20:17.233052+00:00",
+          "updated_at": "2024-12-24T03:12:11+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1448,7 +1574,9 @@
           "crc64": "16798790677746828095",
           "error": "",
           "filename": "yuanshen_5.2.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2024-11-14T08:54:24+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1466,7 +1594,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_5.1.0.apk",
-          "captured_at": "2026-06-08T16:40:00.303054+00:00"
+          "captured_at": "2026-06-08T16:40:00.303054+00:00",
+          "updated_at": "2024-09-27T13:30:09+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1483,7 +1613,9 @@
           "crc64": "3867913854605646271",
           "error": "",
           "filename": "yuanshen_5.0.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2024-08-22T07:34:02+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1500,7 +1632,9 @@
           "crc64": "417864239073809190",
           "error": "",
           "filename": "yuanshen_4.8.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2024-07-11T13:43:19+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1517,7 +1651,9 @@
           "crc64": "6432340214748596656",
           "error": "",
           "filename": "yuanshen_4.7.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2024-05-29T07:45:53+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1534,7 +1670,9 @@
           "crc64": "16028276802809668619",
           "error": "",
           "filename": "yuanshen_4.6.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2024-04-18T08:48:57+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1551,7 +1689,9 @@
           "crc64": "12138174734436585541",
           "error": "",
           "filename": "yuanshen_4.5.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2024-03-07T05:01:21+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1569,7 +1709,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_4.4.0.apk",
-          "captured_at": "2026-06-08T16:40:00.303054+00:00"
+          "captured_at": "2026-06-08T16:40:00.303054+00:00",
+          "updated_at": "2024-01-22T06:56:38+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1587,7 +1729,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_4.3.0.apk",
-          "captured_at": "2026-06-08T16:40:00.303054+00:00"
+          "captured_at": "2026-06-08T16:40:00.303054+00:00",
+          "updated_at": "2023-12-11T07:15:22+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1604,7 +1748,9 @@
           "crc64": "6499416929443252460",
           "error": "",
           "filename": "yuanshen_4.2.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2023-11-02T06:57:58+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1621,7 +1767,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_4.1.0.apk",
-          "captured_at": "2026-06-21T04:20:30.993878+00:00"
+          "captured_at": "2026-06-21T04:20:30.993878+00:00",
+          "updated_at": "2023-09-19T10:50:32+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "hk4e",
@@ -1638,7 +1786,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_4.0.0.apk",
-          "captured_at": "2026-06-21T04:20:30.993878+00:00"
+          "captured_at": "2026-06-21T04:20:30.993878+00:00",
+          "updated_at": "2023-08-07T06:17:19+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1656,7 +1806,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_3.8.0.apk",
-          "captured_at": "2026-06-08T16:40:00.303054+00:00"
+          "captured_at": "2026-06-08T16:40:00.303054+00:00",
+          "updated_at": "2023-06-25T07:47:59+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1673,7 +1825,9 @@
           "crc64": "17562084075024077945",
           "error": "",
           "filename": "yuanshen_3.7.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2023-05-18T08:03:14+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1690,7 +1844,9 @@
           "crc64": "13891605291687208491",
           "error": "",
           "filename": "yuanshen_3.6.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2023-04-07T02:39:16+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1707,7 +1863,9 @@
           "crc64": "129994296013692725",
           "error": "",
           "filename": "yuanshen_3.5.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2023-02-24T01:19:55+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1724,7 +1882,9 @@
           "crc64": "",
           "error": "HTTP Error 404: Not Found",
           "filename": "yuanshen_3.4.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2023-01-09T15:11:20+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "hk4e",
@@ -1741,7 +1901,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_3.3.0.apk",
-          "captured_at": "2026-06-06T23:27:36.097556+00:00"
+          "captured_at": "2026-06-06T23:27:36.097556+00:00",
+          "updated_at": "2022-11-28T02:36:20+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1758,7 +1920,9 @@
           "crc64": "",
           "error": "HTTP Error 404: Not Found",
           "filename": "yuanshen_3.2.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2022-10-24T10:53:31+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "hk4e",
@@ -1775,7 +1939,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_3.1.0.apk",
-          "captured_at": "2026-06-06T23:27:36.097556+00:00"
+          "captured_at": "2026-06-06T23:27:36.097556+00:00",
+          "updated_at": "2022-09-19T13:39:52+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1792,7 +1958,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_3.0.0.apk",
-          "captured_at": "2026-06-06T23:27:36.097556+00:00"
+          "captured_at": "2026-06-06T23:27:36.097556+00:00",
+          "updated_at": "2022-08-15T12:58:03+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1809,7 +1977,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_2.8.0.apk",
-          "captured_at": "2026-06-21T04:20:30.993878+00:00"
+          "captured_at": "2026-06-21T04:20:30.993878+00:00",
+          "updated_at": "2026-05-08T19:28:52+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1827,7 +1997,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_2.7.0.apk",
-          "captured_at": "2026-06-08T16:40:00.303054+00:00"
+          "captured_at": "2026-06-08T16:40:00.303054+00:00",
+          "updated_at": "2022-05-24T11:00:16+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1844,7 +2016,9 @@
           "crc64": "870434675034939186",
           "error": "",
           "filename": "yuanshen_2.6.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2022-04-15T12:12:59+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1861,7 +2035,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_2.5.0.apk",
-          "captured_at": "2026-06-08T17:44:40.153103+00:00"
+          "captured_at": "2026-06-08T17:44:40.153103+00:00",
+          "updated_at": "2022-02-08T03:53:30+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1879,7 +2055,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_2.4.0.apk",
-          "captured_at": "2026-06-08T16:40:00.303054+00:00"
+          "captured_at": "2026-06-08T16:40:00.303054+00:00",
+          "updated_at": "2022-06-26T07:12:30+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1896,7 +2074,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_2.3.0_mihoyo.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2021-11-15T03:28:01+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1913,7 +2093,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_2.2.0_mihoyo.apk",
-          "captured_at": "2026-06-08T17:44:40.153103+00:00"
+          "captured_at": "2026-06-08T17:44:40.153103+00:00",
+          "updated_at": "2021-09-28T11:57:00+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1930,7 +2112,9 @@
           "crc64": "10117264663613266109",
           "error": "",
           "filename": "yuanshen_2.1.0_mihoyo.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2022-04-19T17:22:40+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1948,7 +2132,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_2.0.0.apk",
-          "captured_at": "2026-06-08T16:40:00.303054+00:00"
+          "captured_at": "2026-06-08T16:40:00.303054+00:00",
+          "updated_at": "2021-07-13T11:04:06+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1965,7 +2151,9 @@
           "crc64": "14097084836520059433",
           "error": "",
           "filename": "yuanshen_1.6.0_mihoyo.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2022-04-20T09:19:52+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1982,7 +2170,9 @@
           "crc64": "731889136328059443",
           "error": "",
           "filename": "yuanshen_1.5.1_mihoyo.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2022-04-20T12:48:34+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -1999,7 +2189,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_1.5.0_mihoyo.apk",
-          "captured_at": "2026-06-21T04:20:30.993878+00:00"
+          "captured_at": "2026-06-21T04:20:30.993878+00:00",
+          "updated_at": "2026-04-22T15:30:56+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -2016,7 +2208,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_1.4.0_mihoyo.apk",
-          "captured_at": "2026-06-08T17:44:40.153103+00:00"
+          "captured_at": "2026-06-08T17:44:40.153103+00:00",
+          "updated_at": "2021-03-09T06:42:30+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -2033,7 +2227,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_1.3.0_mihoyo.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2021-01-25T10:01:24+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -2050,7 +2246,9 @@
           "crc64": "4561955704616774260",
           "error": "",
           "filename": "yuanshen_1.2.0_mihoyo.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2022-04-19T14:57:42+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -2067,7 +2265,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_1.1.1_mihoyo.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2020-11-06T09:32:33+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -2084,7 +2284,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_1.1.0_mihoyo.apk",
-          "captured_at": "2026-06-21T04:20:30.993878+00:00"
+          "captured_at": "2026-06-21T04:20:30.993878+00:00",
+          "updated_at": "2020-11-04T08:12:39+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -2101,7 +2303,9 @@
           "crc64": "",
           "error": "",
           "filename": "yuanshen_1.0.0_mihoyo.apk",
-          "captured_at": "2026-06-08T17:43:05.181300+00:00"
+          "captured_at": "2026-06-08T17:43:05.181300+00:00",
+          "updated_at": "2020-09-22T14:26:08+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hk4e",
@@ -2414,7 +2618,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_4.3.0.apk",
-          "captured_at": "2026-06-06T19:43:20.812956+00:00"
+          "captured_at": "2026-06-06T19:43:20.812956+00:00",
+          "updated_at": "2026-05-23T08:16:51+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2431,7 +2637,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_4.2.0.apk",
-          "captured_at": "2026-06-21T04:43:45.169494+00:00"
+          "captured_at": "2026-06-21T04:43:45.169494+00:00",
+          "updated_at": "2026-04-16T04:41:10+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2448,7 +2656,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_4.1.0.apk",
-          "captured_at": "2026-06-21T04:43:45.169494+00:00"
+          "captured_at": "2026-06-21T04:43:45.169494+00:00",
+          "updated_at": "2026-03-13T07:08:41+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2465,7 +2675,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_4.0.0.apk",
-          "captured_at": "2026-06-21T04:43:45.169494+00:00"
+          "captured_at": "2026-06-21T04:43:45.169494+00:00",
+          "updated_at": "2026-02-06T07:12:07+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2482,7 +2694,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_3.8.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2025-12-05T11:36:20+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2499,7 +2713,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_3.7.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2025-10-25T08:28:25+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2516,7 +2732,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_3.6.0.apk",
-          "captured_at": "2026-06-07T00:22:39.219892+00:00"
+          "captured_at": "2026-06-07T00:22:39.219892+00:00",
+          "updated_at": "2025-09-13T10:03:45+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2533,7 +2751,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_3.5.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2025-08-01T01:56:46+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2550,7 +2770,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_3.4.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2026-05-14T07:40:46+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2567,7 +2789,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_3.3.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2025-05-09T08:10:33+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2584,7 +2808,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_3.2.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2025-03-28T04:00:18+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2601,7 +2827,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_3.1.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2025-02-14T07:19:11+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2618,7 +2846,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_3.0.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2025-01-02T02:27:27+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2635,7 +2865,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_2.7.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2024-11-21T16:16:04+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2652,7 +2884,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_2.6.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2025-03-21T02:40:02+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2669,7 +2903,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_2.5.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2025-02-20T10:57:42+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2686,7 +2922,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_2.4.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2025-04-17T02:43:13+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2703,7 +2941,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_2.3.0.apk",
-          "captured_at": "2026-06-08T15:56:33.817046+00:00"
+          "captured_at": "2026-06-08T15:56:33.817046+00:00",
+          "updated_at": "2025-03-24T08:36:40+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2720,7 +2960,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_2.2.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2025-04-17T02:42:29+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2737,7 +2979,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_2.1.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2024-09-04T03:03:40+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2754,7 +2998,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_2.0.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2024-06-06T07:28:10+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2771,7 +3017,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.6.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2024-06-12T06:55:42+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2788,7 +3036,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.6.0.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2023-12-15T01:19:05+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2805,7 +3055,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.5.0.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2024-06-06T12:36:43+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2822,7 +3074,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.4.0_ad_bdpz.apk",
-          "captured_at": "2026-06-08T16:03:51.220985+00:00"
+          "captured_at": "2026-06-08T16:03:51.220985+00:00",
+          "updated_at": "2023-09-26T06:45:13+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2839,7 +3093,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.4.0_mihoyo.apk",
-          "captured_at": "2026-06-21T04:43:45.169494+00:00"
+          "captured_at": "2026-06-21T04:43:45.169494+00:00",
+          "updated_at": "2023-09-26T06:43:19+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2856,7 +3112,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.3.0_gw.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2024-06-12T06:38:00+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2873,7 +3131,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.3.0_mihoyo_8.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2023-08-18T07:46:21+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2890,7 +3150,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.2.0_mihoyo.apk",
-          "captured_at": "2026-06-08T16:11:52.960334+00:00"
+          "captured_at": "2026-06-08T16:11:52.960334+00:00",
+          "updated_at": "2023-07-10T06:13:53+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2907,7 +3169,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.2.0_mihoyo_8.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2023-07-10T06:18:15+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2924,7 +3188,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.1.0_gw.apk",
-          "captured_at": "2026-06-08T16:03:51.220985+00:00"
+          "captured_at": "2026-06-08T16:03:51.220985+00:00",
+          "updated_at": "2023-05-27T11:05:40+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "hkrpg",
@@ -2941,7 +3207,9 @@
           "crc64": "",
           "error": "",
           "filename": "StarRail_1.0.5_gw.apk",
-          "captured_at": "2026-06-08T15:50:12.264806+00:00"
+          "captured_at": "2026-06-08T15:50:12.264806+00:00",
+          "updated_at": "2023-04-17T03:00:32+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "hkrpg",
@@ -2958,7 +3226,9 @@
           "crc64": "4510927154085114263",
           "error": "APK object unavailable",
           "filename": "StarRail_0.90.0.apk",
-          "captured_at": "2026-06-08T15:56:33.817046+00:00"
+          "captured_at": "2026-06-08T15:56:33.817046+00:00",
+          "updated_at": "2022-09-08T10:13:18+00:00",
+          "updated_at_source": "apk_last_modified"
         }
       ],
       "links": {
@@ -3128,7 +3398,9 @@
           "crc64": "",
           "error": "",
           "filename": "20260514-004049-gf_android_ota-versions-v8_9-Lives_Flourish_gw.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2026-05-21T10:45:58+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3145,7 +3417,9 @@
           "crc64": "",
           "error": "",
           "filename": "20260122-005217-gf_android_ota-versions-v8_7-Passage_To_NewDawns_ym.apk",
-          "captured_at": "2026-06-08T18:21:01.169939+00:00"
+          "captured_at": "2026-06-08T18:21:01.169939+00:00",
+          "updated_at": "2026-01-29T03:00:58+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3162,7 +3436,9 @@
           "crc64": "",
           "error": "",
           "filename": "20251119-224340-gf_android_ota-versions-v8_6-Banquet_Operative_gw.apk",
-          "captured_at": "2026-07-05T02:03:55.017956+00:00"
+          "captured_at": "2026-07-05T02:03:55.017956+00:00",
+          "updated_at": "2025-11-26T02:34:42+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3179,7 +3455,9 @@
           "crc64": "",
           "error": "",
           "filename": "20250911-052146-gf_android_ota-versions-v8_5-A_Lightful_Love_gw.apk",
-          "captured_at": "2026-06-08T18:21:01.169939+00:00"
+          "captured_at": "2026-06-08T18:21:01.169939+00:00",
+          "updated_at": "2025-09-19T08:03:03+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3196,7 +3474,9 @@
           "crc64": "",
           "error": "",
           "filename": "20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
-          "captured_at": "2026-07-05T01:56:30.192069+00:00"
+          "captured_at": "2026-07-05T01:56:30.192069+00:00",
+          "updated_at": "2025-08-15T02:09:18+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3213,7 +3493,9 @@
           "crc64": "",
           "error": "",
           "filename": "20241024-005902-gf_android_ota-versions-v7_9-Stars_Derailed_gw.apk",
-          "captured_at": "2026-06-08T18:16:42.405026+00:00"
+          "captured_at": "2026-06-08T18:16:42.405026+00:00",
+          "updated_at": "2025-06-25T02:42:53+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3230,7 +3512,9 @@
           "crc64": "",
           "error": "",
           "filename": "20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
-          "captured_at": "2026-06-08T18:21:01.169939+00:00"
+          "captured_at": "2026-06-08T18:21:01.169939+00:00",
+          "updated_at": "2026-05-20T03:59:25+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3247,7 +3531,9 @@
           "crc64": "",
           "error": "",
           "filename": "20240321-183112-gf_android_ota-versions-v7_4-Invitation_to_the_Mad_Banquet_gw.apk",
-          "captured_at": "2026-06-08T18:20:29.063705+00:00"
+          "captured_at": "2026-06-08T18:20:29.063705+00:00",
+          "updated_at": "2024-03-25T07:17:33+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3264,7 +3550,9 @@
           "crc64": "",
           "error": "",
           "filename": "20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_guofu.apk",
-          "captured_at": "2026-07-05T02:03:55.017956+00:00"
+          "captured_at": "2026-07-05T02:03:55.017956+00:00",
+          "updated_at": "2024-01-29T03:08:00+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3281,7 +3569,9 @@
           "crc64": "",
           "error": "",
           "filename": "20231213-222300-gf_android_ota-versions-v7_2-The_Wings_to_Mars_gw.apk",
-          "captured_at": "2026-06-08T18:20:29.063705+00:00"
+          "captured_at": "2026-06-08T18:20:29.063705+00:00",
+          "updated_at": "2023-12-18T07:42:36+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3298,7 +3588,9 @@
           "crc64": "",
           "error": "",
           "filename": "20231102-000511-gf_android_ota-versions-v7_1-Starbound_Painter_baidu.apk",
-          "captured_at": "2026-06-08T18:20:29.063705+00:00"
+          "captured_at": "2026-06-08T18:20:29.063705+00:00",
+          "updated_at": "2023-11-06T07:41:07+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3315,7 +3607,9 @@
           "crc64": "",
           "error": "",
           "filename": "20230920-235123-gf_android_ota-versions-v7_0-RePromise_to_Luna_gw.apk",
-          "captured_at": "2026-06-08T18:20:29.063705+00:00"
+          "captured_at": "2026-06-08T18:20:29.063705+00:00",
+          "updated_at": "2023-09-25T08:05:54+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3332,7 +3626,9 @@
           "crc64": "",
           "error": "",
           "filename": "20230413-122623-gf_android_ota-versions-v6_6-Woven_from_Last_Snow_gw.apk",
-          "captured_at": "2026-06-06T20:27:22.351159+00:00"
+          "captured_at": "2026-06-06T20:27:22.351159+00:00",
+          "updated_at": "2023-04-16T07:36:13+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3349,7 +3645,9 @@
           "crc64": "",
           "error": "",
           "filename": "20230301-220508-gf_android_ota-versions-v6_5-Hot_Sands_Escapade_gw.apk",
-          "captured_at": "2026-06-06T20:27:22.351159+00:00"
+          "captured_at": "2026-06-06T20:27:22.351159+00:00",
+          "updated_at": "2023-03-06T02:28:51+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3366,7 +3664,9 @@
           "crc64": "",
           "error": "",
           "filename": "20230110-030853-gf_android_ota-versions-v6_4-From_Finality_the_Origin_guofu.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2023-01-16T02:20:46+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3383,7 +3683,9 @@
           "crc64": "",
           "error": "HTTP Error 404: Not Found",
           "filename": "20221103-165551-gf_android_ota-versions-v6_2-The_Chrono_and_the_Hare_guofu.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2022-11-03T16:55:51+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -3400,7 +3702,9 @@
           "crc64": "",
           "error": "HTTP Error 404: Not Found",
           "filename": "20220922-171040-gf_android_ota-versions-v6_1-Moonshade_Epic_guofu.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2022-09-22T17:10:40+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -3417,7 +3721,9 @@
           "crc64": "",
           "error": "HTTP Error 404: Not Found",
           "filename": "20220302-235837-gf_android_ota-versions-v5_6-Elysian_Reverie_guofu.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2022-03-02T23:58:37+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -3434,7 +3740,9 @@
           "crc64": "2237473512751335202",
           "error": "APK object unavailable",
           "filename": "20210713-190832-gf_android_ota-versions-v5_0_1-Inherit_the_Flame_guofu.apk",
-          "captured_at": "2026-06-08T18:34:52.700463+00:00"
+          "captured_at": "2026-06-08T18:34:52.700463+00:00",
+          "updated_at": "2023-02-28T10:25:46+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3451,7 +3759,9 @@
           "crc64": "2237473512751335202",
           "error": "APK object unavailable",
           "filename": "20210603-161309-gf_android_ota-versions-v4_9-Outworld_Traveler_guofu.apk",
-          "captured_at": "2026-06-08T18:34:52.700463+00:00"
+          "captured_at": "2026-06-08T18:34:52.700463+00:00",
+          "updated_at": "2023-02-28T10:25:46+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3468,7 +3778,9 @@
           "crc64": "2237473512751335202",
           "error": "APK object unavailable",
           "filename": "20210422-145145-gf_android_ota-versions-v4_8-The_Phantom_of_the_Theater_guofu.apk",
-          "captured_at": "2026-06-08T18:34:52.700463+00:00"
+          "captured_at": "2026-06-08T18:34:52.700463+00:00",
+          "updated_at": "2023-02-28T10:25:46+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bh3",
@@ -3485,7 +3797,9 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20200921-205726-gf_android_ota-versions-v4_3-Rhythms_of_Neon_guofu.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2020-09-21T20:57:26+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -3502,7 +3816,9 @@
           "crc64": "",
           "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja% Noir_guofu.apk",
-          "captured_at": "2026-06-08T18:34:52.700463+00:00"
+          "captured_at": "2026-06-08T18:34:52.700463+00:00",
+          "updated_at": "2019-11-21T20:33:21+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -3519,7 +3835,9 @@
           "crc64": "",
           "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20191018-162047-gf_android_ota-versions-v3_5-Stygian_Nymph_guofu.apk",
-          "captured_at": "2026-06-08T18:34:52.700463+00:00"
+          "captured_at": "2026-06-08T18:34:52.700463+00:00",
+          "updated_at": "2019-10-18T16:20:47+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -3536,7 +3854,9 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20190823-210658-gf_android_ota-R3_4-The_Twilight_Ruling_guofu.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2019-08-23T21:06:58+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -3553,7 +3873,9 @@
           "crc64": "",
           "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
-          "captured_at": "2026-06-08T18:34:52.700463+00:00"
+          "captured_at": "2026-06-08T18:34:52.700463+00:00",
+          "updated_at": "2019-07-11T15:36:03+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -3570,7 +3892,9 @@
           "crc64": "",
           "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20190531-201355-gf_android_ota-versions-v3_2-Nursery_Rhymes_with_Illusion_guofu1.apk",
-          "captured_at": "2026-06-08T18:34:52.700463+00:00"
+          "captured_at": "2026-06-08T18:34:52.700463+00:00",
+          "updated_at": "2019-05-31T20:13:55+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -3689,7 +4013,9 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20170407-184918-gf_android_ota-versions-v1_4-4R-6d1fb22-ASB-il2cpp_guofu.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2017-04-07T18:49:18+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -3706,7 +4032,9 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20170228-202036-gf_android_ota-versions-v1_3_bugfix-updateota-2de1573-ASB-il2cpp_guofu.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2017-02-28T20:20:36+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -3723,7 +4051,9 @@
           "crc64": "",
           "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20161230-180434-gf_android-versions-v1_2-4R-ASB-il2cpp_guofu.apk",
-          "captured_at": "2026-06-08T18:34:52.700463+00:00"
+          "captured_at": "2026-06-08T18:34:52.700463+00:00",
+          "updated_at": "2016-12-30T18:04:34+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -3740,7 +4070,9 @@
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
           "filename": "20161108-112940-gf_android-versions-v1_1-4R-705fcfd-ASB-il2cpp_guofu.apk",
-          "captured_at": "2026-06-06T07:29:12.631982+00:00"
+          "captured_at": "2026-06-06T07:29:12.631982+00:00",
+          "updated_at": "2016-11-08T11:29:40+00:00",
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -3774,7 +4106,9 @@
           "crc64": "",
           "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20160927-204034-gf_android-versions-v0_9_9_android-4R-797e295-ASB-mono_guofu.apk",
-          "captured_at": "2026-06-08T18:34:52.700463+00:00"
+          "captured_at": "2026-06-08T18:34:52.700463+00:00",
+          "updated_at": "2016-09-27T20:40:34+00:00",
+          "updated_at_source": "filename_timestamp"
         }
       ],
       "links": {
@@ -3994,7 +4328,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-2741.apk",
-          "captured_at": "2026-06-08T18:32:31.929348+00:00"
+          "captured_at": "2026-06-08T18:32:31.929348+00:00",
+          "updated_at": "2026-05-29T06:50:18+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4011,7 +4347,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-2441.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2025-04-27T11:44:38+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4028,7 +4366,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-2421.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2025-03-05T06:55:25+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4045,7 +4385,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-2401.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2025-01-20T07:56:33+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4062,7 +4404,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-2301.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-11T02:59:47+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4079,7 +4423,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-2241.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-11T02:39:58+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4096,7 +4442,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-2141.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-09T02:53:43+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4113,7 +4461,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-2101.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-09T02:46:59+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4130,7 +4480,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-2040.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-09T02:36:34+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4147,7 +4499,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-2001.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-09T02:29:20+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4164,7 +4518,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-1901.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-06T04:01:41+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4181,7 +4537,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-1801.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-06T03:44:42+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4198,7 +4556,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-1581.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-06T03:29:03+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4215,7 +4575,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-1501.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-06T03:18:15+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4232,7 +4594,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-1401.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-06T03:13:01+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4249,7 +4613,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-1210.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-06T02:53:12+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4266,7 +4632,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-1201.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-06T02:50:29+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4283,7 +4651,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-1190.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-06T02:43:50+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4300,7 +4670,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-1180.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-06T02:33:47+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "arknights",
@@ -4317,7 +4689,9 @@
           "crc64": "",
           "error": "",
           "filename": "arknights-hg-1150.apk",
-          "captured_at": "2026-06-08T18:28:37.666162+00:00"
+          "captured_at": "2026-06-08T18:28:37.666162+00:00",
+          "updated_at": "2024-09-06T02:23:48+00:00",
+          "updated_at_source": "apk_last_modified"
         }
       ],
       "links": {
@@ -4445,7 +4819,9 @@
           "crc64": "",
           "error": "",
           "filename": "1744344831_signed_aligned_ReYun_gwaz_GW_Build_CN_878_7155_9889_1744280284_3532_100.apk",
-          "captured_at": "2026-06-06T20:21:58.318080+00:00"
+          "captured_at": "2026-06-06T20:21:58.318080+00:00",
+          "updated_at": "2025-04-14T15:20:37+00:00",
+          "updated_at_source": "apk_last_modified"
         }
       ],
       "links": {
@@ -4476,7 +4852,9 @@
           "crc64": "",
           "error": "",
           "filename": "20260602-v4_5-zspms_A1372.apk",
-          "captured_at": "2026-06-21T08:45:43.010220+00:00"
+          "captured_at": "2026-06-21T08:45:43.010220+00:00",
+          "updated_at": "2026-05-29T07:21:14+00:00",
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "pns",
@@ -4494,7 +4872,9 @@
           "crc64": "",
           "error": "",
           "filename": "20260602-v4_5-zspms_A1346.apk",
-          "captured_at": "2026-06-06T19:43:20.812956+00:00"
+          "captured_at": "2026-06-06T19:43:20.812956+00:00",
+          "updated_at": "2026-05-29T07:21:14+00:00",
+          "updated_at_source": "apk_last_modified"
         }
       ],
       "links": {
@@ -4527,7 +4907,9 @@
           "crc64": "",
           "error": "",
           "filename": "endfield-hg-1-1.3.4.apk",
-          "captured_at": "2026-06-06T18:35:34.842095+00:00"
+          "captured_at": "2026-06-06T18:35:34.842095+00:00",
+          "updated_at": "2026-05-29T08:26:57+00:00",
+          "updated_at_source": "apk_last_modified"
         }
       ],
       "links": {

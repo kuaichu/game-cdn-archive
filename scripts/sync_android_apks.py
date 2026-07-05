@@ -10,6 +10,7 @@ import subprocess
 import urllib.parse
 import urllib.error
 import urllib.request
+from email.utils import parsedate_to_datetime
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -1977,6 +1978,7 @@ def fetch_json(
 def unescape_web_text(text: str) -> str:
     return (
         html.unescape(text)
+        .replace('\\"', '"')
         .replace("\\/", "/")
         .replace("\\u002F", "/")
         .replace("\\u002f", "/")
@@ -1990,6 +1992,84 @@ def extract_first_apk_url(text: str, pattern: str, base_url: str) -> str | None:
         return None
     value = match.group(1) if match.groups() else match.group(0)
     return urllib.parse.urljoin(base_url, value)
+
+
+def iso_from_unix_timestamp(value: object) -> str | None:
+    try:
+        timestamp = float(value)
+    except (TypeError, ValueError):
+        return None
+    if timestamp > 100000000000:
+        timestamp /= 1000
+    return datetime.fromtimestamp(timestamp, timezone.utc).isoformat()
+
+
+def iso_from_http_datetime(value: str | None) -> str | None:
+    if not value:
+        return None
+    try:
+        parsed = parsedate_to_datetime(value)
+    except (TypeError, ValueError):
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc).isoformat()
+
+
+def iso_from_url_timestamp(url: str) -> str | None:
+    text = urllib.parse.unquote(url)
+    patterns = [
+        (r"(?<!\d)(20\d{6})[-_]?(\d{6})(?!\d)", "%Y%m%d%H%M%S"),
+        (r"(?<!\d)(20\d{6})[-_]?(\d{4})(?!\d)", "%Y%m%d%H%M"),
+    ]
+    for pattern, date_format in patterns:
+        match = re.search(pattern, text)
+        if not match:
+            continue
+        raw_value = "".join(match.groups())
+        try:
+            parsed = datetime.strptime(raw_value, date_format).replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+        return parsed.isoformat()
+    return None
+
+
+def extract_updated_at(text: str) -> str | None:
+    normalized = unescape_web_text(text)
+    patterns = [
+        r'"updatedTime"\s*:\s*(\d{10,13})',
+        r'"updateTime"\s*:\s*(\d{10,13})',
+        r'"updated_at"\s*:\s*"([^"]+)"',
+        r'"updatedAt"\s*:\s*"([^"]+)"',
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, normalized, re.IGNORECASE)
+        if not match:
+            continue
+        raw_value = match.group(1)
+        if raw_value.isdigit():
+            return iso_from_unix_timestamp(raw_value)
+        return raw_value
+    return None
+
+
+def apply_updated_at(entry: dict, seed: dict) -> None:
+    if seed.get("updated_at"):
+        entry["updated_at"] = seed["updated_at"]
+        entry["updated_at_source"] = seed.get("updated_at_source", "official_config")
+        return
+    if entry.get("updated_at"):
+        return
+    updated_at = iso_from_http_datetime(entry.get("last_modified"))
+    if updated_at:
+        entry["updated_at"] = updated_at
+        entry["updated_at_source"] = "apk_last_modified"
+        return
+    updated_at = iso_from_url_timestamp(entry.get("url", ""))
+    if updated_at:
+        entry["updated_at"] = updated_at
+        entry["updated_at_source"] = "filename_timestamp"
 
 
 def linked_script_urls(text: str, page_url: str) -> list[str]:
@@ -2389,6 +2469,7 @@ def discover_json_endpoint_apks() -> list[dict]:
         if not version:
             print(f"JSON APK has no version: {apk_url}")
             continue
+        updated_at = iso_from_unix_timestamp(payload.get(item.get("updated_field", "")))
         entries.append({
             "game_id": item["game_id"],
             "version": version,
@@ -2397,6 +2478,7 @@ def discover_json_endpoint_apks() -> list[dict]:
             "source": item["source"],
             "source_url": item["url"],
             "headers": item.get("headers"),
+            **({"updated_at": updated_at, "updated_at_source": "official_config"} if updated_at else {}),
             "force_refresh": True,
         })
     return entries
@@ -2435,6 +2517,7 @@ def discover_webpage_apks() -> list[dict]:
             print(f"APK webpage unavailable {item['url']}: {exc}")
             continue
         apk_url = extract_first_apk_url(page_text, item["url_pattern"], item["url"])
+        updated_at = extract_updated_at(page_text)
         source_url = item["url"]
         if not apk_url and item.get("crawl_scripts"):
             for script_url in linked_script_urls(page_text, item["url"]):
@@ -2466,6 +2549,7 @@ def discover_webpage_apks() -> list[dict]:
             "source": item["source"],
             "source_url": source_url,
             "headers": item.get("headers"),
+            **({"updated_at": updated_at, "updated_at_source": "official_config"} if updated_at else {}),
             "force_refresh": True,
         })
     return entries
@@ -2719,6 +2803,7 @@ def main() -> None:
                 "filename": filename,
                 "captured_at": generated_at,
             }
+        apply_updated_at(entry, seed)
         if entry.get("source_url") and not previous and not seed.get("force_refresh"):
             same_source = same_source_previous(entry, previous_by_source_url.get(entry["source_url"], []))
             if same_source:
@@ -2727,6 +2812,7 @@ def main() -> None:
                     "source": seed.get("source", same_source.get("source", "")),
                     "source_url": seed.get("source_url", same_source.get("source_url", "")),
                 }
+                apply_updated_at(entry, seed)
         if entry.get("source_url") and seed.get("force_refresh"):
             same_source = same_source_previous(entry, previous_by_source_url.get(entry["source_url"], []))
             if same_source:

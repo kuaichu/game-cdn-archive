@@ -214,6 +214,14 @@ const fmtRelativeTime = (value) => {
   return rtf.format(Math.round(-diffMs / day), "day");
 };
 
+const newerDateValue = (current, candidate) => {
+  const currentDate = parseDateValue(current);
+  const candidateDate = parseDateValue(candidate);
+  if (!candidateDate) return current || candidate || "";
+  if (!currentDate || candidateDate > currentDate) return candidate;
+  return current;
+};
+
 const compareVersions = (left, right) => {
   const leftParts = left.split(".").map(Number);
   const rightParts = right.split(".").map(Number);
@@ -317,6 +325,8 @@ const androidSummaries = () => {
       channels: [],
       status: entry.status,
       last_modified: entry.last_modified,
+      updated_at: entry.updated_at || entry.last_modified,
+      updated_at_source: entry.updated_at_source || (entry.last_modified ? "apk_last_modified" : ""),
       unavailable_count: 0,
     };
     row.apk_count += 1;
@@ -328,6 +338,11 @@ const androidSummaries = () => {
       row.unavailable_count += 1;
     }
     if (entry.channel && !row.channels.includes(entry.channel)) row.channels.push(entry.channel);
+    row.updated_at = newerDateValue(row.updated_at, entry.updated_at || entry.last_modified);
+    row.last_modified = newerDateValue(row.last_modified, entry.last_modified);
+    if (row.updated_at === entry.updated_at && entry.updated_at_source) {
+      row.updated_at_source = entry.updated_at_source;
+    }
     byVersion.set(entry.version, row);
   });
   return [...byVersion.values()];
@@ -900,6 +915,7 @@ const versionButton = (item) => {
           <span class="cap green">APK</span>
           <span class="cap blue">${Number(item.apk_count || 0).toLocaleString()} 个包</span>
           <span class="cap green">${escapeHtml((item.channels || []).join(" / ") || "官方渠道")}</span>
+          <span class="cap slate">${fmtDateTime(item.updated_at || item.last_modified)}</span>
           <span class="cap slate">${fmtKnownBytes(item.size)}</span>
           ${versionAvailabilityCap(item)}
         </span>
@@ -1034,6 +1050,7 @@ const androidStats = () => {
     ["平台", "Android"],
     ["APK 数", `${entries.length.toLocaleString()} 个`],
     ["渠道", entry?.channels?.join(" / ") || "-"],
+    ["更新时间", fmtDateTime(entry?.updated_at || entry?.last_modified)],
     ["APK 大小", fmtKnownBytes(entry?.size)],
     ["状态", entry?.status ? `HTTP ${entry.status}` : "-"],
   ];
@@ -1348,7 +1365,7 @@ const wuwaPatchItem = (route, entry, index = 0, total = 0) => {
 const androidItem = (entry, index = 0, total = 0) => ({
   badge: "Android APK",
   title: entry.filename || `${currentGame().name}_${entry.version}.apk`,
-  subtitle: `${entry.channel || "官方渠道"} / ${entry.last_modified || entry.source || "official CDN"}`,
+  subtitle: `${entry.channel || "官方渠道"} / ${fmtDateTime(entry.updated_at || entry.last_modified)}`,
   size: Number(entry.size || 0),
   sizeLabel: fmtKnownBytes(entry.size),
   hash: entry.md5 || entry.etag || "",
