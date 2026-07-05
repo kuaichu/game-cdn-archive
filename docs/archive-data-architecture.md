@@ -344,6 +344,10 @@ packages, and Endfield packages/patches.
 Treat URL health changes as probe-output changes, not as archive-structure
 changes.
 
+The current availability implementation and the intended rewrite direction are
+documented in `docs/url-availability-architecture.md`
+and `docs/url-availability-architecture.zh-CN.md`.
+
 ## Workflow Rules For Future Changes
 
 Use this sequence for any data-architecture work:
