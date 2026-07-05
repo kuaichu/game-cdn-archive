@@ -28,8 +28,11 @@ KNOWN_APKS = [
         "game_id": "nte",
         "version": "1.0.2",
         "channel": "official",
-        "url": "https://download982100001.wmupd.com/DBBAcAsHETkPNZ/KahEjcXPZw/ZMHiHAAKS/rMETwPrjYHWX/WSsWamksBPBi/xJJBDjteYbWDjH/yGjMzBb/nnaDzeXeMNR/KwmNRJZa.apk",
-        "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
+        "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260423.apk",
+        "source": "previous official website Android download config; versionName read from AndroidManifest.xml",
+        "source_url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/yh-gameDownload.js",
+        "archive_note": "Historical official APK URL preserved even though the current official endpoint serves the same APK bytes under a newer versionName.",
+        "preserve_same_hash": True,
     },
     {
         "game_id": "reverse1999",
@@ -2721,6 +2724,8 @@ def same_apk_hash_entry_index(candidate: dict, entries: list[dict]) -> int | Non
 
 
 def should_replace_same_hash_entry(candidate: dict, existing: dict) -> bool:
+    if existing.get("preserve_same_hash"):
+        return False
     candidate_version = str(candidate.get("version") or "")
     existing_version = str(existing.get("version") or "")
     if not candidate_version or not existing_version:

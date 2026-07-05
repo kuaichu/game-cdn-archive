@@ -1,0 +1,24 @@
+[
+  {
+    "game_id": "nte",
+    "version": "1.0.2",
+    "channel": "official",
+    "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260423.apk",
+    "source": "previous official website Android download config; versionName read from AndroidManifest.xml",
+    "source_url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/yh-gameDownload.js",
+    "archive_note": "Historical official APK URL preserved even though the current official endpoint serves the same APK bytes under a newer versionName.",
+    "preserve_same_hash": true,
+    "status": 200,
+    "content_type": "application/octet-stream",
+    "size": 940694857,
+    "last_modified": "Tue, 21 Apr 2026 00:31:06 GMT",
+    "etag": "0FF00F2A862674B307075A60485D4F73-90",
+    "md5": "",
+    "crc64": "8990914718054970518",
+    "error": "",
+    "filename": "yh_gw_20260423.apk",
+    "captured_at": "2026-07-05T03:31:49.029579+00:00",
+    "updated_at": "2026-04-21T00:31:06+00:00",
+    "updated_at_source": "apk_last_modified"
+  }
+]
