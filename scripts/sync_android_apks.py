@@ -1673,6 +1673,16 @@ REDIRECT_APK_ENDPOINTS = [
     },
 ]
 
+DIRECT_APK_SOURCES = [
+    {
+        "game_id": "reverse1999",
+        "url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
+        "channel": "official",
+        "source": "official Reverse: 1999 Android download URL; versionName read from AndroidManifest.xml",
+        "headers": {"Referer": "https://re.bluepoch.com/"},
+    },
+]
+
 SUNBORN_APK_ENDPOINTS = [
     {
         "game_id": "gf2",
@@ -1724,18 +1734,6 @@ JSON_APK_ENDPOINTS = [
         "channel": "jinshan",
         "source": "official Snowbreak download config; version read from APK URL or AndroidManifest.xml",
         "headers": {"Referer": "https://www.cbjq.com/"},
-    },
-]
-
-BLUEPOCH_VERSION_PAGE_APIS = [
-    {
-        "game_id": "reverse1999",
-        "url": "https://re.bluepoch.com/activity/official/websites/version-page",
-        "payload": {"gameId": 50001, "pageVersion": "3.8"},
-        "field": "androidDownloadUrl",
-        "channel": "official",
-        "source": "official Reverse: 1999 version-page API; versionName read from AndroidManifest.xml",
-        "headers": {"Referer": "https://re.bluepoch.com/"},
     },
 ]
 
@@ -2404,29 +2402,17 @@ def discover_json_endpoint_apks() -> list[dict]:
     return entries
 
 
-def discover_bluepoch_apks() -> list[dict]:
+def discover_direct_apks() -> list[dict]:
     entries: list[dict] = []
-    for item in BLUEPOCH_VERSION_PAGE_APIS:
-        try:
-            payload = fetch_json(item["url"], payload=item["payload"], headers=item.get("headers"))
-        except Exception as exc:
-            print(f"Bluepoch APK API unavailable {item['url']}: {exc}")
-            continue
-        if payload.get("code") not in (None, 200):
-            print(f"Bluepoch APK API returned code {payload.get('code')}: {item['url']}")
-            continue
-        data = payload.get("data") if isinstance(payload.get("data"), dict) else payload
-        apk_url = str(data.get(item["field"]) or "")
-        if not apk_url:
-            print(f"Bluepoch APK API missing {item['field']}: {item['url']}")
-            continue
+    for item in DIRECT_APK_SOURCES:
+        apk_url = item["url"]
         try:
             version = apk_version_from_url_or_manifest(apk_url, headers=item.get("headers"))
         except Exception as exc:
-            print(f"Bluepoch APK manifest unavailable {apk_url}: {exc}")
+            print(f"direct APK manifest unavailable {apk_url}: {exc}")
             continue
         if not version:
-            print(f"Bluepoch APK has no version: {apk_url}")
+            print(f"direct APK has no version: {apk_url}")
             continue
         entries.append({
             "game_id": item["game_id"],
@@ -2434,7 +2420,6 @@ def discover_bluepoch_apks() -> list[dict]:
             "channel": item["channel"],
             "url": apk_url,
             "source": item["source"],
-            "source_url": item["url"],
             "headers": item.get("headers"),
             "force_refresh": True,
         })
@@ -2532,7 +2517,7 @@ def head_url(url: str, headers: dict | None = None) -> dict:
             response_headers = response.headers
             size = int(response_headers.get("Content-Length") or 0)
             content_type = response_headers.get("Content-Type", "")
-            if size == 0 or "text/html" in content_type.lower():
+            if response.status >= 400 or size == 0 or "application/vnd.android.package-archive" not in content_type.lower():
                 return range_fallback(curl_head(url, headers=extra_headers, timeout=60))
             return {
                 "status": response.status,
@@ -2571,10 +2556,10 @@ def should_reprobe_unavailable_apk(seed: dict, previous: dict | None) -> bool:
     if seed.get("reprobe_unavailable"):
         return True
     parsed = urllib.parse.urlparse(seed["url"])
-    return (
-        parsed.netloc == "mirrors-package-mc.aki-game.com"
-        and parsed.path.lower().endswith(".apk")
-    )
+    return parsed.path.lower().endswith(".apk") and parsed.netloc in {
+        "autopatchcn.bh3.com",
+        "mirrors-package-mc.aki-game.com",
+    }
 
 
 def md5_from_filename(filename: str) -> str:
@@ -2700,9 +2685,9 @@ def main() -> None:
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_hypergryph_apks():
         seeds_by_url.setdefault(seed["url"], seed)
-    for seed in discover_json_endpoint_apks():
+    for seed in discover_direct_apks():
         seeds_by_url[seed["url"]] = seed
-    for seed in discover_bluepoch_apks():
+    for seed in discover_json_endpoint_apks():
         seeds_by_url[seed["url"]] = seed
     for seed in discover_webpage_apks():
         seeds_by_url[seed["url"]] = seed
@@ -2746,8 +2731,10 @@ def main() -> None:
             same_source = same_source_previous(entry, previous_by_source_url.get(entry["source_url"], []))
             if same_source:
                 entry["captured_at"] = same_source.get("captured_at", entry["captured_at"])
-                entry["archive_url"] = same_source.get("archive_url") or entry.get("archive_url", "")
-                entry["archive_note"] = same_source.get("archive_note") or entry.get("archive_note", "")
+                if same_source.get("archive_url") or entry.get("archive_url"):
+                    entry["archive_url"] = same_source.get("archive_url") or entry["archive_url"]
+                if same_source.get("archive_note") or entry.get("archive_note"):
+                    entry["archive_note"] = same_source.get("archive_note") or entry["archive_note"]
         if entry.get("source_url") and has_same_apk_hash(entry, entries):
             print(f"skip duplicate APK hash: {entry['game_id']} {entry['version']} {entry['url']}")
             continue
