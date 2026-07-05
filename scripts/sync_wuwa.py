@@ -71,6 +71,12 @@ MANUAL_CN_PRELOAD_INDEXES = [
 ]
 HISTORICAL_PCSTARTER_RESOURCES = [
     {
+        "version": "1.0.0",
+        "resource_index": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/1.0.0/ODPITqJuybUecE9ERVZsY8uV7uMHGIUw/resource.json",
+        "base_url": "pcstarter/prod/game/G152/1.0.0/ODPITqJuybUecE9ERVZsY8uV7uMHGIUw/zip/",
+        "source_note": "recovered from pcstarter Wangsu mirror path",
+    },
+    {
         "version": "1.1.1",
         "resource_index": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/1.1.1/a1vBvQhjfBJ6o7uxNFYORQUqH1xIb5pQ/resource.json",
         "base_url": "pcstarter/prod/game/G152/1.1.1/a1vBvQhjfBJ6o7uxNFYORQUqH1xIb5pQ/zip/",
