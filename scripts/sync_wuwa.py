@@ -7,11 +7,12 @@ import argparse
 import gzip
 import json
 import time
+import urllib.error
 import urllib.request
 from copy import deepcopy
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import quote, urljoin, urlsplit, urlunsplit
 
 
 DISCOVERY_URL = (
@@ -20,6 +21,7 @@ DISCOVERY_URL = (
     "4435fd290c07f7f766a6d2ab09ed3096d83b02e3/wuwa.json"
 )
 SOURCE_REPO = "https://github.com/yuhkix/wuwa-downloader"
+HEAD_TIMEOUT_SECONDS = 10
 CN_LIVE_CDNS = [
     "https://pcdownload-aliyun.aki-game.com",
     "https://pcdownload-huoshan.aki-game.com",
@@ -87,6 +89,66 @@ def fetch_json(url: str):
     raise RuntimeError(f"Failed to fetch JSON from {url}") from last_error
 
 
+def url_for_request(url: str) -> str:
+    parts = urlsplit(url)
+    return urlunsplit(
+        (
+            parts.scheme,
+            parts.netloc,
+            quote(parts.path, safe="/%"),
+            quote(parts.query, safe="=&%:/?+"),
+            parts.fragment,
+        )
+    )
+
+
+def fetch_head_metadata(url: str, timeout: int = HEAD_TIMEOUT_SECONDS) -> dict:
+    if not url:
+        return {}
+    request = urllib.request.Request(
+        url_for_request(url),
+        headers={"User-Agent": "game-cdn-archive/1.0"},
+        method="HEAD",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return {
+                "status": response.status,
+                "last_modified": response.headers.get("Last-Modified") or "",
+                "content_length": int(response.headers.get("Content-Length") or 0),
+            }
+    except urllib.error.HTTPError as exc:
+        return {
+            "status": exc.code,
+            "last_modified": exc.headers.get("Last-Modified") or "",
+            "content_length": int(exc.headers.get("Content-Length") or 0),
+        }
+    except Exception as exc:
+        return {"status": None, "last_modified": "", "content_length": 0, "error": str(exc)}
+
+
+def apply_last_modified(version: dict, summary: dict) -> None:
+    candidates = [
+        (version.get("resource_index") or "", "resource_index"),
+        (((version.get("files") or [{}])[0] or {}).get("url") or "", "pc_file"),
+    ]
+    for url, source in candidates:
+        if not url:
+            continue
+        metadata = fetch_head_metadata(url)
+        version["last_modified_url"] = url
+        version["last_modified_source"] = source
+        if metadata.get("status") is not None:
+            version["last_modified_status"] = metadata["status"]
+        if metadata.get("last_modified"):
+            version["last_modified"] = metadata["last_modified"]
+            summary["last_modified"] = metadata["last_modified"]
+            summary["last_modified_source"] = source
+            summary["last_modified_url"] = url
+            summary["last_modified_status"] = metadata.get("status")
+            return
+
+
 def load_cached_versions(output_dir: Path) -> dict:
     versions_path = output_dir / "versions.json"
     try:
@@ -122,6 +184,9 @@ def summary_from_version(version: dict) -> dict:
         "uncompressed_size": int(version.get("uncompressed_size") or 0),
     }
     for key in ["source_note", "release_stage"]:
+        if version.get(key):
+            summary[key] = version[key]
+    for key in ["last_modified", "last_modified_source", "last_modified_url", "last_modified_status"]:
         if version.get(key):
             summary[key] = version[key]
     return summary
@@ -284,6 +349,7 @@ def build_channel(
         "size": version["size"],
         "uncompressed_size": version["uncompressed_size"],
     }
+    apply_last_modified(version, summary)
     return summary, version, index_url
 
 
@@ -326,6 +392,7 @@ def build_historical_cn_live(spec: dict, output_dir: Path, cached_versions: dict
         "uncompressed_size": total_size,
         "source_note": spec["source_note"],
     }
+    apply_last_modified(version, summary)
     return summary, version
 
 
@@ -422,6 +489,7 @@ def build_manual_cn_preload(spec: dict, output_dir: Path, cached_versions: dict)
         "source_note": spec["source_note"],
         "release_stage": spec.get("release_stage") or "",
     }
+    apply_last_modified(version, summary)
     return summary, version
 
 

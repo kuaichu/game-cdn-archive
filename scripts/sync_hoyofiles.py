@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 from copy import deepcopy
 from datetime import datetime, timezone
@@ -20,6 +21,7 @@ GAMES_PATH = HOYO_DATA / "games.json"
 
 API_BASE = "https://autopatch.amarea.cn/pkg_version"
 SOURCE_URL = "https://hoyo-files.amarea.cn"
+HEAD_TIMEOUT_SECONDS = 10
 
 GAMES = [
     {
@@ -583,6 +585,44 @@ def fetch_json(url: str, timeout: int = 45, retries: int = 2, backoff: float = 2
     raise RuntimeError(f"failed to fetch JSON from {url}: {last_error}") from last_error
 
 
+def url_for_request(url: str) -> str:
+    parts = urllib.parse.urlsplit(url)
+    return urllib.parse.urlunsplit(
+        (
+            parts.scheme,
+            parts.netloc,
+            urllib.parse.quote(parts.path, safe="/%"),
+            urllib.parse.quote(parts.query, safe="=&%:/?+"),
+            parts.fragment,
+        )
+    )
+
+
+def fetch_head_metadata(url: str, timeout: int = HEAD_TIMEOUT_SECONDS) -> dict[str, Any]:
+    if not url:
+        return {}
+    request = urllib.request.Request(
+        url_for_request(url),
+        headers={"User-Agent": "game-cdn-archive/1.0"},
+        method="HEAD",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return {
+                "status": response.status,
+                "last_modified": response.headers.get("Last-Modified") or "",
+                "content_length": int(response.headers.get("Content-Length") or 0),
+            }
+    except urllib.error.HTTPError as exc:
+        return {
+            "status": exc.code,
+            "last_modified": exc.headers.get("Last-Modified") or "",
+            "content_length": int(exc.headers.get("Content-Length") or 0),
+        }
+    except Exception as exc:
+        return {"status": None, "last_modified": "", "content_length": 0, "error": str(exc)}
+
+
 def write_json_if_changed(path: Path, data: Any, indent: int = 2) -> bool:
     text = json.dumps(data, ensure_ascii=False, indent=indent) + "\n"
     if path.exists():
@@ -622,7 +662,80 @@ def item_count_and_bytes(item: Any) -> tuple[int, int]:
     return 0, 0
 
 
-def version_stats(row: dict[str, Any]) -> dict[str, int | bool]:
+def as_list(value: Any) -> list[Any]:
+    if not value:
+        return []
+    return value if isinstance(value, list) else [value]
+
+
+def hoyo_download_items(row: dict[str, Any]) -> list[dict[str, Any]]:
+    items: list[dict[str, Any]] = []
+    game = row.get("game") or {}
+    for key in ["full", "segments"]:
+        items.extend(item for item in as_list(game.get(key)) if isinstance(item, dict))
+    for voice in (row.get("voice") or {}).values():
+        items.extend(item for item in as_list(voice) if isinstance(item, dict))
+    for patch in (row.get("update") or {}).values():
+        items.extend(item for item in as_list((patch or {}).get("game")) if isinstance(item, dict))
+        for voice in ((patch or {}).get("voice") or {}).values():
+            items.extend(item for item in as_list(voice) if isinstance(item, dict))
+    return [item for item in items if item.get("url")]
+
+
+def hoyo_representative_url(row: dict[str, Any], chunk: dict[str, Any] | None) -> tuple[str, str]:
+    downloads = hoyo_download_items(row)
+    if downloads:
+        return str(downloads[0]["url"]), "pc_package"
+
+    for manifest in ((chunk or {}).get("data") or {}).get("manifests") or []:
+        if manifest.get("matching_field") != "game":
+            continue
+        manifest_id = ((manifest.get("manifest") or {}).get("id") or "").strip()
+        prefix = ((manifest.get("manifest_download") or {}).get("url_prefix") or "").rstrip("/")
+        suffix = (manifest.get("manifest_download") or {}).get("url_suffix") or ""
+        if manifest_id and prefix:
+            return f"{prefix}/{manifest_id}{suffix}", "chunk_manifest"
+
+    return "", ""
+
+
+def cached_version_metadata(previous_game: dict[str, Any] | None, version: str, url: str) -> dict[str, Any] | None:
+    if not previous_game:
+        return None
+    for row in previous_game.get("versions") or []:
+        if row.get("version") == version and row.get("last_modified_url") == url and (
+            row.get("last_modified") or row.get("last_modified_status") is not None
+        ):
+            return row
+    return None
+
+
+def apply_last_modified(
+    stats: dict[str, Any],
+    previous_game: dict[str, Any] | None,
+    version: str,
+    url: str,
+    source: str,
+) -> None:
+    if not url:
+        return
+    cached = cached_version_metadata(previous_game, version, url)
+    if cached:
+        for key in ["last_modified", "last_modified_status", "last_modified_url", "last_modified_source"]:
+            if cached.get(key) is not None:
+                stats[key] = cached[key]
+        return
+
+    metadata = fetch_head_metadata(url)
+    stats["last_modified_url"] = url
+    stats["last_modified_source"] = source
+    if metadata.get("last_modified"):
+        stats["last_modified"] = metadata["last_modified"]
+    if metadata.get("status") is not None:
+        stats["last_modified_status"] = metadata["status"]
+
+
+def version_stats(row: dict[str, Any]) -> dict[str, Any]:
     package_items = 0
     update_items = 0
     direct_bytes = 0
@@ -701,6 +814,10 @@ def main() -> None:
 
     for game in GAMES:
         game_id = game["id"]
+        previous_game = next(
+            (item for item in previous.get("games", []) if item.get("id") == game_id),
+            None,
+        )
         versions_url = f"{API_BASE}/{game_id}_versions.json"
         versions = fetch_json(versions_url)
         if not isinstance(versions, dict):
@@ -716,8 +833,9 @@ def main() -> None:
         direct_bytes = 0
 
         for version in sorted(versions, key=version_key):
-            stats = version_stats(versions[version])
-            version_rows.append({"version": version, **stats})
+            row = versions[version]
+            stats = version_stats(row)
+            chunk: dict[str, Any] | None = None
             direct_items += int(stats["package_items"])
             update_items += int(stats["update_items"])
             direct_bytes += int(stats["direct_bytes"])
@@ -747,13 +865,17 @@ def main() -> None:
                     else:
                         cached_chunks += 1
                 else:
-                    version_rows[-1]["has_chunk"] = False
+                    stats["has_chunk"] = False
                     chunk_versions -= 1
                     source = "fetched" if fetched_chunk else "cached"
                     print(
                         f"::warning::No usable {source} HoyoFiles chunk index is available "
                         f"for {game_id} {version}; disabling its chunk view."
                     )
+
+            metadata_url, metadata_source = hoyo_representative_url(row, chunk)
+            apply_last_modified(stats, previous_game, version, metadata_url, metadata_source)
+            version_rows.append({"version": version, **stats})
 
         games_summary.append(
             {

@@ -221,6 +221,8 @@ const fmtDateTime = (value) => {
   }).format(date).replace(/\//g, ".");
 };
 
+const pcTimeLabel = (source) => source === "pc_package" || source === "pc_file" ? "文件时间" : "索引时间";
+
 const fmtRelativeTime = (value) => {
   const date = parseDateValue(value);
   if (!date) return "-";
@@ -976,6 +978,7 @@ const versionButton = (item) => {
       <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
         <span class="version-number">${item.version}</span>
         <span class="caps">
+          ${item.last_modified ? `<span class="cap slate">${fmtDateTime(item.last_modified)}</span>` : ""}
           <span class="cap blue">${Number(item.file_count || 0).toLocaleString()} 个文件</span>
           <span class="cap green">${item.cdn_count || 0} CDN</span>
           ${item.patch_routes ? `<span class="cap amber">${item.patch_routes} 条更新路线</span>` : ""}
@@ -1001,6 +1004,7 @@ const versionButton = (item) => {
     <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
       <span class="version-number">${item.version}</span>
       <span class="caps">
+        ${item.last_modified ? `<span class="cap slate">${fmtDateTime(item.last_modified)}</span>` : ""}
         <span class="cap ${profile.color}">${profile.label}</span>
         ${item.update_items ? '<span class="cap amber">更新包</span>' : ""}
         ${versionAvailabilityCap(item)}
@@ -1119,24 +1123,32 @@ const hoyoStats = () => {
   const version = hoyoVersion();
   const profile = hoyoDistributionProfile(summary, version);
   const decompressedPath = hoyoDecompressedPath(version);
-  return [
+  const stats = [
     ["当前版本", state.version],
     ["分发架构", profile.label],
     ["压缩包", `${summary?.package_items || 0} 个`],
     ["散文件直链", decompressedPath ? "可用" : "无"],
     ["Chunk", version?.chunk ? version.chunk.tag || "可用" : "无"],
   ];
+  if (summary?.last_modified) {
+    stats.splice(2, 0, [pcTimeLabel(summary.last_modified_source), fmtDateTime(summary.last_modified)]);
+  }
+  return stats;
 };
 
 const wuwaStats = () => {
   const summary = wuwaSummaries().find((item) => item.version === state.version);
-  return [
+  const stats = [
     ["当前版本", state.version],
     ["区服", `${summary?.region?.toUpperCase() || "-"} ${summary?.channel || "-"}`],
     ["文件数", `${(summary?.file_count || 0).toLocaleString()} 个`],
     ["总大小", fmtBytes(summary?.size || 0)],
     ["CDN", `${summary?.cdn_count || 0} 个 / 更新路线 ${summary?.patch_routes || 0} 条`],
   ];
+  if (summary?.last_modified) {
+    stats.splice(2, 0, [pcTimeLabel(summary.last_modified_source), fmtDateTime(summary.last_modified)]);
+  }
+  return stats;
 };
 
 
