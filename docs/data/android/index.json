@@ -277,6 +277,58 @@
           "captured_at": "2026-07-05T01:50:12.992811+00:00",
           "updated_at": "2025-09-23T05:29:37+00:00",
           "updated_at_source": "apk_last_modified"
+        },
+        {
+          "game_id": "bluearchive",
+          "version": "1.9.1",
+          "channel": "official",
+          "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/task_game_apk/official/1.9.1/BlueArchive_official_1.9.1_0718_1.apk",
+          "source": "Wayback Machine CDX historical URL; original URL now returns 404",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "BlueArchive_official_1.9.1_0718_1.apk",
+          "captured_at": "2026-07-05T10:20:55+00:00",
+          "updated_at": "2024-09-17T09:18:01+00:00",
+          "updated_at_source": "wayback_cdx_timestamp",
+          "archive": {
+            "timestamp": "20240917091801",
+            "status": 200,
+            "mimetype": "application/vnd.android.package-archive",
+            "length": 1981098680,
+            "digest": "T3IKIRHBJYKGPWDUWISDHAL6NA4PDYPL"
+          }
+        },
+        {
+          "game_id": "bluearchive",
+          "version": "1.8.2",
+          "channel": "official",
+          "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/task_game_apk/official/1.8.2/BlueArchive_official_1.8.2_0517_1.apk",
+          "source": "Wayback Machine CDX historical URL; original URL now returns 404",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "BlueArchive_official_1.8.2_0517_1.apk",
+          "captured_at": "2026-07-05T10:20:55+00:00",
+          "updated_at": "2024-07-11T07:38:29+00:00",
+          "updated_at_source": "wayback_cdx_timestamp",
+          "archive": {
+            "timestamp": "20240711073829",
+            "status": 200,
+            "mimetype": "application/vnd.android.package-archive",
+            "length": 1974554199,
+            "digest": "E43DILJFVZ6CE76T5HW3673ZBRSLYX4P"
+          }
         }
       ],
       "links": {
@@ -284,6 +336,16 @@
           "urls": "data/android/lists/bluearchive_2.1.2_android.urls.txt",
           "aria2": "data/android/lists/bluearchive_2.1.2_android.aria2.txt",
           "json": "data/android/lists/bluearchive_2.1.2_android.json"
+        },
+        "1.9.1": {
+          "urls": "data/android/lists/bluearchive_1.9.1_android.urls.txt",
+          "aria2": "data/android/lists/bluearchive_1.9.1_android.aria2.txt",
+          "json": "data/android/lists/bluearchive_1.9.1_android.json"
+        },
+        "1.8.2": {
+          "urls": "data/android/lists/bluearchive_1.8.2_android.urls.txt",
+          "aria2": "data/android/lists/bluearchive_1.8.2_android.aria2.txt",
+          "json": "data/android/lists/bluearchive_1.8.2_android.json"
         }
       }
     },

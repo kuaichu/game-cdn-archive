@@ -56,7 +56,7 @@ ranges are:
 | 深空之眼 / Aether Gazer | `0.285.0` -> `0.305.3` | `4` version buckets / `4` records | `2` available; `2` unavailable or historical dead-link records |
 | 明日方舟 / Arknights | `1150.0.0` -> `2741.0.0` | `20` version buckets / `20` records | `1` available; `19` unavailable or historical dead-link records |
 | 崩坏3 / Honkai Impact 3rd | `0.9.1` -> `8.9.0` | `45` version buckets / `45` records | `15` available; `30` unavailable or historical dead-link records |
-| 碧蓝档案 / Blue Archive | `2.1.2` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
+| 碧蓝档案 / Blue Archive | `1.8.2` -> `2.1.2` | `3` version buckets / `3` records | `1` available; `2` unavailable or historical dead-link records |
 | 卡拉比丘 / Calabiyau | `1.1.6.4` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 明日方舟：终末地 / Arknights: Endfield | `1.3.4` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
 | 少女前线2：追放 / Girls' Frontline 2: Exilium | `3.0.0` | `1` version buckets / `1` records | `1` available; `0` unavailable or historical dead-link records |
