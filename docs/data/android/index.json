@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-07-06T08:45:33.662835+00:00",
-  "generated_at": "2026-07-06T08:45:33.662835+00:00",
+  "last_checked_at": "2026-07-06T13:23:25.232466+00:00",
+  "generated_at": "2026-07-06T13:23:25.232466+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -156,43 +156,7 @@
           "filename": "Reverse1999_Bluepoch_1000.apk",
           "captured_at": "2026-07-05T02:10:35.258149+00:00",
           "updated_at": "2026-06-11T00:35:28+00:00",
-          "updated_at_source": "apk_last_modified",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
-                "probe": {
-                  "ok": true,
-                  "status": 200,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-06T08:45:33.662835+00:00",
-                  "final_url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
-                  "content_type": "application/vnd.android.package-archive",
-                  "size": 2035392298,
-                  "last_modified": "Thu, 11 Jun 2026 00:35:28 GMT",
-                  "etag": "175ae1d065affaa3c5e6c2d3f3483779-243",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.927,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "high"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "http_2xx",
-              "preferred_url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
-              "confidence": "high",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "reverse1999",
@@ -270,7 +234,7 @@
           "version": "1.1.6.4",
           "channel": "official",
           "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
-          "source": "official Calabiyau website HTML; versionName read from AndroidManifest.xml",
+          "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
           "source_url": "https://klbqm.idreamsky.com/",
           "updated_at": "2025-10-22T23:42:15+00:00",
           "updated_at_source": "official_config",
@@ -461,43 +425,7 @@
           "filename": "mimir_ali_prod_294_1_ys4fun_20240710095639_M01000000_bi3NUfr4_sign.apk",
           "captured_at": "2026-06-06T22:54:29.106555+00:00",
           "updated_at": "2024-07-10T09:56:39+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://packaging.ys4fun.com/package/channel/294/mimir_ali_prod_294_1_ys4fun_20240710095639_M01000000_bi3NUfr4_sign.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-06T08:45:33.662835+00:00",
-                  "final_url": "https://packaging.ys4fun.com/package/channel/294/mimir_ali_prod_294_1_ys4fun_20240710095639_M01000000_bi3NUfr4_sign.apk",
-                  "content_type": "text/html",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.927,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "aethergazer",
@@ -516,43 +444,7 @@
           "filename": "mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
           "captured_at": "2026-06-06T22:54:29.106555+00:00",
           "updated_at": "2023-05-22T14:05:43+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://download.ys4fun.com/package/channel/285/mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-06T08:45:33.662835+00:00",
-                  "final_url": "https://download.ys4fun.com/package/channel/285/mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.927,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         }
       ],
       "links": {
@@ -600,43 +492,7 @@
           "filename": "BlueArchive.apk",
           "captured_at": "2026-07-05T01:50:12.992811+00:00",
           "updated_at": "2025-09-23T05:29:37+00:00",
-          "updated_at_source": "apk_last_modified",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
-                "probe": {
-                  "ok": true,
-                  "status": 200,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-06T08:45:33.662835+00:00",
-                  "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
-                  "content_type": "application/vnd.android.package-archive",
-                  "size": 1723356917,
-                  "last_modified": "Tue, 23 Sep 2025 05:29:37 GMT",
-                  "etag": "5D9E2E9524A91CE8873B67101CC362F8-1644",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.927,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "high"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "http_2xx",
-              "preferred_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
-              "confidence": "high",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bluearchive",
@@ -803,43 +659,7 @@
           "filename": "CBJQ.3.6.0.122.jinshan_202603301341.apk",
           "captured_at": "2026-07-05T01:50:12.992811+00:00",
           "updated_at": "2026-05-07T03:12:21+00:00",
-          "updated_at_source": "apk_last_modified",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
-                "probe": {
-                  "ok": true,
-                  "status": 200,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-06T08:45:33.662835+00:00",
-                  "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
-                  "content_type": "application/vnd.android.package-archive",
-                  "size": 1427726880,
-                  "last_modified": "Thu, 07 May 2026 03:12:21 GMT",
-                  "etag": "a22da702ac349b6c06dbc6a6c69adcb0-171",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.927,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "high"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "http_2xx",
-              "preferred_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
-              "confidence": "high",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "snowbreak",
@@ -1906,47 +1726,10 @@
           "md5": "0812c3eaf14c876481e41cb9783e11cf",
           "crc64": "",
           "error": "APK object unavailable",
-          "exception_info": "O2|404",
           "filename": "KR_TF_52-鸣潮_3.0.1_157207705_33_库洛_投放包_1_0812c3eaf14c876481e41cb9783e11cf_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-12-30T15:33:35+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://mirrors-package-mc.aki-game.com/client/download/20251230153335_DIaYUy2QRRUcV9JRgM/KR_TF_52-%E9%B8%A3%E6%BD%AE_3.0.1_157207705_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_0812c3eaf14c876481e41cb9783e11cf_shelled.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-06T08:45:33.662835+00:00",
-                  "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20251230153335_DIaYUy2QRRUcV9JRgM/KR_TF_52-%E9%B8%A3%E6%BD%AE_3.0.1_157207705_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_0812c3eaf14c876481e41cb9783e11cf_shelled.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.927,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -2188,43 +1971,7 @@
           "filename": "KR_TF_41-鸣潮_2.6.0_145597397__库洛_投放包_1_d9bb02269dfea9e4084cb4f0f141e4c4_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-08-25T10:39:28+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://mirrors-package-mc.aki-game.com/client/download/20250825103928_on6XW04clnHhBnrvCe/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.6.0_145597397__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_d9bb02269dfea9e4084cb4f0f141e4c4_shelled.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-06T08:45:33.662835+00:00",
-                  "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250825103928_on6XW04clnHhBnrvCe/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.6.0_145597397__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_d9bb02269dfea9e4084cb4f0f141e4c4_shelled.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.927,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -2244,43 +1991,7 @@
           "filename": "KR_TF_41-鸣潮_2.5.0_142563591__库洛_投放包_1_d52f6d505a9741173a20005313a7c594_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-07-21T17:58:18+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://mirrors-package-mc.aki-game.com/client/download/20250721175818_mtpHRQl6I2qBYIj4w0/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.5.0_142563591__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_d52f6d505a9741173a20005313a7c594_shelled.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-06T08:45:33.662835+00:00",
-                  "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250721175818_mtpHRQl6I2qBYIj4w0/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.5.0_142563591__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_d52f6d505a9741173a20005313a7c594_shelled.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.927,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -2300,43 +2011,7 @@
           "filename": "KR_TF_41-鸣潮_2.4.1_141938334__库洛_投放包_1_0198dea9f935f0df478aeae416b85a83_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-07-09T10:52:31+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://mirrors-package-mc.aki-game.com/client/download/20250709105231_grUsSFZZmVEXfwkHyM/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.4.1_141938334__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_0198dea9f935f0df478aeae416b85a83_shelled.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-06T08:45:33.662835+00:00",
-                  "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250709105231_grUsSFZZmVEXfwkHyM/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.4.1_141938334__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_0198dea9f935f0df478aeae416b85a83_shelled.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.927,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -2356,43 +2031,7 @@
           "filename": "KR_TF_41-鸣潮_2.4.0_139015362__库洛_投放包_1_82ecc5a3dad3ec68f67500dbf289f2c3_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-06-09T19:22:49+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://mirrors-package-mc.aki-game.com/client/download/20250609192249_lbNQFD2LbLW5ZWemLF/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.4.0_139015362__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_82ecc5a3dad3ec68f67500dbf289f2c3_shelled.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-06T08:45:33.662835+00:00",
-                  "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250609192249_lbNQFD2LbLW5ZWemLF/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.4.0_139015362__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_82ecc5a3dad3ec68f67500dbf289f2c3_shelled.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.927,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -2412,43 +2051,7 @@
           "filename": "KR_TF_41-鸣潮_2.3.0_135127140__库洛_投放包_1_2d29eda4701501e76b018f280b7ccf0_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-04-23T18:17:38+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://mirrors-package-mc.aki-game.com/client/download/20250423181738_d3TQAVpJNjy9CIsriH/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.3.0_135127140__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_2d29eda4701501e76b018f280b7ccf0_shelled.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-06T08:45:33.662835+00:00",
-                  "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250423181738_d3TQAVpJNjy9CIsriH/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.3.0_135127140__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_2d29eda4701501e76b018f280b7ccf0_shelled.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.927,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -12611,43 +12214,7 @@
           "filename": "1744344831_signed_aligned_ReYun_gwaz_GW_Build_CN_878_7155_9889_1744280284_3532_100.apk",
           "captured_at": "2026-06-06T20:21:58.318080+00:00",
           "updated_at": "2025-04-14T15:20:37+00:00",
-          "updated_at_source": "apk_last_modified",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://gf2-web-preregister-api.sunborngame.com/website/url_manage?timestamp=1780775971&nonce=c20j1x&sign=74ca012c6a9ef865f150e6613462bb5a",
-                "probe": {
-                  "ok": true,
-                  "status": 200,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-06T08:45:33.662835+00:00",
-                  "final_url": "https://gf2-web-preregister-api.sunborngame.com/website/url_manage?timestamp=1780775971&nonce=c20j1x&sign=74ca012c6a9ef865f150e6613462bb5a",
-                  "content_type": "application/vnd.android.package-archive",
-                  "size": 1852239327,
-                  "last_modified": "Mon, 14 Apr 2025 15:20:37 GMT",
-                  "etag": "6B809BAB832F4972F742BB61F5865121-400",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.927,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "high"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "http_2xx",
-              "preferred_url": "https://gf2-web-preregister-api.sunborngame.com/website/url_manage?timestamp=1780775971&nonce=c20j1x&sign=74ca012c6a9ef865f150e6613462bb5a",
-              "confidence": "high",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "apk_last_modified"
         }
       ],
       "links": {
@@ -12807,43 +12374,7 @@
           "filename": "endfield-hg-1-1.3.4.apk",
           "captured_at": "2026-06-06T18:35:34.842095+00:00",
           "updated_at": "2026-05-29T08:26:57+00:00",
-          "updated_at_source": "apk_last_modified",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
-                "probe": {
-                  "ok": true,
-                  "status": 200,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-06T08:45:33.662835+00:00",
-                  "final_url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
-                  "content_type": "application/vnd.android.package-archive",
-                  "size": 1750465244,
-                  "last_modified": "Fri, 29 May 2026 08:26:57 GMT",
-                  "etag": "4F445C5491E631F9214A9C334D4B9C2C-400",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.927,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "high"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "http_2xx",
-              "preferred_url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
-              "confidence": "high",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "apk_last_modified"
         }
       ],
       "links": {

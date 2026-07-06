@@ -16,6 +16,42 @@
     "filename": "20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja% Noir_guofu.apk",
     "captured_at": "2026-07-06T00:21:43.092679+00:00",
     "updated_at": "2019-11-21T20:33:21+00:00",
-    "updated_at_source": "filename_timestamp"
+    "updated_at_source": "filename_timestamp",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://app.bh3.com/public/Android/20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja%%20Noir_guofu.apk",
+          "probe": {
+            "ok": false,
+            "status": 0,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-06T08:45:33.662835+00:00",
+            "final_url": "https://app.bh3.com/public/Android/20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja%%20Noir_guofu.apk",
+            "content_type": "",
+            "size": 0,
+            "last_modified": "",
+            "etag": "",
+            "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.927,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unavailable",
+        "reason": "retained_historical",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": true,
+        "display_label": "链接失效"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

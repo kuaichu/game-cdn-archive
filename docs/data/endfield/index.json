@@ -2,7 +2,7 @@
   "source": "https://github.com/daydreamer-json/ak-endfield-api-archive",
   "source_site": "https://ak-endfield-api-archive.daydreamer-json.cc/",
   "official_api": "https://launcher.hypergryph.com/api/game/get_latest?appcode=6LL0KJuqHBVz33WK&launcher_appcode=abYeZZ16BPluCFyT&channel=1&sub_channel=1&launcher_sub_channel=1",
-  "last_checked_at": "2026-07-06T08:45:09.021558+00:00",
+  "last_checked_at": "2026-07-06T13:23:00.988360+00:00",
   "generated_from_observation": "2026-06-25T10:40:38.364+00:00",
   "game": {
     "id": "endfield",
@@ -20,51 +20,7 @@
       "patch_routes": 4,
       "packed_size": 51713739988,
       "unpacked_size": 114519738989,
-      "mirror_items": 49,
-      "availability_counts": {
-        "available": 89,
-        "mirror_only": 61
-      },
-      "availability_reasons": {
-        "mirror_fallback": 61,
-        "not_probed": 89
-      },
-      "availability": {
-        "candidates": [
-          {
-            "url": "endfield-upstream://1.3.3",
-            "probe": {
-              "ok": false,
-              "status": 0,
-              "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-06T08:45:09.021558+00:00",
-              "final_url": "endfield-upstream://1.3.3",
-              "content_type": "",
-              "size": 0,
-              "last_modified": "",
-              "etag": "",
-              "error": "not_probed",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "upstream_archive",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "mirror_only",
-          "reason": "mirror_fallback",
-          "preferred_url": "",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "官方过期"
-        },
-        "generated_by": "scripts/build_endfield_availability.py"
-      }
+      "mirror_items": 49
     },
     {
       "version": "1.2.5",
@@ -73,49 +29,7 @@
       "patch_routes": 2,
       "packed_size": 48574178348,
       "unpacked_size": 107162178062,
-      "mirror_items": 46,
-      "availability_counts": {
-        "mirror_only": 77
-      },
-      "availability_reasons": {
-        "mirror_fallback": 77
-      },
-      "availability": {
-        "candidates": [
-          {
-            "url": "endfield-upstream://1.2.5",
-            "probe": {
-              "ok": false,
-              "status": 0,
-              "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-06T08:45:09.021558+00:00",
-              "final_url": "endfield-upstream://1.2.5",
-              "content_type": "",
-              "size": 0,
-              "last_modified": "",
-              "etag": "",
-              "error": "not_probed",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "upstream_archive",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "mirror_only",
-          "reason": "mirror_fallback",
-          "preferred_url": "",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "镜像可用"
-        },
-        "generated_by": "scripts/build_endfield_availability.py"
-      }
+      "mirror_items": 46
     },
     {
       "version": "1.2.4",
@@ -124,49 +38,7 @@
       "patch_routes": 2,
       "packed_size": 48574175958,
       "unpacked_size": 107463372218,
-      "mirror_items": 46,
-      "availability_counts": {
-        "mirror_only": 77
-      },
-      "availability_reasons": {
-        "mirror_fallback": 77
-      },
-      "availability": {
-        "candidates": [
-          {
-            "url": "endfield-upstream://1.2.4",
-            "probe": {
-              "ok": false,
-              "status": 0,
-              "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-06T08:45:09.021558+00:00",
-              "final_url": "endfield-upstream://1.2.4",
-              "content_type": "",
-              "size": 0,
-              "last_modified": "",
-              "etag": "",
-              "error": "not_probed",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "upstream_archive",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "mirror_only",
-          "reason": "mirror_fallback",
-          "preferred_url": "",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "镜像可用"
-        },
-        "generated_by": "scripts/build_endfield_availability.py"
-      }
+      "mirror_items": 46
     },
     {
       "version": "1.1.9",
@@ -175,49 +47,7 @@
       "patch_routes": 2,
       "packed_size": 41729840537,
       "unpacked_size": 91824655390,
-      "mirror_items": 39,
-      "availability_counts": {
-        "mirror_only": 111
-      },
-      "availability_reasons": {
-        "mirror_fallback": 111
-      },
-      "availability": {
-        "candidates": [
-          {
-            "url": "endfield-upstream://1.1.9",
-            "probe": {
-              "ok": false,
-              "status": 0,
-              "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-06T08:45:09.021558+00:00",
-              "final_url": "endfield-upstream://1.1.9",
-              "content_type": "",
-              "size": 0,
-              "last_modified": "",
-              "etag": "",
-              "error": "not_probed",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "upstream_archive",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "mirror_only",
-          "reason": "mirror_fallback",
-          "preferred_url": "",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "镜像可用"
-        },
-        "generated_by": "scripts/build_endfield_availability.py"
-      }
+      "mirror_items": 39
     },
     {
       "version": "1.0.14",
@@ -226,51 +56,7 @@
       "patch_routes": 1,
       "packed_size": 38087032681,
       "unpacked_size": 83950648866,
-      "mirror_items": 36,
-      "availability_counts": {
-        "available": 1,
-        "mirror_only": 36
-      },
-      "availability_reasons": {
-        "mirror_fallback": 36,
-        "not_probed": 1
-      },
-      "availability": {
-        "candidates": [
-          {
-            "url": "endfield-upstream://1.0.14",
-            "probe": {
-              "ok": false,
-              "status": 0,
-              "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-06T08:45:09.021558+00:00",
-              "final_url": "endfield-upstream://1.0.14",
-              "content_type": "",
-              "size": 0,
-              "last_modified": "",
-              "etag": "",
-              "error": "not_probed",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "upstream_archive",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "mirror_only",
-          "reason": "mirror_fallback",
-          "preferred_url": "",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "官方过期"
-        },
-        "generated_by": "scripts/build_endfield_availability.py"
-      }
+      "mirror_items": 36
     },
     {
       "version": "1.0.13",
@@ -279,49 +65,7 @@
       "patch_routes": 0,
       "packed_size": 38086060662,
       "unpacked_size": 83946900374,
-      "mirror_items": 36,
-      "availability_counts": {
-        "mirror_only": 36
-      },
-      "availability_reasons": {
-        "mirror_fallback": 36
-      },
-      "availability": {
-        "candidates": [
-          {
-            "url": "endfield-upstream://1.0.13",
-            "probe": {
-              "ok": false,
-              "status": 0,
-              "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-06T08:45:09.021558+00:00",
-              "final_url": "endfield-upstream://1.0.13",
-              "content_type": "",
-              "size": 0,
-              "last_modified": "",
-              "etag": "",
-              "error": "not_probed",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "upstream_archive",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "mirror_only",
-          "reason": "mirror_fallback",
-          "preferred_url": "",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "镜像可用"
-        },
-        "generated_by": "scripts/build_endfield_availability.py"
-      }
+      "mirror_items": 36
     },
     {
       "version": "0.5.27",
@@ -330,49 +74,7 @@
       "patch_routes": 0,
       "packed_size": 23147824170,
       "unpacked_size": 0,
-      "mirror_items": 0,
-      "availability_counts": {
-        "available": 8
-      },
-      "availability_reasons": {
-        "not_probed": 8
-      },
-      "availability": {
-        "candidates": [
-          {
-            "url": "endfield-upstream://0.5.27",
-            "probe": {
-              "ok": false,
-              "status": 0,
-              "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-06T08:45:09.021558+00:00",
-              "final_url": "endfield-upstream://0.5.27",
-              "content_type": "",
-              "size": 0,
-              "last_modified": "",
-              "etag": "",
-              "error": "not_probed",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "upstream_archive",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "available",
-          "reason": "not_probed",
-          "preferred_url": "",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "可用"
-        },
-        "generated_by": "scripts/build_endfield_availability.py"
-      }
+      "mirror_items": 0
     }
   ]
 }
