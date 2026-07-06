@@ -24,6 +24,8 @@ from adapters.hoyo import HoyoAvailabilityAdapter  # noqa: E402
 from adapters.nte import NteAvailabilityAdapter  # noqa: E402
 from adapters.wuwa import WuwaAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import ProbeResult, availability_block, probe_fact_defaults  # noqa: E402
+from scripts.build_wuwa_availability import apply_availability, load_versions  # noqa: E402
+from scripts.probe_scheduler import PersistentProbeCache, ProbeScheduleConfig  # noqa: E402
 from scripts.validate_availability import validate_android, validate_arknights, validate_endfield, validate_hoyo, validate_nte, validate_wuwa  # noqa: E402
 
 
@@ -944,6 +946,67 @@ def assert_wuwa_validator_rejects(path_parts: tuple[str, ...], value: Any, expec
         raise AssertionError(f"WuWa validator did not reject {'.'.join(path_parts)}={value!r}; errors={errors!r}")
 
 
+def assert_wuwa_build_cache_paths() -> None:
+    config = ProbeScheduleConfig(ttl_hours=24, failed_ttl_hours=24, grace_hours=168, force_full=False)
+    with tempfile.TemporaryDirectory(prefix="wuwa-cache-negative-") as temp:
+        temp_root = Path(temp) / "docs" / "data" / "wuwa"
+        valid_wuwa_root(temp_root)
+        index = load_json(temp_root / "index.json")
+        versions = load_versions(temp_root)
+        empty_cache = PersistentProbeCache(Path(temp) / "empty-cache.json")
+        _, _, _, errors, _, _, _ = apply_availability(
+            temp_root,
+            index,
+            versions,
+            live_versions={"1.0.0"},
+            config=config,
+            cache=empty_cache,
+        )
+        if errors:
+            raise AssertionError(f"WuWa missing-cache build should not error: {errors!r}")
+        item = versions["1.0.0"]["files"][0]
+        availability = item["availability"]
+        if availability["source"]["kind"] != "metadata_inference":
+            raise AssertionError(f"WuWa missing cache must downgrade to metadata_inference: {availability!r}")
+        if availability["interpretation"]["confidence"] == "high":
+            raise AssertionError(f"WuWa missing cache must not use high confidence: {availability!r}")
+
+    with tempfile.TemporaryDirectory(prefix="wuwa-cache-negative-") as temp:
+        temp_root = Path(temp) / "docs" / "data" / "wuwa"
+        valid_wuwa_root(temp_root)
+        index = load_json(temp_root / "index.json")
+        versions = load_versions(temp_root)
+        item = versions["1.0.0"]["files"][0]
+        cache = PersistentProbeCache(Path(temp) / "probe-cache.json")
+        cache.put(wuwa_live_probe(item["urls"][0], ok=False, status=404, size=0, error="HTTP 404"))
+        cache.put(wuwa_live_probe(item["urls"][1], ok=False, status=0, size=0, error="timeout"))
+        cache.flush()
+        _, _, _, errors, _, _, _ = apply_availability(
+            temp_root,
+            index,
+            versions,
+            live_versions={"1.0.0"},
+            config=config,
+            cache=PersistentProbeCache(Path(temp) / "probe-cache.json"),
+        )
+        if errors:
+            raise AssertionError(f"WuWa failed-cache build should not error: {errors!r}")
+        result = versions["1.0.0"]["files"][0]["availability"]
+        if result["source"]["kind"] != "live_probe":
+            raise AssertionError(f"WuWa complete failed cache should remain live_probe: {result!r}")
+        interpretation = result["interpretation"]
+        if interpretation["state"] != "unavailable" or interpretation["reason"] != "http_404":
+            raise AssertionError(f"WuWa failed cache should map to http_404 unavailable: {interpretation!r}")
+
+
+def assert_wuwa_build_stage_zero_network() -> None:
+    source = (ROOT / "scripts" / "build_wuwa_availability.py").read_text(encoding="utf-8")
+    forbidden = ("url_probe", "probe_candidates", "schedule_probe_candidates")
+    offenders = [token for token in forbidden if token in source]
+    if offenders:
+        raise AssertionError(f"WuWa build stage contains network probe references: {offenders!r}")
+
+
 def main() -> None:
     assert_arknights_failed_probe_maps_to_unavailable()
     assert_android_negative_paths()
@@ -951,6 +1014,8 @@ def main() -> None:
     assert_endfield_upstream_paths()
     assert_nte_paths()
     assert_wuwa_metadata_paths()
+    assert_wuwa_build_cache_paths()
+    assert_wuwa_build_stage_zero_network()
     assert_validator_rejects(("availability", "interpretation", "state"), "foobar", ":state:foobar")
     assert_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
     assert_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
@@ -986,6 +1051,8 @@ def main() -> None:
     print("nte_live_probe_and_metadata=PASS")
     print("wuwa_metadata_multicdn=PASS")
     print("wuwa_live_multicdn=PASS")
+    print("wuwa_probe_cache_paths=PASS")
+    print("wuwa_build_zero_network=PASS")
     print("closed_vocab_rejection=PASS")
     print("result=PASS")
 

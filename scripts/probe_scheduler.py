@@ -9,12 +9,14 @@ from __future__ import annotations
 
 import os
 import time
+import json
+import urllib.parse
 from dataclasses import dataclass
 from datetime import datetime, timezone
+from pathlib import Path
 from typing import Any
 
 from availability_schema import Confidence, ProbeFacts, ProbeResult
-from url_probe import probe_candidates
 
 
 def env_int(name: str, default: int) -> int:
@@ -68,6 +70,81 @@ def annotate_probe(probe: ProbeResult, now: datetime, ttl_hours: int, grace_hour
     facts["scheduler_confidence"] = confidence
     facts["stale"] = confidence != "high"
     return {"url": probe["url"], "probe": facts}  # type: ignore[typeddict-item]
+
+
+def normalize_url_key(url: str) -> str:
+    parts = urllib.parse.urlsplit(str(url).strip())
+    return urllib.parse.urlunsplit(
+        (
+            parts.scheme.lower(),
+            parts.netloc.lower(),
+            urllib.parse.quote(urllib.parse.unquote(parts.path), safe="/%"),
+            urllib.parse.quote(urllib.parse.unquote(parts.query), safe="=&%:/?+"),
+            parts.fragment,
+        )
+    )
+
+
+def probe_cache_result(url: str, facts: dict[str, Any]) -> ProbeResult:
+    return {"url": url, "probe": facts}  # type: ignore[typeddict-item]
+
+
+class PersistentProbeCache:
+    """JSON-backed probe facts cache for build-time tooling.
+
+    The cache stores facts by normalized URL key and never publishes to docs/data.
+    It is deliberately small and append-friendly so interrupted probe runs can
+    resume from the last flush.
+    """
+
+    def __init__(self, path: Path):
+        self.path = path
+        self.entries: dict[str, dict[str, Any]] = {}
+        self.updated_at = ""
+        if path.exists():
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            if isinstance(payload, dict):
+                raw_entries = payload.get("entries", payload)
+                if isinstance(raw_entries, dict):
+                    self.entries = {
+                        str(key): value
+                        for key, value in raw_entries.items()
+                        if isinstance(value, dict)
+                    }
+                self.updated_at = str(payload.get("updated_at") or "")
+
+    def get(self, url: str) -> ProbeResult | None:
+        key = normalize_url_key(url)
+        facts = self.entries.get(key)
+        if not isinstance(facts, dict):
+            return None
+        return probe_cache_result(url, dict(facts))
+
+    def fresh(self, url: str, config: ProbeScheduleConfig, now: datetime | None = None) -> ProbeResult | None:
+        result = self.get(url)
+        if result is None:
+            return None
+        now = now or datetime.now(timezone.utc)
+        if should_probe_previous(result, now, config):
+            return None
+        return annotate_probe(result, now, config.ttl_hours, config.grace_hours)
+
+    def put(self, result: ProbeResult) -> None:
+        url = str(result.get("url") or "")
+        if not url:
+            return
+        self.entries[normalize_url_key(url)] = dict(result.get("probe") or {})
+
+    def flush(self) -> None:
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        payload = {
+            "schema": 1,
+            "updated_at": datetime.now(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z"),
+            "entries": dict(sorted(self.entries.items())),
+        }
+        tmp = self.path.with_suffix(self.path.suffix + ".tmp")
+        tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        tmp.replace(self.path)
 
 
 @dataclass(frozen=True)
@@ -183,6 +260,8 @@ def schedule_probe_candidates(
 
     probed_by_url: dict[str, ProbeResult] = {}
     if selected:
+        from url_probe import probe_candidates
+
         for index, url in enumerate(sorted(selected)):
             if index and config.request_interval_seconds > 0:
                 time.sleep(config.request_interval_seconds)
