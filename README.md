@@ -336,7 +336,7 @@ This is not a complete historical APK mirror; it is a rolling archive starting
 from the official APK links that can be confirmed now.
 
 Archived direct download URLs can also be re-probed across the generated data
-sets. This writes `docs/data/url_status.json`, a health index for APKs, Hoyo
+sets. This writes `outputs/url_status.json`, an unpublished health index for APKs, Hoyo
 packages, NTE files, Wuthering Waves files, Arknights packages, and Endfield
 packages/patches.
 

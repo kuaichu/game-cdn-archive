@@ -27,12 +27,11 @@ python scripts/probe_url_status.py
 输出文件是：
 
 ```text
-docs/data/url_status.json
+outputs/url_status.json
 ```
 
-脚本会扫描 `docs/data/` 下的 JSON 文件，但会排除：
+输出文件会放在发布目录 `docs/` 之外。脚本会扫描 `docs/data/` 下的 JSON 文件，但会排除：
 
-- `docs/data/url_status.json`
 - `docs/data/android/lists/`
 
 它递归收集字段名为下面两种的 HTTP 链接：
@@ -59,7 +58,7 @@ WuWa 的多 CDN 可用性现在由 WuWa 自己的 availability 构建步骤处�
 - 旧的健康 URL 会分批轮换重测。
 - `URL_STATUS_FORCE_FULL=1` 可以强制全量扫描。
 
-重要限制：`url_status.json` 不是前端的数据源。页面不会直接读取它。它目前是离线审计索引。
+重要限制：`url_status.json` 不是前端的数据源。页面不会直接读取它。它目前是不会发布的离线审计索引。
 
 ## Android APK 可用性
 
@@ -195,7 +194,7 @@ NTE 生成出来的 JSON 文件也会被跨数据集健康索引扫描。
 - Endfield：`official_available`
 - 旧候选线索：`current.status_code` 和 `archive.status_code`
 
-前端不会读取 `docs/data/url_status.json`。
+前端不会读取 `outputs/url_status.json`。
 
 这也是为什么同一个 UI 标签在不同游戏里可能代表不同含义。这是目前最大的架构风险。
 

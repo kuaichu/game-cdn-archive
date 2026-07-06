@@ -18,7 +18,8 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "docs" / "data"
-STATUS_PATH = DATA_DIR / "url_status.json"
+OUTPUT_DIR = ROOT / "outputs"
+STATUS_PATH = OUTPUT_DIR / "url_status.json"
 ANDROID_LISTS_DIR = DATA_DIR / "android" / "lists"
 
 DEFAULT_HEADERS = {
@@ -504,6 +505,7 @@ def main() -> None:
     if isinstance(previous, dict) and stable_index(previous) == stable_index(index):
         index["generated_at"] = previous.get("generated_at", now)
 
+    STATUS_PATH.parent.mkdir(parents=True, exist_ok=True)
     STATUS_PATH.write_text(json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
         f"Wrote URL status for {total} URLs: "

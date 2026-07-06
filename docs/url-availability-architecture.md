@@ -34,12 +34,12 @@ python scripts/probe_url_status.py
 It writes:
 
 ```text
-docs/data/url_status.json
+outputs/url_status.json
 ```
 
-The script scans JSON files under `docs/data/`, except:
+The output is intentionally outside the published `docs/` directory. The script
+scans JSON files under `docs/data/`, except:
 
-- `docs/data/url_status.json`
 - `docs/data/android/lists/`
 
 It recursively collects HTTP links from fields named:
@@ -78,7 +78,7 @@ The probe is incremental by default:
 - `URL_STATUS_FORCE_FULL=1` forces a full sweep.
 
 Important limitation: `url_status.json` is not a frontend source of truth. The
-page does not load it directly. It is an offline audit index.
+page does not load it directly. It is an unpublished offline audit index.
 
 ## Android APK Availability
 
@@ -236,7 +236,7 @@ The frontend currently reads availability from game-specific fields:
 - Endfield: `official_available`
 - Legacy candidates: `current.status_code` and `archive.status_code`
 
-It does not read `docs/data/url_status.json`.
+It does not read `outputs/url_status.json`.
 
 This is why the same UI label can currently mean different things depending on
 which game is active. That is the main architecture risk.

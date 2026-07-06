@@ -23,5 +23,8 @@ jobs:
       - name: Check generated JavaScript
         run: node --check docs/app.js
 
+      - name: Check published file sizes
+        run: python scripts/check_docs_file_sizes.py
+
       - name: Deploy to Cloudflare Pages
         run: npx --yes wrangler pages deploy docs --project-name game-cdn-archive --branch main

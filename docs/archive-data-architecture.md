@@ -331,15 +331,16 @@ Current status:
 
 ## URL Health Index
 
-`docs/data/url_status.json` is produced by:
+`outputs/url_status.json` is produced by:
 
 ```bash
 python scripts/probe_url_status.py
 ```
 
-It is not the source of game metadata. It is a cross-cutting health index for
-archived URLs across APKs, HoYo packages, NTE files, WuWa files, Arknights
-packages, and Endfield packages/patches.
+It is not the source of game metadata and is kept outside the published `docs/`
+directory. It is a cross-cutting health index for archived URLs across APKs,
+HoYo packages, NTE files, WuWa files, Arknights packages, and Endfield
+packages/patches.
 
 Treat URL health changes as probe-output changes, not as archive-structure
 changes.
