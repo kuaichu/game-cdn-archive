@@ -16,6 +16,42 @@
     "filename": "20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
     "captured_at": "2026-06-08T18:21:01.169939+00:00",
     "updated_at": "2026-05-20T03:59:25+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240912162405_49ekXZIjd6SoVTrN/CPS/20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240912162405_49ekXZIjd6SoVTrN/CPS/20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 627025502,
+            "last_modified": "Wed, 20 May 2026 03:59:25 GMT",
+            "etag": "C7771C36A3A4BD50A0CAA5324B9ACF21-10",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.53,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240912162405_49ekXZIjd6SoVTrN/CPS/20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

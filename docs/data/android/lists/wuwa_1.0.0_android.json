@@ -16,6 +16,42 @@
     "filename": "鸣潮_1.0.0_official.apk",
     "captured_at": "2026-06-25T15:11:58.040448+00:00",
     "updated_at": "2024-05-20T14:11:38+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20240515180358_GMXTiY9I3QUipDJypL/%E9%B8%A3%E6%BD%AE_1.0.0_official.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20240515180358_GMXTiY9I3QUipDJypL/%E9%B8%A3%E6%BD%AE_1.0.0_official.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1992566354,
+            "last_modified": "Mon, 20 May 2024 14:11:38 GMT",
+            "etag": "26c83b9ea8feb8c6aed1573cddec7650-380",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.53,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://mirrors-package-mc.aki-game.com/client/download/20240515180358_GMXTiY9I3QUipDJypL/%E9%B8%A3%E6%BD%AE_1.0.0_official.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

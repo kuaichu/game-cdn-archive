@@ -1,7 +1,7 @@
 {
   "74.0.0": {
     "version": "74.0.0",
-    "observed_at": "2026-07-05T07:42:17.897859+00:00",
+    "observed_at": "2026-07-06T00:21:42.319415+00:00",
     "client_version": "74.0.0",
     "file_path": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/files",
     "package_items": 19,
@@ -14,817 +14,133 @@
         "part": 1,
         "size": 1073741824,
         "md5": "1789c414362f3bda570f583945357d28",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.001",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.001",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:12.550Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.001",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:53:32 GMT",
-                "etag": "CDA6EF9278520E103537DA4D7F74D346-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.001",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.001"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.002",
         "part": 2,
         "size": 1073741824,
         "md5": "e12b666495191c44f175d0746a4632b5",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.002",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.002",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:12.684Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.002",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:45:02 GMT",
-                "etag": "5C2E7BB50511607D3ACE1A291364F86E-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.002",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.002"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.003",
         "part": 3,
         "size": 1073741824,
         "md5": "31304519c424243edbe2f9a0b5e45cd1",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.003",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.003",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:12.730Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.003",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:56:39 GMT",
-                "etag": "D9080C1770B8D34B43E0D61DCDC21B56-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.003",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.003"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.004",
         "part": 4,
         "size": 1073741824,
         "md5": "62d36ed4016fdf99044d4c5e35d497c6",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.004",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.004",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:12.775Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.004",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:48:26 GMT",
-                "etag": "6BC0767C985E813DFF0DDA574E56DD48-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.004",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.004"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.005",
         "part": 5,
         "size": 1073741824,
         "md5": "ab1b050bd01363cb88e354807e9b8d1c",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.005",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.005",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:12.828Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.005",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:45:27 GMT",
-                "etag": "C1219754209169A814ADB2D011262373-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.005",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.005"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.006",
         "part": 6,
         "size": 1073741824,
         "md5": "6984f83e52c7db5bc0591f06aaf74a65",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.006",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.006",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:12.867Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.006",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:19:23 GMT",
-                "etag": "E2DF68D1263A85ABADE5B07EA02B7E84-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.006",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.006"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.007",
         "part": 7,
         "size": 1073741824,
         "md5": "1db583e39fd5b2628d8d60780f557923",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.007",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.007",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:12.909Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.007",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:50:38 GMT",
-                "etag": "80FC93B14CFA19C78FCEAC817E00AACD-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.007",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.007"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.008",
         "part": 8,
         "size": 1073741824,
         "md5": "002c3080be587c75759014a551aa1043",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.008",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.008",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:12.950Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.008",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:28:03 GMT",
-                "etag": "942AFEA7A41AF9A819F93CC915157131-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.008",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.008"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.009",
         "part": 9,
         "size": 1073741824,
         "md5": "34aa683dc54b44ed6eaf1402af1d7ec5",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.009",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.009",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:12.997Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.009",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:45:07 GMT",
-                "etag": "E6D47FFB1552A970857B3A69642E1811-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.009",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.009"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.010",
         "part": 10,
         "size": 1073741824,
         "md5": "0360f3c1cada6a8120b46f77bd4b992c",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.010",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.010",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:13.042Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.010",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:52:43 GMT",
-                "etag": "DC66C7AEF254B85C609E7988E4E91AB6-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.010",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.010"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.011",
         "part": 11,
         "size": 1073741824,
         "md5": "400e7f1f172dd755fda3f8966fea28f8",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.011",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.011",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:13.107Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.011",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:46:07 GMT",
-                "etag": "E80C920B6B07560CE8E9DEE7C02E6EC5-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.011",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.011"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.012",
         "part": 12,
         "size": 1073741824,
         "md5": "861d109795c24930e5691f58b9babc64",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.012",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.012",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:13.150Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.012",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:52:22 GMT",
-                "etag": "1134FD2DE071BEB43C5D7778D6EC9F59-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.012",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.012"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.013",
         "part": 13,
         "size": 1073741824,
         "md5": "6f2c2a24990da1c7c2cc36517d1ace05",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.013",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.013",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:13.216Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.013",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:28:59 GMT",
-                "etag": "7AE7335204F43AFA4F3D98EECC12E24A-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.013",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.013"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.014",
         "part": 14,
         "size": 1073741824,
         "md5": "05451993fb4f09e1b23a8d60cb936a5b",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.014",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.014",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:13.265Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.014",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:15:51 GMT",
-                "etag": "D76C32AF12FA7E26B78AED3450432621-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.014",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.014"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.015",
         "part": 15,
         "size": 1073741824,
         "md5": "317d8fb51f37704d6c3466b51c9bd8d7",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.015",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.015",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:13.320Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.015",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:18:22 GMT",
-                "etag": "C95A4ABF4995F4176D97EECE505C1D42-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.015",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.015"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.016",
         "part": 16,
         "size": 1073741824,
         "md5": "0509310dc3c038e7bd32a24e6731c560",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.016",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.016",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:13.361Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.016",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:47:27 GMT",
-                "etag": "82840DD9B1C69A2183F506EB71048757-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.016",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.016"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.017",
         "part": 17,
         "size": 1073741824,
         "md5": "4e26caa3301ba320a8760a67210ded5e",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.017",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.017",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:13.415Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.017",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:33:16 GMT",
-                "etag": "4A84B77F5DA25780646DB1F67400D3A5-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.017",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.017"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.018",
         "part": 18,
         "size": 1073741824,
         "md5": "6399bf9bd7fa2187fc7f6dd60b3d0d03",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.018",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.018",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:13.458Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.018",
-                "content_type": "application/octet-stream",
-                "size": 1073741824,
-                "last_modified": "Fri, 29 May 2026 06:17:09 GMT",
-                "etag": "A695B7DE928ABFE9B698860127D3A6ED-400",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.018",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.018"
       },
       {
         "name": "074-74.0.0-11d8610cef2-38-HG.zip.019",
         "part": 19,
         "size": 516799934,
         "md5": "cf52a2ad66903ae1d597c2514ec43ee7",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.019",
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.019",
-              "probe": {
-                "ok": true,
-                "status": 200,
-                "method": "HEAD",
-                "checked_at": "2026-07-05T17:18:13.501Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.019",
-                "content_type": "application/octet-stream",
-                "size": 516799934,
-                "last_modified": "Fri, 29 May 2026 06:18:25 GMT",
-                "etag": "E7B019EF9F7C05D171582A7D56EE7790-201",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": 0.0,
-                "scheduler_confidence": "high"
-              }
-            }
-          ],
-          "source": {
-            "kind": "live_probe",
-            "confidence": "high"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.019",
-            "confidence": "high",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_arknights_availability.py"
-        }
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/update/1/1/Windows/74.0.0_UR6RdckAf6SA49i2/packs/074-74.0.0-11d8610cef2-38-HG.zip.019"
       }
     ],
     "links": {

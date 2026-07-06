@@ -23,6 +23,42 @@
       "mimetype": "application/vnd.android.package-archive",
       "length": 1781574810,
       "digest": "4CDBQR6PFKPZA42HKMOZVH44QH7OF2VQ"
+    },
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://mirrors-package-mc.kurogame.com/client/download/20230418111737_A4Xe1fhoNEOpWYsVfy/mc_0.7.0_72216273_9e6c7cc5565764257c2866c25d4e3c10_shelled.apk",
+          "probe": {
+            "ok": false,
+            "status": 0,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "final_url": "https://mirrors-package-mc.kurogame.com/client/download/20230418111737_A4Xe1fhoNEOpWYsVfy/mc_0.7.0_72216273_9e6c7cc5565764257c2866c25d4e3c10_shelled.apk",
+            "content_type": "",
+            "size": 0,
+            "last_modified": "",
+            "etag": "",
+            "error": "dns: Could not resolve host: mirrors-package-mc.kurogame.com",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.53,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unavailable",
+        "reason": "retained_historical",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": true,
+        "display_label": "链接失效"
+      },
+      "generated_by": "scripts/build_android_availability.py"
     }
   }
 ]

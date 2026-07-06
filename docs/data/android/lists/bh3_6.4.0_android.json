@@ -16,6 +16,42 @@
     "filename": "20230110-030853-gf_android_ota-versions-v6_4-From_Finality_the_Origin_guofu.apk",
     "captured_at": "2026-06-06T07:29:12.631982+00:00",
     "updated_at": "2023-01-16T02:20:46+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://bundle.bh3.com/public/Android/20230110-030853-gf_android_ota-versions-v6_4-From_Finality_the_Origin_guofu.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "final_url": "https://bundle.bh3.com/public/Android/20230110-030853-gf_android_ota-versions-v6_4-From_Finality_the_Origin_guofu.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 669218608,
+            "last_modified": "Mon, 16 Jan 2023 02:20:46 GMT",
+            "etag": "0BB4C25211C7A6F9FABBEB3D91CAA39C-64",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.53,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://bundle.bh3.com/public/Android/20230110-030853-gf_android_ota-versions-v6_4-From_Finality_the_Origin_guofu.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

@@ -17,6 +17,42 @@
     "crc64": "2423796909161964168",
     "error": "",
     "filename": "KR_BBS01-鸣潮_3.3.1_168377154_33_官渠_90247475e898b22c8cb5a3aebccb3636_shelled.apk",
-    "captured_at": "2026-07-05T16:14:20.030241+00:00"
+    "captured_at": "2026-07-05T16:14:20.030241+00:00",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20260507180953_zprIat2NkosqCyS9ZP/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.3.1_168377154_33_%E5%AE%98%E6%B8%A0_90247475e898b22c8cb5a3aebccb3636_shelled.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20260507180953_zprIat2NkosqCyS9ZP/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.3.1_168377154_33_%E5%AE%98%E6%B8%A0_90247475e898b22c8cb5a3aebccb3636_shelled.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2012916532,
+            "last_modified": "Thu, 07 May 2026 10:09:58 GMT",
+            "etag": "960c13c8ff22aadab52d9248fc37231a-39",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.53,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://mirrors-package-mc.aki-game.com/client/download/20260507180953_zprIat2NkosqCyS9ZP/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.3.1_168377154_33_%E5%AE%98%E6%B8%A0_90247475e898b22c8cb5a3aebccb3636_shelled.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

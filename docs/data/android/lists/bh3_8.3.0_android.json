@@ -16,6 +16,42 @@
     "filename": "20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
     "captured_at": "2026-07-05T01:56:30.192069+00:00",
     "updated_at": "2025-08-15T02:09:18+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250523115648_9RU48di9UxAQIixO/CPS/20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250523115648_9RU48di9UxAQIixO/CPS/20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 661362858,
+            "last_modified": "Fri, 15 Aug 2025 02:09:18 GMT",
+            "etag": "D5A243BB59065896E8A425A1537567E9-10",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.53,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250523115648_9RU48di9UxAQIixO/CPS/20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

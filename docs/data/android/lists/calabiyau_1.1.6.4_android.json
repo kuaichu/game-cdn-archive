@@ -17,6 +17,42 @@
     "crc64": "13948144934372544214",
     "error": "",
     "filename": "klbqm_LD0S0N00011.apk",
-    "captured_at": "2026-07-05T01:50:12.992811+00:00"
+    "captured_at": "2026-07-05T01:50:12.992811+00:00",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "final_url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1875804958,
+            "last_modified": "Wed, 24 Jun 2026 23:13:41 GMT",
+            "etag": "950a5ed1a3093b7543d6afe62aa55554",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.53,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

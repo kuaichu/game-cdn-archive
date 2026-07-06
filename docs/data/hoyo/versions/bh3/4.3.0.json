@@ -5,43 +5,7 @@
       "name": "BH3_v4.3.0_9b6faec931e.7z",
       "url": "http://bundle.bh3.com/tmp/pc/BH3_v4.3.0_9b6faec931e.7z",
       "checksum": "",
-      "size": 4637027964,
-      "availability": {
-        "candidates": [
-          {
-            "url": "http://bundle.bh3.com/tmp/pc/BH3_v4.3.0_9b6faec931e.7z",
-            "probe": {
-              "ok": true,
-              "status": 0,
-              "method": "METADATA_SIZE",
-              "checked_at": "2026-07-05T07:37:51.150Z",
-              "final_url": "http://bundle.bh3.com/tmp/pc/BH3_v4.3.0_9b6faec931e.7z",
-              "content_type": "",
-              "size": 4637027964,
-              "last_modified": "",
-              "etag": "",
-              "error": "",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "metadata_inference",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "available",
-          "reason": "not_probed",
-          "preferred_url": "http://bundle.bh3.com/tmp/pc/BH3_v4.3.0_9b6faec931e.7z",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "可用"
-        },
-        "generated_by": "scripts/build_hoyo_availability.py"
-      }
+      "size": 4637027964
     }
   },
   "voice": {},

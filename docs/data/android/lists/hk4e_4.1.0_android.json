@@ -16,6 +16,42 @@
     "filename": "yuanshen_4.1.0.apk",
     "captured_at": "2026-06-21T04:20:30.993878+00:00",
     "updated_at": "2023-09-19T10:50:32+00:00",
-    "updated_at_source": "filename_timestamp"
+    "updated_at_source": "filename_timestamp",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20230919105032_n8MbYGE88BYwQa6j/mihoyo/yuanshen_4.1.0.apk",
+          "probe": {
+            "ok": false,
+            "status": 404,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20230919105032_n8MbYGE88BYwQa6j/mihoyo/yuanshen_4.1.0.apk",
+            "content_type": "application/xml",
+            "size": 0,
+            "last_modified": "",
+            "etag": "",
+            "error": "APK object unavailable",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.53,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unavailable",
+        "reason": "retained_historical",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": true,
+        "display_label": "链接失效"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

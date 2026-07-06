@@ -5,43 +5,7 @@
       "name": "StarRail_2.1.0.zip",
       "url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/StarRail_2.1.0.zip",
       "checksum": "bfdbb18fba9231d63e72e5808b6521d0",
-      "size": 30383244625,
-      "availability": {
-        "candidates": [
-          {
-            "url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/StarRail_2.1.0.zip",
-            "probe": {
-              "ok": true,
-              "status": 0,
-              "method": "METADATA_SIZE",
-              "checked_at": "2026-07-05T07:37:51.150Z",
-              "final_url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/StarRail_2.1.0.zip",
-              "content_type": "",
-              "size": 30383244625,
-              "last_modified": "",
-              "etag": "",
-              "error": "",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "metadata_inference",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "available",
-          "reason": "not_probed",
-          "preferred_url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/StarRail_2.1.0.zip",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "可用"
-        },
-        "generated_by": "scripts/build_hoyo_availability.py"
-      }
+      "size": 30383244625
     }
   },
   "voice": {
@@ -49,211 +13,31 @@
       "name": "Chinese.zip",
       "url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Chinese.zip",
       "checksum": "5737ad765fa7b6eac8210ee4f2eeeb39",
-      "size": 4061269670,
-      "availability": {
-        "candidates": [
-          {
-            "url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Chinese.zip",
-            "probe": {
-              "ok": true,
-              "status": 0,
-              "method": "METADATA_SIZE",
-              "checked_at": "2026-07-05T07:37:51.150Z",
-              "final_url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Chinese.zip",
-              "content_type": "",
-              "size": 4061269670,
-              "last_modified": "",
-              "etag": "",
-              "error": "",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "metadata_inference",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "available",
-          "reason": "not_probed",
-          "preferred_url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Chinese.zip",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "可用"
-        },
-        "generated_by": "scripts/build_hoyo_availability.py"
-      }
+      "size": 4061269670
     },
     "zh-tw": {
       "name": "Chinese.zip",
       "url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Chinese.zip",
       "checksum": "5737ad765fa7b6eac8210ee4f2eeeb39",
-      "size": 4061269670,
-      "availability": {
-        "candidates": [
-          {
-            "url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Chinese.zip",
-            "probe": {
-              "ok": true,
-              "status": 0,
-              "method": "METADATA_SIZE",
-              "checked_at": "2026-07-05T07:37:51.150Z",
-              "final_url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Chinese.zip",
-              "content_type": "",
-              "size": 4061269670,
-              "last_modified": "",
-              "etag": "",
-              "error": "",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "metadata_inference",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "available",
-          "reason": "not_probed",
-          "preferred_url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Chinese.zip",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "可用"
-        },
-        "generated_by": "scripts/build_hoyo_availability.py"
-      }
+      "size": 4061269670
     },
     "en-us": {
       "name": "English.zip",
       "url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/English.zip",
       "checksum": "1f6a530b341f4b82f612fe6004b1bdbf",
-      "size": 4847874087,
-      "availability": {
-        "candidates": [
-          {
-            "url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/English.zip",
-            "probe": {
-              "ok": true,
-              "status": 0,
-              "method": "METADATA_SIZE",
-              "checked_at": "2026-07-05T07:37:51.150Z",
-              "final_url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/English.zip",
-              "content_type": "",
-              "size": 4847874087,
-              "last_modified": "",
-              "etag": "",
-              "error": "",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "metadata_inference",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "available",
-          "reason": "not_probed",
-          "preferred_url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/English.zip",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "可用"
-        },
-        "generated_by": "scripts/build_hoyo_availability.py"
-      }
+      "size": 4847874087
     },
     "ja-jp": {
       "name": "Japanese.zip",
       "url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Japanese.zip",
       "checksum": "f9b0c514915369f3b9155127684f8d51",
-      "size": 5188234700,
-      "availability": {
-        "candidates": [
-          {
-            "url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Japanese.zip",
-            "probe": {
-              "ok": true,
-              "status": 0,
-              "method": "METADATA_SIZE",
-              "checked_at": "2026-07-05T07:37:51.150Z",
-              "final_url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Japanese.zip",
-              "content_type": "",
-              "size": 5188234700,
-              "last_modified": "",
-              "etag": "",
-              "error": "",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "metadata_inference",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "available",
-          "reason": "not_probed",
-          "preferred_url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Japanese.zip",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "可用"
-        },
-        "generated_by": "scripts/build_hoyo_availability.py"
-      }
+      "size": 5188234700
     },
     "ko-kr": {
       "name": "Korean.zip",
       "url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Korean.zip",
       "checksum": "5443d68b0a5adb03ab92c8fb4eb7df24",
-      "size": 4112834108,
-      "availability": {
-        "candidates": [
-          {
-            "url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Korean.zip",
-            "probe": {
-              "ok": true,
-              "status": 0,
-              "method": "METADATA_SIZE",
-              "checked_at": "2026-07-05T07:37:51.150Z",
-              "final_url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Korean.zip",
-              "content_type": "",
-              "size": 4112834108,
-              "last_modified": "",
-              "etag": "",
-              "error": "",
-              "bot_challenge": false,
-              "stale": false,
-              "age_hours": null,
-              "scheduler_confidence": "medium"
-            }
-          }
-        ],
-        "source": {
-          "kind": "metadata_inference",
-          "confidence": "medium"
-        },
-        "interpretation": {
-          "state": "available",
-          "reason": "not_probed",
-          "preferred_url": "https://autopatchcn.bhsr.com/client/cn/20240315111623_TbwRoPayP3dE1p79/PC/Korean.zip",
-          "confidence": "medium",
-          "retained": false,
-          "display_label": "可用"
-        },
-        "generated_by": "scripts/build_hoyo_availability.py"
-      }
+      "size": 4112834108
     }
   },
   "update": {
@@ -262,254 +46,38 @@
         "name": "game_2.0.0_2.1.0_hdiff_KjPUTRqDO6ZWGeyp.zip",
         "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_2.0.0_2.1.0_hdiff_KjPUTRqDO6ZWGeyp.zip",
         "checksum": "",
-        "size": 10270622460,
-        "availability": {
-          "candidates": [
-            {
-              "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_2.0.0_2.1.0_hdiff_KjPUTRqDO6ZWGeyp.zip",
-              "probe": {
-                "ok": true,
-                "status": 0,
-                "method": "METADATA_SIZE",
-                "checked_at": "2026-07-05T07:37:51.150Z",
-                "final_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_2.0.0_2.1.0_hdiff_KjPUTRqDO6ZWGeyp.zip",
-                "content_type": "",
-                "size": 10270622460,
-                "last_modified": "",
-                "etag": "",
-                "error": "",
-                "bot_challenge": false,
-                "stale": false,
-                "age_hours": null,
-                "scheduler_confidence": "medium"
-              }
-            }
-          ],
-          "source": {
-            "kind": "metadata_inference",
-            "confidence": "medium"
-          },
-          "interpretation": {
-            "state": "available",
-            "reason": "not_probed",
-            "preferred_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_2.0.0_2.1.0_hdiff_KjPUTRqDO6ZWGeyp.zip",
-            "confidence": "medium",
-            "retained": false,
-            "display_label": "可用"
-          },
-          "generated_by": "scripts/build_hoyo_availability.py"
-        }
+        "size": 10270622460
       },
       "voice": {
         "zh-cn": {
           "name": "zh-cn_2.0.0_2.1.0_hdiff_tsNrHUifmELWAxn0.zip",
           "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/zh-cn_2.0.0_2.1.0_hdiff_tsNrHUifmELWAxn0.zip",
           "checksum": "",
-          "size": 447279546,
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/zh-cn_2.0.0_2.1.0_hdiff_tsNrHUifmELWAxn0.zip",
-                "probe": {
-                  "ok": true,
-                  "status": 0,
-                  "method": "METADATA_SIZE",
-                  "checked_at": "2026-07-05T07:37:51.150Z",
-                  "final_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/zh-cn_2.0.0_2.1.0_hdiff_tsNrHUifmELWAxn0.zip",
-                  "content_type": "",
-                  "size": 447279546,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": null,
-                  "scheduler_confidence": "medium"
-                }
-              }
-            ],
-            "source": {
-              "kind": "metadata_inference",
-              "confidence": "medium"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "not_probed",
-              "preferred_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/zh-cn_2.0.0_2.1.0_hdiff_tsNrHUifmELWAxn0.zip",
-              "confidence": "medium",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_hoyo_availability.py"
-          }
+          "size": 447279546
         },
         "zh-tw": {
           "name": "zh-tw_2.0.0_2.1.0_hdiff_K38ZCQnmXBjaDOgx.zip",
           "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/zh-tw_2.0.0_2.1.0_hdiff_K38ZCQnmXBjaDOgx.zip",
           "checksum": "",
-          "size": 447279546,
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/zh-tw_2.0.0_2.1.0_hdiff_K38ZCQnmXBjaDOgx.zip",
-                "probe": {
-                  "ok": true,
-                  "status": 0,
-                  "method": "METADATA_SIZE",
-                  "checked_at": "2026-07-05T07:37:51.150Z",
-                  "final_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/zh-tw_2.0.0_2.1.0_hdiff_K38ZCQnmXBjaDOgx.zip",
-                  "content_type": "",
-                  "size": 447279546,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": null,
-                  "scheduler_confidence": "medium"
-                }
-              }
-            ],
-            "source": {
-              "kind": "metadata_inference",
-              "confidence": "medium"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "not_probed",
-              "preferred_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/zh-tw_2.0.0_2.1.0_hdiff_K38ZCQnmXBjaDOgx.zip",
-              "confidence": "medium",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_hoyo_availability.py"
-          }
+          "size": 447279546
         },
         "en-us": {
           "name": "en-us_2.0.0_2.1.0_hdiff_MK2tnjZE1xPb90Le.zip",
           "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/en-us_2.0.0_2.1.0_hdiff_MK2tnjZE1xPb90Le.zip",
           "checksum": "",
-          "size": 560465617,
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/en-us_2.0.0_2.1.0_hdiff_MK2tnjZE1xPb90Le.zip",
-                "probe": {
-                  "ok": true,
-                  "status": 0,
-                  "method": "METADATA_SIZE",
-                  "checked_at": "2026-07-05T07:37:51.150Z",
-                  "final_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/en-us_2.0.0_2.1.0_hdiff_MK2tnjZE1xPb90Le.zip",
-                  "content_type": "",
-                  "size": 560465617,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": null,
-                  "scheduler_confidence": "medium"
-                }
-              }
-            ],
-            "source": {
-              "kind": "metadata_inference",
-              "confidence": "medium"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "not_probed",
-              "preferred_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/en-us_2.0.0_2.1.0_hdiff_MK2tnjZE1xPb90Le.zip",
-              "confidence": "medium",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_hoyo_availability.py"
-          }
+          "size": 560465617
         },
         "ja-jp": {
           "name": "ja-jp_2.0.0_2.1.0_hdiff_MaToxcp6VgdzW7sn.zip",
           "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/ja-jp_2.0.0_2.1.0_hdiff_MaToxcp6VgdzW7sn.zip",
           "checksum": "",
-          "size": 563232799,
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/ja-jp_2.0.0_2.1.0_hdiff_MaToxcp6VgdzW7sn.zip",
-                "probe": {
-                  "ok": true,
-                  "status": 0,
-                  "method": "METADATA_SIZE",
-                  "checked_at": "2026-07-05T07:37:51.150Z",
-                  "final_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/ja-jp_2.0.0_2.1.0_hdiff_MaToxcp6VgdzW7sn.zip",
-                  "content_type": "",
-                  "size": 563232799,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": null,
-                  "scheduler_confidence": "medium"
-                }
-              }
-            ],
-            "source": {
-              "kind": "metadata_inference",
-              "confidence": "medium"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "not_probed",
-              "preferred_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/ja-jp_2.0.0_2.1.0_hdiff_MaToxcp6VgdzW7sn.zip",
-              "confidence": "medium",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_hoyo_availability.py"
-          }
+          "size": 563232799
         },
         "ko-kr": {
           "name": "ko-kr_2.0.0_2.1.0_hdiff_DOI64wNZX3rStxcE.zip",
           "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/ko-kr_2.0.0_2.1.0_hdiff_DOI64wNZX3rStxcE.zip",
           "checksum": "",
-          "size": 458025287,
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/ko-kr_2.0.0_2.1.0_hdiff_DOI64wNZX3rStxcE.zip",
-                "probe": {
-                  "ok": true,
-                  "status": 0,
-                  "method": "METADATA_SIZE",
-                  "checked_at": "2026-07-05T07:37:51.150Z",
-                  "final_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/ko-kr_2.0.0_2.1.0_hdiff_DOI64wNZX3rStxcE.zip",
-                  "content_type": "",
-                  "size": 458025287,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": null,
-                  "scheduler_confidence": "medium"
-                }
-              }
-            ],
-            "source": {
-              "kind": "metadata_inference",
-              "confidence": "medium"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "not_probed",
-              "preferred_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/ko-kr_2.0.0_2.1.0_hdiff_DOI64wNZX3rStxcE.zip",
-              "confidence": "medium",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_hoyo_availability.py"
-          }
+          "size": 458025287
         }
       }
     }

@@ -16,6 +16,42 @@
     "filename": "KR_TF_49-鸣潮_3.2.1_164300475_33_库洛_投放包_1_83e2cdd963fff1e42e1d1a3e6c895a32_shelled.apk",
     "captured_at": "2026-06-21T05:05:41.980130+00:00",
     "updated_at": "2026-03-24T09:43:30+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20260324174322_3Ap1c8k6juCzDfI1JV/KR_TF_49-%E9%B8%A3%E6%BD%AE_3.2.1_164300475_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_83e2cdd963fff1e42e1d1a3e6c895a32_shelled.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20260324174322_3Ap1c8k6juCzDfI1JV/KR_TF_49-%E9%B8%A3%E6%BD%AE_3.2.1_164300475_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_83e2cdd963fff1e42e1d1a3e6c895a32_shelled.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2000067295,
+            "last_modified": "Tue, 24 Mar 2026 09:43:30 GMT",
+            "etag": "734d554f7c195ae025a734adbe11358a-39",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.53,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://mirrors-package-mc.aki-game.com/client/download/20260324174322_3Ap1c8k6juCzDfI1JV/KR_TF_49-%E9%B8%A3%E6%BD%AE_3.2.1_164300475_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_83e2cdd963fff1e42e1d1a3e6c895a32_shelled.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

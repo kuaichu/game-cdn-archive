@@ -16,6 +16,42 @@
     "filename": "20230413-122623-gf_android_ota-versions-v6_6-Woven_from_Last_Snow_gw.apk",
     "captured_at": "2026-06-06T20:27:22.351159+00:00",
     "updated_at": "2023-04-16T07:36:13+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://bundle.bh3.com/public/Android/20230413-122623-gf_android_ota-versions-v6_6-Woven_from_Last_Snow_gw.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "final_url": "https://bundle.bh3.com/public/Android/20230413-122623-gf_android_ota-versions-v6_6-Woven_from_Last_Snow_gw.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 651976589,
+            "last_modified": "Sun, 16 Apr 2023 07:36:13 GMT",
+            "etag": "82F720216188B715CB2FE3710C2E0CA7-63",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.53,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://bundle.bh3.com/public/Android/20230413-122623-gf_android_ota-versions-v6_6-Woven_from_Last_Snow_gw.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

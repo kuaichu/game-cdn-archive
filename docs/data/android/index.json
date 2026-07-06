@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-07-05T16:14:20.030241+00:00",
-  "generated_at": "2026-07-05T16:14:20.030241+00:00",
+  "last_checked_at": "2026-07-06T00:21:43.092679+00:00",
+  "generated_at": "2026-07-06T00:21:43.092679+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -156,43 +156,7 @@
           "filename": "Reverse1999_Bluepoch_1000.apk",
           "captured_at": "2026-07-05T02:10:35.258149+00:00",
           "updated_at": "2026-06-11T00:35:28+00:00",
-          "updated_at_source": "apk_last_modified",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
-                "probe": {
-                  "ok": true,
-                  "status": 200,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
-                  "content_type": "application/vnd.android.package-archive",
-                  "size": 2035392298,
-                  "last_modified": "Thu, 11 Jun 2026 00:35:28 GMT",
-                  "etag": "175ae1d065affaa3c5e6c2d3f3483779-243",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "high"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "http_2xx",
-              "preferred_url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
-              "confidence": "high",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "reverse1999",
@@ -391,6 +355,26 @@
         },
         {
           "game_id": "aethergazer",
+          "version": "0.305.2",
+          "channel": "gwdl",
+          "url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
+          "source": "official Aether Gazer Android download endpoint; resolves to a CDN URL",
+          "source_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
+          "archive_url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
+          "archive_note": "CDN URL captured during sync",
+          "status": 404,
+          "content_type": "text/html",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
+          "captured_at": "2026-07-06T00:21:43.092679+00:00"
+        },
+        {
+          "game_id": "aethergazer",
           "version": "0.303.501",
           "channel": "303",
           "url": "https://packaging.ys4fun.com/package/channel/303/mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
@@ -461,43 +445,7 @@
           "filename": "mimir_ali_prod_294_1_ys4fun_20240710095639_M01000000_bi3NUfr4_sign.apk",
           "captured_at": "2026-06-06T22:54:29.106555+00:00",
           "updated_at": "2024-07-10T09:56:39+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://packaging.ys4fun.com/package/channel/294/mimir_ali_prod_294_1_ys4fun_20240710095639_M01000000_bi3NUfr4_sign.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://packaging.ys4fun.com/package/channel/294/mimir_ali_prod_294_1_ys4fun_20240710095639_M01000000_bi3NUfr4_sign.apk",
-                  "content_type": "text/html",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "aethergazer",
@@ -516,43 +464,7 @@
           "filename": "mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
           "captured_at": "2026-06-06T22:54:29.106555+00:00",
           "updated_at": "2023-05-22T14:05:43+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://download.ys4fun.com/package/channel/285/mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://download.ys4fun.com/package/channel/285/mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         }
       ],
       "links": {
@@ -560,6 +472,11 @@
           "urls": "data/android/lists/aethergazer_0.305.3_android.urls.txt",
           "aria2": "data/android/lists/aethergazer_0.305.3_android.aria2.txt",
           "json": "data/android/lists/aethergazer_0.305.3_android.json"
+        },
+        "0.305.2": {
+          "urls": "data/android/lists/aethergazer_0.305.2_android.urls.txt",
+          "aria2": "data/android/lists/aethergazer_0.305.2_android.aria2.txt",
+          "json": "data/android/lists/aethergazer_0.305.2_android.json"
         },
         "0.303.501": {
           "urls": "data/android/lists/aethergazer_0.303.501_android.urls.txt",
@@ -600,43 +517,7 @@
           "filename": "BlueArchive.apk",
           "captured_at": "2026-07-05T01:50:12.992811+00:00",
           "updated_at": "2025-09-23T05:29:37+00:00",
-          "updated_at_source": "apk_last_modified",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
-                "probe": {
-                  "ok": true,
-                  "status": 200,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
-                  "content_type": "application/vnd.android.package-archive",
-                  "size": 1723356917,
-                  "last_modified": "Tue, 23 Sep 2025 05:29:37 GMT",
-                  "etag": "5D9E2E9524A91CE8873B67101CC362F8-1644",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "high"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "http_2xx",
-              "preferred_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
-              "confidence": "high",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "bluearchive",
@@ -803,43 +684,7 @@
           "filename": "CBJQ.3.6.0.122.jinshan_202603301341.apk",
           "captured_at": "2026-07-05T01:50:12.992811+00:00",
           "updated_at": "2026-05-07T03:12:21+00:00",
-          "updated_at_source": "apk_last_modified",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
-                "probe": {
-                  "ok": true,
-                  "status": 200,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
-                  "content_type": "application/vnd.android.package-archive",
-                  "size": 1427726880,
-                  "last_modified": "Thu, 07 May 2026 03:12:21 GMT",
-                  "etag": "a22da702ac349b6c06dbc6a6c69adcb0-171",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "high"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "http_2xx",
-              "preferred_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
-              "confidence": "high",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "apk_last_modified"
         },
         {
           "game_id": "snowbreak",
@@ -1909,43 +1754,7 @@
           "filename": "KR_TF_52-鸣潮_3.0.1_157207705_33_库洛_投放包_1_0812c3eaf14c876481e41cb9783e11cf_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-12-30T15:33:35+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://mirrors-package-mc.aki-game.com/client/download/20251230153335_DIaYUy2QRRUcV9JRgM/KR_TF_52-%E9%B8%A3%E6%BD%AE_3.0.1_157207705_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_0812c3eaf14c876481e41cb9783e11cf_shelled.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20251230153335_DIaYUy2QRRUcV9JRgM/KR_TF_52-%E9%B8%A3%E6%BD%AE_3.0.1_157207705_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_0812c3eaf14c876481e41cb9783e11cf_shelled.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -2187,43 +1996,7 @@
           "filename": "KR_TF_41-鸣潮_2.6.0_145597397__库洛_投放包_1_d9bb02269dfea9e4084cb4f0f141e4c4_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-08-25T10:39:28+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://mirrors-package-mc.aki-game.com/client/download/20250825103928_on6XW04clnHhBnrvCe/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.6.0_145597397__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_d9bb02269dfea9e4084cb4f0f141e4c4_shelled.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250825103928_on6XW04clnHhBnrvCe/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.6.0_145597397__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_d9bb02269dfea9e4084cb4f0f141e4c4_shelled.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -2239,46 +2012,11 @@
           "md5": "d52f6d505a9741173a20005313a7c594",
           "crc64": "",
           "error": "APK object unavailable",
+          "exception_info": "O2|404",
           "filename": "KR_TF_41-鸣潮_2.5.0_142563591__库洛_投放包_1_d52f6d505a9741173a20005313a7c594_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-07-21T17:58:18+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://mirrors-package-mc.aki-game.com/client/download/20250721175818_mtpHRQl6I2qBYIj4w0/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.5.0_142563591__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_d52f6d505a9741173a20005313a7c594_shelled.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250721175818_mtpHRQl6I2qBYIj4w0/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.5.0_142563591__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_d52f6d505a9741173a20005313a7c594_shelled.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -2294,46 +2032,11 @@
           "md5": "0198dea9f935f0df478aeae416b85a83",
           "crc64": "",
           "error": "APK object unavailable",
+          "exception_info": "O2|404",
           "filename": "KR_TF_41-鸣潮_2.4.1_141938334__库洛_投放包_1_0198dea9f935f0df478aeae416b85a83_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-07-09T10:52:31+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://mirrors-package-mc.aki-game.com/client/download/20250709105231_grUsSFZZmVEXfwkHyM/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.4.1_141938334__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_0198dea9f935f0df478aeae416b85a83_shelled.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250709105231_grUsSFZZmVEXfwkHyM/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.4.1_141938334__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_0198dea9f935f0df478aeae416b85a83_shelled.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -2349,47 +2052,10 @@
           "md5": "82ecc5a3dad3ec68f67500dbf289f2c3",
           "crc64": "",
           "error": "APK object unavailable",
-          "exception_info": "O2|404",
           "filename": "KR_TF_41-鸣潮_2.4.0_139015362__库洛_投放包_1_82ecc5a3dad3ec68f67500dbf289f2c3_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-06-09T19:22:49+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://mirrors-package-mc.aki-game.com/client/download/20250609192249_lbNQFD2LbLW5ZWemLF/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.4.0_139015362__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_82ecc5a3dad3ec68f67500dbf289f2c3_shelled.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250609192249_lbNQFD2LbLW5ZWemLF/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.4.0_139015362__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_82ecc5a3dad3ec68f67500dbf289f2c3_shelled.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -2405,47 +2071,10 @@
           "md5": "",
           "crc64": "",
           "error": "APK object unavailable",
-          "exception_info": "O2|404",
           "filename": "KR_TF_41-鸣潮_2.3.0_135127140__库洛_投放包_1_2d29eda4701501e76b018f280b7ccf0_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-04-23T18:17:38+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://mirrors-package-mc.aki-game.com/client/download/20250423181738_d3TQAVpJNjy9CIsriH/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.3.0_135127140__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_2d29eda4701501e76b018f280b7ccf0_shelled.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250423181738_d3TQAVpJNjy9CIsriH/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.3.0_135127140__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_2d29eda4701501e76b018f280b7ccf0_shelled.apk",
-                  "content_type": "application/xml",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "wuwa",
@@ -3066,15 +2695,50 @@
           "aria2": "data/android/lists/wuwa_3.4.1_android.aria2.txt",
           "json": "data/android/lists/wuwa_3.4.1_android.json"
         },
+        "3.4.0": {
+          "urls": "data/android/lists/wuwa_3.4.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.4.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.4.0_android.json"
+        },
         "3.3.2": {
           "urls": "data/android/lists/wuwa_3.3.2_android.urls.txt",
           "aria2": "data/android/lists/wuwa_3.3.2_android.aria2.txt",
           "json": "data/android/lists/wuwa_3.3.2_android.json"
         },
+        "3.3.1": {
+          "urls": "data/android/lists/wuwa_3.3.1_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.3.1_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.3.1_android.json"
+        },
+        "3.3.0": {
+          "urls": "data/android/lists/wuwa_3.3.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.3.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.3.0_android.json"
+        },
+        "3.2.2": {
+          "urls": "data/android/lists/wuwa_3.2.2_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.2.2_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.2.2_android.json"
+        },
         "3.2.1": {
           "urls": "data/android/lists/wuwa_3.2.1_android.urls.txt",
           "aria2": "data/android/lists/wuwa_3.2.1_android.aria2.txt",
           "json": "data/android/lists/wuwa_3.2.1_android.json"
+        },
+        "3.1.2": {
+          "urls": "data/android/lists/wuwa_3.1.2_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.1.2_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.1.2_android.json"
+        },
+        "3.1.0": {
+          "urls": "data/android/lists/wuwa_3.1.0_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.1.0_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.1.0_android.json"
+        },
+        "3.0.2": {
+          "urls": "data/android/lists/wuwa_3.0.2_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_3.0.2_android.aria2.txt",
+          "json": "data/android/lists/wuwa_3.0.2_android.json"
         },
         "3.0.1": {
           "urls": "data/android/lists/wuwa_3.0.1_android.urls.txt",
@@ -3086,10 +2750,20 @@
           "aria2": "data/android/lists/wuwa_3.0.0_android.aria2.txt",
           "json": "data/android/lists/wuwa_3.0.0_android.json"
         },
+        "2.8.1": {
+          "urls": "data/android/lists/wuwa_2.8.1_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_2.8.1_android.aria2.txt",
+          "json": "data/android/lists/wuwa_2.8.1_android.json"
+        },
         "2.7.0": {
           "urls": "data/android/lists/wuwa_2.7.0_android.urls.txt",
           "aria2": "data/android/lists/wuwa_2.7.0_android.aria2.txt",
           "json": "data/android/lists/wuwa_2.7.0_android.json"
+        },
+        "2.6.1": {
+          "urls": "data/android/lists/wuwa_2.6.1_android.urls.txt",
+          "aria2": "data/android/lists/wuwa_2.6.1_android.aria2.txt",
+          "json": "data/android/lists/wuwa_2.6.1_android.json"
         },
         "2.6.0": {
           "urls": "data/android/lists/wuwa_2.6.0_android.urls.txt",
@@ -3170,51 +2844,6 @@
           "urls": "data/android/lists/wuwa_0.7.0_android.urls.txt",
           "aria2": "data/android/lists/wuwa_0.7.0_android.aria2.txt",
           "json": "data/android/lists/wuwa_0.7.0_android.json"
-        },
-        "2.6.1": {
-          "urls": "data/android/lists/wuwa_2.6.1_android.urls.txt",
-          "aria2": "data/android/lists/wuwa_2.6.1_android.aria2.txt",
-          "json": "data/android/lists/wuwa_2.6.1_android.json"
-        },
-        "2.8.1": {
-          "urls": "data/android/lists/wuwa_2.8.1_android.urls.txt",
-          "aria2": "data/android/lists/wuwa_2.8.1_android.aria2.txt",
-          "json": "data/android/lists/wuwa_2.8.1_android.json"
-        },
-        "3.0.2": {
-          "urls": "data/android/lists/wuwa_3.0.2_android.urls.txt",
-          "aria2": "data/android/lists/wuwa_3.0.2_android.aria2.txt",
-          "json": "data/android/lists/wuwa_3.0.2_android.json"
-        },
-        "3.1.0": {
-          "urls": "data/android/lists/wuwa_3.1.0_android.urls.txt",
-          "aria2": "data/android/lists/wuwa_3.1.0_android.aria2.txt",
-          "json": "data/android/lists/wuwa_3.1.0_android.json"
-        },
-        "3.1.2": {
-          "urls": "data/android/lists/wuwa_3.1.2_android.urls.txt",
-          "aria2": "data/android/lists/wuwa_3.1.2_android.aria2.txt",
-          "json": "data/android/lists/wuwa_3.1.2_android.json"
-        },
-        "3.2.2": {
-          "urls": "data/android/lists/wuwa_3.2.2_android.urls.txt",
-          "aria2": "data/android/lists/wuwa_3.2.2_android.aria2.txt",
-          "json": "data/android/lists/wuwa_3.2.2_android.json"
-        },
-        "3.3.0": {
-          "urls": "data/android/lists/wuwa_3.3.0_android.urls.txt",
-          "aria2": "data/android/lists/wuwa_3.3.0_android.aria2.txt",
-          "json": "data/android/lists/wuwa_3.3.0_android.json"
-        },
-        "3.3.1": {
-          "urls": "data/android/lists/wuwa_3.3.1_android.urls.txt",
-          "aria2": "data/android/lists/wuwa_3.3.1_android.aria2.txt",
-          "json": "data/android/lists/wuwa_3.3.1_android.json"
-        },
-        "3.4.0": {
-          "urls": "data/android/lists/wuwa_3.4.0_android.urls.txt",
-          "aria2": "data/android/lists/wuwa_3.4.0_android.aria2.txt",
-          "json": "data/android/lists/wuwa_3.4.0_android.json"
         }
       }
     },
@@ -3772,67 +3401,6 @@
             },
             "generated_by": "scripts/build_android_availability.py"
           }
-        },
-        {
-          "game_id": "nap",
-          "version": "0.2.0",
-          "channel": "beta",
-          "url": "https://autopatchcn.juequling.com/download/android/0.2.0/j0fGHf10yF5n/JueQuLing(Beta).apk",
-          "source": "Wayback Machine CDX historical URL; original URL now returns 404",
-          "status": 200,
-          "content_type": "application/vnd.android.package-archive",
-          "size": 274726225,
-          "last_modified": "",
-          "etag": "",
-          "md5": "",
-          "crc64": "",
-          "error": "",
-          "filename": "JueQuLing(Beta).apk",
-          "captured_at": "2026-07-05T09:54:25.000000+00:00",
-          "updated_at": "2023-11-27T13:34:22+00:00",
-          "updated_at_source": "wayback_cdx_timestamp",
-          "archive": {
-            "timestamp": "20231127133422",
-            "status": 200,
-            "length": 274726225,
-            "digest": "NDB3YNNDL335ZJRCD5Y4ABHJSF2LDNBP"
-          },
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://autopatchcn.juequling.com/download/android/0.2.0/j0fGHf10yF5n/JueQuLing(Beta).apk",
-                "probe": {
-                  "ok": true,
-                  "status": 200,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://autopatchcn.juequling.com/download/android/0.2.0/j0fGHf10yF5n/JueQuLing(Beta).apk",
-                  "content_type": "application/vnd.android.package-archive",
-                  "size": 274726225,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "high"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "http_2xx",
-              "preferred_url": "https://autopatchcn.juequling.com/download/android/0.2.0/j0fGHf10yF5n/JueQuLing(Beta).apk",
-              "confidence": "high",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
         }
       ],
       "links": {
@@ -3885,11 +3453,6 @@
           "urls": "data/android/lists/nap_1.0.0_android.urls.txt",
           "aria2": "data/android/lists/nap_1.0.0_android.aria2.txt",
           "json": "data/android/lists/nap_1.0.0_android.json"
-        },
-        "0.2.0": {
-          "urls": "data/android/lists/nap_0.2.0_android.urls.txt",
-          "aria2": "data/android/lists/nap_0.2.0_android.aria2.txt",
-          "json": "data/android/lists/nap_0.2.0_android.json"
         }
       }
     },
@@ -10324,174 +9887,9 @@
         },
         {
           "game_id": "bh3",
-          "version": "4.2.0",
-          "channel": "guofu",
-          "url": "https://app.bh3.com/public/Android/20200813-192255-gf_android_ota-versions-v4_2-Rosemarys_Nocturne_guofu.apk",
-          "source": "User-provided historical URL; original domain no longer resolves",
-          "status": 0,
-          "content_type": "",
-          "size": 0,
-          "last_modified": "",
-          "etag": "",
-          "md5": "",
-          "crc64": "",
-          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
-          "filename": "20200813-192255-gf_android_ota-versions-v4_2-Rosemarys_Nocturne_guofu.apk",
-          "captured_at": "2026-07-05T09:10:00.000000+00:00",
-          "updated_at": "2020-08-13T19:22:55+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://app.bh3.com/public/Android/20200813-192255-gf_android_ota-versions-v4_2-Rosemarys_Nocturne_guofu.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 0,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://app.bh3.com/public/Android/20200813-192255-gf_android_ota-versions-v4_2-Rosemarys_Nocturne_guofu.apk",
-                  "content_type": "",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
-        },
-        {
-          "game_id": "bh3",
-          "version": "4.1.0",
-          "channel": "guofu",
-          "url": "https://app.bh3.com/public/Android/20200702-194500-gf_android_ota-versions-v4_1-As_Thunders_Filled_the_Sky_guofu.apk",
-          "source": "User-provided historical URL; original domain no longer resolves",
-          "status": 0,
-          "content_type": "",
-          "size": 0,
-          "last_modified": "",
-          "etag": "",
-          "md5": "",
-          "crc64": "",
-          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
-          "filename": "20200702-194500-gf_android_ota-versions-v4_1-As_Thunders_Filled_the_Sky_guofu.apk",
-          "captured_at": "2026-07-05T09:10:00.000000+00:00",
-          "updated_at": "2020-07-02T19:45:00+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://app.bh3.com/public/Android/20200702-194500-gf_android_ota-versions-v4_1-As_Thunders_Filled_the_Sky_guofu.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 0,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://app.bh3.com/public/Android/20200702-194500-gf_android_ota-versions-v4_1-As_Thunders_Filled_the_Sky_guofu.apk",
-                  "content_type": "",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
-        },
-        {
-          "game_id": "bh3",
-          "version": "3.7.0",
-          "channel": "guofu",
-          "url": "https://app.bh3.com/public/Android/20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
-          "source": "User-provided historical URL; original domain no longer resolves",
-          "status": 0,
-          "content_type": "",
-          "size": 0,
-          "last_modified": "",
-          "etag": "",
-          "md5": "",
-          "crc64": "",
-          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
-          "filename": "20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
-          "captured_at": "2026-07-05T09:10:00.000000+00:00",
-          "updated_at": "2020-01-09T17:16:48+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://app.bh3.com/public/Android/20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 0,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://app.bh3.com/public/Android/20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
-                  "content_type": "",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
-        },
-        {
-          "game_id": "bh3",
           "version": "3.6.0",
           "channel": "guofu",
-          "url": "https://app.bh3.com/public/Android/20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja's%20Noir_guofu.apk",
+          "url": "https://app.bh3.com/public/Android/20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja%%20Noir_guofu.apk",
           "source": "Wayback Machine historical URL; original domain no longer resolves",
           "status": 0,
           "content_type": "",
@@ -10501,46 +9899,10 @@
           "md5": "",
           "crc64": "",
           "error": "<urlopen error [Errno -5] No address associated with hostname>",
-          "filename": "20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja's Noir_guofu.apk",
-          "captured_at": "2026-06-08T18:34:52.700463+00:00",
+          "filename": "20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja% Noir_guofu.apk",
+          "captured_at": "2026-07-06T00:21:43.092679+00:00",
           "updated_at": "2019-11-21T20:33:21+00:00",
-          "updated_at_source": "filename_timestamp",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://app.bh3.com/public/Android/20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja's%20Noir_guofu.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 0,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://app.bh3.com/public/Android/20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja's%20Noir_guofu.apk",
-                  "content_type": "",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "filename_timestamp"
         },
         {
           "game_id": "bh3",
@@ -10740,116 +10102,6 @@
                   "last_modified": "",
                   "etag": "",
                   "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
-        },
-        {
-          "game_id": "bh3",
-          "version": "2.2.0",
-          "channel": "guofu",
-          "url": "https://app.bh3.com/public/Android/20180329-android_versions_v2_2_the_Guardian_of_shenzhou_guofu.apk",
-          "source": "User-provided historical URL; original domain no longer resolves",
-          "status": 0,
-          "content_type": "",
-          "size": 0,
-          "last_modified": "",
-          "etag": "",
-          "md5": "",
-          "crc64": "",
-          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
-          "filename": "20180329-android_versions_v2_2_the_Guardian_of_shenzhou_guofu.apk",
-          "captured_at": "2026-07-05T09:10:00.000000+00:00",
-          "updated_at": "2018-03-29T00:00:00+00:00",
-          "updated_at_source": "filename_date",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://app.bh3.com/public/Android/20180329-android_versions_v2_2_the_Guardian_of_shenzhou_guofu.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 0,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://app.bh3.com/public/Android/20180329-android_versions_v2_2_the_Guardian_of_shenzhou_guofu.apk",
-                  "content_type": "",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
-        },
-        {
-          "game_id": "bh3",
-          "version": "2.1.1",
-          "channel": "guofu",
-          "url": "https://app.bh3.com/public/Android/20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
-          "source": "User-provided historical URL; original domain no longer resolves",
-          "status": 0,
-          "content_type": "",
-          "size": 0,
-          "last_modified": "",
-          "etag": "",
-          "md5": "",
-          "crc64": "",
-          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
-          "filename": "20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
-          "captured_at": "2026-07-05T09:10:00.000000+00:00",
-          "updated_at": "2018-02-08T00:00:00+00:00",
-          "updated_at_source": "filename_date",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://app.bh3.com/public/Android/20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 0,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://app.bh3.com/public/Android/20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
-                  "content_type": "",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
                   "age_hours": 1.53,
@@ -11517,61 +10769,6 @@
             },
             "generated_by": "scripts/build_android_availability.py"
           }
-        },
-        {
-          "game_id": "bh3",
-          "version": "0.9.1",
-          "channel": "guofu",
-          "url": "http://app.bh3.com:80/public/Android/Bh3_Guofu_Android-v0_9_1_public-0914.apk",
-          "source": "User-provided historical URL; original domain no longer resolves",
-          "status": 0,
-          "content_type": "",
-          "size": 0,
-          "last_modified": "",
-          "etag": "",
-          "md5": "",
-          "crc64": "",
-          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
-          "filename": "Bh3_Guofu_Android-v0_9_1_public-0914.apk",
-          "captured_at": "2026-07-05T09:10:00.000000+00:00",
-          "updated_at": "2016-09-14T00:00:00+00:00",
-          "updated_at_source": "filename_date",
-          "availability": {
-            "candidates": [
-              {
-                "url": "http://app.bh3.com:80/public/Android/Bh3_Guofu_Android-v0_9_1_public-0914.apk",
-                "probe": {
-                  "ok": false,
-                  "status": 0,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "http://app.bh3.com:80/public/Android/Bh3_Guofu_Android-v0_9_1_public-0914.apk",
-                  "content_type": "",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
         }
       ],
       "links": {
@@ -11685,21 +10882,6 @@
           "aria2": "data/android/lists/bh3_4.3.0_android.aria2.txt",
           "json": "data/android/lists/bh3_4.3.0_android.json"
         },
-        "4.2.0": {
-          "urls": "data/android/lists/bh3_4.2.0_android.urls.txt",
-          "aria2": "data/android/lists/bh3_4.2.0_android.aria2.txt",
-          "json": "data/android/lists/bh3_4.2.0_android.json"
-        },
-        "4.1.0": {
-          "urls": "data/android/lists/bh3_4.1.0_android.urls.txt",
-          "aria2": "data/android/lists/bh3_4.1.0_android.aria2.txt",
-          "json": "data/android/lists/bh3_4.1.0_android.json"
-        },
-        "3.7.0": {
-          "urls": "data/android/lists/bh3_3.7.0_android.urls.txt",
-          "aria2": "data/android/lists/bh3_3.7.0_android.aria2.txt",
-          "json": "data/android/lists/bh3_3.7.0_android.json"
-        },
         "3.6.0": {
           "urls": "data/android/lists/bh3_3.6.0_android.urls.txt",
           "aria2": "data/android/lists/bh3_3.6.0_android.aria2.txt",
@@ -11724,16 +10906,6 @@
           "urls": "data/android/lists/bh3_3.2.0_android.urls.txt",
           "aria2": "data/android/lists/bh3_3.2.0_android.aria2.txt",
           "json": "data/android/lists/bh3_3.2.0_android.json"
-        },
-        "2.2.0": {
-          "urls": "data/android/lists/bh3_2.2.0_android.urls.txt",
-          "aria2": "data/android/lists/bh3_2.2.0_android.aria2.txt",
-          "json": "data/android/lists/bh3_2.2.0_android.json"
-        },
-        "2.1.1": {
-          "urls": "data/android/lists/bh3_2.1.1_android.urls.txt",
-          "aria2": "data/android/lists/bh3_2.1.1_android.aria2.txt",
-          "json": "data/android/lists/bh3_2.1.1_android.json"
         },
         "2.0.0": {
           "urls": "data/android/lists/bh3_2.0.0_android.urls.txt",
@@ -11794,11 +10966,6 @@
           "urls": "data/android/lists/bh3_0.9.9_android.urls.txt",
           "aria2": "data/android/lists/bh3_0.9.9_android.aria2.txt",
           "json": "data/android/lists/bh3_0.9.9_android.json"
-        },
-        "0.9.1": {
-          "urls": "data/android/lists/bh3_0.9.1_android.urls.txt",
-          "aria2": "data/android/lists/bh3_0.9.1_android.aria2.txt",
-          "json": "data/android/lists/bh3_0.9.1_android.json"
         }
       }
     },
@@ -13034,43 +12201,7 @@
           "filename": "1744344831_signed_aligned_ReYun_gwaz_GW_Build_CN_878_7155_9889_1744280284_3532_100.apk",
           "captured_at": "2026-06-06T20:21:58.318080+00:00",
           "updated_at": "2025-04-14T15:20:37+00:00",
-          "updated_at_source": "apk_last_modified",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://gf2-web-preregister-api.sunborngame.com/website/url_manage?timestamp=1780775971&nonce=c20j1x&sign=74ca012c6a9ef865f150e6613462bb5a",
-                "probe": {
-                  "ok": true,
-                  "status": 200,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://gf2-web-preregister-api.sunborngame.com/website/url_manage?timestamp=1780775971&nonce=c20j1x&sign=74ca012c6a9ef865f150e6613462bb5a",
-                  "content_type": "application/vnd.android.package-archive",
-                  "size": 1852239327,
-                  "last_modified": "Mon, 14 Apr 2025 15:20:37 GMT",
-                  "etag": "6B809BAB832F4972F742BB61F5865121-400",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "high"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "http_2xx",
-              "preferred_url": "https://gf2-web-preregister-api.sunborngame.com/website/url_manage?timestamp=1780775971&nonce=c20j1x&sign=74ca012c6a9ef865f150e6613462bb5a",
-              "confidence": "high",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "apk_last_modified"
         }
       ],
       "links": {
@@ -13230,43 +12361,7 @@
           "filename": "endfield-hg-1-1.3.4.apk",
           "captured_at": "2026-06-06T18:35:34.842095+00:00",
           "updated_at": "2026-05-29T08:26:57+00:00",
-          "updated_at_source": "apk_last_modified",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
-                "probe": {
-                  "ok": true,
-                  "status": 200,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-05T16:14:20.030241+00:00",
-                  "final_url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
-                  "content_type": "application/vnd.android.package-archive",
-                  "size": 1750465244,
-                  "last_modified": "Fri, 29 May 2026 08:26:57 GMT",
-                  "etag": "4F445C5491E631F9214A9C334D4B9C2C-400",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.53,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "high"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "http_2xx",
-              "preferred_url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
-              "confidence": "high",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
+          "updated_at_source": "apk_last_modified"
         }
       ],
       "links": {

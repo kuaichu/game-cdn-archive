@@ -16,6 +16,42 @@
     "filename": "CBJQ.3.3.0.82.jinshan.20251029164128.apk",
     "captured_at": "2026-06-06T21:03:03.258915+00:00",
     "updated_at": "2025-11-05T04:33:29+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.3.0.82.jinshan.20251029164128.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.3.0.82.jinshan.20251029164128.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1408190389,
+            "last_modified": "Wed, 05 Nov 2025 04:33:29 GMT",
+            "etag": "97e2c94472f060ca07c41bc36e2ada49-168",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.53,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.3.0.82.jinshan.20251029164128.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

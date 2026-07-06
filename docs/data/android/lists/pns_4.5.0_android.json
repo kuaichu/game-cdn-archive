@@ -17,7 +17,43 @@
     "filename": "20260602-v4_5-zspms_A1372.apk",
     "captured_at": "2026-06-21T08:45:43.010220+00:00",
     "updated_at": "2026-05-29T07:21:14+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://zspms-txcdn-media.kurogame.com/install/20260602-v4_5-zspms_A1372.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "final_url": "https://zspms-txcdn-media.kurogame.com/install/20260602-v4_5-zspms_A1372.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2083232369,
+            "last_modified": "Fri, 29 May 2026 07:21:14 GMT",
+            "etag": "8568016C5C9963854571A363BC79641C-400",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.53,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://zspms-txcdn-media.kurogame.com/install/20260602-v4_5-zspms_A1372.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   },
   {
     "game_id": "pns",
@@ -37,6 +73,42 @@
     "filename": "20260602-v4_5-zspms_A1346.apk",
     "captured_at": "2026-06-06T19:43:20.812956+00:00",
     "updated_at": "2026-05-29T07:21:14+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://zspms-txcdn-media.kurogame.com/install/20260602-v4_5-zspms_A1346.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "final_url": "https://zspms-txcdn-media.kurogame.com/install/20260602-v4_5-zspms_A1346.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2083179121,
+            "last_modified": "Fri, 29 May 2026 07:21:14 GMT",
+            "etag": "A1B5DDBA7747A516E72F7B41CD5D3291-400",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.53,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://zspms-txcdn-media.kurogame.com/install/20260602-v4_5-zspms_A1346.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]
