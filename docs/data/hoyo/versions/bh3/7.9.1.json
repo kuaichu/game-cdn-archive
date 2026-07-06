@@ -5,7 +5,43 @@
       "name": "BH3_v7.9.0_37db88484689_m.7z",
       "url": "https://autopatchcn.bh3.com/ptpublic/rel/20241031142146_Q5Xm5aZOG1hPyJZW/PC/BH3_v7.9.0_37db88484689_m.7z",
       "checksum": "7c8ce62b48ecdd54c61c5e140f04e008",
-      "size": 20467806960
+      "size": 20467806960,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://autopatchcn.bh3.com/ptpublic/rel/20241031142146_Q5Xm5aZOG1hPyJZW/PC/BH3_v7.9.0_37db88484689_m.7z",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-06T08:42:01.524Z",
+              "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20241031142146_Q5Xm5aZOG1hPyJZW/PC/BH3_v7.9.0_37db88484689_m.7z",
+              "content_type": "",
+              "size": 20467806960,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20241031142146_Q5Xm5aZOG1hPyJZW/PC/BH3_v7.9.0_37db88484689_m.7z",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     }
   },
   "voice": {},
@@ -15,7 +51,43 @@
         "name": "game_7.9.0_7.9.1_diff_eKgosBseIgDxwyKn.7z",
         "url": "https://autopatchcn.bh3.com/tmp/pc_client/product/update/bh3_cn/game_7.9.0_7.9.1_diff_eKgosBseIgDxwyKn.7z",
         "checksum": "f56c5c15375b5c08ab4af93a2b0276a3",
-        "size": 9989
+        "size": 9989,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.bh3.com/tmp/pc_client/product/update/bh3_cn/game_7.9.0_7.9.1_diff_eKgosBseIgDxwyKn.7z",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-06T08:42:01.524Z",
+                "final_url": "https://autopatchcn.bh3.com/tmp/pc_client/product/update/bh3_cn/game_7.9.0_7.9.1_diff_eKgosBseIgDxwyKn.7z",
+                "content_type": "",
+                "size": 9989,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.bh3.com/tmp/pc_client/product/update/bh3_cn/game_7.9.0_7.9.1_diff_eKgosBseIgDxwyKn.7z",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       "voice": {}
     }

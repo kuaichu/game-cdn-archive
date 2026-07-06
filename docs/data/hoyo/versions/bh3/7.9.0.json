@@ -5,7 +5,43 @@
       "name": "BH3_v7.9.0_37db88484689.7z",
       "url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/PC/BH3_v7.9.0_37db88484689.7z",
       "checksum": "a8596e0d7b4c1378587ca7818e1dce35",
-      "size": 20610529816
+      "size": 20610529816,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/PC/BH3_v7.9.0_37db88484689.7z",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-06T08:42:01.524Z",
+              "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/PC/BH3_v7.9.0_37db88484689.7z",
+              "content_type": "",
+              "size": 20610529816,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/PC/BH3_v7.9.0_37db88484689.7z",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     }
   },
   "voice": {},

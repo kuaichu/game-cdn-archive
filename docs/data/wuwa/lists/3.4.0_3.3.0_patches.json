@@ -9,7 +9,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_0_1779561429328.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_0_1779561429328.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_0_1779561429328.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_0_1779561429328.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:23.552Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_0_1779561429328.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 1388953633,
+            "last_modified": "Sun, 24 May 2026 03:32:45 GMT",
+            "etag": "5391fe4aab72bbb433792af6fff0fed8-3",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_0_1779561429328.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_1_1779562627353.krpdiff",
@@ -21,7 +57,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_1_1779562627353.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_1_1779562627353.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_1_1779562627353.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_1_1779562627353.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:23.619Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_1_1779562627353.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 36716376,
+            "last_modified": "Sun, 24 May 2026 03:33:08 GMT",
+            "etag": "37548853e9b7d4d53d8d6d2fcf9c1b8d",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_1_1779562627353.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_2_1779562672210.krpdiff",
@@ -33,7 +105,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_2_1779562672210.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_2_1779562672210.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_2_1779562672210.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_2_1779562672210.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:23.690Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_2_1779562672210.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 261225348,
+            "last_modified": "Sun, 24 May 2026 03:33:42 GMT",
+            "etag": "43f83afa594c04798e8d931538048f98",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_2_1779562672210.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_3_1779562738440.krpdiff",
@@ -45,7 +153,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_3_1779562738440.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_3_1779562738440.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_3_1779562738440.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_3_1779562738440.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:23.757Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_3_1779562738440.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 394063,
+            "last_modified": "Sun, 24 May 2026 03:33:58 GMT",
+            "etag": "2375d8ea87019bbcaf9b4e0a105ffb3b",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_3_1779562738440.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_4_1779562749785.krpdiff",
@@ -57,7 +201,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_4_1779562749785.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_4_1779562749785.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_4_1779562749785.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_4_1779562749785.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:23.828Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_4_1779562749785.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 156142,
+            "last_modified": "Sun, 24 May 2026 03:34:01 GMT",
+            "etag": "60e4e559fa37b730a9d03305b64af26f",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_4_1779562749785.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_5_1779562753633.krpdiff",
@@ -69,7 +249,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_5_1779562753633.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_5_1779562753633.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_5_1779562753633.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_5_1779562753633.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:23.895Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_5_1779562753633.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 1434000907,
+            "last_modified": "Sun, 24 May 2026 03:34:01 GMT",
+            "etag": "ad7e96634261328e531aa3df61ae87ec-3",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_5_1779562753633.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_6_1779563050053.krpdiff",
@@ -81,7 +297,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_6_1779563050053.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_6_1779563050053.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_6_1779563050053.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_6_1779563050053.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:23.980Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_6_1779563050053.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 21559765,
+            "last_modified": "Sun, 24 May 2026 03:34:02 GMT",
+            "etag": "5673fbef4b69e42675babbcea201ad2b",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_6_1779563050053.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_7_1779563083927.krpdiff",
@@ -93,7 +345,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_7_1779563083927.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_7_1779563083927.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_7_1779563083927.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_7_1779563083927.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:24.065Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_7_1779563083927.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 93653249,
+            "last_modified": "Sun, 24 May 2026 03:34:03 GMT",
+            "etag": "f3b429d38f5b03984370b3b2f74317ac",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_7_1779563083927.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_8_1779563297252.krpdiff",
@@ -105,7 +393,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_8_1779563297252.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_8_1779563297252.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_8_1779563297252.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_8_1779563297252.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:24.149Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_8_1779563297252.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 296917720,
+            "last_modified": "Sun, 24 May 2026 03:34:07 GMT",
+            "etag": "9c513cbd8ce3ebd3bbf7193252ccc6d4",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_8_1779563297252.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_9_1779563442504.krpdiff",
@@ -117,7 +441,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_9_1779563442504.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_9_1779563442504.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_9_1779563442504.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_9_1779563442504.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:24.214Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_9_1779563442504.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 104866612,
+            "last_modified": "Sun, 24 May 2026 03:34:10 GMT",
+            "etag": "913544bbe6f4b1681db481ce7efcfd27",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_9_1779563442504.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_10_1779563609996.krpdiff",
@@ -129,7 +489,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_10_1779563609996.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_10_1779563609996.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_10_1779563609996.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_10_1779563609996.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:24.284Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_10_1779563609996.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 219946597,
+            "last_modified": "Sun, 24 May 2026 03:32:48 GMT",
+            "etag": "c7031c34598612e2c928fd4d39b71409",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_10_1779563609996.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_11_1779563801349.krpdiff",
@@ -141,7 +537,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_11_1779563801349.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_11_1779563801349.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_11_1779563801349.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_11_1779563801349.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:24.366Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_11_1779563801349.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 265933882,
+            "last_modified": "Sun, 24 May 2026 03:32:52 GMT",
+            "etag": "560427ca9c13d25b317aad41627091f2",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_11_1779563801349.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_12_1779563957136.krpdiff",
@@ -153,7 +585,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_12_1779563957136.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_12_1779563957136.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_12_1779563957136.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_12_1779563957136.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:24.433Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_12_1779563957136.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 106472833,
+            "last_modified": "Sun, 24 May 2026 03:32:56 GMT",
+            "etag": "a2780d1acfc4c80109573b55dc35d021",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_12_1779563957136.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_13_1779564010355.krpdiff",
@@ -165,7 +633,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_13_1779564010355.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_13_1779564010355.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_13_1779564010355.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_13_1779564010355.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:24.522Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_13_1779564010355.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 512,
+            "last_modified": "Sun, 24 May 2026 03:32:56 GMT",
+            "etag": "f9e6ff437fa943e77f3b0105efdb67f4",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_13_1779564010355.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_14_1779564014005.krpdiff",
@@ -177,7 +681,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_14_1779564014005.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_14_1779564014005.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_14_1779564014005.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_14_1779564014005.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:24.605Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_14_1779564014005.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 1843518705,
+            "last_modified": "Sun, 24 May 2026 03:32:57 GMT",
+            "etag": "b6db44bb4d5c901349f574148a575d98-4",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_14_1779564014005.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_15_1779564426479.krpdiff",
@@ -189,7 +729,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_15_1779564426479.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_15_1779564426479.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_15_1779564426479.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_15_1779564426479.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:24.678Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_15_1779564426479.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 39232783,
+            "last_modified": "Sun, 24 May 2026 03:32:59 GMT",
+            "etag": "cf390ae47ad6e0c0fdf7abaeec648593",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_15_1779564426479.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_16_1779564444291.krpdiff",
@@ -201,7 +777,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_16_1779564444291.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_16_1779564444291.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_16_1779564444291.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_16_1779564444291.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:24.781Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_16_1779564444291.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 72364321,
+            "last_modified": "Sun, 24 May 2026 03:33:01 GMT",
+            "etag": "32221596c0a311b926179e48072ef6d3",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_16_1779564444291.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_17_1779564502480.krpdiff",
@@ -213,7 +825,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_17_1779564502480.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_17_1779564502480.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_17_1779564502480.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_17_1779564502480.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:25.337Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_17_1779564502480.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 13536668,
+            "last_modified": "Sun, 24 May 2026 03:33:01 GMT",
+            "etag": "17066ae46d8a43b4a416c478103ba4c5",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_17_1779564502480.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_18_1779564509851.krpdiff",
@@ -225,7 +873,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_18_1779564509851.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_18_1779564509851.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_18_1779564509851.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_18_1779564509851.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:25.425Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_18_1779564509851.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 28866489,
+            "last_modified": "Sun, 24 May 2026 03:33:02 GMT",
+            "etag": "9c92e57220000d0bad49dfacd25835f2",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_18_1779564509851.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_19_1779564521185.krpdiff",
@@ -237,7 +921,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_19_1779564521185.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_19_1779564521185.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_19_1779564521185.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_19_1779564521185.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:25.492Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_19_1779564521185.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 279859616,
+            "last_modified": "Sun, 24 May 2026 03:33:06 GMT",
+            "etag": "b9c309aa3834cd2dac3c2eb9c99cf43d",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_19_1779564521185.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_20_1779564590153.krpdiff",
@@ -249,7 +969,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_20_1779564590153.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_20_1779564590153.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_20_1779564590153.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_20_1779564590153.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:25.559Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_20_1779564590153.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 529663518,
+            "last_modified": "Sun, 24 May 2026 03:33:14 GMT",
+            "etag": "839ac68992e579d71b855cf2e75db6f9",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_20_1779564590153.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_21_1779564774298.krpdiff",
@@ -261,7 +1017,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_21_1779564774298.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_21_1779564774298.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_21_1779564774298.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_21_1779564774298.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:25.629Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_21_1779564774298.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 42381553,
+            "last_modified": "Sun, 24 May 2026 03:33:16 GMT",
+            "etag": "e02e7fcfcfa16e19fb3299de9acb9b08",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_21_1779564774298.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_22_1779564790736.krpdiff",
@@ -273,7 +1065,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_22_1779564790736.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_22_1779564790736.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_22_1779564790736.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_22_1779564790736.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:25.765Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_22_1779564790736.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 127216792,
+            "last_modified": "Sun, 24 May 2026 03:33:18 GMT",
+            "etag": "fe7ee0a1adf5c7fb9add35f2987591b4",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_22_1779564790736.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_23_1779564849740.krpdiff",
@@ -285,7 +1113,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_23_1779564849740.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_23_1779564849740.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_23_1779564849740.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_23_1779564849740.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:25.834Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_23_1779564849740.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 109863644,
+            "last_modified": "Sun, 24 May 2026 03:33:19 GMT",
+            "etag": "35b6fcce5f457b170202e2b7690adc75",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_23_1779564849740.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_24_1779564880777.krpdiff",
@@ -297,7 +1161,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_24_1779564880777.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_24_1779564880777.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_24_1779564880777.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_24_1779564880777.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:25.903Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_24_1779564880777.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 981343143,
+            "last_modified": "Sun, 24 May 2026 03:33:28 GMT",
+            "etag": "6e77754d0e3c827afc8f21067a776030",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.943,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_24_1779564880777.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_25_1779566740650.krpdiff",
@@ -309,7 +1209,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_25_1779566740650.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_25_1779566740650.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_25_1779566740650.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_25_1779566740650.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:25.986Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_25_1779566740650.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 28349987,
+            "last_modified": "Sun, 24 May 2026 03:33:20 GMT",
+            "etag": "e6d649ee685486a289d0534a5bfc192c",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_25_1779566740650.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_26_1779566753629.krpdiff",
@@ -321,7 +1257,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_26_1779566753629.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_26_1779566753629.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_26_1779566753629.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_26_1779566753629.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:26.076Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_26_1779566753629.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 422690299,
+            "last_modified": "Sun, 24 May 2026 03:33:25 GMT",
+            "etag": "8e74e5642559ef0f03099ef6ca81065b",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_26_1779566753629.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_27_1779566916384.krpdiff",
@@ -333,7 +1305,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_27_1779566916384.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_27_1779566916384.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_27_1779566916384.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_27_1779566916384.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:26.166Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_27_1779566916384.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 319243433,
+            "last_modified": "Sun, 24 May 2026 03:33:31 GMT",
+            "etag": "30b2bbd5230ef6c344540ffbef51a551",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_27_1779566916384.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_28_1779567050579.krpdiff",
@@ -345,7 +1353,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_28_1779567050579.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_28_1779567050579.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_28_1779567050579.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_28_1779567050579.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:26.233Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_28_1779567050579.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 347732170,
+            "last_modified": "Sun, 24 May 2026 03:33:37 GMT",
+            "etag": "1211df684658c72563949f6c65c03ce1",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_28_1779567050579.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_29_1779567206400.krpdiff",
@@ -357,7 +1401,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_29_1779567206400.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_29_1779567206400.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_29_1779567206400.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_29_1779567206400.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:26.302Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_29_1779567206400.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 441164500,
+            "last_modified": "Sun, 24 May 2026 03:33:39 GMT",
+            "etag": "422acda2b9706bb73466829224004e5a",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_29_1779567206400.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_30_1779567372872.krpdiff",
@@ -369,7 +1449,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_30_1779567372872.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_30_1779567372872.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_30_1779567372872.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_30_1779567372872.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:26.372Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_30_1779567372872.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 43084940,
+            "last_modified": "Sun, 24 May 2026 03:33:42 GMT",
+            "etag": "9b3be2b30c08d7291c639464efcee463",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_30_1779567372872.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_31_1779567389122.krpdiff",
@@ -381,7 +1497,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_31_1779567389122.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_31_1779567389122.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_31_1779567389122.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_31_1779567389122.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:26.450Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_31_1779567389122.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 52089884,
+            "last_modified": "Sun, 24 May 2026 03:33:43 GMT",
+            "etag": "fdd3f08ce21d52f0bb7cc65afc83f807",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_31_1779567389122.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_32_1779567405994.krpdiff",
@@ -393,7 +1545,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_32_1779567405994.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_32_1779567405994.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_32_1779567405994.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_32_1779567405994.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:26.516Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_32_1779567405994.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 114403850,
+            "last_modified": "Sun, 24 May 2026 03:33:43 GMT",
+            "etag": "5bfaf4567bc85a6e25f73be16387694e",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_32_1779567405994.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_33_1779567437690.krpdiff",
@@ -405,7 +1593,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_33_1779567437690.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_33_1779567437690.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_33_1779567437690.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_33_1779567437690.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:26.584Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_33_1779567437690.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 1405557903,
+            "last_modified": "Sun, 24 May 2026 03:33:43 GMT",
+            "etag": "e0bef5f4c7fc4c200dc273ca6f415b2b-3",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_33_1779567437690.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_34_1779567942854.krpdiff",
@@ -417,7 +1641,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_34_1779567942854.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_34_1779567942854.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_34_1779567942854.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_34_1779567942854.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:26.679Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_34_1779567942854.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 908993580,
+            "last_modified": "Sun, 24 May 2026 03:33:51 GMT",
+            "etag": "3285f4aa67c58dba501a9b26b4bea27a",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_34_1779567942854.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_35_1779568223339.krpdiff",
@@ -429,7 +1689,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_35_1779568223339.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_35_1779568223339.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_35_1779568223339.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_35_1779568223339.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:26.754Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_35_1779568223339.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 391282402,
+            "last_modified": "Sun, 24 May 2026 03:33:48 GMT",
+            "etag": "d94a77a098216eb621f87159c9993a73",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_35_1779568223339.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_36_1779568349660.krpdiff",
@@ -441,7 +1737,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_36_1779568349660.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_36_1779568349660.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_36_1779568349660.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_36_1779568349660.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:26.822Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_36_1779568349660.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 203949408,
+            "last_modified": "Sun, 24 May 2026 03:33:53 GMT",
+            "etag": "cab4880605603ad951b6eef7348d9bb0",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_36_1779568349660.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_37_1779568494689.krpdiff",
@@ -453,7 +1785,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_37_1779568494689.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_37_1779568494689.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_37_1779568494689.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_37_1779568494689.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:26.921Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_37_1779568494689.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 337405642,
+            "last_modified": "Sun, 24 May 2026 03:33:58 GMT",
+            "etag": "afa8ad8407920b9e88688d2090a07a39",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_37_1779568494689.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_38_1779568865885.krpdiff",
@@ -465,7 +1833,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_38_1779568865885.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_38_1779568865885.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_38_1779568865885.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_38_1779568865885.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:26.992Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_38_1779568865885.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 1317546,
+            "last_modified": "Sun, 24 May 2026 03:33:57 GMT",
+            "etag": "907b2d6c0d63954fa349c46a1a894599",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_38_1779568865885.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_39_1779568868617.krpdiff",
@@ -477,7 +1881,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_39_1779568868617.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_39_1779568868617.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_39_1779568868617.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_39_1779568868617.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:27.060Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_39_1779568868617.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 1046793660,
+            "last_modified": "Sun, 24 May 2026 03:34:08 GMT",
+            "etag": "f6ad70e19e75fcfba3b43da94d584ab1",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_39_1779568868617.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_40_1779569099717.krpdiff",
@@ -489,7 +1929,43 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_40_1779569099717.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_40_1779569099717.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_40_1779569099717.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_40_1779569099717.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:27.159Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_40_1779569099717.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 130903028,
+            "last_modified": "Sun, 24 May 2026 03:34:00 GMT",
+            "etag": "5b44139272ea50c4985689d90f433379",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_40_1779569099717.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   },
   {
     "dest": "3.3.0_3.4.0_group_41_1779569139453.krpdiff",
@@ -501,6 +1977,42 @@
       "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_41_1779569139453.krpdiff",
       "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_41_1779569139453.krpdiff",
       "https://pcdownload-qcloud.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_41_1779569139453.krpdiff"
-    ]
+    ],
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_41_1779569139453.krpdiff",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-06T09:43:27.228Z",
+            "final_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_41_1779569139453.krpdiff",
+            "content_type": "application/octet-stream",
+            "size": 78845962,
+            "last_modified": "Sun, 24 May 2026 03:34:01 GMT",
+            "etag": "54e2909b5f88e6cd42710a3b942d1f44",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.942,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_41_1779569139453.krpdiff",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_wuwa_availability.py"
+    }
   }
 ]

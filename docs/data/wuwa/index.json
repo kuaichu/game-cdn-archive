@@ -28,7 +28,49 @@
       "last_modified": "Tue, 16 Jun 2026 16:25:46 GMT",
       "last_modified_source": "resource_index",
       "last_modified_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.1/NWGqGHYNAOKIDfGQPIItDWmMRdXFPLDN/resource/10003/3.4.1/indexFile.json",
-      "last_modified_status": 200
+      "last_modified_status": 200,
+      "availability_counts": {
+        "available": 693
+      },
+      "availability_reasons": {
+        "http_2xx": 693
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://3.4.1",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://3.4.1",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "3.4.0",
@@ -47,7 +89,49 @@
       "last_modified": "Sun, 24 May 2026 03:31:24 GMT",
       "last_modified_source": "resource_index",
       "last_modified_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/indexFile.json",
-      "last_modified_status": 200
+      "last_modified_status": 200,
+      "availability_counts": {
+        "available": 732
+      },
+      "availability_reasons": {
+        "http_2xx": 732
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://3.4.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://3.4.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "3.3.0",
@@ -64,7 +148,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2026-04-29T21:14:30Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 696
+      },
+      "availability_reasons": {
+        "http_2xx": 696
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://3.3.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://3.3.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "3.2.2",
@@ -82,7 +208,49 @@
       "last_modified": "Thu, 09 Apr 2026 03:25:22 GMT",
       "last_modified_source": "resource_index",
       "last_modified_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.2.2/sUfHBBTqFSGticVyXaeclYjVwoLQhMEE/resource/10003/3.2.2/indexFile.json",
-      "last_modified_status": 200
+      "last_modified_status": 200,
+      "availability_counts": {
+        "available": 683
+      },
+      "availability_reasons": {
+        "http_2xx": 683
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://3.2.2",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://3.2.2",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "3.2.1",
@@ -99,7 +267,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2026-04-01T03:33:31Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 681
+      },
+      "availability_reasons": {
+        "http_2xx": 681
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://3.2.1",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://3.2.1",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "3.1.3",
@@ -116,7 +326,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2026-03-10T11:33:12Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 675
+      },
+      "availability_reasons": {
+        "http_2xx": 675
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://3.1.3",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://3.1.3",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "3.1.2",
@@ -133,7 +385,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2026-03-04T08:26:29Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 675
+      },
+      "availability_reasons": {
+        "http_2xx": 675
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://3.1.2",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://3.1.2",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "3.1.0",
@@ -150,7 +444,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2026-02-04T20:45:23Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 675
+      },
+      "availability_reasons": {
+        "http_2xx": 675
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://3.1.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://3.1.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "3.0.3",
@@ -167,7 +503,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2026-01-14T04:00:30Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 667
+      },
+      "availability_reasons": {
+        "http_2xx": 667
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://3.0.3",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://3.0.3",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "3.0.2",
@@ -184,7 +562,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2026-01-05T08:44:51Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 666
+      },
+      "availability_reasons": {
+        "http_2xx": 666
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://3.0.2",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://3.0.2",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "3.0.1",
@@ -201,7 +621,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-12-25T02:18:56Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 666
+      },
+      "availability_reasons": {
+        "http_2xx": 666
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://3.0.1",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://3.0.1",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "3.0.0",
@@ -218,7 +680,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-12-24T20:31:26Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 666
+      },
+      "availability_reasons": {
+        "http_2xx": 666
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://3.0.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://3.0.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.8.0",
@@ -236,7 +740,49 @@
       "last_modified": "Thu, 06 Nov 2025 15:13:25 GMT",
       "last_modified_source": "resource_index",
       "last_modified_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/2.8.0/QqtoWZIMsZkiMQSwcmrYEFqYozeLagjd/resource/10003/2.8.0/indexFile.json",
-      "last_modified_status": 200
+      "last_modified_status": 200,
+      "availability_counts": {
+        "available": 671
+      },
+      "availability_reasons": {
+        "http_2xx": 671
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.8.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.8.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.7.0",
@@ -253,7 +799,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-10-08T20:40:48Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 667
+      },
+      "availability_reasons": {
+        "http_2xx": 667
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.7.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.7.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.6.2",
@@ -271,7 +859,49 @@
       "last_modified": "Tue, 09 Sep 2025 15:16:44 GMT",
       "last_modified_source": "resource_index",
       "last_modified_url": "https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/2.6.2/DYINNoSACrMDUahXEhMxmWqVOHJjvFSH/resource/10003/2.6.2/indexFile.json",
-      "last_modified_status": 200
+      "last_modified_status": 200,
+      "availability_counts": {
+        "available": 659
+      },
+      "availability_reasons": {
+        "http_2xx": 659
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.6.2",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.6.2",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.6.1",
@@ -288,7 +918,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-09-01T10:46:23Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 659
+      },
+      "availability_reasons": {
+        "http_2xx": 659
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.6.1",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.6.1",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.6.0",
@@ -305,7 +977,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-08-27T20:25:03Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 659
+      },
+      "availability_reasons": {
+        "http_2xx": 659
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.6.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.6.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.5.1",
@@ -322,7 +1036,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-07-31T10:25:08Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 664
+      },
+      "availability_reasons": {
+        "http_2xx": 664
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.5.1",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.5.1",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.5.0",
@@ -339,7 +1095,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-07-23T20:28:36Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 664
+      },
+      "availability_reasons": {
+        "http_2xx": 664
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.5.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.5.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.4.1",
@@ -356,7 +1154,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-06-14T03:14:38Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 657
+      },
+      "availability_reasons": {
+        "http_2xx": 657
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.4.1",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.4.1",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.4.0",
@@ -373,7 +1213,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-06-11T20:25:43Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 657
+      },
+      "availability_reasons": {
+        "http_2xx": 657
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.4.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.4.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.3.1",
@@ -391,7 +1273,49 @@
       "last_modified": "Fri, 16 May 2025 08:30:32 GMT",
       "last_modified_source": "resource_index",
       "last_modified_url": "https://pcdownload-huoshan.aki-game.com/launcher/game/G152/2.3.1/xAgwspCwdYJOMlAPyLUCRnoCkGlYgUkv/resource.json",
-      "last_modified_status": 200
+      "last_modified_status": 200,
+      "availability_counts": {
+        "available": 660
+      },
+      "availability_reasons": {
+        "http_2xx": 660
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.3.1",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.3.1",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.3.0",
@@ -408,7 +1332,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-04-28T20:23:09Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 660
+      },
+      "availability_reasons": {
+        "http_2xx": 660
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.3.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.3.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.2.1",
@@ -426,7 +1392,49 @@
       "last_modified": "Mon, 24 Feb 2025 08:44:55 GMT",
       "last_modified_source": "resource_index",
       "last_modified_url": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/2.2.1/WpwvP26jdT38AzADIHmpNI95bpCszODv/resource.json",
-      "last_modified_status": 200
+      "last_modified_status": 200,
+      "availability_counts": {
+        "available": 549
+      },
+      "availability_reasons": {
+        "http_2xx": 549
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.2.1",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.2.1",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.2.0",
@@ -444,7 +1452,49 @@
       "last_modified": "Fri, 21 Feb 2025 07:28:05 GMT",
       "last_modified_source": "resource_index",
       "last_modified_url": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/2.2.0/4qOQXRgFtEbYo6glSpYrG6N5yMuscF97/resource.json",
-      "last_modified_status": 200
+      "last_modified_status": 200,
+      "availability_counts": {
+        "available": 549
+      },
+      "availability_reasons": {
+        "http_2xx": 549
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.2.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.2.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.1.1",
@@ -461,7 +1511,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-03-01T03:34:28Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 640
+      },
+      "availability_reasons": {
+        "http_2xx": 640
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.1.1",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.1.1",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.1.0",
@@ -478,7 +1570,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-02-12T20:22:00Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 553
+      },
+      "availability_reasons": {
+        "http_2xx": 553
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.1.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.1.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.0.3",
@@ -495,7 +1629,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-01-20T06:58:30Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 535
+      },
+      "availability_reasons": {
+        "http_2xx": 535
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.0.3",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.0.3",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.0.2",
@@ -512,7 +1688,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-01-03T12:39:26Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 535
+      },
+      "availability_reasons": {
+        "http_2xx": 535
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.0.2",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.0.2",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.0.1",
@@ -529,7 +1747,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-01-02T08:26:00Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 535
+      },
+      "availability_reasons": {
+        "http_2xx": 535
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.0.1",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.0.1",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "2.0.0",
@@ -546,7 +1806,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2025-01-01T20:20:59Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 535
+      },
+      "availability_reasons": {
+        "http_2xx": 535
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://2.0.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://2.0.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "1.4.3",
@@ -563,7 +1865,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2024-12-17T08:29:20Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 510
+      },
+      "availability_reasons": {
+        "http_2xx": 510
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://1.4.3",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://1.4.3",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "1.4.2",
@@ -580,7 +1924,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2024-12-10T09:24:34Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 510
+      },
+      "availability_reasons": {
+        "http_2xx": 510
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://1.4.2",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://1.4.2",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "1.4.1",
@@ -597,7 +1983,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2024-11-14T10:41:40Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 507
+      },
+      "availability_reasons": {
+        "http_2xx": 507
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://1.4.1",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://1.4.1",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "1.4.0",
@@ -614,7 +2042,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2024-11-13T20:21:38Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 507
+      },
+      "availability_reasons": {
+        "http_2xx": 507
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://1.4.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://1.4.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "1.3.0",
@@ -631,7 +2101,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2024-09-28T20:20:37Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 509
+      },
+      "availability_reasons": {
+        "http_2xx": 509
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://1.3.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://1.3.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "1.2.0",
@@ -648,7 +2160,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2024-08-14T22:18:10Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 512
+      },
+      "availability_reasons": {
+        "http_2xx": 512
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://1.2.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://1.2.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "1.1.1",
@@ -666,7 +2220,49 @@
       "last_modified": "Fri, 07 Jun 2024 04:18:50 GMT",
       "last_modified_source": "resource_index",
       "last_modified_url": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/1.1.1/a1vBvQhjfBJ6o7uxNFYORQUqH1xIb5pQ/resource.json",
-      "last_modified_status": 200
+      "last_modified_status": 200,
+      "availability_counts": {
+        "available": 491
+      },
+      "availability_reasons": {
+        "http_2xx": 491
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://1.1.1",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://1.1.1",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "1.1.0",
@@ -683,7 +2279,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2024-06-28T11:14:38Z",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 490
+      },
+      "availability_reasons": {
+        "http_2xx": 490
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://1.1.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://1.1.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "1.0.2",
@@ -700,7 +2338,49 @@
       "source_commit": "c38b8cb84e907a5f7550a630aafd32ccd380b643",
       "imported_at": "2026-07-05T14:39:08.384178+00:00",
       "release_date": "2024-06-28T19:12:48+08:00",
-      "release_date_source": "tomyjan_git_first_added"
+      "release_date_source": "tomyjan_git_first_added",
+      "availability_counts": {
+        "available": 494
+      },
+      "availability_reasons": {
+        "http_2xx": 494
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://1.0.2",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://1.0.2",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     },
     {
       "version": "1.0.0",
@@ -718,7 +2398,49 @@
       "last_modified": "Mon, 29 Apr 2024 07:59:50 GMT",
       "last_modified_source": "resource_index",
       "last_modified_url": "https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/1.0.0/ODPITqJuybUecE9ERVZsY8uV7uMHGIUw/resource.json",
-      "last_modified_status": 200
+      "last_modified_status": 200,
+      "availability_counts": {
+        "available": 494
+      },
+      "availability_reasons": {
+        "http_2xx": 494
+      },
+      "availability": {
+        "candidates": [
+          {
+            "url": "wuwa-live://1.0.0",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "WUWA_LIVE_SUMMARY",
+              "checked_at": "2026-07-06T08:45:29.904995+00:00",
+              "final_url": "wuwa-live://1.0.0",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_wuwa_availability.py"
+      }
     }
   ]
 }
