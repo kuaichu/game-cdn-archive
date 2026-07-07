@@ -53,7 +53,7 @@ frontend source of truth and must not be published.
 
 | Area | Data path | Main scripts | Validator / build checks | Notes |
 | --- | --- | --- | --- | --- |
-| NTE / 异环 PC | `docs/data/catalog.json`, `docs/data/url_lists/` | `archive_reslist_versions.py`, `build_urls_from_reslist.py`, `probe_reslists.py`, `update_nte_static.py`, `nte_downloader.py` | No dedicated staging validator yet; `validate_availability.py` covers migrated availability fields | Older catalog/list model. |
+| NTE / 异环 PC | `docs/data/catalog.json`, `docs/data/url_lists/` | `archive_reslist_versions.py`, `build_urls_from_reslist.py`, `update_nte_static.py`, `nte_downloader.py` | No dedicated staging validator yet; `validate_availability.py` covers migrated availability fields | Older catalog/list model. Legacy root `data/` captures were removed; use git history if the original 2026-06-04 NTE capture is needed. |
 | Endfield / 终末地 PC | `docs/data/endfield/index.json`, `versions.json`, `lists/` | `import_endfield_archive.py`, `promote_endfield_staging.py` | `validate_endfield_archive.py`, `build_endfield_availability.py` | Upstream archive + mirror metadata; still has aggregate `versions.json`. |
 | Arknights / 明日方舟 PC | `docs/data/arknights/index.json`, `versions.json`, `lists/` | `sync_arknights_pc.py`, `promote_arknights_pc_staging.py` | `validate_arknights_pc.py`, `build_arknights_availability.py` | Smallest validated pipeline. |
 | WuWa / 鸣潮 PC | `docs/data/wuwa/index.json`, `versions/`, `lists/` | `sync_wuwa.py`, `import_tomyjan_wuwa.py`, `merge_tomyjan_wuwa_staging.py`, `probe_wuwa_availability.py` | `validate_wuwa_split.py`, `build_wuwa_availability.py` | Reference split model; multi-CDN availability is precomputed, not frontend-probed. |

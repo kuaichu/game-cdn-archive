@@ -214,7 +214,6 @@ Important scripts:
 
 - `scripts/archive_reslist_versions.py`
 - `scripts/build_urls_from_reslist.py`
-- `scripts/probe_reslists.py`
 - `scripts/update_nte_static.py`
 - `scripts/nte_downloader.py`
 
@@ -224,6 +223,9 @@ Important architecture points:
 - Per-version full and patch lists already live outside the catalog.
 - The current tooling is based on ResList probing/decoding rather than the new
   staging/promote validator pattern.
+- Legacy root `data/` captures from the initial prototype were removed from the
+  working tree. The original `data/nte/1.1.5/capture-2026-06-04.*` files remain
+  recoverable from git commit `b4e5d51049` if forensic comparison is needed.
 
 Current status:
 

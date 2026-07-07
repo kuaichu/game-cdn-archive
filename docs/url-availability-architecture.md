@@ -214,15 +214,17 @@ does not use `url_status.json` to decide whether to show the package records.
 
 ## NTE Availability
 
-NTE has separate ResList probing tools:
+NTE has separate ResList decoding and download tools:
 
 ```text
-scripts/probe_reslists.py
+scripts/archive_reslist_versions.py
+scripts/build_urls_from_reslist.py
 scripts/nte_downloader.py
 ```
 
-These scripts probe versioned resource list archives and build per-version URL
-lists. Their availability model predates the newer split-validator pattern.
+These scripts probe or decode versioned resource list archives and build
+per-version URL lists. Their availability model predates the newer
+split-validator pattern.
 
 NTE URLs are also included in the cross-cutting health index through the
 generated JSON files.

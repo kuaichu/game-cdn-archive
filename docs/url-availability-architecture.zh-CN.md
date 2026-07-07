@@ -174,14 +174,15 @@ docs/data/arknights/versions.json
 
 ## NTE 可用性
 
-NTE 有单独的 ResList 探测工具：
+NTE 有单独的 ResList 解码和下载工具：
 
 ```text
-scripts/probe_reslists.py
+scripts/archive_reslist_versions.py
+scripts/build_urls_from_reslist.py
 scripts/nte_downloader.py
 ```
 
-这些脚本负责探测带版本号的资源列表归档，并生成每个版本的 URL 列表。它们的可用性模型早于后来的 split validator 架构。
+这些脚本负责探测或解码带版本号的资源列表归档，并生成每个版本的 URL 列表。它们的可用性模型早于后来的 split validator 架构。
 
 NTE 生成出来的 JSON 文件也会被跨数据集健康索引扫描。
 
