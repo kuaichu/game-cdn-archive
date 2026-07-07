@@ -165,6 +165,8 @@ zlib inflate
 
 对 app `1289`，观察到的 key seed 是 `1289@Patcher`，IV seed 是 `PatcherSDK`。两者都会用 ASCII `0` 补齐到 16 字节。
 
+本项目的 PatcherXML0 解码流程为独立逆向复现。社区中也存在同类实现，例如 [`Tobiichi-Origuchi/nte_patcher`](https://github.com/Tobiichi-Origuchi/nte_patcher)；该实现使用不同的 appId 样本，但同样指向 `appId@Patcher` 这一 key seed 构造规律，可作为交叉验证参考。本项目的重点不是提供运行时下载器，而是将解码后的 ResList 用于历史版本归档、URL 索引、可用性记录和数字保存。
+
 版本化 ResList 入口：
 
 ```text
