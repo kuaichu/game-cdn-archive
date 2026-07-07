@@ -266,7 +266,7 @@ def progress_block() -> str:
         PROGRESS_START,
         "<!-- 此区块由 scripts/update_readme_summary.py 生成，请勿手改。 -->",
         "",
-        f"当前仓库快照来自生成数据，检查时间：{markdown_time(catalog.get('last_checked_at'), catalog.get('generated_at'))}。",
+        f"当前仓库快照来自生成数据，检查时间：{markdown_time_normalized(source_time(catalog))}。",
         "",
         "| 范围 | 当前进度 |",
         "| --- | --- |",
