@@ -444,6 +444,7 @@ const nteVersions = () => state.nteCatalog.versions.filter((item) => item.status
 const nteVersion = () => state.nteCatalog.versions.find((item) => item.version === state.version);
 const nteFiles = () => nteVersion()?.[state.mode];
 const nteAvailability = (record) => record?.availability?.interpretation || null;
+const nteIsMajorRelease = (record) => record?.release_type === "major";
 const nteAvailabilityLabel = (record) => nteAvailability(record)?.display_label || (
   Number(record?.status || 0) >= 400 ? "链接失效" : record?.status === 200 ? "可用" : "状态未知"
 );
@@ -1113,8 +1114,6 @@ const versionButton = (item) => {
       </button>
     `;
   }
-  const family = item.version.split(".").slice(0, 2).join(".");
-  const isBase = item.version === `${family}.0`;
   if (state.mode === "android") {
     return `
       <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
@@ -1131,11 +1130,13 @@ const versionButton = (item) => {
     `;
   }
   if (isNte()) {
+    const isMajorRelease = nteIsMajorRelease(item);
+    const releaseTitle = isMajorRelease ? "该系列最早存档版本" : "同系列后续存档版本";
     return `
       <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
         <span class="version-number">${item.version}</span>
         <span class="caps">
-          <span class="cap ${isBase ? "green" : "amber"}">${isBase ? "大版本" : "补丁版"}</span>
+          <span class="cap ${isMajorRelease ? "green" : "amber"}" title="${releaseTitle}">${isMajorRelease ? "大版本" : "补丁版"}</span>
           <span class="cap slate">${fmtDateTime(item.last_modified)}</span>
           <span class="cap blue">完整</span>
           <span class="cap violet">清单</span>
@@ -1299,10 +1300,10 @@ const arknightsStats = () => {
 const nteStats = () => {
   const version = nteVersion();
   const family = version.version.split(".").slice(0, 2).join(".");
-  const isBase = version.version === `${family}.0`;
+  const isMajorRelease = nteIsMajorRelease(version);
   return [
     ["当前版本", version.version],
-    ["版本族", `${family} ${isBase ? "大版本" : "补丁版"}`],
+    ["版本族", `${family} ${isMajorRelease ? "大版本" : "补丁版"}`],
     ["清单时间", fmtDateTime(version.last_modified)],
     ["可用性", nteAvailabilityLabel(version)],
     ["完整文件", `${version.full.items} 个 / ${fmtBytes(version.full.bytes)}`],

@@ -23,6 +23,7 @@ from adapters.endfield import EndfieldAvailabilityAdapter  # noqa: E402
 from adapters.hoyo import HoyoAvailabilityAdapter  # noqa: E402
 from adapters.nte import NteAvailabilityAdapter  # noqa: E402
 from adapters.wuwa import WuwaAvailabilityAdapter  # noqa: E402
+from nte_versioning import version_family, version_key  # noqa: E402
 from scripts.availability_schema import (  # noqa: E402
     AVAILABILITY_REASONS,
     AVAILABILITY_STATES,
@@ -364,6 +365,8 @@ def validate_nte(root: Path) -> list[str]:
     if not isinstance(versions, list):
         return ["nte:versions_missing"]
 
+    errors.extend(validate_nte_release_types(versions))
+
     for row in versions:
         if not isinstance(row, dict):
             errors.append("nte:version_not_object")
@@ -399,6 +402,42 @@ def validate_nte(root: Path) -> list[str]:
                     errors.append(f"{item_path}:source_kind_not_metadata_inference:{item_source.get('kind')}")
                 if item_interpretation.get("confidence") == "high" or item_source.get("confidence") == "high":
                     errors.append(f"{item_path}:metadata_high_confidence")
+    return errors
+
+
+def validate_nte_release_types(versions: list[Any]) -> list[str]:
+    errors: list[str] = []
+    families: dict[str, list[dict[str, Any]]] = {}
+
+    for row in versions:
+        if not isinstance(row, dict):
+            continue
+        version = str(row.get("version") or "")
+        try:
+            family = version_family(version)
+        except ValueError:
+            errors.append(f"nte:{version}:invalid_version")
+            continue
+
+        if row.get("status") == 200 and row.get("full"):
+            release_type = row.get("release_type")
+            if release_type not in {"major", "patch"}:
+                errors.append(f"nte:{version}:release_type:{release_type}")
+            families.setdefault(family, []).append(row)
+        elif row.get("release_type") is not None:
+            errors.append(f"nte:{version}:release_type_on_unavailable:{row.get('release_type')}")
+
+    for family, rows in sorted(families.items()):
+        major_rows = [row for row in rows if row.get("release_type") == "major"]
+        if len(major_rows) != 1:
+            errors.append(f"nte:{family}:release_type_major_count:{len(major_rows)}")
+            continue
+        expected = min(rows, key=lambda row: version_key(str(row.get("version") or "")))
+        actual_version = major_rows[0].get("version")
+        expected_version = expected.get("version")
+        if actual_version != expected_version:
+            errors.append(f"nte:{family}:release_type_major_not_min:{actual_version}!={expected_version}")
+
     return errors
 
 

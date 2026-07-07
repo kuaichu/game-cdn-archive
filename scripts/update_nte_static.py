@@ -12,6 +12,7 @@ from pathlib import Path
 
 from archive_reslist_versions import process_version
 from nte_downloader import current_version_from_config, fetch_config, version_range, version_sort_key
+from nte_versioning import annotate_release_types
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -101,6 +102,7 @@ def main() -> None:
         copy_url_lists(temp_root)
 
     rows.sort(key=lambda row: version_sort_key(row["version"]))
+    annotate_release_types(rows)
     new_catalog = {
         **catalog,
         "last_checked_at": checked_at,

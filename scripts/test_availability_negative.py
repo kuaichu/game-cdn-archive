@@ -795,6 +795,7 @@ def valid_nte_root(root: Path) -> None:
 
     row = {
         "version": version,
+        "release_type": "major",
         "status": 200,
         "reslist_url": reslist_url,
         "last_modified": "Mon, 06 Jul 2026 00:00:00 GMT",
@@ -850,6 +851,27 @@ def assert_nte_validator_rejects(path_parts: tuple[str, ...], value: Any, expect
         errors = validate_nte(temp_root)
     if not any(expected_token in error for error in errors):
         raise AssertionError(f"NTE validator did not reject {'.'.join(path_parts)}={value!r}; errors={errors!r}")
+
+
+def assert_nte_release_type_validator() -> None:
+    with tempfile.TemporaryDirectory(prefix="nte-release-type-negative-") as temp:
+        temp_root = Path(temp)
+        valid_nte_root(temp_root)
+        catalog_path = temp_root / "catalog.json"
+        catalog = load_json(catalog_path)
+        base_row = catalog["versions"][0]
+        first_row = deepcopy(base_row)
+        first_row["version"] = "1.2.5"
+        first_row["release_type"] = "patch"
+        second_row = deepcopy(base_row)
+        second_row["version"] = "1.2.6"
+        second_row["release_type"] = "major"
+        catalog["versions"] = [first_row, second_row]
+        write_json(catalog_path, catalog)
+        errors = validate_nte(temp_root)
+    expected = "nte:1.2:release_type_major_not_min:1.2.6!=1.2.5"
+    if expected not in errors:
+        raise AssertionError(f"NTE validator did not reject wrong major release; errors={errors!r}")
 
 
 def valid_wuwa_root(root: Path) -> None:
@@ -1015,6 +1037,7 @@ def main() -> None:
     assert_hoyo_metadata_paths()
     assert_endfield_upstream_paths()
     assert_nte_paths()
+    assert_nte_release_type_validator()
     assert_wuwa_metadata_paths()
     assert_wuwa_build_cache_paths()
     assert_wuwa_build_stage_zero_network()
@@ -1051,6 +1074,7 @@ def main() -> None:
     print("hoyo_metadata_inference=PASS")
     print("endfield_upstream_archive=PASS")
     print("nte_live_probe_and_metadata=PASS")
+    print("nte_release_type_invariant=PASS")
     print("wuwa_metadata_multicdn=PASS")
     print("wuwa_live_multicdn=PASS")
     print("wuwa_probe_cache_paths=PASS")
