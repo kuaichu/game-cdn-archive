@@ -70,10 +70,7 @@ def nte_row() -> tuple[str, str, str] | None:
     latest = latest_version(ok_versions)
     if not latest:
         return None
-    status = (
-        f"Version manifests decoded and indexed through `{latest}` "
-        f"({len(ok_versions)} available / {len(versions)} probed)"
-    )
+    status = f"已解码并索引到 `{latest}`（可用 `{len(ok_versions)}` 个 / 已探测 `{len(versions)}` 个）"
     return ("Neverness to Everness / 异环", "Windows PC", status)
 
 
@@ -85,10 +82,7 @@ def endfield_row() -> tuple[str, str, str] | None:
     latest = latest_version(versions)
     if not latest:
         return None
-    status = (
-        f"Official launcher API history and archive mirrors indexed through "
-        f"`{latest}` ({len(versions)} versions)"
-    )
+    status = f"官方启动器 API 历史与归档镜像已索引到 `{latest}`（`{len(versions)}` 个版本）"
     return ("Arknights: Endfield / 明日方舟：终末地", "Windows PC", status)
 
 
@@ -101,7 +95,7 @@ def arknights_row() -> tuple[str, str, str] | None:
     if not latest:
         return None
     count = index.get("version_count") or len(versions)
-    status = f"Official launcher package metadata indexed through `{latest}` ({count} versions)"
+    status = f"官方启动器包元数据已索引到 `{latest}`（`{count}` 个版本）"
     return ("Arknights / 明日方舟", "Windows PC", status)
 
 
@@ -114,7 +108,7 @@ def wuwa_row() -> tuple[str, str, str] | None:
     if not latest:
         return None
     count = index.get("version_count") or len(versions)
-    status = f"Official launcher resource indexes and CDN mirrors indexed through `{latest}` ({count} versions)"
+    status = f"官方启动器资源索引与 CDN 镜像已索引到 `{latest}`（`{count}` 个版本）"
     return ("Wuthering Waves / 鸣潮", "Windows PC", status)
 
 
@@ -131,7 +125,7 @@ def hoyo_rows() -> list[tuple[str, str, str]]:
         english = HOYO_ENGLISH_NAMES.get(game_id, str(game.get("name") or game_id))
         name = f"{english} / {game.get('name')}"
         count = game.get("version_count") or len(game.get("versions") or [])
-        status = f"HoyoFiles version metadata migrated through `{latest}` ({count} versions)"
+        status = f"HoyoFiles 版本元数据已迁移到 `{latest}`（`{count}` 个版本）"
         rows.append((name, "Windows PC", status))
     return rows
 
@@ -152,8 +146,8 @@ def progress_block() -> str:
     if nte_first and nte_latest:
         rows.append((
             "NTE / 异环 PC",
-            f"Indexed official Windows manifests from `{nte_first}` through `{nte_latest}`; "
-            f"{len(nte_ok)} available versions out of {len(nte_versions)} probed entries",
+            f"已索引官方 Windows 清单 `{nte_first}` 到 `{nte_latest}`；"
+            f"`{len(nte_versions)}` 个已探测条目中有 `{len(nte_ok)}` 个可用版本",
         ))
 
     end_versions = endfield.get("versions") or []
@@ -161,8 +155,8 @@ def progress_block() -> str:
     if end_latest:
         rows.append((
             "Endfield / 终末地 PC",
-            f"Imported `{len(end_versions)}` CN launcher-history snapshots through `{end_latest}`; "
-            "official signed package URLs and archive mirrors are both preserved",
+            f"已导入 `{len(end_versions)}` 个 CN 启动器历史快照，最新 `{end_latest}`；"
+            "官方签名包 URL 与归档镜像 URL 均已保留",
         ))
 
     ak_versions = arknights.get("versions") or []
@@ -171,8 +165,8 @@ def progress_block() -> str:
         latest_row = next((row for row in ak_versions if str(row.get("version")) == ak_latest), {})
         rows.append((
             "Arknights / 明日方舟 PC",
-            f"Indexed official launcher package metadata through `{ak_latest}`; "
-            f"{latest_row.get('package_items') or 0} package items in the latest snapshot",
+            f"官方启动器包元数据已索引到 `{ak_latest}`；"
+            f"最新快照包含 `{latest_row.get('package_items') or 0}` 个包条目",
         ))
 
     wuwa_versions = wuwa.get("versions") or []
@@ -180,8 +174,8 @@ def progress_block() -> str:
     if wuwa_latest:
         rows.append((
             "Wuthering Waves / 鸣潮 PC",
-            f"Indexed `{len(wuwa_versions)}` CN launcher/resource-index snapshots through `{wuwa_latest}`; "
-            "file URLs, CDN mirrors, and patch routes are preserved when official indexes expose them",
+            f"已索引 `{len(wuwa_versions)}` 个 CN 启动器 / resource-index 快照，最新 `{wuwa_latest}`；"
+            "官方索引暴露的文件 URL、CDN 镜像与补丁路由均已保留",
         ))
 
     hoyo_parts = []
@@ -189,26 +183,25 @@ def progress_block() -> str:
         versions = game.get("versions") or []
         first, latest = version_range_text(versions)
         if first and latest:
-            hoyo_parts.append(f"{game.get('name')} `{first}-{latest}` (`{len(versions)}` versions)")
+            hoyo_parts.append(f"{game.get('name')} `{first}-{latest}`（`{len(versions)}` 个版本）")
     if hoyo_parts:
-        rows.append(("HoYo CN PC catalog", "Migrated public HoyoFiles metadata for " + ", ".join(hoyo_parts)))
+        rows.append(("HoYo CN PC 目录", "已迁移公开 HoyoFiles 元数据：" + "，".join(hoyo_parts)))
 
     android_games = android.get("games") or {}
     android_records = sum(len((game or {}).get("versions") or []) for game in android_games.values())
     if android_games:
         rows.append((
-            "Android APK archive",
-            f"Preserves `{android_records}` confirmed or historically verified official APK CDN records "
-            f"across `{len(android_games)}` games",
+            "Android APK 归档",
+            f"保留 `{len(android_games)}` 个游戏的 `{android_records}` 条已确认或历史验证过的官方 APK CDN 记录",
         ))
 
     lines = [
         PROGRESS_START,
-        "<!-- This block is generated by scripts/update_readme_summary.py. Do not edit by hand. -->",
+        "<!-- 此区块由 scripts/update_readme_summary.py 生成，请勿手改。 -->",
         "",
-        f"Current repository snapshot from generated data checked on {markdown_time(catalog.get('last_checked_at'), catalog.get('generated_at'))}:",
+        f"当前仓库快照来自生成数据，检查时间：{markdown_time(catalog.get('last_checked_at'), catalog.get('generated_at'))}。",
         "",
-        "| Area | Current progress |",
+        "| 范围 | 当前进度 |",
         "| --- | --- |",
     ]
     lines.extend(f"| {area} | {status} |" for area, status in rows)
@@ -236,15 +229,15 @@ def android_progress_block() -> str:
         rows.append((
             display_name,
             range_text,
-            f"`{len(unique_versions)}` version buckets / `{len(entries)}` records",
-            f"`{available}` available; `{unavailable}` unavailable or historical dead-link records",
+            f"`{len(unique_versions)}` 个版本桶 / `{len(entries)}` 条记录",
+            f"`{available}` 条可用；`{unavailable}` 条不可用或历史死链记录",
         ))
 
     lines = [
         ANDROID_START,
-        "<!-- This block is generated by scripts/update_readme_summary.py. Do not edit by hand. -->",
+        "<!-- 此区块由 scripts/update_readme_summary.py 生成，请勿手改。 -->",
         "",
-        "| Game | Indexed versions | Records | Notes |",
+        "| 游戏 | 已索引版本 | 记录 | 备注 |",
         "| --- | --- | --- | --- |",
     ]
     lines.extend(f"| {game} | {versions} | {records} | {notes} |" for game, versions, records, notes in rows)
@@ -259,7 +252,7 @@ def generated_at_line() -> str:
     arknights = load_json(DOCS_DATA / "arknights" / "index.json") or {}
     wuwa = load_json(DOCS_DATA / "wuwa" / "index.json") or {}
     return (
-        "_Last refreshed from generated archive data: "
+        "_生成归档数据最后刷新时间："
         f"NTE {markdown_time(catalog.get('last_checked_at'), catalog.get('generated_at'))}; "
         f"HoYo {markdown_time(hoyo.get('last_checked_at'), hoyo.get('generated_at'))}; "
         f"Endfield {markdown_time(endfield.get('last_checked_at'), endfield.get('generated_at'))}; "
@@ -283,9 +276,9 @@ def generate_block() -> str:
 
     lines = [
         START,
-        "<!-- This block is generated by scripts/update_readme_summary.py. Do not edit by hand. -->",
+        "<!-- 此区块由 scripts/update_readme_summary.py 生成，请勿手改。 -->",
         "",
-        "| Game | Platform | Status |",
+        "| 游戏 | 平台 | 状态 |",
         "| --- | --- | --- |",
     ]
     lines.extend(f"| {game} | {platform} | {status} |" for game, platform, status in rows)
