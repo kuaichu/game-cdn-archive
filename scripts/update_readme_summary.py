@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import re
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -12,6 +13,7 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 README_PATH = ROOT / "README.md"
 DOCS_DATA = ROOT / "docs" / "data"
+BEIJING_TZ = timezone(timedelta(hours=8))
 
 START = "<!-- README_VERSION_SUMMARY_START -->"
 END = "<!-- README_VERSION_SUMMARY_END -->"
@@ -47,11 +49,71 @@ def latest_version(rows: list[dict[str, Any]], field: str = "version") -> str | 
     return max(versions, key=version_key)
 
 
+def latest_row(rows: list[dict[str, Any]], field: str = "version") -> dict[str, Any] | None:
+    candidates = [row for row in rows if row.get(field)]
+    if not candidates:
+        return None
+    return max(candidates, key=lambda row: version_key(str(row.get(field))))
+
+
 def markdown_time(*values: Any) -> str:
     for value in values:
         if value:
             return f"`{value}`"
-    return "`unknown`"
+    return "`未知`"
+
+
+def source_time(data: dict[str, Any]) -> Any:
+    return data.get("last_checked_at") or data.get("generated_at")
+
+
+def version_time(row: dict[str, Any] | None) -> str:
+    if not row:
+        return "`未知`"
+    return markdown_time_normalized(row.get("release_date"), row.get("released_at"), row.get("last_modified"))
+
+
+def parse_time(value: Any) -> datetime | None:
+    if not isinstance(value, str) or not value:
+        return None
+    normalized = value.replace("Z", "+00:00")
+    for candidate in (normalized, normalized.replace(" ", "T", 1)):
+        try:
+            return datetime.fromisoformat(candidate)
+        except ValueError:
+            pass
+    try:
+        return datetime.strptime(value, "%Y-%m-%d %H:%M:%S %z")
+    except ValueError:
+        pass
+    try:
+        return datetime.strptime(value, "%a, %d %b %Y %H:%M:%S %Z").replace(tzinfo=timezone.utc)
+    except ValueError:
+        return None
+
+
+def format_time(value: Any) -> str | None:
+    parsed = parse_time(value)
+    if not parsed:
+        return str(value) if value else None
+    beijing_value = parsed.astimezone(BEIJING_TZ)
+    return beijing_value.strftime("%Y-%m-%d %H:%M:%S 北京时间")
+
+
+def markdown_time_normalized(*values: Any) -> str:
+    for value in values:
+        formatted = format_time(value)
+        if formatted:
+            return f"`{formatted}`"
+    return "`未知`"
+
+
+def latest_time_text(*values: Any) -> str:
+    parsed = [(parse_time(value), value) for value in values if value]
+    valid = [(parsed_value, raw_value) for parsed_value, raw_value in parsed if parsed_value]
+    if valid:
+        return markdown_time_normalized(max(valid, key=lambda item: item[0])[1])
+    return markdown_time_normalized(*(value for _, value in parsed))
 
 
 def version_range_text(rows: list[dict[str, Any]]) -> tuple[str | None, str | None]:
@@ -61,72 +123,77 @@ def version_range_text(rows: list[dict[str, Any]]) -> tuple[str | None, str | No
     return min(versions, key=version_key), max(versions, key=version_key)
 
 
-def nte_row() -> tuple[str, str, str] | None:
+def nte_row() -> tuple[str, str, str, str] | None:
     catalog = load_json(DOCS_DATA / "catalog.json")
     if not catalog:
         return None
     versions = catalog.get("versions") or []
     ok_versions = [row for row in versions if row.get("status") == 200]
-    latest = latest_version(ok_versions)
+    latest_record = latest_row(ok_versions)
+    latest = str(latest_record.get("version")) if latest_record else None
     if not latest:
         return None
     status = f"已解码并索引到 `{latest}`（可用 `{len(ok_versions)}` 个 / 已探测 `{len(versions)}` 个）"
-    return ("Neverness to Everness / 异环", "Windows PC", status)
+    return ("Neverness to Everness / 异环", "Windows PC", status, version_time(latest_record))
 
 
-def endfield_row() -> tuple[str, str, str] | None:
+def endfield_row() -> tuple[str, str, str, str] | None:
     index = load_json(DOCS_DATA / "endfield" / "index.json")
     if not index:
         return None
     versions = index.get("versions") or []
-    latest = latest_version(versions)
+    latest_record = latest_row(versions)
+    latest = str(latest_record.get("version")) if latest_record else None
     if not latest:
         return None
     status = f"官方启动器 API 历史与归档镜像已索引到 `{latest}`（`{len(versions)}` 个版本）"
-    return ("Arknights: Endfield / 明日方舟：终末地", "Windows PC", status)
+    return ("Arknights: Endfield / 明日方舟：终末地", "Windows PC", status, version_time(latest_record))
 
 
-def arknights_row() -> tuple[str, str, str] | None:
+def arknights_row() -> tuple[str, str, str, str] | None:
     index = load_json(DOCS_DATA / "arknights" / "index.json")
     if not index:
         return None
     versions = index.get("versions") or []
-    latest = latest_version(versions)
+    latest_record = latest_row(versions)
+    latest = str(latest_record.get("version")) if latest_record else None
     if not latest:
         return None
     count = index.get("version_count") or len(versions)
     status = f"官方启动器包元数据已索引到 `{latest}`（`{count}` 个版本）"
-    return ("Arknights / 明日方舟", "Windows PC", status)
+    return ("Arknights / 明日方舟", "Windows PC", status, version_time(latest_record))
 
 
-def wuwa_row() -> tuple[str, str, str] | None:
+def wuwa_row() -> tuple[str, str, str, str] | None:
     index = load_json(DOCS_DATA / "wuwa" / "index.json")
     if not index:
         return None
     versions = index.get("versions") or []
-    latest = latest_version(versions) or index.get("latest_version") or index.get("current_version")
+    latest_record = latest_row(versions)
+    latest = (str(latest_record.get("version")) if latest_record else None) or index.get("latest_version") or index.get("current_version")
     if not latest:
         return None
     count = index.get("version_count") or len(versions)
     status = f"官方启动器资源索引与 CDN 镜像已索引到 `{latest}`（`{count}` 个版本）"
-    return ("Wuthering Waves / 鸣潮", "Windows PC", status)
+    return ("Wuthering Waves / 鸣潮", "Windows PC", status, version_time(latest_record))
 
 
-def hoyo_rows() -> list[tuple[str, str, str]]:
+def hoyo_rows() -> list[tuple[str, str, str, str]]:
     index = load_json(DOCS_DATA / "hoyo" / "games.json")
     if not index:
         return []
     rows = []
     for game in index.get("games") or []:
         game_id = game.get("id")
-        latest = game.get("latest_version") or latest_version(game.get("versions") or [])
+        latest_record = latest_row(game.get("versions") or [])
+        latest = game.get("latest_version") or (str(latest_record.get("version")) if latest_record else None)
         if not latest:
             continue
         english = HOYO_ENGLISH_NAMES.get(game_id, str(game.get("name") or game_id))
         name = f"{english} / {game.get('name')}"
         count = game.get("version_count") or len(game.get("versions") or [])
         status = f"HoyoFiles 版本元数据已迁移到 `{latest}`（`{count}` 个版本）"
-        rows.append((name, "Windows PC", status))
+        rows.append((name, "Windows PC", status, version_time(latest_record)))
     return rows
 
 
@@ -251,14 +318,15 @@ def generated_at_line() -> str:
     endfield = load_json(DOCS_DATA / "endfield" / "index.json") or {}
     arknights = load_json(DOCS_DATA / "arknights" / "index.json") or {}
     wuwa = load_json(DOCS_DATA / "wuwa" / "index.json") or {}
-    return (
-        "_生成归档数据最后刷新时间："
-        f"NTE {markdown_time(catalog.get('last_checked_at'), catalog.get('generated_at'))}; "
-        f"HoYo {markdown_time(hoyo.get('last_checked_at'), hoyo.get('generated_at'))}; "
-        f"Endfield {markdown_time(endfield.get('last_checked_at'), endfield.get('generated_at'))}; "
-        f"Arknights {markdown_time(arknights.get('last_checked_at'), arknights.get('generated_at'))}; "
-        f"WuWa {markdown_time(wuwa.get('last_checked_at'), wuwa.get('generated_at'))}._"
-    )
+    android = load_json(DOCS_DATA / "android" / "index.json") or {}
+    return "_整个项目的数据刷新时间：" + latest_time_text(
+        source_time(catalog),
+        source_time(hoyo),
+        source_time(endfield),
+        source_time(arknights),
+        source_time(wuwa),
+        source_time(android),
+    ) + "。_"
 
 
 def generate_block() -> str:
@@ -278,10 +346,10 @@ def generate_block() -> str:
         START,
         "<!-- 此区块由 scripts/update_readme_summary.py 生成，请勿手改。 -->",
         "",
-        "| 游戏 | 平台 | 状态 |",
-        "| --- | --- | --- |",
+        "| 游戏 | 平台 | 状态 | 版本更新时间 |",
+        "| --- | --- | --- | --- |",
     ]
-    lines.extend(f"| {game} | {platform} | {status} |" for game, platform, status in rows)
+    lines.extend(f"| {game} | {platform} | {status} | {updated_at} |" for game, platform, status, updated_at in rows)
     lines.extend(["", generated_at_line(), END])
     return "\n".join(lines)
 

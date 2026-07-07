@@ -13,18 +13,18 @@ or redistribute game binaries.
 <!-- README_VERSION_SUMMARY_START -->
 <!-- 此区块由 scripts/update_readme_summary.py 生成，请勿手改。 -->
 
-| 游戏 | 平台 | 状态 |
-| --- | --- | --- |
-| Neverness to Everness / 异环 | Windows PC | 已解码并索引到 `1.2.12`（可用 `41` 个 / 已探测 `75` 个） |
-| Arknights: Endfield / 明日方舟：终末地 | Windows PC | 官方启动器 API 历史与归档镜像已索引到 `1.3.3`（`7` 个版本） |
-| Arknights / 明日方舟 | Windows PC | 官方启动器包元数据已索引到 `74.0.0`（`1` 个版本） |
-| Wuthering Waves / 鸣潮 | Windows PC | 官方启动器资源索引与 CDN 镜像已索引到 `3.4.1`（`41` 个版本） |
-| Genshin Impact / 原神 | Windows PC | HoyoFiles 版本元数据已迁移到 `6.7.0`（`55` 个版本） |
-| Honkai: Star Rail / 崩坏：星穹铁道 | Windows PC | HoyoFiles 版本元数据已迁移到 `4.3.0`（`28` 个版本） |
-| Zenless Zone Zero / 绝区零 | Windows PC | HoyoFiles 版本元数据已迁移到 `3.0.0`（`19` 个版本） |
-| Honkai Impact 3 / 崩坏3 | Windows PC | HoyoFiles 版本元数据已迁移到 `8.9.0`（`53` 个版本） |
+| 游戏 | 平台 | 状态 | 版本更新时间 |
+| --- | --- | --- | --- |
+| Neverness to Everness / 异环 | Windows PC | 已解码并索引到 `1.2.12`（可用 `41` 个 / 已探测 `75` 个） | `2026-07-07 05:00:01 北京时间` |
+| Arknights: Endfield / 明日方舟：终末地 | Windows PC | 官方启动器 API 历史与归档镜像已索引到 `1.3.3`（`7` 个版本） | `2026-06-05 06:15:27 北京时间` |
+| Arknights / 明日方舟 | Windows PC | 官方启动器包元数据已索引到 `74.0.0`（`1` 个版本） | `未知` |
+| Wuthering Waves / 鸣潮 | Windows PC | 官方启动器资源索引与 CDN 镜像已索引到 `3.4.1`（`41` 个版本） | `2026-06-17 00:25:46 北京时间` |
+| Genshin Impact / 原神 | Windows PC | HoyoFiles 版本元数据已迁移到 `6.7.0`（`55` 个版本） | `2026-06-18 23:01:33 北京时间` |
+| Honkai: Star Rail / 崩坏：星穹铁道 | Windows PC | HoyoFiles 版本元数据已迁移到 `4.3.0`（`28` 个版本） | `2026-05-23 15:56:03 北京时间` |
+| Zenless Zone Zero / 绝区零 | Windows PC | HoyoFiles 版本元数据已迁移到 `3.0.0`（`19` 个版本） | `2026-05-29 12:15:38 北京时间` |
+| Honkai Impact 3 / 崩坏3 | Windows PC | HoyoFiles 版本元数据已迁移到 `8.9.0`（`53` 个版本） | `2026-05-22 11:08:32 北京时间` |
 
-_生成归档数据最后刷新时间：NTE `2026-07-07 07:51:40 +0000`; HoYo `2026-07-07T07:53:07.125Z`; Endfield `2026-07-07T07:56:18.305474+00:00`; Arknights `2026-07-07T07:56:47.717670+00:00`; WuWa `2026-07-07T07:56:46.553269+00:00`._
+_整个项目的数据刷新时间：`2026-07-07 15:56:48 北京时间`。_
 <!-- README_VERSION_SUMMARY_END -->
 
 ## 当前进度快照
