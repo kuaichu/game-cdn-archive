@@ -24,7 +24,7 @@ or redistribute game binaries.
 | Zenless Zone Zero / 绝区零 | Windows PC | HoyoFiles 版本元数据已迁移到 `3.0.0`（`19` 个版本） | `2026-05-29 12:15:38 北京时间` |
 | Honkai Impact 3 / 崩坏3 | Windows PC | HoyoFiles 版本元数据已迁移到 `8.9.0`（`53` 个版本） | `2026-05-22 11:08:32 北京时间` |
 
-_整个项目的数据刷新时间：`2026-07-07 15:56:48 北京时间`。_
+_整个项目的数据刷新时间：`2026-07-08 01:46:40 北京时间`。_
 <!-- README_VERSION_SUMMARY_END -->
 
 ## 当前进度快照
