@@ -5,7 +5,43 @@
       "name": "YuanShen_1.0.0.zip",
       "url": "https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/04874b5ed14055383219644f40b514ca/YuanShen_1.0.0.zip",
       "checksum": "7d1c0778a7eb4c99f2c19266629e1eb2",
-      "size": 12850520560
+      "size": 12850520560,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/04874b5ed14055383219644f40b514ca/YuanShen_1.0.0.zip",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-07T07:53:07.125Z",
+              "final_url": "https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/04874b5ed14055383219644f40b514ca/YuanShen_1.0.0.zip",
+              "content_type": "",
+              "size": 12850520560,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://autopatchcn.yuanshen.com/client_app/pc_mihoyo/04874b5ed14055383219644f40b514ca/YuanShen_1.0.0.zip",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     }
   },
   "voice": {},

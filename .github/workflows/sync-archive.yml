@@ -280,6 +280,15 @@ jobs:
       - name: Install Python dependencies
         run: bash scripts/gha_run_step.sh "Install Python dependencies" pip install -r requirements.txt
 
+      - name: Restore WuWa probe cache
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'wuwa'
+        uses: actions/cache@v4
+        with:
+          path: .cache/wuwa_probe_facts.json
+          key: wuwa-probe-facts-v1-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: |
+            wuwa-probe-facts-v1-${{ runner.os }}-
+
       - name: Refresh NTE data
         if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'nte'
         env:
@@ -345,6 +354,51 @@ jobs:
           URL_STATUS_ROTATION_LIMIT: 300
           URL_STATUS_WORKERS: 24
         run: bash scripts/gha_run_step.sh "Probe archived URL health" python scripts/probe_url_status.py
+
+      - name: Refresh WuWa probe cache
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'wuwa'
+        env:
+          GHA_RUN_RETRIES: 2
+          GHA_RUN_RETRY_DELAY: 20
+          WUWA_CDN_PROBE_TTL_HOURS: 168
+          WUWA_CDN_FAILED_REPROBE_TTL_HOURS: 24
+          WUWA_CDN_GRACE_HOURS: 336
+        run: bash scripts/gha_run_step.sh "Refresh WuWa probe cache" python scripts/probe_wuwa_availability.py --all-versions
+
+      - name: Build availability contract
+        shell: bash
+        env:
+          ANDROID_APK_REPROBE_TTL_HOURS: 20
+          WUWA_CDN_PROBE_TTL_HOURS: 168
+          WUWA_CDN_FAILED_REPROBE_TTL_HOURS: 24
+          WUWA_CDN_GRACE_HOURS: 336
+        run: |
+          run_for_scope() {
+            local label="$1"
+            local scope="$2"
+            shift 2
+            if [ "${SYNC_SCOPE}" = "all" ] || [ "${SYNC_SCOPE}" = "${scope}" ]; then
+              bash scripts/gha_run_step.sh "${label}" "$@"
+            fi
+          }
+
+          run_for_scope "Build NTE availability" nte python scripts/build_nte_availability.py
+          run_for_scope "Build HoYo availability" hoyofiles python scripts/build_hoyo_availability.py
+          run_for_scope "Build Endfield availability" endfield python scripts/build_endfield_availability.py
+          run_for_scope "Build WuWa availability" wuwa python scripts/build_wuwa_availability.py --live-probe --all-versions
+          run_for_scope "Build Arknights availability" arknights python scripts/build_arknights_availability.py
+          run_for_scope "Build Android availability" android python scripts/build_android_availability.py --allow-semantic-changes
+
+      - name: Validate availability contract
+        shell: bash
+        run: |
+          if [ "${SYNC_SCOPE}" = "all" ] || [ "${SYNC_SCOPE}" = "hoyofiles" ]; then
+            bash scripts/gha_run_step.sh "Validate HoYo split data" python scripts/validate_hoyo_split.py
+          fi
+          if [ "${SYNC_SCOPE}" = "all" ] || [ "${SYNC_SCOPE}" = "wuwa" ]; then
+            bash scripts/gha_run_step.sh "Validate WuWa split data" python scripts/validate_wuwa_split.py
+          fi
+          bash scripts/gha_run_step.sh "Validate availability contract" python scripts/validate_availability.py
 
       - name: Refresh README coverage summary
         run: bash scripts/gha_run_step.sh "Refresh README coverage summary" python scripts/update_readme_summary.py

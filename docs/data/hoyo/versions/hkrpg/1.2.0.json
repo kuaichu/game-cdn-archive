@@ -5,7 +5,43 @@
       "name": "StarRail_1.2.0.zip",
       "url": "https://autopatchcn.bhsr.com/client/cn/20230709224719_3CcrEpEKT9iaObJh/StarRail_1.2.0.zip",
       "checksum": "db3ed7b4b6d328d8394e1fa27391ee3f",
-      "size": 15101507952
+      "size": 15101507952,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://autopatchcn.bhsr.com/client/cn/20230709224719_3CcrEpEKT9iaObJh/StarRail_1.2.0.zip",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-07T07:53:07.125Z",
+              "final_url": "https://autopatchcn.bhsr.com/client/cn/20230709224719_3CcrEpEKT9iaObJh/StarRail_1.2.0.zip",
+              "content_type": "",
+              "size": 15101507952,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://autopatchcn.bhsr.com/client/cn/20230709224719_3CcrEpEKT9iaObJh/StarRail_1.2.0.zip",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     }
   },
   "voice": {},
@@ -15,7 +51,43 @@
         "name": "game_1.1.0_1.2.0_hdiff_HfBvygO7Z9aNPUmR.zip",
         "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_1.1.0_1.2.0_hdiff_HfBvygO7Z9aNPUmR.zip",
         "checksum": "",
-        "size": 11914862849
+        "size": 11914862849,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_1.1.0_1.2.0_hdiff_HfBvygO7Z9aNPUmR.zip",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-07T07:53:07.125Z",
+                "final_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_1.1.0_1.2.0_hdiff_HfBvygO7Z9aNPUmR.zip",
+                "content_type": "",
+                "size": 11914862849,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_1.1.0_1.2.0_hdiff_HfBvygO7Z9aNPUmR.zip",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       "voice": {}
     },
@@ -24,7 +96,43 @@
         "name": "game_1.0.5_1.2.0_hdiff_7qUejt4fMExIlrQp.zip",
         "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_1.0.5_1.2.0_hdiff_7qUejt4fMExIlrQp.zip",
         "checksum": "",
-        "size": 13178454294
+        "size": 13178454294,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_1.0.5_1.2.0_hdiff_7qUejt4fMExIlrQp.zip",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-07T07:53:07.125Z",
+                "final_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_1.0.5_1.2.0_hdiff_7qUejt4fMExIlrQp.zip",
+                "content_type": "",
+                "size": 13178454294,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.bhsr.com/client/hkrpg_cn/33/game_1.0.5_1.2.0_hdiff_7qUejt4fMExIlrQp.zip",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       "voice": {}
     }

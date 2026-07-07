@@ -7,6 +7,7 @@ import json
 import sys
 import tempfile
 from copy import deepcopy
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -30,6 +31,7 @@ from scripts.validate_availability import validate_android, validate_arknights, 
 
 
 ARKNIGHTS_ROOT = ROOT / "docs" / "data" / "arknights"
+TEST_CHECKED_AT = datetime.now(timezone.utc).isoformat(timespec="milliseconds").replace("+00:00", "Z")
 
 
 def load_json(path: Path) -> Any:
@@ -47,7 +49,7 @@ def failed_probe(url: str) -> ProbeResult:
             ok=False,
             status=404,
             method="HEAD",
-            checked_at="2026-07-06T00:00:00.000Z",
+            checked_at=TEST_CHECKED_AT,
             final_url=url,
             content_type="",
             size=0,
@@ -73,7 +75,7 @@ def android_probe(
             ok=ok,
             status=status,
             method="HEAD",
-            checked_at="2026-07-06T00:00:00.000Z",
+            checked_at=TEST_CHECKED_AT,
             final_url=url,
             content_type=content_type,
             size=size,
@@ -91,7 +93,7 @@ def hoyo_metadata_probe(url: str, *, size: int, ok: bool = True, error: str = ""
             ok=ok,
             status=0,
             method="METADATA_SIZE",
-            checked_at="2026-07-06T00:00:00.000Z",
+            checked_at=TEST_CHECKED_AT,
             final_url=url,
             content_type="",
             size=size,
@@ -109,7 +111,7 @@ def endfield_upstream_probe(url: str, *, ok: bool, size: int = 1024, error: str 
             ok=ok,
             status=0,
             method="UPSTREAM_ARCHIVE",
-            checked_at="2026-07-06T00:00:00.000Z",
+            checked_at=TEST_CHECKED_AT,
             final_url=url,
             content_type="",
             size=size,
@@ -127,7 +129,7 @@ def nte_live_probe(url: str, *, ok: bool, status: int, size: int = 0, error: str
             ok=ok,
             status=status,
             method="GET",
-            checked_at="2026-07-06T00:00:00.000Z",
+            checked_at=TEST_CHECKED_AT,
             final_url=url,
             content_type="application/zip" if ok else "",
             size=size,
@@ -145,7 +147,7 @@ def nte_metadata_probe(url: str, *, size: int, ok: bool = True) -> ProbeResult:
             ok=ok,
             status=0,
             method="RESLIST_METADATA",
-            checked_at="2026-07-06T00:00:00.000Z",
+            checked_at=TEST_CHECKED_AT,
             final_url=url,
             content_type="",
             size=size,
@@ -163,7 +165,7 @@ def wuwa_metadata_probe(url: str, *, size: int, ok: bool = True, error: str = ""
             ok=ok,
             status=0,
             method="WUWA_METADATA",
-            checked_at="2026-07-06T00:00:00.000Z",
+            checked_at=TEST_CHECKED_AT,
             final_url=url,
             content_type="",
             size=size,
@@ -181,7 +183,7 @@ def wuwa_live_probe(url: str, *, ok: bool, status: int, size: int = 1024, error:
             ok=ok,
             status=status,
             method=method,
-            checked_at="2026-07-06T00:00:00.000Z",
+            checked_at=TEST_CHECKED_AT,
             final_url=url,
             content_type="application/octet-stream" if ok else "",
             size=size,

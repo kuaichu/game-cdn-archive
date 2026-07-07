@@ -234,6 +234,11 @@ def main() -> None:
     parser.add_argument("--root", type=Path, default=DEFAULT_ROOT)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--force-full", action="store_true")
+    parser.add_argument(
+        "--allow-semantic-changes",
+        action="store_true",
+        help="Allow ongoing live availability changes after printing the drift list.",
+    )
     args = parser.parse_args()
 
     index_path = args.root / "index.json"
@@ -275,7 +280,9 @@ def main() -> None:
     print(f"semantic_match={'PASS' if ok else 'FAIL'}")
     if errors:
         print("\n".join(f"semantic_error={error}" for error in errors[:100]))
-        raise SystemExit(1)
+        if not args.allow_semantic_changes:
+            raise SystemExit(1)
+        print("semantic_change_policy=ALLOW_EXPLICIT")
 
     if not args.dry_run:
         write_json(index_path, index)

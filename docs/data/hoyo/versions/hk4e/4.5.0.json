@@ -6,49 +6,337 @@
         "name": "YuanShen_4.5.0.zip.001",
         "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.001",
         "checksum": "7c95b8bb5590fd605e078a181c903f3e",
-        "size": 10737418240
+        "size": 10737418240,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.001",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-07T07:53:07.125Z",
+                "final_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.001",
+                "content_type": "",
+                "size": 10737418240,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.001",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "YuanShen_4.5.0.zip.002",
         "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.002",
         "checksum": "7815a01bcb91c10474bc3539fc0d232e",
-        "size": 10737418240
+        "size": 10737418240,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.002",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-07T07:53:07.125Z",
+                "final_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.002",
+                "content_type": "",
+                "size": 10737418240,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.002",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "YuanShen_4.5.0.zip.003",
         "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.003",
         "checksum": "353f806030061d199b1053532c59de77",
-        "size": 10737418240
+        "size": 10737418240,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.003",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-07T07:53:07.125Z",
+                "final_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.003",
+                "content_type": "",
+                "size": 10737418240,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.003",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "YuanShen_4.5.0.zip.004",
         "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.004",
         "checksum": "8e39f2818022db946d50321090f0c974",
-        "size": 10737418240
+        "size": 10737418240,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.004",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-07T07:53:07.125Z",
+                "final_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.004",
+                "content_type": "",
+                "size": 10737418240,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.004",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "YuanShen_4.5.0.zip.005",
         "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.005",
         "checksum": "1e806c1039b5fd2165917431fcf6ed79",
-        "size": 10737418240
+        "size": 10737418240,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.005",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-07T07:53:07.125Z",
+                "final_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.005",
+                "content_type": "",
+                "size": 10737418240,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.005",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "YuanShen_4.5.0.zip.006",
         "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.006",
         "checksum": "39957945639182ec63bc7e45d0c19449",
-        "size": 10737418240
+        "size": 10737418240,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.006",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-07T07:53:07.125Z",
+                "final_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.006",
+                "content_type": "",
+                "size": 10737418240,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.006",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "YuanShen_4.5.0.zip.007",
         "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.007",
         "checksum": "fee2bd75b16d58180c452b3ddb8363f7",
-        "size": 10737418240
+        "size": 10737418240,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.007",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-07T07:53:07.125Z",
+                "final_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.007",
+                "content_type": "",
+                "size": 10737418240,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.007",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       {
         "name": "YuanShen_4.5.0.zip.008",
         "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.008",
         "checksum": "651df59aa6eb1ebe202dc8f24a690e36",
-        "size": 184847879
+        "size": 184847879,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.008",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-07T07:53:07.125Z",
+                "final_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.008",
+                "content_type": "",
+                "size": 184847879,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/YuanShen_4.5.0.zip.008",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       }
     ]
   },
@@ -57,25 +345,169 @@
       "name": "Audio_Chinese_4.5.0.zip",
       "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_Chinese_4.5.0.zip",
       "checksum": "bd4ea2e5b8ef02e113cf888f9add5e25",
-      "size": 13671688572
+      "size": 13671688572,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_Chinese_4.5.0.zip",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-07T07:53:07.125Z",
+              "final_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_Chinese_4.5.0.zip",
+              "content_type": "",
+              "size": 13671688572,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_Chinese_4.5.0.zip",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     },
     "en-us": {
       "name": "Audio_English(US)_4.5.0.zip",
       "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_English(US)_4.5.0.zip",
       "checksum": "beb17a4a1247c16ba7bc4da30b92a403",
-      "size": 15959288839
+      "size": 15959288839,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_English(US)_4.5.0.zip",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-07T07:53:07.125Z",
+              "final_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_English(US)_4.5.0.zip",
+              "content_type": "",
+              "size": 15959288839,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_English(US)_4.5.0.zip",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     },
     "ja-jp": {
       "name": "Audio_Japanese_4.5.0.zip",
       "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_Japanese_4.5.0.zip",
       "checksum": "323f0caa199d32fa0020ddfdf92569bc",
-      "size": 17912678620
+      "size": 17912678620,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_Japanese_4.5.0.zip",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-07T07:53:07.125Z",
+              "final_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_Japanese_4.5.0.zip",
+              "content_type": "",
+              "size": 17912678620,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_Japanese_4.5.0.zip",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     },
     "ko-kr": {
       "name": "Audio_Korean_4.5.0.zip",
       "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_Korean_4.5.0.zip",
       "checksum": "049a796521ce09074684ee7f612ff643",
-      "size": 13434886527
+      "size": 13434886527,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_Korean_4.5.0.zip",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-07T07:53:07.125Z",
+              "final_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_Korean_4.5.0.zip",
+              "content_type": "",
+              "size": 13434886527,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/pc_zip/20240301202812_kIdgwLMrsEqWTonu/Audio_Korean_4.5.0.zip",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     }
   },
   "update": {
@@ -84,32 +516,212 @@
         "name": "game_4.4.0_4.5.0_hdiff_CIwumTVOpUcZ2tJs.zip",
         "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/game_4.4.0_4.5.0_hdiff_CIwumTVOpUcZ2tJs.zip",
         "checksum": "",
-        "size": 5194347968
+        "size": 5194347968,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/game_4.4.0_4.5.0_hdiff_CIwumTVOpUcZ2tJs.zip",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-07T07:53:07.125Z",
+                "final_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/game_4.4.0_4.5.0_hdiff_CIwumTVOpUcZ2tJs.zip",
+                "content_type": "",
+                "size": 5194347968,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/game_4.4.0_4.5.0_hdiff_CIwumTVOpUcZ2tJs.zip",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       "voice": {
         "zh-cn": {
           "name": "zh-cn_4.4.0_4.5.0_hdiff_27Q0jakwKMUm6vqz.zip",
           "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/zh-cn_4.4.0_4.5.0_hdiff_27Q0jakwKMUm6vqz.zip",
           "checksum": "",
-          "size": 318483795
+          "size": 318483795,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/zh-cn_4.4.0_4.5.0_hdiff_27Q0jakwKMUm6vqz.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-07T07:53:07.125Z",
+                  "final_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/zh-cn_4.4.0_4.5.0_hdiff_27Q0jakwKMUm6vqz.zip",
+                  "content_type": "",
+                  "size": 318483795,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/zh-cn_4.4.0_4.5.0_hdiff_27Q0jakwKMUm6vqz.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         },
         "en-us": {
           "name": "en-us_4.4.0_4.5.0_hdiff_IT8JaZr3tGK16FVp.zip",
           "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/en-us_4.4.0_4.5.0_hdiff_IT8JaZr3tGK16FVp.zip",
           "checksum": "",
-          "size": 474693272
+          "size": 474693272,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/en-us_4.4.0_4.5.0_hdiff_IT8JaZr3tGK16FVp.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-07T07:53:07.125Z",
+                  "final_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/en-us_4.4.0_4.5.0_hdiff_IT8JaZr3tGK16FVp.zip",
+                  "content_type": "",
+                  "size": 474693272,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/en-us_4.4.0_4.5.0_hdiff_IT8JaZr3tGK16FVp.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         },
         "ja-jp": {
           "name": "ja-jp_4.4.0_4.5.0_hdiff_RZ0dnELT8XCpvM9q.zip",
           "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ja-jp_4.4.0_4.5.0_hdiff_RZ0dnELT8XCpvM9q.zip",
           "checksum": "",
-          "size": 384348066
+          "size": 384348066,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ja-jp_4.4.0_4.5.0_hdiff_RZ0dnELT8XCpvM9q.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-07T07:53:07.125Z",
+                  "final_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ja-jp_4.4.0_4.5.0_hdiff_RZ0dnELT8XCpvM9q.zip",
+                  "content_type": "",
+                  "size": 384348066,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ja-jp_4.4.0_4.5.0_hdiff_RZ0dnELT8XCpvM9q.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         },
         "ko-kr": {
           "name": "ko-kr_4.4.0_4.5.0_hdiff_J2Ck74hirdXBMTzl.zip",
           "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ko-kr_4.4.0_4.5.0_hdiff_J2Ck74hirdXBMTzl.zip",
           "checksum": "",
-          "size": 314541456
+          "size": 314541456,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ko-kr_4.4.0_4.5.0_hdiff_J2Ck74hirdXBMTzl.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-07T07:53:07.125Z",
+                  "final_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ko-kr_4.4.0_4.5.0_hdiff_J2Ck74hirdXBMTzl.zip",
+                  "content_type": "",
+                  "size": 314541456,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ko-kr_4.4.0_4.5.0_hdiff_J2Ck74hirdXBMTzl.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         }
       }
     },
@@ -118,32 +730,212 @@
         "name": "game_4.3.0_4.5.0_hdiff_i8tfbRlghGEKuVTq.zip",
         "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/game_4.3.0_4.5.0_hdiff_i8tfbRlghGEKuVTq.zip",
         "checksum": "",
-        "size": 9995815489
+        "size": 9995815489,
+        "availability": {
+          "candidates": [
+            {
+              "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/game_4.3.0_4.5.0_hdiff_i8tfbRlghGEKuVTq.zip",
+              "probe": {
+                "ok": true,
+                "status": 0,
+                "method": "METADATA_SIZE",
+                "checked_at": "2026-07-07T07:53:07.125Z",
+                "final_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/game_4.3.0_4.5.0_hdiff_i8tfbRlghGEKuVTq.zip",
+                "content_type": "",
+                "size": 9995815489,
+                "last_modified": "",
+                "etag": "",
+                "error": "",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "medium"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "medium"
+          },
+          "interpretation": {
+            "state": "available",
+            "reason": "not_probed",
+            "preferred_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/game_4.3.0_4.5.0_hdiff_i8tfbRlghGEKuVTq.zip",
+            "confidence": "medium",
+            "retained": false,
+            "display_label": "可用"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        }
       },
       "voice": {
         "zh-cn": {
           "name": "zh-cn_4.3.0_4.5.0_hdiff_PDY3WRVJoB1qQlGC.zip",
           "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/zh-cn_4.3.0_4.5.0_hdiff_PDY3WRVJoB1qQlGC.zip",
           "checksum": "",
-          "size": 704324419
+          "size": 704324419,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/zh-cn_4.3.0_4.5.0_hdiff_PDY3WRVJoB1qQlGC.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-07T07:53:07.125Z",
+                  "final_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/zh-cn_4.3.0_4.5.0_hdiff_PDY3WRVJoB1qQlGC.zip",
+                  "content_type": "",
+                  "size": 704324419,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/zh-cn_4.3.0_4.5.0_hdiff_PDY3WRVJoB1qQlGC.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         },
         "en-us": {
           "name": "en-us_4.3.0_4.5.0_hdiff_DrbqWnov8z3GUdLJ.zip",
           "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/en-us_4.3.0_4.5.0_hdiff_DrbqWnov8z3GUdLJ.zip",
           "checksum": "",
-          "size": 973252288
+          "size": 973252288,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/en-us_4.3.0_4.5.0_hdiff_DrbqWnov8z3GUdLJ.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-07T07:53:07.125Z",
+                  "final_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/en-us_4.3.0_4.5.0_hdiff_DrbqWnov8z3GUdLJ.zip",
+                  "content_type": "",
+                  "size": 973252288,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/en-us_4.3.0_4.5.0_hdiff_DrbqWnov8z3GUdLJ.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         },
         "ja-jp": {
           "name": "ja-jp_4.3.0_4.5.0_hdiff_pGMyKbP9tZEL6s43.zip",
           "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ja-jp_4.3.0_4.5.0_hdiff_pGMyKbP9tZEL6s43.zip",
           "checksum": "",
-          "size": 845526683
+          "size": 845526683,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ja-jp_4.3.0_4.5.0_hdiff_pGMyKbP9tZEL6s43.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-07T07:53:07.125Z",
+                  "final_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ja-jp_4.3.0_4.5.0_hdiff_pGMyKbP9tZEL6s43.zip",
+                  "content_type": "",
+                  "size": 845526683,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ja-jp_4.3.0_4.5.0_hdiff_pGMyKbP9tZEL6s43.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         },
         "ko-kr": {
           "name": "ko-kr_4.3.0_4.5.0_hdiff_5SL3ofIrN40UZ729.zip",
           "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ko-kr_4.3.0_4.5.0_hdiff_5SL3ofIrN40UZ729.zip",
           "checksum": "",
-          "size": 684438886
+          "size": 684438886,
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ko-kr_4.3.0_4.5.0_hdiff_5SL3ofIrN40UZ729.zip",
+                "probe": {
+                  "ok": true,
+                  "status": 0,
+                  "method": "METADATA_SIZE",
+                  "checked_at": "2026-07-07T07:53:07.125Z",
+                  "final_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ko-kr_4.3.0_4.5.0_hdiff_5SL3ofIrN40UZ729.zip",
+                  "content_type": "",
+                  "size": 684438886,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "medium"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://autopatchcn.yuanshen.com/client_app/update/hk4e_cn/18/ko-kr_4.3.0_4.5.0_hdiff_5SL3ofIrN40UZ729.zip",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          }
         }
       }
     }

@@ -5,7 +5,43 @@
       "name": "BH3_v6.4.0_1331e8aa9e17.7z",
       "url": "https://bundle.bh3.com/ptpublic/rel/20230116101825_JscRRCB6O6EzK9C5/PC/BH3_v6.4.0_1331e8aa9e17.7z",
       "checksum": "",
-      "size": 10832841217
+      "size": 10832841217,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://bundle.bh3.com/ptpublic/rel/20230116101825_JscRRCB6O6EzK9C5/PC/BH3_v6.4.0_1331e8aa9e17.7z",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-07T07:53:07.125Z",
+              "final_url": "https://bundle.bh3.com/ptpublic/rel/20230116101825_JscRRCB6O6EzK9C5/PC/BH3_v6.4.0_1331e8aa9e17.7z",
+              "content_type": "",
+              "size": 10832841217,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20230116101825_JscRRCB6O6EzK9C5/PC/BH3_v6.4.0_1331e8aa9e17.7z",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     }
   },
   "voice": {},

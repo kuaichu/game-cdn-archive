@@ -5,7 +5,43 @@
       "name": "BH3_v4.5.0_9f70c980de6.7z",
       "url": "http://bundle.bh3.com/tmp/pc/BH3_v4.5.0_9f70c980de6.7z",
       "checksum": "",
-      "size": 5179182836
+      "size": 5179182836,
+      "availability": {
+        "candidates": [
+          {
+            "url": "http://bundle.bh3.com/tmp/pc/BH3_v4.5.0_9f70c980de6.7z",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-07T07:53:07.125Z",
+              "final_url": "http://bundle.bh3.com/tmp/pc/BH3_v4.5.0_9f70c980de6.7z",
+              "content_type": "",
+              "size": 5179182836,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "http://bundle.bh3.com/tmp/pc/BH3_v4.5.0_9f70c980de6.7z",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
     }
   },
   "voice": {},
