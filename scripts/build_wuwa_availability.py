@@ -40,6 +40,7 @@ class ProbeStats:
     unavailable_records: int = 0
     live_records: int = 0
     metadata_records: int = 0
+    preserved_records: int = 0
     started_at: float = field(default_factory=time.perf_counter)
 
     @property
@@ -266,6 +267,10 @@ def all_items_live(items: Iterable[dict[str, Any]]) -> bool:
     return seen
 
 
+def all_items_have_availability(items: Iterable[dict[str, Any]]) -> bool:
+    return all(isinstance(item.get("availability"), dict) for item in items)
+
+
 def first_failed_probe(probes: list[ProbeResult]) -> str:
     for probe in probes:
         facts = probe.get("probe") or {}
@@ -355,6 +360,19 @@ def load_list_items(root: Path, section: Any) -> tuple[Path | None, list[dict[st
     return path, [item for item in payload if isinstance(item, dict)]
 
 
+def linked_lists_have_availability(root: Path, row: dict[str, Any]) -> bool:
+    _path, file_items = load_list_items(root, (row.get("links") or {}).get("files"))
+    if file_items and not all_items_have_availability(file_items):
+        return False
+    for route in row.get("patches") or []:
+        if not isinstance(route, dict):
+            continue
+        _path, patch_items = load_list_items(root, route.get("links"))
+        if patch_items and not all_items_have_availability(patch_items):
+            return False
+    return True
+
+
 def apply_summary_availability(
     summary: dict[str, Any],
     version_row: dict[str, Any],
@@ -420,13 +438,31 @@ def apply_availability(
             errors.append(f"{version}:missing_version_shard")
             continue
 
-        source_kind = "live_probe" if version in live_versions else "metadata_inference"
         items = iter_file_items(row)
         legacy_counts = count_states(items, legacy=True)
-        apply_items_availability(items, version, checked_at, adapter, source_kind, cache, config, stats, changes)
-        new_counts = count_states(items, legacy=False)
-        reasons = reason_counts(items)
-        apply_summary_availability(summary, row, new_counts, reasons, checked_at, adapter, source_kind)
+        source_kind = "live_probe" if version in live_versions else "metadata_inference"
+        preserve_existing = (
+            source_kind != "live_probe"
+            and all_items_have_availability(items)
+            and linked_lists_have_availability(root, row)
+        )
+
+        if preserve_existing:
+            new_counts = count_states(items, legacy=False)
+            reasons = reason_counts(items)
+            summary_source_kind = "live_probe" if all_items_live(items) else "metadata_inference"
+            apply_summary_availability(summary, row, new_counts, reasons, checked_at, adapter, summary_source_kind)
+            stats.preserved_records += len(items)
+        else:
+            apply_items_availability(items, version, checked_at, adapter, source_kind, cache, config, stats, changes)
+            new_counts = count_states(items, legacy=False)
+            reasons = reason_counts(items)
+            apply_summary_availability(summary, row, new_counts, reasons, checked_at, adapter, source_kind)
+            if source_kind != "live_probe" and items:
+                print(
+                    f"metadata_fallback_version={version} reason=missing_existing_availability",
+                    flush=True,
+                )
 
         for state, count in legacy_counts.items():
             before_totals[state] = before_totals.get(state, 0) + count
@@ -438,17 +474,18 @@ def apply_availability(
         if source_kind == "metadata_inference" and legacy_counts != new_counts:
             errors.append(f"{version}:legacy_counts={legacy_counts}:new_counts={new_counts}")
 
-        path, file_items = load_list_items(root, (row.get("links") or {}).get("files"))
-        if path is not None:
-            apply_items_availability(file_items, version, checked_at, adapter, source_kind, cache, config, stats, changes)
-            list_shards[path] = file_items
-        for route in row.get("patches") or []:
-            if not isinstance(route, dict):
-                continue
-            path, patch_items = load_list_items(root, route.get("links"))
+        if not preserve_existing:
+            path, file_items = load_list_items(root, (row.get("links") or {}).get("files"))
             if path is not None:
-                apply_items_availability(patch_items, version, checked_at, adapter, source_kind, cache, config, stats, changes)
-                list_shards[path] = patch_items
+                apply_items_availability(file_items, version, checked_at, adapter, source_kind, cache, config, stats, changes)
+                list_shards[path] = file_items
+            for route in row.get("patches") or []:
+                if not isinstance(route, dict):
+                    continue
+                path, patch_items = load_list_items(root, route.get("links"))
+                if path is not None:
+                    apply_items_availability(patch_items, version, checked_at, adapter, source_kind, cache, config, stats, changes)
+                    list_shards[path] = patch_items
 
     return (
         {key: value for key, value in before_totals.items() if value},
@@ -567,6 +604,7 @@ def main() -> None:
     print(f"summary_contract_states={summary_totals}")
     print(f"live_records={stats.live_records}")
     print(f"metadata_records={stats.metadata_records}")
+    print(f"preserved_records={stats.preserved_records}")
     print(f"request_total={stats.requested}")
     print(f"cache_hits={stats.cache_hits}")
     print(f"failed_probe_results={stats.failed_probe_results}")

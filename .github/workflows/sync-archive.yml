@@ -15,6 +15,7 @@ on:
           - hoyofiles
           - endfield
           - wuwa
+          - wuwa-full
           - arknights
   schedule:
     - cron: "18 23 * * *"
@@ -281,7 +282,7 @@ jobs:
         run: bash scripts/gha_run_step.sh "Install Python dependencies" pip install -r requirements.txt
 
       - name: Restore WuWa probe cache
-        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'wuwa'
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'wuwa' || env.SYNC_SCOPE == 'wuwa-full'
         uses: actions/cache@v4
         with:
           path: .cache/wuwa_probe_facts.json
@@ -319,7 +320,7 @@ jobs:
         run: bash scripts/gha_run_step.sh "Validate Endfield data" python scripts/validate_endfield_archive.py
 
       - name: Refresh Wuthering Waves data
-        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'wuwa'
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'wuwa' || env.SYNC_SCOPE == 'wuwa-full'
         env:
           GHA_RUN_RETRIES: 2
           GHA_RUN_RETRY_DELAY: 20
@@ -356,14 +357,20 @@ jobs:
         run: bash scripts/gha_run_step.sh "Probe archived URL health" python scripts/probe_url_status.py
 
       - name: Refresh WuWa probe cache
-        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'wuwa'
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'wuwa' || env.SYNC_SCOPE == 'wuwa-full'
         env:
           GHA_RUN_RETRIES: 2
           GHA_RUN_RETRY_DELAY: 20
           WUWA_CDN_PROBE_TTL_HOURS: 168
           WUWA_CDN_FAILED_REPROBE_TTL_HOURS: 24
           WUWA_CDN_GRACE_HOURS: 336
-        run: bash scripts/gha_run_step.sh "Refresh WuWa probe cache" python scripts/probe_wuwa_availability.py --all-versions
+        shell: bash
+        run: |
+          args=()
+          if [ "${SYNC_SCOPE}" = "wuwa-full" ]; then
+            args+=(--all-versions)
+          fi
+          bash scripts/gha_run_step.sh "Refresh WuWa probe cache" python scripts/probe_wuwa_availability.py "${args[@]}"
 
       - name: Build availability contract
         shell: bash
@@ -385,7 +392,13 @@ jobs:
           run_for_scope "Build NTE availability" nte python scripts/build_nte_availability.py
           run_for_scope "Build HoYo availability" hoyofiles python scripts/build_hoyo_availability.py
           run_for_scope "Build Endfield availability" endfield python scripts/build_endfield_availability.py
-          run_for_scope "Build WuWa availability" wuwa python scripts/build_wuwa_availability.py --live-probe --all-versions
+          if [ "${SYNC_SCOPE}" = "all" ] || [ "${SYNC_SCOPE}" = "wuwa" ] || [ "${SYNC_SCOPE}" = "wuwa-full" ]; then
+            wuwa_args=(--live-probe)
+            if [ "${SYNC_SCOPE}" = "wuwa-full" ]; then
+              wuwa_args+=(--all-versions)
+            fi
+            bash scripts/gha_run_step.sh "Build WuWa availability" python scripts/build_wuwa_availability.py "${wuwa_args[@]}"
+          fi
           run_for_scope "Build Arknights availability" arknights python scripts/build_arknights_availability.py
           run_for_scope "Build Android availability" android python scripts/build_android_availability.py --allow-semantic-changes
 
@@ -395,7 +408,7 @@ jobs:
           if [ "${SYNC_SCOPE}" = "all" ] || [ "${SYNC_SCOPE}" = "hoyofiles" ]; then
             bash scripts/gha_run_step.sh "Validate HoYo split data" python scripts/validate_hoyo_split.py
           fi
-          if [ "${SYNC_SCOPE}" = "all" ] || [ "${SYNC_SCOPE}" = "wuwa" ]; then
+          if [ "${SYNC_SCOPE}" = "all" ] || [ "${SYNC_SCOPE}" = "wuwa" ] || [ "${SYNC_SCOPE}" = "wuwa-full" ]; then
             bash scripts/gha_run_step.sh "Validate WuWa split data" python scripts/validate_wuwa_split.py
           fi
           bash scripts/gha_run_step.sh "Validate availability contract" python scripts/validate_availability.py
