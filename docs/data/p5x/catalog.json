@@ -18,6 +18,1782 @@
   "iv_seed": "PatcherSDK",
   "versions": [
     {
+      "version": "1.0.34",
+      "status": 200,
+      "last_modified": "Wed, 11 Sep 2024 20:30:01 GMT",
+      "content_length": 72362,
+      "full": {
+        "items": 35,
+        "bytes": 44011669963,
+        "json": "data/p5x/url_lists/1.0.34-full.json",
+        "urls": "data/p5x/url_lists/1.0.34-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.34-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 56,
+        "bytes": 13601793633,
+        "json": "data/p5x/url_lists/1.0.34-patches.json",
+        "urls": "data/p5x/url_lists/1.0.34-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.34-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.34/ResList.bin.zip",
+      "reslist_bytes": 72362,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.34/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.34/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 72362,
+              "last_modified": "Wed, 11 Sep 2024 20:30:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.34/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 35
+        },
+        "patches": {
+          "available": 56
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 35
+        },
+        "patches": {
+          "not_probed": 56
+        }
+      }
+    },
+    {
+      "version": "1.0.35",
+      "status": 200,
+      "last_modified": "Wed, 25 Sep 2024 20:30:00 GMT",
+      "content_length": 75210,
+      "full": {
+        "items": 36,
+        "bytes": 45058248215,
+        "json": "data/p5x/url_lists/1.0.35-full.json",
+        "urls": "data/p5x/url_lists/1.0.35-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.35-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 63,
+        "bytes": 11313214100,
+        "json": "data/p5x/url_lists/1.0.35-patches.json",
+        "urls": "data/p5x/url_lists/1.0.35-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.35-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.35/ResList.bin.zip",
+      "reslist_bytes": 75210,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.35/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.35/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 75210,
+              "last_modified": "Wed, 25 Sep 2024 20:30:00 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.35/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 36
+        },
+        "patches": {
+          "available": 63
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 36
+        },
+        "patches": {
+          "not_probed": 63
+        }
+      }
+    },
+    {
+      "version": "1.0.37",
+      "status": 200,
+      "last_modified": "Wed, 20 Nov 2024 16:01:00 GMT",
+      "content_length": 112084,
+      "full": {
+        "items": 36,
+        "bytes": 49407030195,
+        "json": "data/p5x/url_lists/1.0.37-full.json",
+        "urls": "data/p5x/url_lists/1.0.37-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.37-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 70,
+        "bytes": 17467071598,
+        "json": "data/p5x/url_lists/1.0.37-patches.json",
+        "urls": "data/p5x/url_lists/1.0.37-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.37-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.37/ResList.bin.zip",
+      "reslist_bytes": 112084,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.37/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.37/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 112084,
+              "last_modified": "Wed, 20 Nov 2024 16:01:00 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.37/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 36
+        },
+        "patches": {
+          "available": 70
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 36
+        },
+        "patches": {
+          "not_probed": 70
+        }
+      }
+    },
+    {
+      "version": "1.0.38",
+      "status": 200,
+      "last_modified": "Wed, 20 Nov 2024 19:50:02 GMT",
+      "content_length": 114164,
+      "full": {
+        "items": 36,
+        "bytes": 49406974406,
+        "json": "data/p5x/url_lists/1.0.38-full.json",
+        "urls": "data/p5x/url_lists/1.0.38-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.38-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 75,
+        "bytes": 11101491812,
+        "json": "data/p5x/url_lists/1.0.38-patches.json",
+        "urls": "data/p5x/url_lists/1.0.38-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.38-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.38/ResList.bin.zip",
+      "reslist_bytes": 114164,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.38/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.38/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 114164,
+              "last_modified": "Wed, 20 Nov 2024 19:50:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.38/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 36
+        },
+        "patches": {
+          "available": 75
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 36
+        },
+        "patches": {
+          "not_probed": 75
+        }
+      }
+    },
+    {
+      "version": "1.0.39",
+      "status": 200,
+      "last_modified": "Thu, 02 Jan 2025 20:30:00 GMT",
+      "content_length": 124073,
+      "full": {
+        "items": 39,
+        "bytes": 53368876127,
+        "json": "data/p5x/url_lists/1.0.39-full.json",
+        "urls": "data/p5x/url_lists/1.0.39-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.39-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 78,
+        "bytes": 14909364547,
+        "json": "data/p5x/url_lists/1.0.39-patches.json",
+        "urls": "data/p5x/url_lists/1.0.39-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.39-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.39/ResList.bin.zip",
+      "reslist_bytes": 124073,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.39/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.39/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 124073,
+              "last_modified": "Thu, 02 Jan 2025 20:30:00 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.39/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 39
+        },
+        "patches": {
+          "available": 78
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 39
+        },
+        "patches": {
+          "not_probed": 78
+        }
+      }
+    },
+    {
+      "version": "1.0.40",
+      "status": 200,
+      "last_modified": "Wed, 15 Jan 2025 20:36:33 GMT",
+      "content_length": 124809,
+      "full": {
+        "items": 39,
+        "bytes": 53443668817,
+        "json": "data/p5x/url_lists/1.0.40-full.json",
+        "urls": "data/p5x/url_lists/1.0.40-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.40-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 82,
+        "bytes": 9261802166,
+        "json": "data/p5x/url_lists/1.0.40-patches.json",
+        "urls": "data/p5x/url_lists/1.0.40-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.40-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.40/ResList.bin.zip",
+      "reslist_bytes": 124809,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.40/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.40/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 124809,
+              "last_modified": "Wed, 15 Jan 2025 20:36:33 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.40/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 39
+        },
+        "patches": {
+          "available": 82
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 39
+        },
+        "patches": {
+          "not_probed": 82
+        }
+      }
+    },
+    {
+      "version": "1.0.41",
+      "status": 200,
+      "last_modified": "Wed, 26 Feb 2025 20:50:03 GMT",
+      "content_length": 130953,
+      "full": {
+        "items": 40,
+        "bytes": 54598145352,
+        "json": "data/p5x/url_lists/1.0.41-full.json",
+        "urls": "data/p5x/url_lists/1.0.41-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.41-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 84,
+        "bytes": 14733019504,
+        "json": "data/p5x/url_lists/1.0.41-patches.json",
+        "urls": "data/p5x/url_lists/1.0.41-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.41-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.41/ResList.bin.zip",
+      "reslist_bytes": 130953,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.41/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.41/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 130953,
+              "last_modified": "Wed, 26 Feb 2025 20:50:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.41/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 40
+        },
+        "patches": {
+          "available": 84
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 40
+        },
+        "patches": {
+          "not_probed": 84
+        }
+      }
+    },
+    {
+      "version": "1.0.42",
+      "status": 200,
+      "last_modified": "Wed, 26 Mar 2025 22:30:03 GMT",
+      "content_length": 149294,
+      "full": {
+        "items": 42,
+        "bytes": 54549163068,
+        "json": "data/p5x/url_lists/1.0.42-full.json",
+        "urls": "data/p5x/url_lists/1.0.42-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.42-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 451,
+        "bytes": 80315712548,
+        "json": "data/p5x/url_lists/1.0.42-patches.json",
+        "urls": "data/p5x/url_lists/1.0.42-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.42-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.42/ResList.bin.zip",
+      "reslist_bytes": 149294,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.42/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.42/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 149294,
+              "last_modified": "Wed, 26 Mar 2025 22:30:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.42/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 42
+        },
+        "patches": {
+          "available": 451
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 42
+        },
+        "patches": {
+          "not_probed": 451
+        }
+      }
+    },
+    {
+      "version": "1.0.44",
+      "status": 200,
+      "last_modified": "Wed, 09 Apr 2025 18:11:44 GMT",
+      "content_length": 167363,
+      "full": {
+        "items": 44,
+        "bytes": 58434782948,
+        "json": "data/p5x/url_lists/1.0.44-full.json",
+        "urls": "data/p5x/url_lists/1.0.44-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.44-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 622,
+        "bytes": 119124322700,
+        "json": "data/p5x/url_lists/1.0.44-patches.json",
+        "urls": "data/p5x/url_lists/1.0.44-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.44-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.44/ResList.bin.zip",
+      "reslist_bytes": 167363,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.44/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.44/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 167363,
+              "last_modified": "Wed, 09 Apr 2025 18:11:44 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.44/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 44
+        },
+        "patches": {
+          "available": 622
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 44
+        },
+        "patches": {
+          "not_probed": 622
+        }
+      }
+    },
+    {
+      "version": "1.0.46",
+      "status": 200,
+      "last_modified": "Wed, 02 Jul 2025 22:25:00 GMT",
+      "content_length": 167443,
+      "full": {
+        "items": 44,
+        "bytes": 58434779364,
+        "json": "data/p5x/url_lists/1.0.46-full.json",
+        "urls": "data/p5x/url_lists/1.0.46-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.46-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 625,
+        "bytes": 119291336475,
+        "json": "data/p5x/url_lists/1.0.46-patches.json",
+        "urls": "data/p5x/url_lists/1.0.46-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.46-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.46/ResList.bin.zip",
+      "reslist_bytes": 167443,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.46/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.46/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 167443,
+              "last_modified": "Wed, 02 Jul 2025 22:25:00 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.46/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 44
+        },
+        "patches": {
+          "available": 625
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 44
+        },
+        "patches": {
+          "not_probed": 625
+        }
+      }
+    },
+    {
+      "version": "1.0.48",
+      "status": 200,
+      "last_modified": "Wed, 23 Jul 2025 16:17:41 GMT",
+      "content_length": 190717,
+      "full": {
+        "items": 48,
+        "bytes": 63368303642,
+        "json": "data/p5x/url_lists/1.0.48-full.json",
+        "urls": "data/p5x/url_lists/1.0.48-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.48-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 743,
+        "bytes": 139614071476,
+        "json": "data/p5x/url_lists/1.0.48-patches.json",
+        "urls": "data/p5x/url_lists/1.0.48-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.48-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.48/ResList.bin.zip",
+      "reslist_bytes": 190717,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.48/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.48/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 190717,
+              "last_modified": "Wed, 23 Jul 2025 16:17:41 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.48/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 48
+        },
+        "patches": {
+          "available": 743
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 48
+        },
+        "patches": {
+          "not_probed": 743
+        }
+      }
+    },
+    {
+      "version": "1.0.49",
+      "status": 200,
+      "last_modified": "Wed, 03 Sep 2025 22:15:01 GMT",
+      "content_length": 199165,
+      "full": {
+        "items": 48,
+        "bytes": 64824167880,
+        "json": "data/p5x/url_lists/1.0.49-full.json",
+        "urls": "data/p5x/url_lists/1.0.49-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.49-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 812,
+        "bytes": 148867069405,
+        "json": "data/p5x/url_lists/1.0.49-patches.json",
+        "urls": "data/p5x/url_lists/1.0.49-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.49-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.49/ResList.bin.zip",
+      "reslist_bytes": 199165,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.49/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.49/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 199165,
+              "last_modified": "Wed, 03 Sep 2025 22:15:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.49/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 48
+        },
+        "patches": {
+          "available": 812
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 48
+        },
+        "patches": {
+          "not_probed": 812
+        }
+      }
+    },
+    {
+      "version": "1.0.51",
+      "status": 200,
+      "last_modified": "Thu, 04 Sep 2025 02:31:02 GMT",
+      "content_length": 198845,
+      "full": {
+        "items": 48,
+        "bytes": 64824157640,
+        "json": "data/p5x/url_lists/1.0.51-full.json",
+        "urls": "data/p5x/url_lists/1.0.51-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.51-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 815,
+        "bytes": 149038099891,
+        "json": "data/p5x/url_lists/1.0.51-patches.json",
+        "urls": "data/p5x/url_lists/1.0.51-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.51-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.51/ResList.bin.zip",
+      "reslist_bytes": 198845,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.51/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.51/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 198845,
+              "last_modified": "Thu, 04 Sep 2025 02:31:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.51/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 48
+        },
+        "patches": {
+          "available": 815
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 48
+        },
+        "patches": {
+          "not_probed": 815
+        }
+      }
+    },
+    {
+      "version": "1.0.56",
+      "status": 200,
+      "last_modified": "Thu, 20 Nov 2025 01:29:00 GMT",
+      "content_length": 47792,
+      "full": {
+        "items": 3,
+        "bytes": 977707357,
+        "json": "data/p5x/url_lists/1.0.56-full.json",
+        "urls": "data/p5x/url_lists/1.0.56-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.56-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 818,
+        "bytes": 149167150877,
+        "json": "data/p5x/url_lists/1.0.56-patches.json",
+        "urls": "data/p5x/url_lists/1.0.56-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.56-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.56/ResList.bin.zip",
+      "reslist_bytes": 47792,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.56/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.56/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 47792,
+              "last_modified": "Thu, 20 Nov 2025 01:29:00 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.56/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 3
+        },
+        "patches": {
+          "available": 818
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 3
+        },
+        "patches": {
+          "not_probed": 818
+        }
+      }
+    },
+    {
+      "version": "1.0.58",
+      "status": 200,
+      "last_modified": "Mon, 01 Dec 2025 10:37:53 GMT",
+      "content_length": 47744,
+      "full": {
+        "items": 3,
+        "bytes": 999855244,
+        "json": "data/p5x/url_lists/1.0.58-full.json",
+        "urls": "data/p5x/url_lists/1.0.58-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.58-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 818,
+        "bytes": 149167150877,
+        "json": "data/p5x/url_lists/1.0.58-patches.json",
+        "urls": "data/p5x/url_lists/1.0.58-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.58-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.58/ResList.bin.zip",
+      "reslist_bytes": 47744,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.58/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.58/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 47744,
+              "last_modified": "Mon, 01 Dec 2025 10:37:53 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.58/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 3
+        },
+        "patches": {
+          "available": 818
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 3
+        },
+        "patches": {
+          "not_probed": 818
+        }
+      }
+    },
+    {
+      "version": "1.0.59",
+      "status": 200,
+      "last_modified": "Wed, 03 Dec 2025 02:10:24 GMT",
+      "content_length": 47728,
+      "full": {
+        "items": 4,
+        "bytes": 1000860356,
+        "json": "data/p5x/url_lists/1.0.59-full.json",
+        "urls": "data/p5x/url_lists/1.0.59-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.59-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 818,
+        "bytes": 149167150877,
+        "json": "data/p5x/url_lists/1.0.59-patches.json",
+        "urls": "data/p5x/url_lists/1.0.59-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.59-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.59/ResList.bin.zip",
+      "reslist_bytes": 47728,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.59/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.59/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 47728,
+              "last_modified": "Wed, 03 Dec 2025 02:10:24 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.59/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 4
+        },
+        "patches": {
+          "available": 818
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 4
+        },
+        "patches": {
+          "not_probed": 818
+        }
+      }
+    },
+    {
+      "version": "1.0.61",
+      "status": 200,
+      "last_modified": "Wed, 10 Dec 2025 07:44:58 GMT",
+      "content_length": 48096,
+      "full": {
+        "items": 3,
+        "bytes": 999997860,
+        "json": "data/p5x/url_lists/1.0.61-full.json",
+        "urls": "data/p5x/url_lists/1.0.61-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.61-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 822,
+        "bytes": 149449861860,
+        "json": "data/p5x/url_lists/1.0.61-patches.json",
+        "urls": "data/p5x/url_lists/1.0.61-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.61-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.61/ResList.bin.zip",
+      "reslist_bytes": 48096,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.61/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.61/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 48096,
+              "last_modified": "Wed, 10 Dec 2025 07:44:58 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.61/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 3
+        },
+        "patches": {
+          "available": 822
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 3
+        },
+        "patches": {
+          "not_probed": 822
+        }
+      }
+    },
+    {
+      "version": "1.0.62",
+      "status": 200,
+      "last_modified": "Wed, 10 Dec 2025 23:48:19 GMT",
+      "content_length": 48560,
+      "full": {
+        "items": 4,
+        "bytes": 1855230644,
+        "json": "data/p5x/url_lists/1.0.62-full.json",
+        "urls": "data/p5x/url_lists/1.0.62-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.62-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 826,
+        "bytes": 149901667711,
+        "json": "data/p5x/url_lists/1.0.62-patches.json",
+        "urls": "data/p5x/url_lists/1.0.62-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.62-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.62/ResList.bin.zip",
+      "reslist_bytes": 48560,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.62/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.62/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 48560,
+              "last_modified": "Wed, 10 Dec 2025 23:48:19 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.62/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 4
+        },
+        "patches": {
+          "available": 826
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 4
+        },
+        "patches": {
+          "not_probed": 826
+        }
+      }
+    },
+    {
+      "version": "1.0.63",
+      "status": 200,
+      "last_modified": "Thu, 25 Dec 2025 02:04:37 GMT",
+      "content_length": 48240,
+      "full": {
+        "items": 3,
+        "bytes": 1024367830,
+        "json": "data/p5x/url_lists/1.0.63-full.json",
+        "urls": "data/p5x/url_lists/1.0.63-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.63-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 826,
+        "bytes": 149901667711,
+        "json": "data/p5x/url_lists/1.0.63-patches.json",
+        "urls": "data/p5x/url_lists/1.0.63-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.63-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.63/ResList.bin.zip",
+      "reslist_bytes": 48240,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.63/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.63/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 48240,
+              "last_modified": "Thu, 25 Dec 2025 02:04:37 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.63/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 3
+        },
+        "patches": {
+          "available": 826
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 3
+        },
+        "patches": {
+          "not_probed": 826
+        }
+      }
+    },
+    {
+      "version": "1.0.64",
+      "status": 200,
+      "last_modified": "Wed, 14 Jan 2026 21:01:00 GMT",
+      "content_length": 48448,
+      "full": {
+        "items": 3,
+        "bytes": 1024340115,
+        "json": "data/p5x/url_lists/1.0.64-full.json",
+        "urls": "data/p5x/url_lists/1.0.64-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.64-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 828,
+        "bytes": 150066911875,
+        "json": "data/p5x/url_lists/1.0.64-patches.json",
+        "urls": "data/p5x/url_lists/1.0.64-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.64-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.64/ResList.bin.zip",
+      "reslist_bytes": 48448,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.64/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.64/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 48448,
+              "last_modified": "Wed, 14 Jan 2026 21:01:00 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.64/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 3
+        },
+        "patches": {
+          "available": 828
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 3
+        },
+        "patches": {
+          "not_probed": 828
+        }
+      }
+    },
+    {
+      "version": "1.0.66",
+      "status": 200,
+      "last_modified": "Wed, 04 Mar 2026 15:26:32 GMT",
+      "content_length": 48304,
+      "full": {
+        "items": 3,
+        "bytes": 645326056,
+        "json": "data/p5x/url_lists/1.0.66-full.json",
+        "urls": "data/p5x/url_lists/1.0.66-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.66-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 828,
+        "bytes": 150066911875,
+        "json": "data/p5x/url_lists/1.0.66-patches.json",
+        "urls": "data/p5x/url_lists/1.0.66-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.66-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.66/ResList.bin.zip",
+      "reslist_bytes": 48304,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.66/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.66/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 48304,
+              "last_modified": "Wed, 04 Mar 2026 15:26:32 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.66/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 3
+        },
+        "patches": {
+          "available": 828
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 3
+        },
+        "patches": {
+          "not_probed": 828
+        }
+      }
+    },
+    {
+      "version": "1.0.68",
+      "status": 200,
+      "last_modified": "Wed, 04 Mar 2026 15:56:36 GMT",
+      "content_length": 48416,
+      "full": {
+        "items": 3,
+        "bytes": 1024340115,
+        "json": "data/p5x/url_lists/1.0.68-full.json",
+        "urls": "data/p5x/url_lists/1.0.68-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.68-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 828,
+        "bytes": 150066911875,
+        "json": "data/p5x/url_lists/1.0.68-patches.json",
+        "urls": "data/p5x/url_lists/1.0.68-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.68-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.68/ResList.bin.zip",
+      "reslist_bytes": 48416,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.68/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.68/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 48416,
+              "last_modified": "Wed, 04 Mar 2026 15:56:36 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.68/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 3
+        },
+        "patches": {
+          "available": 828
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 3
+        },
+        "patches": {
+          "not_probed": 828
+        }
+      }
+    },
+    {
+      "version": "1.0.71",
+      "status": 200,
+      "last_modified": "Wed, 01 Apr 2026 22:22:00 GMT",
+      "content_length": 48464,
+      "full": {
+        "items": 3,
+        "bytes": 873090342,
+        "json": "data/p5x/url_lists/1.0.71-full.json",
+        "urls": "data/p5x/url_lists/1.0.71-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.71-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 828,
+        "bytes": 150066911875,
+        "json": "data/p5x/url_lists/1.0.71-patches.json",
+        "urls": "data/p5x/url_lists/1.0.71-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.71-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.71/ResList.bin.zip",
+      "reslist_bytes": 48464,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.71/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.71/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 48464,
+              "last_modified": "Wed, 01 Apr 2026 22:22:00 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.71/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 3
+        },
+        "patches": {
+          "available": 828
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 3
+        },
+        "patches": {
+          "not_probed": 828
+        }
+      }
+    },
+    {
+      "version": "1.0.72",
+      "status": 200,
+      "last_modified": "Wed, 24 Jun 2026 02:02:02 GMT",
+      "content_length": 48624,
+      "full": {
+        "items": 3,
+        "bytes": 952110881,
+        "json": "data/p5x/url_lists/1.0.72-full.json",
+        "urls": "data/p5x/url_lists/1.0.72-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.72-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 826,
+        "bytes": 150138980674,
+        "json": "data/p5x/url_lists/1.0.72-patches.json",
+        "urls": "data/p5x/url_lists/1.0.72-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.72-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.72/ResList.bin.zip",
+      "reslist_bytes": 48624,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.72/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 22:51:10 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.72/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 48624,
+              "last_modified": "Wed, 24 Jun 2026 02:02:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.72/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 3
+        },
+        "patches": {
+          "available": 826
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 3
+        },
+        "patches": {
+          "not_probed": 826
+        }
+      }
+    },
+    {
       "version": "1.0.74",
       "status": 200,
       "last_modified": "Mon, 06 Jul 2026 03:15:12 GMT",
@@ -46,7 +1822,7 @@
               "ok": true,
               "status": 200,
               "method": "GET",
-              "checked_at": "2026-07-08 21:30:33 +0800",
+              "checked_at": "2026-07-08 22:51:10 +0800",
               "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.74/ResList.bin.zip",
               "content_type": "application/zip",
               "size": 49120,
@@ -92,8 +1868,8 @@
       }
     }
   ],
-  "last_checked_at": "2026-07-08 21:30:33 +0800",
-  "generated_at": "2026-07-08 21:30:33 +0800",
+  "last_checked_at": "2026-07-08 22:51:10 +0800",
+  "generated_at": "2026-07-08 22:51:10 +0800",
   "current_version": "1.0.74",
   "config": {
     "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/config.xml",

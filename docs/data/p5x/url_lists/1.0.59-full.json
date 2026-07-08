@@ -1,0 +1,174 @@
+[
+  {
+    "filename": "client/bin/_vfileContent0",
+    "filesize": 836411636,
+    "md5": "3c5ff290c19a381eda76f16f787426b7",
+    "object": "3c5ff290c19a381eda76f16f787426b7.836411636",
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3c5ff290c19a381eda76f16f787426b7.836411636",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3c5ff290c19a381eda76f16f787426b7.836411636",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3c5ff290c19a381eda76f16f787426b7.836411636",
+            "content_type": "",
+            "size": 836411636,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3c5ff290c19a381eda76f16f787426b7.836411636",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "filename": "client/pc/GameAssembly.dll",
+    "filesize": 72146488,
+    "md5": "508a025018006447665965b5edf267da",
+    "object": "508a025018006447665965b5edf267da.72146488",
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/508a025018006447665965b5edf267da.72146488",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/508a025018006447665965b5edf267da.72146488",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/508a025018006447665965b5edf267da.72146488",
+            "content_type": "",
+            "size": 72146488,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/508a025018006447665965b5edf267da.72146488",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "filename": "client/pc/P5X_Data/Plugins/x86_64/zeusarchive.dll",
+    "filesize": 1005112,
+    "md5": "4da9525b1800c10c79782eaf40fc5049",
+    "object": "4da9525b1800c10c79782eaf40fc5049.1005112",
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4da9525b1800c10c79782eaf40fc5049.1005112",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4da9525b1800c10c79782eaf40fc5049.1005112",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4da9525b1800c10c79782eaf40fc5049.1005112",
+            "content_type": "",
+            "size": 1005112,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4da9525b1800c10c79782eaf40fc5049.1005112",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "filename": "client/pc/P5X_Data/resources.assets.resS",
+    "filesize": 91297120,
+    "md5": "58ec66d781d7b21a9e73f67710a0e65e",
+    "object": "58ec66d781d7b21a9e73f67710a0e65e.91297120",
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/58ec66d781d7b21a9e73f67710a0e65e.91297120",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/58ec66d781d7b21a9e73f67710a0e65e.91297120",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/58ec66d781d7b21a9e73f67710a0e65e.91297120",
+            "content_type": "",
+            "size": 91297120,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/58ec66d781d7b21a9e73f67710a0e65e.91297120",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  }
+]

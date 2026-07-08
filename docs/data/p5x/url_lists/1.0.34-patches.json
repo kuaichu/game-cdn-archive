@@ -1,0 +1,2466 @@
+[
+  {
+    "oldfile": "72a99bcc598a289c8e39b54eedbc995b.77858256",
+    "newfile": "18153b2144e95249314d526f7c0592b9.82192240",
+    "patch": "cc3536950afd0607a16b8517b90cedd0.1749419",
+    "version_hash": "5d24ba",
+    "filesize": 1749419,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/cc3536950afd0607a16b8517b90cedd0.1749419",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/cc3536950afd0607a16b8517b90cedd0.1749419",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/cc3536950afd0607a16b8517b90cedd0.1749419",
+            "content_type": "",
+            "size": 1749419,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/cc3536950afd0607a16b8517b90cedd0.1749419",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "7929ce3a54fbe6aef799913de67014f4.64300544",
+    "newfile": "30b16cf28d49d1095334967a42001d26.68622848",
+    "patch": "82216f4fb7dc1b76cb64c9218fdae61a.57985115",
+    "version_hash": "5d24ba",
+    "filesize": 57985115,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/82216f4fb7dc1b76cb64c9218fdae61a.57985115",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/82216f4fb7dc1b76cb64c9218fdae61a.57985115",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/82216f4fb7dc1b76cb64c9218fdae61a.57985115",
+            "content_type": "",
+            "size": 57985115,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/82216f4fb7dc1b76cb64c9218fdae61a.57985115",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "e7e9003baa9afe32f2dd96e541883596.2121842262",
+    "newfile": "761c32f3ee78860b94ff1097a56db7b4.2065013539",
+    "patch": "3043191ad656f0431e5ede0fc333fadc.335609613",
+    "version_hash": "5d24ba",
+    "filesize": 335609613,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3043191ad656f0431e5ede0fc333fadc.335609613",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3043191ad656f0431e5ede0fc333fadc.335609613",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3043191ad656f0431e5ede0fc333fadc.335609613",
+            "content_type": "",
+            "size": 335609613,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3043191ad656f0431e5ede0fc333fadc.335609613",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "61a4095b2f948130de655a964aaf7a38.2135789256",
+    "newfile": "d8cceb15067257dc2b05e445478db6d2.2129571430",
+    "patch": "b7ddd2fb9f8d16cd1df60a6bb9db3755.356872800",
+    "version_hash": "5d24ba",
+    "filesize": 356872800,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b7ddd2fb9f8d16cd1df60a6bb9db3755.356872800",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b7ddd2fb9f8d16cd1df60a6bb9db3755.356872800",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b7ddd2fb9f8d16cd1df60a6bb9db3755.356872800",
+            "content_type": "",
+            "size": 356872800,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b7ddd2fb9f8d16cd1df60a6bb9db3755.356872800",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "54f314932ac0fa775c8bdfa376f3941a.2134015158",
+    "newfile": "e88173ebe11ff8ed8209f6a2b98f2136.2136997698",
+    "patch": "90e099c0d8a7ac32169828fa06e79a52.367558135",
+    "version_hash": "5d24ba",
+    "filesize": 367558135,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/90e099c0d8a7ac32169828fa06e79a52.367558135",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/90e099c0d8a7ac32169828fa06e79a52.367558135",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/90e099c0d8a7ac32169828fa06e79a52.367558135",
+            "content_type": "",
+            "size": 367558135,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/90e099c0d8a7ac32169828fa06e79a52.367558135",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "813143c550be50b408a0ca092a1d9a0b.2123325863",
+    "newfile": "c61139b25550ccb683a31d789c8b74c5.2136119364",
+    "patch": "9facee2ad2bd9df3cc4aac0ec258f049.442455336",
+    "version_hash": "5d24ba",
+    "filesize": 442455336,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/9facee2ad2bd9df3cc4aac0ec258f049.442455336",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/9facee2ad2bd9df3cc4aac0ec258f049.442455336",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/9facee2ad2bd9df3cc4aac0ec258f049.442455336",
+            "content_type": "",
+            "size": 442455336,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/9facee2ad2bd9df3cc4aac0ec258f049.442455336",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "e08f3ac4cce130fd719a7a3bbee398c9.2135738629",
+    "newfile": "d80f1d900d6eead3f3c719b1142b0326.2135180295",
+    "patch": "37b401454d632d549468250cec5c2dfa.419848061",
+    "version_hash": "5d24ba",
+    "filesize": 419848061,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/37b401454d632d549468250cec5c2dfa.419848061",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/37b401454d632d549468250cec5c2dfa.419848061",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/37b401454d632d549468250cec5c2dfa.419848061",
+            "content_type": "",
+            "size": 419848061,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/37b401454d632d549468250cec5c2dfa.419848061",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "40435cd5570d361fa7a74f4bc4075cd2.2126504393",
+    "newfile": "8dbb26b7d18e252cd9a624ed69e38f49.2136996600",
+    "patch": "328dd07503a9fe0be0157d02e541c963.453661485",
+    "version_hash": "5d24ba",
+    "filesize": 453661485,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/328dd07503a9fe0be0157d02e541c963.453661485",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/328dd07503a9fe0be0157d02e541c963.453661485",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/328dd07503a9fe0be0157d02e541c963.453661485",
+            "content_type": "",
+            "size": 453661485,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/328dd07503a9fe0be0157d02e541c963.453661485",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "3145ef5cfe45a31622badac4d194c68c.2059808109",
+    "newfile": "09028091749db3b7b142aaea1a219d72.2136997036",
+    "patch": "e3da6fa5c7a467ca953cd2403c18e0cf.543246001",
+    "version_hash": "5d24ba",
+    "filesize": 543246001,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e3da6fa5c7a467ca953cd2403c18e0cf.543246001",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e3da6fa5c7a467ca953cd2403c18e0cf.543246001",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e3da6fa5c7a467ca953cd2403c18e0cf.543246001",
+            "content_type": "",
+            "size": 543246001,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e3da6fa5c7a467ca953cd2403c18e0cf.543246001",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "e89870a414dea7b992431734159aa7e8.2134452859",
+    "newfile": "c6ea96a63dc6a5fdfc4c26db37b74688.2130662595",
+    "patch": "67ff356d813440df2f20172ac8ee7f03.495515305",
+    "version_hash": "5d24ba",
+    "filesize": 495515305,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/6/67ff356d813440df2f20172ac8ee7f03.495515305",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/6/67ff356d813440df2f20172ac8ee7f03.495515305",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/6/67ff356d813440df2f20172ac8ee7f03.495515305",
+            "content_type": "",
+            "size": 495515305,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/6/67ff356d813440df2f20172ac8ee7f03.495515305",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "9eacbb17bac08cebc9ecf9f705c29699.1568782142",
+    "newfile": "4786f5e64ef623f235dab679b2e6a175.2125649442",
+    "patch": "d6778a4262ae03a7fde50926386b965f.797822607",
+    "version_hash": "5d24ba",
+    "filesize": 797822607,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/d/d6778a4262ae03a7fde50926386b965f.797822607",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/d/d6778a4262ae03a7fde50926386b965f.797822607",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/d/d6778a4262ae03a7fde50926386b965f.797822607",
+            "content_type": "",
+            "size": 797822607,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/d/d6778a4262ae03a7fde50926386b965f.797822607",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "be7e3b1a9f94756b0703fb41cdd44fca.2089300130",
+    "newfile": "57af3c3d54be757ff48f7a45b403495a.1957053760",
+    "patch": "db82561c031dcaf89aed05e723a53294.319966085",
+    "version_hash": "5d24ba",
+    "filesize": 319966085,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/d/db82561c031dcaf89aed05e723a53294.319966085",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/d/db82561c031dcaf89aed05e723a53294.319966085",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/d/db82561c031dcaf89aed05e723a53294.319966085",
+            "content_type": "",
+            "size": 319966085,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/d/db82561c031dcaf89aed05e723a53294.319966085",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "2569267e6a094c631f1b57184a117251.2134873967",
+    "newfile": "06f8427e92876e534600bd5a2a1a482e.2136127231",
+    "patch": "c737376a461f842e6148e5af940190d9.429946996",
+    "version_hash": "5d24ba",
+    "filesize": 429946996,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c737376a461f842e6148e5af940190d9.429946996",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c737376a461f842e6148e5af940190d9.429946996",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c737376a461f842e6148e5af940190d9.429946996",
+            "content_type": "",
+            "size": 429946996,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c737376a461f842e6148e5af940190d9.429946996",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "4683a4c54bb8e3157da1524b30f5e212.54754912",
+    "newfile": "670535da5d263a50496024cceb1fc5f6.84940448",
+    "patch": "ff9eb16c9839a2f2b4bf12c72031402d.30129443",
+    "version_hash": "5d24ba",
+    "filesize": 30129443,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/f/ff9eb16c9839a2f2b4bf12c72031402d.30129443",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/f/ff9eb16c9839a2f2b4bf12c72031402d.30129443",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/f/ff9eb16c9839a2f2b4bf12c72031402d.30129443",
+            "content_type": "",
+            "size": 30129443,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/f/ff9eb16c9839a2f2b4bf12c72031402d.30129443",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "69d70231e7d8fcdfbf2d579e89a58a01.66392064",
+    "newfile": "30b16cf28d49d1095334967a42001d26.68622848",
+    "patch": "c4f15d0d75d04c273ac7ef4f731dd6f7.57084895",
+    "version_hash": "5d24ba",
+    "filesize": 57084895,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c4f15d0d75d04c273ac7ef4f731dd6f7.57084895",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c4f15d0d75d04c273ac7ef4f731dd6f7.57084895",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c4f15d0d75d04c273ac7ef4f731dd6f7.57084895",
+            "content_type": "",
+            "size": 57084895,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c4f15d0d75d04c273ac7ef4f731dd6f7.57084895",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "032ed3edaa72722108b2709c9f1bb255.2046814398",
+    "newfile": "c61139b25550ccb683a31d789c8b74c5.2136119364",
+    "patch": "946ebb494a3a03bf643c3322fd8b220a.110194014",
+    "version_hash": "5d24ba",
+    "filesize": 110194014,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/946ebb494a3a03bf643c3322fd8b220a.110194014",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/946ebb494a3a03bf643c3322fd8b220a.110194014",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/946ebb494a3a03bf643c3322fd8b220a.110194014",
+            "content_type": "",
+            "size": 110194014,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/946ebb494a3a03bf643c3322fd8b220a.110194014",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "55922eb25d72bbc81eafe11bed7479e7.2119008020",
+    "newfile": "8dbb26b7d18e252cd9a624ed69e38f49.2136996600",
+    "patch": "480e783a92ec9905c809524c6198e383.164051765",
+    "version_hash": "5d24ba",
+    "filesize": 164051765,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/480e783a92ec9905c809524c6198e383.164051765",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/480e783a92ec9905c809524c6198e383.164051765",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/480e783a92ec9905c809524c6198e383.164051765",
+            "content_type": "",
+            "size": 164051765,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/480e783a92ec9905c809524c6198e383.164051765",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "f6901422e3eb18c526b2d8eb2ee85a30.2134739268",
+    "newfile": "c6ea96a63dc6a5fdfc4c26db37b74688.2130662595",
+    "patch": "3019cc9bcd3a378e719b7758add64cb7.142147794",
+    "version_hash": "5d24ba",
+    "filesize": 142147794,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3019cc9bcd3a378e719b7758add64cb7.142147794",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3019cc9bcd3a378e719b7758add64cb7.142147794",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3019cc9bcd3a378e719b7758add64cb7.142147794",
+            "content_type": "",
+            "size": 142147794,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3019cc9bcd3a378e719b7758add64cb7.142147794",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "ebf0c3bf21cb5b47ccdde708df341d4a.2131209973",
+    "newfile": "09028091749db3b7b142aaea1a219d72.2136997036",
+    "patch": "88033e70351deb7bda470185ef315043.236099921",
+    "version_hash": "5d24ba",
+    "filesize": 236099921,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/88033e70351deb7bda470185ef315043.236099921",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/88033e70351deb7bda470185ef315043.236099921",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/88033e70351deb7bda470185ef315043.236099921",
+            "content_type": "",
+            "size": 236099921,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/88033e70351deb7bda470185ef315043.236099921",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "c70b70ad565c6ccc4ab7d4144068212f.2134268782",
+    "newfile": "d80f1d900d6eead3f3c719b1142b0326.2135180295",
+    "patch": "409590cbf2922cbed6ee27d28870ddf2.179937386",
+    "version_hash": "5d24ba",
+    "filesize": 179937386,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/409590cbf2922cbed6ee27d28870ddf2.179937386",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/409590cbf2922cbed6ee27d28870ddf2.179937386",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/409590cbf2922cbed6ee27d28870ddf2.179937386",
+            "content_type": "",
+            "size": 179937386,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/409590cbf2922cbed6ee27d28870ddf2.179937386",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "01e9d0f532258666362d03a3e9c9b119.2079366581",
+    "newfile": "761c32f3ee78860b94ff1097a56db7b4.2065013539",
+    "patch": "46fea1c556c381e311cc7732cb617789.93830261",
+    "version_hash": "5d24ba",
+    "filesize": 93830261,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/46fea1c556c381e311cc7732cb617789.93830261",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/46fea1c556c381e311cc7732cb617789.93830261",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/46fea1c556c381e311cc7732cb617789.93830261",
+            "content_type": "",
+            "size": 93830261,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/46fea1c556c381e311cc7732cb617789.93830261",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "cbaa7fa848d5500626ca144b158be72c.1898815707",
+    "newfile": "0f838c119e1db1d132b02804949efd4e.1877748613",
+    "patch": "e306cc8ccab7cbe913be6c95a5e53f33.468853071",
+    "version_hash": "5d24ba",
+    "filesize": 468853071,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e306cc8ccab7cbe913be6c95a5e53f33.468853071",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e306cc8ccab7cbe913be6c95a5e53f33.468853071",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e306cc8ccab7cbe913be6c95a5e53f33.468853071",
+            "content_type": "",
+            "size": 468853071,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e306cc8ccab7cbe913be6c95a5e53f33.468853071",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "aa266b5bfcbdbb5bfa74bc963b51a8d0.2127158327",
+    "newfile": "4aa8de02f4188ab926e1d1eaddd6602b.2136978492",
+    "patch": "c255df2f0afcedc18be0506c82a1288d.478279620",
+    "version_hash": "5d24ba",
+    "filesize": 478279620,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c255df2f0afcedc18be0506c82a1288d.478279620",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c255df2f0afcedc18be0506c82a1288d.478279620",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c255df2f0afcedc18be0506c82a1288d.478279620",
+            "content_type": "",
+            "size": 478279620,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c255df2f0afcedc18be0506c82a1288d.478279620",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "5e8488f525a00579e465effe6eb16a49.2135464769",
+    "newfile": "a7f46c4cae935ecbe519e42b34bce7f0.2090290218",
+    "patch": "a1957ca7c7e5747ce51f8ef7ffbb59be.431194552",
+    "version_hash": "5d24ba",
+    "filesize": 431194552,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/a/a1957ca7c7e5747ce51f8ef7ffbb59be.431194552",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/a/a1957ca7c7e5747ce51f8ef7ffbb59be.431194552",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/a/a1957ca7c7e5747ce51f8ef7ffbb59be.431194552",
+            "content_type": "",
+            "size": 431194552,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/a/a1957ca7c7e5747ce51f8ef7ffbb59be.431194552",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "07a2a8107ba2200eca14ba06420b746f.2136099937",
+    "newfile": "0ac1be98fc42f1cc168d691d65a3aa10.2132305742",
+    "patch": "e2607410c89b554672cf684026c22c46.374871871",
+    "version_hash": "5d24ba",
+    "filesize": 374871871,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e2607410c89b554672cf684026c22c46.374871871",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e2607410c89b554672cf684026c22c46.374871871",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e2607410c89b554672cf684026c22c46.374871871",
+            "content_type": "",
+            "size": 374871871,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e2607410c89b554672cf684026c22c46.374871871",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "b17639c28be9c3f578ec07e8d9710504.2136697244",
+    "newfile": "d8cceb15067257dc2b05e445478db6d2.2129571430",
+    "patch": "86923bb986c9c14e6dd03e21047636b0.125222632",
+    "version_hash": "5d24ba",
+    "filesize": 125222632,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/86923bb986c9c14e6dd03e21047636b0.125222632",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/86923bb986c9c14e6dd03e21047636b0.125222632",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/86923bb986c9c14e6dd03e21047636b0.125222632",
+            "content_type": "",
+            "size": 125222632,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/86923bb986c9c14e6dd03e21047636b0.125222632",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "5f33958b8faeadc81809bbe73931b149.2136895727",
+    "newfile": "e88173ebe11ff8ed8209f6a2b98f2136.2136997698",
+    "patch": "b2d7e00e0106339bed9c48dd1dc4d762.159424903",
+    "version_hash": "5d24ba",
+    "filesize": 159424903,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b2d7e00e0106339bed9c48dd1dc4d762.159424903",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b2d7e00e0106339bed9c48dd1dc4d762.159424903",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b2d7e00e0106339bed9c48dd1dc4d762.159424903",
+            "content_type": "",
+            "size": 159424903,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b2d7e00e0106339bed9c48dd1dc4d762.159424903",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "60ec277b5082c1221bc226f1a0686ee2.2019658355",
+    "newfile": "57af3c3d54be757ff48f7a45b403495a.1957053760",
+    "patch": "67e274c46a78602a0517d07a4d50af56.25615960",
+    "version_hash": "5d24ba",
+    "filesize": 25615960,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/6/67e274c46a78602a0517d07a4d50af56.25615960",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/6/67e274c46a78602a0517d07a4d50af56.25615960",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/6/67e274c46a78602a0517d07a4d50af56.25615960",
+            "content_type": "",
+            "size": 25615960,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/6/67e274c46a78602a0517d07a4d50af56.25615960",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "34e028c7ca272b317f1642425d9b1d3b.2126797184",
+    "newfile": "06f8427e92876e534600bd5a2a1a482e.2136127231",
+    "patch": "29e9ca8343683e650b05485cb958a08f.226839124",
+    "version_hash": "5d24ba",
+    "filesize": 226839124,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/2/29e9ca8343683e650b05485cb958a08f.226839124",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/2/29e9ca8343683e650b05485cb958a08f.226839124",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/2/29e9ca8343683e650b05485cb958a08f.226839124",
+            "content_type": "",
+            "size": 226839124,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/2/29e9ca8343683e650b05485cb958a08f.226839124",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "dbdc8a5199e54f70fdaee2ec37230df3.2044996938",
+    "newfile": "75bf051a08b78db7bc505c9932f4f539.1751365732",
+    "patch": "174afeeb5919487aa1fe0dda156f4663.253015081",
+    "version_hash": "5d24ba",
+    "filesize": 253015081,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/1/174afeeb5919487aa1fe0dda156f4663.253015081",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/1/174afeeb5919487aa1fe0dda156f4663.253015081",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/1/174afeeb5919487aa1fe0dda156f4663.253015081",
+            "content_type": "",
+            "size": 253015081,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/1/174afeeb5919487aa1fe0dda156f4663.253015081",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "f001ed56132ccc915bb1b15e905b0f8a.66671616",
+    "newfile": "30b16cf28d49d1095334967a42001d26.68622848",
+    "patch": "fa11c193059451706ae8b0175e1d4f97.56784216",
+    "version_hash": "5d24ba",
+    "filesize": 56784216,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/f/fa11c193059451706ae8b0175e1d4f97.56784216",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/f/fa11c193059451706ae8b0175e1d4f97.56784216",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/f/fa11c193059451706ae8b0175e1d4f97.56784216",
+            "content_type": "",
+            "size": 56784216,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/f/fa11c193059451706ae8b0175e1d4f97.56784216",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "ec8bd169e1e167277f186f127217d510.2121896426",
+    "newfile": "ceaa17b682dea0e851bc6b30f63edf2f.1907169501",
+    "patch": "551a3b99288885a1dddcf9c548d5f293.412324868",
+    "version_hash": "5d24ba",
+    "filesize": 412324868,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/551a3b99288885a1dddcf9c548d5f293.412324868",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/551a3b99288885a1dddcf9c548d5f293.412324868",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/551a3b99288885a1dddcf9c548d5f293.412324868",
+            "content_type": "",
+            "size": 412324868,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/551a3b99288885a1dddcf9c548d5f293.412324868",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "c1a39b7d842bb93e4b8618c59e21730a.2086698069",
+    "newfile": "b58858fcb6b7476b2863d4c4363d2c2a.2018353816",
+    "patch": "b31fb0c31252f4c2cb2ea1cac5fa712e.404380919",
+    "version_hash": "5d24ba",
+    "filesize": 404380919,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b31fb0c31252f4c2cb2ea1cac5fa712e.404380919",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b31fb0c31252f4c2cb2ea1cac5fa712e.404380919",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b31fb0c31252f4c2cb2ea1cac5fa712e.404380919",
+            "content_type": "",
+            "size": 404380919,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b31fb0c31252f4c2cb2ea1cac5fa712e.404380919",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "9f1f379b5c65019e325d0fa6b21a517a.2136935327",
+    "newfile": "0ac1be98fc42f1cc168d691d65a3aa10.2132305742",
+    "patch": "72401b7c570a23d9891b09bed49abb58.84769136",
+    "version_hash": "5d24ba",
+    "filesize": 84769136,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/7/72401b7c570a23d9891b09bed49abb58.84769136",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/7/72401b7c570a23d9891b09bed49abb58.84769136",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/7/72401b7c570a23d9891b09bed49abb58.84769136",
+            "content_type": "",
+            "size": 84769136,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/7/72401b7c570a23d9891b09bed49abb58.84769136",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "c4e987a9ae221563bb9ad6a5264585d5.2136616643",
+    "newfile": "4aa8de02f4188ab926e1d1eaddd6602b.2136978492",
+    "patch": "4892178e8f8cfbc7d1eb9e2e32de3fef.157368432",
+    "version_hash": "5d24ba",
+    "filesize": 157368432,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4892178e8f8cfbc7d1eb9e2e32de3fef.157368432",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4892178e8f8cfbc7d1eb9e2e32de3fef.157368432",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4892178e8f8cfbc7d1eb9e2e32de3fef.157368432",
+            "content_type": "",
+            "size": 157368432,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4892178e8f8cfbc7d1eb9e2e32de3fef.157368432",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "7f932a3075977f7c5a9c8109091e66a8.2132761026",
+    "newfile": "a7f46c4cae935ecbe519e42b34bce7f0.2090290218",
+    "patch": "8ab55635aed47143a5bdc1e0304931e4.126532723",
+    "version_hash": "5d24ba",
+    "filesize": 126532723,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/8ab55635aed47143a5bdc1e0304931e4.126532723",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/8ab55635aed47143a5bdc1e0304931e4.126532723",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/8ab55635aed47143a5bdc1e0304931e4.126532723",
+            "content_type": "",
+            "size": 126532723,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/8/8ab55635aed47143a5bdc1e0304931e4.126532723",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "c7273760aeaa54548e55ff3a0b5e5818.2100029105",
+    "newfile": "4786f5e64ef623f235dab679b2e6a175.2125649442",
+    "patch": "12547f6145abd1ebc2385e3ed04ab37f.209648665",
+    "version_hash": "5d24ba",
+    "filesize": 209648665,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/1/12547f6145abd1ebc2385e3ed04ab37f.209648665",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/1/12547f6145abd1ebc2385e3ed04ab37f.209648665",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/1/12547f6145abd1ebc2385e3ed04ab37f.209648665",
+            "content_type": "",
+            "size": 209648665,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/1/12547f6145abd1ebc2385e3ed04ab37f.209648665",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "0d40d2ba5ccb260399b5cecf6b467a35.2077500787",
+    "newfile": "761c32f3ee78860b94ff1097a56db7b4.2065013539",
+    "patch": "386159ee2164fe4034090dc86f939e7f.57404360",
+    "version_hash": "5d24ba",
+    "filesize": 57404360,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/386159ee2164fe4034090dc86f939e7f.57404360",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/386159ee2164fe4034090dc86f939e7f.57404360",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/386159ee2164fe4034090dc86f939e7f.57404360",
+            "content_type": "",
+            "size": 57404360,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/386159ee2164fe4034090dc86f939e7f.57404360",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "afbf16f918650a911afd0d0a19bdfb95.1781209643",
+    "newfile": "5d2031555676b7f411da1dc8c7b4cbe3.2106716683",
+    "patch": "4911e33a6daa4fd3ede20c933da17a61.1000156643",
+    "version_hash": "5d24ba",
+    "filesize": 1000156643,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4911e33a6daa4fd3ede20c933da17a61.1000156643",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4911e33a6daa4fd3ede20c933da17a61.1000156643",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4911e33a6daa4fd3ede20c933da17a61.1000156643",
+            "content_type": "",
+            "size": 1000156643,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4911e33a6daa4fd3ede20c933da17a61.1000156643",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "fea0543232d22106286cfcb2251ddb92.2073453241",
+    "newfile": "0f838c119e1db1d132b02804949efd4e.1877748613",
+    "patch": "ab6db661eed4f4dcf5fbe408b2890145.182163529",
+    "version_hash": "5d24ba",
+    "filesize": 182163529,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/a/ab6db661eed4f4dcf5fbe408b2890145.182163529",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/a/ab6db661eed4f4dcf5fbe408b2890145.182163529",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/a/ab6db661eed4f4dcf5fbe408b2890145.182163529",
+            "content_type": "",
+            "size": 182163529,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/a/ab6db661eed4f4dcf5fbe408b2890145.182163529",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "25e212ac8b4b0dd407af87f5163fb3b3.2135639642",
+    "newfile": "8dbb26b7d18e252cd9a624ed69e38f49.2136996600",
+    "patch": "60e9ba0e8525d4eff9fe7de2c1cd44c8.101587852",
+    "version_hash": "5d24ba",
+    "filesize": 101587852,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/6/60e9ba0e8525d4eff9fe7de2c1cd44c8.101587852",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/6/60e9ba0e8525d4eff9fe7de2c1cd44c8.101587852",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/6/60e9ba0e8525d4eff9fe7de2c1cd44c8.101587852",
+            "content_type": "",
+            "size": 101587852,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/6/60e9ba0e8525d4eff9fe7de2c1cd44c8.101587852",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "af80c6f530a5972b4a228a3084bf03d4.2136997478",
+    "newfile": "d80f1d900d6eead3f3c719b1142b0326.2135180295",
+    "patch": "98da72e8b5f9c3fb88f3ea55b999f5c0.156916686",
+    "version_hash": "5d24ba",
+    "filesize": 156916686,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/98da72e8b5f9c3fb88f3ea55b999f5c0.156916686",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/98da72e8b5f9c3fb88f3ea55b999f5c0.156916686",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/98da72e8b5f9c3fb88f3ea55b999f5c0.156916686",
+            "content_type": "",
+            "size": 156916686,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/9/98da72e8b5f9c3fb88f3ea55b999f5c0.156916686",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "2f8fd84a443114cc9de325ce24621a41.2132243440",
+    "newfile": "c6ea96a63dc6a5fdfc4c26db37b74688.2130662595",
+    "patch": "442cfd8f9d3360cb3d6540a24598ba3a.49377923",
+    "version_hash": "5d24ba",
+    "filesize": 49377923,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/442cfd8f9d3360cb3d6540a24598ba3a.49377923",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/442cfd8f9d3360cb3d6540a24598ba3a.49377923",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/442cfd8f9d3360cb3d6540a24598ba3a.49377923",
+            "content_type": "",
+            "size": 49377923,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/442cfd8f9d3360cb3d6540a24598ba3a.49377923",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "8bf3186a5cee7ad2922a6adf31df801b.2134916012",
+    "newfile": "d8cceb15067257dc2b05e445478db6d2.2129571430",
+    "patch": "229c512e4169f8adb13900ee74c2a910.111126469",
+    "version_hash": "5d24ba",
+    "filesize": 111126469,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/2/229c512e4169f8adb13900ee74c2a910.111126469",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/2/229c512e4169f8adb13900ee74c2a910.111126469",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/2/229c512e4169f8adb13900ee74c2a910.111126469",
+            "content_type": "",
+            "size": 111126469,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/2/229c512e4169f8adb13900ee74c2a910.111126469",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "66c8404404c1991ac7d3e713ae1aff58.2136996139",
+    "newfile": "e88173ebe11ff8ed8209f6a2b98f2136.2136997698",
+    "patch": "04950956e3a7dcf196c0bc18e5900b93.107307184",
+    "version_hash": "5d24ba",
+    "filesize": 107307184,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/0/04950956e3a7dcf196c0bc18e5900b93.107307184",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/0/04950956e3a7dcf196c0bc18e5900b93.107307184",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/0/04950956e3a7dcf196c0bc18e5900b93.107307184",
+            "content_type": "",
+            "size": 107307184,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/0/04950956e3a7dcf196c0bc18e5900b93.107307184",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "ec998a28ced936ab3864e1990933420e.1951145439",
+    "newfile": "75bf051a08b78db7bc505c9932f4f539.1751365732",
+    "patch": "b68e5b97d4cfc4d4be306776e6e1621e.123822778",
+    "version_hash": "5d24ba",
+    "filesize": 123822778,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b68e5b97d4cfc4d4be306776e6e1621e.123822778",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b68e5b97d4cfc4d4be306776e6e1621e.123822778",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b68e5b97d4cfc4d4be306776e6e1621e.123822778",
+            "content_type": "",
+            "size": 123822778,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/b68e5b97d4cfc4d4be306776e6e1621e.123822778",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "7e547fb27c19f8f4168e9287b7cc6a80.2057335436",
+    "newfile": "c61139b25550ccb683a31d789c8b74c5.2136119364",
+    "patch": "e54b9fc72194d8c4f5b217a1e9393279.94679831",
+    "version_hash": "5d24ba",
+    "filesize": 94679831,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e54b9fc72194d8c4f5b217a1e9393279.94679831",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e54b9fc72194d8c4f5b217a1e9393279.94679831",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e54b9fc72194d8c4f5b217a1e9393279.94679831",
+            "content_type": "",
+            "size": 94679831,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/e/e54b9fc72194d8c4f5b217a1e9393279.94679831",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "d36908b20a9efdc6a538ccca34fe66cb.2135641487",
+    "newfile": "09028091749db3b7b142aaea1a219d72.2136997036",
+    "patch": "52a31fa8147d49e19b1667d04a064417.194062729",
+    "version_hash": "5d24ba",
+    "filesize": 194062729,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/52a31fa8147d49e19b1667d04a064417.194062729",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/52a31fa8147d49e19b1667d04a064417.194062729",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/52a31fa8147d49e19b1667d04a064417.194062729",
+            "content_type": "",
+            "size": 194062729,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/5/52a31fa8147d49e19b1667d04a064417.194062729",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "e424f54995fc4e7155d9922446bd4bb1.2021380019",
+    "newfile": "57af3c3d54be757ff48f7a45b403495a.1957053760",
+    "patch": "48e651662836b7c0d75faccdafb94b60.21616049",
+    "version_hash": "5d24ba",
+    "filesize": 21616049,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/48e651662836b7c0d75faccdafb94b60.21616049",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/48e651662836b7c0d75faccdafb94b60.21616049",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/48e651662836b7c0d75faccdafb94b60.21616049",
+            "content_type": "",
+            "size": 21616049,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/48e651662836b7c0d75faccdafb94b60.21616049",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "11ac505cf38f706e000882d6fc5fba40.2129100674",
+    "newfile": "06f8427e92876e534600bd5a2a1a482e.2136127231",
+    "patch": "d5c80f2c90d78b76be7feab56528dd5d.218148223",
+    "version_hash": "5d24ba",
+    "filesize": 218148223,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/d/d5c80f2c90d78b76be7feab56528dd5d.218148223",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/d/d5c80f2c90d78b76be7feab56528dd5d.218148223",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/d/d5c80f2c90d78b76be7feab56528dd5d.218148223",
+            "content_type": "",
+            "size": 218148223,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/d/d5c80f2c90d78b76be7feab56528dd5d.218148223",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "8b3ba7e9440fa1a128d7fd33febb8dc2.2004379568",
+    "newfile": "b58858fcb6b7476b2863d4c4363d2c2a.2018353816",
+    "patch": "bbff5cf1850f01af577d120d51d8ca3a.333907408",
+    "version_hash": "5d24ba",
+    "filesize": 333907408,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/bbff5cf1850f01af577d120d51d8ca3a.333907408",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/bbff5cf1850f01af577d120d51d8ca3a.333907408",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/bbff5cf1850f01af577d120d51d8ca3a.333907408",
+            "content_type": "",
+            "size": 333907408,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/b/bbff5cf1850f01af577d120d51d8ca3a.333907408",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "ecea734f06028869fc6cfc5c6e8bbeb2.2118751056",
+    "newfile": "ceaa17b682dea0e851bc6b30f63edf2f.1907169501",
+    "patch": "4616b0c164da1779dd9d54847c093c4b.347610068",
+    "version_hash": "5d24ba",
+    "filesize": 347610068,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4616b0c164da1779dd9d54847c093c4b.347610068",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4616b0c164da1779dd9d54847c093c4b.347610068",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4616b0c164da1779dd9d54847c093c4b.347610068",
+            "content_type": "",
+            "size": 347610068,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/4/4616b0c164da1779dd9d54847c093c4b.347610068",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "88779c84386e76e5b05e7cac473c06cb.2130430754",
+    "newfile": "0ac1be98fc42f1cc168d691d65a3aa10.2132305742",
+    "patch": "3d484b61a0ceb23109d5c32a24980aac.64140931",
+    "version_hash": "5d24ba",
+    "filesize": 64140931,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3d484b61a0ceb23109d5c32a24980aac.64140931",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3d484b61a0ceb23109d5c32a24980aac.64140931",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3d484b61a0ceb23109d5c32a24980aac.64140931",
+            "content_type": "",
+            "size": 64140931,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/3d484b61a0ceb23109d5c32a24980aac.64140931",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "a9f40135af4844cad545a0e090b41f5e.2136993250",
+    "newfile": "4786f5e64ef623f235dab679b2e6a175.2125649442",
+    "patch": "c0113004804da81b116e4b93eedab552.159144787",
+    "version_hash": "5d24ba",
+    "filesize": 159144787,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c0113004804da81b116e4b93eedab552.159144787",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c0113004804da81b116e4b93eedab552.159144787",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c0113004804da81b116e4b93eedab552.159144787",
+            "content_type": "",
+            "size": 159144787,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/c/c0113004804da81b116e4b93eedab552.159144787",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "4ef15cba23bdc9f9bbfb2ae2fbf589a8.2104224044",
+    "newfile": "a7f46c4cae935ecbe519e42b34bce7f0.2090290218",
+    "patch": "7bb97553cf077067c6eeff4dea07a1ff.114809242",
+    "version_hash": "5d24ba",
+    "filesize": 114809242,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/7/7bb97553cf077067c6eeff4dea07a1ff.114809242",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/7/7bb97553cf077067c6eeff4dea07a1ff.114809242",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/7/7bb97553cf077067c6eeff4dea07a1ff.114809242",
+            "content_type": "",
+            "size": 114809242,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/7/7bb97553cf077067c6eeff4dea07a1ff.114809242",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  },
+  {
+    "oldfile": "1fdf5b74600c5ba03e8ceed67603566c.2133339637",
+    "newfile": "4aa8de02f4188ab926e1d1eaddd6602b.2136978492",
+    "patch": "316b208633bacd81940e1005c00257b3.132972731",
+    "version_hash": "5d24ba",
+    "filesize": 132972731,
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/316b208633bacd81940e1005c00257b3.132972731",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/316b208633bacd81940e1005c00257b3.132972731",
+          "probe": {
+            "ok": true,
+            "status": 0,
+            "method": "RESLIST_METADATA",
+            "checked_at": "2026-07-08 22:51:10 +0800",
+            "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/316b208633bacd81940e1005c00257b3.132972731",
+            "content_type": "",
+            "size": 132972731,
+            "last_modified": "",
+            "etag": "",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "medium"
+          }
+        }
+      ],
+      "source": {
+        "kind": "metadata_inference",
+        "confidence": "medium"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/3/316b208633bacd81940e1005c00257b3.132972731",
+        "confidence": "medium",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_p5x_availability.py"
+    }
+  }
+]
