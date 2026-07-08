@@ -278,6 +278,108 @@ https://autopatchcn.bhsr.com/client/cn/20240126110214_QvLzGdvYfGBEq4M4/PC/unzip/
 https://autopatchcn.bhsr.com/client/cn/20260523104353_kjwMxQcpFWHse2S2/PC/unzip/StarRail.exe
 ```
 
+## 绝区零 CDN 模式
+
+绝区零 CN PC 从公开样本看，一开始就比原神和星铁更接近“分卷包 + 展开目录 + Chunk”的现代启动器结构。`0.2.0` beta 仍是单个 ZIP 包；`1.0.0` 公测版本开始使用 `volumezip` 分卷；`1.1.0` 起增加 `SplitAudioZip` 展开目录和 hdiff 更新包；`1.2.0` 起同时出现 Chunk Manifest。此后同一版本通常同时保留 10 个分卷包、两个历史版本到当前版本的 hdiff 更新包、`SplitAudioZip` 展开目录和 Chunk 元数据。
+
+| 阶段 | 观察版本 | 包路径 | 展开 / Chunk 路径 |
+| --- | --- | --- | --- |
+| Beta 单包 | 0.2.0 | `download/windows/0.2.0/{build}/JueQuLing(Beta).zip` | 当前元数据中未观察到稳定展开目录 |
+| 公测分卷包 | 1.0.0 | `package_download/op/client_app/download/{build}/volumezip/juequling_1.0.0_V.zip.001` | 当前元数据中未观察到 `SplitAudioZip` |
+| 分卷 + 展开 + hdiff | 1.1.0 | `VolumeZip/juequling_1.1.0_AS.zip.001` | `SplitAudioZip` 展开目录；`pclauncher/nap_cn/game_1.0.0_1.1.0_hdiff_*.zip` |
+| 三轨分发 | 1.2.0 起 | `VolumeZip/juequling_x.x.x_AS.zip.001` | `SplitAudioZip` + hdiff 更新包 + `pclauncher/manifests` / `pclauncher/chunks` |
+
+代表性直链：
+
+```text
+0.2.0 beta 单包
+https://autopatchcn.juequling.com/download/windows/0.2.0/j0fGHf10yF5n/JueQuLing(Beta).zip
+
+1.0.0 分卷包
+https://autopatchcn.juequling.com/package_download/op/client_app/download/20240621120814_y330JPdP7xg1l7FT/volumezip/juequling_1.0.0_V.zip.001
+
+1.4.0 展开目录
+https://autopatchcn.juequling.com/package_download/op/client_app/download/20241206104439_q0vK6ciW6eHU9uUG/SplitAudioZip
+
+1.4.0 hdiff 更新包
+https://autopatchcn.juequling.com/pclauncher/nap_cn/game_1.3.0_1.4.0_hdiff_ZSInxoGAZqWpHpve.zip
+
+1.4.0 Chunk Manifest
+https://autopatchcn.juequling.com/pclauncher/manifests/cxi9diu5aadc/10047/manifest_f9e6329f04b1f5f3_cb41eb7106d8336c54609e70ec9f50d4
+```
+
+一句话总结：绝区零不是“从传统整包慢慢升级到 Chunk”，而是公测期就已经站在米哈游较新的分发体系上；`1.2.0` 起基本进入分卷包、展开目录、hdiff、Chunk Manifest 四套并行的状态。
+
+## 崩坏3 CDN 模式
+
+崩坏3 CN PC 是 HoYo PC 分发历史里包袱最重的一条线。它的版本跨度长，能看到从老式单 7z 包、`public/PC`、`ptpublic/rel` 发布目录、`PC/extract` 展开目录，到后期 Chunk Manifest 的多次迁移。和星铁相比，崩坏3更像“祖传分发体系一路补丁升级”的结果。
+
+| 阶段 | 观察版本 | 包路径 | 展开 / Chunk 路径 |
+| --- | --- | --- | --- |
+| 老式单 7z | 3.7.0 - 4.5.0 | `bundle.bh3.com/tmp/pc/BH3_v*.7z` | 当前元数据中未观察到展开目录 |
+| `public/PC` 单 7z | 4.6.0 - 5.2.0 | `bundle.bh3.com/public/PC/BH3_v*.7z` | 当前元数据中未观察到展开目录 |
+| `ptpublic/rel` 发布目录 | 5.3.0 - 6.0.1 | `bundle.bh3.com/ptpublic/rel/{build}/PC/BH3_v*.7z` | 当前元数据中未观察到展开目录 |
+| 7z + `PC/extract` | 6.1.0 - 7.5.0 | `bundle.bh3.com/ptpublic/rel/{build}/PC/BH3_v*.7z` | `bundle.bh3.com/ptpublic/rel/{build}/PC/extract` |
+| `autopatchcn` 主域 | 7.6.0 - 8.1.0 | `autopatchcn.bh3.com/ptpublic/rel/{build}/PC/BH3_v*.7z` | `autopatchcn.bh3.com/ptpublic/rel/{build}/PC/extract` |
+| 7z + extract + Chunk | 8.2.0 - 8.4.0 | 仍有完整 7z 包 | `ptpublic/rel/chunk/manifests/...` 和 `ptpublic/rel/chunk/chunks/...` |
+| Chunk 主导 | 8.5.0 起 | 当前公开元数据中不再出现传统 full 包 | 主要保留 Chunk Manifest / Chunk 前缀 |
+
+代表性直链：
+
+```text
+3.7.0 老式 7z
+http://bundle.bh3.com/tmp/pc/BH3_v3.7.0_39ef5ab7dab.7z
+
+4.8.0 public/PC
+https://bundle.bh3.com/public/PC/BH3_v4.8.0_7355ad6fdb7.7z
+
+7.0.0 完整包
+https://bundle.bh3.com/ptpublic/rel/20230925103219_8WqdhyRJLpCQJNBY/PC/BH3_v7.0.0_ec9940649b00.7z
+
+7.0.0 展开目录
+https://bundle.bh3.com/ptpublic/rel/20230925103219_8WqdhyRJLpCQJNBY/PC/extract
+
+7.9.1 小差分
+https://autopatchcn.bh3.com/tmp/pc_client/product/update/bh3_cn/game_7.9.0_7.9.1_diff_eKgosBseIgDxwyKn.7z
+
+8.9.0 Chunk Manifest
+https://autopatchcn.bh3.com/ptpublic/rel/chunk/manifests/cxi8tkx5vdog/20260522/8.9.0/VQl5hxoni65B/manifest_4f76cfafb583f5fc_daae5c0c2b6dd8082f9730ef58b512a3
+```
+
+一句话总结：崩坏3的主线是 `tmp/pc` 单 7z -> `public/PC` -> `ptpublic/rel` -> `PC/extract` -> `autopatchcn` -> Chunk。它和星铁相似的地方是“整包和展开目录并行”，不同的是崩坏3保留了更多早年遗留路径和过渡形态。
+
+## 鸣潮 CDN 模式
+
+鸣潮 CN PC 和 HoYo 这几条线不太一样。项目从 `1.0.0` 起捕获到的就是 resource index 暴露的展开文件树，路径里的 `zip/` 更像“展开后的客户端文件根目录”，不是一个单独的整包 ZIP。它的演化重点不是包格式，而是 launcher 索引路径、`10003` game id 层级和差分补丁路由。
+
+| 阶段 | 观察版本 | 索引入口 | 文件 / 补丁路径 |
+| --- | --- | --- | --- |
+| `pcstarter/prod` 展开文件树 | 1.0.0 - 2.2.1 | `pcstarter/prod/game/G152/{version}/{hash}/resource.json` | `pcstarter/prod/game/G152/{version}/{hash}/zip/{path}` |
+| `launcher/game` 过渡 | 2.3.0 - 2.4.1 | `launcher/game/G152/{version}/{hash}/resource/10003/{version}/indexFile.json`；个别版本仍是 `resource.json` | `launcher/game/G152/{version}/{hash}/zip/{path}` |
+| `10003` 标准化 | 2.5.0 - 3.3.0 | `launcher/game/G152/10003/{version}/{hash}/resource/10003/{version}/indexFile.json` | `launcher/game/G152/10003/{version}/{hash}/zip/{path}` |
+| `krpdiff` 差分证据 | 3.4.0 起 | 同上 | `resource/10003/{version}/{old_version}/resources/*.krpdiff` |
+
+代表性直链：
+
+```text
+1.0.0 resource index
+https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/1.0.0/ODPITqJuybUecE9ERVZsY8uV7uMHGIUw/resource.json
+
+1.0.0 展开文件
+https://pcdownload-aliyun.aki-game.com/pcstarter/prod/game/G152/1.0.0/ODPITqJuybUecE9ERVZsY8uV7uMHGIUw/zip/Client/Content/Paks/pakchunk13-WindowsNoEditor.pak
+
+2.5.0 标准化索引
+https://pcdownload-huoshan.aki-game.com/launcher/game/G152/10003/2.5.0/ieSwSdtdphmQnCTauimbDmdmjpiqYecF/resource/10003/2.5.0/indexFile.json
+
+3.4.1 完整文件
+https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.1/NWGqGHYNAOKIDfGQPIItDWmMRdXFPLDN/zip/Wuthering Waves.exe
+
+3.4.0 krpdiff 差分
+https://pcdownload-aliyun.aki-game.com/launcher/game/G152/10003/3.4.0/sMnbFpowGUKLSvELgHzeHWxQcGFgQFOJ/resource/10003/3.4.0/3.3.0/resources/3.3.0_3.4.0_group_0_1779561429328.krpdiff
+```
+
+鸣潮的 CDN 镜像主要是 `pcdownload-aliyun.aki-game.com`、`pcdownload-huoshan.aki-game.com`、`pcdownload-qcloud.aki-game.com`，部分早期版本还出现过 `pcdownload-wangsu.aki-game.com` 和 `pcdownload-qiniu.aki-game.com`。一句话总结：鸣潮是 `pcstarter/prod` -> `launcher/game` -> `launcher/game/G152/10003` -> `indexFile.json + krpdiff`，核心变化是索引体系标准化，而不是从整包转向展开文件。
+
 ## HoyoFiles 迁移
 
 静态页面中的 HoYo 游戏数据迁移自公开 HoyoFiles 元数据：
