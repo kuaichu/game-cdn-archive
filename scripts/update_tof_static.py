@@ -181,7 +181,7 @@ def load_catalog() -> dict[str, Any]:
             "name": "幻塔",
             "subName": "Tower of Fantasy",
             "shortName": "TOF",
-            "icon": "assets/icons/tof.svg",
+            "icon": "assets/icons/tof.jpg",
             "kind": "tof",
         },
         "source": "https://htcdn1.wmupd.com/clientRes/Windows55/",
