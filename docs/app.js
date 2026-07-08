@@ -45,7 +45,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260708-tof-p5x";
+const ASSET_VERSION = "20260708-p5x-order";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -368,7 +368,14 @@ const allGames = () => {
       icon: androidIcons[id] || `assets/icons/${id}.png`,
       kind: "android",
     }));
-  return [...baseGames, ...androidOnlyGames];
+  const promotedAndroidIds = new Set(["p5x"]);
+  const promotedAndroidGames = androidOnlyGames.filter((game) => promotedAndroidIds.has(game.id));
+  const regularAndroidGames = androidOnlyGames.filter((game) => !promotedAndroidIds.has(game.id));
+  const games = [...baseGames];
+  const insertAfterId = games.some((game) => game.id === "tof") ? "tof" : "nte";
+  const insertIndex = games.findIndex((game) => game.id === insertAfterId);
+  games.splice(insertIndex >= 0 ? insertIndex + 1 : games.length, 0, ...promotedAndroidGames);
+  return [...games, ...regularAndroidGames];
 };
 
 const currentGame = () => allGames().find((game) => game.id === state.gameId) || nteGame;
