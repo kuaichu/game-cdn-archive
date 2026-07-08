@@ -45,7 +45,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260708-tof";
+const ASSET_VERSION = "20260708-tof-p5x";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -212,6 +212,7 @@ const androidIcons = {
   bluearchive: "assets/icons/bluearchive.png",
   calabiyau: "assets/icons/calabiyau.png",
   gf2: "assets/icons/gf2.png",
+  p5x: "assets/icons/p5x.jpg",
   pns: "assets/icons/pns.png",
   reverse1999: "assets/icons/reverse1999.png",
   snowbreak: "assets/icons/snowbreak.svg",
@@ -223,6 +224,7 @@ const androidShortNames = {
   bluearchive: "BA",
   calabiyau: "KLB",
   gf2: "GF2",
+  p5x: "P5X",
   pns: "PNS",
   reverse1999: "1999",
   snowbreak: "CBJQ",

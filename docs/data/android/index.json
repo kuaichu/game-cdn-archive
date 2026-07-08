@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-07-08T06:44:28.245603+00:00",
-  "generated_at": "2026-07-08T06:44:28.245603+00:00",
+  "last_checked_at": "2026-07-08T11:22:56.795595+00:00",
+  "generated_at": "2026-07-08T11:22:56.795595+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -132,6 +132,679 @@
           "urls": "data/android/lists/nte_1.0.2_android.urls.txt",
           "aria2": "data/android/lists/nte_1.0.2_android.aria2.txt",
           "json": "data/android/lists/nte_1.0.2_android.json"
+        }
+      }
+    },
+    "p5x": {
+      "name": "女神异闻录：夜幕魅影",
+      "subName": "Persona 5: The Phantom X",
+      "versions": [
+        {
+          "game_id": "p5x",
+          "version": "1.5.4",
+          "channel": "official",
+          "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
+          "source": "official website Android download config; versionName read from AndroidManifest.xml",
+          "source_url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+          "status": 200,
+          "content_type": "application/octet-stream",
+          "size": 1664463882,
+          "last_modified": "Fri, 12 Jun 2026 02:48:29 GMT",
+          "etag": "831A4100025A89E210C2D608AB178D43-159",
+          "md5": "",
+          "crc64": "13402655340528874976",
+          "error": "",
+          "filename": "p5x_1_official_20260621.apk",
+          "captured_at": "2026-07-08T11:22:56.795595+00:00",
+          "updated_at": "2026-06-12T02:48:29+00:00",
+          "updated_at_source": "apk_last_modified",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-08T11:22:56.795595+00:00",
+                  "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
+                  "content_type": "application/octet-stream",
+                  "size": 1664463882,
+                  "last_modified": "Fri, 12 Jun 2026 02:48:29 GMT",
+                  "etag": "831A4100025A89E210C2D608AB178D43-159",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.019,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "p5x",
+          "version": "1.5.0",
+          "channel": "official",
+          "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260316.apk",
+          "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+          "source_url": "https://web.archive.org/web/20260418154310id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+          "updated_at": "2026-04-18T15:43:10+00:00",
+          "updated_at_source": "wayback_cdx_timestamp",
+          "status": 200,
+          "content_type": "application/octet-stream",
+          "size": 1635917801,
+          "last_modified": "Mon, 16 Mar 2026 07:45:13 GMT",
+          "etag": "3022C60BC5F3651EFA4C8A296425949B-157",
+          "md5": "",
+          "crc64": "14353965698000488782",
+          "error": "",
+          "filename": "p5x_1_official_20260316.apk",
+          "captured_at": "2026-07-08T11:22:56.795595+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260316.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-08T11:22:56.795595+00:00",
+                  "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260316.apk",
+                  "content_type": "application/octet-stream",
+                  "size": 1635917801,
+                  "last_modified": "Mon, 16 Mar 2026 07:45:13 GMT",
+                  "etag": "3022C60BC5F3651EFA4C8A296425949B-157",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.019,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260316.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "p5x",
+          "version": "1.4.13",
+          "channel": "official",
+          "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20251230.apk",
+          "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+          "source_url": "https://web.archive.org/web/20260122213833id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+          "updated_at": "2026-01-22T21:38:33+00:00",
+          "updated_at_source": "wayback_cdx_timestamp",
+          "status": 200,
+          "content_type": "application/octet-stream",
+          "size": 2013130037,
+          "last_modified": "Tue, 30 Dec 2025 11:07:50 GMT",
+          "etag": "6111EB68083B61CD255F64CD775E6D9C-192",
+          "md5": "",
+          "crc64": "11595139842780767428",
+          "error": "",
+          "filename": "p5x_1_official_20251230.apk",
+          "captured_at": "2026-07-08T11:22:56.795595+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20251230.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-08T11:22:56.795595+00:00",
+                  "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20251230.apk",
+                  "content_type": "application/octet-stream",
+                  "size": 2013130037,
+                  "last_modified": "Tue, 30 Dec 2025 11:07:50 GMT",
+                  "etag": "6111EB68083B61CD255F64CD775E6D9C-192",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.019,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20251230.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "p5x",
+          "version": "1.4.7",
+          "channel": "laohu",
+          "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_laohu_20250911.apk",
+          "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+          "source_url": "https://web.archive.org/web/20250925194101id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+          "updated_at": "2025-09-25T19:41:01+00:00",
+          "updated_at_source": "wayback_cdx_timestamp",
+          "status": 200,
+          "content_type": "application/octet-stream",
+          "size": 1895447913,
+          "last_modified": "Thu, 11 Sep 2025 02:00:50 GMT",
+          "etag": "9C81535B97014E79AC488C2B0792E934-181",
+          "md5": "",
+          "crc64": "14425519824948888019",
+          "error": "",
+          "filename": "p5x_laohu_20250911.apk",
+          "captured_at": "2026-07-08T11:22:56.795595+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_laohu_20250911.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-08T11:22:56.795595+00:00",
+                  "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_laohu_20250911.apk",
+                  "content_type": "application/octet-stream",
+                  "size": 1895447913,
+                  "last_modified": "Thu, 11 Sep 2025 02:00:50 GMT",
+                  "etag": "9C81535B97014E79AC488C2B0792E934-181",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.019,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_laohu_20250911.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "p5x",
+          "version": "1.4.6",
+          "channel": "official",
+          "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20250714.apk",
+          "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+          "source_url": "https://web.archive.org/web/20250725133206id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+          "updated_at": "2025-07-25T13:32:06+00:00",
+          "updated_at_source": "wayback_cdx_timestamp",
+          "status": 200,
+          "content_type": "application/octet-stream",
+          "size": 1905408366,
+          "last_modified": "Mon, 14 Jul 2025 09:58:12 GMT",
+          "etag": "06FBB5A0D7F765BC0C119F417ECD4733-182",
+          "md5": "",
+          "crc64": "170216364615100967",
+          "error": "",
+          "filename": "p5x_1_official_20250714.apk",
+          "captured_at": "2026-07-08T11:22:56.795595+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20250714.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-08T11:22:56.795595+00:00",
+                  "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20250714.apk",
+                  "content_type": "application/octet-stream",
+                  "size": 1905408366,
+                  "last_modified": "Mon, 14 Jul 2025 09:58:12 GMT",
+                  "etag": "06FBB5A0D7F765BC0C119F417ECD4733-182",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.019,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20250714.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "p5x",
+          "version": "1.4.0",
+          "channel": "baidupcpz",
+          "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_6198_baidupcpz_20250402.apk",
+          "source": "official CDN URL recovered from p5xapk.wmupd.com listing; versionName read from AndroidManifest.xml",
+          "status": 200,
+          "content_type": "application/octet-stream",
+          "size": 1809704417,
+          "last_modified": "Wed, 02 Apr 2025 06:48:52 GMT",
+          "etag": "F9EDEC8D175F2FEF133EC65DABB49D7B-173",
+          "md5": "",
+          "crc64": "11471399206026910387",
+          "error": "",
+          "filename": "p5x_6198_baidupcpz_20250402.apk",
+          "captured_at": "2026-07-08T11:22:56.795595+00:00",
+          "updated_at": "2025-04-02T06:48:52+00:00",
+          "updated_at_source": "apk_last_modified",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_6198_baidupcpz_20250402.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-08T11:22:56.795595+00:00",
+                  "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_6198_baidupcpz_20250402.apk",
+                  "content_type": "application/octet-stream",
+                  "size": 1809704417,
+                  "last_modified": "Wed, 02 Apr 2025 06:48:52 GMT",
+                  "etag": "F9EDEC8D175F2FEF133EC65DABB49D7B-173",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.019,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_6198_baidupcpz_20250402.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "p5x",
+          "version": "1.4.0",
+          "channel": "laohu",
+          "url": "https://p5xapk.wmupd.com/webops/p5x/laohu_p5x_20250408.apk",
+          "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+          "source_url": "https://web.archive.org/web/20250413155934id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+          "updated_at": "2025-04-13T15:59:34+00:00",
+          "updated_at_source": "wayback_cdx_timestamp",
+          "status": 200,
+          "content_type": "application/octet-stream",
+          "size": 1812944992,
+          "last_modified": "Tue, 08 Apr 2025 07:21:53 GMT",
+          "etag": "BD1C385B8678FCADDEFEC1318791B9F2-173",
+          "md5": "",
+          "crc64": "1091280117757571515",
+          "error": "",
+          "filename": "laohu_p5x_20250408.apk",
+          "captured_at": "2026-07-08T11:22:56.795595+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://p5xapk.wmupd.com/webops/p5x/laohu_p5x_20250408.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-08T11:22:56.795595+00:00",
+                  "final_url": "https://p5xapk.wmupd.com/webops/p5x/laohu_p5x_20250408.apk",
+                  "content_type": "application/octet-stream",
+                  "size": 1812944992,
+                  "last_modified": "Tue, 08 Apr 2025 07:21:53 GMT",
+                  "etag": "BD1C385B8678FCADDEFEC1318791B9F2-173",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.019,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/laohu_p5x_20250408.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "p5x",
+          "version": "1.3.0",
+          "channel": "official",
+          "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20241120.apk",
+          "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+          "source_url": "https://web.archive.org/web/20241122151632id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+          "updated_at": "2024-11-22T15:16:32+00:00",
+          "updated_at_source": "wayback_cdx_timestamp",
+          "status": 200,
+          "content_type": "application/octet-stream",
+          "size": 1857338697,
+          "last_modified": "Wed, 20 Nov 2024 14:51:43 GMT",
+          "etag": "3041FD7AEB09904C528872500397F292-178",
+          "md5": "",
+          "crc64": "8872071420105497986",
+          "error": "",
+          "filename": "p5x_1_official_20241120.apk",
+          "captured_at": "2026-07-08T11:22:56.795595+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20241120.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-08T11:22:56.795595+00:00",
+                  "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20241120.apk",
+                  "content_type": "application/octet-stream",
+                  "size": 1857338697,
+                  "last_modified": "Wed, 20 Nov 2024 14:51:43 GMT",
+                  "etag": "3041FD7AEB09904C528872500397F292-178",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.019,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20241120.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "p5x",
+          "version": "1.2.0",
+          "channel": "official",
+          "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20240712.apk",
+          "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+          "source_url": "https://web.archive.org/web/20240725025910id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+          "updated_at": "2024-07-25T02:59:10+00:00",
+          "updated_at_source": "wayback_cdx_timestamp",
+          "status": 200,
+          "content_type": "application/octet-stream",
+          "size": 1844958323,
+          "last_modified": "Fri, 12 Jul 2024 03:17:17 GMT",
+          "etag": "DF48A81D684D5F9A51C34CEAE4DF7584-176",
+          "md5": "",
+          "crc64": "37839862979368251",
+          "error": "",
+          "filename": "p5x_1_official_20240712.apk",
+          "captured_at": "2026-07-08T11:22:56.795595+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20240712.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-08T11:22:56.795595+00:00",
+                  "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20240712.apk",
+                  "content_type": "application/octet-stream",
+                  "size": 1844958323,
+                  "last_modified": "Fri, 12 Jul 2024 03:17:17 GMT",
+                  "etag": "DF48A81D684D5F9A51C34CEAE4DF7584-176",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.019,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20240712.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "p5x",
+          "version": "1.0.4",
+          "channel": "official",
+          "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20240701.apk",
+          "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+          "source_url": "https://web.archive.org/web/20240703055517id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+          "updated_at": "2024-07-03T05:55:17+00:00",
+          "updated_at_source": "wayback_cdx_timestamp",
+          "status": 200,
+          "content_type": "application/octet-stream",
+          "size": 1834748036,
+          "last_modified": "Mon, 01 Jul 2024 06:31:17 GMT",
+          "etag": "2FB080319EB3D5A33455611CD26EF7E9-175",
+          "md5": "",
+          "crc64": "10904182457412636015",
+          "error": "",
+          "filename": "p5x_1_official_20240701.apk",
+          "captured_at": "2026-07-08T11:22:56.795595+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20240701.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-08T11:22:56.795595+00:00",
+                  "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20240701.apk",
+                  "content_type": "application/octet-stream",
+                  "size": 1834748036,
+                  "last_modified": "Mon, 01 Jul 2024 06:31:17 GMT",
+                  "etag": "2FB080319EB3D5A33455611CD26EF7E9-175",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.019,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20240701.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "p5x",
+          "version": "0.3.0",
+          "channel": "cbt3",
+          "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_CBT3_20240115.apk",
+          "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+          "source_url": "https://web.archive.org/web/20240115022254id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+          "updated_at": "2024-01-15T02:22:54+00:00",
+          "updated_at_source": "wayback_cdx_timestamp",
+          "status": 200,
+          "content_type": "application/octet-stream",
+          "size": 1806170124,
+          "last_modified": "Mon, 15 Jan 2024 01:10:15 GMT",
+          "etag": "DC56F8935AAF670FACDA03E10F01C124-173",
+          "md5": "",
+          "crc64": "13585503765271657118",
+          "error": "",
+          "filename": "p5x_CBT3_20240115.apk",
+          "captured_at": "2026-07-08T11:22:56.795595+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_CBT3_20240115.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-08T11:22:56.795595+00:00",
+                  "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_CBT3_20240115.apk",
+                  "content_type": "application/octet-stream",
+                  "size": 1806170124,
+                  "last_modified": "Mon, 15 Jan 2024 01:10:15 GMT",
+                  "etag": "DC56F8935AAF670FACDA03E10F01C124-173",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.019,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_CBT3_20240115.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        }
+      ],
+      "links": {
+        "1.5.4": {
+          "urls": "data/android/lists/p5x_1.5.4_android.urls.txt",
+          "aria2": "data/android/lists/p5x_1.5.4_android.aria2.txt",
+          "json": "data/android/lists/p5x_1.5.4_android.json"
+        },
+        "1.5.0": {
+          "urls": "data/android/lists/p5x_1.5.0_android.urls.txt",
+          "aria2": "data/android/lists/p5x_1.5.0_android.aria2.txt",
+          "json": "data/android/lists/p5x_1.5.0_android.json"
+        },
+        "1.4.13": {
+          "urls": "data/android/lists/p5x_1.4.13_android.urls.txt",
+          "aria2": "data/android/lists/p5x_1.4.13_android.aria2.txt",
+          "json": "data/android/lists/p5x_1.4.13_android.json"
+        },
+        "1.4.7": {
+          "urls": "data/android/lists/p5x_1.4.7_android.urls.txt",
+          "aria2": "data/android/lists/p5x_1.4.7_android.aria2.txt",
+          "json": "data/android/lists/p5x_1.4.7_android.json"
+        },
+        "1.4.6": {
+          "urls": "data/android/lists/p5x_1.4.6_android.urls.txt",
+          "aria2": "data/android/lists/p5x_1.4.6_android.aria2.txt",
+          "json": "data/android/lists/p5x_1.4.6_android.json"
+        },
+        "1.4.0": {
+          "urls": "data/android/lists/p5x_1.4.0_android.urls.txt",
+          "aria2": "data/android/lists/p5x_1.4.0_android.aria2.txt",
+          "json": "data/android/lists/p5x_1.4.0_android.json"
+        },
+        "1.3.0": {
+          "urls": "data/android/lists/p5x_1.3.0_android.urls.txt",
+          "aria2": "data/android/lists/p5x_1.3.0_android.aria2.txt",
+          "json": "data/android/lists/p5x_1.3.0_android.json"
+        },
+        "1.2.0": {
+          "urls": "data/android/lists/p5x_1.2.0_android.urls.txt",
+          "aria2": "data/android/lists/p5x_1.2.0_android.aria2.txt",
+          "json": "data/android/lists/p5x_1.2.0_android.json"
+        },
+        "1.0.4": {
+          "urls": "data/android/lists/p5x_1.0.4_android.urls.txt",
+          "aria2": "data/android/lists/p5x_1.0.4_android.aria2.txt",
+          "json": "data/android/lists/p5x_1.0.4_android.json"
+        },
+        "0.3.0": {
+          "urls": "data/android/lists/p5x_0.3.0_android.urls.txt",
+          "aria2": "data/android/lists/p5x_0.3.0_android.aria2.txt",
+          "json": "data/android/lists/p5x_0.3.0_android.json"
         }
       }
     },

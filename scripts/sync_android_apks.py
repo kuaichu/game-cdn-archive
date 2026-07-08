@@ -37,6 +37,103 @@ KNOWN_APKS = [
         "preserve_same_hash": True,
     },
     {
+        "game_id": "p5x",
+        "version": "0.3.0",
+        "channel": "cbt3",
+        "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_CBT3_20240115.apk",
+        "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+        "source_url": "https://web.archive.org/web/20240115022254id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+        "updated_at": "2024-01-15T02:22:54+00:00",
+        "updated_at_source": "wayback_cdx_timestamp",
+    },
+    {
+        "game_id": "p5x",
+        "version": "1.0.4",
+        "channel": "official",
+        "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20240701.apk",
+        "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+        "source_url": "https://web.archive.org/web/20240703055517id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+        "updated_at": "2024-07-03T05:55:17+00:00",
+        "updated_at_source": "wayback_cdx_timestamp",
+    },
+    {
+        "game_id": "p5x",
+        "version": "1.2.0",
+        "channel": "official",
+        "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20240712.apk",
+        "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+        "source_url": "https://web.archive.org/web/20240725025910id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+        "updated_at": "2024-07-25T02:59:10+00:00",
+        "updated_at_source": "wayback_cdx_timestamp",
+    },
+    {
+        "game_id": "p5x",
+        "version": "1.3.0",
+        "channel": "official",
+        "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20241120.apk",
+        "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+        "source_url": "https://web.archive.org/web/20241122151632id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+        "updated_at": "2024-11-22T15:16:32+00:00",
+        "updated_at_source": "wayback_cdx_timestamp",
+    },
+    {
+        "game_id": "p5x",
+        "version": "1.4.0",
+        "channel": "baidupcpz",
+        "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_6198_baidupcpz_20250402.apk",
+        "source": "official CDN URL recovered from p5xapk.wmupd.com listing; versionName read from AndroidManifest.xml",
+    },
+    {
+        "game_id": "p5x",
+        "version": "1.4.0",
+        "channel": "laohu",
+        "url": "https://p5xapk.wmupd.com/webops/p5x/laohu_p5x_20250408.apk",
+        "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+        "source_url": "https://web.archive.org/web/20250413155934id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+        "updated_at": "2025-04-13T15:59:34+00:00",
+        "updated_at_source": "wayback_cdx_timestamp",
+    },
+    {
+        "game_id": "p5x",
+        "version": "1.4.6",
+        "channel": "official",
+        "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20250714.apk",
+        "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+        "source_url": "https://web.archive.org/web/20250725133206id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+        "updated_at": "2025-07-25T13:32:06+00:00",
+        "updated_at_source": "wayback_cdx_timestamp",
+    },
+    {
+        "game_id": "p5x",
+        "version": "1.4.7",
+        "channel": "laohu",
+        "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_laohu_20250911.apk",
+        "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+        "source_url": "https://web.archive.org/web/20250925194101id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+        "updated_at": "2025-09-25T19:41:01+00:00",
+        "updated_at_source": "wayback_cdx_timestamp",
+    },
+    {
+        "game_id": "p5x",
+        "version": "1.4.13",
+        "channel": "official",
+        "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20251230.apk",
+        "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+        "source_url": "https://web.archive.org/web/20260122213833id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+        "updated_at": "2026-01-22T21:38:33+00:00",
+        "updated_at_source": "wayback_cdx_timestamp",
+    },
+    {
+        "game_id": "p5x",
+        "version": "1.5.0",
+        "channel": "official",
+        "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260316.apk",
+        "source": "Wayback Machine snapshot of official P5X download config; versionName read from AndroidManifest.xml",
+        "source_url": "https://web.archive.org/web/20260418154310id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+        "updated_at": "2026-04-18T15:43:10+00:00",
+        "updated_at_source": "wayback_cdx_timestamp",
+    },
+    {
         "game_id": "reverse1999",
         "version": "1.0.3",
         "channel": "prepage",
@@ -1563,6 +1660,7 @@ GAME_NAMES = {
     "endfield": {"name": "明日方舟：终末地", "subName": "Arknights: Endfield"},
     "gf2": {"name": "少女前线2：追放", "subName": "Girls' Frontline 2: Exilium"},
     "pns": {"name": "战双帕弥什", "subName": "Punishing: Gray Raven"},
+    "p5x": {"name": "女神异闻录：夜幕魅影", "subName": "Persona 5: The Phantom X"},
     "reverse1999": {"name": "重返未来：1999", "subName": "Reverse: 1999"},
     "snowbreak": {"name": "尘白禁区", "subName": "Snowbreak: Containment Zone"},
     "wuwa": {"name": "鸣潮", "subName": "Wuthering Waves"},
@@ -1820,10 +1918,15 @@ DOWNLOAD_PORTER_APIS = [
     },
 ]
 
-NTE_APK_CONFIGS = [
+PERFECT_WORLD_APK_CONFIGS = [
     {
         "game_id": "nte",
         "url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/yh-gameDownload.js",
+        "channel": "official",
+    },
+    {
+        "game_id": "p5x",
+        "url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
         "channel": "official",
     },
 ]
@@ -2443,26 +2546,26 @@ def remote_apk_manifest_version_name(url: str, headers: dict | None = None) -> s
     return binary_manifest_version_name(manifest)
 
 
-def discover_nte_apks() -> list[dict]:
+def discover_perfect_world_apks() -> list[dict]:
     entries: list[dict] = []
-    for item in NTE_APK_CONFIGS:
+    for item in PERFECT_WORLD_APK_CONFIGS:
         try:
             text = fetch_text(item["url"]).replace("\\/", "/")
         except Exception as exc:
-            print(f"NTE APK config unavailable {item['url']}: {exc}")
+            print(f"Perfect World APK config unavailable {item['url']}: {exc}")
             continue
         match = re.search(r'"android"\s*:\s*"([^"]+\.apk)"', text, re.IGNORECASE)
         if not match:
-            print(f"NTE APK config has no android APK URL: {item['url']}")
+            print(f"Perfect World APK config has no android APK URL: {item['url']}")
             continue
         apk_url = match.group(1)
         try:
             version = remote_apk_manifest_version_name(apk_url, headers=item.get("headers"))
         except Exception as exc:
-            print(f"NTE APK manifest unavailable {apk_url}: {exc}")
+            print(f"Perfect World APK manifest unavailable {apk_url}: {exc}")
             continue
         if not version:
-            print(f"NTE APK manifest has no versionName: {apk_url}")
+            print(f"Perfect World APK manifest has no versionName: {apk_url}")
             continue
         entries.append({
             "game_id": item["game_id"],
@@ -3009,7 +3112,7 @@ def main() -> None:
     seeds_by_url = {seed["url"]: seed for seed in KNOWN_APKS}
     for seed in discover_download_porter_apks():
         seeds_by_url.setdefault(seed["url"], seed)
-    for seed in discover_nte_apks():
+    for seed in discover_perfect_world_apks():
         seeds_by_url.setdefault(seed["url"], seed)
     for seed in discover_redirect_apks():
         seeds_by_url.setdefault(seed["url"], seed)
