@@ -10,6 +10,7 @@ const state = {
   query: "",
   nteCatalog: null,
   tofCatalog: null,
+  p5xCatalog: null,
   hoyoIndex: null,
   endfieldIndex: null,
   endfieldVersions: null,
@@ -45,7 +46,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260708-p5x-order";
+const ASSET_VERSION = "20260708-p5x-pc";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -347,6 +348,7 @@ const allGames = () => {
   const baseGames = [
     nteGame,
     ...(state.tofCatalog?.game ? [state.tofCatalog.game] : []),
+    ...(state.p5xCatalog?.game ? [state.p5xCatalog.game] : []),
     ...(state.endfieldIndex?.game ? [state.endfieldIndex.game] : []),
     ...(state.arknightsIndex?.game ? [state.arknightsIndex.game] : []),
     ...(state.wuwaIndex?.game ? [state.wuwaIndex.game] : []),
@@ -368,7 +370,7 @@ const allGames = () => {
       icon: androidIcons[id] || `assets/icons/${id}.png`,
       kind: "android",
     }));
-  const promotedAndroidIds = new Set(["p5x"]);
+  const promotedAndroidIds = new Set([]);
   const promotedAndroidGames = androidOnlyGames.filter((game) => promotedAndroidIds.has(game.id));
   const regularAndroidGames = androidOnlyGames.filter((game) => !promotedAndroidIds.has(game.id));
   const games = [...baseGames];
@@ -381,7 +383,8 @@ const allGames = () => {
 const currentGame = () => allGames().find((game) => game.id === state.gameId) || nteGame;
 const isNte = () => currentGame().kind === "nte";
 const isTof = () => currentGame().kind === "tof";
-const isResListGame = () => isNte() || isTof();
+const isP5x = () => currentGame().kind === "p5x";
+const isResListGame = () => isNte() || isTof() || isP5x();
 const isEndfield = () => currentGame().kind === "endfield";
 const isWuwa = () => currentGame().kind === "wuwa";
 const isArknights = () => currentGame().kind === "arknights";
@@ -450,7 +453,7 @@ const hoyoLegacySummaries = () => {
 const modesForGame = () => {
   const modes = isAndroidOnly()
     ? []
-    : isNte() ? nteModes : isTof() ? tofModes : isEndfield() ? endfieldModes : isWuwa() ? wuwaModes : isArknights() ? arknightsModes : hoyoModes;
+    : isNte() ? nteModes : isTof() || isP5x() ? tofModes : isEndfield() ? endfieldModes : isWuwa() ? wuwaModes : isArknights() ? arknightsModes : hoyoModes;
   const withLegacy = hasHoyoLegacyCandidates() ? [...modes, hoyoLegacyMode] : modes;
   return hasAndroidApks() ? [...withLegacy, androidMode] : withLegacy;
 };
@@ -466,9 +469,15 @@ const nteAvailabilityLabel = (record) => nteAvailability(record)?.display_label 
 const tofVersions = () => (state.tofCatalog?.versions || []).filter((item) => item.status === 200 && item.full);
 const tofVersion = () => state.tofCatalog?.versions?.find((item) => item.version === state.version);
 const tofFiles = () => tofVersion()?.[state.mode];
-const resListVersions = () => isTof() ? tofVersions() : nteVersions();
-const resListVersion = () => isTof() ? tofVersion() : nteVersion();
-const resListFiles = () => isTof() ? tofFiles() : nteFiles();
+const p5xVersions = () => (state.p5xCatalog?.versions || []).filter((item) => item.status === 200 && item.full);
+const p5xVersion = () => state.p5xCatalog?.versions?.find((item) => item.version === state.version);
+const p5xFiles = () => p5xVersion()?.[state.mode];
+const resListCatalog = () => isP5x() ? state.p5xCatalog : isTof() ? state.tofCatalog : state.nteCatalog;
+const resListVersions = () => isP5x() ? p5xVersions() : isTof() ? tofVersions() : nteVersions();
+const resListVersion = () => isP5x() ? p5xVersion() : isTof() ? tofVersion() : nteVersion();
+const resListFiles = () => isP5x() ? p5xFiles() : isTof() ? tofFiles() : nteFiles();
+const resListGameLabel = () => isP5x() ? "P5X" : isTof() ? "TOF" : "NTE";
+const resListSourceLabel = () => isP5x() ? "P5X 官方启动器 ResList" : isTof() ? "幻塔官方启动器 ResList" : "异环官方启动器 ResList";
 
 const hoyoSummary = () => state.hoyoIndex.games.find((game) => game.id === state.gameId);
 const hoyoVersionMap = () => state.hoyoVersions.get(state.gameId) || {};
@@ -683,13 +692,14 @@ const currentGameSyncInfo = () => {
       android: androidLatest?.version,
     };
   }
-  if (isTof()) {
-    const latest = latestByVersion(tofVersions());
+  if (isTof() || isP5x()) {
+    const latest = latestByVersion(resListVersions());
+    const catalog = resListCatalog();
     return {
       game,
-      source: "幻塔官方启动器 ResList",
-      checked: state.tofCatalog?.last_checked_at || state.tofCatalog?.generated_at,
-      updated: state.tofCatalog?.generated_at,
+      source: resListSourceLabel(),
+      checked: catalog?.last_checked_at || catalog?.generated_at,
+      updated: catalog?.generated_at,
       latest: latest?.version,
       detail: `${latest?.full?.items || 0} 个完整文件 / ${fmtBytes(latest?.full?.bytes || 0)}`,
       android: androidLatest?.version,
@@ -772,8 +782,9 @@ const commandFor = () => {
   if (isNte()) {
     return `python scripts\\nte_downloader.py download ${state.version} --download-root downloads --workers 4 --pack --pack-dir packages`;
   }
-  if (isTof()) {
-    return `aria2c -c -x16 -s16 -i data/tof/url_lists/${state.version}-${state.mode === "patches" ? "patches.patches" : "full.files"}.aria2.txt`;
+  if (isTof() || isP5x()) {
+    const folder = isP5x() ? "p5x" : "tof";
+    return `aria2c -c -x16 -s16 -i data/${folder}/url_lists/${state.version}-${state.mode === "patches" ? "patches.patches" : "full.files"}.aria2.txt`;
   }
   if (isEndfield()) {
     return `aria2c -c -x16 -s16 data/endfield/lists/${state.version}_${state.mode === "patches" ? "patches" : "packages"}.aria2.txt`;
@@ -1166,8 +1177,8 @@ const versionButton = (item) => {
     `;
   }
   if (isResListGame()) {
-    const isMajorRelease = isTof() || nteIsMajorRelease(item);
-    const releaseTitle = isTof() ? "当前官方 ResList 存档版本" : isMajorRelease ? "该系列最早存档版本" : "同系列后续存档版本";
+    const isMajorRelease = isTof() || isP5x() || nteIsMajorRelease(item);
+    const releaseTitle = isTof() || isP5x() ? "当前官方 ResList 存档版本" : isMajorRelease ? "该系列最早存档版本" : "同系列后续存档版本";
     return `
       <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
         <span class="version-number">${item.version}</span>
@@ -1447,8 +1458,8 @@ const renderLinks = () => {
     $("#urlsLink").href = files?.urls || "#";
     $("#aria2Link").href = files?.aria2 || "#";
     $("#jsonLink").href = files?.json || "#";
-    scriptButton.hidden = disabled || state.mode !== "full" || isTof();
-    scriptButton.disabled = disabled || state.mode !== "full" || isTof();
+    scriptButton.hidden = disabled || state.mode !== "full" || !isNte();
+    scriptButton.disabled = disabled || state.mode !== "full" || !isNte();
     return;
   }
 
@@ -1509,7 +1520,7 @@ const renderPanelTitle = () => {
   $("#panelKicker").textContent = state.mode === "android"
     ? "Android APK"
     : state.mode === "legacy" ? "Historical candidates"
-    : isNte() ? "NTE files" : isTof() ? "TOF files" : isEndfield() ? "Endfield files" : isWuwa() ? "Wuwa files" : isArknights() ? "Arknights packages" : "Hoyo files";
+    : isResListGame() ? `${resListGameLabel()} files` : isEndfield() ? "Endfield files" : isWuwa() ? "Wuwa files" : isArknights() ? "Arknights packages" : "Hoyo files";
   $("#panelTitle").textContent = state.mode === "legacy" ? displayVersion : `${displayVersion} ${modeLabel}`;
 };
 
@@ -1605,7 +1616,9 @@ const hoyoFileItem = (entry, index = 0, total = 0) => {
 
 const nteCdn2Url = (url) => {
   const text = String(url || "");
-  const mirror = isTof()
+  const mirror = isP5x()
+    ? text.replace("https://nsywl-client-dev1.wmupd.com/", "https://nsywl-client-dev2.wmupd.com/")
+    : isTof()
     ? text.replace("https://htcdn1.wmupd.com/", "https://htcdn2.wmupd.com/")
     : text.replace("https://yhcdn1.wmupd.com/", "https://yhcdn2.wmupd.com/");
   return mirror === text ? "" : mirror;
@@ -3101,15 +3114,17 @@ const renderNotice = () => {
         <a class="source-link" href="${REPOSITORY_URL}#nte-manifest-notes" target="_blank" rel="noreferrer">本站仓库 README</a>
       </div>
     `;
-  } else if (isTof()) {
+  } else if (isTof() || isP5x()) {
+    const catalog = resListCatalog();
+    const gameName = isP5x() ? "P5X" : "幻塔";
     notice.innerHTML = `
       <div class="notice-copy">
         <strong>数据来源</strong>
-        <span>页面保存由幻塔官方启动器 CDN 清单解析出的 URL、校验信息与下载索引；该分发链路与异环同属 PatcherSDK ResList 结构。</span>
+        <span>页面保存由${gameName}官方启动器 CDN 清单解析出的 URL、校验信息与下载索引；该分发链路与异环同属 PatcherSDK ResList 结构。</span>
       </div>
       <div class="source-links">
-        <a class="source-link" href="${escapeHtml(tofVersion()?.reslist_url || "#")}" target="_blank" rel="noreferrer">官方 ResList 清单</a>
-        <a class="source-link" href="${escapeHtml(state.tofCatalog?.config?.url || state.tofCatalog?.config_urls?.[0] || "#")}" target="_blank" rel="noreferrer">官方 config.xml</a>
+        <a class="source-link" href="${escapeHtml(resListVersion()?.reslist_url || "#")}" target="_blank" rel="noreferrer">官方 ResList 清单</a>
+        <a class="source-link" href="${escapeHtml(catalog?.config?.url || catalog?.config_urls?.[0] || "#")}" target="_blank" rel="noreferrer">官方 config.xml</a>
       </div>
     `;
   } else if (isEndfield()) {
@@ -3192,6 +3207,7 @@ updateActiveSideLink();
 Promise.all([
   fetchJson("./data/catalog.json"),
   fetchJson("./data/tof/catalog.json"),
+  fetchJson("./data/p5x/catalog.json"),
   fetchJson("./data/hoyo/games.json"),
   fetchJson("./data/endfield/index.json"),
   fetchJson("./data/endfield/versions.json"),
@@ -3200,9 +3216,10 @@ Promise.all([
   fetchJson("./data/arknights/versions.json"),
   fetchJson("./data/android/index.json"),
   fetchOptionalJson("./data/hoyo/nap_legacy_candidates.json"),
-]).then(async ([nteCatalog, tofCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, arknightsIndex, arknightsVersions, androidIndex, napLegacyCandidates]) => {
+]).then(async ([nteCatalog, tofCatalog, p5xCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, arknightsIndex, arknightsVersions, androidIndex, napLegacyCandidates]) => {
   state.nteCatalog = nteCatalog;
   state.tofCatalog = tofCatalog;
+  state.p5xCatalog = p5xCatalog;
   state.hoyoIndex = hoyoIndex;
   state.endfieldIndex = endfieldIndex;
   state.endfieldVersions = endfieldVersions;

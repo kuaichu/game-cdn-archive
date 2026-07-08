@@ -18,6 +18,7 @@ questions before future changes:
 | HoYo PC catalog | Split: compact `games.json`, per-version shards, plus chunk shards | Has structural split validator | Package/update metadata now follows the WuWa-style selected-version load path. |
 | Android APK archive | Aggregate `index.json`, per-version list files | No dedicated staging/promote validator yet | Covers many games in one data set; should be split by game/source before major changes. |
 | Tower of Fantasy / 幻塔 PC | Legacy/generated catalog plus per-version URL lists under `docs/data/tof/` | Availability validator only | PatcherSDK ResList family, kept separate from NTE catalog. |
+| P5X / 女神异闻录：夜幕魅影 PC | Legacy/generated catalog plus per-version URL lists under `docs/data/p5x/` | Availability validator only | PatcherSDK ResList family, same format as Tower of Fantasy. |
 | URL health index | Aggregate `url_status.json` | Probe script only | Cross-cutting health metadata, not a game archive source. |
 
 ## Shared Static-Site Loading Model
@@ -27,6 +28,7 @@ The frontend starts by reading compact top-level indexes:
 ```text
 docs/data/catalog.json
 docs/data/tof/catalog.json
+docs/data/p5x/catalog.json
 docs/data/hoyo/games.json
 docs/data/endfield/index.json
 docs/data/endfield/versions.json
@@ -262,6 +264,40 @@ Important architecture points:
 
 - The official config endpoint currently reports `ResVersion`.
 - The current observed key seed is `1256@Patcher`; IV seed remains
+  `PatcherSDK`.
+- ResList archive fetch status is a live `GET` fact.
+- Individual object URLs are derived from ResList metadata and are not
+  per-object live probes.
+- Current automation refreshes the official current ResList by default; older
+  versions can be added explicitly with `--versions`.
+
+## P5X PC
+
+P5X uses the same PatcherSDK-style protected ResList family as NTE and Tower of
+Fantasy. It is stored as a separate catalog so PC ResList versions and Android
+APK versions do not get conflated.
+
+```text
+docs/data/p5x/
+  catalog.json
+  url_lists/
+    1.0.74-full.json
+    1.0.74-full.urls.txt
+    1.0.74-full.files.aria2.txt
+    1.0.74-patches.json
+    ...
+```
+
+Important scripts:
+
+- `scripts/update_p5x_static.py`
+- `scripts/build_p5x_availability.py`
+- `scripts/build_urls_from_reslist.py`
+
+Important architecture points:
+
+- The official config endpoint currently reports `ResVersion`.
+- The current observed key seed is `1264@Patcher`; IV seed remains
   `PatcherSDK`.
 - ResList archive fetch status is a live `GET` fact.
 - Individual object URLs are derived from ResList metadata and are not

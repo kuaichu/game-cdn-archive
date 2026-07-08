@@ -17,6 +17,7 @@ or redistribute game binaries.
 | --- | --- | --- | --- |
 | Neverness to Everness / 异环 | Windows PC | 已解码并索引到 `1.2.12`（可用 `41` 个 / 已探测 `75` 个） | `2026-07-07 05:00:01 北京时间` |
 | Tower of Fantasy / 幻塔 | Windows PC | 官方 PatcherSDK ResList 已解码并索引到 `6.2.2`（`1` 个版本） | `2026-07-04 06:47:22 北京时间` |
+| Persona 5: The Phantom X / 女神异闻录：夜幕魅影 | Windows PC | 官方 PatcherSDK ResList 已解码并索引到 `1.0.74`（`1` 个版本） | `2026-07-06 11:15:12 北京时间` |
 | Arknights: Endfield / 明日方舟：终末地 | Windows PC | 官方启动器 API 历史与归档镜像已索引到 `1.3.3`（`7` 个版本） | `2026-06-05 06:15:27 北京时间` |
 | Arknights / 明日方舟 | Windows PC | 官方启动器包元数据已索引到 `74.0.0`（`1` 个版本） | `未知` |
 | Wuthering Waves / 鸣潮 | Windows PC | 官方启动器资源索引与 CDN 镜像已索引到 `3.4.1`（`41` 个版本） | `2026-06-16 17:38:52 北京时间` |
@@ -25,7 +26,7 @@ or redistribute game binaries.
 | Zenless Zone Zero / 绝区零 | Windows PC | HoyoFiles 版本元数据已迁移到 `3.0.0`（`19` 个版本） | `2026-05-29 12:15:38 北京时间` |
 | Honkai Impact 3 / 崩坏3 | Windows PC | HoyoFiles 版本元数据已迁移到 `8.9.0`（`53` 个版本） | `2026-05-22 11:08:32 北京时间` |
 
-_整个项目的数据刷新时间：`2026-07-08 19:22:56 北京时间`。_
+_整个项目的数据刷新时间：`2026-07-08 21:30:33 北京时间`。_
 <!-- README_VERSION_SUMMARY_END -->
 
 ## 当前进度快照
@@ -39,6 +40,7 @@ _整个项目的数据刷新时间：`2026-07-08 19:22:56 北京时间`。_
 | --- | --- |
 | NTE / 异环 PC | 已索引官方 Windows 清单 `1.0.0` 到 `1.2.12`；`75` 个已探测条目中有 `41` 个可用版本 |
 | Tower of Fantasy / 幻塔 PC | 已索引官方 Windows ResList `6.2.2` 到 `6.2.2`；最新清单包含 `91` 个完整文件与 `2047` 个补丁对象 |
+| Persona 5: The Phantom X / 女神异闻录：夜幕魅影 PC | 已索引官方 Windows ResList `1.0.74` 到 `1.0.74`；最新清单包含 `3` 个完整文件与 `833` 个补丁对象 |
 | Endfield / 终末地 PC | 已导入 `7` 个 CN 启动器历史快照，最新 `1.3.3`；官方签名包 URL 与归档镜像 URL 均已保留 |
 | Arknights / 明日方舟 PC | 官方启动器包元数据已索引到 `74.0.0`；最新快照包含 `19` 个包条目 |
 | Wuthering Waves / 鸣潮 PC | 已索引 `41` 个 CN 启动器 / resource-index 快照，最新 `3.4.1`；官方索引暴露的文件 URL、CDN 镜像与补丁路由均已保留 |
@@ -128,6 +130,9 @@ docs/
     tof/
       catalog.json          幻塔 PatcherSDK ResList 版本摘要
       url_lists/            幻塔按版本生成的 URL / aria2 / JSON 索引
+    p5x/
+      catalog.json          P5X PatcherSDK ResList 版本摘要
+      url_lists/            P5X 按版本生成的 URL / aria2 / JSON 索引
     hoyo/
       games.json            从 HoyoFiles 迁移的游戏 / 版本摘要
       versions/             按游戏、按版本拆分的包和更新元数据
@@ -147,6 +152,7 @@ scripts/
                              从解码后的 ResList XML 生成 URL / aria2 索引
   decode_patcherxml0.py     解码受保护的 PatcherXML0 XML 文件
   update_tof_static.py       刷新幻塔静态 ResList 索引
+  update_p5x_static.py       刷新 P5X 静态 ResList 索引
   nte_downloader.py         准备、下载、校验和打包客户端文件
   import_endfield_archive.py
                              从上游归档导入 Endfield 精简索引
@@ -202,6 +208,20 @@ zlib inflate
 
 ```text
 https://htcdn1.wmupd.com/clientRes/Windows55/Res/{首字符}/{md5}.{size}
+```
+
+## P5X 清单说明
+
+P5X Windows 客户端也使用同一套 PatcherSDK 风格的 `ResList.bin.zip`。当前观察到的版本入口为：
+
+```text
+https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/{version}/ResList.bin.zip
+```
+
+当前样本 `1.0.74` 已确认与异环、幻塔相同的保护层。P5X 当前观察到的 key seed 是 `1264@Patcher`，IV seed 仍是 `PatcherSDK`。解码后的对象 URL 形如：
+
+```text
+https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res/{首字符}/{md5}.{size}
 ```
 
 ## 原神 CDN 演进

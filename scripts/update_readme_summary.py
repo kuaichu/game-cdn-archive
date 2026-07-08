@@ -151,6 +151,20 @@ def tof_row() -> tuple[str, str, str, str] | None:
     return ("Tower of Fantasy / 幻塔", "Windows PC", status, version_time(latest_record))
 
 
+def p5x_row() -> tuple[str, str, str, str] | None:
+    catalog = load_json(DOCS_DATA / "p5x" / "catalog.json")
+    if not catalog:
+        return None
+    versions = catalog.get("versions") or []
+    ok_versions = [row for row in versions if row.get("status") == 200]
+    latest_record = latest_row(ok_versions)
+    latest = str(latest_record.get("version")) if latest_record else None
+    if not latest:
+        return None
+    status = f"官方 PatcherSDK ResList 已解码并索引到 `{latest}`（`{len(ok_versions)}` 个版本）"
+    return ("Persona 5: The Phantom X / 女神异闻录：夜幕魅影", "Windows PC", status, version_time(latest_record))
+
+
 def endfield_row() -> tuple[str, str, str, str] | None:
     index = load_json(DOCS_DATA / "endfield" / "index.json")
     if not index:
@@ -214,6 +228,7 @@ def hoyo_rows() -> list[tuple[str, str, str, str]]:
 def progress_block() -> str:
     catalog = load_json(DOCS_DATA / "catalog.json") or {}
     tof = load_json(DOCS_DATA / "tof" / "catalog.json") or {}
+    p5x = load_json(DOCS_DATA / "p5x" / "catalog.json") or {}
     hoyo = load_json(DOCS_DATA / "hoyo" / "games.json") or {}
     endfield = load_json(DOCS_DATA / "endfield" / "index.json") or {}
     arknights = load_json(DOCS_DATA / "arknights" / "index.json") or {}
@@ -242,6 +257,18 @@ def progress_block() -> str:
             f"已索引官方 Windows ResList `{tof_first}` 到 `{tof_latest}`；"
             f"最新清单包含 `{(tof_latest_record.get('full') or {}).get('items') or 0}` 个完整文件与 "
             f"`{(tof_latest_record.get('patches') or {}).get('items') or 0}` 个补丁对象",
+        ))
+
+    p5x_versions = p5x.get("versions") or []
+    p5x_ok = [row for row in p5x_versions if row.get("status") == 200]
+    p5x_first, p5x_latest = version_range_text(p5x_ok)
+    if p5x_first and p5x_latest:
+        p5x_latest_record = latest_row(p5x_ok) or {}
+        rows.append((
+            "Persona 5: The Phantom X / 女神异闻录：夜幕魅影 PC",
+            f"已索引官方 Windows ResList `{p5x_first}` 到 `{p5x_latest}`；"
+            f"最新清单包含 `{(p5x_latest_record.get('full') or {}).get('items') or 0}` 个完整文件与 "
+            f"`{(p5x_latest_record.get('patches') or {}).get('items') or 0}` 个补丁对象",
         ))
 
     end_versions = endfield.get("versions") or []
@@ -342,6 +369,7 @@ def android_progress_block() -> str:
 def generated_at_line() -> str:
     catalog = load_json(DOCS_DATA / "catalog.json") or {}
     tof = load_json(DOCS_DATA / "tof" / "catalog.json") or {}
+    p5x = load_json(DOCS_DATA / "p5x" / "catalog.json") or {}
     hoyo = load_json(DOCS_DATA / "hoyo" / "games.json") or {}
     endfield = load_json(DOCS_DATA / "endfield" / "index.json") or {}
     arknights = load_json(DOCS_DATA / "arknights" / "index.json") or {}
@@ -350,6 +378,7 @@ def generated_at_line() -> str:
     return "_整个项目的数据刷新时间：" + latest_time_text(
         source_time(catalog),
         source_time(tof),
+        source_time(p5x),
         source_time(hoyo),
         source_time(endfield),
         source_time(arknights),
@@ -364,6 +393,7 @@ def generate_block() -> str:
         for row in [
             nte_row(),
             tof_row(),
+            p5x_row(),
             endfield_row(),
             arknights_row(),
             wuwa_row(),

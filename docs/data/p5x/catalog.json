@@ -1,0 +1,112 @@
+{
+  "game": {
+    "id": "p5x",
+    "name": "女神异闻录：夜幕魅影",
+    "subName": "Persona 5: The Phantom X",
+    "shortName": "P5X",
+    "icon": "assets/icons/p5x.jpg",
+    "kind": "p5x"
+  },
+  "source": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/",
+  "config_urls": [
+    "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/config.xml",
+    "https://nsywl-client-dev2.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/config.xml"
+  ],
+  "reslist_url_template": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/{version}/ResList.bin.zip",
+  "object_base_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Res",
+  "key_seed": "1264@Patcher",
+  "iv_seed": "PatcherSDK",
+  "versions": [
+    {
+      "version": "1.0.74",
+      "status": 200,
+      "last_modified": "Mon, 06 Jul 2026 03:15:12 GMT",
+      "content_length": 49120,
+      "full": {
+        "items": 3,
+        "bytes": 969604327,
+        "json": "data/p5x/url_lists/1.0.74-full.json",
+        "urls": "data/p5x/url_lists/1.0.74-full.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.74-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 833,
+        "bytes": 150917086715,
+        "json": "data/p5x/url_lists/1.0.74-patches.json",
+        "urls": "data/p5x/url_lists/1.0.74-patches.urls.txt",
+        "aria2": "data/p5x/url_lists/1.0.74-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.74/ResList.bin.zip",
+      "reslist_bytes": 49120,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.74/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 21:30:33 +0800",
+              "final_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.74/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 49120,
+              "last_modified": "Mon, 06 Jul 2026 03:15:12 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/version/1.0.74/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_p5x_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 3
+        },
+        "patches": {
+          "available": 833
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 3
+        },
+        "patches": {
+          "not_probed": 833
+        }
+      }
+    }
+  ],
+  "last_checked_at": "2026-07-08 21:30:33 +0800",
+  "generated_at": "2026-07-08 21:30:33 +0800",
+  "current_version": "1.0.74",
+  "config": {
+    "url": "https://nsywl-client-dev1.wmupd.com/clientRes/CN_OB_OFFICIAL/Version/Windows/config.xml",
+    "status": 200,
+    "last_modified": "Mon, 06 Jul 2026 03:15:12 GMT",
+    "content_length": 2525,
+    "res_version": "1.0.74",
+    "section": "1.0",
+    "res_size": 1155828821,
+    "hash": "c2647a",
+    "diff_hash": "fdce9bd3dd77163d8cdddf9daf0bf552",
+    "list_hash": "a150538a8c31591ea436e0ac9840525a",
+    "compressed": "1",
+    "encrypt": "1"
+  }
+}

@@ -13,6 +13,7 @@ on:
           - android
           - nte
           - tof
+          - p5x
           - hoyofiles
           - endfield
           - wuwa
@@ -305,6 +306,13 @@ jobs:
           GHA_RUN_RETRY_DELAY: 20
         run: bash scripts/gha_run_step.sh "Refresh Tower of Fantasy data" python scripts/update_tof_static.py
 
+      - name: Refresh P5X data
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'p5x'
+        env:
+          GHA_RUN_RETRIES: 2
+          GHA_RUN_RETRY_DELAY: 20
+        run: bash scripts/gha_run_step.sh "Refresh P5X data" python scripts/update_p5x_static.py
+
       - name: Refresh HoyoFiles data
         if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'hoyofiles'
         env:
@@ -399,6 +407,7 @@ jobs:
 
           run_for_scope "Build NTE availability" nte python scripts/build_nte_availability.py
           run_for_scope "Build Tower of Fantasy availability" tof python scripts/build_tof_availability.py
+          run_for_scope "Build P5X availability" p5x python scripts/build_p5x_availability.py
           run_for_scope "Build HoYo availability" hoyofiles python scripts/build_hoyo_availability.py
           run_for_scope "Build Endfield availability" endfield python scripts/build_endfield_availability.py
           if [ "${SYNC_SCOPE}" = "all" ] || [ "${SYNC_SCOPE}" = "wuwa" ] || [ "${SYNC_SCOPE}" = "wuwa-full" ]; then
@@ -456,7 +465,7 @@ jobs:
             fi
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add README.md docs/data docs/app.js docs/index.html scripts/update_nte_static.py scripts/update_tof_static.py scripts/build_tof_availability.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py scripts/validate_endfield_archive.py scripts/sync_wuwa.py scripts/sync_arknights_pc.py scripts/validate_arknights_pc.py scripts/sync_android_apks.py scripts/probe_url_status.py scripts/check_docs_file_sizes.py scripts/update_readme_summary.py
+            git add README.md docs/data docs/app.js docs/index.html scripts/update_nte_static.py scripts/update_tof_static.py scripts/update_p5x_static.py scripts/build_tof_availability.py scripts/build_p5x_availability.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py scripts/validate_endfield_archive.py scripts/sync_wuwa.py scripts/sync_arknights_pc.py scripts/validate_arknights_pc.py scripts/sync_android_apks.py scripts/probe_url_status.py scripts/check_docs_file_sizes.py scripts/update_readme_summary.py
             git commit -m "Auto update archive data"
             for attempt in 1 2 3; do
               if git push; then
