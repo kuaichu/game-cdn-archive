@@ -25,8 +25,8 @@
           "probe": {
             "ok": true,
             "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-05T16:14:20.030241+00:00",
+            "method": "HEAD",
+            "checked_at": "2026-07-07T17:21:41.648Z",
             "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20260422161038_SQ6GRF62tYrLXq8CiY/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.3.0_166672158_33_%E5%AE%98%E6%B8%A0_54ca20e17f5b80c7682d7e2e1d92a3ba_shelled.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2012961588,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 18.447,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

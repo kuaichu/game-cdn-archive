@@ -16,42 +16,6 @@
     "filename": "20240321-183112-gf_android_ota-versions-v7_4-Invitation_to_the_Mad_Banquet_gw.apk",
     "captured_at": "2026-06-08T18:20:29.063705+00:00",
     "updated_at": "2024-03-25T07:17:33+00:00",
-    "updated_at_source": "apk_last_modified",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://bundle.bh3.com/ptpublic/rel/20240325143924_D6bZkQP9zm8vNajM/CPS/20240321-183112-gf_android_ota-versions-v7_4-Invitation_to_the_Mad_Banquet_gw.apk",
-          "probe": {
-            "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-05T16:14:20.030241+00:00",
-            "final_url": "https://bundle.bh3.com/ptpublic/rel/20240325143924_D6bZkQP9zm8vNajM/CPS/20240321-183112-gf_android_ota-versions-v7_4-Invitation_to_the_Mad_Banquet_gw.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 571277789,
-            "last_modified": "Mon, 25 Mar 2024 07:17:33 GMT",
-            "etag": "0E7EE48C74623424A15EEFB2EC7AD875-10",
-            "error": "",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 18.447,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "high"
-      },
-      "interpretation": {
-        "state": "available",
-        "reason": "http_2xx",
-        "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20240325143924_D6bZkQP9zm8vNajM/CPS/20240321-183112-gf_android_ota-versions-v7_4-Invitation_to_the_Mad_Banquet_gw.apk",
-        "confidence": "high",
-        "retained": false,
-        "display_label": "可用"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
+    "updated_at_source": "apk_last_modified"
   }
 ]

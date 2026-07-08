@@ -5,53 +5,17 @@
     "channel": "gw",
     "url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/CPS/20241024-005902-gf_android_ota-versions-v7_9-Stars_Derailed_gw.apk",
     "source": "official CDN URL provided by user",
-    "status": 200,
-    "content_type": "application/vnd.android.package-archive",
-    "size": 655626042,
-    "last_modified": "Wed, 25 Jun 2025 02:42:53 GMT",
-    "etag": "1653CC8BF6CD0DB85CCFD1DED86B7F21-10",
+    "status": 403,
+    "content_type": "",
+    "size": 0,
+    "last_modified": "",
+    "etag": "",
     "md5": "",
     "crc64": "",
-    "error": "",
+    "error": "APK object unavailable",
     "filename": "20241024-005902-gf_android_ota-versions-v7_9-Stars_Derailed_gw.apk",
     "captured_at": "2026-06-08T18:16:42.405026+00:00",
-    "updated_at": "2025-06-25T02:42:53+00:00",
-    "updated_at_source": "apk_last_modified",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/CPS/20241024-005902-gf_android_ota-versions-v7_9-Stars_Derailed_gw.apk",
-          "probe": {
-            "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-05T16:14:20.030241+00:00",
-            "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/CPS/20241024-005902-gf_android_ota-versions-v7_9-Stars_Derailed_gw.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 655626042,
-            "last_modified": "Wed, 25 Jun 2025 02:42:53 GMT",
-            "etag": "1653CC8BF6CD0DB85CCFD1DED86B7F21-10",
-            "error": "",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 18.447,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "high"
-      },
-      "interpretation": {
-        "state": "available",
-        "reason": "http_2xx",
-        "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/CPS/20241024-005902-gf_android_ota-versions-v7_9-Stars_Derailed_gw.apk",
-        "confidence": "high",
-        "retained": false,
-        "display_label": "可用"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
+    "updated_at": "2024-10-25T15:18:16+00:00",
+    "updated_at_source": "filename_timestamp"
   }
 ]

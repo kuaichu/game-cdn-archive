@@ -16,42 +16,6 @@
     "filename": "20161108-112940-gf_android-versions-v1_1-4R-705fcfd-ASB-il2cpp_guofu.apk",
     "captured_at": "2026-06-06T07:29:12.631982+00:00",
     "updated_at": "2016-11-08T11:29:40+00:00",
-    "updated_at_source": "filename_timestamp",
-    "availability": {
-      "candidates": [
-        {
-          "url": "http://app.bh3.com/public/Android/20161108-112940-gf_android-versions-v1_1-4R-705fcfd-ASB-il2cpp_guofu.apk",
-          "probe": {
-            "ok": false,
-            "status": 0,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-05T16:14:20.030241+00:00",
-            "final_url": "http://app.bh3.com/public/Android/20161108-112940-gf_android-versions-v1_1-4R-705fcfd-ASB-il2cpp_guofu.apk",
-            "content_type": "",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 18.447,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "low"
-      },
-      "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
-        "preferred_url": "",
-        "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
+    "updated_at_source": "filename_timestamp"
   }
 ]

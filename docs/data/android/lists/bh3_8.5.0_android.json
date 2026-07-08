@@ -16,42 +16,6 @@
     "filename": "20250911-052146-gf_android_ota-versions-v8_5-A_Lightful_Love_gw.apk",
     "captured_at": "2026-06-08T18:21:01.169939+00:00",
     "updated_at": "2025-09-19T08:03:03+00:00",
-    "updated_at_source": "apk_last_modified",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250919160133_7I3uYOQENmLOcD8O/CPS/20250911-052146-gf_android_ota-versions-v8_5-A_Lightful_Love_gw.apk",
-          "probe": {
-            "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-05T16:14:20.030241+00:00",
-            "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250919160133_7I3uYOQENmLOcD8O/CPS/20250911-052146-gf_android_ota-versions-v8_5-A_Lightful_Love_gw.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 680451531,
-            "last_modified": "Fri, 19 Sep 2025 08:03:03 GMT",
-            "etag": "4B5B4BB557F0E1F819285560030681EC-10",
-            "error": "",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 18.447,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "high"
-      },
-      "interpretation": {
-        "state": "available",
-        "reason": "http_2xx",
-        "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250919160133_7I3uYOQENmLOcD8O/CPS/20250911-052146-gf_android_ota-versions-v8_5-A_Lightful_Love_gw.apk",
-        "confidence": "high",
-        "retained": false,
-        "display_label": "可用"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
+    "updated_at_source": "apk_last_modified"
   }
 ]

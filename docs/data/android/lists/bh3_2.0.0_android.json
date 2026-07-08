@@ -14,42 +14,6 @@
     "crc64": "",
     "error": "<urlopen error [Errno -5] No address associated with hostname>",
     "filename": "20180111-android_versions_v2_0_Housewarming_Party_guofu.apk",
-    "captured_at": "2026-06-08T18:34:52.700463+00:00",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://app.bh3.com/public/Android/20180111-android_versions_v2_0_Housewarming_Party_guofu.apk",
-          "probe": {
-            "ok": false,
-            "status": 0,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-05T16:14:20.030241+00:00",
-            "final_url": "https://app.bh3.com/public/Android/20180111-android_versions_v2_0_Housewarming_Party_guofu.apk",
-            "content_type": "",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 18.447,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "low"
-      },
-      "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
-        "preferred_url": "",
-        "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
+    "captured_at": "2026-06-08T18:34:52.700463+00:00"
   }
 ]

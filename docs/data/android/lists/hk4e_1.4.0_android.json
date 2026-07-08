@@ -6,52 +6,16 @@
     "url": "https://autopatchcn.yuanshen.com/client_app/Android/20210317_89cc7ee76bc22c55/yuanshen_1.4.0_mihoyo.apk",
     "source": "official CDN URL provided by user",
     "status": 200,
-    "content_type": "application/vnd.android.package-archive;charset=UTF-8",
+    "content_type": "application/vnd.android.package-archive",
     "size": 206294286,
-    "last_modified": "Tue, 09 Mar 2021 06:42:30 GMT",
-    "etag": "lq6rNqF_AU_xDyrC-nE7kWbA4QSE",
+    "last_modified": "Thu, 28 May 2026 08:42:31 GMT",
+    "etag": "85c35c6390f12fb5dd2623e0dc1d665d-2",
     "md5": "",
     "crc64": "",
     "error": "",
     "filename": "yuanshen_1.4.0_mihoyo.apk",
     "captured_at": "2026-06-08T17:44:40.153103+00:00",
-    "updated_at": "2021-03-09T06:42:30+00:00",
-    "updated_at_source": "apk_last_modified",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://autopatchcn.yuanshen.com/client_app/Android/20210317_89cc7ee76bc22c55/yuanshen_1.4.0_mihoyo.apk",
-          "probe": {
-            "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-05T16:14:20.030241+00:00",
-            "final_url": "https://autopatchcn.yuanshen.com/client_app/Android/20210317_89cc7ee76bc22c55/yuanshen_1.4.0_mihoyo.apk",
-            "content_type": "application/vnd.android.package-archive;charset=UTF-8",
-            "size": 206294286,
-            "last_modified": "Tue, 09 Mar 2021 06:42:30 GMT",
-            "etag": "lq6rNqF_AU_xDyrC-nE7kWbA4QSE",
-            "error": "",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 18.447,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "high"
-      },
-      "interpretation": {
-        "state": "available",
-        "reason": "http_2xx",
-        "preferred_url": "https://autopatchcn.yuanshen.com/client_app/Android/20210317_89cc7ee76bc22c55/yuanshen_1.4.0_mihoyo.apk",
-        "confidence": "high",
-        "retained": false,
-        "display_label": "可用"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
+    "updated_at": "2026-05-28T08:42:31+00:00",
+    "updated_at_source": "apk_last_modified"
   }
 ]

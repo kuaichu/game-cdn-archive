@@ -16,42 +16,6 @@
     "filename": "鸣潮_1.2.0_112802763__官渠_81b08709203b7387d166954acc706a48_shelled.apk",
     "captured_at": "2026-06-08T17:43:05.181300+00:00",
     "updated_at": "2024-08-08T07:24:51+00:00",
-    "updated_at_source": "apk_last_modified",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://mirrors-package-mc.aki-game.com/client/download/20240808152445_wfgvR40uxlHKdbvrjc/%E9%B8%A3%E6%BD%AE_1.2.0_112802763__%E5%AE%98%E6%B8%A0_81b08709203b7387d166954acc706a48_shelled.apk",
-          "probe": {
-            "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-05T16:14:20.030241+00:00",
-            "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20240808152445_wfgvR40uxlHKdbvrjc/%E9%B8%A3%E6%BD%AE_1.2.0_112802763__%E5%AE%98%E6%B8%A0_81b08709203b7387d166954acc706a48_shelled.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 2016298925,
-            "last_modified": "Thu, 08 Aug 2024 07:24:51 GMT",
-            "etag": "26371dfc147e46848bc4b768f632d16a-39",
-            "error": "",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 18.447,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "high"
-      },
-      "interpretation": {
-        "state": "available",
-        "reason": "http_2xx",
-        "preferred_url": "https://mirrors-package-mc.aki-game.com/client/download/20240808152445_wfgvR40uxlHKdbvrjc/%E9%B8%A3%E6%BD%AE_1.2.0_112802763__%E5%AE%98%E6%B8%A0_81b08709203b7387d166954acc706a48_shelled.apk",
-        "confidence": "high",
-        "retained": false,
-        "display_label": "可用"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
+    "updated_at_source": "apk_last_modified"
   }
 ]

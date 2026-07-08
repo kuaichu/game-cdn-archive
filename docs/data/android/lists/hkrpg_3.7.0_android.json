@@ -16,42 +16,6 @@
     "filename": "StarRail_3.7.0.apk",
     "captured_at": "2026-06-08T16:11:52.960334+00:00",
     "updated_at": "2025-10-25T08:28:25+00:00",
-    "updated_at_source": "apk_last_modified",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://autopatchcn.bhsr.com/client/cn/20251025162622_alR6Tz1Le986Lu9q/gw_An/StarRail_3.7.0.apk",
-          "probe": {
-            "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-05T16:14:20.030241+00:00",
-            "final_url": "https://autopatchcn.bhsr.com/client/cn/20251025162622_alR6Tz1Le986Lu9q/gw_An/StarRail_3.7.0.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 364194771,
-            "last_modified": "Sat, 25 Oct 2025 08:28:25 GMT",
-            "etag": "119E107138D1455A1E018477E820D95C-10",
-            "error": "",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 18.447,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "high"
-      },
-      "interpretation": {
-        "state": "available",
-        "reason": "http_2xx",
-        "preferred_url": "https://autopatchcn.bhsr.com/client/cn/20251025162622_alR6Tz1Le986Lu9q/gw_An/StarRail_3.7.0.apk",
-        "confidence": "high",
-        "retained": false,
-        "display_label": "可用"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
+    "updated_at_source": "apk_last_modified"
   }
 ]

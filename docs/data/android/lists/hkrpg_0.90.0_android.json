@@ -16,42 +16,6 @@
     "filename": "StarRail_0.90.0.apk",
     "captured_at": "2026-06-08T15:56:33.817046+00:00",
     "updated_at": "2023-02-02T11:27:11+00:00",
-    "updated_at_source": "filename_timestamp",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://autopatchcn.bhsr.com/client/cn/20230202112711_Gqh20JqTKF8yCY7c/StarRail_0.90.0.apk",
-          "probe": {
-            "ok": false,
-            "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-05T16:14:20.030241+00:00",
-            "final_url": "https://autopatchcn.bhsr.com/client/cn/20230202112711_Gqh20JqTKF8yCY7c/StarRail_0.90.0.apk",
-            "content_type": "application/xml",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "APK object unavailable",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 18.447,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "low"
-      },
-      "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
-        "preferred_url": "",
-        "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
+    "updated_at_source": "filename_timestamp"
   }
 ]

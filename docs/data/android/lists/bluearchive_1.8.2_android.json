@@ -5,16 +5,6 @@
     "channel": "official",
     "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/task_game_apk/official/1.8.2/BlueArchive_official_1.8.2_0517_1.apk",
     "source": "Wayback Machine CDX historical URL; original URL now returns 404",
-    "status": 404,
-    "content_type": "application/xml",
-    "size": 0,
-    "last_modified": "",
-    "etag": "",
-    "md5": "",
-    "crc64": "",
-    "error": "APK object unavailable",
-    "filename": "BlueArchive_official_1.8.2_0517_1.apk",
-    "captured_at": "2026-07-05T10:20:55+00:00",
     "updated_at": "2024-07-11T07:38:29+00:00",
     "updated_at_source": "wayback_cdx_timestamp",
     "archive": {
@@ -24,41 +14,15 @@
       "length": 1974554199,
       "digest": "E43DILJFVZ6CE76T5HW3673ZBRSLYX4P"
     },
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/task_game_apk/official/1.8.2/BlueArchive_official_1.8.2_0517_1.apk",
-          "probe": {
-            "ok": false,
-            "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-05T16:14:20.030241+00:00",
-            "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/task_game_apk/official/1.8.2/BlueArchive_official_1.8.2_0517_1.apk",
-            "content_type": "application/xml",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "APK object unavailable",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 18.447,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "low"
-      },
-      "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
-        "preferred_url": "",
-        "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
+    "status": 404,
+    "content_type": "application/xml",
+    "size": 0,
+    "last_modified": "",
+    "etag": "",
+    "md5": "",
+    "crc64": "",
+    "error": "APK object unavailable",
+    "filename": "BlueArchive_official_1.8.2_0517_1.apk",
+    "captured_at": "2026-07-05T10:20:55+00:00"
   }
 ]

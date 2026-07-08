@@ -16,42 +16,6 @@
     "filename": "ZenlessZoneZero_2.3.apk",
     "captured_at": "2026-06-21T04:43:45.169494+00:00",
     "updated_at": "2025-09-26T11:18:00+00:00",
-    "updated_at_source": "apk_last_modified",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20250926175650_zf2LhFSf10NBg5iB/gw/ZenlessZoneZero_2.3.apk",
-          "probe": {
-            "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-05T16:14:20.030241+00:00",
-            "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20250926175650_zf2LhFSf10NBg5iB/gw/ZenlessZoneZero_2.3.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 428393396,
-            "last_modified": "Fri, 26 Sep 2025 11:18:00 GMT",
-            "etag": "1A67AED7DD10F48ED0F87AA07C4759A4-10",
-            "error": "",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 18.447,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "high"
-      },
-      "interpretation": {
-        "state": "available",
-        "reason": "http_2xx",
-        "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20250926175650_zf2LhFSf10NBg5iB/gw/ZenlessZoneZero_2.3.apk",
-        "confidence": "high",
-        "retained": false,
-        "display_label": "可用"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
+    "updated_at_source": "apk_last_modified"
   }
 ]
