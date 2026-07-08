@@ -16,6 +16,7 @@ or redistribute game binaries.
 | 游戏 | 平台 | 状态 | 版本更新时间 |
 | --- | --- | --- | --- |
 | Neverness to Everness / 异环 | Windows PC | 已解码并索引到 `1.2.12`（可用 `41` 个 / 已探测 `75` 个） | `2026-07-07 05:00:01 北京时间` |
+| Tower of Fantasy / 幻塔 | Windows PC | 官方 PatcherSDK ResList 已解码并索引到 `6.2.2`（`1` 个版本） | `2026-07-04 06:47:22 北京时间` |
 | Arknights: Endfield / 明日方舟：终末地 | Windows PC | 官方启动器 API 历史与归档镜像已索引到 `1.3.3`（`7` 个版本） | `2026-06-05 06:15:27 北京时间` |
 | Arknights / 明日方舟 | Windows PC | 官方启动器包元数据已索引到 `74.0.0`（`1` 个版本） | `未知` |
 | Wuthering Waves / 鸣潮 | Windows PC | 官方启动器资源索引与 CDN 镜像已索引到 `3.4.1`（`41` 个版本） | `2026-06-16 17:38:52 北京时间` |
@@ -37,6 +38,7 @@ _整个项目的数据刷新时间：`2026-07-08 14:44:28 北京时间`。_
 | 范围 | 当前进度 |
 | --- | --- |
 | NTE / 异环 PC | 已索引官方 Windows 清单 `1.0.0` 到 `1.2.12`；`75` 个已探测条目中有 `41` 个可用版本 |
+| Tower of Fantasy / 幻塔 PC | 已索引官方 Windows ResList `6.2.2` 到 `6.2.2`；最新清单包含 `91` 个完整文件与 `2047` 个补丁对象 |
 | Endfield / 终末地 PC | 已导入 `7` 个 CN 启动器历史快照，最新 `1.3.3`；官方签名包 URL 与归档镜像 URL 均已保留 |
 | Arknights / 明日方舟 PC | 官方启动器包元数据已索引到 `74.0.0`；最新快照包含 `19` 个包条目 |
 | Wuthering Waves / 鸣潮 PC | 已索引 `41` 个 CN 启动器 / resource-index 快照，最新 `3.4.1`；官方索引暴露的文件 URL、CDN 镜像与补丁路由均已保留 |
@@ -122,6 +124,9 @@ docs/
   data/
     catalog.json            静态页面使用的版本摘要
     url_lists/              按版本生成的 URL / aria2 / JSON 索引
+    tof/
+      catalog.json          幻塔 PatcherSDK ResList 版本摘要
+      url_lists/            幻塔按版本生成的 URL / aria2 / JSON 索引
     hoyo/
       games.json            从 HoyoFiles 迁移的游戏 / 版本摘要
       versions/             按游戏、按版本拆分的包和更新元数据
@@ -140,6 +145,7 @@ scripts/
   build_urls_from_reslist.py
                              从解码后的 ResList XML 生成 URL / aria2 索引
   decode_patcherxml0.py     解码受保护的 PatcherXML0 XML 文件
+  update_tof_static.py       刷新幻塔静态 ResList 索引
   nte_downloader.py         准备、下载、校验和打包客户端文件
   import_endfield_archive.py
                              从上游归档导入 Endfield 精简索引
@@ -174,6 +180,28 @@ https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/{version}/
 ```
 
 已观察到的可用版本包括 `1.0.0`、`1.0.1`、`1.0.3`、`1.0.5` 到 `1.0.9`、`1.0.11`、`1.0.13` 到 `1.0.15`，以及 `1.1.0` 到 `1.1.5`。
+
+## 幻塔清单说明
+
+幻塔 Windows 客户端同样使用 PatcherSDK 风格的 `ResList.bin.zip`。当前观察到的版本入口为：
+
+```text
+https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/{version}/ResList.bin.zip
+```
+
+当前样本 `6.2.2` 已确认与异环相同的保护层：
+
+```text
+PatcherXML0 header
+AES-128-CBC decrypt
+zlib inflate
+```
+
+幻塔当前观察到的 key seed 是 `1256@Patcher`，IV seed 仍是 `PatcherSDK`，两者同样用 ASCII `0` 补齐到 16 字节。解码后的对象 URL 形如：
+
+```text
+https://htcdn1.wmupd.com/clientRes/Windows55/Res/{首字符}/{md5}.{size}
+```
 
 ## 原神 CDN 演进
 

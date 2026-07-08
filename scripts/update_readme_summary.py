@@ -137,6 +137,20 @@ def nte_row() -> tuple[str, str, str, str] | None:
     return ("Neverness to Everness / 异环", "Windows PC", status, version_time(latest_record))
 
 
+def tof_row() -> tuple[str, str, str, str] | None:
+    catalog = load_json(DOCS_DATA / "tof" / "catalog.json")
+    if not catalog:
+        return None
+    versions = catalog.get("versions") or []
+    ok_versions = [row for row in versions if row.get("status") == 200]
+    latest_record = latest_row(ok_versions)
+    latest = str(latest_record.get("version")) if latest_record else None
+    if not latest:
+        return None
+    status = f"官方 PatcherSDK ResList 已解码并索引到 `{latest}`（`{len(ok_versions)}` 个版本）"
+    return ("Tower of Fantasy / 幻塔", "Windows PC", status, version_time(latest_record))
+
+
 def endfield_row() -> tuple[str, str, str, str] | None:
     index = load_json(DOCS_DATA / "endfield" / "index.json")
     if not index:
@@ -199,6 +213,7 @@ def hoyo_rows() -> list[tuple[str, str, str, str]]:
 
 def progress_block() -> str:
     catalog = load_json(DOCS_DATA / "catalog.json") or {}
+    tof = load_json(DOCS_DATA / "tof" / "catalog.json") or {}
     hoyo = load_json(DOCS_DATA / "hoyo" / "games.json") or {}
     endfield = load_json(DOCS_DATA / "endfield" / "index.json") or {}
     arknights = load_json(DOCS_DATA / "arknights" / "index.json") or {}
@@ -217,6 +232,18 @@ def progress_block() -> str:
             f"`{len(nte_versions)}` 个已探测条目中有 `{len(nte_ok)}` 个可用版本",
         ))
 
+    tof_versions = tof.get("versions") or []
+    tof_ok = [row for row in tof_versions if row.get("status") == 200]
+    tof_first, tof_latest = version_range_text(tof_ok)
+    if tof_first and tof_latest:
+        tof_latest_record = latest_row(tof_ok) or {}
+        rows.append((
+            "Tower of Fantasy / 幻塔 PC",
+            f"已索引官方 Windows ResList `{tof_first}` 到 `{tof_latest}`；"
+            f"最新清单包含 `{(tof_latest_record.get('full') or {}).get('items') or 0}` 个完整文件与 "
+            f"`{(tof_latest_record.get('patches') or {}).get('items') or 0}` 个补丁对象",
+        ))
+
     end_versions = endfield.get("versions") or []
     end_latest = latest_version(end_versions)
     if end_latest:
@@ -229,11 +256,11 @@ def progress_block() -> str:
     ak_versions = arknights.get("versions") or []
     ak_latest = latest_version(ak_versions)
     if ak_latest:
-        latest_row = next((row for row in ak_versions if str(row.get("version")) == ak_latest), {})
+        ak_latest_record = next((row for row in ak_versions if str(row.get("version")) == ak_latest), {})
         rows.append((
             "Arknights / 明日方舟 PC",
             f"官方启动器包元数据已索引到 `{ak_latest}`；"
-            f"最新快照包含 `{latest_row.get('package_items') or 0}` 个包条目",
+            f"最新快照包含 `{ak_latest_record.get('package_items') or 0}` 个包条目",
         ))
 
     wuwa_versions = wuwa.get("versions") or []
@@ -314,6 +341,7 @@ def android_progress_block() -> str:
 
 def generated_at_line() -> str:
     catalog = load_json(DOCS_DATA / "catalog.json") or {}
+    tof = load_json(DOCS_DATA / "tof" / "catalog.json") or {}
     hoyo = load_json(DOCS_DATA / "hoyo" / "games.json") or {}
     endfield = load_json(DOCS_DATA / "endfield" / "index.json") or {}
     arknights = load_json(DOCS_DATA / "arknights" / "index.json") or {}
@@ -321,6 +349,7 @@ def generated_at_line() -> str:
     android = load_json(DOCS_DATA / "android" / "index.json") or {}
     return "_整个项目的数据刷新时间：" + latest_time_text(
         source_time(catalog),
+        source_time(tof),
         source_time(hoyo),
         source_time(endfield),
         source_time(arknights),
@@ -334,6 +363,7 @@ def generate_block() -> str:
         row
         for row in [
             nte_row(),
+            tof_row(),
             endfield_row(),
             arknights_row(),
             wuwa_row(),

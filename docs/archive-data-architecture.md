@@ -17,6 +17,7 @@ questions before future changes:
 | NTE / 异环 PC | Legacy/generated catalog plus per-version URL lists | No dedicated staging/promote validator yet | Existing downloader/reslist tools are separate from the new validator pattern. |
 | HoYo PC catalog | Split: compact `games.json`, per-version shards, plus chunk shards | Has structural split validator | Package/update metadata now follows the WuWa-style selected-version load path. |
 | Android APK archive | Aggregate `index.json`, per-version list files | No dedicated staging/promote validator yet | Covers many games in one data set; should be split by game/source before major changes. |
+| Tower of Fantasy / 幻塔 PC | Legacy/generated catalog plus per-version URL lists under `docs/data/tof/` | Availability validator only | PatcherSDK ResList family, kept separate from NTE catalog. |
 | URL health index | Aggregate `url_status.json` | Probe script only | Cross-cutting health metadata, not a game archive source. |
 
 ## Shared Static-Site Loading Model
@@ -25,6 +26,7 @@ The frontend starts by reading compact top-level indexes:
 
 ```text
 docs/data/catalog.json
+docs/data/tof/catalog.json
 docs/data/hoyo/games.json
 docs/data/endfield/index.json
 docs/data/endfield/versions.json
@@ -232,6 +234,40 @@ Current status:
 - Partially separated because URL lists are external.
 - Does not yet have a dedicated structural validator like WuWa/Endfield/AK.
 - Any future refactor should first add a validator before changing format.
+
+## Tower of Fantasy PC
+
+Tower of Fantasy uses the same PatcherSDK-style protected ResList family as
+NTE, but it is stored as a separate catalog so the two games do not share
+version state.
+
+```text
+docs/data/tof/
+  catalog.json
+  url_lists/
+    6.2.2-full.json
+    6.2.2-full.urls.txt
+    6.2.2-full.files.aria2.txt
+    6.2.2-patches.json
+    ...
+```
+
+Important scripts:
+
+- `scripts/update_tof_static.py`
+- `scripts/build_tof_availability.py`
+- `scripts/build_urls_from_reslist.py`
+
+Important architecture points:
+
+- The official config endpoint currently reports `ResVersion`.
+- The current observed key seed is `1256@Patcher`; IV seed remains
+  `PatcherSDK`.
+- ResList archive fetch status is a live `GET` fact.
+- Individual object URLs are derived from ResList metadata and are not
+  per-object live probes.
+- Current automation refreshes the official current ResList by default; older
+  versions can be added explicitly with `--versions`.
 
 ## HoYo PC Catalog
 

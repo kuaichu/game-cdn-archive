@@ -24,6 +24,7 @@ class Source:
 
 SOURCES = [
     Source("docs/data/catalog.json", "PC", "single"),
+    Source("docs/data/tof/catalog.json", "PC", "single"),
     Source("docs/data/hoyo/games.json", "PC", "hoyo"),
     Source("docs/data/endfield/index.json", "PC", "single"),
     Source("docs/data/wuwa/index.json", "PC", "single"),

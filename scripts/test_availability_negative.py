@@ -23,11 +23,12 @@ from adapters.android import AndroidAvailabilityAdapter  # noqa: E402
 from adapters.endfield import EndfieldAvailabilityAdapter  # noqa: E402
 from adapters.hoyo import HoyoAvailabilityAdapter  # noqa: E402
 from adapters.nte import NteAvailabilityAdapter  # noqa: E402
+from adapters.tof import TofAvailabilityAdapter  # noqa: E402
 from adapters.wuwa import WuwaAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import ProbeResult, availability_block, probe_fact_defaults  # noqa: E402
 from scripts.build_wuwa_availability import apply_availability, load_versions  # noqa: E402
 from scripts.probe_scheduler import PersistentProbeCache, ProbeScheduleConfig  # noqa: E402
-from scripts.validate_availability import validate_android, validate_arknights, validate_endfield, validate_hoyo, validate_nte, validate_wuwa  # noqa: E402
+from scripts.validate_availability import validate_android, validate_arknights, validate_endfield, validate_hoyo, validate_nte, validate_tof, validate_wuwa  # noqa: E402
 
 
 ARKNIGHTS_ROOT = ROOT / "docs" / "data" / "arknights"
@@ -441,6 +442,46 @@ def assert_nte_paths() -> None:
         raise AssertionError(f"unexpected NTE object source kind: {object_record['availability']!r}")
     if object_record["availability"]["source"]["confidence"] == "high":
         raise AssertionError(f"NTE object metadata inference must not use high confidence: {object_record['availability']!r}")
+
+
+def assert_tof_paths() -> None:
+    adapter = TofAvailabilityAdapter()
+    reslist_url = "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.2.2/ResList.bin.zip"
+    object_url = "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/abc.1024"
+
+    missing_record = {"version": "6.2.2", "status": 404, "reslist_url": reslist_url}
+    missing_result = adapter.interpret([
+        nte_live_probe(reslist_url, ok=False, status=404, size=488, error="HTTP 404")
+    ], missing_record)
+    expected_missing = {
+        "state": "unavailable",
+        "reason": "http_404",
+        "preferred_url": "",
+        "confidence": "high",
+        "retained": False,
+        "display_label": "链接失效",
+    }
+    if missing_result != expected_missing:
+        raise AssertionError(f"unexpected TOF missing ResList interpretation: {missing_result!r}")
+
+    object_record = {
+        "filename": "Client/Test.bin",
+        "filesize": 1024,
+        "md5": "abc",
+        "object": "abc.1024",
+        "url": object_url,
+    }
+    object_result = adapter.interpret([nte_metadata_probe(object_url, size=1024)], object_record)
+    expected_object = {
+        "state": "available",
+        "reason": "not_probed",
+        "preferred_url": object_url,
+        "confidence": "medium",
+        "retained": False,
+        "display_label": "可用",
+    }
+    if object_result != expected_object:
+        raise AssertionError(f"unexpected TOF object interpretation: {object_result!r}")
 
 
 def assert_wuwa_metadata_paths() -> None:
@@ -874,6 +915,78 @@ def assert_nte_release_type_validator() -> None:
         raise AssertionError(f"NTE validator did not reject wrong major release; errors={errors!r}")
 
 
+def valid_tof_root(root: Path) -> None:
+    root.mkdir(parents=True, exist_ok=True)
+    version = "6.2.2"
+    reslist_url = "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.2.2/ResList.bin.zip"
+    object_url = "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/abc.1024"
+    item = {
+        "filename": "Client/Test.bin",
+        "filesize": 1024,
+        "md5": "abc",
+        "object": "abc.1024",
+        "url": object_url,
+    }
+    item_probe = nte_metadata_probe(object_url, size=1024)
+    item_interpretation = TofAvailabilityAdapter().interpret([item_probe], item)
+    item["availability"] = availability_block(
+        [item_probe],
+        "metadata_inference",
+        item_interpretation,
+        "scripts/test_availability_negative.py",
+    )
+
+    row = {
+        "version": version,
+        "status": 200,
+        "reslist_url": reslist_url,
+        "last_modified": "Mon, 06 Jul 2026 00:00:00 GMT",
+        "reslist_bytes": 1024,
+        "full": {
+            "items": 1,
+            "bytes": 1024,
+            "json": "data/tof/url_lists/6.2.2-full.json",
+            "urls": "data/tof/url_lists/6.2.2-full.urls.txt",
+            "aria2": "data/tof/url_lists/6.2.2-full.files.aria2.txt",
+        },
+    }
+    row_probe = nte_live_probe(reslist_url, ok=True, status=200, size=1024)
+    row_interpretation = TofAvailabilityAdapter().interpret([row_probe], row)
+    row["availability"] = availability_block(
+        [row_probe],
+        "live_probe",
+        row_interpretation,
+        "scripts/test_availability_negative.py",
+    )
+    row["availability_counts"] = {"full": {"available": 1}}
+    row["availability_reasons"] = {"full": {"not_probed": 1}}
+
+    write_json(root / "catalog.json", {"versions": [row]})
+    list_dir = root / "url_lists"
+    list_dir.mkdir(parents=True, exist_ok=True)
+    write_json(list_dir / "6.2.2-full.json", [item])
+
+
+def mutate_tof_item(root: Path, path_parts: tuple[str, ...], value: Any) -> None:
+    valid_tof_root(root)
+    shard_path = root / "url_lists" / "6.2.2-full.json"
+    items = load_json(shard_path)
+    target: Any = items[0]
+    for part in path_parts[:-1]:
+        target = target[part]
+    target[path_parts[-1]] = value
+    write_json(shard_path, items)
+
+
+def assert_tof_validator_rejects(path_parts: tuple[str, ...], value: Any, expected_token: str) -> None:
+    with tempfile.TemporaryDirectory(prefix="tof-availability-negative-") as temp:
+        temp_root = Path(temp) / "tof"
+        mutate_tof_item(temp_root, path_parts, value)
+        errors = validate_tof(temp_root)
+    if not any(expected_token in error for error in errors):
+        raise AssertionError(f"TOF validator did not reject {'.'.join(path_parts)}={value!r}; errors={errors!r}")
+
+
 def valid_wuwa_root(root: Path) -> None:
     version = "1.0.0"
     url = "https://pcdownload-aliyun.aki-game.com/game/chunk.pak"
@@ -1037,6 +1150,7 @@ def main() -> None:
     assert_hoyo_metadata_paths()
     assert_endfield_upstream_paths()
     assert_nte_paths()
+    assert_tof_paths()
     assert_nte_release_type_validator()
     assert_wuwa_metadata_paths()
     assert_wuwa_build_cache_paths()
@@ -1061,6 +1175,10 @@ def main() -> None:
     assert_nte_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
     assert_nte_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
     assert_nte_validator_rejects(("availability", "interpretation", "confidence"), "certain", ":confidence:certain")
+    assert_tof_validator_rejects(("availability", "interpretation", "state"), "foobar", ":state:foobar")
+    assert_tof_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
+    assert_tof_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
+    assert_tof_validator_rejects(("availability", "interpretation", "confidence"), "certain", ":confidence:certain")
     assert_wuwa_validator_rejects(("availability", "interpretation", "state"), "foobar", ":state:foobar")
     assert_wuwa_validator_rejects(("availability", "interpretation", "reason"), "because_magic", ":reason:because_magic")
     assert_wuwa_validator_rejects(("availability", "source", "kind"), "side_channel", ":source_kind:side_channel")
@@ -1074,6 +1192,7 @@ def main() -> None:
     print("hoyo_metadata_inference=PASS")
     print("endfield_upstream_archive=PASS")
     print("nte_live_probe_and_metadata=PASS")
+    print("tof_live_probe_and_metadata=PASS")
     print("nte_release_type_invariant=PASS")
     print("wuwa_metadata_multicdn=PASS")
     print("wuwa_live_multicdn=PASS")

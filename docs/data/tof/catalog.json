@@ -1,0 +1,112 @@
+{
+  "game": {
+    "id": "tof",
+    "name": "幻塔",
+    "subName": "Tower of Fantasy",
+    "shortName": "TOF",
+    "icon": "assets/icons/tof.svg",
+    "kind": "tof"
+  },
+  "source": "https://htcdn1.wmupd.com/clientRes/Windows55/",
+  "config_urls": [
+    "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/config.xml",
+    "https://htcdn2.wmupd.com/clientRes/Windows55/Version/Windows/config.xml"
+  ],
+  "reslist_url_template": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/{version}/ResList.bin.zip",
+  "object_base_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res",
+  "key_seed": "1256@Patcher",
+  "iv_seed": "PatcherSDK",
+  "versions": [
+    {
+      "version": "6.2.2",
+      "status": 200,
+      "last_modified": "Fri, 03 Jul 2026 22:47:22 GMT",
+      "content_length": 133950,
+      "full": {
+        "items": 91,
+        "bytes": 106403088087,
+        "json": "data/tof/url_lists/6.2.2-full.json",
+        "urls": "data/tof/url_lists/6.2.2-full.urls.txt",
+        "aria2": "data/tof/url_lists/6.2.2-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 2047,
+        "bytes": 353487976137,
+        "json": "data/tof/url_lists/6.2.2-patches.json",
+        "urls": "data/tof/url_lists/6.2.2-patches.urls.txt",
+        "aria2": "data/tof/url_lists/6.2.2-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.2.2/ResList.bin.zip",
+      "reslist_bytes": 133950,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.2.2/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-08 13:12:08 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.2.2/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 133950,
+              "last_modified": "Fri, 03 Jul 2026 22:47:22 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.2.2/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 91
+        },
+        "patches": {
+          "available": 2047
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 91
+        },
+        "patches": {
+          "not_probed": 2047
+        }
+      }
+    }
+  ],
+  "last_checked_at": "2026-07-08 13:12:08 +0800",
+  "generated_at": "2026-07-08 13:12:08 +0800",
+  "current_version": "6.2.2",
+  "config": {
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/config.xml",
+    "status": 200,
+    "last_modified": "Fri, 03 Jul 2026 22:47:22 GMT",
+    "content_length": 610,
+    "res_version": "6.2.2",
+    "section": "6.2",
+    "res_size": 109882752917,
+    "hash": "da12d3",
+    "diff_hash": "49cf270942f3c723a797d5c2f3d97319",
+    "list_hash": "c5050e3d9a31c80c942a6e17a18a0a01",
+    "compressed": "1",
+    "encrypt": "1"
+  }
+}

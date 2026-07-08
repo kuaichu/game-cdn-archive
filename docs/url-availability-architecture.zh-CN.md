@@ -186,6 +186,20 @@ scripts/nte_downloader.py
 
 NTE 生成出来的 JSON 文件也会被跨数据集健康索引扫描。
 
+## 幻塔可用性
+
+幻塔使用和 NTE 同族的 PatcherSDK ResList 可用性模型，但数据单独放在：
+
+```text
+docs/data/tof/catalog.json
+docs/data/tof/url_lists/
+```
+
+ResList 归档入口是本仓库对官方 `ResList.bin.zip` 做的一次 `GET`，所以 catalog
+层可用性使用 `source.kind=live_probe`。解码后的完整文件和补丁对象 URL 来自
+ResList 元数据，本仓库没有逐对象实时探测，因此这些对象记录使用
+`source.kind=metadata_inference`，置信度不能是 high。
+
 ## 前端可用性展示
 
 前端目前从各游戏自己的字段里读取可用性：

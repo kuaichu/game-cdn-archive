@@ -229,6 +229,23 @@ split-validator pattern.
 NTE URLs are also included in the cross-cutting health index through the
 generated JSON files.
 
+## Tower of Fantasy Availability
+
+Tower of Fantasy uses the same PatcherSDK ResList availability pattern as NTE,
+but its data lives under:
+
+```text
+docs/data/tof/catalog.json
+docs/data/tof/url_lists/
+```
+
+The ResList archive fetch is a repository `GET` against the official
+`ResList.bin.zip` endpoint, so catalog-level availability uses
+`source.kind=live_probe`. The decoded full-file and patch object URLs are
+derived from ResList metadata; those object records are not individually
+probed, so their availability uses `source.kind=metadata_inference` with
+non-high confidence.
+
 ## Frontend Availability Display
 
 The frontend currently reads availability from game-specific fields:
