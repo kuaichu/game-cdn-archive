@@ -1,0 +1,57 @@
+[
+  {
+    "game_id": "aethergazer",
+    "version": "0.306.120",
+    "channel": "306",
+    "url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
+    "source": "official CDN URL provided by user; versionName read from AndroidManifest.xml",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 2024284550,
+    "last_modified": "Tue, 23 Jun 2026 02:24:40 GMT",
+    "etag": "722185039D0BF56D00E5BBB198DB0762-194",
+    "md5": "",
+    "crc64": "6168240042595353111",
+    "error": "",
+    "filename": "ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
+    "captured_at": "2026-07-09T05:33:11.954440+00:00",
+    "updated_at": "2026-06-23T02:24:40+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-09T05:33:11.954440+00:00",
+            "final_url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2024284550,
+            "last_modified": "Tue, 23 Jun 2026 02:24:40 GMT",
+            "etag": "722185039D0BF56D00E5BBB198DB0762-194",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]

@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-07-09T04:40:42.860380+00:00",
-  "generated_at": "2026-07-09T04:40:42.860380+00:00",
+  "last_checked_at": "2026-07-09T05:33:11.954440+00:00",
+  "generated_at": "2026-07-09T05:33:11.954440+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -1086,6 +1086,61 @@
       "versions": [
         {
           "game_id": "aethergazer",
+          "version": "0.306.120",
+          "channel": "306",
+          "url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
+          "source": "official CDN URL provided by user; versionName read from AndroidManifest.xml",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 2024284550,
+          "last_modified": "Tue, 23 Jun 2026 02:24:40 GMT",
+          "etag": "722185039D0BF56D00E5BBB198DB0762-194",
+          "md5": "",
+          "crc64": "6168240042595353111",
+          "error": "",
+          "filename": "ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
+          "captured_at": "2026-07-09T05:33:11.954440+00:00",
+          "updated_at": "2026-06-23T02:24:40+00:00",
+          "updated_at_source": "apk_last_modified",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T05:33:11.954440+00:00",
+                  "final_url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
+                  "content_type": "application/vnd.android.package-archive",
+                  "size": 2024284550,
+                  "last_modified": "Tue, 23 Jun 2026 02:24:40 GMT",
+                  "etag": "722185039D0BF56D00E5BBB198DB0762-194",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "aethergazer",
           "version": "0.305.3",
           "channel": "305",
           "url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
@@ -1135,62 +1190,6 @@
               "confidence": "high",
               "retained": false,
               "display_label": "可用"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
-        },
-        {
-          "game_id": "aethergazer",
-          "version": "0.305.2",
-          "channel": "gwdl",
-          "url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-          "source": "official Aether Gazer Android download endpoint; resolves to a CDN URL",
-          "source_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-          "archive_url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
-          "archive_note": "CDN URL captured during sync",
-          "status": 404,
-          "content_type": "text/html",
-          "size": 0,
-          "last_modified": "",
-          "etag": "",
-          "md5": "",
-          "crc64": "",
-          "error": "APK object unavailable",
-          "filename": "ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
-          "captured_at": "2026-07-09T01:08:43.888086+00:00",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-                "probe": {
-                  "ok": false,
-                  "status": 404,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-09T01:08:43.888086+00:00",
-                  "final_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-                  "content_type": "text/html",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "APK object unavailable",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 0.349,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "low"
-            },
-            "interpretation": {
-              "state": "unavailable",
-              "reason": "retained_historical",
-              "preferred_url": "",
-              "confidence": "low",
-              "retained": true,
-              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -1362,15 +1361,15 @@
         }
       ],
       "links": {
+        "0.306.120": {
+          "urls": "data/android/lists/aethergazer_0.306.120_android.urls.txt",
+          "aria2": "data/android/lists/aethergazer_0.306.120_android.aria2.txt",
+          "json": "data/android/lists/aethergazer_0.306.120_android.json"
+        },
         "0.305.3": {
           "urls": "data/android/lists/aethergazer_0.305.3_android.urls.txt",
           "aria2": "data/android/lists/aethergazer_0.305.3_android.aria2.txt",
           "json": "data/android/lists/aethergazer_0.305.3_android.json"
-        },
-        "0.305.2": {
-          "urls": "data/android/lists/aethergazer_0.305.2_android.urls.txt",
-          "aria2": "data/android/lists/aethergazer_0.305.2_android.aria2.txt",
-          "json": "data/android/lists/aethergazer_0.305.2_android.json"
         },
         "0.303.501": {
           "urls": "data/android/lists/aethergazer_0.303.501_android.urls.txt",
