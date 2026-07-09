@@ -4,7 +4,7 @@
     "version": "1.1.6.4",
     "channel": "official",
     "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
-    "source": "official Calabiyau website HTML; versionName read from AndroidManifest.xml",
+    "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
     "source_url": "https://klbqm.idreamsky.com/",
     "updated_at": "2025-10-22T23:42:15+00:00",
     "updated_at_source": "official_config",
@@ -17,6 +17,42 @@
     "crc64": "",
     "error": "APK object unavailable",
     "filename": "klbqm_LD0S0N00011.apk",
-    "captured_at": "2026-07-05T01:50:12.992811+00:00"
+    "captured_at": "2026-07-05T01:50:12.992811+00:00",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+          "probe": {
+            "ok": false,
+            "status": 404,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-09T01:08:43.888086+00:00",
+            "final_url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+            "content_type": "text/html; charset=UTF-8",
+            "size": 0,
+            "last_modified": "",
+            "etag": "",
+            "error": "APK object unavailable",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.349,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unavailable",
+        "reason": "retained_historical",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": true,
+        "display_label": "链接失效"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]
