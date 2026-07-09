@@ -17,6 +17,7 @@ questions before future changes:
 | NTE / 异环 PC | Legacy/generated catalog plus per-version URL lists | No dedicated staging/promote validator yet | Existing downloader/reslist tools are separate from the new validator pattern. |
 | HoYo PC catalog | Split: compact `games.json`, per-version shards, plus chunk shards | Has structural split validator | Package/update metadata now follows the WuWa-style selected-version load path. |
 | Android APK archive | Aggregate `index.json`, per-version list files | No dedicated staging/promote validator yet | Covers many games in one data set; should be split by game/source before major changes. |
+| Aether Gazer / 深空之眼 Android resources | Split: compact `index.json`, per-version resource shard, generated URL / aria2 lists | File-size guard only | Captured Android `.bytes` manifests; URLs are derived from `md5.ys` hash objects under the official resource CDN. |
 | Tower of Fantasy / 幻塔 PC | Legacy/generated catalog plus per-version URL lists under `docs/data/tof/` | Availability validator only | PatcherSDK ResList family, kept separate from NTE catalog. |
 | P5X / 女神异闻录：夜幕魅影 PC | Legacy/generated catalog plus per-version URL lists under `docs/data/p5x/` | Availability validator only | PatcherSDK ResList family, same format as Tower of Fantasy. |
 | URL health index | Aggregate `url_status.json` | Probe script only | Cross-cutting health metadata, not a game archive source. |
@@ -36,6 +37,7 @@ docs/data/wuwa/index.json
 docs/data/arknights/index.json
 docs/data/arknights/versions.json
 docs/data/android/index.json
+docs/data/aethergazer/resources/index.json
 ```
 
 This means `index.json` files are part of the first page load path. Large file
@@ -402,6 +404,40 @@ Current status:
 - No dedicated validator/promote pipeline yet.
 - Because it spans many games, future changes should be scoped to one game or
   one discovery source at a time.
+
+## Aether Gazer Android Resources
+
+Aether Gazer Android resources are separate from the APK archive. The APK
+archive tracks installer URLs; this resource archive tracks the game's update
+resource manifests captured from the Android client.
+
+```text
+docs/data/aethergazer/resources/
+  index.json
+  versions/
+    5.1.6_305_121.json
+  lists/
+    5.1.6_305_121.urls.txt
+    5.1.6_305_121.aria2.txt
+```
+
+Important script:
+
+- `scripts/build_aethergazer_resources.py`
+
+Important architecture points:
+
+- `index.json` is a compact version summary and remains in the startup load
+  path.
+- `versions/{version_key}.json` contains the full resource list and is loaded
+  only after the resource version is selected.
+- `.bytes` manifests are plain JSON. Each resource row is
+  `logical/path|md5|size`.
+- Download URLs are derived as
+  `https://download-eo.ys4fun.com/android/resources/{md5}.ys`.
+- `.ys` payloads can be UnityFS bundles with leading zero padding, or CRI
+  audio packages such as `@UTF` / `AFS2`; this project records URL metadata
+  only and does not unpack or redistribute resources.
 
 ## URL Health Index
 

@@ -437,6 +437,28 @@ python scripts/sync_android_apks.py
 
 这不是完整历史 APK 镜像，而是一个从当前可确认官方 APK 链接开始滚动积累的归档。
 
+## 深空之眼 Android 资源清单
+
+深空之眼的 APK 归档只记录安装包直链；Android 资源清单单独保存在：
+
+```text
+docs/data/aethergazer/resources/
+```
+
+当前捕获到的 `5.1.6 / appVersion 305 / buildCode 121` 资源清单来自 Android 客户端更新请求中的 `.bytes` manifest。manifest 是明文 JSON，资源行格式为：
+
+```text
+logical/path|md5|size
+```
+
+实际资源对象 URL 由 MD5 推导：
+
+```text
+https://download-eo.ys4fun.com/android/resources/{md5}.ys
+```
+
+页面采用 compact index + selected-version shard 的懒加载结构。`index.json` 只放版本摘要；完整的 `71978` 条资源记录在选中版本后才加载。`.ys` 内容可继续按 UnityFS 或 CRI 音频包解析，但本项目只保存 URL、路径、大小和校验值，不镜像或重新分发资源文件。
+
 归档直链也可以跨数据集重新探测。脚本会写入 `outputs/url_status.json`，这是不会发布的离线健康索引，覆盖 APK、HoYo 包、NTE 文件、鸣潮文件、明日方舟包和 Endfield 包 / 补丁。
 
 ```bash

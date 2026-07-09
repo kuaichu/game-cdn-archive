@@ -20,6 +20,13 @@ const state = {
   arknightsIndex: null,
   arknightsVersions: null,
   androidIndex: null,
+  aethergazerResourceIndex: null,
+  aethergazerResourceVersions: {},
+  aethergazerResourceVersionPromises: new Map(),
+  aethergazerResourceEntries: new Map(),
+  aethergazerResourcePath: "",
+  aethergazerResourceExpandedFile: "",
+  aethergazerResourceVisible: 150,
   hoyoLegacyCandidates: {},
   wuwaEntries: new Map(),
   wuwaFilePath: "",
@@ -46,7 +53,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260709-bh2-appstore-icon";
+const ASSET_VERSION = "20260709-aethergazer-resources";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -188,6 +195,7 @@ const arknightsModes = [
   ["packages", "完整包"],
 ];
 
+const aethergazerResourceMode = ["resources", "资源文件"];
 const androidMode = ["android", "Android APK"];
 
 const fmtBytes = (bytes) => {
@@ -503,7 +511,8 @@ const modesForGame = () => {
     ? []
     : isNte() ? nteModes : isTof() || isP5x() ? tofModes : isEndfield() ? endfieldModes : isWuwa() ? wuwaModes : isArknights() ? arknightsModes : hoyoModes;
   const withLegacy = hasHoyoLegacyCandidates() ? [...modes, hoyoLegacyMode] : modes;
-  return hasAndroidApks() ? [...withLegacy, androidMode] : withLegacy;
+  const withResources = hasAethergazerResources() ? [aethergazerResourceMode, ...withLegacy] : withLegacy;
+  return hasAndroidApks() ? [...withResources, androidMode] : withResources;
 };
 
 const nteVersions = () => state.nteCatalog.versions.filter((item) => item.status === 200 && item.full);
@@ -560,6 +569,10 @@ const arknightsVersion = () => state.arknightsVersions?.[state.version] || null;
 const arknightsSummaries = () => state.arknightsIndex?.versions || [];
 const androidVersion = () => androidSummaries().find((item) => item.version === state.version) || null;
 const androidVersionEntries = () => androidEntries().filter((item) => item.version === state.version);
+const hasAethergazerResources = () => state.gameId === "aethergazer" && (state.aethergazerResourceIndex?.versions || []).length > 0;
+const aethergazerResourceSummaries = () => state.aethergazerResourceIndex?.versions || [];
+const aethergazerResourceSummary = () => aethergazerResourceSummaries().find((item) => item.version === state.version) || null;
+const aethergazerResourceVersion = () => state.aethergazerResourceVersions?.[state.version] || null;
 
 const hoyoPackageUrl = (row) => row?.game?.full?.url || row?.game?.segments?.[0]?.url || "";
 
@@ -707,6 +720,7 @@ const versionAvailabilityCap = (item) => {
 };
 
 const availableSummaries = () => {
+  if (state.mode === "resources") return aethergazerResourceSummaries();
   if (state.mode === "android") return androidSummaries();
   if (state.mode === "legacy") return hoyoLegacySummaries();
   if (isResListGame()) return resListVersions();
@@ -728,6 +742,18 @@ const latestByVersion = (rows, predicate = () => true) => rows
 const currentGameSyncInfo = () => {
   const game = currentGame();
   const androidLatest = latestByVersion(androidSummaries());
+  if (state.mode === "resources") {
+    const latest = latestByVersion(aethergazerResourceSummaries());
+    return {
+      game,
+      source: "深空之眼 Android 资源清单",
+      checked: state.aethergazerResourceIndex?.last_checked_at || state.aethergazerResourceIndex?.generated_at,
+      updated: state.aethergazerResourceIndex?.generated_at,
+      latest: latest?.version,
+      detail: `${(latest?.file_count || 0).toLocaleString()} 个资源 / ${fmtBytes(latest?.size || 0)}`,
+      android: androidLatest?.version,
+    };
+  }
   if (isNte()) {
     const latest = latestByVersion(nteVersions());
     return {
@@ -826,6 +852,12 @@ const commandFor = () => {
     return links?.aria2
       ? `aria2c -c -x16 -s16 -i ${links.aria2}`
       : "当前游戏没有 Android APK 直链记录";
+  }
+  if (state.mode === "resources") {
+    const links = aethergazerResourceSummary()?.links;
+    return links?.aria2
+      ? `aria2c -c -x16 -s16 -i ${links.aria2}`
+      : "当前版本没有资源 aria2 列表";
   }
   if (isNte()) {
     return `python scripts\\nte_downloader.py download ${state.version} --download-root downloads --workers 4 --pack --pack-dir packages`;
@@ -1046,6 +1078,8 @@ const bindStaticActions = () => {
     state.hoyoExpandedFile = "";
     state.nteExpandedFile = "";
     state.wuwaExpandedFile = "";
+    state.aethergazerResourceVisible = HOYO_FILE_PAGE_SIZE;
+    state.aethergazerResourceExpandedFile = "";
     renderList();
   });
 
@@ -1086,6 +1120,9 @@ const renderGameRail = () => {
       state.nteExpandedFile = "";
       state.wuwaFilePath = "";
       state.wuwaExpandedFile = "";
+      state.aethergazerResourcePath = "";
+      state.aethergazerResourceExpandedFile = "";
+      state.aethergazerResourceVisible = HOYO_FILE_PAGE_SIZE;
       $("#fileSearch").value = "";
       await ensureGameData(preferredVersionForContext(state.gameId, state.mode));
       state.compareVersion = null;
@@ -1121,6 +1158,9 @@ const renderModes = () => {
       state.nteExpandedFile = "";
       state.wuwaFilePath = "";
       state.wuwaExpandedFile = "";
+      state.aethergazerResourcePath = "";
+      state.aethergazerResourceExpandedFile = "";
+      state.aethergazerResourceVisible = HOYO_FILE_PAGE_SIZE;
       await ensureGameData(preferredVersionForContext(state.gameId, state.mode));
       $$(".mode-tab").forEach((item) => item.classList.toggle("active", item === button));
       render();
@@ -1183,6 +1223,9 @@ const renderVersionMenu = () => {
       state.nteExpandedFile = "";
       state.wuwaFilePath = "";
       state.wuwaExpandedFile = "";
+      state.aethergazerResourcePath = "";
+      state.aethergazerResourceExpandedFile = "";
+      state.aethergazerResourceVisible = HOYO_FILE_PAGE_SIZE;
       $("#versionMenu").hidden = true;
       $("#selectButton").setAttribute("aria-expanded", "false");
       if (isWuwa()) {
@@ -1220,6 +1263,20 @@ const versionButton = (item) => {
           <span class="cap slate">${fmtDateTime(item.updated_at || item.last_modified)}</span>
           <span class="cap slate">${fmtKnownBytes(item.size)}</span>
           ${versionAvailabilityCap(item)}
+        </span>
+      </button>
+    `;
+  }
+  if (state.mode === "resources") {
+    return `
+      <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
+        <span class="version-number">${escapeHtml(item.version)}</span>
+        <span class="caps">
+          <span class="cap green">资源清单</span>
+          <span class="cap blue">${Number(item.file_count || 0).toLocaleString()} 个文件</span>
+          <span class="cap violet">Asset ${Number(item.asset_count || 0).toLocaleString()}</span>
+          <span class="cap amber">Voice ${(Number(item.voice_ja_count || 0) + Number(item.voice_zh_count || 0)).toLocaleString()}</span>
+          <span class="cap slate">${fmtBytes(item.size || 0)}</span>
         </span>
       </button>
     `;
@@ -1301,6 +1358,8 @@ const renderStats = () => {
     ? hoyoLegacyStats()
     : state.mode === "android"
     ? androidStats()
+    : state.mode === "resources"
+    ? aethergazerResourceStats()
     : isResListGame() ? nteStats() : isEndfield() ? endfieldStats() : isWuwa() ? wuwaStats() : isArknights() ? arknightsStats() : hoyoStats();
   $("#stats").innerHTML = stats.map(([label, value]) => `<div class="stat"><span>${label}</span><strong>${value}</strong></div>`).join("");
 };
@@ -1365,6 +1424,18 @@ const androidStats = () => {
     ["APK 大小", fmtKnownBytes(entry?.size)],
     ["可用性", labels.join(" / ") || "-"],
     ["状态", entry?.status ? `HTTP ${entry.status}` : "-"],
+  ];
+};
+
+const aethergazerResourceStats = () => {
+  const summary = aethergazerResourceSummary();
+  return [
+    ["当前版本", summary?.version || state.version],
+    ["平台", "Android resources"],
+    ["资源文件", `${Number(summary?.file_count || 0).toLocaleString()} 个`],
+    ["总大小", fmtBytes(summary?.size || 0)],
+    ["素材 / 语音", `${Number(summary?.asset_count || 0).toLocaleString()} / ${(Number(summary?.voice_ja_count || 0) + Number(summary?.voice_zh_count || 0)).toLocaleString()}`],
+    ["Unity", summary?.unity_version || "-"],
   ];
 };
 
@@ -1476,6 +1547,17 @@ const renderLinks = () => {
     $("#jsonLink").href = links?.json || "data/android/index.json";
     return;
   }
+  if (state.mode === "resources") {
+    const links = aethergazerResourceSummary()?.links;
+    const disabled = !links;
+    $("#urlsLink").classList.toggle("disabled", disabled);
+    $("#aria2Link").classList.toggle("disabled", disabled);
+    $("#jsonLink").classList.toggle("disabled", disabled);
+    $("#urlsLink").href = links?.urls || "#";
+    $("#aria2Link").href = links?.aria2 || "#";
+    $("#jsonLink").href = links?.json || "data/aethergazer/resources/index.json";
+    return;
+  }
   scriptButton.disabled = true;
   if (state.mode === "compare") {
     $("#urlsLink").classList.add("disabled");
@@ -1567,6 +1649,7 @@ const renderPanelTitle = () => {
   $("#commandText").textContent = commandFor();
   $("#panelKicker").textContent = state.mode === "android"
     ? "Android APK"
+    : state.mode === "resources" ? "Aether Gazer resources"
     : state.mode === "legacy" ? "Historical candidates"
     : isResListGame() ? `${resListGameLabel()} files` : isEndfield() ? "Endfield files" : isWuwa() ? "Wuwa files" : isArknights() ? "Arknights packages" : "Hoyo files";
   $("#panelTitle").textContent = state.mode === "legacy" ? displayVersion : `${displayVersion} ${modeLabel}`;
@@ -1605,6 +1688,25 @@ const loadWuwaVersion = async (version = state.version) => {
   const row = await state.wuwaVersionPromises.get(version);
   state.wuwaVersions[version] = row;
   return row;
+};
+
+const loadAethergazerResourceVersion = async (version = state.version) => {
+  if (!version) return null;
+  if (state.aethergazerResourceVersions?.[version]) return state.aethergazerResourceVersions[version];
+  const summary = aethergazerResourceSummaries().find((item) => item.version === version);
+  const url = summary?.links?.json;
+  if (!url) return null;
+  if (!state.aethergazerResourceVersionPromises.has(version)) {
+    state.aethergazerResourceVersionPromises.set(version, fetchJson(url));
+  }
+  const row = await state.aethergazerResourceVersionPromises.get(version);
+  state.aethergazerResourceVersions[version] = row;
+  return row;
+};
+
+const loadAethergazerResourceEntries = async (version = state.version) => {
+  const row = await loadAethergazerResourceVersion(version);
+  return row?.records || [];
 };
 
 const loadHoyoChunk = async () => {
@@ -1658,6 +1760,27 @@ const hoyoFileItem = (entry, index = 0, total = 0) => {
     extraHash: entry.hash && entry.hash !== entry.md5 ? entry.hash : "",
     chunkDownload: false,
     directUrl: "",
+    count: total ? `${index + 1}/${total}` : "",
+  };
+};
+
+const aethergazerResourceKindLabels = {
+  asset: "游戏资源",
+  voice_ja: "日语语音",
+  voice_zh: "中文语音",
+};
+
+const aethergazerResourceItem = (entry, index = 0, total = 0) => {
+  const path = entry.path || "";
+  return {
+    key: path,
+    badge: aethergazerResourceKindLabels[entry.kind] || entry.kind || "资源",
+    title: entry.name || path.split(/[\\/]/).at(-1) || path,
+    subtitle: path,
+    remoteName: path,
+    size: Number(entry.size || 0),
+    hash: entry.md5 || "",
+    url: entry.url || "",
     count: total ? `${index + 1}/${total}` : "",
   };
 };
@@ -2620,6 +2743,74 @@ const bindWuwaBrowserActions = () => {
   });
 };
 
+const renderAethergazerResourceSearchResults = (filtered) => {
+  const visibleCount = Math.min(state.aethergazerResourceVisible, filtered.length);
+  const visible = filtered.slice(0, visibleCount);
+  const more = filtered.length - visibleCount;
+  const footer = more > 0
+    ? `<div class="list-pager">
+        <span>已显示 ${visibleCount.toLocaleString()} / ${filtered.length.toLocaleString()} 个文件</span>
+        <button class="icon-button load-more-aethergazer-resources" type="button">加载更多 ${Math.min(HOYO_FILE_PAGE_SIZE, more).toLocaleString()} 个</button>
+      </div>`
+    : filtered.length
+      ? `<div class="list-pager muted">已显示全部 ${filtered.length.toLocaleString()} 个文件</div>`
+      : "";
+  return filtered.length
+    ? `<div class="hoyo-browser search-results">${visible.map((entry) => hoyoFileRow(entry, "search", state.aethergazerResourceExpandedFile)).join("")}</div>${footer}`
+    : `<div class="empty">没有匹配到资源文件</div>`;
+};
+
+const renderAethergazerResources = async () => {
+  const version = await loadAethergazerResourceVersion();
+  const entries = version?.records || [];
+  const items = entries.map((entry, index) => aethergazerResourceItem(entry, index, entries.length));
+  const filtered = filterEntries(items);
+  const header = `
+    <div class="chunk-summary">
+      <div><span>资源版本</span><strong>${escapeHtml(version?.manifest || state.version)}</strong></div>
+      <div><span>文件数</span><strong>${entries.length.toLocaleString()}</strong></div>
+      <div><span>总大小</span><strong>${fmtBytes(version?.size || 0)}</strong></div>
+      <div><span>Unity</span><strong>${escapeHtml(version?.unity_version || "2022.3.62f3")}</strong></div>
+    </div>
+    <div class="notice file-browser-note">
+      <div class="notice-copy">
+        <strong>资源口径</strong>
+        <span>这里展示的是 Android 更新清单里的逻辑路径、MD5、大小和官方 hash 对象 URL；.ys 内容可按 UnityFS 或 CRI 音频包继续解析，但本站只保存索引和直链。</span>
+      </div>
+    </div>
+  `;
+  $("#fileList").innerHTML = header + (state.query
+    ? renderAethergazerResourceSearchResults(filtered)
+    : renderDirectoryBrowser({
+      files: items,
+      currentPath: state.aethergazerResourcePath || "",
+      expandedFile: state.aethergazerResourceExpandedFile,
+    }));
+  bindCardActions();
+  bindAethergazerResourceBrowserActions();
+  $(".load-more-aethergazer-resources")?.addEventListener("click", () => {
+    state.aethergazerResourceVisible += HOYO_FILE_PAGE_SIZE;
+    renderAethergazerResources();
+  });
+};
+
+const bindAethergazerResourceBrowserActions = () => {
+  $$(".folder-row, .breadcrumb-step").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.aethergazerResourcePath = button.dataset.folder || "";
+      state.aethergazerResourceExpandedFile = "";
+      renderList();
+    });
+  });
+  $$(".hoyo-browser .file-row").forEach((button) => {
+    button.addEventListener("click", () => {
+      const key = button.dataset.file || "";
+      state.aethergazerResourceExpandedFile = state.aethergazerResourceExpandedFile === key ? "" : key;
+      renderList();
+    });
+  });
+};
+
 const renderWuwaPatches = async () => {
   const version = await loadWuwaVersion();
   const patchFiles = (version?.patches || []).flatMap((route) => route.parts?.length
@@ -3000,6 +3191,11 @@ const renderList = async () => {
     return;
   }
 
+  if (state.mode === "resources") {
+    await renderAethergazerResources();
+    return;
+  }
+
   if (state.mode === "legacy") {
     const entries = hoyoLegacyItems();
     const filtered = filterEntries(entries);
@@ -3096,6 +3292,11 @@ const ensureGameData = async (preferredVersion = null) => {
     state.version = selectVersionForContext(versions, preferredVersion);
     return;
   }
+  if (state.mode === "resources") {
+    const versions = aethergazerResourceSummaries().slice().sort((a, b) => compareVersions(b.version, a.version));
+    state.version = selectVersionForContext(versions, preferredVersion);
+    return;
+  }
   if (isResListGame()) {
     const versions = resListVersions().sort((a, b) => compareVersions(b.version, a.version));
     state.version = selectVersionForContext(versions, preferredVersion);
@@ -3135,6 +3336,19 @@ const renderNotice = () => {
       <div class="source-links">
         <a class="source-link" href="data/hoyo/${state.gameId}_legacy_candidates.json" target="_blank" rel="noreferrer">候选 JSON</a>
         <a class="source-link" href="${REPOSITORY_URL}" target="_blank" rel="noreferrer">本站仓库</a>
+      </div>
+    `;
+  } else if (state.mode === "resources") {
+    const summary = aethergazerResourceSummary();
+    notice.innerHTML = `
+      <div class="notice-copy">
+        <strong>Android 资源清单</strong>
+        <span>页面保存深空之眼 Android 更新时暴露的 .bytes 资源清单。清单为明文 JSON，记录逻辑路径、MD5、大小和官方 hash 对象 URL；本站不镜像 .ys 文件，也不重新分发游戏资源。</span>
+      </div>
+      <div class="source-links">
+        <a class="source-link" href="data/aethergazer/resources/index.json" target="_blank" rel="noreferrer">资源版本索引</a>
+        <a class="source-link" href="${escapeHtml(summary?.links?.json || "#")}" target="_blank" rel="noreferrer">当前版本 JSON</a>
+        <a class="source-link" href="${escapeHtml(state.aethergazerResourceIndex?.base_url || "#")}" target="_blank" rel="noreferrer">官方资源 CDN</a>
       </div>
     `;
   } else if (state.mode === "android") {
@@ -3263,8 +3477,9 @@ Promise.all([
   fetchJson("./data/arknights/index.json"),
   fetchJson("./data/arknights/versions.json"),
   fetchJson("./data/android/index.json"),
+  fetchJson("./data/aethergazer/resources/index.json"),
   fetchOptionalJson("./data/hoyo/nap_legacy_candidates.json"),
-]).then(async ([nteCatalog, tofCatalog, p5xCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, arknightsIndex, arknightsVersions, androidIndex, napLegacyCandidates]) => {
+]).then(async ([nteCatalog, tofCatalog, p5xCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, arknightsIndex, arknightsVersions, androidIndex, aethergazerResourceIndex, napLegacyCandidates]) => {
   state.nteCatalog = nteCatalog;
   state.tofCatalog = tofCatalog;
   state.p5xCatalog = p5xCatalog;
@@ -3276,6 +3491,7 @@ Promise.all([
   state.arknightsIndex = arknightsIndex;
   state.arknightsVersions = arknightsVersions;
   state.androidIndex = androidIndex;
+  state.aethergazerResourceIndex = aethergazerResourceIndex;
   state.hoyoLegacyCandidates = napLegacyCandidates?.game_id
     ? { [napLegacyCandidates.game_id]: napLegacyCandidates }
     : {};
