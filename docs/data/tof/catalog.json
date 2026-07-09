@@ -18,6 +18,2966 @@
   "iv_seed": "PatcherSDK",
   "versions": [
     {
+      "version": "5.5.3",
+      "status": 200,
+      "last_modified": "Wed, 29 Oct 2025 07:49:52 GMT",
+      "content_length": 35131,
+      "full": {
+        "items": 71,
+        "bytes": 88528608927,
+        "json": "data/tof/url_lists/5.5.3-full.json",
+        "urls": "data/tof/url_lists/5.5.3-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.3-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 36,
+        "bytes": 29683809944,
+        "json": "data/tof/url_lists/5.5.3-patches.json",
+        "urls": "data/tof/url_lists/5.5.3-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.3-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.3/ResList.bin.zip",
+      "reslist_bytes": 35131,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.3/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.3/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 35131,
+              "last_modified": "Wed, 29 Oct 2025 07:49:52 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.3/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 71
+        },
+        "patches": {
+          "available": 36
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 71
+        },
+        "patches": {
+          "not_probed": 36
+        }
+      }
+    },
+    {
+      "version": "5.5.4",
+      "status": 200,
+      "last_modified": "Wed, 29 Oct 2025 19:02:07 GMT",
+      "content_length": 35707,
+      "full": {
+        "items": 71,
+        "bytes": 88601748174,
+        "json": "data/tof/url_lists/5.5.4-full.json",
+        "urls": "data/tof/url_lists/5.5.4-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.4-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 51,
+        "bytes": 30906067334,
+        "json": "data/tof/url_lists/5.5.4-patches.json",
+        "urls": "data/tof/url_lists/5.5.4-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.4-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.4/ResList.bin.zip",
+      "reslist_bytes": 35707,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.4/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.4/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 35707,
+              "last_modified": "Wed, 29 Oct 2025 19:02:07 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.4/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 71
+        },
+        "patches": {
+          "available": 51
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 71
+        },
+        "patches": {
+          "not_probed": 51
+        }
+      }
+    },
+    {
+      "version": "5.5.5",
+      "status": 200,
+      "last_modified": "Thu, 30 Oct 2025 14:14:21 GMT",
+      "content_length": 35995,
+      "full": {
+        "items": 71,
+        "bytes": 88601750222,
+        "json": "data/tof/url_lists/5.5.5-full.json",
+        "urls": "data/tof/url_lists/5.5.5-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.5-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 59,
+        "bytes": 31623548177,
+        "json": "data/tof/url_lists/5.5.5-patches.json",
+        "urls": "data/tof/url_lists/5.5.5-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.5-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.5/ResList.bin.zip",
+      "reslist_bytes": 35995,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.5/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.5/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 35995,
+              "last_modified": "Thu, 30 Oct 2025 14:14:21 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.5/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 71
+        },
+        "patches": {
+          "available": 59
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 71
+        },
+        "patches": {
+          "not_probed": 59
+        }
+      }
+    },
+    {
+      "version": "5.5.6",
+      "status": 200,
+      "last_modified": "Fri, 31 Oct 2025 16:20:43 GMT",
+      "content_length": 36747,
+      "full": {
+        "items": 72,
+        "bytes": 88667683566,
+        "json": "data/tof/url_lists/5.5.6-full.json",
+        "urls": "data/tof/url_lists/5.5.6-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.6-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 77,
+        "bytes": 32828145254,
+        "json": "data/tof/url_lists/5.5.6-patches.json",
+        "urls": "data/tof/url_lists/5.5.6-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.6-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.6/ResList.bin.zip",
+      "reslist_bytes": 36747,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.6/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.6/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 36747,
+              "last_modified": "Fri, 31 Oct 2025 16:20:43 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.6/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 77
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 77
+        }
+      }
+    },
+    {
+      "version": "5.5.7",
+      "status": 200,
+      "last_modified": "Wed, 05 Nov 2025 21:35:01 GMT",
+      "content_length": 37323,
+      "full": {
+        "items": 70,
+        "bytes": 88466248321,
+        "json": "data/tof/url_lists/5.5.7-full.json",
+        "urls": "data/tof/url_lists/5.5.7-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.7-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 91,
+        "bytes": 33845083787,
+        "json": "data/tof/url_lists/5.5.7-patches.json",
+        "urls": "data/tof/url_lists/5.5.7-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.7-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.7/ResList.bin.zip",
+      "reslist_bytes": 37323,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.7/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.7/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 37323,
+              "last_modified": "Wed, 05 Nov 2025 21:35:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.7/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 70
+        },
+        "patches": {
+          "available": 91
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 70
+        },
+        "patches": {
+          "not_probed": 91
+        }
+      }
+    },
+    {
+      "version": "5.5.8",
+      "status": 200,
+      "last_modified": "Wed, 12 Nov 2025 17:30:00 GMT",
+      "content_length": 38187,
+      "full": {
+        "items": 72,
+        "bytes": 88622463311,
+        "json": "data/tof/url_lists/5.5.8-full.json",
+        "urls": "data/tof/url_lists/5.5.8-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.8-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 112,
+        "bytes": 35054814351,
+        "json": "data/tof/url_lists/5.5.8-patches.json",
+        "urls": "data/tof/url_lists/5.5.8-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.8-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.8/ResList.bin.zip",
+      "reslist_bytes": 38187,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.8/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.8/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 38187,
+              "last_modified": "Wed, 12 Nov 2025 17:30:00 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.8/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 112
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 112
+        }
+      }
+    },
+    {
+      "version": "5.5.9",
+      "status": 200,
+      "last_modified": "Wed, 19 Nov 2025 21:37:12 GMT",
+      "content_length": 39099,
+      "full": {
+        "items": 72,
+        "bytes": 88656615247,
+        "json": "data/tof/url_lists/5.5.9-full.json",
+        "urls": "data/tof/url_lists/5.5.9-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.9-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 134,
+        "bytes": 36476001322,
+        "json": "data/tof/url_lists/5.5.9-patches.json",
+        "urls": "data/tof/url_lists/5.5.9-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.9-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.9/ResList.bin.zip",
+      "reslist_bytes": 39099,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.9/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.9/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 39099,
+              "last_modified": "Wed, 19 Nov 2025 21:37:12 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.9/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 134
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 134
+        }
+      }
+    },
+    {
+      "version": "5.5.10",
+      "status": 200,
+      "last_modified": "Mon, 24 Nov 2025 13:05:14 GMT",
+      "content_length": 39627,
+      "full": {
+        "items": 72,
+        "bytes": 88717942475,
+        "json": "data/tof/url_lists/5.5.10-full.json",
+        "urls": "data/tof/url_lists/5.5.10-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.10-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 148,
+        "bytes": 37300065175,
+        "json": "data/tof/url_lists/5.5.10-patches.json",
+        "urls": "data/tof/url_lists/5.5.10-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.10-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.10/ResList.bin.zip",
+      "reslist_bytes": 39627,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.10/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.10/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 39627,
+              "last_modified": "Mon, 24 Nov 2025 13:05:14 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.10/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 148
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 148
+        }
+      }
+    },
+    {
+      "version": "5.5.11",
+      "status": 200,
+      "last_modified": "Wed, 26 Nov 2025 22:32:05 GMT",
+      "content_length": 40587,
+      "full": {
+        "items": 72,
+        "bytes": 88653261470,
+        "json": "data/tof/url_lists/5.5.11-full.json",
+        "urls": "data/tof/url_lists/5.5.11-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.11-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 170,
+        "bytes": 38451873414,
+        "json": "data/tof/url_lists/5.5.11-patches.json",
+        "urls": "data/tof/url_lists/5.5.11-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.5.11-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.11/ResList.bin.zip",
+      "reslist_bytes": 40587,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.11/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.11/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 40587,
+              "last_modified": "Wed, 26 Nov 2025 22:32:05 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.5.11/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 170
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 170
+        }
+      }
+    },
+    {
+      "version": "5.6.14",
+      "status": 200,
+      "last_modified": "Wed, 10 Dec 2025 19:05:01 GMT",
+      "content_length": 44667,
+      "full": {
+        "items": 79,
+        "bytes": 94375928733,
+        "json": "data/tof/url_lists/5.6.14-full.json",
+        "urls": "data/tof/url_lists/5.6.14-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.14-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 226,
+        "bytes": 53803549285,
+        "json": "data/tof/url_lists/5.6.14-patches.json",
+        "urls": "data/tof/url_lists/5.6.14-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.14-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.14/ResList.bin.zip",
+      "reslist_bytes": 44667,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.14/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.14/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 44667,
+              "last_modified": "Wed, 10 Dec 2025 19:05:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.14/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 79
+        },
+        "patches": {
+          "available": 226
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 79
+        },
+        "patches": {
+          "not_probed": 226
+        }
+      }
+    },
+    {
+      "version": "5.6.15",
+      "status": 200,
+      "last_modified": "Thu, 11 Dec 2025 23:00:01 GMT",
+      "content_length": 46379,
+      "full": {
+        "items": 79,
+        "bytes": 94400823430,
+        "json": "data/tof/url_lists/5.6.15-full.json",
+        "urls": "data/tof/url_lists/5.6.15-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.15-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 263,
+        "bytes": 60378201191,
+        "json": "data/tof/url_lists/5.6.15-patches.json",
+        "urls": "data/tof/url_lists/5.6.15-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.15-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.15/ResList.bin.zip",
+      "reslist_bytes": 46379,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.15/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.15/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 46379,
+              "last_modified": "Thu, 11 Dec 2025 23:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.15/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 79
+        },
+        "patches": {
+          "available": 263
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 79
+        },
+        "patches": {
+          "not_probed": 263
+        }
+      }
+    },
+    {
+      "version": "5.6.16",
+      "status": 200,
+      "last_modified": "Mon, 15 Dec 2025 22:04:26 GMT",
+      "content_length": 48304,
+      "full": {
+        "items": 79,
+        "bytes": 94405455907,
+        "json": "data/tof/url_lists/5.6.16-full.json",
+        "urls": "data/tof/url_lists/5.6.16-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.16-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 307,
+        "bytes": 65693375463,
+        "json": "data/tof/url_lists/5.6.16-patches.json",
+        "urls": "data/tof/url_lists/5.6.16-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.16-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.16/ResList.bin.zip",
+      "reslist_bytes": 48304,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.16/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.16/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 48304,
+              "last_modified": "Mon, 15 Dec 2025 22:04:26 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.16/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 79
+        },
+        "patches": {
+          "available": 307
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 79
+        },
+        "patches": {
+          "not_probed": 307
+        }
+      }
+    },
+    {
+      "version": "5.6.17",
+      "status": 200,
+      "last_modified": "Wed, 24 Dec 2025 21:42:53 GMT",
+      "content_length": 50896,
+      "full": {
+        "items": 81,
+        "bytes": 95183453196,
+        "json": "data/tof/url_lists/5.6.17-full.json",
+        "urls": "data/tof/url_lists/5.6.17-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.17-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 360,
+        "bytes": 71935342106,
+        "json": "data/tof/url_lists/5.6.17-patches.json",
+        "urls": "data/tof/url_lists/5.6.17-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.17-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.17/ResList.bin.zip",
+      "reslist_bytes": 50896,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.17/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.17/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 50896,
+              "last_modified": "Wed, 24 Dec 2025 21:42:53 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.17/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 81
+        },
+        "patches": {
+          "available": 360
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 81
+        },
+        "patches": {
+          "not_probed": 360
+        }
+      }
+    },
+    {
+      "version": "5.6.18",
+      "status": 200,
+      "last_modified": "Mon, 05 Jan 2026 19:30:25 GMT",
+      "content_length": 53200,
+      "full": {
+        "items": 81,
+        "bytes": 95190620231,
+        "json": "data/tof/url_lists/5.6.18-full.json",
+        "urls": "data/tof/url_lists/5.6.18-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.18-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 415,
+        "bytes": 77798415300,
+        "json": "data/tof/url_lists/5.6.18-patches.json",
+        "urls": "data/tof/url_lists/5.6.18-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.18-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.18/ResList.bin.zip",
+      "reslist_bytes": 53200,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.18/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.18/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 53200,
+              "last_modified": "Mon, 05 Jan 2026 19:30:25 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.18/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 81
+        },
+        "patches": {
+          "available": 415
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 81
+        },
+        "patches": {
+          "not_probed": 415
+        }
+      }
+    },
+    {
+      "version": "5.6.20",
+      "status": 200,
+      "last_modified": "Wed, 14 Jan 2026 19:05:01 GMT",
+      "content_length": 59408,
+      "full": {
+        "items": 82,
+        "bytes": 95753697804,
+        "json": "data/tof/url_lists/5.6.20-full.json",
+        "urls": "data/tof/url_lists/5.6.20-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.20-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 529,
+        "bytes": 92116279104,
+        "json": "data/tof/url_lists/5.6.20-patches.json",
+        "urls": "data/tof/url_lists/5.6.20-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.20-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.20/ResList.bin.zip",
+      "reslist_bytes": 59408,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.20/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.20/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 59408,
+              "last_modified": "Wed, 14 Jan 2026 19:05:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.20/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 82
+        },
+        "patches": {
+          "available": 529
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 82
+        },
+        "patches": {
+          "not_probed": 529
+        }
+      }
+    },
+    {
+      "version": "5.6.21",
+      "status": 200,
+      "last_modified": "Tue, 20 Jan 2026 22:00:00 GMT",
+      "content_length": 62032,
+      "full": {
+        "items": 82,
+        "bytes": 95745598173,
+        "json": "data/tof/url_lists/5.6.21-full.json",
+        "urls": "data/tof/url_lists/5.6.21-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.21-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 588,
+        "bytes": 97967457592,
+        "json": "data/tof/url_lists/5.6.21-patches.json",
+        "urls": "data/tof/url_lists/5.6.21-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.21-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.21/ResList.bin.zip",
+      "reslist_bytes": 62032,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.21/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.21/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 62032,
+              "last_modified": "Tue, 20 Jan 2026 22:00:00 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.21/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 82
+        },
+        "patches": {
+          "available": 588
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 82
+        },
+        "patches": {
+          "not_probed": 588
+        }
+      }
+    },
+    {
+      "version": "5.6.22",
+      "status": 200,
+      "last_modified": "Fri, 30 Jan 2026 08:32:42 GMT",
+      "content_length": 62368,
+      "full": {
+        "items": 82,
+        "bytes": 95745600221,
+        "json": "data/tof/url_lists/5.6.22-full.json",
+        "urls": "data/tof/url_lists/5.6.22-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.22-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 596,
+        "bytes": 98612476942,
+        "json": "data/tof/url_lists/5.6.22-patches.json",
+        "urls": "data/tof/url_lists/5.6.22-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.22-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.22/ResList.bin.zip",
+      "reslist_bytes": 62368,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.22/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.22/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 62368,
+              "last_modified": "Fri, 30 Jan 2026 08:32:42 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.22/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 82
+        },
+        "patches": {
+          "available": 596
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 82
+        },
+        "patches": {
+          "not_probed": 596
+        }
+      }
+    },
+    {
+      "version": "5.6.23",
+      "status": 200,
+      "last_modified": "Wed, 04 Feb 2026 21:37:18 GMT",
+      "content_length": 64432,
+      "full": {
+        "items": 82,
+        "bytes": 95725352836,
+        "json": "data/tof/url_lists/5.6.23-full.json",
+        "urls": "data/tof/url_lists/5.6.23-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.23-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 642,
+        "bytes": 103105420902,
+        "json": "data/tof/url_lists/5.6.23-patches.json",
+        "urls": "data/tof/url_lists/5.6.23-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.6.23-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.23/ResList.bin.zip",
+      "reslist_bytes": 64432,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.23/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.23/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 64432,
+              "last_modified": "Wed, 04 Feb 2026 21:37:18 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.6.23/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 82
+        },
+        "patches": {
+          "available": 642
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 82
+        },
+        "patches": {
+          "not_probed": 642
+        }
+      }
+    },
+    {
+      "version": "5.7.3",
+      "status": 200,
+      "last_modified": "Wed, 11 Feb 2026 19:21:04 GMT",
+      "content_length": 69957,
+      "full": {
+        "items": 83,
+        "bytes": 96800309788,
+        "json": "data/tof/url_lists/5.7.3-full.json",
+        "urls": "data/tof/url_lists/5.7.3-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.7.3-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 734,
+        "bytes": 117815331777,
+        "json": "data/tof/url_lists/5.7.3-patches.json",
+        "urls": "data/tof/url_lists/5.7.3-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.7.3-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.3/ResList.bin.zip",
+      "reslist_bytes": 69957,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.3/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.3/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 69957,
+              "last_modified": "Wed, 11 Feb 2026 19:21:04 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.3/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 83
+        },
+        "patches": {
+          "available": 734
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 83
+        },
+        "patches": {
+          "not_probed": 734
+        }
+      }
+    },
+    {
+      "version": "5.7.4",
+      "status": 200,
+      "last_modified": "Fri, 13 Feb 2026 21:00:03 GMT",
+      "content_length": 72517,
+      "full": {
+        "items": 83,
+        "bytes": 96801750649,
+        "json": "data/tof/url_lists/5.7.4-full.json",
+        "urls": "data/tof/url_lists/5.7.4-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.7.4-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 793,
+        "bytes": 125297566491,
+        "json": "data/tof/url_lists/5.7.4-patches.json",
+        "urls": "data/tof/url_lists/5.7.4-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.7.4-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.4/ResList.bin.zip",
+      "reslist_bytes": 72517,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.4/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.4/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 72517,
+              "last_modified": "Fri, 13 Feb 2026 21:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.4/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 83
+        },
+        "patches": {
+          "available": 793
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 83
+        },
+        "patches": {
+          "not_probed": 793
+        }
+      }
+    },
+    {
+      "version": "5.7.5",
+      "status": 200,
+      "last_modified": "Tue, 24 Feb 2026 22:00:02 GMT",
+      "content_length": 75109,
+      "full": {
+        "items": 83,
+        "bytes": 96604832491,
+        "json": "data/tof/url_lists/5.7.5-full.json",
+        "urls": "data/tof/url_lists/5.7.5-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.7.5-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 852,
+        "bytes": 131590770231,
+        "json": "data/tof/url_lists/5.7.5-patches.json",
+        "urls": "data/tof/url_lists/5.7.5-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.7.5-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.5/ResList.bin.zip",
+      "reslist_bytes": 75109,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.5/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.5/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 75109,
+              "last_modified": "Tue, 24 Feb 2026 22:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.5/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 83
+        },
+        "patches": {
+          "available": 852
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 83
+        },
+        "patches": {
+          "not_probed": 852
+        }
+      }
+    },
+    {
+      "version": "5.7.7",
+      "status": 200,
+      "last_modified": "Wed, 25 Feb 2026 04:36:08 GMT",
+      "content_length": 76885,
+      "full": {
+        "items": 83,
+        "bytes": 96781829389,
+        "json": "data/tof/url_lists/5.7.7-full.json",
+        "urls": "data/tof/url_lists/5.7.7-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.7.7-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 890,
+        "bytes": 136370646938,
+        "json": "data/tof/url_lists/5.7.7-patches.json",
+        "urls": "data/tof/url_lists/5.7.7-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.7.7-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.7/ResList.bin.zip",
+      "reslist_bytes": 76885,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.7/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.7/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 76885,
+              "last_modified": "Wed, 25 Feb 2026 04:36:08 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.7/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 83
+        },
+        "patches": {
+          "available": 890
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 83
+        },
+        "patches": {
+          "not_probed": 890
+        }
+      }
+    },
+    {
+      "version": "5.7.8",
+      "status": 200,
+      "last_modified": "Thu, 05 Mar 2026 02:06:58 GMT",
+      "content_length": 79285,
+      "full": {
+        "items": 83,
+        "bytes": 96806079462,
+        "json": "data/tof/url_lists/5.7.8-full.json",
+        "urls": "data/tof/url_lists/5.7.8-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.7.8-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 947,
+        "bytes": 141758351061,
+        "json": "data/tof/url_lists/5.7.8-patches.json",
+        "urls": "data/tof/url_lists/5.7.8-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.7.8-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.8/ResList.bin.zip",
+      "reslist_bytes": 79285,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.8/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.8/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 79285,
+              "last_modified": "Thu, 05 Mar 2026 02:06:58 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.8/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 83
+        },
+        "patches": {
+          "available": 947
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 83
+        },
+        "patches": {
+          "not_probed": 947
+        }
+      }
+    },
+    {
+      "version": "5.7.9",
+      "status": 200,
+      "last_modified": "Wed, 11 Mar 2026 07:06:35 GMT",
+      "content_length": 81701,
+      "full": {
+        "items": 83,
+        "bytes": 96809494077,
+        "json": "data/tof/url_lists/5.7.9-full.json",
+        "urls": "data/tof/url_lists/5.7.9-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.7.9-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1004,
+        "bytes": 147215558652,
+        "json": "data/tof/url_lists/5.7.9-patches.json",
+        "urls": "data/tof/url_lists/5.7.9-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.7.9-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.9/ResList.bin.zip",
+      "reslist_bytes": 81701,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.9/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.9/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 81701,
+              "last_modified": "Wed, 11 Mar 2026 07:06:35 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.7.9/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 83
+        },
+        "patches": {
+          "available": 1004
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 83
+        },
+        "patches": {
+          "not_probed": 1004
+        }
+      }
+    },
+    {
+      "version": "5.8.12",
+      "status": 200,
+      "last_modified": "Wed, 18 Mar 2026 19:04:25 GMT",
+      "content_length": 88223,
+      "full": {
+        "items": 85,
+        "bytes": 97839491186,
+        "json": "data/tof/url_lists/5.8.12-full.json",
+        "urls": "data/tof/url_lists/5.8.12-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.8.12-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1122,
+        "bytes": 164306072851,
+        "json": "data/tof/url_lists/5.8.12-patches.json",
+        "urls": "data/tof/url_lists/5.8.12-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.8.12-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.12/ResList.bin.zip",
+      "reslist_bytes": 88223,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.12/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.12/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 88223,
+              "last_modified": "Wed, 18 Mar 2026 19:04:25 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.12/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 85
+        },
+        "patches": {
+          "available": 1122
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 85
+        },
+        "patches": {
+          "not_probed": 1122
+        }
+      }
+    },
+    {
+      "version": "5.8.13",
+      "status": 200,
+      "last_modified": "Sat, 21 Mar 2026 01:23:49 GMT",
+      "content_length": 90685,
+      "full": {
+        "items": 85,
+        "bytes": 97867686369,
+        "json": "data/tof/url_lists/5.8.13-full.json",
+        "urls": "data/tof/url_lists/5.8.13-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.8.13-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1181,
+        "bytes": 172169233144,
+        "json": "data/tof/url_lists/5.8.13-patches.json",
+        "urls": "data/tof/url_lists/5.8.13-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.8.13-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.13/ResList.bin.zip",
+      "reslist_bytes": 90685,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.13/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.13/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 90685,
+              "last_modified": "Sat, 21 Mar 2026 01:23:49 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.13/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 85
+        },
+        "patches": {
+          "available": 1181
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 85
+        },
+        "patches": {
+          "not_probed": 1181
+        }
+      }
+    },
+    {
+      "version": "5.8.14",
+      "status": 200,
+      "last_modified": "Wed, 25 Mar 2026 23:22:35 GMT",
+      "content_length": 93279,
+      "full": {
+        "items": 85,
+        "bytes": 97873636546,
+        "json": "data/tof/url_lists/5.8.14-full.json",
+        "urls": "data/tof/url_lists/5.8.14-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.8.14-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1240,
+        "bytes": 179165111406,
+        "json": "data/tof/url_lists/5.8.14-patches.json",
+        "urls": "data/tof/url_lists/5.8.14-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.8.14-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.14/ResList.bin.zip",
+      "reslist_bytes": 93279,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.14/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.14/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 93279,
+              "last_modified": "Wed, 25 Mar 2026 23:22:35 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.14/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 85
+        },
+        "patches": {
+          "available": 1240
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 85
+        },
+        "patches": {
+          "not_probed": 1240
+        }
+      }
+    },
+    {
+      "version": "5.8.16",
+      "status": 200,
+      "last_modified": "Thu, 02 Apr 2026 21:00:02 GMT",
+      "content_length": 98319,
+      "full": {
+        "items": 85,
+        "bytes": 97852553536,
+        "json": "data/tof/url_lists/5.8.16-full.json",
+        "urls": "data/tof/url_lists/5.8.16-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.8.16-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1358,
+        "bytes": 191455345795,
+        "json": "data/tof/url_lists/5.8.16-patches.json",
+        "urls": "data/tof/url_lists/5.8.16-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.8.16-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.16/ResList.bin.zip",
+      "reslist_bytes": 98319,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.16/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.16/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 98319,
+              "last_modified": "Thu, 02 Apr 2026 21:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.16/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 85
+        },
+        "patches": {
+          "available": 1358
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 85
+        },
+        "patches": {
+          "not_probed": 1358
+        }
+      }
+    },
+    {
+      "version": "5.8.17",
+      "status": 200,
+      "last_modified": "Wed, 15 Apr 2026 23:00:03 GMT",
+      "content_length": 100820,
+      "full": {
+        "items": 85,
+        "bytes": 97875028143,
+        "json": "data/tof/url_lists/5.8.17-full.json",
+        "urls": "data/tof/url_lists/5.8.17-full.urls.txt",
+        "aria2": "data/tof/url_lists/5.8.17-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1417,
+        "bytes": 197577726636,
+        "json": "data/tof/url_lists/5.8.17-patches.json",
+        "urls": "data/tof/url_lists/5.8.17-patches.urls.txt",
+        "aria2": "data/tof/url_lists/5.8.17-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.17/ResList.bin.zip",
+      "reslist_bytes": 100820,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.17/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.17/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 100820,
+              "last_modified": "Wed, 15 Apr 2026 23:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/5.8.17/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 85
+        },
+        "patches": {
+          "available": 1417
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 85
+        },
+        "patches": {
+          "not_probed": 1417
+        }
+      }
+    },
+    {
+      "version": "6.0.1",
+      "status": 200,
+      "last_modified": "Mon, 20 Apr 2026 19:57:31 GMT",
+      "content_length": 104740,
+      "full": {
+        "items": 88,
+        "bytes": 102678225019,
+        "json": "data/tof/url_lists/6.0.1-full.json",
+        "urls": "data/tof/url_lists/6.0.1-full.urls.txt",
+        "aria2": "data/tof/url_lists/6.0.1-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1477,
+        "bytes": 217556293361,
+        "json": "data/tof/url_lists/6.0.1-patches.json",
+        "urls": "data/tof/url_lists/6.0.1-patches.urls.txt",
+        "aria2": "data/tof/url_lists/6.0.1-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.1/ResList.bin.zip",
+      "reslist_bytes": 104740,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.1/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.1/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 104740,
+              "last_modified": "Mon, 20 Apr 2026 19:57:31 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.1/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 88
+        },
+        "patches": {
+          "available": 1477
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 88
+        },
+        "patches": {
+          "not_probed": 1477
+        }
+      }
+    },
+    {
+      "version": "6.0.2",
+      "status": 200,
+      "last_modified": "Wed, 22 Apr 2026 21:55:16 GMT",
+      "content_length": 107908,
+      "full": {
+        "items": 88,
+        "bytes": 102673052846,
+        "json": "data/tof/url_lists/6.0.2-full.json",
+        "urls": "data/tof/url_lists/6.0.2-full.urls.txt",
+        "aria2": "data/tof/url_lists/6.0.2-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1539,
+        "bytes": 234041254463,
+        "json": "data/tof/url_lists/6.0.2-patches.json",
+        "urls": "data/tof/url_lists/6.0.2-patches.urls.txt",
+        "aria2": "data/tof/url_lists/6.0.2-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.2/ResList.bin.zip",
+      "reslist_bytes": 107908,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.2/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.2/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 107908,
+              "last_modified": "Wed, 22 Apr 2026 21:55:16 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.2/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 88
+        },
+        "patches": {
+          "available": 1539
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 88
+        },
+        "patches": {
+          "not_probed": 1539
+        }
+      }
+    },
+    {
+      "version": "6.0.3",
+      "status": 200,
+      "last_modified": "Thu, 30 Apr 2026 21:30:02 GMT",
+      "content_length": 111012,
+      "full": {
+        "items": 88,
+        "bytes": 102677072105,
+        "json": "data/tof/url_lists/6.0.3-full.json",
+        "urls": "data/tof/url_lists/6.0.3-full.urls.txt",
+        "aria2": "data/tof/url_lists/6.0.3-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1603,
+        "bytes": 247034162972,
+        "json": "data/tof/url_lists/6.0.3-patches.json",
+        "urls": "data/tof/url_lists/6.0.3-patches.urls.txt",
+        "aria2": "data/tof/url_lists/6.0.3-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.3/ResList.bin.zip",
+      "reslist_bytes": 111012,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.3/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.3/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 111012,
+              "last_modified": "Thu, 30 Apr 2026 21:30:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.3/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 88
+        },
+        "patches": {
+          "available": 1603
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 88
+        },
+        "patches": {
+          "not_probed": 1603
+        }
+      }
+    },
+    {
+      "version": "6.0.4",
+      "status": 200,
+      "last_modified": "Wed, 13 May 2026 23:23:41 GMT",
+      "content_length": 113988,
+      "full": {
+        "items": 88,
+        "bytes": 102733894241,
+        "json": "data/tof/url_lists/6.0.4-full.json",
+        "urls": "data/tof/url_lists/6.0.4-full.urls.txt",
+        "aria2": "data/tof/url_lists/6.0.4-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1669,
+        "bytes": 256761150113,
+        "json": "data/tof/url_lists/6.0.4-patches.json",
+        "urls": "data/tof/url_lists/6.0.4-patches.urls.txt",
+        "aria2": "data/tof/url_lists/6.0.4-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.4/ResList.bin.zip",
+      "reslist_bytes": 113988,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.4/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.4/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 113988,
+              "last_modified": "Wed, 13 May 2026 23:23:41 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.0.4/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 88
+        },
+        "patches": {
+          "available": 1669
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 88
+        },
+        "patches": {
+          "not_probed": 1669
+        }
+      }
+    },
+    {
+      "version": "6.1.0",
+      "status": 200,
+      "last_modified": "Wed, 27 May 2026 19:05:01 GMT",
+      "content_length": 121897,
+      "full": {
+        "items": 89,
+        "bytes": 103809959827,
+        "json": "data/tof/url_lists/6.1.0-full.json",
+        "urls": "data/tof/url_lists/6.1.0-full.urls.txt",
+        "aria2": "data/tof/url_lists/6.1.0-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1801,
+        "bytes": 285559443619,
+        "json": "data/tof/url_lists/6.1.0-patches.json",
+        "urls": "data/tof/url_lists/6.1.0-patches.urls.txt",
+        "aria2": "data/tof/url_lists/6.1.0-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.0/ResList.bin.zip",
+      "reslist_bytes": 121897,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.0/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.0/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 121897,
+              "last_modified": "Wed, 27 May 2026 19:05:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.0/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 89
+        },
+        "patches": {
+          "available": 1801
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 89
+        },
+        "patches": {
+          "not_probed": 1801
+        }
+      }
+    },
+    {
+      "version": "6.1.1",
+      "status": 200,
+      "last_modified": "Thu, 28 May 2026 22:00:06 GMT",
+      "content_length": 124761,
+      "full": {
+        "items": 89,
+        "bytes": 103794364480,
+        "json": "data/tof/url_lists/6.1.1-full.json",
+        "urls": "data/tof/url_lists/6.1.1-full.urls.txt",
+        "aria2": "data/tof/url_lists/6.1.1-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1859,
+        "bytes": 297831128433,
+        "json": "data/tof/url_lists/6.1.1-patches.json",
+        "urls": "data/tof/url_lists/6.1.1-patches.urls.txt",
+        "aria2": "data/tof/url_lists/6.1.1-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.1/ResList.bin.zip",
+      "reslist_bytes": 124761,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.1/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.1/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 124761,
+              "last_modified": "Thu, 28 May 2026 22:00:06 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.1/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 89
+        },
+        "patches": {
+          "available": 1859
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 89
+        },
+        "patches": {
+          "not_probed": 1859
+        }
+      }
+    },
+    {
+      "version": "6.1.2",
+      "status": 200,
+      "last_modified": "Wed, 03 Jun 2026 22:00:00 GMT",
+      "content_length": 109844,
+      "full": {
+        "items": 89,
+        "bytes": 103832416517,
+        "json": "data/tof/url_lists/6.1.2-full.json",
+        "urls": "data/tof/url_lists/6.1.2-full.urls.txt",
+        "aria2": "data/tof/url_lists/6.1.2-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1596,
+        "bytes": 261276350454,
+        "json": "data/tof/url_lists/6.1.2-patches.json",
+        "urls": "data/tof/url_lists/6.1.2-patches.urls.txt",
+        "aria2": "data/tof/url_lists/6.1.2-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.2/ResList.bin.zip",
+      "reslist_bytes": 109844,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.2/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.2/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 109844,
+              "last_modified": "Wed, 03 Jun 2026 22:00:00 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.2/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 89
+        },
+        "patches": {
+          "available": 1596
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 89
+        },
+        "patches": {
+          "not_probed": 1596
+        }
+      }
+    },
+    {
+      "version": "6.1.3",
+      "status": 200,
+      "last_modified": "Wed, 10 Jun 2026 21:00:01 GMT",
+      "content_length": 115556,
+      "full": {
+        "items": 89,
+        "bytes": 103848899505,
+        "json": "data/tof/url_lists/6.1.3-full.json",
+        "urls": "data/tof/url_lists/6.1.3-full.urls.txt",
+        "aria2": "data/tof/url_lists/6.1.3-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1698,
+        "bytes": 278427481470,
+        "json": "data/tof/url_lists/6.1.3-patches.json",
+        "urls": "data/tof/url_lists/6.1.3-patches.urls.txt",
+        "aria2": "data/tof/url_lists/6.1.3-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.3/ResList.bin.zip",
+      "reslist_bytes": 115556,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.3/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.3/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 115556,
+              "last_modified": "Wed, 10 Jun 2026 21:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.3/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 89
+        },
+        "patches": {
+          "available": 1698
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 89
+        },
+        "patches": {
+          "not_probed": 1698
+        }
+      }
+    },
+    {
+      "version": "6.1.5",
+      "status": 200,
+      "last_modified": "Wed, 17 Jun 2026 21:00:02 GMT",
+      "content_length": 120329,
+      "full": {
+        "items": 89,
+        "bytes": 103895750118,
+        "json": "data/tof/url_lists/6.1.5-full.json",
+        "urls": "data/tof/url_lists/6.1.5-full.urls.txt",
+        "aria2": "data/tof/url_lists/6.1.5-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1792,
+        "bytes": 296657637512,
+        "json": "data/tof/url_lists/6.1.5-patches.json",
+        "urls": "data/tof/url_lists/6.1.5-patches.urls.txt",
+        "aria2": "data/tof/url_lists/6.1.5-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.5/ResList.bin.zip",
+      "reslist_bytes": 120329,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.5/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.5/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 120329,
+              "last_modified": "Wed, 17 Jun 2026 21:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.5/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 89
+        },
+        "patches": {
+          "available": 1792
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 89
+        },
+        "patches": {
+          "not_probed": 1792
+        }
+      }
+    },
+    {
+      "version": "6.1.6",
+      "status": 200,
+      "last_modified": "Thu, 18 Jun 2026 17:00:02 GMT",
+      "content_length": 123353,
+      "full": {
+        "items": 89,
+        "bytes": 103895622985,
+        "json": "data/tof/url_lists/6.1.6-full.json",
+        "urls": "data/tof/url_lists/6.1.6-full.urls.txt",
+        "aria2": "data/tof/url_lists/6.1.6-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1858,
+        "bytes": 307065316201,
+        "json": "data/tof/url_lists/6.1.6-patches.json",
+        "urls": "data/tof/url_lists/6.1.6-patches.urls.txt",
+        "aria2": "data/tof/url_lists/6.1.6-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.6/ResList.bin.zip",
+      "reslist_bytes": 123353,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.6/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.6/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 123353,
+              "last_modified": "Thu, 18 Jun 2026 17:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.1.6/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 89
+        },
+        "patches": {
+          "available": 1858
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 89
+        },
+        "patches": {
+          "not_probed": 1858
+        }
+      }
+    },
+    {
+      "version": "6.2.1",
+      "status": 200,
+      "last_modified": "Wed, 01 Jul 2026 19:24:53 GMT",
+      "content_length": 130569,
+      "full": {
+        "items": 91,
+        "bytes": 106401732796,
+        "json": "data/tof/url_lists/6.2.1-full.json",
+        "urls": "data/tof/url_lists/6.2.1-full.urls.txt",
+        "aria2": "data/tof/url_lists/6.2.1-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1981,
+        "bytes": 335413904645,
+        "json": "data/tof/url_lists/6.2.1-patches.json",
+        "urls": "data/tof/url_lists/6.2.1-patches.urls.txt",
+        "aria2": "data/tof/url_lists/6.2.1-patches.patches.aria2.txt"
+      },
+      "reslist_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.2.1/ResList.bin.zip",
+      "reslist_bytes": 130569,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.2.1/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-09 13:01:38 +0800",
+              "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.2.1/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 130569,
+              "last_modified": "Wed, 01 Jul 2026 19:24:53 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.2.1/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_tof_availability.py"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 91
+        },
+        "patches": {
+          "available": 1981
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 91
+        },
+        "patches": {
+          "not_probed": 1981
+        }
+      }
+    },
+    {
       "version": "6.2.2",
       "status": 200,
       "last_modified": "Fri, 03 Jul 2026 22:47:22 GMT",
@@ -46,7 +3006,7 @@
               "ok": true,
               "status": 200,
               "method": "GET",
-              "checked_at": "2026-07-09 01:05:23 +0000",
+              "checked_at": "2026-07-09 13:01:38 +0800",
               "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/version/6.2.2/ResList.bin.zip",
               "content_type": "application/zip",
               "size": 133950,
@@ -92,8 +3052,8 @@
       }
     }
   ],
-  "last_checked_at": "2026-07-09 01:05:23 +0000",
-  "generated_at": "2026-07-09 01:05:23 +0000",
+  "last_checked_at": "2026-07-09 13:01:38 +0800",
+  "generated_at": "2026-07-09 13:01:38 +0800",
   "current_version": "6.2.2",
   "config": {
     "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Version/Windows/config.xml",

@@ -1,22 +1,23 @@
 [
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Binaries/Win64/QRSL.exe",
-    "filesize": 169844832,
-    "md5": "34f183ce17cceb8af572e7441459bce5",
-    "object": "34f183ce17cceb8af572e7441459bce5.169844832",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/34f183ce17cceb8af572e7441459bce5.169844832",
+    "oldfile": "91eace74366b7be30eeba847ab064830.220480458",
+    "newfile": "aedb8b608bd5fdd1849b797fc4ed4a4c.116529662",
+    "patch": "5b686bc2ce3d8f8957d22f1b2de110bc.11337188",
+    "version_hash": "9b41fc",
+    "filesize": 11337188,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5b686bc2ce3d8f8957d22f1b2de110bc.11337188",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/34f183ce17cceb8af572e7441459bce5.169844832",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5b686bc2ce3d8f8957d22f1b2de110bc.11337188",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/34f183ce17cceb8af572e7441459bce5.169844832",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5b686bc2ce3d8f8957d22f1b2de110bc.11337188",
             "content_type": "",
-            "size": 169844832,
+            "size": 11337188,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -34,7 +35,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/34f183ce17cceb8af572e7441459bce5.169844832",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5b686bc2ce3d8f8957d22f1b2de110bc.11337188",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -43,23 +44,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Binaries/Win64/unsafe/QRSL.exe",
-    "filesize": 169833984,
-    "md5": "763d3346b82b1c01f9508a52994d6307",
-    "object": "763d3346b82b1c01f9508a52994d6307.169833984",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/763d3346b82b1c01f9508a52994d6307.169833984",
+    "oldfile": "c660dd049e8fe5cf4976cb429e2a850c.177920686",
+    "newfile": "aedb8b608bd5fdd1849b797fc4ed4a4c.116529662",
+    "patch": "247094e93634f46bd18266c7581ac346.21912317",
+    "version_hash": "9b41fc",
+    "filesize": 21912317,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/247094e93634f46bd18266c7581ac346.21912317",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/763d3346b82b1c01f9508a52994d6307.169833984",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/247094e93634f46bd18266c7581ac346.21912317",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/763d3346b82b1c01f9508a52994d6307.169833984",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/247094e93634f46bd18266c7581ac346.21912317",
             "content_type": "",
-            "size": 169833984,
+            "size": 21912317,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -77,7 +79,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/763d3346b82b1c01f9508a52994d6307.169833984",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/247094e93634f46bd18266c7581ac346.21912317",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -86,23 +88,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/ActivityQuest_3_6/ActivityQuest_3_6_1_MAN.mp4",
-    "filesize": 112255950,
-    "md5": "58eb6bc3f258aa5c4b2758bd4d944837",
-    "object": "58eb6bc3f258aa5c4b2758bd4d944837.112255950",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/58eb6bc3f258aa5c4b2758bd4d944837.112255950",
+    "oldfile": "204a14e137c35087107fcf555ecf14de.164148832",
+    "newfile": "57afe3573efd0309dc72d1fb032f6d70.164489312",
+    "patch": "ee909f4d10521623e6b8b7375649d1e0.100944313",
+    "version_hash": "9b41fc",
+    "filesize": 100944313,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/ee909f4d10521623e6b8b7375649d1e0.100944313",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/58eb6bc3f258aa5c4b2758bd4d944837.112255950",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/ee909f4d10521623e6b8b7375649d1e0.100944313",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/58eb6bc3f258aa5c4b2758bd4d944837.112255950",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/ee909f4d10521623e6b8b7375649d1e0.100944313",
             "content_type": "",
-            "size": 112255950,
+            "size": 100944313,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -120,7 +123,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/58eb6bc3f258aa5c4b2758bd4d944837.112255950",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/ee909f4d10521623e6b8b7375649d1e0.100944313",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -129,23 +132,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/ActivityQuest_3_6/ActivityQuest_3_6_1_WOMAN.mp4",
-    "filesize": 112279699,
-    "md5": "da20bdb3f5b86568c7492c22ad7f3467",
-    "object": "da20bdb3f5b86568c7492c22ad7f3467.112279699",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/da20bdb3f5b86568c7492c22ad7f3467.112279699",
+    "oldfile": "54833fe38c660d6e5c7f976e82ffe1b9.164473856",
+    "newfile": "a15f821c8846f63bf95ec3f96961b6ec.164478464",
+    "patch": "e52c9826e3fc8890c8af43ebb2fa122d.91119986",
+    "version_hash": "9b41fc",
+    "filesize": 91119986,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e52c9826e3fc8890c8af43ebb2fa122d.91119986",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/da20bdb3f5b86568c7492c22ad7f3467.112279699",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e52c9826e3fc8890c8af43ebb2fa122d.91119986",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/da20bdb3f5b86568c7492c22ad7f3467.112279699",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e52c9826e3fc8890c8af43ebb2fa122d.91119986",
             "content_type": "",
-            "size": 112279699,
+            "size": 91119986,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -163,7 +167,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/da20bdb3f5b86568c7492c22ad7f3467.112279699",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e52c9826e3fc8890c8af43ebb2fa122d.91119986",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -172,23 +176,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/ActivityQuest_3_6/ActivityQuest_3_6_2_MAN.mp4",
-    "filesize": 114021347,
-    "md5": "21b480afe24004eaa1af817a0a74b5d1",
-    "object": "21b480afe24004eaa1af817a0a74b5d1.114021347",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/21b480afe24004eaa1af817a0a74b5d1.114021347",
+    "oldfile": "f7113ccab63d9f5283316f4fbd15f8ab.164137984",
+    "newfile": "a15f821c8846f63bf95ec3f96961b6ec.164478464",
+    "patch": "77ef729e1b8e87c748f99bb07d2ce2ba.100942708",
+    "version_hash": "9b41fc",
+    "filesize": 100942708,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/77ef729e1b8e87c748f99bb07d2ce2ba.100942708",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/21b480afe24004eaa1af817a0a74b5d1.114021347",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/77ef729e1b8e87c748f99bb07d2ce2ba.100942708",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/21b480afe24004eaa1af817a0a74b5d1.114021347",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/77ef729e1b8e87c748f99bb07d2ce2ba.100942708",
             "content_type": "",
-            "size": 114021347,
+            "size": 100942708,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -206,7 +211,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/21b480afe24004eaa1af817a0a74b5d1.114021347",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/77ef729e1b8e87c748f99bb07d2ce2ba.100942708",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -215,23 +220,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/ActivityQuest_3_6/ActivityQuest_3_6_2_WOMAN.mp4",
-    "filesize": 114365451,
-    "md5": "48d519edb683f562a9a09b6fb5233490",
-    "object": "48d519edb683f562a9a09b6fb5233490.114365451",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/48d519edb683f562a9a09b6fb5233490.114365451",
+    "oldfile": "fdac62c442684e85d83c4e81d5ed0975.164484704",
+    "newfile": "57afe3573efd0309dc72d1fb032f6d70.164489312",
+    "patch": "58f12e6f153c093affbf4fe527c796bb.91121588",
+    "version_hash": "9b41fc",
+    "filesize": 91121588,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/58f12e6f153c093affbf4fe527c796bb.91121588",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/48d519edb683f562a9a09b6fb5233490.114365451",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/58f12e6f153c093affbf4fe527c796bb.91121588",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/48d519edb683f562a9a09b6fb5233490.114365451",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/58f12e6f153c093affbf4fe527c796bb.91121588",
             "content_type": "",
-            "size": 114365451,
+            "size": 91121588,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -249,7 +255,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/48d519edb683f562a9a09b6fb5233490.114365451",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/58f12e6f153c093affbf4fe527c796bb.91121588",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -258,23 +264,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/ActivityQuest_3_6/ActivityQuest_3_6_3_MAN.mp4",
-    "filesize": 84726327,
-    "md5": "788f7911fc24acf7e7249a48d113b347",
-    "object": "788f7911fc24acf7e7249a48d113b347.84726327",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/788f7911fc24acf7e7249a48d113b347.84726327",
+    "oldfile": "8b3f7105e17a00422004ef4e8342d2a2.180378274",
+    "newfile": "aedb8b608bd5fdd1849b797fc4ed4a4c.116529662",
+    "patch": "d9436d671a2678c807431485a802c62c.22979537",
+    "version_hash": "9b41fc",
+    "filesize": 22979537,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d9436d671a2678c807431485a802c62c.22979537",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/788f7911fc24acf7e7249a48d113b347.84726327",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d9436d671a2678c807431485a802c62c.22979537",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/788f7911fc24acf7e7249a48d113b347.84726327",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d9436d671a2678c807431485a802c62c.22979537",
             "content_type": "",
-            "size": 84726327,
+            "size": 22979537,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -292,7 +299,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/788f7911fc24acf7e7249a48d113b347.84726327",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d9436d671a2678c807431485a802c62c.22979537",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -301,23 +308,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/ActivityQuest_3_6/ActivityQuest_3_6_3_WOMAN.mp4",
-    "filesize": 83222999,
-    "md5": "bfae8737aca313cf9f5f23929940e919",
-    "object": "bfae8737aca313cf9f5f23929940e919.83222999",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bfae8737aca313cf9f5f23929940e919.83222999",
+    "oldfile": "df3bb057e981030705f6ca7fb9b7c53d.164474880",
+    "newfile": "a15f821c8846f63bf95ec3f96961b6ec.164478464",
+    "patch": "8f17e141e2edd10a43b181c749cec728.91573581",
+    "version_hash": "9b41fc",
+    "filesize": 91573581,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8f17e141e2edd10a43b181c749cec728.91573581",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bfae8737aca313cf9f5f23929940e919.83222999",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8f17e141e2edd10a43b181c749cec728.91573581",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bfae8737aca313cf9f5f23929940e919.83222999",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8f17e141e2edd10a43b181c749cec728.91573581",
             "content_type": "",
-            "size": 83222999,
+            "size": 91573581,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -335,7 +343,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bfae8737aca313cf9f5f23929940e919.83222999",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8f17e141e2edd10a43b181c749cec728.91573581",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -344,23 +352,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/ActivityQuest_3_6/ActivityQuest_3_6_4_MAN.mp4",
-    "filesize": 75674332,
-    "md5": "72d23bea3f0e8d7eafd7f5a71ca98fb9",
-    "object": "72d23bea3f0e8d7eafd7f5a71ca98fb9.75674332",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/72d23bea3f0e8d7eafd7f5a71ca98fb9.75674332",
+    "oldfile": "4ac26f9c2c13b9b86d5f77363155e328.164477440",
+    "newfile": "a15f821c8846f63bf95ec3f96961b6ec.164478464",
+    "patch": "65e10fd158fd4e22afcd93afd3bfd474.81527871",
+    "version_hash": "9b41fc",
+    "filesize": 81527871,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/65e10fd158fd4e22afcd93afd3bfd474.81527871",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/72d23bea3f0e8d7eafd7f5a71ca98fb9.75674332",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/65e10fd158fd4e22afcd93afd3bfd474.81527871",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/72d23bea3f0e8d7eafd7f5a71ca98fb9.75674332",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/65e10fd158fd4e22afcd93afd3bfd474.81527871",
             "content_type": "",
-            "size": 75674332,
+            "size": 81527871,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -378,7 +387,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/72d23bea3f0e8d7eafd7f5a71ca98fb9.75674332",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/65e10fd158fd4e22afcd93afd3bfd474.81527871",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -387,23 +396,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/ActivityQuest_3_6/ActivityQuest_3_6_4_WOMAN.mp4",
-    "filesize": 75575396,
-    "md5": "82f63140544a8f35a1c6ed8f61de60d0",
-    "object": "82f63140544a8f35a1c6ed8f61de60d0.75575396",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/82f63140544a8f35a1c6ed8f61de60d0.75575396",
+    "oldfile": "b48e00ec9c0167c84434b5a38d06686a.164485728",
+    "newfile": "57afe3573efd0309dc72d1fb032f6d70.164489312",
+    "patch": "57e16907321fa52ae6620b6e6c954e81.91575182",
+    "version_hash": "9b41fc",
+    "filesize": 91575182,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/57e16907321fa52ae6620b6e6c954e81.91575182",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/82f63140544a8f35a1c6ed8f61de60d0.75575396",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/57e16907321fa52ae6620b6e6c954e81.91575182",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/82f63140544a8f35a1c6ed8f61de60d0.75575396",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/57e16907321fa52ae6620b6e6c954e81.91575182",
             "content_type": "",
-            "size": 75575396,
+            "size": 91575182,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -421,7 +431,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/82f63140544a8f35a1c6ed8f61de60d0.75575396",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/57e16907321fa52ae6620b6e6c954e81.91575182",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -430,23 +440,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/ActivityQuest_3_6/ActivityQuest_3_6_5_MAN.mp4",
-    "filesize": 75093439,
-    "md5": "f0ff82ee152d079fe209a43bd97dfe88",
-    "object": "f0ff82ee152d079fe209a43bd97dfe88.75093439",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f0ff82ee152d079fe209a43bd97dfe88.75093439",
+    "oldfile": "6dd904fea6812552d94bb306bf72056f.1941548374",
+    "newfile": "c7d53a505f168be726431c8c1152a9e4.1946438993",
+    "patch": "58cf230427a62dbfa8ab6430e17f0073.41770535",
+    "version_hash": "9b41fc",
+    "filesize": 41770535,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/58cf230427a62dbfa8ab6430e17f0073.41770535",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f0ff82ee152d079fe209a43bd97dfe88.75093439",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/58cf230427a62dbfa8ab6430e17f0073.41770535",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f0ff82ee152d079fe209a43bd97dfe88.75093439",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/58cf230427a62dbfa8ab6430e17f0073.41770535",
             "content_type": "",
-            "size": 75093439,
+            "size": 41770535,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -464,7 +475,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f0ff82ee152d079fe209a43bd97dfe88.75093439",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/58cf230427a62dbfa8ab6430e17f0073.41770535",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -473,23 +484,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/ActivityQuest_3_6/ActivityQuest_3_6_5_WOMAN.mp4",
-    "filesize": 75466329,
-    "md5": "e83c4ae24da9c365b473ffffe822f4d6",
-    "object": "e83c4ae24da9c365b473ffffe822f4d6.75466329",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e83c4ae24da9c365b473ffffe822f4d6.75466329",
+    "oldfile": "60e80fd41937bb6f8171be549e882664.164488288",
+    "newfile": "57afe3573efd0309dc72d1fb032f6d70.164489312",
+    "patch": "88ade4843e28608780a21cc61ea2febe.81529473",
+    "version_hash": "9b41fc",
+    "filesize": 81529473,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/88ade4843e28608780a21cc61ea2febe.81529473",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e83c4ae24da9c365b473ffffe822f4d6.75466329",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/88ade4843e28608780a21cc61ea2febe.81529473",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e83c4ae24da9c365b473ffffe822f4d6.75466329",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/88ade4843e28608780a21cc61ea2febe.81529473",
             "content_type": "",
-            "size": 75466329,
+            "size": 81529473,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -507,7 +519,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e83c4ae24da9c365b473ffffe822f4d6.75466329",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/88ade4843e28608780a21cc61ea2febe.81529473",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -516,23 +528,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Gefion_card/Gefion_Card.mp4",
-    "filesize": 53730496,
-    "md5": "866aea9d6b6c7ca73cc99ccd8a796ab1",
-    "object": "866aea9d6b6c7ca73cc99ccd8a796ab1.53730496",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/866aea9d6b6c7ca73cc99ccd8a796ab1.53730496",
+    "oldfile": "f65b7ede6ce8477a02aeaf108bdd1ea9.1946292900",
+    "newfile": "c7d53a505f168be726431c8c1152a9e4.1946438993",
+    "patch": "82748fb45a6443be62c683f725d168f5.36925011",
+    "version_hash": "9b41fc",
+    "filesize": 36925011,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/82748fb45a6443be62c683f725d168f5.36925011",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/866aea9d6b6c7ca73cc99ccd8a796ab1.53730496",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/82748fb45a6443be62c683f725d168f5.36925011",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/866aea9d6b6c7ca73cc99ccd8a796ab1.53730496",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/82748fb45a6443be62c683f725d168f5.36925011",
             "content_type": "",
-            "size": 53730496,
+            "size": 36925011,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -550,7 +563,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/866aea9d6b6c7ca73cc99ccd8a796ab1.53730496",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/82748fb45a6443be62c683f725d168f5.36925011",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -559,23 +572,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Guide_nitai/Guide_nitai.mp4",
-    "filesize": 132631888,
-    "md5": "7bcf7e1af14899d6d2123976ac900bb9",
-    "object": "7bcf7e1af14899d6d2123976ac900bb9.132631888",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7bcf7e1af14899d6d2123976ac900bb9.132631888",
+    "oldfile": "8ee279da562a2330850478187ea37c42.9390709372",
+    "newfile": "c7d53a505f168be726431c8c1152a9e4.1946438993",
+    "patch": "47b327e4a40190242e5b5ec75ac76d58.151679243",
+    "version_hash": "9b41fc",
+    "filesize": 151679243,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/47b327e4a40190242e5b5ec75ac76d58.151679243",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7bcf7e1af14899d6d2123976ac900bb9.132631888",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/47b327e4a40190242e5b5ec75ac76d58.151679243",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7bcf7e1af14899d6d2123976ac900bb9.132631888",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/47b327e4a40190242e5b5ec75ac76d58.151679243",
             "content_type": "",
-            "size": 132631888,
+            "size": 151679243,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -593,7 +607,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7bcf7e1af14899d6d2123976ac900bb9.132631888",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/47b327e4a40190242e5b5ec75ac76d58.151679243",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -602,23 +616,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/HOTTA_pv_lan_WX_all/HOTTA_pv_lan_WX_all.mp4",
-    "filesize": 57480784,
-    "md5": "9efcac8d7d5c05efc1911b2350ce352d",
-    "object": "9efcac8d7d5c05efc1911b2350ce352d.57480784",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9efcac8d7d5c05efc1911b2350ce352d.57480784",
+    "oldfile": "82ffd7ab35e0267986ab4c1a4dcf1ff9.170381552",
+    "newfile": "b5b1b5b1556e2636a8d3b5f04e70c474.79596793",
+    "patch": "00192c04a2228fe1976904e33f35776e.468",
+    "version_hash": "f90a9b",
+    "filesize": 468,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/00192c04a2228fe1976904e33f35776e.468",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9efcac8d7d5c05efc1911b2350ce352d.57480784",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/00192c04a2228fe1976904e33f35776e.468",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9efcac8d7d5c05efc1911b2350ce352d.57480784",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/00192c04a2228fe1976904e33f35776e.468",
             "content_type": "",
-            "size": 57480784,
+            "size": 468,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -636,7 +651,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9efcac8d7d5c05efc1911b2350ce352d.57480784",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/00192c04a2228fe1976904e33f35776e.468",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -645,23 +660,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_03_8_all/Hotta_03_8_all_boy.mp4",
-    "filesize": 206207008,
-    "md5": "a5346bcca5250b0e40087555638689b6",
-    "object": "a5346bcca5250b0e40087555638689b6.206207008",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a5346bcca5250b0e40087555638689b6.206207008",
+    "oldfile": "71d8cdcd51d4e9825fa8997d1e487bd4.10446623",
+    "newfile": "f91ef0cd6477f6dabbaf30476d638461.101231200",
+    "patch": "bcb45df96428754d057b9e6c9323da6a.90786482",
+    "version_hash": "f90a9b",
+    "filesize": 90786482,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bcb45df96428754d057b9e6c9323da6a.90786482",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a5346bcca5250b0e40087555638689b6.206207008",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bcb45df96428754d057b9e6c9323da6a.90786482",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a5346bcca5250b0e40087555638689b6.206207008",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bcb45df96428754d057b9e6c9323da6a.90786482",
             "content_type": "",
-            "size": 206207008,
+            "size": 90786482,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -679,7 +695,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a5346bcca5250b0e40087555638689b6.206207008",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bcb45df96428754d057b9e6c9323da6a.90786482",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -688,23 +704,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_03_8_all/Hotta_03_8_all_girl.mp4",
-    "filesize": 206293375,
-    "md5": "0b19f6f24ad9d43cff74ba38100a8062",
-    "object": "0b19f6f24ad9d43cff74ba38100a8062.206293375",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0b19f6f24ad9d43cff74ba38100a8062.206293375",
+    "oldfile": "bc0b4656e428a6151140eba3b1e5093c.25744881",
+    "newfile": "581cb19ab60586c6f2251c6c960557a6.63550769",
+    "patch": "92cc19441f7d71f90230dcd4579d4ffb.37811026",
+    "version_hash": "f90a9b",
+    "filesize": 37811026,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/92cc19441f7d71f90230dcd4579d4ffb.37811026",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0b19f6f24ad9d43cff74ba38100a8062.206293375",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/92cc19441f7d71f90230dcd4579d4ffb.37811026",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0b19f6f24ad9d43cff74ba38100a8062.206293375",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/92cc19441f7d71f90230dcd4579d4ffb.37811026",
             "content_type": "",
-            "size": 206293375,
+            "size": 37811026,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -722,7 +739,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0b19f6f24ad9d43cff74ba38100a8062.206293375",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/92cc19441f7d71f90230dcd4579d4ffb.37811026",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -731,23 +748,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_05_8_01/Hotta_05_8_01.mp4",
-    "filesize": 190354601,
-    "md5": "88e0fa381a8cef918dc54774af3b67bf",
-    "object": "88e0fa381a8cef918dc54774af3b67bf.190354601",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/88e0fa381a8cef918dc54774af3b67bf.190354601",
+    "oldfile": "c8e37bd8a9a88f923f0e8667bea59b80.513003661",
+    "newfile": "382e60666908b6fcd0b6b1fa43855181.513185709",
+    "patch": "0869e6819791521ef694462ead2318c7.23315688",
+    "version_hash": "f90a9b",
+    "filesize": 23315688,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0869e6819791521ef694462ead2318c7.23315688",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/88e0fa381a8cef918dc54774af3b67bf.190354601",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0869e6819791521ef694462ead2318c7.23315688",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/88e0fa381a8cef918dc54774af3b67bf.190354601",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0869e6819791521ef694462ead2318c7.23315688",
             "content_type": "",
-            "size": 190354601,
+            "size": 23315688,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -765,7 +783,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/88e0fa381a8cef918dc54774af3b67bf.190354601",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0869e6819791521ef694462ead2318c7.23315688",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -774,23 +792,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_Dream_all/Hotta_Dream_all.mp4",
-    "filesize": 80392748,
-    "md5": "96da6c9ab73759641bff5fd4c9c55a9c",
-    "object": "96da6c9ab73759641bff5fd4c9c55a9c.80392748",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/96da6c9ab73759641bff5fd4c9c55a9c.80392748",
+    "oldfile": "62dde01d26f6a0b1f6bd7fb1b4989979.736399444",
+    "newfile": "0b0a34c41bc5ed38b9af138404ad9296.736422228",
+    "patch": "0ffb2f730f0c2155c1d98e327d3129c4.1722004",
+    "version_hash": "f90a9b",
+    "filesize": 1722004,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0ffb2f730f0c2155c1d98e327d3129c4.1722004",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/96da6c9ab73759641bff5fd4c9c55a9c.80392748",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0ffb2f730f0c2155c1d98e327d3129c4.1722004",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/96da6c9ab73759641bff5fd4c9c55a9c.80392748",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0ffb2f730f0c2155c1d98e327d3129c4.1722004",
             "content_type": "",
-            "size": 80392748,
+            "size": 1722004,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -808,7 +827,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/96da6c9ab73759641bff5fd4c9c55a9c.80392748",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0ffb2f730f0c2155c1d98e327d3129c4.1722004",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -817,23 +836,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_EVA/Hotta_EVA_01_ALL_Man.mp4",
-    "filesize": 156707505,
-    "md5": "27fc370eba7d067734c9dc7cb08d567b",
-    "object": "27fc370eba7d067734c9dc7cb08d567b.156707505",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/27fc370eba7d067734c9dc7cb08d567b.156707505",
+    "oldfile": "72ee2d06b8d581464a543a0daf8c8482.750823160",
+    "newfile": "5730b091bf8c5b46cb9e7de0a328c04b.740953400",
+    "patch": "f90b981d1cd6b25fe670b2aece421759.24473518",
+    "version_hash": "f90a9b",
+    "filesize": 24473518,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f90b981d1cd6b25fe670b2aece421759.24473518",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/27fc370eba7d067734c9dc7cb08d567b.156707505",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f90b981d1cd6b25fe670b2aece421759.24473518",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/27fc370eba7d067734c9dc7cb08d567b.156707505",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f90b981d1cd6b25fe670b2aece421759.24473518",
             "content_type": "",
-            "size": 156707505,
+            "size": 24473518,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -851,7 +871,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/27fc370eba7d067734c9dc7cb08d567b.156707505",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f90b981d1cd6b25fe670b2aece421759.24473518",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -860,23 +880,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_EVA/Hotta_EVA_01_ALL_Woman.mp4",
-    "filesize": 153193165,
-    "md5": "02797e7e6248d380c243ccfda978a54d",
-    "object": "02797e7e6248d380c243ccfda978a54d.153193165",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/02797e7e6248d380c243ccfda978a54d.153193165",
+    "oldfile": "71825ddedb3f118395bb0f32c01aedcd.976860213",
+    "newfile": "facef6accdb79300eb6b8ded0748b888.902039477",
+    "patch": "e26d45574e64cda87afa624a945e741b.1083731",
+    "version_hash": "f90a9b",
+    "filesize": 1083731,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e26d45574e64cda87afa624a945e741b.1083731",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/02797e7e6248d380c243ccfda978a54d.153193165",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e26d45574e64cda87afa624a945e741b.1083731",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/02797e7e6248d380c243ccfda978a54d.153193165",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e26d45574e64cda87afa624a945e741b.1083731",
             "content_type": "",
-            "size": 153193165,
+            "size": 1083731,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -894,7 +915,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/02797e7e6248d380c243ccfda978a54d.153193165",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e26d45574e64cda87afa624a945e741b.1083731",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -903,23 +924,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_EVA/Hotta_EVA_02_ALL_Man.mp4",
-    "filesize": 186219005,
-    "md5": "9790dc78ae3bc6f06ed39d9420918367",
-    "object": "9790dc78ae3bc6f06ed39d9420918367.186219005",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9790dc78ae3bc6f06ed39d9420918367.186219005",
+    "oldfile": "4fc6bb24e4321cfeac326eb4bb441226.82961748",
+    "newfile": "f3270a2e8a3cd5110939f51d9370585b.77532292",
+    "patch": "fbc9d3fdcdaefb2f3dbce6141b2bdad5.24307055",
+    "version_hash": "f90a9b",
+    "filesize": 24307055,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/fbc9d3fdcdaefb2f3dbce6141b2bdad5.24307055",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9790dc78ae3bc6f06ed39d9420918367.186219005",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/fbc9d3fdcdaefb2f3dbce6141b2bdad5.24307055",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9790dc78ae3bc6f06ed39d9420918367.186219005",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/fbc9d3fdcdaefb2f3dbce6141b2bdad5.24307055",
             "content_type": "",
-            "size": 186219005,
+            "size": 24307055,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -937,7 +959,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9790dc78ae3bc6f06ed39d9420918367.186219005",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/fbc9d3fdcdaefb2f3dbce6141b2bdad5.24307055",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -946,23 +968,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_EVA/Hotta_EVA_02_ALL_Woman.mp4",
-    "filesize": 186908035,
-    "md5": "71220caf1c858f9008c8210ea22d98ef",
-    "object": "71220caf1c858f9008c8210ea22d98ef.186908035",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/71220caf1c858f9008c8210ea22d98ef.186908035",
+    "oldfile": "8c6914e83dfccee3e4bc242fa87b0a15.1047037232",
+    "newfile": "542524abe0c3d23584101e493c778efc.1047241664",
+    "patch": "6643a34f073eea63ed82bdce678995c0.20516406",
+    "version_hash": "f90a9b",
+    "filesize": 20516406,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6643a34f073eea63ed82bdce678995c0.20516406",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/71220caf1c858f9008c8210ea22d98ef.186908035",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6643a34f073eea63ed82bdce678995c0.20516406",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/71220caf1c858f9008c8210ea22d98ef.186908035",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6643a34f073eea63ed82bdce678995c0.20516406",
             "content_type": "",
-            "size": 186908035,
+            "size": 20516406,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -980,7 +1003,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/71220caf1c858f9008c8210ea22d98ef.186908035",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6643a34f073eea63ed82bdce678995c0.20516406",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -989,23 +1012,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_EVA/Hotta_EVA_03_ALL_Man.mp4",
-    "filesize": 100855059,
-    "md5": "ba91c6879ac9741a8738b24b3d104905",
-    "object": "ba91c6879ac9741a8738b24b3d104905.100855059",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/ba91c6879ac9741a8738b24b3d104905.100855059",
+    "oldfile": "4ea94e55f9e5a40393c25989325145fe.2151897044",
+    "newfile": "688bef4e35f123ff0f52d6c76a2d820f.1748164564",
+    "patch": "9598178ee159d3433e3ea488b89c14b4.411939179",
+    "version_hash": "f90a9b",
+    "filesize": 411939179,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9598178ee159d3433e3ea488b89c14b4.411939179",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/ba91c6879ac9741a8738b24b3d104905.100855059",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9598178ee159d3433e3ea488b89c14b4.411939179",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/ba91c6879ac9741a8738b24b3d104905.100855059",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9598178ee159d3433e3ea488b89c14b4.411939179",
             "content_type": "",
-            "size": 100855059,
+            "size": 411939179,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1023,7 +1047,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/ba91c6879ac9741a8738b24b3d104905.100855059",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9598178ee159d3433e3ea488b89c14b4.411939179",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1032,23 +1056,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_EVA/Hotta_EVA_03_ALL_Woman.mp4",
-    "filesize": 100956952,
-    "md5": "f361c22dbc831fdcc117fb1b214cc85c",
-    "object": "f361c22dbc831fdcc117fb1b214cc85c.100956952",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f361c22dbc831fdcc117fb1b214cc85c.100956952",
+    "oldfile": "330b4c54ff2c5abec39e516f32ca12df.2595542717",
+    "newfile": "c299cf310ef1f49bd77b695b4571a2d7.2229159323",
+    "patch": "57fd7edf9bbe18b56b13f823e6b04690.30778616",
+    "version_hash": "f90a9b",
+    "filesize": 30778616,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/57fd7edf9bbe18b56b13f823e6b04690.30778616",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f361c22dbc831fdcc117fb1b214cc85c.100956952",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/57fd7edf9bbe18b56b13f823e6b04690.30778616",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f361c22dbc831fdcc117fb1b214cc85c.100956952",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/57fd7edf9bbe18b56b13f823e6b04690.30778616",
             "content_type": "",
-            "size": 100956952,
+            "size": 30778616,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1066,7 +1091,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f361c22dbc831fdcc117fb1b214cc85c.100956952",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/57fd7edf9bbe18b56b13f823e6b04690.30778616",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1075,23 +1100,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_EVA/Hotta_EVA_04_ALL_Man.mp4",
-    "filesize": 80002616,
-    "md5": "dacaf4bc87079d127b2144be2c48e1e2",
-    "object": "dacaf4bc87079d127b2144be2c48e1e2.80002616",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/dacaf4bc87079d127b2144be2c48e1e2.80002616",
+    "oldfile": "06ad16402fc3b597ecbc6bda82b5a559.7603179316",
+    "newfile": "3550ecc6e12c88fc510af5d0c0b717ab.7641372388",
+    "patch": "15867e783f6a9c96993de34c2065bb99.126069084",
+    "version_hash": "f90a9b",
+    "filesize": 126069084,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/15867e783f6a9c96993de34c2065bb99.126069084",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/dacaf4bc87079d127b2144be2c48e1e2.80002616",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/15867e783f6a9c96993de34c2065bb99.126069084",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/dacaf4bc87079d127b2144be2c48e1e2.80002616",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/15867e783f6a9c96993de34c2065bb99.126069084",
             "content_type": "",
-            "size": 80002616,
+            "size": 126069084,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1109,7 +1135,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/dacaf4bc87079d127b2144be2c48e1e2.80002616",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/15867e783f6a9c96993de34c2065bb99.126069084",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1118,23 +1144,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_EVA/Hotta_EVA_04_ALL_Woman.mp4",
-    "filesize": 79968778,
-    "md5": "ad8a3fe41c15dba4ad31c35793f49114",
-    "object": "ad8a3fe41c15dba4ad31c35793f49114.79968778",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/ad8a3fe41c15dba4ad31c35793f49114.79968778",
+    "oldfile": "9845f71873033474334d6590f2d3befd.7850468325",
+    "newfile": "cf22eb7396a030ebe16360937aa60c43.8844284181",
+    "patch": "6bb53d0e62712c053eaba7b60019db11.1685796933",
+    "version_hash": "f90a9b",
+    "filesize": 1685796933,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6bb53d0e62712c053eaba7b60019db11.1685796933",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/ad8a3fe41c15dba4ad31c35793f49114.79968778",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6bb53d0e62712c053eaba7b60019db11.1685796933",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/ad8a3fe41c15dba4ad31c35793f49114.79968778",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6bb53d0e62712c053eaba7b60019db11.1685796933",
             "content_type": "",
-            "size": 79968778,
+            "size": 1685796933,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1152,7 +1179,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/ad8a3fe41c15dba4ad31c35793f49114.79968778",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6bb53d0e62712c053eaba7b60019db11.1685796933",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1161,23 +1188,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_EVA/Hotta_EVA_06_ALL.mp4",
-    "filesize": 116770528,
-    "md5": "79192b10e3c47ed4ffb0de4188a63e91",
-    "object": "79192b10e3c47ed4ffb0de4188a63e91.116770528",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/79192b10e3c47ed4ffb0de4188a63e91.116770528",
+    "oldfile": "2b00a5a68fb6322082753dcff15f76b3.2357064551",
+    "newfile": "f9ff0b61b8d6e925b9d52e8ed2e417b1.4205653591",
+    "patch": "7a31a828fcb177346d6b41277b24df58.2405246414",
+    "version_hash": "f90a9b",
+    "filesize": 2405246414,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7a31a828fcb177346d6b41277b24df58.2405246414",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/79192b10e3c47ed4ffb0de4188a63e91.116770528",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7a31a828fcb177346d6b41277b24df58.2405246414",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/79192b10e3c47ed4ffb0de4188a63e91.116770528",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7a31a828fcb177346d6b41277b24df58.2405246414",
             "content_type": "",
-            "size": 116770528,
+            "size": 2405246414,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1195,7 +1223,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/79192b10e3c47ed4ffb0de4188a63e91.116770528",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7a31a828fcb177346d6b41277b24df58.2405246414",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1204,23 +1232,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_Launch_All_boy/Hotta_Launch_All_boy.mp4",
-    "filesize": 116544745,
-    "md5": "1f4b832404c4fc274835e423abe1d4af",
-    "object": "1f4b832404c4fc274835e423abe1d4af.116544745",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/1f4b832404c4fc274835e423abe1d4af.116544745",
+    "oldfile": "36e0566b717bdf86c9390f4e4e2e1cd6.2140647521",
+    "newfile": "ff49395689306fdd9bb1394139b2ac21.4965847502",
+    "patch": "cb191da9ed3b5b678d40711d77271960.3516984973",
+    "version_hash": "f90a9b",
+    "filesize": 3516984973,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cb191da9ed3b5b678d40711d77271960.3516984973",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/1f4b832404c4fc274835e423abe1d4af.116544745",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cb191da9ed3b5b678d40711d77271960.3516984973",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/1f4b832404c4fc274835e423abe1d4af.116544745",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cb191da9ed3b5b678d40711d77271960.3516984973",
             "content_type": "",
-            "size": 116544745,
+            "size": 3516984973,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1238,7 +1267,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/1f4b832404c4fc274835e423abe1d4af.116544745",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cb191da9ed3b5b678d40711d77271960.3516984973",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1247,23 +1276,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_Launch_All_girl/Hotta_Launch_All_girl.mp4",
-    "filesize": 116542491,
-    "md5": "12e84134dc63af513777b46379f47f65",
-    "object": "12e84134dc63af513777b46379f47f65.116542491",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/12e84134dc63af513777b46379f47f65.116542491",
+    "oldfile": "1a1fffc75fd68903db137e50fc77c393.6601405772",
+    "newfile": "cd8141d35140e4b6a4fe0dcd6bbb2011.8543318380",
+    "patch": "f0c2fc61df18b19bd03678f613316e43.2384155593",
+    "version_hash": "f90a9b",
+    "filesize": 2384155593,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f0c2fc61df18b19bd03678f613316e43.2384155593",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/12e84134dc63af513777b46379f47f65.116542491",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f0c2fc61df18b19bd03678f613316e43.2384155593",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/12e84134dc63af513777b46379f47f65.116542491",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f0c2fc61df18b19bd03678f613316e43.2384155593",
             "content_type": "",
-            "size": 116542491,
+            "size": 2384155593,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1281,7 +1311,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/12e84134dc63af513777b46379f47f65.116542491",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f0c2fc61df18b19bd03678f613316e43.2384155593",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1290,23 +1320,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_destiny_all/Hotta_destiny_all_boy.mp4",
-    "filesize": 326873092,
-    "md5": "e8e4ab9ca60b7d3814959aa05c63bb59",
-    "object": "e8e4ab9ca60b7d3814959aa05c63bb59.326873092",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e8e4ab9ca60b7d3814959aa05c63bb59.326873092",
+    "oldfile": "f67447bea8b2f3c9f1506fed5bc85bcc.9573296801",
+    "newfile": "74ceda5197fefae6804fa00c36b72c8e.9578260401",
+    "patch": "6506b32670aedea70dbc1ddcc8552936.3172078260",
+    "version_hash": "f90a9b",
+    "filesize": 3172078260,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6506b32670aedea70dbc1ddcc8552936.3172078260",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e8e4ab9ca60b7d3814959aa05c63bb59.326873092",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6506b32670aedea70dbc1ddcc8552936.3172078260",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e8e4ab9ca60b7d3814959aa05c63bb59.326873092",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6506b32670aedea70dbc1ddcc8552936.3172078260",
             "content_type": "",
-            "size": 326873092,
+            "size": 3172078260,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1324,7 +1355,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e8e4ab9ca60b7d3814959aa05c63bb59.326873092",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6506b32670aedea70dbc1ddcc8552936.3172078260",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1333,23 +1364,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_destiny_all/Hotta_destiny_all_girl.mp4",
-    "filesize": 326873092,
-    "md5": "e8e4ab9ca60b7d3814959aa05c63bb59",
-    "object": "e8e4ab9ca60b7d3814959aa05c63bb59.326873092",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e8e4ab9ca60b7d3814959aa05c63bb59.326873092",
+    "oldfile": "2a69963b3766d34e2aeea3eb669a96a7.2558096915",
+    "newfile": "3124776319d6aafb74f3212229c325c6.10243107169",
+    "patch": "fac65834c8eccaefb4d031daa337496e.7726873697",
+    "version_hash": "f90a9b",
+    "filesize": 7726873697,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/fac65834c8eccaefb4d031daa337496e.7726873697",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e8e4ab9ca60b7d3814959aa05c63bb59.326873092",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/fac65834c8eccaefb4d031daa337496e.7726873697",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e8e4ab9ca60b7d3814959aa05c63bb59.326873092",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/fac65834c8eccaefb4d031daa337496e.7726873697",
             "content_type": "",
-            "size": 326873092,
+            "size": 7726873697,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1367,7 +1399,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e8e4ab9ca60b7d3814959aa05c63bb59.326873092",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/fac65834c8eccaefb4d031daa337496e.7726873697",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1376,23 +1408,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_feise_all/Hotta_feise_all.mp4",
-    "filesize": 171389658,
-    "md5": "1562def17d3383c23fa88edc17d685b2",
-    "object": "1562def17d3383c23fa88edc17d685b2.171389658",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/1562def17d3383c23fa88edc17d685b2.171389658",
+    "oldfile": "850202984caee28dea309c770ef0de05.8203866814",
+    "newfile": "f8ca2be182655bd76ad2fee68de1910b.14048813374",
+    "patch": "0567d00b5ab0fa8a4c4aff124353ecca.6591931036",
+    "version_hash": "f90a9b",
+    "filesize": 6591931036,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0567d00b5ab0fa8a4c4aff124353ecca.6591931036",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/1562def17d3383c23fa88edc17d685b2.171389658",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0567d00b5ab0fa8a4c4aff124353ecca.6591931036",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/1562def17d3383c23fa88edc17d685b2.171389658",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0567d00b5ab0fa8a4c4aff124353ecca.6591931036",
             "content_type": "",
-            "size": 171389658,
+            "size": 6591931036,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1410,7 +1443,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/1562def17d3383c23fa88edc17d685b2.171389658",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0567d00b5ab0fa8a4c4aff124353ecca.6591931036",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1419,23 +1452,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_marastar_All/Hotta_marastar_All_boy.mp4",
-    "filesize": 278630182,
-    "md5": "a5f5a8780e34e1848fcbc19ee92551ec",
-    "object": "a5f5a8780e34e1848fcbc19ee92551ec.278630182",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a5f5a8780e34e1848fcbc19ee92551ec.278630182",
+    "oldfile": "204a14e137c35087107fcf555ecf14de.164148832",
+    "newfile": "754a66b62a5ff4122c1c324823bbf656.164471392",
+    "patch": "b5219d5daabb613a7568a91f1bc45f14.100472784",
+    "version_hash": "f90a9b",
+    "filesize": 100472784,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b5219d5daabb613a7568a91f1bc45f14.100472784",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a5f5a8780e34e1848fcbc19ee92551ec.278630182",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b5219d5daabb613a7568a91f1bc45f14.100472784",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a5f5a8780e34e1848fcbc19ee92551ec.278630182",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b5219d5daabb613a7568a91f1bc45f14.100472784",
             "content_type": "",
-            "size": 278630182,
+            "size": 100472784,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1453,7 +1487,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a5f5a8780e34e1848fcbc19ee92551ec.278630182",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b5219d5daabb613a7568a91f1bc45f14.100472784",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1462,23 +1496,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_marastar_All/Hotta_marastar_All_girl.mp4",
-    "filesize": 278630182,
-    "md5": "a5f5a8780e34e1848fcbc19ee92551ec",
-    "object": "a5f5a8780e34e1848fcbc19ee92551ec.278630182",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a5f5a8780e34e1848fcbc19ee92551ec.278630182",
+    "oldfile": "f82aee15f797056a8730273322e83d83.116523400",
+    "newfile": "0253cd486fe7d155da8ec0d682176841.116515143",
+    "patch": "2a2ee13f69c44c5e9f5e3e2c047140dd.2660941",
+    "version_hash": "8279d3",
+    "filesize": 2660941,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/2a2ee13f69c44c5e9f5e3e2c047140dd.2660941",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a5f5a8780e34e1848fcbc19ee92551ec.278630182",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/2a2ee13f69c44c5e9f5e3e2c047140dd.2660941",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a5f5a8780e34e1848fcbc19ee92551ec.278630182",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/2a2ee13f69c44c5e9f5e3e2c047140dd.2660941",
             "content_type": "",
-            "size": 278630182,
+            "size": 2660941,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1496,7 +1531,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a5f5a8780e34e1848fcbc19ee92551ec.278630182",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/2a2ee13f69c44c5e9f5e3e2c047140dd.2660941",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1505,23 +1540,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_memory_all_boy/Hotta_memory_all_boy.mp4",
-    "filesize": 116984545,
-    "md5": "cfeae5236017b4f39c9733dc21d95012",
-    "object": "cfeae5236017b4f39c9733dc21d95012.116984545",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cfeae5236017b4f39c9733dc21d95012.116984545",
+    "oldfile": "91eace74366b7be30eeba847ab064830.220480458",
+    "newfile": "0253cd486fe7d155da8ec0d682176841.116515143",
+    "patch": "54cd6f33d2be31b79f49d7561554c690.10915570",
+    "version_hash": "8279d3",
+    "filesize": 10915570,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/54cd6f33d2be31b79f49d7561554c690.10915570",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cfeae5236017b4f39c9733dc21d95012.116984545",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/54cd6f33d2be31b79f49d7561554c690.10915570",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cfeae5236017b4f39c9733dc21d95012.116984545",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/54cd6f33d2be31b79f49d7561554c690.10915570",
             "content_type": "",
-            "size": 116984545,
+            "size": 10915570,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1539,7 +1575,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cfeae5236017b4f39c9733dc21d95012.116984545",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/54cd6f33d2be31b79f49d7561554c690.10915570",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1548,23 +1584,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_memory_all_girl/Hotta_memory_all_girl.mp4",
-    "filesize": 117156066,
-    "md5": "d18463bccc64c68a58c8bf9e8ef5fca8",
-    "object": "d18463bccc64c68a58c8bf9e8ef5fca8.117156066",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d18463bccc64c68a58c8bf9e8ef5fca8.117156066",
+    "oldfile": "754a66b62a5ff4122c1c324823bbf656.164471392",
+    "newfile": "35ca1f8855b089334dc09af0eb07134d.164483680",
+    "patch": "35ba096d5e8fb118c792711b93250554.95980242",
+    "version_hash": "8279d3",
+    "filesize": 95980242,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/35ba096d5e8fb118c792711b93250554.95980242",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d18463bccc64c68a58c8bf9e8ef5fca8.117156066",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/35ba096d5e8fb118c792711b93250554.95980242",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d18463bccc64c68a58c8bf9e8ef5fca8.117156066",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/35ba096d5e8fb118c792711b93250554.95980242",
             "content_type": "",
-            "size": 117156066,
+            "size": 95980242,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1582,7 +1619,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d18463bccc64c68a58c8bf9e8ef5fca8.117156066",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/35ba096d5e8fb118c792711b93250554.95980242",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1591,23 +1628,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_reactivate_all/Hotta_reactivate_all_boy.mp4",
-    "filesize": 92261253,
-    "md5": "b406ad83cf630194943de98ba9167aee",
-    "object": "b406ad83cf630194943de98ba9167aee.92261253",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b406ad83cf630194943de98ba9167aee.92261253",
+    "oldfile": "f7113ccab63d9f5283316f4fbd15f8ab.164137984",
+    "newfile": "a8fbc1f447b160725d672278a00fe040.164472832",
+    "patch": "f76f21a00ed92d31e386fd0fc8dbb573.100594880",
+    "version_hash": "8279d3",
+    "filesize": 100594880,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f76f21a00ed92d31e386fd0fc8dbb573.100594880",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b406ad83cf630194943de98ba9167aee.92261253",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f76f21a00ed92d31e386fd0fc8dbb573.100594880",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b406ad83cf630194943de98ba9167aee.92261253",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f76f21a00ed92d31e386fd0fc8dbb573.100594880",
             "content_type": "",
-            "size": 92261253,
+            "size": 100594880,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1625,7 +1663,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b406ad83cf630194943de98ba9167aee.92261253",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f76f21a00ed92d31e386fd0fc8dbb573.100594880",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1634,23 +1672,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_reactivate_all/Hotta_reactivate_all_girl.mp4",
-    "filesize": 92180370,
-    "md5": "c94d0a53cd18cbff96588cd043d9a84e",
-    "object": "c94d0a53cd18cbff96588cd043d9a84e.92180370",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c94d0a53cd18cbff96588cd043d9a84e.92180370",
+    "oldfile": "204a14e137c35087107fcf555ecf14de.164148832",
+    "newfile": "35ca1f8855b089334dc09af0eb07134d.164483680",
+    "patch": "aba96eb81200a419ab97e81e2e4d327f.100596480",
+    "version_hash": "8279d3",
+    "filesize": 100596480,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/aba96eb81200a419ab97e81e2e4d327f.100596480",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c94d0a53cd18cbff96588cd043d9a84e.92180370",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/aba96eb81200a419ab97e81e2e4d327f.100596480",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c94d0a53cd18cbff96588cd043d9a84e.92180370",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/aba96eb81200a419ab97e81e2e4d327f.100596480",
             "content_type": "",
-            "size": 92180370,
+            "size": 100596480,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1668,7 +1707,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c94d0a53cd18cbff96588cd043d9a84e.92180370",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/aba96eb81200a419ab97e81e2e4d327f.100596480",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1677,23 +1716,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_robcrystal_All/Hotta_robcrystal_All_boy.mp4",
-    "filesize": 423117832,
-    "md5": "3437b01e326bebabfc0591cac00f7857",
-    "object": "3437b01e326bebabfc0591cac00f7857.423117832",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3437b01e326bebabfc0591cac00f7857.423117832",
+    "oldfile": "8903542664f1ea8e42ef157c1a468925.164466176",
+    "newfile": "a8fbc1f447b160725d672278a00fe040.164472832",
+    "patch": "898ae14e18284460b7049de299277c5b.95701098",
+    "version_hash": "8279d3",
+    "filesize": 95701098,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/898ae14e18284460b7049de299277c5b.95701098",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3437b01e326bebabfc0591cac00f7857.423117832",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/898ae14e18284460b7049de299277c5b.95701098",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3437b01e326bebabfc0591cac00f7857.423117832",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/898ae14e18284460b7049de299277c5b.95701098",
             "content_type": "",
-            "size": 423117832,
+            "size": 95701098,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1711,7 +1751,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3437b01e326bebabfc0591cac00f7857.423117832",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/898ae14e18284460b7049de299277c5b.95701098",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1720,23 +1760,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_robcrystal_All/Hotta_robcrystal_All_girl.mp4",
-    "filesize": 423117832,
-    "md5": "3437b01e326bebabfc0591cac00f7857",
-    "object": "3437b01e326bebabfc0591cac00f7857.423117832",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3437b01e326bebabfc0591cac00f7857.423117832",
+    "oldfile": "1a31f702b3a2c1481b75026d714c8e69.164477024",
+    "newfile": "35ca1f8855b089334dc09af0eb07134d.164483680",
+    "patch": "2b74e6a2f3584537d2f094352e9dfcca.95702541",
+    "version_hash": "8279d3",
+    "filesize": 95702541,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/2b74e6a2f3584537d2f094352e9dfcca.95702541",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3437b01e326bebabfc0591cac00f7857.423117832",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/2b74e6a2f3584537d2f094352e9dfcca.95702541",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3437b01e326bebabfc0591cac00f7857.423117832",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/2b74e6a2f3584537d2f094352e9dfcca.95702541",
             "content_type": "",
-            "size": 423117832,
+            "size": 95702541,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1754,7 +1795,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3437b01e326bebabfc0591cac00f7857.423117832",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/2b74e6a2f3584537d2f094352e9dfcca.95702541",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1763,23 +1804,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_xyyj01_all/Hotta_xyyj01_all_boy.mp4",
-    "filesize": 61454371,
-    "md5": "9b318196b3a3f4679147a9cec1ca6236",
-    "object": "9b318196b3a3f4679147a9cec1ca6236.61454371",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9b318196b3a3f4679147a9cec1ca6236.61454371",
+    "oldfile": "4dc78708af9cc9e1054b67476c11b2eb.2310136568",
+    "newfile": "9afdfe992853465342c9ff247876bf3a.68282706",
+    "patch": "51246a4bcd40d078f940bd2eed18b576.51653007",
+    "version_hash": "8279d3",
+    "filesize": 51653007,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/51246a4bcd40d078f940bd2eed18b576.51653007",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9b318196b3a3f4679147a9cec1ca6236.61454371",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/51246a4bcd40d078f940bd2eed18b576.51653007",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9b318196b3a3f4679147a9cec1ca6236.61454371",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/51246a4bcd40d078f940bd2eed18b576.51653007",
             "content_type": "",
-            "size": 61454371,
+            "size": 51653007,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1797,7 +1839,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9b318196b3a3f4679147a9cec1ca6236.61454371",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/51246a4bcd40d078f940bd2eed18b576.51653007",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1806,23 +1848,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/Hotta_xyyj01_all/Hotta_xyyj01_all_girl.mp4",
-    "filesize": 61389467,
-    "md5": "5e8afd06d97f04703be12faee4598371",
-    "object": "5e8afd06d97f04703be12faee4598371.61389467",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5e8afd06d97f04703be12faee4598371.61389467",
+    "oldfile": "16e1b1d7f0ed0a0a9b1ebc4f36cfd4de.1854442628",
+    "newfile": "fbb663639be2de27e51785741a4ba8f9.1940542676",
+    "patch": "a840ec8fb0c9c0f3a4e47f4f75ffb9b3.123510428",
+    "version_hash": "8279d3",
+    "filesize": 123510428,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a840ec8fb0c9c0f3a4e47f4f75ffb9b3.123510428",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5e8afd06d97f04703be12faee4598371.61389467",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a840ec8fb0c9c0f3a4e47f4f75ffb9b3.123510428",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5e8afd06d97f04703be12faee4598371.61389467",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a840ec8fb0c9c0f3a4e47f4f75ffb9b3.123510428",
             "content_type": "",
-            "size": 61389467,
+            "size": 123510428,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1840,7 +1883,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5e8afd06d97f04703be12faee4598371.61389467",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a840ec8fb0c9c0f3a4e47f4f75ffb9b3.123510428",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1849,23 +1892,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/hotta_5_0_02_all/hotta_5_0_02_all.mp4",
-    "filesize": 56092907,
-    "md5": "7782c4a64de19843b1afee7e1353cc16",
-    "object": "7782c4a64de19843b1afee7e1353cc16.56092907",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7782c4a64de19843b1afee7e1353cc16.56092907",
+    "oldfile": "8ee279da562a2330850478187ea37c42.9390709372",
+    "newfile": "fbb663639be2de27e51785741a4ba8f9.1940542676",
+    "patch": "83f99599747f243d0f2f95967e5aa88a.145949029",
+    "version_hash": "8279d3",
+    "filesize": 145949029,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/83f99599747f243d0f2f95967e5aa88a.145949029",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7782c4a64de19843b1afee7e1353cc16.56092907",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/83f99599747f243d0f2f95967e5aa88a.145949029",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7782c4a64de19843b1afee7e1353cc16.56092907",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/83f99599747f243d0f2f95967e5aa88a.145949029",
             "content_type": "",
-            "size": 56092907,
+            "size": 145949029,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1883,7 +1927,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7782c4a64de19843b1afee7e1353cc16.56092907",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/83f99599747f243d0f2f95967e5aa88a.145949029",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1892,23 +1936,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/linghan_ALL_boy/linghan_ALL_boy.mp4",
-    "filesize": 66363696,
-    "md5": "5daf10ad8d4b3e7d0a7ced43b015ffcc",
-    "object": "5daf10ad8d4b3e7d0a7ced43b015ffcc.66363696",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5daf10ad8d4b3e7d0a7ced43b015ffcc.66363696",
+    "oldfile": "91eace74366b7be30eeba847ab064830.220480458",
+    "newfile": "f82aee15f797056a8730273322e83d83.116523400",
+    "patch": "5c5d2ebb0594aac478450db7b1c044e7.11341834",
+    "version_hash": "518b35",
+    "filesize": 11341834,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5c5d2ebb0594aac478450db7b1c044e7.11341834",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5daf10ad8d4b3e7d0a7ced43b015ffcc.66363696",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5c5d2ebb0594aac478450db7b1c044e7.11341834",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5daf10ad8d4b3e7d0a7ced43b015ffcc.66363696",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5c5d2ebb0594aac478450db7b1c044e7.11341834",
             "content_type": "",
-            "size": 66363696,
+            "size": 11341834,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1926,7 +1971,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5daf10ad8d4b3e7d0a7ced43b015ffcc.66363696",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5c5d2ebb0594aac478450db7b1c044e7.11341834",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1935,23 +1980,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/linghan_ALL_girl/linghan_ALL_girl.mp4",
-    "filesize": 66600192,
-    "md5": "041fba229fc286c92421de2fd4b3227a",
-    "object": "041fba229fc286c92421de2fd4b3227a.66600192",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/041fba229fc286c92421de2fd4b3227a.66600192",
+    "oldfile": "f7113ccab63d9f5283316f4fbd15f8ab.164137984",
+    "newfile": "8903542664f1ea8e42ef157c1a468925.164466176",
+    "patch": "1a8cd9a2d5787271f97de53c820af7b6.100486212",
+    "version_hash": "518b35",
+    "filesize": 100486212,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/1a8cd9a2d5787271f97de53c820af7b6.100486212",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/041fba229fc286c92421de2fd4b3227a.66600192",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/1a8cd9a2d5787271f97de53c820af7b6.100486212",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/041fba229fc286c92421de2fd4b3227a.66600192",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/1a8cd9a2d5787271f97de53c820af7b6.100486212",
             "content_type": "",
-            "size": 66600192,
+            "size": 100486212,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -1969,7 +2015,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/041fba229fc286c92421de2fd4b3227a.66600192",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/1/1a8cd9a2d5787271f97de53c820af7b6.100486212",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -1978,23 +2024,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/shiyong/Berry.mp4",
-    "filesize": 87844688,
-    "md5": "231f73cc221f843d7a69415d8b956e1c",
-    "object": "231f73cc221f843d7a69415d8b956e1c.87844688",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/231f73cc221f843d7a69415d8b956e1c.87844688",
+    "oldfile": "754a66b62a5ff4122c1c324823bbf656.164471392",
+    "newfile": "1a31f702b3a2c1481b75026d714c8e69.164477024",
+    "patch": "4421e4dabbc3061a235e10da4081bafc.93320134",
+    "version_hash": "518b35",
+    "filesize": 93320134,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4421e4dabbc3061a235e10da4081bafc.93320134",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/231f73cc221f843d7a69415d8b956e1c.87844688",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4421e4dabbc3061a235e10da4081bafc.93320134",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/231f73cc221f843d7a69415d8b956e1c.87844688",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4421e4dabbc3061a235e10da4081bafc.93320134",
             "content_type": "",
-            "size": 87844688,
+            "size": 93320134,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2012,7 +2059,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/231f73cc221f843d7a69415d8b956e1c.87844688",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4421e4dabbc3061a235e10da4081bafc.93320134",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2021,23 +2068,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/shiyong/Gefion.mp4",
-    "filesize": 134985266,
-    "md5": "bc221365a4861b23d569fa5b99e486a3",
-    "object": "bc221365a4861b23d569fa5b99e486a3.134985266",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bc221365a4861b23d569fa5b99e486a3.134985266",
+    "oldfile": "204a14e137c35087107fcf555ecf14de.164148832",
+    "newfile": "1a31f702b3a2c1481b75026d714c8e69.164477024",
+    "patch": "8f52a239a113170d8b7cda704d8a1fc6.100487812",
+    "version_hash": "518b35",
+    "filesize": 100487812,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8f52a239a113170d8b7cda704d8a1fc6.100487812",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bc221365a4861b23d569fa5b99e486a3.134985266",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8f52a239a113170d8b7cda704d8a1fc6.100487812",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bc221365a4861b23d569fa5b99e486a3.134985266",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8f52a239a113170d8b7cda704d8a1fc6.100487812",
             "content_type": "",
-            "size": 134985266,
+            "size": 100487812,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2055,7 +2103,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bc221365a4861b23d569fa5b99e486a3.134985266",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8f52a239a113170d8b7cda704d8a1fc6.100487812",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2064,23 +2112,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/shiyong/GreyFoxSP.mp4",
-    "filesize": 150254843,
-    "md5": "955043306d5ffb7744e450ea8961f3fc",
-    "object": "955043306d5ffb7744e450ea8961f3fc.150254843",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/955043306d5ffb7744e450ea8961f3fc.150254843",
+    "oldfile": "206a15086c22d167b33428d9e2fb3982.3334079716",
+    "newfile": "eb7bf895f307cb38f5e82041194fb727.60517499",
+    "patch": "252d9e9d21f42d43a950519458a1b553.50781351",
+    "version_hash": "518b35",
+    "filesize": 50781351,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/252d9e9d21f42d43a950519458a1b553.50781351",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/955043306d5ffb7744e450ea8961f3fc.150254843",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/252d9e9d21f42d43a950519458a1b553.50781351",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/955043306d5ffb7744e450ea8961f3fc.150254843",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/252d9e9d21f42d43a950519458a1b553.50781351",
             "content_type": "",
-            "size": 150254843,
+            "size": 50781351,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2098,7 +2147,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/955043306d5ffb7744e450ea8961f3fc.150254843",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/252d9e9d21f42d43a950519458a1b553.50781351",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2107,23 +2156,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/shiyong/Salidy.mp4",
-    "filesize": 72559781,
-    "md5": "02fac542f7b3e507f3f5ed4791280e84",
-    "object": "02fac542f7b3e507f3f5ed4791280e84.72559781",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/02fac542f7b3e507f3f5ed4791280e84.72559781",
+    "oldfile": "8ee279da562a2330850478187ea37c42.9390709372",
+    "newfile": "16e1b1d7f0ed0a0a9b1ebc4f36cfd4de.1854442628",
+    "patch": "ce24f70d7db9fd7b2cc9f94dfdeb11b4.127785438",
+    "version_hash": "518b35",
+    "filesize": 127785438,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/ce24f70d7db9fd7b2cc9f94dfdeb11b4.127785438",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/02fac542f7b3e507f3f5ed4791280e84.72559781",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/ce24f70d7db9fd7b2cc9f94dfdeb11b4.127785438",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/02fac542f7b3e507f3f5ed4791280e84.72559781",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/ce24f70d7db9fd7b2cc9f94dfdeb11b4.127785438",
             "content_type": "",
-            "size": 72559781,
+            "size": 127785438,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2141,7 +2191,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/02fac542f7b3e507f3f5ed4791280e84.72559781",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/ce24f70d7db9fd7b2cc9f94dfdeb11b4.127785438",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2150,23 +2200,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/shiyong/Skull.mp4",
-    "filesize": 112561728,
-    "md5": "30f380a9f830e549d58e413416ced89e",
-    "object": "30f380a9f830e549d58e413416ced89e.112561728",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/30f380a9f830e549d58e413416ced89e.112561728",
+    "oldfile": "91eace74366b7be30eeba847ab064830.220480458",
+    "newfile": "c660dd049e8fe5cf4976cb429e2a850c.177920686",
+    "patch": "9ed51a42924906fc3324789d829e77cd.12221988",
+    "version_hash": "110ac3",
+    "filesize": 12221988,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9ed51a42924906fc3324789d829e77cd.12221988",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/30f380a9f830e549d58e413416ced89e.112561728",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9ed51a42924906fc3324789d829e77cd.12221988",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/30f380a9f830e549d58e413416ced89e.112561728",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9ed51a42924906fc3324789d829e77cd.12221988",
             "content_type": "",
-            "size": 112561728,
+            "size": 12221988,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2184,7 +2235,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/30f380a9f830e549d58e413416ced89e.112561728",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9ed51a42924906fc3324789d829e77cd.12221988",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2193,23 +2244,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/shiyong/StabDagger.mp4",
-    "filesize": 53517940,
-    "md5": "d6eeb02099af8ab13ce2edb5a9aadac1",
-    "object": "d6eeb02099af8ab13ce2edb5a9aadac1.53517940",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d6eeb02099af8ab13ce2edb5a9aadac1.53517940",
+    "oldfile": "f82aee15f797056a8730273322e83d83.116523400",
+    "newfile": "c660dd049e8fe5cf4976cb429e2a850c.177920686",
+    "patch": "75ec5f7ef990041a0209c3fdf493b4aa.83034759",
+    "version_hash": "110ac3",
+    "filesize": 83034759,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/75ec5f7ef990041a0209c3fdf493b4aa.83034759",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d6eeb02099af8ab13ce2edb5a9aadac1.53517940",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/75ec5f7ef990041a0209c3fdf493b4aa.83034759",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d6eeb02099af8ab13ce2edb5a9aadac1.53517940",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/75ec5f7ef990041a0209c3fdf493b4aa.83034759",
             "content_type": "",
-            "size": 53517940,
+            "size": 83034759,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2227,7 +2279,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d6eeb02099af8ab13ce2edb5a9aadac1.53517940",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/75ec5f7ef990041a0209c3fdf493b4aa.83034759",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2236,23 +2288,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/shiyong/Violin.mp4",
-    "filesize": 164422636,
-    "md5": "6257c8380ace243fdd017fd84cba40f5",
-    "object": "6257c8380ace243fdd017fd84cba40f5.164422636",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6257c8380ace243fdd017fd84cba40f5.164422636",
+    "oldfile": "f7113ccab63d9f5283316f4fbd15f8ab.164137984",
+    "newfile": "54833fe38c660d6e5c7f976e82ffe1b9.164473856",
+    "patch": "c5b594a57e622ae9318c44c067ab2f3e.100598011",
+    "version_hash": "110ac3",
+    "filesize": 100598011,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c5b594a57e622ae9318c44c067ab2f3e.100598011",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6257c8380ace243fdd017fd84cba40f5.164422636",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c5b594a57e622ae9318c44c067ab2f3e.100598011",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6257c8380ace243fdd017fd84cba40f5.164422636",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c5b594a57e622ae9318c44c067ab2f3e.100598011",
             "content_type": "",
-            "size": 164422636,
+            "size": 100598011,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2270,7 +2323,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6257c8380ace243fdd017fd84cba40f5.164422636",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c5b594a57e622ae9318c44c067ab2f3e.100598011",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2279,23 +2332,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/FFMpeg/shiyong/gunbox.mp4",
-    "filesize": 53188478,
-    "md5": "7c38241f7d5ca6955179b0a44838b823",
-    "object": "7c38241f7d5ca6955179b0a44838b823.53188478",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7c38241f7d5ca6955179b0a44838b823.53188478",
+    "oldfile": "754a66b62a5ff4122c1c324823bbf656.164471392",
+    "newfile": "fdac62c442684e85d83c4e81d5ed0975.164484704",
+    "patch": "c069dfa5ed07b4fccac386e0267f8d2d.96197827",
+    "version_hash": "110ac3",
+    "filesize": 96197827,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c069dfa5ed07b4fccac386e0267f8d2d.96197827",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7c38241f7d5ca6955179b0a44838b823.53188478",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c069dfa5ed07b4fccac386e0267f8d2d.96197827",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7c38241f7d5ca6955179b0a44838b823.53188478",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c069dfa5ed07b4fccac386e0267f8d2d.96197827",
             "content_type": "",
-            "size": 53188478,
+            "size": 96197827,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2313,7 +2367,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/7c38241f7d5ca6955179b0a44838b823.53188478",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c069dfa5ed07b4fccac386e0267f8d2d.96197827",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2322,23 +2376,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Movies/Scene/Pool/Pool_Media3.mp4",
-    "filesize": 94330481,
-    "md5": "0bf6b6560bac4006e644dbbce1a6c7c1",
-    "object": "0bf6b6560bac4006e644dbbce1a6c7c1.94330481",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0bf6b6560bac4006e644dbbce1a6c7c1.94330481",
+    "oldfile": "8903542664f1ea8e42ef157c1a468925.164466176",
+    "newfile": "54833fe38c660d6e5c7f976e82ffe1b9.164473856",
+    "patch": "71d034758c32f3113cf321d535dd558c.96231912",
+    "version_hash": "110ac3",
+    "filesize": 96231912,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/71d034758c32f3113cf321d535dd558c.96231912",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0bf6b6560bac4006e644dbbce1a6c7c1.94330481",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/71d034758c32f3113cf321d535dd558c.96231912",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0bf6b6560bac4006e644dbbce1a6c7c1.94330481",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/71d034758c32f3113cf321d535dd558c.96231912",
             "content_type": "",
-            "size": 94330481,
+            "size": 96231912,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2356,7 +2411,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0bf6b6560bac4006e644dbbce1a6c7c1.94330481",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/71d034758c32f3113cf321d535dd558c.96231912",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2365,23 +2420,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk0-WindowsNoEditor.pak",
-    "filesize": 14048813374,
-    "md5": "f8ca2be182655bd76ad2fee68de1910b",
-    "object": "f8ca2be182655bd76ad2fee68de1910b.14048813374",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f8ca2be182655bd76ad2fee68de1910b.14048813374",
+    "oldfile": "204a14e137c35087107fcf555ecf14de.164148832",
+    "newfile": "fdac62c442684e85d83c4e81d5ed0975.164484704",
+    "patch": "f034a42737e445aeac14cf433d175103.100599454",
+    "version_hash": "110ac3",
+    "filesize": 100599454,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f034a42737e445aeac14cf433d175103.100599454",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f8ca2be182655bd76ad2fee68de1910b.14048813374",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f034a42737e445aeac14cf433d175103.100599454",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f8ca2be182655bd76ad2fee68de1910b.14048813374",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f034a42737e445aeac14cf433d175103.100599454",
             "content_type": "",
-            "size": 14048813374,
+            "size": 100599454,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2399,7 +2455,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f8ca2be182655bd76ad2fee68de1910b.14048813374",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f034a42737e445aeac14cf433d175103.100599454",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2408,23 +2464,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk1-WindowsNoEditor.pak",
-    "filesize": 4205653591,
-    "md5": "f9ff0b61b8d6e925b9d52e8ed2e417b1",
-    "object": "f9ff0b61b8d6e925b9d52e8ed2e417b1.4205653591",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f9ff0b61b8d6e925b9d52e8ed2e417b1.4205653591",
+    "oldfile": "1a31f702b3a2c1481b75026d714c8e69.164477024",
+    "newfile": "fdac62c442684e85d83c4e81d5ed0975.164484704",
+    "patch": "393079601b6327f075b74971af83fbe3.96233512",
+    "version_hash": "110ac3",
+    "filesize": 96233512,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/393079601b6327f075b74971af83fbe3.96233512",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f9ff0b61b8d6e925b9d52e8ed2e417b1.4205653591",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/393079601b6327f075b74971af83fbe3.96233512",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f9ff0b61b8d6e925b9d52e8ed2e417b1.4205653591",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/393079601b6327f075b74971af83fbe3.96233512",
             "content_type": "",
-            "size": 4205653591,
+            "size": 96233512,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2442,7 +2499,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f9ff0b61b8d6e925b9d52e8ed2e417b1.4205653591",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/393079601b6327f075b74971af83fbe3.96233512",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2451,23 +2508,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk10-WindowsNoEditor.pak",
-    "filesize": 2229159323,
-    "md5": "c299cf310ef1f49bd77b695b4571a2d7",
-    "object": "c299cf310ef1f49bd77b695b4571a2d7.2229159323",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c299cf310ef1f49bd77b695b4571a2d7.2229159323",
+    "oldfile": "9afdfe992853465342c9ff247876bf3a.68282706",
+    "newfile": "ef05a6dca975c5032f0b0e89f660d4b9.79008664",
+    "patch": "a02d76be303b5afe7a3ced85f77f354d.12179762",
+    "version_hash": "110ac3",
+    "filesize": 12179762,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a02d76be303b5afe7a3ced85f77f354d.12179762",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c299cf310ef1f49bd77b695b4571a2d7.2229159323",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a02d76be303b5afe7a3ced85f77f354d.12179762",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c299cf310ef1f49bd77b695b4571a2d7.2229159323",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a02d76be303b5afe7a3ced85f77f354d.12179762",
             "content_type": "",
-            "size": 2229159323,
+            "size": 12179762,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2485,7 +2543,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c299cf310ef1f49bd77b695b4571a2d7.2229159323",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a02d76be303b5afe7a3ced85f77f354d.12179762",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2494,23 +2552,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk11-WindowsNoEditor.pak",
-    "filesize": 7641372388,
-    "md5": "3550ecc6e12c88fc510af5d0c0b717ab",
-    "object": "3550ecc6e12c88fc510af5d0c0b717ab.7641372388",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3550ecc6e12c88fc510af5d0c0b717ab.7641372388",
+    "oldfile": "0253cd486fe7d155da8ec0d682176841.116515143",
+    "newfile": "c660dd049e8fe5cf4976cb429e2a850c.177920686",
+    "patch": "b26d8b6fa702f8ed7b272607360a279f.82988277",
+    "version_hash": "110ac3",
+    "filesize": 82988277,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b26d8b6fa702f8ed7b272607360a279f.82988277",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3550ecc6e12c88fc510af5d0c0b717ab.7641372388",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b26d8b6fa702f8ed7b272607360a279f.82988277",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3550ecc6e12c88fc510af5d0c0b717ab.7641372388",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b26d8b6fa702f8ed7b272607360a279f.82988277",
             "content_type": "",
-            "size": 7641372388,
+            "size": 82988277,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2528,7 +2587,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3550ecc6e12c88fc510af5d0c0b717ab.7641372388",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b26d8b6fa702f8ed7b272607360a279f.82988277",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2537,23 +2596,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk12-WindowsNoEditor.pak",
-    "filesize": 4965847502,
-    "md5": "ff49395689306fdd9bb1394139b2ac21",
-    "object": "ff49395689306fdd9bb1394139b2ac21.4965847502",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/ff49395689306fdd9bb1394139b2ac21.4965847502",
+    "oldfile": "a8fbc1f447b160725d672278a00fe040.164472832",
+    "newfile": "54833fe38c660d6e5c7f976e82ffe1b9.164473856",
+    "patch": "b914b08ced2c81286f9e848c1220aa26.84121282",
+    "version_hash": "110ac3",
+    "filesize": 84121282,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b914b08ced2c81286f9e848c1220aa26.84121282",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/ff49395689306fdd9bb1394139b2ac21.4965847502",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b914b08ced2c81286f9e848c1220aa26.84121282",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/ff49395689306fdd9bb1394139b2ac21.4965847502",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b914b08ced2c81286f9e848c1220aa26.84121282",
             "content_type": "",
-            "size": 4965847502,
+            "size": 84121282,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2571,7 +2631,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/ff49395689306fdd9bb1394139b2ac21.4965847502",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b914b08ced2c81286f9e848c1220aa26.84121282",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2580,23 +2640,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk12optional-WindowsNoEditor.pak",
-    "filesize": 77532292,
-    "md5": "f3270a2e8a3cd5110939f51d9370585b",
-    "object": "f3270a2e8a3cd5110939f51d9370585b.77532292",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f3270a2e8a3cd5110939f51d9370585b.77532292",
+    "oldfile": "35ca1f8855b089334dc09af0eb07134d.164483680",
+    "newfile": "fdac62c442684e85d83c4e81d5ed0975.164484704",
+    "patch": "372298224c3d78d10692996696a8ff25.84122877",
+    "version_hash": "110ac3",
+    "filesize": 84122877,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/372298224c3d78d10692996696a8ff25.84122877",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f3270a2e8a3cd5110939f51d9370585b.77532292",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/372298224c3d78d10692996696a8ff25.84122877",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f3270a2e8a3cd5110939f51d9370585b.77532292",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/372298224c3d78d10692996696a8ff25.84122877",
             "content_type": "",
-            "size": 77532292,
+            "size": 84122877,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2614,7 +2675,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f3270a2e8a3cd5110939f51d9370585b.77532292",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/372298224c3d78d10692996696a8ff25.84122877",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2623,23 +2684,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk13-WindowsNoEditor.pak",
-    "filesize": 2729451772,
-    "md5": "4c21fdac95c64f211d48e3a7a5b3684f",
-    "object": "4c21fdac95c64f211d48e3a7a5b3684f.2729451772",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4c21fdac95c64f211d48e3a7a5b3684f.2729451772",
+    "oldfile": "16e1b1d7f0ed0a0a9b1ebc4f36cfd4de.1854442628",
+    "newfile": "6dd904fea6812552d94bb306bf72056f.1941548374",
+    "patch": "de85a2599256956ccd32dadedb8a4bfa.126322361",
+    "version_hash": "110ac3",
+    "filesize": 126322361,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/de85a2599256956ccd32dadedb8a4bfa.126322361",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4c21fdac95c64f211d48e3a7a5b3684f.2729451772",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/de85a2599256956ccd32dadedb8a4bfa.126322361",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4c21fdac95c64f211d48e3a7a5b3684f.2729451772",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/de85a2599256956ccd32dadedb8a4bfa.126322361",
             "content_type": "",
-            "size": 2729451772,
+            "size": 126322361,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2657,7 +2719,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4c21fdac95c64f211d48e3a7a5b3684f.2729451772",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/de85a2599256956ccd32dadedb8a4bfa.126322361",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2666,23 +2728,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk14-WindowsNoEditor.pak",
-    "filesize": 874618126,
-    "md5": "21ea982255c3b09d82aa798a96653497",
-    "object": "21ea982255c3b09d82aa798a96653497.874618126",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/21ea982255c3b09d82aa798a96653497.874618126",
+    "oldfile": "4dc78708af9cc9e1054b67476c11b2eb.2310136568",
+    "newfile": "ef05a6dca975c5032f0b0e89f660d4b9.79008664",
+    "patch": "9181c1a9a15f58da50b614f629b33dfb.62282366",
+    "version_hash": "110ac3",
+    "filesize": 62282366,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9181c1a9a15f58da50b614f629b33dfb.62282366",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/21ea982255c3b09d82aa798a96653497.874618126",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9181c1a9a15f58da50b614f629b33dfb.62282366",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/21ea982255c3b09d82aa798a96653497.874618126",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9181c1a9a15f58da50b614f629b33dfb.62282366",
             "content_type": "",
-            "size": 874618126,
+            "size": 62282366,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2700,7 +2763,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/21ea982255c3b09d82aa798a96653497.874618126",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9181c1a9a15f58da50b614f629b33dfb.62282366",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2709,23 +2772,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk2-WindowsNoEditor.pak",
-    "filesize": 9578260401,
-    "md5": "74ceda5197fefae6804fa00c36b72c8e",
-    "object": "74ceda5197fefae6804fa00c36b72c8e.9578260401",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/74ceda5197fefae6804fa00c36b72c8e.9578260401",
+    "oldfile": "fbb663639be2de27e51785741a4ba8f9.1940542676",
+    "newfile": "6dd904fea6812552d94bb306bf72056f.1941548374",
+    "patch": "6dc380cb4b49b4ce868447053f94cf11.38220149",
+    "version_hash": "110ac3",
+    "filesize": 38220149,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6dc380cb4b49b4ce868447053f94cf11.38220149",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/74ceda5197fefae6804fa00c36b72c8e.9578260401",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6dc380cb4b49b4ce868447053f94cf11.38220149",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/74ceda5197fefae6804fa00c36b72c8e.9578260401",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6dc380cb4b49b4ce868447053f94cf11.38220149",
             "content_type": "",
-            "size": 9578260401,
+            "size": 38220149,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2743,7 +2807,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/74ceda5197fefae6804fa00c36b72c8e.9578260401",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/6dc380cb4b49b4ce868447053f94cf11.38220149",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2752,23 +2816,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk20-WindowsNoEditor.pak",
-    "filesize": 8543318380,
-    "md5": "cd8141d35140e4b6a4fe0dcd6bbb2011",
-    "object": "cd8141d35140e4b6a4fe0dcd6bbb2011.8543318380",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cd8141d35140e4b6a4fe0dcd6bbb2011.8543318380",
+    "oldfile": "8ee279da562a2330850478187ea37c42.9390709372",
+    "newfile": "6dd904fea6812552d94bb306bf72056f.1941548374",
+    "patch": "30907427b0a54049abf28b8204227a77.146902853",
+    "version_hash": "110ac3",
+    "filesize": 146902853,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/30907427b0a54049abf28b8204227a77.146902853",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cd8141d35140e4b6a4fe0dcd6bbb2011.8543318380",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/30907427b0a54049abf28b8204227a77.146902853",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cd8141d35140e4b6a4fe0dcd6bbb2011.8543318380",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/30907427b0a54049abf28b8204227a77.146902853",
             "content_type": "",
-            "size": 8543318380,
+            "size": 146902853,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2786,7 +2851,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cd8141d35140e4b6a4fe0dcd6bbb2011.8543318380",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/30907427b0a54049abf28b8204227a77.146902853",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2795,23 +2860,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk21-WindowsNoEditor.pak",
-    "filesize": 10243107169,
-    "md5": "3124776319d6aafb74f3212229c325c6",
-    "object": "3124776319d6aafb74f3212229c325c6.10243107169",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3124776319d6aafb74f3212229c325c6.10243107169",
+    "oldfile": "8903542664f1ea8e42ef157c1a468925.164466176",
+    "newfile": "df3bb057e981030705f6ca7fb9b7c53d.164474880",
+    "patch": "c9eaba4193f0ee59e7bad7e317ae889f.93978452",
+    "version_hash": "460ef5",
+    "filesize": 93978452,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c9eaba4193f0ee59e7bad7e317ae889f.93978452",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3124776319d6aafb74f3212229c325c6.10243107169",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c9eaba4193f0ee59e7bad7e317ae889f.93978452",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3124776319d6aafb74f3212229c325c6.10243107169",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c9eaba4193f0ee59e7bad7e317ae889f.93978452",
             "content_type": "",
-            "size": 10243107169,
+            "size": 93978452,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2829,7 +2895,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/3124776319d6aafb74f3212229c325c6.10243107169",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/c9eaba4193f0ee59e7bad7e317ae889f.93978452",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2838,23 +2904,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk2optional-WindowsNoEditor.pak",
-    "filesize": 63550769,
-    "md5": "581cb19ab60586c6f2251c6c960557a6",
-    "object": "581cb19ab60586c6f2251c6c960557a6.63550769",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/581cb19ab60586c6f2251c6c960557a6.63550769",
+    "oldfile": "204a14e137c35087107fcf555ecf14de.164148832",
+    "newfile": "b48e00ec9c0167c84434b5a38d06686a.164485728",
+    "patch": "b3064ee165a36ed03af242505903f84d.100573962",
+    "version_hash": "460ef5",
+    "filesize": 100573962,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b3064ee165a36ed03af242505903f84d.100573962",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/581cb19ab60586c6f2251c6c960557a6.63550769",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b3064ee165a36ed03af242505903f84d.100573962",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/581cb19ab60586c6f2251c6c960557a6.63550769",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b3064ee165a36ed03af242505903f84d.100573962",
             "content_type": "",
-            "size": 63550769,
+            "size": 100573962,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2872,7 +2939,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/581cb19ab60586c6f2251c6c960557a6.63550769",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b3064ee165a36ed03af242505903f84d.100573962",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2881,23 +2948,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk3-WindowsNoEditor.pak",
-    "filesize": 8844284181,
-    "md5": "cf22eb7396a030ebe16360937aa60c43",
-    "object": "cf22eb7396a030ebe16360937aa60c43.8844284181",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cf22eb7396a030ebe16360937aa60c43.8844284181",
+    "oldfile": "f7113ccab63d9f5283316f4fbd15f8ab.164137984",
+    "newfile": "df3bb057e981030705f6ca7fb9b7c53d.164474880",
+    "patch": "4bef3c910f7065d05d25c10c457f6108.100572522",
+    "version_hash": "460ef5",
+    "filesize": 100572522,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4bef3c910f7065d05d25c10c457f6108.100572522",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cf22eb7396a030ebe16360937aa60c43.8844284181",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4bef3c910f7065d05d25c10c457f6108.100572522",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cf22eb7396a030ebe16360937aa60c43.8844284181",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4bef3c910f7065d05d25c10c457f6108.100572522",
             "content_type": "",
-            "size": 8844284181,
+            "size": 100572522,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2915,7 +2983,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/c/cf22eb7396a030ebe16360937aa60c43.8844284181",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4bef3c910f7065d05d25c10c457f6108.100572522",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2924,23 +2992,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk3optional-WindowsNoEditor.pak",
-    "filesize": 101231200,
-    "md5": "f91ef0cd6477f6dabbaf30476d638461",
-    "object": "f91ef0cd6477f6dabbaf30476d638461.101231200",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f91ef0cd6477f6dabbaf30476d638461.101231200",
+    "oldfile": "a8fbc1f447b160725d672278a00fe040.164472832",
+    "newfile": "df3bb057e981030705f6ca7fb9b7c53d.164474880",
+    "patch": "5be08aef3ca8fe05612060d7fceb68fe.86683919",
+    "version_hash": "460ef5",
+    "filesize": 86683919,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5be08aef3ca8fe05612060d7fceb68fe.86683919",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f91ef0cd6477f6dabbaf30476d638461.101231200",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5be08aef3ca8fe05612060d7fceb68fe.86683919",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f91ef0cd6477f6dabbaf30476d638461.101231200",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5be08aef3ca8fe05612060d7fceb68fe.86683919",
             "content_type": "",
-            "size": 101231200,
+            "size": 86683919,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -2958,7 +3027,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f91ef0cd6477f6dabbaf30476d638461.101231200",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5be08aef3ca8fe05612060d7fceb68fe.86683919",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -2967,23 +3036,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk4-WindowsNoEditor.pak",
-    "filesize": 1748164564,
-    "md5": "688bef4e35f123ff0f52d6c76a2d820f",
-    "object": "688bef4e35f123ff0f52d6c76a2d820f.1748164564",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/688bef4e35f123ff0f52d6c76a2d820f.1748164564",
+    "oldfile": "1a31f702b3a2c1481b75026d714c8e69.164477024",
+    "newfile": "b48e00ec9c0167c84434b5a38d06686a.164485728",
+    "patch": "02e4486a3a3e71fabce53c318ffc72ed.93980054",
+    "version_hash": "460ef5",
+    "filesize": 93980054,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/02e4486a3a3e71fabce53c318ffc72ed.93980054",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/688bef4e35f123ff0f52d6c76a2d820f.1748164564",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/02e4486a3a3e71fabce53c318ffc72ed.93980054",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/688bef4e35f123ff0f52d6c76a2d820f.1748164564",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/02e4486a3a3e71fabce53c318ffc72ed.93980054",
             "content_type": "",
-            "size": 1748164564,
+            "size": 93980054,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3001,7 +3071,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/688bef4e35f123ff0f52d6c76a2d820f.1748164564",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/02e4486a3a3e71fabce53c318ffc72ed.93980054",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3010,23 +3080,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk5-WindowsNoEditor.pak",
-    "filesize": 736422228,
-    "md5": "0b0a34c41bc5ed38b9af138404ad9296",
-    "object": "0b0a34c41bc5ed38b9af138404ad9296.736422228",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0b0a34c41bc5ed38b9af138404ad9296.736422228",
+    "oldfile": "35ca1f8855b089334dc09af0eb07134d.164483680",
+    "newfile": "b48e00ec9c0167c84434b5a38d06686a.164485728",
+    "patch": "db08f5c632e1742ea9c0459b6df6881c.86685519",
+    "version_hash": "460ef5",
+    "filesize": 86685519,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/db08f5c632e1742ea9c0459b6df6881c.86685519",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0b0a34c41bc5ed38b9af138404ad9296.736422228",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/db08f5c632e1742ea9c0459b6df6881c.86685519",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0b0a34c41bc5ed38b9af138404ad9296.736422228",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/db08f5c632e1742ea9c0459b6df6881c.86685519",
             "content_type": "",
-            "size": 736422228,
+            "size": 86685519,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3044,7 +3115,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0b0a34c41bc5ed38b9af138404ad9296.736422228",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/db08f5c632e1742ea9c0459b6df6881c.86685519",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3053,23 +3124,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk6-WindowsNoEditor.pak",
-    "filesize": 1047241664,
-    "md5": "542524abe0c3d23584101e493c778efc",
-    "object": "542524abe0c3d23584101e493c778efc.1047241664",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/542524abe0c3d23584101e493c778efc.1047241664",
+    "oldfile": "54833fe38c660d6e5c7f976e82ffe1b9.164473856",
+    "newfile": "df3bb057e981030705f6ca7fb9b7c53d.164474880",
+    "patch": "360902ff00a91ac5acda5099e43f3043.77502486",
+    "version_hash": "460ef5",
+    "filesize": 77502486,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/360902ff00a91ac5acda5099e43f3043.77502486",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/542524abe0c3d23584101e493c778efc.1047241664",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/360902ff00a91ac5acda5099e43f3043.77502486",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/542524abe0c3d23584101e493c778efc.1047241664",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/360902ff00a91ac5acda5099e43f3043.77502486",
             "content_type": "",
-            "size": 1047241664,
+            "size": 77502486,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3087,7 +3159,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/542524abe0c3d23584101e493c778efc.1047241664",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/360902ff00a91ac5acda5099e43f3043.77502486",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3096,23 +3168,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk7-WindowsNoEditor.pak",
-    "filesize": 902039477,
-    "md5": "facef6accdb79300eb6b8ded0748b888",
-    "object": "facef6accdb79300eb6b8ded0748b888.902039477",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/facef6accdb79300eb6b8ded0748b888.902039477",
+    "oldfile": "fdac62c442684e85d83c4e81d5ed0975.164484704",
+    "newfile": "b48e00ec9c0167c84434b5a38d06686a.164485728",
+    "patch": "f81f58167bd274e0a6809c7a4ab6eef1.77503929",
+    "version_hash": "460ef5",
+    "filesize": 77503929,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f81f58167bd274e0a6809c7a4ab6eef1.77503929",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/facef6accdb79300eb6b8ded0748b888.902039477",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f81f58167bd274e0a6809c7a4ab6eef1.77503929",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/facef6accdb79300eb6b8ded0748b888.902039477",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f81f58167bd274e0a6809c7a4ab6eef1.77503929",
             "content_type": "",
-            "size": 902039477,
+            "size": 77503929,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3130,7 +3203,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/facef6accdb79300eb6b8ded0748b888.902039477",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f81f58167bd274e0a6809c7a4ab6eef1.77503929",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3139,23 +3212,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk7optional-WindowsNoEditor.pak",
-    "filesize": 79596793,
-    "md5": "b5b1b5b1556e2636a8d3b5f04e70c474",
-    "object": "b5b1b5b1556e2636a8d3b5f04e70c474.79596793",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b5b1b5b1556e2636a8d3b5f04e70c474.79596793",
+    "oldfile": "9afdfe992853465342c9ff247876bf3a.68282706",
+    "newfile": "478676a8f84e5a73ad36b33eacd032d1.79012968",
+    "patch": "b02c2f895428901f1e32c8cf6b37cb40.12276988",
+    "version_hash": "37e35b",
+    "filesize": 12276988,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b02c2f895428901f1e32c8cf6b37cb40.12276988",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b5b1b5b1556e2636a8d3b5f04e70c474.79596793",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b02c2f895428901f1e32c8cf6b37cb40.12276988",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b5b1b5b1556e2636a8d3b5f04e70c474.79596793",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b02c2f895428901f1e32c8cf6b37cb40.12276988",
             "content_type": "",
-            "size": 79596793,
+            "size": 12276988,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3173,7 +3247,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b5b1b5b1556e2636a8d3b5f04e70c474.79596793",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b02c2f895428901f1e32c8cf6b37cb40.12276988",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3182,23 +3256,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk8-WindowsNoEditor.pak",
-    "filesize": 740953400,
-    "md5": "5730b091bf8c5b46cb9e7de0a328c04b",
-    "object": "5730b091bf8c5b46cb9e7de0a328c04b.740953400",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5730b091bf8c5b46cb9e7de0a328c04b.740953400",
+    "oldfile": "91eace74366b7be30eeba847ab064830.220480458",
+    "newfile": "8b3f7105e17a00422004ef4e8342d2a2.180378274",
+    "patch": "daa3b3db950bdb3765be37f6ba7f0ab0.12557262",
+    "version_hash": "37e35b",
+    "filesize": 12557262,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/daa3b3db950bdb3765be37f6ba7f0ab0.12557262",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5730b091bf8c5b46cb9e7de0a328c04b.740953400",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/daa3b3db950bdb3765be37f6ba7f0ab0.12557262",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5730b091bf8c5b46cb9e7de0a328c04b.740953400",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/daa3b3db950bdb3765be37f6ba7f0ab0.12557262",
             "content_type": "",
-            "size": 740953400,
+            "size": 12557262,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3216,7 +3291,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/5730b091bf8c5b46cb9e7de0a328c04b.740953400",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/daa3b3db950bdb3765be37f6ba7f0ab0.12557262",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3225,23 +3300,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/Paks/pakchunk9-WindowsNoEditor.pak",
-    "filesize": 513185709,
-    "md5": "382e60666908b6fcd0b6b1fa43855181",
-    "object": "382e60666908b6fcd0b6b1fa43855181.513185709",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/382e60666908b6fcd0b6b1fa43855181.513185709",
+    "oldfile": "0253cd486fe7d155da8ec0d682176841.116515143",
+    "newfile": "8b3f7105e17a00422004ef4e8342d2a2.180378274",
+    "patch": "d8ba906012a7e01685bcf59e2bab3a57.86572362",
+    "version_hash": "37e35b",
+    "filesize": 86572362,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d8ba906012a7e01685bcf59e2bab3a57.86572362",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/382e60666908b6fcd0b6b1fa43855181.513185709",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d8ba906012a7e01685bcf59e2bab3a57.86572362",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/382e60666908b6fcd0b6b1fa43855181.513185709",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d8ba906012a7e01685bcf59e2bab3a57.86572362",
             "content_type": "",
-            "size": 513185709,
+            "size": 86572362,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3259,7 +3335,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/382e60666908b6fcd0b6b1fa43855181.513185709",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/d8ba906012a7e01685bcf59e2bab3a57.86572362",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3268,23 +3344,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk0-WindowsNoEditor_0_P.pak",
-    "filesize": 6695940146,
-    "md5": "bd0e558f6f572e52c9aa9d1d8c073999",
-    "object": "bd0e558f6f572e52c9aa9d1d8c073999.6695940146",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bd0e558f6f572e52c9aa9d1d8c073999.6695940146",
+    "oldfile": "f7113ccab63d9f5283316f4fbd15f8ab.164137984",
+    "newfile": "4ac26f9c2c13b9b86d5f77363155e328.164477440",
+    "patch": "36007e514c094bd2c9d974efb278743a.100554727",
+    "version_hash": "37e35b",
+    "filesize": 100554727,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/36007e514c094bd2c9d974efb278743a.100554727",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bd0e558f6f572e52c9aa9d1d8c073999.6695940146",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/36007e514c094bd2c9d974efb278743a.100554727",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bd0e558f6f572e52c9aa9d1d8c073999.6695940146",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/36007e514c094bd2c9d974efb278743a.100554727",
             "content_type": "",
-            "size": 6695940146,
+            "size": 100554727,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3302,7 +3379,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bd0e558f6f572e52c9aa9d1d8c073999.6695940146",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/3/36007e514c094bd2c9d974efb278743a.100554727",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3311,23 +3388,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk1-WindowsNoEditor_0_P.pak",
-    "filesize": 1667288323,
-    "md5": "9c2d4496a8c1c7a48234cfd9b98f1e24",
-    "object": "9c2d4496a8c1c7a48234cfd9b98f1e24.1667288323",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9c2d4496a8c1c7a48234cfd9b98f1e24.1667288323",
+    "oldfile": "204a14e137c35087107fcf555ecf14de.164148832",
+    "newfile": "60e80fd41937bb6f8171be549e882664.164488288",
+    "patch": "95a3af3d6a7b855bf705db1dbb72923a.100556330",
+    "version_hash": "37e35b",
+    "filesize": 100556330,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/95a3af3d6a7b855bf705db1dbb72923a.100556330",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9c2d4496a8c1c7a48234cfd9b98f1e24.1667288323",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/95a3af3d6a7b855bf705db1dbb72923a.100556330",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9c2d4496a8c1c7a48234cfd9b98f1e24.1667288323",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/95a3af3d6a7b855bf705db1dbb72923a.100556330",
             "content_type": "",
-            "size": 1667288323,
+            "size": 100556330,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3345,7 +3423,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9c2d4496a8c1c7a48234cfd9b98f1e24.1667288323",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/95a3af3d6a7b855bf705db1dbb72923a.100556330",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3354,23 +3432,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk10-WindowsNoEditor_0_P.pak",
-    "filesize": 133737613,
-    "md5": "f5d3d671af6e889cc7591368991142d9",
-    "object": "f5d3d671af6e889cc7591368991142d9.133737613",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f5d3d671af6e889cc7591368991142d9.133737613",
+    "oldfile": "a8fbc1f447b160725d672278a00fe040.164472832",
+    "newfile": "4ac26f9c2c13b9b86d5f77363155e328.164477440",
+    "patch": "2d0e357f7c47738689918fcd875c9507.90891252",
+    "version_hash": "37e35b",
+    "filesize": 90891252,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/2d0e357f7c47738689918fcd875c9507.90891252",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f5d3d671af6e889cc7591368991142d9.133737613",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/2d0e357f7c47738689918fcd875c9507.90891252",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f5d3d671af6e889cc7591368991142d9.133737613",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/2d0e357f7c47738689918fcd875c9507.90891252",
             "content_type": "",
-            "size": 133737613,
+            "size": 90891252,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3388,7 +3467,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f5d3d671af6e889cc7591368991142d9.133737613",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/2/2d0e357f7c47738689918fcd875c9507.90891252",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3397,23 +3476,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk11-WindowsNoEditor_0_P.pak",
-    "filesize": 250292607,
-    "md5": "4dc793352c4d3388b42a874b69b67a53",
-    "object": "4dc793352c4d3388b42a874b69b67a53.250292607",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4dc793352c4d3388b42a874b69b67a53.250292607",
+    "oldfile": "ef05a6dca975c5032f0b0e89f660d4b9.79008664",
+    "newfile": "478676a8f84e5a73ad36b33eacd032d1.79012968",
+    "patch": "05141cdc9e0503b49e5f87bcfd128b80.833953",
+    "version_hash": "37e35b",
+    "filesize": 833953,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/05141cdc9e0503b49e5f87bcfd128b80.833953",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4dc793352c4d3388b42a874b69b67a53.250292607",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/05141cdc9e0503b49e5f87bcfd128b80.833953",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4dc793352c4d3388b42a874b69b67a53.250292607",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/05141cdc9e0503b49e5f87bcfd128b80.833953",
             "content_type": "",
-            "size": 250292607,
+            "size": 833953,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3431,7 +3511,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/4dc793352c4d3388b42a874b69b67a53.250292607",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/05141cdc9e0503b49e5f87bcfd128b80.833953",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3440,23 +3520,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk13-WindowsNoEditor_0_P.pak",
-    "filesize": 78025402,
-    "md5": "46c4f0403b97df8bfdcf7c19d14bf996",
-    "object": "46c4f0403b97df8bfdcf7c19d14bf996.78025402",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/46c4f0403b97df8bfdcf7c19d14bf996.78025402",
+    "oldfile": "c660dd049e8fe5cf4976cb429e2a850c.177920686",
+    "newfile": "8b3f7105e17a00422004ef4e8342d2a2.180378274",
+    "patch": "8bac8d93df2e5c186c46e547f402934e.5886606",
+    "version_hash": "37e35b",
+    "filesize": 5886606,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8bac8d93df2e5c186c46e547f402934e.5886606",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/46c4f0403b97df8bfdcf7c19d14bf996.78025402",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8bac8d93df2e5c186c46e547f402934e.5886606",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/46c4f0403b97df8bfdcf7c19d14bf996.78025402",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8bac8d93df2e5c186c46e547f402934e.5886606",
             "content_type": "",
-            "size": 78025402,
+            "size": 5886606,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3474,7 +3555,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/4/46c4f0403b97df8bfdcf7c19d14bf996.78025402",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8bac8d93df2e5c186c46e547f402934e.5886606",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3483,23 +3564,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk15-WindowsNoEditor_0_P.pak",
-    "filesize": 3250211424,
-    "md5": "e3c09c44a5ec6254e9f42af4f1bfcbe9",
-    "object": "e3c09c44a5ec6254e9f42af4f1bfcbe9.3250211424",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e3c09c44a5ec6254e9f42af4f1bfcbe9.3250211424",
+    "oldfile": "35ca1f8855b089334dc09af0eb07134d.164483680",
+    "newfile": "60e80fd41937bb6f8171be549e882664.164488288",
+    "patch": "8d804f1cfcbe5d02b2f8b7522f770e59.90892852",
+    "version_hash": "37e35b",
+    "filesize": 90892852,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8d804f1cfcbe5d02b2f8b7522f770e59.90892852",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e3c09c44a5ec6254e9f42af4f1bfcbe9.3250211424",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8d804f1cfcbe5d02b2f8b7522f770e59.90892852",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e3c09c44a5ec6254e9f42af4f1bfcbe9.3250211424",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8d804f1cfcbe5d02b2f8b7522f770e59.90892852",
             "content_type": "",
-            "size": 3250211424,
+            "size": 90892852,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3517,7 +3599,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/e/e3c09c44a5ec6254e9f42af4f1bfcbe9.3250211424",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/8/8d804f1cfcbe5d02b2f8b7522f770e59.90892852",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3526,23 +3608,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk16-WindowsNoEditor_0_P.pak",
-    "filesize": 1538288073,
-    "md5": "a41e69f0ad9778d2d8d62e503a3957ce",
-    "object": "a41e69f0ad9778d2d8d62e503a3957ce.1538288073",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a41e69f0ad9778d2d8d62e503a3957ce.1538288073",
+    "oldfile": "fdac62c442684e85d83c4e81d5ed0975.164484704",
+    "newfile": "60e80fd41937bb6f8171be549e882664.164488288",
+    "patch": "51ade583ed5c5372fd1692a1aae1f5a4.91304342",
+    "version_hash": "37e35b",
+    "filesize": 91304342,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/51ade583ed5c5372fd1692a1aae1f5a4.91304342",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a41e69f0ad9778d2d8d62e503a3957ce.1538288073",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/51ade583ed5c5372fd1692a1aae1f5a4.91304342",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a41e69f0ad9778d2d8d62e503a3957ce.1538288073",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/51ade583ed5c5372fd1692a1aae1f5a4.91304342",
             "content_type": "",
-            "size": 1538288073,
+            "size": 91304342,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3560,7 +3643,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a41e69f0ad9778d2d8d62e503a3957ce.1538288073",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/51ade583ed5c5372fd1692a1aae1f5a4.91304342",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3569,23 +3652,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk2-WindowsNoEditor_0_P.pak",
-    "filesize": 2411792957,
-    "md5": "0dca7b0afc9826d7c8790a7a3912634c",
-    "object": "0dca7b0afc9826d7c8790a7a3912634c.2411792957",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0dca7b0afc9826d7c8790a7a3912634c.2411792957",
+    "oldfile": "54833fe38c660d6e5c7f976e82ffe1b9.164473856",
+    "newfile": "4ac26f9c2c13b9b86d5f77363155e328.164477440",
+    "patch": "b17d8d55e6c2bbfdc1629622ce15f564.91302742",
+    "version_hash": "37e35b",
+    "filesize": 91302742,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b17d8d55e6c2bbfdc1629622ce15f564.91302742",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0dca7b0afc9826d7c8790a7a3912634c.2411792957",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b17d8d55e6c2bbfdc1629622ce15f564.91302742",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0dca7b0afc9826d7c8790a7a3912634c.2411792957",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b17d8d55e6c2bbfdc1629622ce15f564.91302742",
             "content_type": "",
-            "size": 2411792957,
+            "size": 91302742,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3603,7 +3687,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/0dca7b0afc9826d7c8790a7a3912634c.2411792957",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b17d8d55e6c2bbfdc1629622ce15f564.91302742",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3612,23 +3696,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk20-WindowsNoEditor_0_P.pak",
-    "filesize": 311391119,
-    "md5": "59723fca516421d8a19d2b75d44ebc09",
-    "object": "59723fca516421d8a19d2b75d44ebc09.311391119",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/59723fca516421d8a19d2b75d44ebc09.311391119",
+    "oldfile": "4dc78708af9cc9e1054b67476c11b2eb.2310136568",
+    "newfile": "478676a8f84e5a73ad36b33eacd032d1.79012968",
+    "patch": "dff501c8e7c2d3ebd40b08e5ca34fe78.62294017",
+    "version_hash": "37e35b",
+    "filesize": 62294017,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/dff501c8e7c2d3ebd40b08e5ca34fe78.62294017",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/59723fca516421d8a19d2b75d44ebc09.311391119",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/dff501c8e7c2d3ebd40b08e5ca34fe78.62294017",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/59723fca516421d8a19d2b75d44ebc09.311391119",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/dff501c8e7c2d3ebd40b08e5ca34fe78.62294017",
             "content_type": "",
-            "size": 311391119,
+            "size": 62294017,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3646,7 +3731,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/5/59723fca516421d8a19d2b75d44ebc09.311391119",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/d/dff501c8e7c2d3ebd40b08e5ca34fe78.62294017",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3655,23 +3740,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk21-WindowsNoEditor_0_P.pak",
-    "filesize": 443872959,
-    "md5": "966c95fe097c8ae5a4257aaf08c2139a",
-    "object": "966c95fe097c8ae5a4257aaf08c2139a.443872959",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/966c95fe097c8ae5a4257aaf08c2139a.443872959",
+    "oldfile": "fbb663639be2de27e51785741a4ba8f9.1940542676",
+    "newfile": "f65b7ede6ce8477a02aeaf108bdd1ea9.1946292900",
+    "patch": "9a0b436372cf78dccd4fc016a287c913.43090405",
+    "version_hash": "37e35b",
+    "filesize": 43090405,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9a0b436372cf78dccd4fc016a287c913.43090405",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/966c95fe097c8ae5a4257aaf08c2139a.443872959",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9a0b436372cf78dccd4fc016a287c913.43090405",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/966c95fe097c8ae5a4257aaf08c2139a.443872959",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9a0b436372cf78dccd4fc016a287c913.43090405",
             "content_type": "",
-            "size": 443872959,
+            "size": 43090405,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3689,7 +3775,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/966c95fe097c8ae5a4257aaf08c2139a.443872959",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/9/9a0b436372cf78dccd4fc016a287c913.43090405",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3698,23 +3784,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk3-WindowsNoEditor_0_P.pak",
-    "filesize": 1581093069,
-    "md5": "b28cd14b4bcaa9810a51c6c53f3dd83f",
-    "object": "b28cd14b4bcaa9810a51c6c53f3dd83f.1581093069",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b28cd14b4bcaa9810a51c6c53f3dd83f.1581093069",
+    "oldfile": "df3bb057e981030705f6ca7fb9b7c53d.164474880",
+    "newfile": "4ac26f9c2c13b9b86d5f77363155e328.164477440",
+    "patch": "bfcd5f60f48a162d50cbd5caa5b4e42c.86740410",
+    "version_hash": "37e35b",
+    "filesize": 86740410,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bfcd5f60f48a162d50cbd5caa5b4e42c.86740410",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b28cd14b4bcaa9810a51c6c53f3dd83f.1581093069",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bfcd5f60f48a162d50cbd5caa5b4e42c.86740410",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b28cd14b4bcaa9810a51c6c53f3dd83f.1581093069",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bfcd5f60f48a162d50cbd5caa5b4e42c.86740410",
             "content_type": "",
-            "size": 1581093069,
+            "size": 86740410,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3732,7 +3819,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/b28cd14b4bcaa9810a51c6c53f3dd83f.1581093069",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/b/bfcd5f60f48a162d50cbd5caa5b4e42c.86740410",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3741,23 +3828,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk4-WindowsNoEditor_0_P.pak",
-    "filesize": 232002292,
-    "md5": "f87ccb2c2f7067f3a064f1fd53ee79ba",
-    "object": "f87ccb2c2f7067f3a064f1fd53ee79ba.232002292",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f87ccb2c2f7067f3a064f1fd53ee79ba.232002292",
+    "oldfile": "b48e00ec9c0167c84434b5a38d06686a.164485728",
+    "newfile": "60e80fd41937bb6f8171be549e882664.164488288",
+    "patch": "07e364a99d42bab12a5f2fe529d94c9b.86742007",
+    "version_hash": "37e35b",
+    "filesize": 86742007,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/07e364a99d42bab12a5f2fe529d94c9b.86742007",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f87ccb2c2f7067f3a064f1fd53ee79ba.232002292",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/07e364a99d42bab12a5f2fe529d94c9b.86742007",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f87ccb2c2f7067f3a064f1fd53ee79ba.232002292",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/07e364a99d42bab12a5f2fe529d94c9b.86742007",
             "content_type": "",
-            "size": 232002292,
+            "size": 86742007,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3775,7 +3863,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f87ccb2c2f7067f3a064f1fd53ee79ba.232002292",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/0/07e364a99d42bab12a5f2fe529d94c9b.86742007",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3784,23 +3872,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk6-WindowsNoEditor_0_P.pak",
-    "filesize": 125934690,
-    "md5": "a80972282e714b78be804dbc4b5a7142",
-    "object": "a80972282e714b78be804dbc4b5a7142.125934690",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a80972282e714b78be804dbc4b5a7142.125934690",
+    "oldfile": "206a15086c22d167b33428d9e2fb3982.3334079716",
+    "newfile": "cf9f9114232fcd70bffc2c56f3d3b7ea.58721806",
+    "patch": "701beeee7407c9d2814a830769fc0ad0.51625641",
+    "version_hash": "37e35b",
+    "filesize": 51625641,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/701beeee7407c9d2814a830769fc0ad0.51625641",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a80972282e714b78be804dbc4b5a7142.125934690",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/701beeee7407c9d2814a830769fc0ad0.51625641",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a80972282e714b78be804dbc4b5a7142.125934690",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/701beeee7407c9d2814a830769fc0ad0.51625641",
             "content_type": "",
-            "size": 125934690,
+            "size": 51625641,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3818,7 +3907,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/a/a80972282e714b78be804dbc4b5a7142.125934690",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/7/701beeee7407c9d2814a830769fc0ad0.51625641",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3827,23 +3916,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk8-WindowsNoEditor_0_P.pak",
-    "filesize": 194058202,
-    "md5": "fafe5381ab56df81badffc0a3de80aa0",
-    "object": "fafe5381ab56df81badffc0a3de80aa0.194058202",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/fafe5381ab56df81badffc0a3de80aa0.194058202",
+    "oldfile": "6dd904fea6812552d94bb306bf72056f.1941548374",
+    "newfile": "f65b7ede6ce8477a02aeaf108bdd1ea9.1946292900",
+    "patch": "693ad339888d8bc1983e1fdc64514223.38945076",
+    "version_hash": "37e35b",
+    "filesize": 38945076,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/693ad339888d8bc1983e1fdc64514223.38945076",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/fafe5381ab56df81badffc0a3de80aa0.194058202",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/693ad339888d8bc1983e1fdc64514223.38945076",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/fafe5381ab56df81badffc0a3de80aa0.194058202",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/693ad339888d8bc1983e1fdc64514223.38945076",
             "content_type": "",
-            "size": 194058202,
+            "size": 38945076,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3861,7 +3951,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/fafe5381ab56df81badffc0a3de80aa0.194058202",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/6/693ad339888d8bc1983e1fdc64514223.38945076",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
@@ -3870,23 +3960,24 @@
     }
   },
   {
-    "filename": "Client/WindowsNoEditor/Hotta/Content/PatchPaks/pakchunk9-WindowsNoEditor_0_P.pak",
-    "filesize": 108454466,
-    "md5": "f127266ec91828415fe643e67884d52a",
-    "object": "f127266ec91828415fe643e67884d52a.108454466",
-    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f127266ec91828415fe643e67884d52a.108454466",
+    "oldfile": "8ee279da562a2330850478187ea37c42.9390709372",
+    "newfile": "f65b7ede6ce8477a02aeaf108bdd1ea9.1946292900",
+    "patch": "f502cea96241b742b6a7945017f0d591.151530105",
+    "version_hash": "37e35b",
+    "filesize": 151530105,
+    "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f502cea96241b742b6a7945017f0d591.151530105",
     "availability": {
       "candidates": [
         {
-          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f127266ec91828415fe643e67884d52a.108454466",
+          "url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f502cea96241b742b6a7945017f0d591.151530105",
           "probe": {
             "ok": true,
             "status": 0,
             "method": "RESLIST_METADATA",
             "checked_at": "2026-07-09 13:01:38 +0800",
-            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f127266ec91828415fe643e67884d52a.108454466",
+            "final_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f502cea96241b742b6a7945017f0d591.151530105",
             "content_type": "",
-            "size": 108454466,
+            "size": 151530105,
             "last_modified": "",
             "etag": "",
             "error": "",
@@ -3904,7 +3995,7 @@
       "interpretation": {
         "state": "available",
         "reason": "not_probed",
-        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f127266ec91828415fe643e67884d52a.108454466",
+        "preferred_url": "https://htcdn1.wmupd.com/clientRes/Windows55/Res/f/f502cea96241b742b6a7945017f0d591.151530105",
         "confidence": "medium",
         "retained": false,
         "display_label": "可用"
