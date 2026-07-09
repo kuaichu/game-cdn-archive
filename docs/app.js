@@ -46,7 +46,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260709-rail-publisher-release";
+const ASSET_VERSION = "20260709-bh2-appstore-icon";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -210,6 +210,7 @@ const fmtKnownBytes = (bytes, fallback = "大小未知") => {
 const androidIcons = {
   aethergazer: "assets/icons/aethergazer.ico",
   arknights: "assets/icons/arknights.ico",
+  bh2: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ad/fb/68/adfb68b6-ae24-88d5-ebb1-6d925a0c1bf2/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
   bluearchive: "assets/icons/bluearchive.png",
   calabiyau: "assets/icons/calabiyau.png",
   gf2: "assets/icons/gf2.png",
