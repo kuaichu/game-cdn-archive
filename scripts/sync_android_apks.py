@@ -37,6 +37,23 @@ KNOWN_APKS = [
         "preserve_same_hash": True,
     },
     {
+        "game_id": "tof",
+        "version": "4.2.670.136938",
+        "channel": "official",
+        "url": "https://htapk.wmupd.com/webops/ht/ht_QRSL-20240711.apk",
+        "source": "official CDN URL recovered from archive.org CDX search; versionName read from AndroidManifest.xml",
+        "source_url": "https://web.archive.org/web/20241003175807id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/ht-gameDownload.js",
+        "updated_at": "2024-10-03T17:58:07+00:00",
+        "updated_at_source": "wayback_cdx_timestamp",
+        "archive": {
+            "timestamp": "20241003175807",
+            "status": 200,
+            "mimetype": "application/octet-stream",
+            "length": 946733437,
+            "digest": "S4VKAABA3E36FW64KHACHZVPFOMHR6IK",
+        },
+    },
+    {
         "game_id": "p5x",
         "version": "0.3.0",
         "channel": "cbt3",
@@ -1663,6 +1680,7 @@ GAME_NAMES = {
     "p5x": {"name": "女神异闻录：夜幕魅影", "subName": "Persona 5: The Phantom X"},
     "reverse1999": {"name": "重返未来：1999", "subName": "Reverse: 1999"},
     "snowbreak": {"name": "尘白禁区", "subName": "Snowbreak: Containment Zone"},
+    "tof": {"name": "幻塔", "subName": "Tower of Fantasy"},
     "wuwa": {"name": "鸣潮", "subName": "Wuthering Waves"},
     "hk4e": {"name": "原神", "subName": "Genshin Impact"},
     "hkrpg": {"name": "崩坏：星穹铁道", "subName": "Honkai: Star Rail"},
@@ -1927,6 +1945,11 @@ PERFECT_WORLD_APK_CONFIGS = [
     {
         "game_id": "p5x",
         "url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
+        "channel": "official",
+    },
+    {
+        "game_id": "tof",
+        "url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/ht-gameDownload.js",
         "channel": "official",
     },
 ]

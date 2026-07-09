@@ -1,0 +1,65 @@
+[
+  {
+    "game_id": "tof",
+    "version": "4.2.670.136938",
+    "channel": "official",
+    "url": "https://htapk.wmupd.com/webops/ht/ht_QRSL-20240711.apk",
+    "source": "official CDN URL recovered from archive.org CDX search; versionName read from AndroidManifest.xml",
+    "source_url": "https://web.archive.org/web/20241003175807id_/https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/ht-gameDownload.js",
+    "updated_at": "2024-10-03T17:58:07+00:00",
+    "updated_at_source": "wayback_cdx_timestamp",
+    "archive": {
+      "timestamp": "20241003175807",
+      "status": 200,
+      "mimetype": "application/octet-stream",
+      "length": 946733437,
+      "digest": "S4VKAABA3E36FW64KHACHZVPFOMHR6IK"
+    },
+    "status": 200,
+    "content_type": "application/octet-stream",
+    "size": 1559683250,
+    "last_modified": "Thu, 11 Jul 2024 10:48:10 GMT",
+    "etag": "5FAF3262496FE481C6BB9BE845A75718-149",
+    "md5": "",
+    "crc64": "6140127737111448214",
+    "error": "",
+    "filename": "ht_QRSL-20240711.apk",
+    "captured_at": "2026-07-09T04:40:42.860380+00:00",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://htapk.wmupd.com/webops/ht/ht_QRSL-20240711.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-09T04:40:42.860380+00:00",
+            "final_url": "https://htapk.wmupd.com/webops/ht/ht_QRSL-20240711.apk",
+            "content_type": "application/octet-stream",
+            "size": 1559683250,
+            "last_modified": "Thu, 11 Jul 2024 10:48:10 GMT",
+            "etag": "5FAF3262496FE481C6BB9BE845A75718-149",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://htapk.wmupd.com/webops/ht/ht_QRSL-20240711.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
