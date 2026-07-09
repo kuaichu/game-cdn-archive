@@ -16,6 +16,42 @@
     "filename": "20260122-005217-gf_android_ota-versions-v8_7-Passage_To_NewDawns_ym.apk",
     "captured_at": "2026-06-08T18:21:01.169939+00:00",
     "updated_at": "2026-01-29T03:00:58+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20260129104916_BoBPLPFIyJkDEQgJ/CPS/20260122-005217-gf_android_ota-versions-v8_7-Passage_To_NewDawns_ym.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-08T06:44:28.245603+00:00",
+            "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20260129104916_BoBPLPFIyJkDEQgJ/CPS/20260122-005217-gf_android_ota-versions-v8_7-Passage_To_NewDawns_ym.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 695651102,
+            "last_modified": "Thu, 29 Jan 2026 03:00:58 GMT",
+            "etag": "51065C584A266B8338AD5BC4A650DA85-10",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.941,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20260129104916_BoBPLPFIyJkDEQgJ/CPS/20260122-005217-gf_android_ota-versions-v8_7-Passage_To_NewDawns_ym.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

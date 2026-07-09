@@ -16,6 +16,42 @@
     "filename": "20231213-222300-gf_android_ota-versions-v7_2-The_Wings_to_Mars_gw.apk",
     "captured_at": "2026-06-08T18:20:29.063705+00:00",
     "updated_at": "2023-12-18T07:42:36+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://bundle.bh3.com/ptpublic/rel/20231218144111_nFwR8NyQCxVRbXeo/CPS/20231213-222300-gf_android_ota-versions-v7_2-The_Wings_to_Mars_gw.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-08T06:44:28.245603+00:00",
+            "final_url": "https://bundle.bh3.com/ptpublic/rel/20231218144111_nFwR8NyQCxVRbXeo/CPS/20231213-222300-gf_android_ota-versions-v7_2-The_Wings_to_Mars_gw.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 538409750,
+            "last_modified": "Mon, 18 Dec 2023 07:42:36 GMT",
+            "etag": "0769D6BAAC5311F2D102E34D3B8E63EE-10",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.941,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20231218144111_nFwR8NyQCxVRbXeo/CPS/20231213-222300-gf_android_ota-versions-v7_2-The_Wings_to_Mars_gw.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

@@ -17,6 +17,42 @@
     "filename": "p5x_1_official_20260621.apk",
     "captured_at": "2026-07-08T11:22:56.795595+00:00",
     "updated_at": "2026-06-12T02:48:29+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-08T11:22:56.795595+00:00",
+            "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
+            "content_type": "application/octet-stream",
+            "size": 1664463882,
+            "last_modified": "Fri, 12 Jun 2026 02:48:29 GMT",
+            "etag": "831A4100025A89E210C2D608AB178D43-159",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.019,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

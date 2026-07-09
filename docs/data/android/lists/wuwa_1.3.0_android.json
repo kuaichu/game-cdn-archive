@@ -16,6 +16,42 @@
     "filename": "鸣潮_1.3.0_116761876__官渠_56323c8fffdc1701fe2f3d3195a45e9c_shelled.apk",
     "captured_at": "2026-06-08T17:43:05.181300+00:00",
     "updated_at": "2024-09-19T07:31:44+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20240919153138_DfMc71zrMqk43foG1E/%E9%B8%A3%E6%BD%AE_1.3.0_116761876__%E5%AE%98%E6%B8%A0_56323c8fffdc1701fe2f3d3195a45e9c_shelled.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-08T06:44:28.245603+00:00",
+            "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20240919153138_DfMc71zrMqk43foG1E/%E9%B8%A3%E6%BD%AE_1.3.0_116761876__%E5%AE%98%E6%B8%A0_56323c8fffdc1701fe2f3d3195a45e9c_shelled.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1997604851,
+            "last_modified": "Thu, 19 Sep 2024 07:31:44 GMT",
+            "etag": "974ea8f3524bcd5f04b19244bfbcc4a1-39",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.941,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://mirrors-package-mc.aki-game.com/client/download/20240919153138_DfMc71zrMqk43foG1E/%E9%B8%A3%E6%BD%AE_1.3.0_116761876__%E5%AE%98%E6%B8%A0_56323c8fffdc1701fe2f3d3195a45e9c_shelled.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

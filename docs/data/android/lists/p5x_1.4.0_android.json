@@ -16,7 +16,43 @@
     "filename": "p5x_6198_baidupcpz_20250402.apk",
     "captured_at": "2026-07-08T11:22:56.795595+00:00",
     "updated_at": "2025-04-02T06:48:52+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_6198_baidupcpz_20250402.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-08T11:22:56.795595+00:00",
+            "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_6198_baidupcpz_20250402.apk",
+            "content_type": "application/octet-stream",
+            "size": 1809704417,
+            "last_modified": "Wed, 02 Apr 2025 06:48:52 GMT",
+            "etag": "F9EDEC8D175F2FEF133EC65DABB49D7B-173",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.019,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_6198_baidupcpz_20250402.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   },
   {
     "game_id": "p5x",
@@ -36,6 +72,42 @@
     "crc64": "1091280117757571515",
     "error": "",
     "filename": "laohu_p5x_20250408.apk",
-    "captured_at": "2026-07-08T11:22:56.795595+00:00"
+    "captured_at": "2026-07-08T11:22:56.795595+00:00",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://p5xapk.wmupd.com/webops/p5x/laohu_p5x_20250408.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-08T11:22:56.795595+00:00",
+            "final_url": "https://p5xapk.wmupd.com/webops/p5x/laohu_p5x_20250408.apk",
+            "content_type": "application/octet-stream",
+            "size": 1812944992,
+            "last_modified": "Tue, 08 Apr 2025 07:21:53 GMT",
+            "etag": "BD1C385B8678FCADDEFEC1318791B9F2-173",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.019,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/laohu_p5x_20250408.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

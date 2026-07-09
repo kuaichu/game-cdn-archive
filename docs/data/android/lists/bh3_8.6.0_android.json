@@ -16,6 +16,42 @@
     "filename": "20251119-224340-gf_android_ota-versions-v8_6-Banquet_Operative_gw.apk",
     "captured_at": "2026-07-05T02:03:55.017956+00:00",
     "updated_at": "2025-11-26T02:34:42+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20251126103029_6BdFwrhJbJwHQQAX/CPS/20251119-224340-gf_android_ota-versions-v8_6-Banquet_Operative_gw.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-08T06:44:28.245603+00:00",
+            "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20251126103029_6BdFwrhJbJwHQQAX/CPS/20251119-224340-gf_android_ota-versions-v8_6-Banquet_Operative_gw.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 694020894,
+            "last_modified": "Wed, 26 Nov 2025 02:34:42 GMT",
+            "etag": "4EF53A4B86B31F5FCB0F47E220DA6858-10",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.941,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20251126103029_6BdFwrhJbJwHQQAX/CPS/20251119-224340-gf_android_ota-versions-v8_6-Banquet_Operative_gw.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

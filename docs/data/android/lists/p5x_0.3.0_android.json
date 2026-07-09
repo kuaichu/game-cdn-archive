@@ -17,6 +17,42 @@
     "crc64": "13585503765271657118",
     "error": "",
     "filename": "p5x_CBT3_20240115.apk",
-    "captured_at": "2026-07-08T11:22:56.795595+00:00"
+    "captured_at": "2026-07-08T11:22:56.795595+00:00",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_CBT3_20240115.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-08T11:22:56.795595+00:00",
+            "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_CBT3_20240115.apk",
+            "content_type": "application/octet-stream",
+            "size": 1806170124,
+            "last_modified": "Mon, 15 Jan 2024 01:10:15 GMT",
+            "etag": "DC56F8935AAF670FACDA03E10F01C124-173",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.019,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_CBT3_20240115.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

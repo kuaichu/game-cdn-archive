@@ -16,6 +16,42 @@
     "filename": "20230301-220508-gf_android_ota-versions-v6_5-Hot_Sands_Escapade_gw.apk",
     "captured_at": "2026-06-06T20:27:22.351159+00:00",
     "updated_at": "2023-03-06T02:28:51+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://bundle.bh3.com/public/Android/20230301-220508-gf_android_ota-versions-v6_5-Hot_Sands_Escapade_gw.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-08T06:44:28.245603+00:00",
+            "final_url": "https://bundle.bh3.com/public/Android/20230301-220508-gf_android_ota-versions-v6_5-Hot_Sands_Escapade_gw.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 645319429,
+            "last_modified": "Mon, 06 Mar 2023 02:28:51 GMT",
+            "etag": "6433BEA142DEAE84B7EAD367F7CD57B6-62",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.941,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://bundle.bh3.com/public/Android/20230301-220508-gf_android_ota-versions-v6_5-Hot_Sands_Escapade_gw.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

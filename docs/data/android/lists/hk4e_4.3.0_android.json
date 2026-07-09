@@ -16,6 +16,42 @@
     "filename": "yuanshen_4.3.0.apk",
     "captured_at": "2026-06-08T16:40:00.303054+00:00",
     "updated_at": "2026-04-14T04:55:46+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20231211150750_A8Q7WahLfCaG6pNu/mihoyo/yuanshen_4.3.0.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-08T06:44:28.245603+00:00",
+            "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20231211150750_A8Q7WahLfCaG6pNu/mihoyo/yuanshen_4.3.0.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 411616178,
+            "last_modified": "Tue, 14 Apr 2026 04:55:46 GMT",
+            "etag": "88df3d686305874bb8b5ee3cabc95bbf-3",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.941,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20231211150750_A8Q7WahLfCaG6pNu/mihoyo/yuanshen_4.3.0.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]
