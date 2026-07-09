@@ -46,7 +46,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260709-bh2-android";
+const ASSET_VERSION = "20260709-rail-publisher-release";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -231,6 +231,60 @@ const androidShortNames = {
   snowbreak: "CBJQ",
 };
 
+const gamePublisherOrder = [
+  "mihoyo",
+  "hypergryph",
+  "kuro",
+  "perfect_world",
+  "yongshi",
+  "bluepoch",
+  "seasun",
+  "yostar",
+  "sunborn",
+  "idreamsky",
+  "other",
+];
+
+const gamePublisherRank = Object.fromEntries(gamePublisherOrder.map((id, index) => [id, index]));
+
+const gameRailMetadata = {
+  bh2: { publisher: "mihoyo", releaseDate: "2014-01-26" },
+  bh3: { publisher: "mihoyo", releaseDate: "2016-10-14" },
+  hk4e: { publisher: "mihoyo", releaseDate: "2020-09-28" },
+  hkrpg: { publisher: "mihoyo", releaseDate: "2023-04-26" },
+  nap: { publisher: "mihoyo", releaseDate: "2024-07-04" },
+  arknights: { publisher: "hypergryph", releaseDate: "2019-05-01" },
+  endfield: { publisher: "hypergryph", releaseDate: "2026-01-22" },
+  pns: { publisher: "kuro", releaseDate: "2019-12-05" },
+  wuwa: { publisher: "kuro", releaseDate: "2024-05-23" },
+  tof: { publisher: "perfect_world", releaseDate: "2021-12-16" },
+  p5x: { publisher: "perfect_world", releaseDate: "2024-04-12" },
+  nte: { publisher: "perfect_world", releaseDate: "2026-04-23" },
+  aethergazer: { publisher: "yongshi", releaseDate: "2022-04-22" },
+  reverse1999: { publisher: "bluepoch", releaseDate: "2023-05-31" },
+  snowbreak: { publisher: "seasun", releaseDate: "2023-07-20" },
+  bluearchive: { publisher: "yostar", releaseDate: "2023-08-03" },
+  gf2: { publisher: "sunborn", releaseDate: "2023-12-21" },
+  calabiyau: { publisher: "idreamsky", releaseDate: "2023-08-03" },
+};
+
+const gameRailSortKey = (game) => {
+  const meta = gameRailMetadata[game.id] || {};
+  return {
+    publisherRank: gamePublisherRank[meta.publisher] ?? gamePublisherRank.other,
+    releaseDate: meta.releaseDate || "9999-12-31",
+  };
+};
+
+const sortGameRail = (games) =>
+  [...games].sort((left, right) => {
+    const leftKey = gameRailSortKey(left);
+    const rightKey = gameRailSortKey(right);
+    return leftKey.publisherRank - rightKey.publisherRank
+      || leftKey.releaseDate.localeCompare(rightKey.releaseDate)
+      || String(left.name || left.id).localeCompare(String(right.name || right.id), "zh-CN");
+  });
+
 const parseDateValue = (value) => {
   if (!value) return null;
   if (value instanceof Date) return Number.isNaN(value.getTime()) ? null : value;
@@ -370,14 +424,7 @@ const allGames = () => {
       icon: androidIcons[id] || `assets/icons/${id}.png`,
       kind: "android",
     }));
-  const promotedAndroidIds = new Set([]);
-  const promotedAndroidGames = androidOnlyGames.filter((game) => promotedAndroidIds.has(game.id));
-  const regularAndroidGames = androidOnlyGames.filter((game) => !promotedAndroidIds.has(game.id));
-  const games = [...baseGames];
-  const insertAfterId = games.some((game) => game.id === "tof") ? "tof" : "nte";
-  const insertIndex = games.findIndex((game) => game.id === insertAfterId);
-  games.splice(insertIndex >= 0 ? insertIndex + 1 : games.length, 0, ...promotedAndroidGames);
-  return [...games, ...regularAndroidGames];
+  return sortGameRail([...baseGames, ...androidOnlyGames]);
 };
 
 const currentGame = () => allGames().find((game) => game.id === state.gameId) || nteGame;
