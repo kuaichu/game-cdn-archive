@@ -38,7 +38,8 @@ KNOWN_APKS = [
     },
     {
         "game_id": "tof",
-        "version": "4.2.670.136938",
+        "version": "4.2",
+        "version_name": "4.2.670.136938",
         "channel": "official",
         "url": "https://htapk.wmupd.com/webops/ht/ht_QRSL-20240711.apk",
         "source": "official CDN URL recovered from archive.org CDX search; versionName read from AndroidManifest.xml",
