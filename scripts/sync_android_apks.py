@@ -1988,7 +1988,7 @@ SUNBORN_APK_ENDPOINTS = [
         "game_id": "gf2",
         "url": "https://gf2-web-preregister-api.sunborngame.com/website/url_manage?timestamp=1780775971&nonce=c20j1x&sign=74ca012c6a9ef865f150e6613462bb5a",
         "channel": "gwaz",
-        "source": "official Sunborn download API; resolves to a signed APK URL",
+        "source": "official Sunborn download API; resolves to a short-lived signed APK URL",
     },
 ]
 
@@ -2678,11 +2678,11 @@ def discover_sunborn_apks() -> list[dict]:
             "game_id": item["game_id"],
             "version": normalize_version(version),
             "channel": item["channel"],
-            "url": item["url"],
-            "source": item.get("source", "official Sunborn download API; resolves to a signed APK URL"),
+            "url": apk_url,
+            "source": item.get("source", "official Sunborn download API; resolves to a short-lived signed APK URL"),
             "source_url": item["url"],
-            "archive_url": apk_url,
-            "archive_note": "Signed CDN URL captured during sync",
+            "signed_url": True,
+            "signed_url_note": "Resolved from source_url during sync; Sunborn CDN auth_key URLs are time-limited.",
             "metadata_url": apk_url,
             "filename_url": apk_url,
             "headers": item.get("headers"),
@@ -3204,9 +3204,9 @@ def main() -> None:
             same_source = same_source_previous(entry, previous_by_source_url.get(entry["source_url"], []))
             if same_source:
                 entry["captured_at"] = same_source.get("captured_at", entry["captured_at"])
-                if same_source.get("archive_url") or entry.get("archive_url"):
+                if not seed.get("signed_url") and (same_source.get("archive_url") or entry.get("archive_url")):
                     entry["archive_url"] = same_source.get("archive_url") or entry["archive_url"]
-                if same_source.get("archive_note") or entry.get("archive_note"):
+                if not seed.get("signed_url") and (same_source.get("archive_note") or entry.get("archive_note")):
                     entry["archive_note"] = same_source.get("archive_note") or entry["archive_note"]
         same_hash_index = same_apk_hash_entry_index(entry, entries) if entry.get("source_url") else None
         if same_hash_index is not None:
