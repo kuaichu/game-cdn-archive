@@ -2239,6 +2239,13 @@ PERFECT_WORLD_APK_CONFIGS = [
 
 REDIRECT_APK_ENDPOINTS = [
     {
+        "game_id": "bh2",
+        "url": "https://www.benghuai.com/download/latest",
+        "channel": "official",
+        "source": "official Honkai Gakuen 2 latest Android download endpoint; resolves to a static.benghuai.com APK URL",
+        "headers": {"Referer": "https://www.benghuai.com/"},
+    },
+    {
         "game_id": "aethergazer",
         "url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
         "channel": "gwdl",
@@ -2660,6 +2667,8 @@ def linked_script_urls(text: str, page_url: str) -> list[str]:
 def exact_version_from_url(url: str) -> str | None:
     filename = filename_from_url(url)
     patterns = [
+        r"(?:Original|Beta)\.StripResource_(\d+(?:\.\d+){1,3})_",
+        r"Mix_(\d+(?:\.\d+){1,3})_",
         r"CBJQ[._](\d+(?:\.\d+){1,3})(?:[._])",
         r"Reverse1999_app(\d+(?:\.\d+){1,3})",
     ]
