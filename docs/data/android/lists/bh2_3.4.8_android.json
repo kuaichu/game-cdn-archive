@@ -1,0 +1,55 @@
+[
+  {
+    "game_id": "bh2",
+    "version": "3.4.8",
+    "channel": "original",
+    "url": "http://static.benghuai.com/Download/v3_4/Original_3.4.8_1_signed.apk",
+    "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+    "status": 404,
+    "content_type": "application/xml",
+    "size": 0,
+    "last_modified": "",
+    "etag": "",
+    "md5": "",
+    "crc64": "",
+    "error": "APK object unavailable",
+    "filename": "Original_3.4.8_1_signed.apk",
+    "captured_at": "2026-07-09T08:59:05.824074+00:00",
+    "availability": {
+      "candidates": [
+        {
+          "url": "http://static.benghuai.com/Download/v3_4/Original_3.4.8_1_signed.apk",
+          "probe": {
+            "ok": false,
+            "status": 404,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-09T08:59:05.824074+00:00",
+            "final_url": "http://static.benghuai.com/Download/v3_4/Original_3.4.8_1_signed.apk",
+            "content_type": "application/xml",
+            "size": 0,
+            "last_modified": "",
+            "etag": "",
+            "error": "APK object unavailable",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unavailable",
+        "reason": "retained_historical",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": true,
+        "display_label": "链接失效"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]

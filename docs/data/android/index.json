@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-07-09T08:11:15.884028+00:00",
-  "generated_at": "2026-07-09T08:11:15.884028+00:00",
+  "last_checked_at": "2026-07-09T08:59:05.824074+00:00",
+  "generated_at": "2026-07-09T08:59:05.824074+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -13659,6 +13659,1978 @@
           "urls": "data/android/lists/endfield_1.3.4_android.urls.txt",
           "aria2": "data/android/lists/endfield_1.3.4_android.aria2.txt",
           "json": "data/android/lists/endfield_1.3.4_android.json"
+        }
+      }
+    },
+    "bh2": {
+      "name": "崩坏学园2",
+      "subName": "Houkai Gakuen 2",
+      "versions": [
+        {
+          "game_id": "bh2",
+          "version": "13.2.8",
+          "channel": "original_strip",
+          "url": "https://static.benghuai.com/Download/v13_2/Original.StripResource_13.2.8_341_kZm.apk",
+          "source": "official static.benghuai.com Android APK URL provided by user",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 261083990,
+          "last_modified": "Fri, 12 Jun 2026 02:29:33 GMT",
+          "etag": "BB18202CFD9EC7D2A74274C0FFFAFCF4-25",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "Original.StripResource_13.2.8_341_kZm.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "updated_at": "2026-06-12T02:29:33+00:00",
+          "updated_at_source": "apk_last_modified",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v13_2/Original.StripResource_13.2.8_341_kZm.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v13_2/Original.StripResource_13.2.8_341_kZm.apk",
+                  "content_type": "application/vnd.android.package-archive",
+                  "size": 261083990,
+                  "last_modified": "Fri, 12 Jun 2026 02:29:33 GMT",
+                  "etag": "BB18202CFD9EC7D2A74274C0FFFAFCF4-25",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://static.benghuai.com/Download/v13_2/Original.StripResource_13.2.8_341_kZm.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.6.101",
+          "channel": "beta_strip",
+          "url": "https://static.benghuai.com/Download/v12_6/Beta.StripResource_12.6.101_38.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Beta.StripResource_12.6.101_38.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_6/Beta.StripResource_12.6.101_38.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_6/Beta.StripResource_12.6.101_38.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.6.54",
+          "channel": "mix",
+          "url": "https://static.benghuai.com/Download/v12_6/Mix_12.6.54_338.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Mix_12.6.54_338.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_6/Mix_12.6.54_338.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_6/Mix_12.6.54_338.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.6.27",
+          "channel": "beta_strip",
+          "url": "https://static.benghuai.com/Download/v12_6/Beta.StripResource_12.6.27_38.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Beta.StripResource_12.6.27_38.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_6/Beta.StripResource_12.6.27_38.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_6/Beta.StripResource_12.6.27_38.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.6.8",
+          "channel": "original_strip",
+          "url": "https://static.benghuai.com/Download/v12_6/Original.StripResource_12.6.8_338_SgC.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_12.6.8_338_SgC.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_6/Original.StripResource_12.6.8_338_SgC.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_6/Original.StripResource_12.6.8_338_SgC.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.5.54",
+          "channel": "mix",
+          "url": "https://static.benghuai.com/Download/v12_5/Mix_12.5.54_335.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Mix_12.5.54_335.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_5/Mix_12.5.54_335.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_5/Mix_12.5.54_335.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.5.54",
+          "channel": "mix_v1",
+          "url": "https://static.benghuai.com/Download/v12_5/Mix_12.5.54_335_v1.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Mix_12.5.54_335_v1.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_5/Mix_12.5.54_335_v1.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_5/Mix_12.5.54_335_v1.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.5.8",
+          "channel": "original_strip",
+          "url": "https://static.benghuai.com/Download/v12_5/Original.StripResource_12.5.8_335_Oo0.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_12.5.8_335_Oo0.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_5/Original.StripResource_12.5.8_335_Oo0.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_5/Original.StripResource_12.5.8_335_Oo0.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.4.101",
+          "channel": "beta_strip",
+          "url": "https://static.benghuai.com/Download/v12_4/Beta.StripResource_12.4.101_36.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Beta.StripResource_12.4.101_36.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_4/Beta.StripResource_12.4.101_36.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_4/Beta.StripResource_12.4.101_36.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.4.54",
+          "channel": "mix",
+          "url": "https://static.benghuai.com/Download/v12_4/Mix_12.4.54_334.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Mix_12.4.54_334.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_4/Mix_12.4.54_334.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_4/Mix_12.4.54_334.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.4.8",
+          "channel": "original_strip",
+          "url": "https://static.benghuai.com/Download/v12_4/Original.StripResource_12.4.8_334_mLi.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_12.4.8_334_mLi.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_4/Original.StripResource_12.4.8_334_mLi.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_4/Original.StripResource_12.4.8_334_mLi.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.3.103",
+          "channel": "beta_strip",
+          "url": "https://static.benghuai.com/Download/v12_3/Beta.StripResource_12.3.103_36.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Beta.StripResource_12.3.103_36.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_3/Beta.StripResource_12.3.103_36.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_3/Beta.StripResource_12.3.103_36.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.3.101",
+          "channel": "beta_strip",
+          "url": "https://static.benghuai.com/Download/v12_3/Beta.StripResource_12.3.101_36.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Beta.StripResource_12.3.101_36.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_3/Beta.StripResource_12.3.101_36.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_3/Beta.StripResource_12.3.101_36.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.3.54",
+          "channel": "mix",
+          "url": "https://static.benghuai.com/Download/v12_3/Mix_12.3.54_332.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Mix_12.3.54_332.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_3/Mix_12.3.54_332.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_3/Mix_12.3.54_332.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.3.27",
+          "channel": "beta_strip",
+          "url": "https://static.benghuai.com/Download/v12_3/Beta.StripResource_12.3.27_36.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Beta.StripResource_12.3.27_36.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_3/Beta.StripResource_12.3.27_36.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_3/Beta.StripResource_12.3.27_36.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.3.8",
+          "channel": "original_strip",
+          "url": "https://static.benghuai.com/Download/v12_3/Original.StripResource_12.3.8_332.shell_HoX.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_12.3.8_332.shell_HoX.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_3/Original.StripResource_12.3.8_332.shell_HoX.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_3/Original.StripResource_12.3.8_332.shell_HoX.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.2.103",
+          "channel": "beta_strip",
+          "url": "https://static.benghuai.com/Download/v12_2/Beta.StripResource_12.2.103_36.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Beta.StripResource_12.2.103_36.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_2/Beta.StripResource_12.2.103_36.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_2/Beta.StripResource_12.2.103_36.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.2.54",
+          "channel": "mix",
+          "url": "https://static.benghuai.com/Download/v12_2/Mix_12.2.54_331.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Mix_12.2.54_331.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_2/Mix_12.2.54_331.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_2/Mix_12.2.54_331.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.2.8",
+          "channel": "original_strip",
+          "url": "https://static.benghuai.com/Download/v12_2/Original.StripResource_12.2.8_331_TnH.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_12.2.8_331_TnH.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_2/Original.StripResource_12.2.8_331_TnH.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_2/Original.StripResource_12.2.8_331_TnH.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "12.1.8",
+          "channel": "original_strip",
+          "url": "https://static.benghuai.com/Download/v12_1/Original.StripResource_12.1.8_330_OyD.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_12.1.8_330_OyD.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v12_1/Original.StripResource_12.1.8_330_OyD.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v12_1/Original.StripResource_12.1.8_330_OyD.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "11.4.8",
+          "channel": "original_strip",
+          "url": "https://static.benghuai.com/Download/v11_4/Original.StripResource_11.4.8_325_xEh.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_11.4.8_325_xEh.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v11_4/Original.StripResource_11.4.8_325_xEh.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v11_4/Original.StripResource_11.4.8_325_xEh.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "10.7.8",
+          "channel": "original_strip",
+          "url": "https://static.benghuai.com/Download/v10_7/Original.StripResource_10.7.8_319_adz.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_10.7.8_319_adz.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v10_7/Original.StripResource_10.7.8_319_adz.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v10_7/Original.StripResource_10.7.8_319_adz.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "9.8.103",
+          "channel": "beta_strip",
+          "url": "https://static.benghuai.com/Download/v9_8/Beta.StripResource_9.8.103_36.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Beta.StripResource_9.8.103_36.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v9_8/Beta.StripResource_9.8.103_36.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v9_8/Beta.StripResource_9.8.103_36.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "9.8.54",
+          "channel": "mix",
+          "url": "https://static.benghuai.com/Download/v9_8/Mix_9.8.54_311.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Mix_9.8.54_311.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v9_8/Mix_9.8.54_311.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v9_8/Mix_9.8.54_311.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "9.8.8",
+          "channel": "original_strip",
+          "url": "https://static.benghuai.com/Download/v9_8/Original.StripResource_9.8.8_311_32va.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_9.8.8_311_32va.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v9_8/Original.StripResource_9.8.8_311_32va.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v9_8/Original.StripResource_9.8.8_311_32va.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "9.7.54",
+          "channel": "mix",
+          "url": "https://static.benghuai.com/Download/v9_7/Mix_9.7.54_310.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Mix_9.7.54_310.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v9_7/Mix_9.7.54_310.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v9_7/Mix_9.7.54_310.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "9.7.8",
+          "channel": "original_strip",
+          "url": "https://static.benghuai.com/Download/v9_7/Original.StripResource_9.7.8_310_4ij.shell.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_9.7.8_310_4ij.shell.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://static.benghuai.com/Download/v9_7/Original.StripResource_9.7.8_310_4ij.shell.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "https://static.benghuai.com/Download/v9_7/Original.StripResource_9.7.8_310_4ij.shell.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "8.6.8",
+          "channel": "original_strip",
+          "url": "http://static.benghuai.com/Download/v8_6/Original.StripResource_8.6.8_298_unsign.signed.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_8.6.8_298_unsign.signed.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "http://static.benghuai.com/Download/v8_6/Original.StripResource_8.6.8_298_unsign.signed.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "http://static.benghuai.com/Download/v8_6/Original.StripResource_8.6.8_298_unsign.signed.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "8.5.8",
+          "channel": "original_strip",
+          "url": "http://static.benghuai.com/Download/v8_5/Original.StripResource_8.5.8_297_unsign.signed_ykXq6e.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_8.5.8_297_unsign.signed_ykXq6e.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "http://static.benghuai.com/Download/v8_5/Original.StripResource_8.5.8_297_unsign.signed_ykXq6e.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "http://static.benghuai.com/Download/v8_5/Original.StripResource_8.5.8_297_unsign.signed_ykXq6e.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "7.5.8",
+          "channel": "original_strip",
+          "url": "http://static.benghuai.com/Download/v7_5/Original.StripResource_7.5.8_284_signed.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_7.5.8_284_signed.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "http://static.benghuai.com/Download/v7_5/Original.StripResource_7.5.8_284_signed.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "http://static.benghuai.com/Download/v7_5/Original.StripResource_7.5.8_284_signed.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "4.3.221",
+          "channel": "mix",
+          "url": "http://static.benghuai.com/Download/v4_3/Mix_4.3.221_10_signed.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Mix_4.3.221_10_signed.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "http://static.benghuai.com/Download/v4_3/Mix_4.3.221_10_signed.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "http://static.benghuai.com/Download/v4_3/Mix_4.3.221_10_signed.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "4.3.210",
+          "channel": "original_strip",
+          "url": "http://static.benghuai.com/Download/v4_3/Original.StripResource_4.3.210_10_signed.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original.StripResource_4.3.210_10_signed.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "http://static.benghuai.com/Download/v4_3/Original.StripResource_4.3.210_10_signed.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "http://static.benghuai.com/Download/v4_3/Original.StripResource_4.3.210_10_signed.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "4.3.210",
+          "channel": "original",
+          "url": "http://static.benghuai.com/Download/v4_3/Original_4.3.210_10_signed.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original_4.3.210_10_signed.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "http://static.benghuai.com/Download/v4_3/Original_4.3.210_10_signed.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "http://static.benghuai.com/Download/v4_3/Original_4.3.210_10_signed.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh2",
+          "version": "3.4.8",
+          "channel": "original",
+          "url": "http://static.benghuai.com/Download/v3_4/Original_3.4.8_1_signed.apk",
+          "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "Original_3.4.8_1_signed.apk",
+          "captured_at": "2026-07-09T08:59:05.824074+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "http://static.benghuai.com/Download/v3_4/Original_3.4.8_1_signed.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-09T08:59:05.824074+00:00",
+                  "final_url": "http://static.benghuai.com/Download/v3_4/Original_3.4.8_1_signed.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        }
+      ],
+      "links": {
+        "13.2.8": {
+          "urls": "data/android/lists/bh2_13.2.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_13.2.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_13.2.8_android.json"
+        },
+        "12.6.101": {
+          "urls": "data/android/lists/bh2_12.6.101_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.6.101_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.6.101_android.json"
+        },
+        "12.6.54": {
+          "urls": "data/android/lists/bh2_12.6.54_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.6.54_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.6.54_android.json"
+        },
+        "12.6.27": {
+          "urls": "data/android/lists/bh2_12.6.27_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.6.27_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.6.27_android.json"
+        },
+        "12.6.8": {
+          "urls": "data/android/lists/bh2_12.6.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.6.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.6.8_android.json"
+        },
+        "12.5.54": {
+          "urls": "data/android/lists/bh2_12.5.54_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.5.54_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.5.54_android.json"
+        },
+        "12.5.8": {
+          "urls": "data/android/lists/bh2_12.5.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.5.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.5.8_android.json"
+        },
+        "12.4.101": {
+          "urls": "data/android/lists/bh2_12.4.101_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.4.101_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.4.101_android.json"
+        },
+        "12.4.54": {
+          "urls": "data/android/lists/bh2_12.4.54_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.4.54_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.4.54_android.json"
+        },
+        "12.4.8": {
+          "urls": "data/android/lists/bh2_12.4.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.4.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.4.8_android.json"
+        },
+        "12.3.103": {
+          "urls": "data/android/lists/bh2_12.3.103_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.3.103_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.3.103_android.json"
+        },
+        "12.3.101": {
+          "urls": "data/android/lists/bh2_12.3.101_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.3.101_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.3.101_android.json"
+        },
+        "12.3.54": {
+          "urls": "data/android/lists/bh2_12.3.54_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.3.54_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.3.54_android.json"
+        },
+        "12.3.27": {
+          "urls": "data/android/lists/bh2_12.3.27_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.3.27_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.3.27_android.json"
+        },
+        "12.3.8": {
+          "urls": "data/android/lists/bh2_12.3.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.3.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.3.8_android.json"
+        },
+        "12.2.103": {
+          "urls": "data/android/lists/bh2_12.2.103_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.2.103_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.2.103_android.json"
+        },
+        "12.2.54": {
+          "urls": "data/android/lists/bh2_12.2.54_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.2.54_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.2.54_android.json"
+        },
+        "12.2.8": {
+          "urls": "data/android/lists/bh2_12.2.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.2.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.2.8_android.json"
+        },
+        "12.1.8": {
+          "urls": "data/android/lists/bh2_12.1.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_12.1.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_12.1.8_android.json"
+        },
+        "11.4.8": {
+          "urls": "data/android/lists/bh2_11.4.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_11.4.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_11.4.8_android.json"
+        },
+        "10.7.8": {
+          "urls": "data/android/lists/bh2_10.7.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_10.7.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_10.7.8_android.json"
+        },
+        "9.8.103": {
+          "urls": "data/android/lists/bh2_9.8.103_android.urls.txt",
+          "aria2": "data/android/lists/bh2_9.8.103_android.aria2.txt",
+          "json": "data/android/lists/bh2_9.8.103_android.json"
+        },
+        "9.8.54": {
+          "urls": "data/android/lists/bh2_9.8.54_android.urls.txt",
+          "aria2": "data/android/lists/bh2_9.8.54_android.aria2.txt",
+          "json": "data/android/lists/bh2_9.8.54_android.json"
+        },
+        "9.8.8": {
+          "urls": "data/android/lists/bh2_9.8.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_9.8.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_9.8.8_android.json"
+        },
+        "9.7.54": {
+          "urls": "data/android/lists/bh2_9.7.54_android.urls.txt",
+          "aria2": "data/android/lists/bh2_9.7.54_android.aria2.txt",
+          "json": "data/android/lists/bh2_9.7.54_android.json"
+        },
+        "9.7.8": {
+          "urls": "data/android/lists/bh2_9.7.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_9.7.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_9.7.8_android.json"
+        },
+        "8.6.8": {
+          "urls": "data/android/lists/bh2_8.6.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_8.6.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_8.6.8_android.json"
+        },
+        "8.5.8": {
+          "urls": "data/android/lists/bh2_8.5.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_8.5.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_8.5.8_android.json"
+        },
+        "7.5.8": {
+          "urls": "data/android/lists/bh2_7.5.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_7.5.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_7.5.8_android.json"
+        },
+        "4.3.221": {
+          "urls": "data/android/lists/bh2_4.3.221_android.urls.txt",
+          "aria2": "data/android/lists/bh2_4.3.221_android.aria2.txt",
+          "json": "data/android/lists/bh2_4.3.221_android.json"
+        },
+        "4.3.210": {
+          "urls": "data/android/lists/bh2_4.3.210_android.urls.txt",
+          "aria2": "data/android/lists/bh2_4.3.210_android.aria2.txt",
+          "json": "data/android/lists/bh2_4.3.210_android.json"
+        },
+        "3.4.8": {
+          "urls": "data/android/lists/bh2_3.4.8_android.urls.txt",
+          "aria2": "data/android/lists/bh2_3.4.8_android.aria2.txt",
+          "json": "data/android/lists/bh2_3.4.8_android.json"
         }
       }
     }
