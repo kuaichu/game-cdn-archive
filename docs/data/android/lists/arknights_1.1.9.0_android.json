@@ -1,0 +1,57 @@
+[
+  {
+    "game_id": "arknights",
+    "version": "1.1.9.0",
+    "channel": "hg",
+    "url": "https://ak.hycdn.cn/apk/202009231557-1190-ad849fdf21cc0693d122/arknights-hg-1190.apk",
+    "source": "official CDN URL recovered from archive.org CDX search",
+    "status": 404,
+    "content_type": "application/xml",
+    "size": 0,
+    "last_modified": "Fri, 06 Sep 2024 02:43:50 GMT",
+    "etag": "B4677055928CF2E1CBBFC7ED2D7D1CAE-400",
+    "md5": "",
+    "crc64": "4794279135235709319",
+    "error": "APK object unavailable",
+    "filename": "arknights-hg-1190.apk",
+    "captured_at": "2026-06-08T18:28:37.666162+00:00",
+    "updated_at": "2024-09-06T02:43:50+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://ak.hycdn.cn/apk/202009231557-1190-ad849fdf21cc0693d122/arknights-hg-1190.apk",
+          "probe": {
+            "ok": false,
+            "status": 403,
+            "method": "CURL_HEAD",
+            "checked_at": "2026-07-09T08:44:43.563Z",
+            "final_url": "https://ak.hycdn.cn/apk/202009231557-1190-ad849fdf21cc0693d122/arknights-hg-1190.apk",
+            "content_type": "application/xml",
+            "size": 334,
+            "last_modified": "Fri, 06 Sep 2024 02:43:50 GMT",
+            "etag": "B4677055928CF2E1CBBFC7ED2D7D1CAE-400",
+            "error": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0\n  0   334    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unavailable",
+        "reason": "retained_historical",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": true,
+        "display_label": "链接失效"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]

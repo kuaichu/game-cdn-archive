@@ -1,0 +1,57 @@
+[
+  {
+    "game_id": "arknights",
+    "version": "2.7.4.1",
+    "channel": "hg",
+    "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/package/1/1/Android/74.0.0_UR6RdckAf6SA49i2/arknights-hg-2741.apk",
+    "source": "official CDN URL captured from latest endpoint; build 2741",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 2062252913,
+    "last_modified": "Fri, 29 May 2026 06:50:18 GMT",
+    "etag": "6F20472BEE19105D4C393B78D43E2ED9-400",
+    "md5": "",
+    "crc64": "",
+    "error": "",
+    "filename": "arknights-hg-2741.apk",
+    "captured_at": "2026-06-08T18:32:31.929348+00:00",
+    "updated_at": "2026-05-29T06:50:18+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/package/1/1/Android/74.0.0_UR6RdckAf6SA49i2/arknights-hg-2741.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-09T08:43:43.866Z",
+            "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/package/1/1/Android/74.0.0_UR6RdckAf6SA49i2/arknights-hg-2741.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2062252913,
+            "last_modified": "Fri, 29 May 2026 06:50:18 GMT",
+            "etag": "6F20472BEE19105D4C393B78D43E2ED9-400",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/74.0/package/1/1/Android/74.0.0_UR6RdckAf6SA49i2/arknights-hg-2741.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
