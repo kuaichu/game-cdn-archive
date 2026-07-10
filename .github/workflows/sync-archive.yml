@@ -360,6 +360,7 @@ jobs:
           GHA_RUN_RETRIES: 2
           GHA_RUN_RETRY_DELAY: 20
           ANDROID_APK_REPROBE_TTL_HOURS: 20
+          ANDROID_APK_FAILED_REPROBE_TTL_HOURS: 4
         run: bash scripts/gha_run_step.sh "Refresh Android APK data" python scripts/sync_android_apks.py
 
       - name: Probe archived URL health
@@ -393,6 +394,7 @@ jobs:
         shell: bash
         env:
           ANDROID_APK_REPROBE_TTL_HOURS: 20
+          ANDROID_APK_FAILED_REPROBE_TTL_HOURS: 4
           WUWA_CDN_PROBE_TTL_HOURS: 168
           WUWA_CDN_FAILED_REPROBE_TTL_HOURS: 24
           WUWA_CDN_GRACE_HOURS: 336

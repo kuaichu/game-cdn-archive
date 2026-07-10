@@ -4,12 +4,14 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 import tempfile
 from copy import deepcopy
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
+from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,7 +30,7 @@ from adapters.wuwa import WuwaAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import ProbeResult, availability_block, probe_fact_defaults  # noqa: E402
 from scripts.build_android_availability import protect_known_good_interpretation  # noqa: E402
 from scripts.build_wuwa_availability import apply_availability, load_versions  # noqa: E402
-from scripts.probe_scheduler import PersistentProbeCache, ProbeScheduleConfig  # noqa: E402
+from scripts.probe_scheduler import PersistentProbeCache, ProbeScheduleConfig, should_probe_previous  # noqa: E402
 from scripts.validate_availability import validate_android, validate_arknights, validate_endfield, validate_hoyo, validate_nte, validate_tof, validate_wuwa  # noqa: E402
 
 
@@ -353,6 +355,37 @@ def assert_android_known_good_conflict_protection() -> None:
     missing_result = protect_known_good_interpretation(record, [missing_probe], missing_interpretation)
     if missing_result != missing_interpretation:
         raise AssertionError(f"definitive 404 must not be conflict-protected: {missing_result!r}")
+
+
+def assert_android_failed_probe_ttl() -> None:
+    with patch.dict(os.environ, {
+        "ANDROID_APK_REPROBE_TTL_HOURS": "20",
+        "ANDROID_APK_FAILED_REPROBE_TTL_HOURS": "",
+    }):
+        config = ProbeScheduleConfig.android_apks_from_env()
+    if config.ttl_hours != 20 or config.failed_ttl_hours != 4:
+        raise AssertionError(f"unexpected Android probe TTL config: {config!r}")
+
+    now = datetime.now(timezone.utc)
+    checked_at = (now - timedelta(hours=5)).isoformat(timespec="milliseconds").replace("+00:00", "Z")
+    failed = android_probe(
+        "https://example.invalid/game.apk",
+        ok=False,
+        status=403,
+        content_type="application/xml",
+        size=334,
+        error="HTTP 403",
+    )
+    failed["probe"]["checked_at"] = checked_at
+    if not should_probe_previous(failed, now, config):
+        raise AssertionError("five-hour-old Android failure must be reprobed")
+
+    successful = deepcopy(failed)
+    successful["probe"]["ok"] = True
+    successful["probe"]["status"] = 206
+    successful["probe"]["error"] = ""
+    if should_probe_previous(successful, now, config):
+        raise AssertionError("five-hour-old Android success must remain cached")
 
 
 def assert_hoyo_metadata_paths() -> None:
@@ -1216,6 +1249,7 @@ def main() -> None:
     assert_arknights_failed_probe_maps_to_unavailable()
     assert_android_negative_paths()
     assert_android_known_good_conflict_protection()
+    assert_android_failed_probe_ttl()
     assert_hoyo_metadata_paths()
     assert_endfield_upstream_paths()
     assert_nte_paths()
@@ -1259,6 +1293,7 @@ def main() -> None:
     print("android_fake_200=PASS")
     print("android_retained_historical=PASS")
     print("android_known_good_conflict=PASS")
+    print("android_failed_probe_ttl=PASS")
     print("hoyo_metadata_inference=PASS")
     print("endfield_upstream_archive=PASS")
     print("nte_live_probe_and_metadata=PASS")

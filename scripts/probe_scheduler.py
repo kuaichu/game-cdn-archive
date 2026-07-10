@@ -174,7 +174,7 @@ class ProbeScheduleConfig:
         ttl_hours = env_int("ANDROID_APK_REPROBE_TTL_HOURS", 20)
         return cls(
             ttl_hours=ttl_hours,
-            failed_ttl_hours=env_int("ANDROID_APK_FAILED_REPROBE_TTL_HOURS", min(ttl_hours, 24) if ttl_hours > 0 else 0),
+            failed_ttl_hours=env_int("ANDROID_APK_FAILED_REPROBE_TTL_HOURS", min(ttl_hours, 4) if ttl_hours > 0 else 0),
             grace_hours=env_int("ANDROID_APK_GRACE_HOURS", max(ttl_hours * 4, 168) if ttl_hours > 0 else 168),
             rotation_limit=env_int("ANDROID_APK_ROTATION_LIMIT", 300),
             force_full=env_flag("URL_STATUS_FORCE_FULL", False),
