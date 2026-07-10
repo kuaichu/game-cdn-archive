@@ -28,7 +28,7 @@ from adapters.nte import NteAvailabilityAdapter  # noqa: E402
 from adapters.tof import TofAvailabilityAdapter  # noqa: E402
 from adapters.wuwa import WuwaAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import ProbeResult, availability_block, probe_fact_defaults  # noqa: E402
-from scripts.build_android_availability import protect_known_good_interpretation  # noqa: E402
+from scripts.build_android_availability import protect_known_good_interpretation, write_linked_json_lists  # noqa: E402
 from scripts.build_wuwa_availability import apply_availability, load_versions  # noqa: E402
 from scripts.probe_scheduler import PersistentProbeCache, ProbeScheduleConfig, should_probe_previous  # noqa: E402
 from scripts.validate_availability import validate_android, validate_arknights, validate_endfield, validate_hoyo, validate_nte, validate_tof, validate_wuwa  # noqa: E402
@@ -386,6 +386,27 @@ def assert_android_failed_probe_ttl() -> None:
     successful["probe"]["error"] = ""
     if should_probe_previous(successful, now, config):
         raise AssertionError("five-hour-old Android success must remain cached")
+
+
+def assert_android_linked_list_sync() -> None:
+    index = valid_android_index()
+    game = index["games"]["android-test"]
+    game["links"] = {
+        "1.0.0": {
+            "json": "data/android/lists/android-test_1.0.0_android.json",
+        }
+    }
+    with tempfile.TemporaryDirectory(prefix="android-linked-list-") as temp:
+        root = Path(temp)
+        stale = deepcopy(game["versions"])
+        stale[0].pop("availability", None)
+        list_path = root / "lists" / "android-test_1.0.0_android.json"
+        list_path.parent.mkdir(parents=True, exist_ok=True)
+        write_json(list_path, stale)
+        write_linked_json_lists(root, index)
+        updated = load_json(list_path)
+    if updated != game["versions"]:
+        raise AssertionError(f"Android linked JSON list did not receive updated availability: {updated!r}")
 
 
 def assert_hoyo_metadata_paths() -> None:
@@ -1250,6 +1271,7 @@ def main() -> None:
     assert_android_negative_paths()
     assert_android_known_good_conflict_protection()
     assert_android_failed_probe_ttl()
+    assert_android_linked_list_sync()
     assert_hoyo_metadata_paths()
     assert_endfield_upstream_paths()
     assert_nte_paths()
@@ -1294,6 +1316,7 @@ def main() -> None:
     print("android_retained_historical=PASS")
     print("android_known_good_conflict=PASS")
     print("android_failed_probe_ttl=PASS")
+    print("android_linked_list_sync=PASS")
     print("hoyo_metadata_inference=PASS")
     print("endfield_upstream_archive=PASS")
     print("nte_live_probe_and_metadata=PASS")

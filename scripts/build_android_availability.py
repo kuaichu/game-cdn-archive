@@ -34,6 +34,29 @@ def write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def write_linked_json_lists(root: Path, index: dict[str, Any]) -> None:
+    pending: list[tuple[Path, list[dict[str, Any]]]] = []
+    for game_id, game in (index.get("games") or {}).items():
+        if not isinstance(game, dict):
+            continue
+        by_version: dict[str, list[dict[str, Any]]] = {}
+        for entry in game.get("versions") or []:
+            if isinstance(entry, dict) and entry.get("version"):
+                by_version.setdefault(str(entry["version"]), []).append(entry)
+        links = game.get("links") or {}
+        for version, entries in by_version.items():
+            version_links = links.get(version) if isinstance(links, dict) else None
+            json_link = version_links.get("json") if isinstance(version_links, dict) else None
+            if not isinstance(json_link, str) or not json_link:
+                continue
+            path = root / "lists" / Path(json_link).name
+            if not path.exists():
+                raise FileNotFoundError(f"Android linked JSON list is missing: {game_id} {version} {path}")
+            pending.append((path, entries))
+    for path, entries in pending:
+        write_json(path, entries)
+
+
 def iter_records(index: dict[str, Any]) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
     for game_id, game in (index.get("games") or {}).items():
@@ -325,6 +348,7 @@ def main() -> None:
         print("semantic_change_policy=ALLOW_EXPLICIT")
 
     if not args.dry_run:
+        write_linked_json_lists(args.root, index)
         write_json(index_path, index)
         print(f"wrote={index_path}")
 
