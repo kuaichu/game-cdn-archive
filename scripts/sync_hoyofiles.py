@@ -78,6 +78,19 @@ MANUAL_HOYO_VERSION_PATCHES: dict[str, dict[str, dict[str, Any]]] = {
         }
     },
     "bh3": {
+        "3.5.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v3.5.0_69f7999cfde.7z",
+                    "url": "http://bundle.bh3.com/tmp/pc/BH3_v3.5.0_69f7999cfde.7z",
+                    "checksum": "",
+                    "size": 0,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "chunk": None,
+        },
         "3.7.0": {
             "game": {
                 "full": {

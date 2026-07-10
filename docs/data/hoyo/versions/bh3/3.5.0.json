@@ -1,0 +1,50 @@
+{
+  "version": "3.5.0",
+  "game": {
+    "full": {
+      "name": "BH3_v3.5.0_69f7999cfde.7z",
+      "url": "http://bundle.bh3.com/tmp/pc/BH3_v3.5.0_69f7999cfde.7z",
+      "checksum": "",
+      "size": 0,
+      "availability": {
+        "candidates": [
+          {
+            "url": "http://bundle.bh3.com/tmp/pc/BH3_v3.5.0_69f7999cfde.7z",
+            "probe": {
+              "ok": false,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-10T18:35:25.504Z",
+              "final_url": "http://bundle.bh3.com/tmp/pc/BH3_v3.5.0_69f7999cfde.7z",
+              "content_type": "",
+              "size": 0,
+              "last_modified": "",
+              "etag": "",
+              "error": "size_zero",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "low"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "low"
+        },
+        "interpretation": {
+          "state": "unavailable",
+          "reason": "size_zero",
+          "preferred_url": "",
+          "confidence": "low",
+          "retained": false,
+          "display_label": "链接失效"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
+    }
+  },
+  "voice": {},
+  "update": {},
+  "chunk": null
+}

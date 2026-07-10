@@ -5643,6 +5643,61 @@
       "shortName": "BH3",
       "domain": "autopatchcn.bh3.com",
       "versions": [
+      {
+        "version": "3.5.0",
+        "package_items": 1,
+        "update_items": 0,
+        "direct_bytes": 0,
+        "has_chunk": false,
+        "has_decompressed_path": false,
+        "unavailable_items": 1,
+        "last_modified": "Tue, 28 Feb 2023 10:25:46 GMT",
+        "last_modified_status": 404,
+        "last_modified_url": "http://bundle.bh3.com/tmp/pc/BH3_v3.5.0_69f7999cfde.7z",
+        "last_modified_source": "pc_package",
+        "availability": {
+          "candidates": [
+            {
+              "url": "http://bundle.bh3.com/tmp/pc/BH3_v3.5.0_69f7999cfde.7z",
+              "probe": {
+                "ok": false,
+                "status": 0,
+                "method": "METADATA_SUMMARY",
+                "checked_at": "2026-07-09T08:04:40.11Z",
+                "final_url": "http://bundle.bh3.com/tmp/pc/BH3_v3.5.0_69f7999cfde.7z",
+                "content_type": "",
+                "size": 0,
+                "last_modified": "",
+                "etag": "",
+                "error": "not_probed",
+                "bot_challenge": false,
+                "stale": false,
+                "age_hours": null,
+                "scheduler_confidence": "low"
+              }
+            }
+          ],
+          "source": {
+            "kind": "metadata_inference",
+            "confidence": "low"
+          },
+          "interpretation": {
+            "state": "unavailable",
+            "reason": "size_zero",
+            "preferred_url": "",
+            "confidence": "low",
+            "retained": false,
+            "display_label": "链接失效"
+          },
+          "generated_by": "scripts/build_hoyo_availability.py"
+        },
+        "availability_counts": {
+          "unavailable": 1
+        },
+        "availability_reasons": {
+          "size_zero": 1
+        }
+      },
         {
           "version": "3.7.0",
           "package_items": 1,
@@ -8602,10 +8657,10 @@
           "availability_reasons": {}
         }
       ],
-      "version_count": 54,
-      "first_version": "3.7.0",
+      "version_count": 55,
+      "first_version": "3.5.0",
       "latest_version": "8.9.0",
-      "direct_items": 49,
+      "direct_items": 50,
       "update_items": 1,
       "chunk_versions": 8,
       "direct_bytes": 385588964003,

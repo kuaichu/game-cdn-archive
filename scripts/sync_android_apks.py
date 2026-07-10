@@ -177,6 +177,14 @@ KNOWN_APKS = [
     },
     {
         "game_id": "aethergazer",
+        "version": "0.300.11",
+        "channel": "adv_300",
+        "url": "https://download.ys4fun.com/package/adv/300/mimir_ali_adv_300_1_ys4fun_20250313145719.apk",
+        "source": "official ys4fun advance-channel APK URL provided by user; versionName read from AndroidManifest.xml",
+        "headers": {"Referer": "https://skzy.ys4fun.com/"},
+    },
+    {
+        "game_id": "aethergazer",
         "version": "0.294.0",
         "channel": "294",
         "url": "https://packaging.ys4fun.com/package/channel/294/mimir_ali_prod_294_1_ys4fun_20240710095639_M01000000_bi3NUfr4_sign.apk",
