@@ -17,6 +17,42 @@
     "filename": "20230629-122046-gf_android_ota-versions-v6_8-Saha_and_Rebirth_gw.apk",
     "captured_at": "2026-07-10T06:55:08.185337+00:00",
     "updated_at": "2023-07-03T02:26:11+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://bundle.bh3.com/ptpublic/rel/20230702172043_o8BzGMLGBbVpTjyy/CPS/20230629-122046-gf_android_ota-versions-v6_8-Saha_and_Rebirth_gw.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-10T06:55:08.185337+00:00",
+            "final_url": "https://bundle.bh3.com/ptpublic/rel/20230702172043_o8BzGMLGBbVpTjyy/CPS/20230629-122046-gf_android_ota-versions-v6_8-Saha_and_Rebirth_gw.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 530428840,
+            "last_modified": "Mon, 03 Jul 2023 02:26:11 GMT",
+            "etag": "BA55A1D096EEB915468BE92A88F29749-10",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.033,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20230702172043_o8BzGMLGBbVpTjyy/CPS/20230629-122046-gf_android_ota-versions-v6_8-Saha_and_Rebirth_gw.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

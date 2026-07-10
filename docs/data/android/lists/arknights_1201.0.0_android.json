@@ -23,18 +23,18 @@
           "url": "https://ak.hycdn.cn/apk/202010281505-1201-f75c49dbdd52c3d0d02f/arknights-hg-1201.apk",
           "probe": {
             "ok": false,
-            "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-08T06:44:28.245603+00:00",
+            "status": 403,
+            "method": "CURL_HEAD",
+            "checked_at": "2026-07-09T08:44:39.916Z",
             "final_url": "https://ak.hycdn.cn/apk/202010281505-1201-f75c49dbdd52c3d0d02f/arknights-hg-1201.apk",
             "content_type": "application/xml",
-            "size": 0,
+            "size": 334,
             "last_modified": "Fri, 06 Sep 2024 02:50:29 GMT",
             "etag": "B8A675EE3777BBDC68A7C7AEB33DB74A-400",
-            "error": "APK object unavailable",
+            "error": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0   334    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 18.754,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

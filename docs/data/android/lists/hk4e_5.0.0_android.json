@@ -24,17 +24,17 @@
           "probe": {
             "ok": true,
             "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-08T06:44:28.245603+00:00",
+            "method": "HEAD",
+            "checked_at": "2026-07-09T08:42:50.788Z",
             "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20240816175608_Vbb9tDu8AZmKnQKn/mihoyo/yuanshen_5.0.0.apk",
-            "content_type": "application/vnd.android.package-archive",
+            "content_type": "application/vnd.android.package-archive;charset=UTF-8",
             "size": 360527809,
-            "last_modified": "Thu, 22 Aug 2024 07:34:02 GMT",
-            "etag": "786777e6b09022cb577a654015c8f76c",
+            "last_modified": "Sat, 17 Aug 2024 08:34:24 GMT",
+            "etag": "lpR_Xddadd2opdz0O2YyEd3r_um4",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 18.754,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

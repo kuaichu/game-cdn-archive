@@ -24,8 +24,8 @@
           "probe": {
             "ok": true,
             "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-08T06:44:28.245603+00:00",
+            "method": "HEAD",
+            "checked_at": "2026-07-09T08:41:33.522Z",
             "final_url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2023625968,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 18.753,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

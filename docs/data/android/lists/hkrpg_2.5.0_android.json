@@ -24,8 +24,8 @@
           "probe": {
             "ok": true,
             "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-08T06:44:28.245603+00:00",
+            "method": "HEAD",
+            "checked_at": "2026-07-09T08:43:19.940Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20240829163400_T4NhQaIeWzaVVwjM/gw/StarRail_2.5.0.apk",
             "content_type": "text/plain",
             "size": 3,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 18.754,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

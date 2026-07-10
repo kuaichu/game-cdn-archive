@@ -16,6 +16,42 @@
     "filename": "20220302-235837-gf_android_ota-versions-v5_6-Elysian_Reverie_guofu.apk",
     "captured_at": "2026-06-06T07:29:12.631982+00:00",
     "updated_at": "2023-02-28T10:25:46+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://bundle.bh3.com/public/Android/20220302-235837-gf_android_ota-versions-v5_6-Elysian_Reverie_guofu.apk",
+          "probe": {
+            "ok": false,
+            "status": 404,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-10T06:55:08.185337+00:00",
+            "final_url": "https://bundle.bh3.com/public/Android/20220302-235837-gf_android_ota-versions-v5_6-Elysian_Reverie_guofu.apk",
+            "content_type": "text/html",
+            "size": 0,
+            "last_modified": "Tue, 28 Feb 2023 10:25:46 GMT",
+            "etag": "60B0F4630F6F13F329E338B74014282D",
+            "error": "APK object unavailable",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.033,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unavailable",
+        "reason": "retained_historical",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": true,
+        "display_label": "链接失效"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

@@ -14,6 +14,42 @@
     "crc64": "",
     "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
     "filename": "20170525-android_versions-v1_5_Theresa_Fight_guofu.apk",
-    "captured_at": "2026-06-06T07:29:12.631982+00:00"
+    "captured_at": "2026-06-06T07:29:12.631982+00:00",
+    "availability": {
+      "candidates": [
+        {
+          "url": "http://app.bh3.com/public/Android/20170525-android_versions-v1_5_Theresa_Fight_guofu.apk",
+          "probe": {
+            "ok": false,
+            "status": 0,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-10T06:55:08.185337+00:00",
+            "final_url": "http://app.bh3.com/public/Android/20170525-android_versions-v1_5_Theresa_Fight_guofu.apk",
+            "content_type": "",
+            "size": 0,
+            "last_modified": "",
+            "etag": "",
+            "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.033,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unavailable",
+        "reason": "retained_historical",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": true,
+        "display_label": "链接失效"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

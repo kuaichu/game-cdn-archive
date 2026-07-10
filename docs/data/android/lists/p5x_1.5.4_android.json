@@ -25,8 +25,8 @@
           "probe": {
             "ok": true,
             "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-08T11:22:56.795595+00:00",
+            "method": "HEAD",
+            "checked_at": "2026-07-09T08:39:44.433Z",
             "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
             "content_type": "application/octet-stream",
             "size": 1664463882,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 14.112,
+            "age_hours": 0,
             "scheduler_confidence": "high"
           }
         }

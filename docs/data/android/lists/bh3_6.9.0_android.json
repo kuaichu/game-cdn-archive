@@ -17,6 +17,42 @@
     "filename": "20230809-234720-gf_android_ota-versions-v6_9-Cutting_Dreams_at_Dawn_mys.apk",
     "captured_at": "2026-07-10T06:55:08.185337+00:00",
     "updated_at": "2023-08-14T07:06:10+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://bundle.bh3.com/ptpublic/rel/20230814114102_KD8RjBDLGc0wU5j9/CPS/20230809-234720-gf_android_ota-versions-v6_9-Cutting_Dreams_at_Dawn_mys.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-10T06:55:08.185337+00:00",
+            "final_url": "https://bundle.bh3.com/ptpublic/rel/20230814114102_KD8RjBDLGc0wU5j9/CPS/20230809-234720-gf_android_ota-versions-v6_9-Cutting_Dreams_at_Dawn_mys.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 530170531,
+            "last_modified": "Mon, 14 Aug 2023 07:06:10 GMT",
+            "etag": "41ADE09F06022697823A10BAC63E7598-10",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.033,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20230814114102_KD8RjBDLGc0wU5j9/CPS/20230809-234720-gf_android_ota-versions-v6_9-Cutting_Dreams_at_Dawn_mys.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

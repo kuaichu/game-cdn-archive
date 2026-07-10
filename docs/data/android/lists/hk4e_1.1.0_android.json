@@ -20,34 +20,34 @@
         {
           "url": "https://autopatchcn.yuanshen.com/client_app/Android/20201111_c957958f02d43b5b/yuanshen_1.1.0_mihoyo.apk",
           "probe": {
-            "ok": false,
-            "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-08T06:44:28.245603+00:00",
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-09T08:43:05.094Z",
             "final_url": "https://autopatchcn.yuanshen.com/client_app/Android/20201111_c957958f02d43b5b/yuanshen_1.1.0_mihoyo.apk",
-            "content_type": "application/xml",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "APK object unavailable",
+            "content_type": "application/vnd.android.package-archive;charset=UTF-8",
+            "size": 152568901,
+            "last_modified": "Wed, 04 Nov 2020 08:12:39 GMT",
+            "etag": "lt7aEUfd2qnlwhxPcvMAqPN5ZHHv",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 18.754,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
-        "preferred_url": "",
-        "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://autopatchcn.yuanshen.com/client_app/Android/20201111_c957958f02d43b5b/yuanshen_1.1.0_mihoyo.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

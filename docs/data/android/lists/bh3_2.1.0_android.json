@@ -15,6 +15,42 @@
     "crc64": "",
     "error": "APK object unavailable",
     "filename": "20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
-    "captured_at": "2026-07-10T06:37:54.844642+00:00"
+    "captured_at": "2026-07-10T06:37:54.844642+00:00",
+    "availability": {
+      "candidates": [
+        {
+          "url": "http://app.bh3.com/public/Android/20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
+          "probe": {
+            "ok": false,
+            "status": 404,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-10T06:55:08.185337+00:00",
+            "final_url": "http://app.bh3.com/public/Android/20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
+            "content_type": "application/xml",
+            "size": 0,
+            "last_modified": "",
+            "etag": "",
+            "error": "APK object unavailable",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.033,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unavailable",
+        "reason": "retained_historical",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": true,
+        "display_label": "链接失效"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

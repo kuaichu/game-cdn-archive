@@ -24,17 +24,17 @@
           "probe": {
             "ok": true,
             "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-08T06:44:28.245603+00:00",
+            "method": "HEAD",
+            "checked_at": "2026-07-09T08:42:56.866Z",
             "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20230403105245_M6iuu1yxzEjZAws9/mihoyo/yuanshen_3.6.0.apk",
-            "content_type": "application/vnd.android.package-archive",
+            "content_type": "application/vnd.android.package-archive;charset=UTF-8",
             "size": 367046163,
-            "last_modified": "Fri, 07 Apr 2023 02:39:16 GMT",
-            "etag": "f300ab6d3c99cdcd52119422690acef4",
+            "last_modified": "Mon, 03 Apr 2023 03:11:44 GMT",
+            "etag": "lqSU7AnWJTastMhSzml6MqbDN7jK",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 18.754,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

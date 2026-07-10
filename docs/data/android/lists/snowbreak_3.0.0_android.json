@@ -24,17 +24,17 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-08T06:44:28.245603+00:00",
+            "method": "HEAD",
+            "checked_at": "2026-07-09T08:41:43.956Z",
             "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ_3.0.0_202507031642_jinshan_30020.mtp.apk",
             "content_type": "application/xml",
-            "size": 0,
+            "size": 505,
             "last_modified": "",
             "etag": "",
-            "error": "APK object unavailable",
+            "error": "HTTP 404",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 18.753,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
