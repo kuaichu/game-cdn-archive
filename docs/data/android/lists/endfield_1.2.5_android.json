@@ -1,0 +1,59 @@
+[
+  {
+    "game_id": "endfield",
+    "version": "1.2.5",
+    "channel": "official",
+    "url": "https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.2/package/1/1/Android/1.2.5_mStKKtMSeUpoODur/endfield-hg-1-1.2.5.apk",
+    "source": "official Hypergryph APK CDN URL recovered from SkyBird233/gryph-links historical latest-link commit; temporary signature omitted",
+    "source_url": "https://github.com/SkyBird233/gryph-links/blob/5b020e1599a4b3b9074c11b5efb025d20b92b749/links/endfield",
+    "archive_note": "Historical CDN object path recovered from the 2026-04-17 latest-link record; temporary signature omitted.",
+    "updated_at": "2026-04-17T01:21:14+00:00",
+    "updated_at_source": "upstream_commit_date",
+    "status": 404,
+    "content_type": "text/html",
+    "size": 0,
+    "last_modified": "",
+    "etag": "",
+    "md5": "",
+    "crc64": "",
+    "error": "APK object unavailable",
+    "filename": "endfield-hg-1-1.2.5.apk",
+    "captured_at": "2026-07-10T17:54:31.361517+00:00",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.2/package/1/1/Android/1.2.5_mStKKtMSeUpoODur/endfield-hg-1-1.2.5.apk",
+          "probe": {
+            "ok": false,
+            "status": 404,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-10T17:54:31.361517+00:00",
+            "final_url": "https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.2/package/1/1/Android/1.2.5_mStKKtMSeUpoODur/endfield-hg-1-1.2.5.apk",
+            "content_type": "text/html",
+            "size": 0,
+            "last_modified": "",
+            "etag": "",
+            "error": "APK object unavailable",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unavailable",
+        "reason": "retained_historical",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": true,
+        "display_label": "链接失效"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]

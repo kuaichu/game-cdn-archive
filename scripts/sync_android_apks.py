@@ -1950,6 +1950,29 @@ KNOWN_APKS = [
         "source": "official static.benghuai.com Android APK URL recovered from archive.org CDX search; currently retained as historical dead-link evidence",
         "headers": {"Referer": "https://www.benghuai.com/"},
     },
+    # === Endfield (终末地) - official APK paths recovered from historical latest-link commits ===
+    {
+        "game_id": "endfield",
+        "version": "1.1.8",
+        "channel": "official",
+        "url": "https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.1/package/1/1/Android/1.1.8_sLAAL9caQ48xm4a8/endfield-hg-1-1.1.8.apk",
+        "source": "official Hypergryph APK CDN URL recovered from SkyBird233/gryph-links historical latest-link commit; temporary signature omitted",
+        "source_url": "https://github.com/SkyBird233/gryph-links/blob/030aa7b8ff9e5f7275de98afb82354166c3a7052/links/endfield",
+        "archive_note": "Historical CDN object path recovered from the 2026-03-26 latest-link record; temporary signature omitted.",
+        "updated_at": "2026-03-26T10:52:07+00:00",
+        "updated_at_source": "upstream_commit_date",
+    },
+    {
+        "game_id": "endfield",
+        "version": "1.2.5",
+        "channel": "official",
+        "url": "https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.2/package/1/1/Android/1.2.5_mStKKtMSeUpoODur/endfield-hg-1-1.2.5.apk",
+        "source": "official Hypergryph APK CDN URL recovered from SkyBird233/gryph-links historical latest-link commit; temporary signature omitted",
+        "source_url": "https://github.com/SkyBird233/gryph-links/blob/5b020e1599a4b3b9074c11b5efb025d20b92b749/links/endfield",
+        "archive_note": "Historical CDN object path recovered from the 2026-04-17 latest-link record; temporary signature omitted.",
+        "updated_at": "2026-04-17T01:21:14+00:00",
+        "updated_at_source": "upstream_commit_date",
+    },
 ]
 
 BH3_DOWNLOAD_LIBRARY_APKS = [
