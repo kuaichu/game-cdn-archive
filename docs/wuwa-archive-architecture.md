@@ -159,7 +159,7 @@ It checks:
 - file counts match the summaries
 - patch counts match the summaries
 - every file has required fields
-- total file count equals `EXPECTED_TOTAL_FILES`
+- declared `total_file_count` in `index.json` equals the aggregate shard total
 
 After any WuWa-related change, also run:
 

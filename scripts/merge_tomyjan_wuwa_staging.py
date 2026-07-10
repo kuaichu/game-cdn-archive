@@ -5,13 +5,11 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 WUWA_DIR = REPO_ROOT / "docs" / "data" / "wuwa"
-VALIDATOR = REPO_ROOT / "scripts" / "validate_wuwa_split.py"
 
 BATCHES = {
     "1.x": ["1.0.2", "1.1.0", "1.2.0", "1.3.0", "1.4.0", "1.4.1", "1.4.2", "1.4.3"],
@@ -107,18 +105,9 @@ def refresh_index(output_dir: Path) -> int:
         total_files += len(row.get("files") or [])
     versions.sort(key=lambda item: version_key(item["version"]), reverse=True)
     index["versions"] = versions
+    index["total_file_count"] = total_files
     write_json(index_path, index)
     return total_files
-
-
-def update_expected_total(total_files: int) -> None:
-    text = VALIDATOR.read_text(encoding="utf-8")
-    updated = re.sub(r"^EXPECTED_TOTAL_FILES = \d+$", f"EXPECTED_TOTAL_FILES = {total_files}", text, flags=re.M)
-    if f"EXPECTED_TOTAL_FILES = {total_files}" in text:
-        return
-    if text == updated:
-        raise RuntimeError("Could not update EXPECTED_TOTAL_FILES in validate_wuwa_split.py")
-    VALIDATOR.write_text(updated, encoding="utf-8")
 
 
 def mark_existing_self_collected(output_dir: Path) -> None:
@@ -126,7 +115,7 @@ def mark_existing_self_collected(output_dir: Path) -> None:
         row = load_json(shard_path)
         row.setdefault("source", "self-collected")
         write_json(shard_path, row)
-    update_expected_total(refresh_index(output_dir))
+    refresh_index(output_dir)
 
 
 def promote_versions(output_dir: Path, versions: list[str]) -> None:
@@ -149,7 +138,7 @@ def promote_versions(output_dir: Path, versions: list[str]) -> None:
             )
         }
         write_json(target_path, row)
-    update_expected_total(refresh_index(output_dir))
+    refresh_index(output_dir)
 
 
 def main() -> None:

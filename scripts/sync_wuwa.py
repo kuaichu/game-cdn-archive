@@ -280,21 +280,29 @@ def cached_version(
     return summary_from_version(cached), deepcopy(cached)
 
 
-def imported_cached_versions(cached_versions: dict, output_dir: Path) -> dict:
-    imported: dict = {}
+def retained_cached_versions(
+    cached_versions: dict,
+    output_dir: Path,
+    *,
+    channel: str,
+    region: str,
+) -> dict:
+    retained: dict = {}
     for version, payload in cached_versions.items():
         if not isinstance(payload, dict):
             continue
-        if payload.get("source") != "tomyjan-import":
+        if payload.get("source") not in {"self-collected", "tomyjan-import"}:
+            continue
+        if payload.get("channel") != channel or payload.get("region") != region:
             continue
         if not cached_link_exists(output_dir, payload.get("links")):
             print(
-                f"::warning::Skipping imported Wuthering Waves {version} data "
+                f"::warning::Skipping retained Wuthering Waves {version} data "
                 "because one or more linked list files are missing."
             )
             continue
-        imported[version] = payload
-    return imported
+        retained[version] = payload
+    return retained
 
 
 def join_url(base: str, path: str) -> str:
@@ -689,10 +697,16 @@ def main() -> None:
     for version in versions.values():
         version.setdefault("source", "self-collected")
 
-    for imported_version, imported_payload in imported_cached_versions(cached_versions, args.output).items():
-        if imported_version in versions:
+    for cached_version, cached_payload in retained_cached_versions(
+        cached_versions,
+        args.output,
+        channel=args.channel,
+        region=args.region,
+    ).items():
+        if cached_version in versions:
             continue
-        versions[imported_version] = imported_payload
+        print(f"::notice::Retaining cached Wuthering Waves {cached_version} archive shard.")
+        versions[cached_version] = cached_payload
 
     summaries = [summary_from_version(version) for version in versions.values()]
     summaries.sort(key=lambda item: version_key(item["version"]), reverse=True)
@@ -711,6 +725,7 @@ def main() -> None:
             "icon": "assets/icons/wuwa.png",
             "kind": "wuwa",
         },
+        "total_file_count": sum(len(item.get("files") or []) for item in versions.values()),
         "versions": summaries,
     }
 

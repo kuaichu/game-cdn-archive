@@ -11,7 +11,6 @@ from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 WUWA_DIR = REPO_ROOT / "docs" / "data" / "wuwa"
-EXPECTED_TOTAL_FILES = 24865
 REQUIRED_VERSION_FIELDS = ("version", "channel", "region", "release_date", "files", "patches")
 REQUIRED_FILE_FIELDS = ("dest", "md5", "size", "url")
 
@@ -170,7 +169,8 @@ def build_self_report(args: argparse.Namespace) -> tuple[bool, str]:
     lines.append("mode=self")
     lines.append(f"index={args.index}")
     lines.append(f"shard_dir={args.shard_dir}")
-    lines.append(f"expected_total_files={args.expected_total_files}")
+    declared_total_files = as_int(index.get("total_file_count"))
+    lines.append(f"declared_total_files={declared_total_files if declared_total_files is not None else 'MISSING'}")
     lines.append(f"index_versions={len(summary_versions)}")
     lines.append(f"shard_versions={len(shard_versions)}")
 
@@ -282,11 +282,21 @@ def build_self_report(args: argparse.Namespace) -> tuple[bool, str]:
         lines.append("file_required_fields=PASS")
 
     lines.append(f"total_files={total_files}")
-    if total_files == args.expected_total_files:
-        lines.append("expected_total_files_match=PASS")
+    if declared_total_files is None:
+        ok = False
+        lines.append("declared_total_files_match=FAIL")
+    elif total_files == declared_total_files:
+        lines.append("declared_total_files_match=PASS")
     else:
         ok = False
-        lines.append("expected_total_files_match=FAIL")
+        lines.append("declared_total_files_match=FAIL")
+
+    if args.expected_total_files is not None:
+        if total_files == args.expected_total_files:
+            lines.append("requested_total_files_match=PASS")
+        else:
+            ok = False
+            lines.append("requested_total_files_match=FAIL")
 
     lines.append("result=" + ("PASS" if ok else "FAIL"))
     return ok, "\n".join(lines) + "\n"
@@ -308,7 +318,7 @@ def main() -> None:
     parser.add_argument("--index", type=Path, default=WUWA_DIR / "index.json")
     parser.add_argument("--shard-dir", type=Path, default=WUWA_DIR / "versions")
     parser.add_argument("--mode", choices=("auto", "aggregate", "self"), default="auto")
-    parser.add_argument("--expected-total-files", type=int, default=EXPECTED_TOTAL_FILES)
+    parser.add_argument("--expected-total-files", type=int, default=None)
     parser.add_argument("--log", type=Path, default=None)
     args = parser.parse_args()
 
