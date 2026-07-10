@@ -13,6 +13,7 @@ questions before future changes:
 | --- | --- | --- | --- |
 | WuWa / 鸣潮 PC | Split: compact `index.json`, per-version shards, generated lists | Has split validator, staging import, batch promotion, release-date updater | Most mature separated model. |
 | Endfield / 终末地 PC | Semi-split: compact `index.json`, aggregate `versions.json`, generated lists | Has validator and staging promotion tool | Validated, but version payload is still aggregate. |
+| Endfield / 终末地 Windows resources | Split: compact `index.json`, per-version resource shards, generated lists | Has dedicated import and validator | Latest archived observation per game version; decoded indexes reconstruct official file URLs. |
 | Arknights / 明日方舟 PC | Semi-split: compact `index.json`, aggregate `versions.json`, generated lists | Has validator and staging promotion tool | Smallest pipeline; used as low-risk proof of the workflow. |
 | NTE / 异环 PC | Legacy/generated catalog plus per-version URL lists | No dedicated staging/promote validator yet | Existing downloader/reslist tools are separate from the new validator pattern. |
 | HoYo PC catalog | Split: compact `games.json`, per-version shards, plus chunk shards | Has structural split validator | Package/update metadata now follows the WuWa-style selected-version load path. |
@@ -33,6 +34,7 @@ docs/data/p5x/catalog.json
 docs/data/hoyo/games.json
 docs/data/endfield/index.json
 docs/data/endfield/versions.json
+docs/data/endfield/resources/index.json
 docs/data/wuwa/index.json
 docs/data/arknights/index.json
 docs/data/arknights/versions.json
@@ -147,6 +149,22 @@ Current status:
 - Has a promote tool.
 - Still uses aggregate `versions.json`; future split work should be separate
   from validation-tool work.
+
+### Endfield Windows Resources
+
+```text
+docs/data/endfield/resources/
+  index.json
+  versions/{game_version}.json
+  lists/{game_version}.urls.txt
+  lists/{game_version}.aria2.txt
+```
+
+`scripts/import_endfield_resources.py` reads the public daydreamer-json
+archive's decoded Windows resource indexes. Multiple observations for one game
+version are collapsed to the newest `updatedAt` record. Version shards retain
+paths, checksums, sizes, and reconstructed official file URLs; the frontend
+loads a shard only after the user selects the Windows resource mode.
 
 Validation expectations:
 
