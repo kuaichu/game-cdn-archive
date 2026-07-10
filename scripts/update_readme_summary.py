@@ -137,6 +137,21 @@ def nte_row() -> tuple[str, str, str, str] | None:
     return ("Neverness to Everness / 异环", "Windows PC", status, version_time(latest_record))
 
 
+def nte_android_row() -> tuple[str, str, str, str] | None:
+    catalog = load_json(DOCS_DATA / "nte" / "android" / "catalog.json")
+    if not catalog:
+        return None
+    versions = catalog.get("versions") or []
+    ok_versions = [row for row in versions if row.get("status") == 200]
+    latest_record = latest_row(ok_versions)
+    latest = str(latest_record.get("version")) if latest_record else None
+    if not latest:
+        return None
+    branches = sorted({str(row.get("branch")) for row in ok_versions if row.get("branch")})
+    status = f"Android 装后资源 ResList 已解码并索引到 `{latest}`（`{len(ok_versions)}` 个版本 / `{len(branches)}` 个分支）"
+    return ("Neverness to Everness / 异环", "Android resources", status, version_time(latest_record))
+
+
 def tof_row() -> tuple[str, str, str, str] | None:
     catalog = load_json(DOCS_DATA / "tof" / "catalog.json")
     if not catalog:
@@ -227,6 +242,7 @@ def hoyo_rows() -> list[tuple[str, str, str, str]]:
 
 def progress_block() -> str:
     catalog = load_json(DOCS_DATA / "catalog.json") or {}
+    nte_android = load_json(DOCS_DATA / "nte" / "android" / "catalog.json") or {}
     tof = load_json(DOCS_DATA / "tof" / "catalog.json") or {}
     p5x = load_json(DOCS_DATA / "p5x" / "catalog.json") or {}
     hoyo = load_json(DOCS_DATA / "hoyo" / "games.json") or {}
@@ -245,6 +261,19 @@ def progress_block() -> str:
             "NTE / 异环 PC",
             f"已索引官方 Windows 清单 `{nte_first}` 到 `{nte_latest}`；"
             f"`{len(nte_versions)}` 个已探测条目中有 `{len(nte_ok)}` 个可用版本",
+        ))
+
+    nte_android_versions = nte_android.get("versions") or []
+    nte_android_ok = [row for row in nte_android_versions if row.get("status") == 200]
+    nte_android_first, nte_android_latest = version_range_text(nte_android_ok)
+    if nte_android_first and nte_android_latest:
+        branches = sorted({str(row.get("branch")) for row in nte_android_ok if row.get("branch")})
+        latest_record = latest_row(nte_android_ok) or {}
+        rows.append((
+            "NTE / 异环 Android resources",
+            f"已索引 Android 装后资源 ResList `{nte_android_first}` 到 `{nte_android_latest}`；"
+            f"覆盖 `{len(branches)}` 个资源分支，最新清单包含 `{(latest_record.get('full') or {}).get('items') or 0}` 个完整对象与 "
+            f"`{(latest_record.get('patches') or {}).get('items') or 0}` 个补丁对象",
         ))
 
     tof_versions = tof.get("versions") or []
@@ -368,6 +397,7 @@ def android_progress_block() -> str:
 
 def generated_at_line() -> str:
     catalog = load_json(DOCS_DATA / "catalog.json") or {}
+    nte_android = load_json(DOCS_DATA / "nte" / "android" / "catalog.json") or {}
     tof = load_json(DOCS_DATA / "tof" / "catalog.json") or {}
     p5x = load_json(DOCS_DATA / "p5x" / "catalog.json") or {}
     hoyo = load_json(DOCS_DATA / "hoyo" / "games.json") or {}
@@ -377,6 +407,7 @@ def generated_at_line() -> str:
     android = load_json(DOCS_DATA / "android" / "index.json") or {}
     return "_整个项目的数据刷新时间：" + latest_time_text(
         source_time(catalog),
+        source_time(nte_android),
         source_time(tof),
         source_time(p5x),
         source_time(hoyo),
@@ -392,6 +423,7 @@ def generate_block() -> str:
         row
         for row in [
             nte_row(),
+            nte_android_row(),
             tof_row(),
             p5x_row(),
             endfield_row(),

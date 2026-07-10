@@ -39,6 +39,7 @@ DEFAULT_ANDROID = ROOT / "docs" / "data" / "android"
 DEFAULT_ENDFIELD = ROOT / "docs" / "data" / "endfield"
 DEFAULT_HOYO = ROOT / "docs" / "data" / "hoyo"
 DEFAULT_NTE = ROOT / "docs" / "data"
+DEFAULT_NTE_ANDROID = ROOT / "docs" / "data" / "nte" / "android"
 DEFAULT_P5X = ROOT / "docs" / "data" / "p5x"
 DEFAULT_TOF = ROOT / "docs" / "data" / "tof"
 DEFAULT_WUWA = ROOT / "docs" / "data" / "wuwa"
@@ -409,6 +410,58 @@ def validate_nte(root: Path) -> list[str]:
     return errors
 
 
+def validate_nte_android(root: Path) -> list[str]:
+    errors: list[str] = []
+    catalog_path = root / "catalog.json"
+    catalog = load_json(catalog_path)
+    adapter = NteAvailabilityAdapter()
+    if not isinstance(catalog, dict):
+        return ["nte_android:catalog_not_object"]
+    versions = catalog.get("versions")
+    if not isinstance(versions, list):
+        return ["nte_android:versions_missing"]
+
+    docs_data = ROOT / "docs" / "data"
+    for row in versions:
+        if not isinstance(row, dict):
+            errors.append("nte_android:version_not_object")
+            continue
+        version = str(row.get("version") or "")
+        branch = str(row.get("branch") or "")
+        summary_path = f"nte_android:{branch}:{version}:summary"
+        errors.extend(validate_availability(row, summary_path, adapter))
+        source = (row.get("availability") or {}).get("source") or {}
+        if source.get("kind") != "live_probe":
+            errors.append(f"{summary_path}:source_kind_not_live_probe:{source.get('kind')}")
+
+        for section_name in ("full", "patches"):
+            section = row.get(section_name)
+            if not isinstance(section, dict) or not section.get("json"):
+                continue
+            rel = Path(str(section["json"]))
+            shard_path = docs_data / rel.relative_to("data") if rel.parts and rel.parts[0] == "data" else root / rel
+            if not shard_path.exists():
+                errors.append(f"nte_android:{branch}:{version}:{section_name}:shard_missing:{shard_path}")
+                continue
+            items = load_json(shard_path)
+            if not isinstance(items, list):
+                errors.append(f"nte_android:{branch}:{version}:{section_name}:shard_not_list")
+                continue
+            for index, item in enumerate(items, start=1):
+                if not isinstance(item, dict):
+                    errors.append(f"nte_android:{branch}:{version}:{section_name}:item_{index}_not_object")
+                    continue
+                item_path = f"nte_android:{branch}:{version}:{section_name}:item_{index}"
+                errors.extend(validate_availability(item, item_path, adapter))
+                item_source = (item.get("availability") or {}).get("source") or {}
+                item_interpretation = (item.get("availability") or {}).get("interpretation") or {}
+                if item_source.get("kind") != "metadata_inference":
+                    errors.append(f"{item_path}:source_kind_not_metadata_inference:{item_source.get('kind')}")
+                if item_interpretation.get("confidence") == "high" or item_source.get("confidence") == "high":
+                    errors.append(f"{item_path}:metadata_high_confidence")
+    return errors
+
+
 def validate_tof(root: Path) -> list[str]:
     errors: list[str] = []
     catalog_path = root / "catalog.json"
@@ -646,6 +699,7 @@ def main() -> None:
     parser.add_argument("--endfield-root", type=Path, default=DEFAULT_ENDFIELD)
     parser.add_argument("--hoyo-root", type=Path, default=DEFAULT_HOYO)
     parser.add_argument("--nte-root", type=Path, default=DEFAULT_NTE)
+    parser.add_argument("--nte-android-root", type=Path, default=DEFAULT_NTE_ANDROID)
     parser.add_argument("--p5x-root", type=Path, default=DEFAULT_P5X)
     parser.add_argument("--tof-root", type=Path, default=DEFAULT_TOF)
     parser.add_argument("--wuwa-root", type=Path, default=DEFAULT_WUWA)
@@ -658,6 +712,7 @@ def main() -> None:
     errors.extend(validate_endfield(args.endfield_root))
     errors.extend(validate_hoyo(args.hoyo_root))
     errors.extend(validate_nte(args.nte_root))
+    errors.extend(validate_nte_android(args.nte_android_root))
     errors.extend(validate_p5x(args.p5x_root))
     errors.extend(validate_tof(args.tof_root))
     errors.extend(validate_wuwa(args.wuwa_root))
@@ -668,6 +723,7 @@ def main() -> None:
     print(f"endfield_root={args.endfield_root.resolve()}")
     print(f"hoyo_root={args.hoyo_root.resolve()}")
     print(f"nte_root={args.nte_root.resolve()}")
+    print(f"nte_android_root={args.nte_android_root.resolve()}")
     print(f"p5x_root={args.p5x_root.resolve()}")
     print(f"tof_root={args.tof_root.resolve()}")
     print(f"wuwa_root={args.wuwa_root.resolve()}")

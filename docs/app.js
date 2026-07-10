@@ -9,6 +9,7 @@ const state = {
   diffFilter: "all",
   query: "",
   nteCatalog: null,
+  nteAndroidCatalog: null,
   tofCatalog: null,
   p5xCatalog: null,
   hoyoIndex: null,
@@ -53,7 +54,7 @@ const VIEW_STORAGE_KEY = "game-cdn-archive:view";
 const REPOSITORY_URL = "https://github.com/kuaichu/game-cdn-archive";
 const HOYOFILES_API_BASE = "https://autopatch.amarea.cn/pkg_version";
 const HOYO_FILE_PAGE_SIZE = 150;
-const ASSET_VERSION = "20260709-aethergazer-resources";
+const ASSET_VERSION = "20260710-nte-android-resources";
 
 const cacheBusted = (url) => {
   if (!url || /^https?:\/\//.test(url)) return url;
@@ -160,14 +161,27 @@ const hoyoEnglishNames = {
   bh3: "Honkai Impact 3rd",
 };
 
-const nteModes = [
+const resListModes = [
   ["full", "完整文件"],
   ["patches", "更新补丁"],
   ["reslist", "清单文件"],
+];
+
+const nteAndroidResourceModes = [
+  ["androidFull", "Android 文件"],
+  ["androidPatches", "Android 补丁"],
+  ["androidReslist", "Android 清单"],
+];
+
+const nteModes = [
+  ["full", "PC 文件"],
+  ["patches", "PC 补丁"],
+  ["reslist", "PC 清单"],
+  ...nteAndroidResourceModes,
   ["compare", "版本对比"],
 ];
 
-const tofModes = nteModes;
+const tofModes = [...resListModes, ["compare", "版本对比"]];
 
 const hoyoModes = [
   ["packages", "压缩包"],
@@ -441,6 +455,9 @@ const isNte = () => currentGame().kind === "nte";
 const isTof = () => currentGame().kind === "tof";
 const isP5x = () => currentGame().kind === "p5x";
 const isResListGame = () => isNte() || isTof() || isP5x();
+const nteAndroidResourceModeIds = new Set(nteAndroidResourceModes.map(([id]) => id));
+const isNteAndroidResourceMode = () => isNte() && nteAndroidResourceModeIds.has(state.mode);
+const nteAndroidSection = (mode = state.mode) => mode === "androidPatches" ? "patches" : "full";
 const isEndfield = () => currentGame().kind === "endfield";
 const isWuwa = () => currentGame().kind === "wuwa";
 const isArknights = () => currentGame().kind === "arknights";
@@ -453,6 +470,11 @@ const androidAvailabilityState = (entry) => androidAvailability(entry)?.state ||
 const androidAvailabilityLabel = (entry) => androidAvailability(entry)?.display_label || (
   entry?.error || Number(entry?.status || 0) < 200 || Number(entry?.status || 0) >= 400 ? "链接失效" : "可用"
 );
+const androidDisplayVersion = (entry) => entry?.display_version || entry?.game_version || entry?.version || "";
+const androidVersionDetail = (entry) => {
+  const display = androidDisplayVersion(entry);
+  return display && display !== entry?.version ? `APK ${entry.version}` : "";
+};
 const androidEntryUnavailable = (entry) => {
   const state = androidAvailabilityState(entry);
   if (state) return state === "unavailable";
@@ -463,6 +485,7 @@ const androidSummaries = () => {
   androidEntries().forEach((entry) => {
     const row = byVersion.get(entry.version) || {
       version: entry.version,
+      display_version: androidDisplayVersion(entry),
       apk_count: 0,
       size: 0,
       known_size_count: 0,
@@ -473,6 +496,9 @@ const androidSummaries = () => {
       updated_at_source: entry.updated_at_source || (entry.last_modified ? "apk_last_modified" : ""),
       unavailable_count: 0,
     };
+    if (!row.display_version && androidDisplayVersion(entry)) {
+      row.display_version = androidDisplayVersion(entry);
+    }
     row.apk_count += 1;
     if (Number(entry.size || 0) > 0) {
       row.size += Number(entry.size || 0);
@@ -518,6 +544,9 @@ const modesForGame = () => {
 const nteVersions = () => state.nteCatalog.versions.filter((item) => item.status === 200 && item.full);
 const nteVersion = () => state.nteCatalog.versions.find((item) => item.version === state.version);
 const nteFiles = () => nteVersion()?.[state.mode];
+const nteAndroidVersions = () => (state.nteAndroidCatalog?.versions || []).filter((item) => item.status === 200 && item.full);
+const nteAndroidVersion = () => nteAndroidVersions().find((item) => item.version === state.version) || null;
+const nteAndroidFiles = () => nteAndroidVersion()?.[nteAndroidSection()];
 const nteAvailability = (record) => record?.availability?.interpretation || null;
 const nteIsMajorRelease = (record) => record?.release_type === "major";
 const nteAvailabilityLabel = (record) => nteAvailability(record)?.display_label || (
@@ -723,6 +752,7 @@ const availableSummaries = () => {
   if (state.mode === "resources") return aethergazerResourceSummaries();
   if (state.mode === "android") return androidSummaries();
   if (state.mode === "legacy") return hoyoLegacySummaries();
+  if (isNteAndroidResourceMode()) return nteAndroidVersions();
   if (isResListGame()) return resListVersions();
   if (isEndfield()) return endfieldSummaries();
   if (isWuwa()) return wuwaSummaries();
@@ -742,6 +772,19 @@ const latestByVersion = (rows, predicate = () => true) => rows
 const currentGameSyncInfo = () => {
   const game = currentGame();
   const androidLatest = latestByVersion(androidSummaries());
+  const androidLatestVersion = androidDisplayVersion(androidLatest);
+  if (isNteAndroidResourceMode()) {
+    const latest = latestByVersion(nteAndroidVersions());
+    return {
+      game,
+      source: "异环 Android 资源 ResList",
+      checked: state.nteAndroidCatalog?.last_checked_at || state.nteAndroidCatalog?.generated_at,
+      updated: state.nteAndroidCatalog?.generated_at,
+      latest: latest?.version,
+      detail: `${latest?.full?.items || 0} 个资源对象 / ${fmtBytes(latest?.full?.bytes || 0)}`,
+      android: androidLatestVersion,
+    };
+  }
   if (state.mode === "resources") {
     const latest = latestByVersion(aethergazerResourceSummaries());
     return {
@@ -751,7 +794,7 @@ const currentGameSyncInfo = () => {
       updated: state.aethergazerResourceIndex?.generated_at,
       latest: latest?.version,
       detail: `${(latest?.file_count || 0).toLocaleString()} 个资源 / ${fmtBytes(latest?.size || 0)}`,
-      android: androidLatest?.version,
+      android: androidLatestVersion,
     };
   }
   if (isNte()) {
@@ -763,7 +806,7 @@ const currentGameSyncInfo = () => {
       updated: state.nteCatalog?.generated_at,
       latest: latest?.version,
       detail: `${latest?.full?.items || 0} 个完整文件 / ${fmtBytes(latest?.full?.bytes || 0)}`,
-      android: androidLatest?.version,
+      android: androidLatestVersion,
     };
   }
   if (isTof() || isP5x()) {
@@ -776,7 +819,7 @@ const currentGameSyncInfo = () => {
       updated: catalog?.generated_at,
       latest: latest?.version,
       detail: `${latest?.full?.items || 0} 个完整文件 / ${fmtBytes(latest?.full?.bytes || 0)}`,
-      android: androidLatest?.version,
+      android: androidLatestVersion,
     };
   }
   if (isEndfield()) {
@@ -788,7 +831,7 @@ const currentGameSyncInfo = () => {
       updated: state.endfieldIndex?.generated_from_observation,
       latest: latest?.version,
       detail: `${latest?.package_items || 0} 个完整分卷 / ${fmtBytes(latest?.packed_size || 0)}`,
-      android: androidLatest?.version,
+      android: androidLatestVersion,
     };
   }
   if (isArknights()) {
@@ -800,7 +843,7 @@ const currentGameSyncInfo = () => {
       updated: state.arknightsIndex?.generated_at,
       latest: latest?.version,
       detail: `${latest?.package_items || 0} 个完整分卷 / ${fmtBytes(latest?.packed_size || 0)}`,
-      android: androidLatest?.version,
+      android: androidLatestVersion,
     };
   }
   if (isWuwa()) {
@@ -812,7 +855,7 @@ const currentGameSyncInfo = () => {
       updated: state.wuwaIndex?.generated_at,
       latest: latest?.version,
       detail: `${(latest?.file_count || 0).toLocaleString()} 个文件 / ${fmtBytes(latest?.size || 0)}`,
-      android: androidLatest?.version,
+      android: androidLatestVersion,
     };
   }
   const latest = latestByVersion(hoyoSummaries().filter((item) => item.package_items || item.update_items || item.has_chunk));
@@ -823,7 +866,7 @@ const currentGameSyncInfo = () => {
     updated: state.hoyoIndex?.generated_at,
     latest: latest?.version,
     detail: `${latest?.package_items || 0} 个压缩包 / ${latest?.update_items || 0} 个更新包`,
-    android: androidLatest?.version,
+    android: androidLatestVersion,
   };
 };
 
@@ -836,7 +879,10 @@ const defaultCompareVersion = () => {
 
 const versionFamily = (version) => {
   if (version === "legacy") return "候选线索";
-  const parts = version.split(".");
+  const displayVersion = state.mode === "android"
+    ? androidDisplayVersion(androidSummaries().find((item) => item.version === version)) || version
+    : version;
+  const parts = displayVersion.split(".");
   return isResListGame() || isEndfield() ? parts.slice(0, 2).join(".") : `${parts[0]}.x`;
 };
 
@@ -852,6 +898,12 @@ const commandFor = () => {
     return links?.aria2
       ? `aria2c -c -x16 -s16 -i ${links.aria2}`
       : "当前游戏没有 Android APK 直链记录";
+  }
+  if (isNteAndroidResourceMode()) {
+    const files = nteAndroidFiles();
+    return files?.aria2
+      ? `aria2c -c -x16 -s16 -i ${files.aria2}`
+      : "当前 Android 资源版本没有 aria2 列表";
   }
   if (state.mode === "resources") {
     const links = aethergazerResourceSummary()?.links;
@@ -1253,10 +1305,13 @@ const versionButton = (item) => {
     `;
   }
   if (state.mode === "android") {
+    const displayVersion = androidDisplayVersion(item);
+    const detail = androidVersionDetail(item);
     return `
       <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
-        <span class="version-number">${item.version}</span>
+        <span class="version-number">${escapeHtml(displayVersion)}</span>
         <span class="caps">
+          ${detail ? `<span class="cap slate">${escapeHtml(detail)}</span>` : ""}
           <span class="cap green">APK</span>
           <span class="cap blue">${Number(item.apk_count || 0).toLocaleString()} 个包</span>
           <span class="cap green">${escapeHtml((item.channels || []).join(" / ") || "官方渠道")}</span>
@@ -1277,6 +1332,22 @@ const versionButton = (item) => {
           <span class="cap violet">Asset ${Number(item.asset_count || 0).toLocaleString()}</span>
           <span class="cap amber">Voice ${(Number(item.voice_ja_count || 0) + Number(item.voice_zh_count || 0)).toLocaleString()}</span>
           <span class="cap slate">${fmtBytes(item.size || 0)}</span>
+        </span>
+      </button>
+    `;
+  }
+  if (isNteAndroidResourceMode()) {
+    const branchLabel = item.branch === "publish_Android" ? "旧分支" : item.branch;
+    return `
+      <button class="version-row ${item.version === state.version ? "selected" : ""}" type="button" data-version="${item.version}">
+        <span class="version-number">${escapeHtml(item.version)}</span>
+        <span class="caps">
+          <span class="cap green">Android 资源</span>
+          <span class="cap violet">${escapeHtml(branchLabel)}</span>
+          ${item.versioncode ? `<span class="cap amber">vc${escapeHtml(item.versioncode)}</span>` : ""}
+          <span class="cap slate">${fmtDateTime(item.last_modified)}</span>
+          <span class="cap blue">${Number(item.full?.items || 0).toLocaleString()} 个文件</span>
+          ${versionAvailabilityCap(item)}
         </span>
       </button>
     `;
@@ -1360,6 +1431,8 @@ const renderStats = () => {
     ? androidStats()
     : state.mode === "resources"
     ? aethergazerResourceStats()
+    : isNteAndroidResourceMode()
+    ? nteAndroidStats()
     : isResListGame() ? nteStats() : isEndfield() ? endfieldStats() : isWuwa() ? wuwaStats() : isArknights() ? arknightsStats() : hoyoStats();
   $("#stats").innerHTML = stats.map(([label, value]) => `<div class="stat"><span>${label}</span><strong>${value}</strong></div>`).join("");
 };
@@ -1377,6 +1450,7 @@ const renderSyncStatus = () => {
   const checkedText = checkedAt
     ? fmtRelativeTime(checkedAt)
     : "-";
+  const latestLabel = isNteAndroidResourceMode() || state.mode === "resources" ? "最新资源版本" : "最新 PC 版本";
   panel.innerHTML = `
     <div class="sync-current">
       <div class="sync-current-head">
@@ -1388,7 +1462,7 @@ const renderSyncStatus = () => {
       </div>
       <div class="sync-current-grid">
         <div>
-          <span>最新 PC 版本</span>
+          <span>${latestLabel}</span>
           <strong>${escapeHtml(current.latest || "-")}</strong>
         </div>
         <div>
@@ -1415,8 +1489,9 @@ const androidStats = () => {
   const entry = androidVersion();
   const entries = androidVersionEntries();
   const labels = [...new Set(entries.map(androidAvailabilityLabel).filter(Boolean))];
-  return [
-    ["当前版本", state.version],
+  const displayVersion = androidDisplayVersion(entry) || state.version;
+  const rows = [
+    ["当前版本", displayVersion],
     ["平台", "Android"],
     ["APK 数", `${entries.length.toLocaleString()} 个`],
     ["渠道", entry?.channels?.join(" / ") || "-"],
@@ -1425,6 +1500,10 @@ const androidStats = () => {
     ["可用性", labels.join(" / ") || "-"],
     ["状态", entry?.status ? `HTTP ${entry.status}` : "-"],
   ];
+  if (displayVersion !== state.version) {
+    rows.splice(1, 0, ["APK 版本", state.version]);
+  }
+  return rows;
 };
 
 const aethergazerResourceStats = () => {
@@ -1474,6 +1553,21 @@ const nteStats = () => {
     ["可用性", nteAvailabilityLabel(version)],
     ["完整文件", `${version.full.items} 个 / ${fmtBytes(version.full.bytes)}`],
     ["补丁文件", `${version.patches.items} 个 / ${fmtBytes(version.patches.bytes)}`],
+  ];
+};
+
+const nteAndroidStats = () => {
+  const version = nteAndroidVersion();
+  const family = String(version?.version || state.version || "").split(".").slice(0, 2).join(".");
+  return [
+    ["当前版本", version?.version || state.version],
+    ["平台", "Android resources"],
+    ["分支", version?.branch || "-"],
+    ["版本族", family || "-"],
+    ["APK 对应", version?.versioncode ? `${version.apk_version || "-"} / vc${version.versioncode}` : "未绑定"],
+    ["清单时间", fmtDateTime(version?.last_modified)],
+    ["完整文件", `${version?.full?.items || 0} 个 / ${fmtBytes(version?.full?.bytes || 0)}`],
+    ["补丁文件", `${version?.patches?.items || 0} 个 / ${fmtBytes(version?.patches?.bytes || 0)}`],
   ];
 };
 
@@ -1579,6 +1673,18 @@ const renderLinks = () => {
     return;
   }
 
+  if (isNteAndroidResourceMode()) {
+    const files = nteAndroidFiles();
+    const disabled = state.mode === "androidReslist" || !files;
+    $("#urlsLink").classList.toggle("disabled", disabled);
+    $("#aria2Link").classList.toggle("disabled", disabled);
+    $("#jsonLink").classList.toggle("disabled", disabled && state.mode !== "androidReslist");
+    $("#urlsLink").href = files?.urls || "#";
+    $("#aria2Link").href = files?.aria2 || "#";
+    $("#jsonLink").href = files?.json || "data/nte/android/catalog.json";
+    return;
+  }
+
   if (isResListGame()) {
     const files = resListFiles();
     const disabled = state.mode === "reslist" || !files;
@@ -1643,24 +1749,29 @@ const renderLinks = () => {
 
 const renderPanelTitle = () => {
   const modeLabel = modesForGame().find(([id]) => id === state.mode)?.[1] || "文件列表";
+  const androidBranch = isNteAndroidResourceMode() ? nteAndroidVersion()?.branch : "";
   const displayVersion = state.mode === "legacy" ? "候选线索" : state.version || "-";
   $("#selectedVersion").textContent = displayVersion;
   $("#copyCommandBtn").innerHTML = `${icons.copy}<span>复制下载命令</span>`;
   $("#commandText").textContent = commandFor();
   $("#panelKicker").textContent = state.mode === "android"
     ? "Android APK"
+    : isNteAndroidResourceMode() ? "NTE Android resources"
     : state.mode === "resources" ? "Aether Gazer resources"
     : state.mode === "legacy" ? "Historical candidates"
     : isResListGame() ? `${resListGameLabel()} files` : isEndfield() ? "Endfield files" : isWuwa() ? "Wuwa files" : isArknights() ? "Arknights packages" : "Hoyo files";
-  $("#panelTitle").textContent = state.mode === "legacy" ? displayVersion : `${displayVersion} ${modeLabel}`;
+  $("#panelTitle").textContent = state.mode === "legacy" ? displayVersion : `${displayVersion} ${modeLabel}${androidBranch ? ` / ${androidBranch}` : ""}`;
 };
 
 const loadNteEntries = async (version = state.version, mode = state.mode) => {
   if (mode === "reslist" || mode === "compare") mode = "full";
-  const row = resListVersions().find((item) => item.version === version);
-  const files = row?.[mode];
+  const row = isNteAndroidResourceMode()
+    ? nteAndroidVersions().find((item) => item.version === version)
+    : resListVersions().find((item) => item.version === version);
+  const section = isNteAndroidResourceMode() ? nteAndroidSection(mode) : mode;
+  const files = row?.[section];
   if (!files?.json) return [];
-  const key = `${state.gameId}:${version}:${mode}`;
+  const key = `${state.gameId}:${row?.branch || "pc"}:${version}:${section}`;
   if (!state.nteEntries.has(key)) {
     state.nteEntries.set(key, await fetchJson(files.json));
   }
@@ -1798,7 +1909,7 @@ const nteCdn2Url = (url) => {
 const nteItem = (entry, index, total) => {
   const availability = nteAvailability(entry);
   const availabilityLabel = availability?.display_label || (Number(entry.filesize || 0) > 0 ? "可用" : "链接失效");
-  if (state.mode === "patches") {
+  if (state.mode === "patches" || state.mode === "androidPatches") {
     const patch = entry.patch || "";
     return {
       badge: "补丁分片",
@@ -1878,7 +1989,7 @@ const wuwaPatchItem = (route, entry, index = 0, total = 0) => {
 const androidItem = (entry, index = 0, total = 0) => ({
   badge: "Android APK",
   title: entry.filename || `${currentGame().name}_${entry.version}.apk`,
-  subtitle: `${entry.channel || "官方渠道"} / ${fmtDateTime(entry.updated_at || entry.last_modified)}`,
+  subtitle: [androidVersionDetail(entry), entry.channel || "官方渠道", fmtDateTime(entry.updated_at || entry.last_modified)].filter(Boolean).join(" / "),
   size: Number(entry.size || 0),
   sizeLabel: `${androidAvailabilityLabel(entry)} / ${fmtKnownBytes(entry.size)}`,
   hash: entry.md5 || entry.etag || "",
@@ -2347,7 +2458,7 @@ const buildVersionAnalytics = async (versions, itemLoader) => {
 
 const renderAnalytics = () => {
   const panel = $("#analytics");
-  if (state.mode === "android" || (!isNte() && !isEndfield())) {
+  if (state.mode === "android" || isNteAndroidResourceMode() || (!isNte() && !isEndfield())) {
     panel.hidden = true;
     panel.innerHTML = "";
     return;
@@ -2386,7 +2497,7 @@ const renderAnalytics = () => {
   `;
   getCurrentAnalytics()
     .then((analytics) => {
-      if (state.mode === "android" || (!isNte() && !isEndfield())) return;
+      if (state.mode === "android" || isNteAndroidResourceMode() || (!isNte() && !isEndfield())) return;
       renderDiffRank(analytics);
     })
     .catch((error) => {
@@ -2655,13 +2766,44 @@ const renderNteResList = () => {
   bindCardActions();
 };
 
+const renderNteAndroidResList = () => {
+  const version = nteAndroidVersion();
+  if (!version) {
+    $("#fileList").innerHTML = `<div class="empty">当前没有 Android 资源清单</div>`;
+    return;
+  }
+  const versionAvailability = nteAvailabilityLabel(version);
+  const rows = [
+    ["ResList.bin.zip", `${versionAvailability} / Android 资源清单入口`, version.reslist_bytes, version.branch, version.reslist_url],
+    ["完整 URL 列表", `可用 / ${version.full?.items || 0} 个资源对象`, version.full?.bytes || 0, "urls.txt", version.full?.urls],
+    ["完整 aria2 列表", "可用 / 保留 Android 资源逻辑路径", version.full?.bytes || 0, "aria2", version.full?.aria2],
+    ["完整 JSON 索引", "可用 / filename / filesize / md5 / url", version.full?.bytes || 0, "json", version.full?.json],
+    ["补丁 URL 列表", `可用 / ${version.patches?.items || 0} 个补丁对象`, version.patches?.bytes || 0, "patch", version.patches?.urls],
+    ["补丁 aria2 列表", "可用 / lastdiff 解出的 Android patch 对象", version.patches?.bytes || 0, "aria2", version.patches?.aria2],
+  ];
+
+  $("#fileList").innerHTML = rows
+    .map(([title, subtitle, size, hash, url], index) => fileCard({
+      badge: "Android 清单",
+      title,
+      subtitle,
+      size,
+      hash,
+      url,
+      count: `${index + 1}/${rows.length}`,
+    }))
+    .join("");
+  bindCardActions();
+};
+
 const renderNteFullFiles = (items) => {
   const filtered = filterEntries(items);
+  const isAndroidResource = isNteAndroidResourceMode();
   const note = `
     <div class="notice file-browser-note">
       <div class="notice-copy">
-        <strong>清单口径</strong>
-        <span>这里展示的是官方 ResList 中可直接下载的游戏对象数量，不等同于本地安装目录递归后的文件数；启动器 Allfile 属于 launcher 独立清单。</span>
+        <strong>${isAndroidResource ? "Android 资源口径" : "清单口径"}</strong>
+        <span>${isAndroidResource ? "这里展示的是 Android 客户端装后资源 ResList 里的官方 hash 对象 URL；它和 APK 安装包、PC 资源清单是三个不同层级。" : "这里展示的是官方 ResList 中可直接下载的游戏对象数量，不等同于本地安装目录递归后的文件数；启动器 Allfile 属于 launcher 独立清单。"}</span>
       </div>
     </div>
   `;
@@ -3206,6 +3348,25 @@ const renderList = async () => {
     return;
   }
 
+  if (isNteAndroidResourceMode()) {
+    if (state.mode === "androidReslist") {
+      renderNteAndroidResList();
+      return;
+    }
+    const entries = await loadNteEntries();
+    const items = entries.map((entry, index) => nteItem(entry, index, entries.length));
+    if (state.mode === "androidFull") {
+      renderNteFullFiles(items);
+      return;
+    }
+    const filtered = filterEntries(items);
+    $("#fileList").innerHTML = filtered
+      .map((entry, index) => fileCard({ ...entry, count: `${index + 1}/${filtered.length}` }))
+      .join("") || `<div class="empty">没有匹配到 Android 补丁对象</div>`;
+    bindCardActions();
+    return;
+  }
+
   if (isResListGame()) {
     if (state.mode === "reslist") {
       renderNteResList();
@@ -3297,6 +3458,11 @@ const ensureGameData = async (preferredVersion = null) => {
     state.version = selectVersionForContext(versions, preferredVersion);
     return;
   }
+  if (isNteAndroidResourceMode()) {
+    const versions = nteAndroidVersions().slice().sort((a, b) => compareVersions(b.version, a.version));
+    state.version = selectVersionForContext(versions, preferredVersion);
+    return;
+  }
   if (isResListGame()) {
     const versions = resListVersions().sort((a, b) => compareVersions(b.version, a.version));
     state.version = selectVersionForContext(versions, preferredVersion);
@@ -3363,6 +3529,19 @@ const renderNotice = () => {
       <div class="source-links">
         <a class="source-link" href="data/android/index.json" target="_blank" rel="noreferrer">Android APK 索引</a>
         <a class="source-link" href="${REPOSITORY_URL}#android-apk-archive" target="_blank" rel="noreferrer">本站仓库 README</a>
+      </div>
+    `;
+  } else if (isNteAndroidResourceMode()) {
+    const version = nteAndroidVersion();
+    notice.innerHTML = `
+      <div class="notice-copy">
+        <strong>Android 资源 ResList</strong>
+        <span>页面保存异环 Android 客户端装后资源清单，和 Android APK 安装包分开；当前已观察到旧分支 publish_Android 与 versioncode 分支 Android_120。该清单复用 PatcherXML0 解码，key seed 仍为 1289@Patcher。</span>
+      </div>
+      <div class="source-links">
+        <a class="source-link" href="data/nte/android/catalog.json" target="_blank" rel="noreferrer">Android 资源索引</a>
+        <a class="source-link" href="${escapeHtml(version?.reslist_url || "#")}" target="_blank" rel="noreferrer">官方 ResList 清单</a>
+        <a class="source-link" href="${escapeHtml(version?.apk_url || state.nteAndroidCatalog?.update_json?.android_default?.url || "#")}" target="_blank" rel="noreferrer">对应 APK</a>
       </div>
     `;
   } else if (isNte()) {
@@ -3468,6 +3647,7 @@ updateActiveSideLink();
 
 Promise.all([
   fetchJson("./data/catalog.json"),
+  fetchJson("./data/nte/android/catalog.json"),
   fetchJson("./data/tof/catalog.json"),
   fetchJson("./data/p5x/catalog.json"),
   fetchJson("./data/hoyo/games.json"),
@@ -3479,8 +3659,9 @@ Promise.all([
   fetchJson("./data/android/index.json"),
   fetchJson("./data/aethergazer/resources/index.json"),
   fetchOptionalJson("./data/hoyo/nap_legacy_candidates.json"),
-]).then(async ([nteCatalog, tofCatalog, p5xCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, arknightsIndex, arknightsVersions, androidIndex, aethergazerResourceIndex, napLegacyCandidates]) => {
+]).then(async ([nteCatalog, nteAndroidCatalog, tofCatalog, p5xCatalog, hoyoIndex, endfieldIndex, endfieldVersions, wuwaIndex, arknightsIndex, arknightsVersions, androidIndex, aethergazerResourceIndex, napLegacyCandidates]) => {
   state.nteCatalog = nteCatalog;
+  state.nteAndroidCatalog = nteAndroidCatalog;
   state.tofCatalog = tofCatalog;
   state.p5xCatalog = p5xCatalog;
   state.hoyoIndex = hoyoIndex;

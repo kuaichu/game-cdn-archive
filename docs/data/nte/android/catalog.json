@@ -1,0 +1,3562 @@
+{
+  "game": {
+    "id": "nte-android-resources",
+    "name": "Neverness to Everness Android Resources",
+    "zh_name": "异环 Android 资源",
+    "platform": "Android",
+    "app_id": "1289",
+    "cdn_hosts": [
+      "https://yhcdn1.wmupd.com/clientRes",
+      "https://yhcdn2.wmupd.com/clientRes"
+    ]
+  },
+  "source": "https://yhcdn1.wmupd.com/clientRes",
+  "key_seed": "1289@Patcher",
+  "iv_seed": "PatcherSDK",
+  "layout_note": "Intentional legacy NTE catalog/list shape; APK installers remain in docs/data/android.",
+  "versions": [
+    {
+      "version": "1.2.0",
+      "platform": "Android",
+      "branch": "Android_120",
+      "branch_kind": "versioncode_branch",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.0/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Res",
+      "status": 200,
+      "last_modified": "Fri, 26 Jun 2026 04:36:42 GMT",
+      "content_length": 14806,
+      "apk_version": "1.2.0",
+      "versioncode": "120",
+      "apk_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.0/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.0/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 14806,
+              "last_modified": "Fri, 26 Jun 2026 04:36:42 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.0/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 14806,
+      "full": {
+        "items": 31,
+        "bytes": 23511113469,
+        "json": "data/nte/android/url_lists/Android_120-1.2.0-full.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.0-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.0-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 14,
+        "bytes": 12985335747,
+        "json": "data/nte/android/url_lists/Android_120-1.2.0-patches.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.0-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.0-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 31
+        },
+        "patches": {
+          "available": 14
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 31
+        },
+        "patches": {
+          "not_probed": 14
+        }
+      }
+    },
+    {
+      "version": "1.2.1",
+      "platform": "Android",
+      "branch": "Android_120",
+      "branch_kind": "versioncode_branch",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.1/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Res",
+      "status": 200,
+      "last_modified": "Wed, 01 Jul 2026 08:23:19 GMT",
+      "content_length": 18438,
+      "apk_version": "1.2.0",
+      "versioncode": "120",
+      "apk_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.1/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.1/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 18438,
+              "last_modified": "Wed, 01 Jul 2026 08:23:19 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.1/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 18438,
+      "full": {
+        "items": 37,
+        "bytes": 25263566173,
+        "json": "data/nte/android/url_lists/Android_120-1.2.1-full.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.1-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.1-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 19,
+        "bytes": 14404726423,
+        "json": "data/nte/android/url_lists/Android_120-1.2.1-patches.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.1-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.1-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 37
+        },
+        "patches": {
+          "available": 19
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 37
+        },
+        "patches": {
+          "not_probed": 19
+        }
+      }
+    },
+    {
+      "version": "1.2.3",
+      "platform": "Android",
+      "branch": "Android_120",
+      "branch_kind": "versioncode_branch",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.3/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Res",
+      "status": 200,
+      "last_modified": "Wed, 01 Jul 2026 22:01:59 GMT",
+      "content_length": 21531,
+      "apk_version": "1.2.0",
+      "versioncode": "120",
+      "apk_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.3/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.3/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 21531,
+              "last_modified": "Wed, 01 Jul 2026 22:01:59 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.3/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 21531,
+      "full": {
+        "items": 45,
+        "bytes": 26309286623,
+        "json": "data/nte/android/url_lists/Android_120-1.2.3-full.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.3-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.3-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 57,
+        "bytes": 20437125859,
+        "json": "data/nte/android/url_lists/Android_120-1.2.3-patches.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.3-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.3-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 45
+        },
+        "patches": {
+          "available": 57
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 45
+        },
+        "patches": {
+          "not_probed": 57
+        }
+      }
+    },
+    {
+      "version": "1.2.4",
+      "platform": "Android",
+      "branch": "Android_120",
+      "branch_kind": "versioncode_branch",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.4/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Res",
+      "status": 200,
+      "last_modified": "Thu, 02 Jul 2026 00:44:03 GMT",
+      "content_length": 23067,
+      "apk_version": "1.2.0",
+      "versioncode": "120",
+      "apk_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.4/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.4/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 23067,
+              "last_modified": "Thu, 02 Jul 2026 00:44:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.4/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 23067,
+      "full": {
+        "items": 46,
+        "bytes": 28355134079,
+        "json": "data/nte/android/url_lists/Android_120-1.2.4-full.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.4-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.4-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 78,
+        "bytes": 28852312263,
+        "json": "data/nte/android/url_lists/Android_120-1.2.4-patches.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.4-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.4-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 46
+        },
+        "patches": {
+          "available": 78
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 46
+        },
+        "patches": {
+          "not_probed": 78
+        }
+      }
+    },
+    {
+      "version": "1.2.5",
+      "platform": "Android",
+      "branch": "Android_120",
+      "branch_kind": "versioncode_branch",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.5/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Res",
+      "status": 200,
+      "last_modified": "Thu, 02 Jul 2026 02:52:04 GMT",
+      "content_length": 23883,
+      "apk_version": "1.2.0",
+      "versioncode": "120",
+      "apk_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.5/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.5/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 23883,
+              "last_modified": "Thu, 02 Jul 2026 02:52:04 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.5/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 23883,
+      "full": {
+        "items": 46,
+        "bytes": 27026401247,
+        "json": "data/nte/android/url_lists/Android_120-1.2.5-full.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.5-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.5-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 101,
+        "bytes": 30916597325,
+        "json": "data/nte/android/url_lists/Android_120-1.2.5-patches.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.5-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.5-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 46
+        },
+        "patches": {
+          "available": 101
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 46
+        },
+        "patches": {
+          "not_probed": 101
+        }
+      }
+    },
+    {
+      "version": "1.2.13",
+      "platform": "Android",
+      "branch": "Android_120",
+      "branch_kind": "versioncode_branch",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.13/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Res",
+      "status": 200,
+      "last_modified": "Thu, 02 Jul 2026 21:00:03 GMT",
+      "content_length": 25531,
+      "apk_version": "1.2.0",
+      "versioncode": "120",
+      "apk_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.13/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.13/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 25531,
+              "last_modified": "Thu, 02 Jul 2026 21:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.13/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 25531,
+      "full": {
+        "items": 46,
+        "bytes": 27086011404,
+        "json": "data/nte/android/url_lists/Android_120-1.2.13-full.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.13-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.13-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 132,
+        "bytes": 33797725827,
+        "json": "data/nte/android/url_lists/Android_120-1.2.13-patches.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.13-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.13-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 46
+        },
+        "patches": {
+          "available": 132
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 46
+        },
+        "patches": {
+          "not_probed": 132
+        }
+      }
+    },
+    {
+      "version": "1.2.14",
+      "platform": "Android",
+      "branch": "Android_120",
+      "branch_kind": "versioncode_branch",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.14/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Res",
+      "status": 200,
+      "last_modified": "Sat, 04 Jul 2026 00:00:01 GMT",
+      "content_length": 27195,
+      "apk_version": "1.2.0",
+      "versioncode": "120",
+      "apk_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.14/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.14/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 27195,
+              "last_modified": "Sat, 04 Jul 2026 00:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.14/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 27195,
+      "full": {
+        "items": 46,
+        "bytes": 27095510998,
+        "json": "data/nte/android/url_lists/Android_120-1.2.14-full.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.14-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.14-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 173,
+        "bytes": 36931617785,
+        "json": "data/nte/android/url_lists/Android_120-1.2.14-patches.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.14-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.14-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 46
+        },
+        "patches": {
+          "available": 173
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 46
+        },
+        "patches": {
+          "not_probed": 173
+        }
+      }
+    },
+    {
+      "version": "1.2.16",
+      "platform": "Android",
+      "branch": "Android_120",
+      "branch_kind": "versioncode_branch",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.16/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Res",
+      "status": 200,
+      "last_modified": "Sat, 04 Jul 2026 21:00:02 GMT",
+      "content_length": 29499,
+      "apk_version": "1.2.0",
+      "versioncode": "120",
+      "apk_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.16/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.16/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 29499,
+              "last_modified": "Sat, 04 Jul 2026 21:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.16/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 29499,
+      "full": {
+        "items": 46,
+        "bytes": 27103117318,
+        "json": "data/nte/android/url_lists/Android_120-1.2.16-full.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.16-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.16-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 227,
+        "bytes": 41590858121,
+        "json": "data/nte/android/url_lists/Android_120-1.2.16-patches.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.16-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.16-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 46
+        },
+        "patches": {
+          "available": 227
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 46
+        },
+        "patches": {
+          "not_probed": 227
+        }
+      }
+    },
+    {
+      "version": "1.2.17",
+      "platform": "Android",
+      "branch": "Android_120",
+      "branch_kind": "versioncode_branch",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.17/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Res",
+      "status": 200,
+      "last_modified": "Mon, 06 Jul 2026 21:00:01 GMT",
+      "content_length": 31595,
+      "apk_version": "1.2.0",
+      "versioncode": "120",
+      "apk_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.17/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.17/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 31595,
+              "last_modified": "Mon, 06 Jul 2026 21:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.17/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 31595,
+      "full": {
+        "items": 46,
+        "bytes": 28433842736,
+        "json": "data/nte/android/url_lists/Android_120-1.2.17-full.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.17-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.17-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 266,
+        "bytes": 50347765129,
+        "json": "data/nte/android/url_lists/Android_120-1.2.17-patches.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.17-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.17-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 46
+        },
+        "patches": {
+          "available": 266
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 46
+        },
+        "patches": {
+          "not_probed": 266
+        }
+      }
+    },
+    {
+      "version": "1.2.19",
+      "platform": "Android",
+      "branch": "Android_120",
+      "branch_kind": "versioncode_branch",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.19/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Res",
+      "status": 200,
+      "last_modified": "Wed, 08 Jul 2026 20:00:02 GMT",
+      "content_length": 29355,
+      "apk_version": "1.2.0",
+      "versioncode": "120",
+      "apk_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.19/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.19/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 29355,
+              "last_modified": "Wed, 08 Jul 2026 20:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/1.2.19/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 29355,
+      "full": {
+        "items": 46,
+        "bytes": 27177760613,
+        "json": "data/nte/android/url_lists/Android_120-1.2.19-full.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.19-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.19-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 244,
+        "bytes": 32614668698,
+        "json": "data/nte/android/url_lists/Android_120-1.2.19-patches.json",
+        "urls": "data/nte/android/url_lists/Android_120-1.2.19-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/Android_120-1.2.19-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 46
+        },
+        "patches": {
+          "available": 244
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 46
+        },
+        "patches": {
+          "not_probed": 244
+        }
+      }
+    },
+    {
+      "version": "1.0.0",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.0/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Tue, 14 Apr 2026 04:08:39 GMT",
+      "content_length": 11366,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.0/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.0/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 11366,
+              "last_modified": "Tue, 14 Apr 2026 04:08:39 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.0/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 11366,
+      "full": {
+        "items": 40,
+        "bytes": 17520306658,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.0-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.0-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.0-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 0,
+        "bytes": 0,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.0-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.0-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.0-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 40
+        },
+        "patches": {}
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 40
+        },
+        "patches": {}
+      }
+    },
+    {
+      "version": "1.0.1",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.1/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Fri, 17 Apr 2026 02:17:13 GMT",
+      "content_length": 14134,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.1/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.1/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 14134,
+              "last_modified": "Fri, 17 Apr 2026 02:17:13 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.1/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 14134,
+      "full": {
+        "items": 48,
+        "bytes": 19277575407,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.1-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.1-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.1-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 0,
+        "bytes": 0,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.1-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.1-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.1-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 48
+        },
+        "patches": {}
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 48
+        },
+        "patches": {}
+      }
+    },
+    {
+      "version": "1.0.2",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.2/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Fri, 17 Apr 2026 05:24:04 GMT",
+      "content_length": 14134,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.2/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.2/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 14134,
+              "last_modified": "Fri, 17 Apr 2026 05:24:04 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.2/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 14134,
+      "full": {
+        "items": 49,
+        "bytes": 19283420636,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.2-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.2-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.2-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 0,
+        "bytes": 0,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.2-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.2-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.2-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 49
+        },
+        "patches": {}
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 49
+        },
+        "patches": {}
+      }
+    },
+    {
+      "version": "1.0.4",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.4/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Mon, 20 Apr 2026 16:52:35 GMT",
+      "content_length": 17206,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.4/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.4/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 17206,
+              "last_modified": "Mon, 20 Apr 2026 16:52:35 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.4/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 17206,
+      "full": {
+        "items": 54,
+        "bytes": 19819873231,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.4-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.4-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.4-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 22,
+        "bytes": 1739998789,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.4-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.4-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.4-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 54
+        },
+        "patches": {
+          "available": 22
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 54
+        },
+        "patches": {
+          "not_probed": 22
+        }
+      }
+    },
+    {
+      "version": "1.0.7",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.7/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Wed, 22 Apr 2026 10:56:15 GMT",
+      "content_length": 20198,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.7/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.7/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 20198,
+              "last_modified": "Wed, 22 Apr 2026 10:56:15 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.7/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 20198,
+      "full": {
+        "items": 55,
+        "bytes": 19947529490,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.7-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.7-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.7-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 80,
+        "bytes": 5823035980,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.7-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.7-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.7-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 55
+        },
+        "patches": {
+          "available": 80
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 55
+        },
+        "patches": {
+          "not_probed": 80
+        }
+      }
+    },
+    {
+      "version": "1.0.8",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.8/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Wed, 22 Apr 2026 13:06:21 GMT",
+      "content_length": 20822,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.8/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.8/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 20822,
+              "last_modified": "Wed, 22 Apr 2026 13:06:21 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.8/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 20822,
+      "full": {
+        "items": 54,
+        "bytes": 19963874625,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.8-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.8-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.8-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 94,
+        "bytes": 5952215126,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.8-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.8-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.8-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 54
+        },
+        "patches": {
+          "available": 94
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 54
+        },
+        "patches": {
+          "not_probed": 94
+        }
+      }
+    },
+    {
+      "version": "1.0.9",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.9/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Wed, 22 Apr 2026 15:51:26 GMT",
+      "content_length": 21478,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.9/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.9/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 21478,
+              "last_modified": "Wed, 22 Apr 2026 15:51:26 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.9/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 21478,
+      "full": {
+        "items": 54,
+        "bytes": 19949180305,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.9-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.9-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.9-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 106,
+        "bytes": 5907856920,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.9-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.9-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.9-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 54
+        },
+        "patches": {
+          "available": 106
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 54
+        },
+        "patches": {
+          "not_probed": 106
+        }
+      }
+    },
+    {
+      "version": "1.0.10",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.10/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Thu, 23 Apr 2026 06:26:01 GMT",
+      "content_length": 22374,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.10/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.10/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 22374,
+              "last_modified": "Thu, 23 Apr 2026 06:26:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.10/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 22374,
+      "full": {
+        "items": 54,
+        "bytes": 19965916017,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.10-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.10-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.10-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 128,
+        "bytes": 6193017218,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.10-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.10-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.10-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 54
+        },
+        "patches": {
+          "available": 128
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 54
+        },
+        "patches": {
+          "not_probed": 128
+        }
+      }
+    },
+    {
+      "version": "1.0.11",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.11/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Fri, 24 Apr 2026 00:36:23 GMT",
+      "content_length": 23286,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.11/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.11/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 23286,
+              "last_modified": "Fri, 24 Apr 2026 00:36:23 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.11/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 23286,
+      "full": {
+        "items": 54,
+        "bytes": 19970469201,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.11-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.11-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.11-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 151,
+        "bytes": 6629008276,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.11-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.11-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.11-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 54
+        },
+        "patches": {
+          "available": 151
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 54
+        },
+        "patches": {
+          "not_probed": 151
+        }
+      }
+    },
+    {
+      "version": "1.0.12",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.12/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Sat, 25 Apr 2026 00:00:02 GMT",
+      "content_length": 24454,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.12/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.12/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 24454,
+              "last_modified": "Sat, 25 Apr 2026 00:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.12/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 24454,
+      "full": {
+        "items": 54,
+        "bytes": 20028907876,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.12-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.12-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.12-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 180,
+        "bytes": 7495986532,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.12-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.12-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.12-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 54
+        },
+        "patches": {
+          "available": 180
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 54
+        },
+        "patches": {
+          "not_probed": 180
+        }
+      }
+    },
+    {
+      "version": "1.0.14",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.14/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Sat, 25 Apr 2026 22:30:35 GMT",
+      "content_length": 26694,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.14/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.14/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 26694,
+              "last_modified": "Sat, 25 Apr 2026 22:30:35 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.14/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 26694,
+      "full": {
+        "items": 54,
+        "bytes": 19974523220,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.14-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.14-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.14-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 228,
+        "bytes": 8613910027,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.14-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.14-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.14-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 54
+        },
+        "patches": {
+          "available": 228
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 54
+        },
+        "patches": {
+          "not_probed": 228
+        }
+      }
+    },
+    {
+      "version": "1.0.17",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.17/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Sun, 26 Apr 2026 02:10:26 GMT",
+      "content_length": 26822,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.17/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.17/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 26822,
+              "last_modified": "Sun, 26 Apr 2026 02:10:26 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.17/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 26822,
+      "full": {
+        "items": 54,
+        "bytes": 19974519124,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.17-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.17-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.17-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 231,
+        "bytes": 8924211749,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.17-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.17-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.17-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 54
+        },
+        "patches": {
+          "available": 231
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 54
+        },
+        "patches": {
+          "not_probed": 231
+        }
+      }
+    },
+    {
+      "version": "1.0.20",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.20/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Mon, 27 Apr 2026 21:30:01 GMT",
+      "content_length": 28502,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.20/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.20/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 28502,
+              "last_modified": "Mon, 27 Apr 2026 21:30:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.20/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 28502,
+      "full": {
+        "items": 54,
+        "bytes": 19654541523,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.20-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.20-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.20-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 269,
+        "bytes": 10040633367,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.20-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.20-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.20-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 54
+        },
+        "patches": {
+          "available": 269
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 54
+        },
+        "patches": {
+          "not_probed": 269
+        }
+      }
+    },
+    {
+      "version": "1.0.22",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.22/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Wed, 29 Apr 2026 22:00:03 GMT",
+      "content_length": 30870,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.22/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.22/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 30870,
+              "last_modified": "Wed, 29 Apr 2026 22:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.22/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 30870,
+      "full": {
+        "items": 53,
+        "bytes": 19447755484,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.22-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.22-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.22-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 313,
+        "bytes": 11311390141,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.22-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.22-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.22-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 53
+        },
+        "patches": {
+          "available": 313
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 53
+        },
+        "patches": {
+          "not_probed": 313
+        }
+      }
+    },
+    {
+      "version": "1.0.23",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.23/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Thu, 30 Apr 2026 21:40:03 GMT",
+      "content_length": 31718,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.23/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.23/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 31718,
+              "last_modified": "Thu, 30 Apr 2026 21:40:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.23/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 31718,
+      "full": {
+        "items": 53,
+        "bytes": 19506733249,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.23-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.23-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.23-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 332,
+        "bytes": 11853710504,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.23-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.23-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.23-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 53
+        },
+        "patches": {
+          "available": 332
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 53
+        },
+        "patches": {
+          "not_probed": 332
+        }
+      }
+    },
+    {
+      "version": "1.0.24",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.24/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Mon, 04 May 2026 12:51:25 GMT",
+      "content_length": 33195,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.24/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.24/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 33195,
+              "last_modified": "Mon, 04 May 2026 12:51:25 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.24/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 33195,
+      "full": {
+        "items": 53,
+        "bytes": 19497091246,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.24-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.24-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.24-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 369,
+        "bytes": 12366240798,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.24-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.24-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.24-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 53
+        },
+        "patches": {
+          "available": 369
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 53
+        },
+        "patches": {
+          "not_probed": 369
+        }
+      }
+    },
+    {
+      "version": "1.0.25",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.25/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Wed, 06 May 2026 22:00:03 GMT",
+      "content_length": 34811,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.25/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.25/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 34811,
+              "last_modified": "Wed, 06 May 2026 22:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.25/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 34811,
+      "full": {
+        "items": 53,
+        "bytes": 19568232732,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.25-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.25-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.25-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 397,
+        "bytes": 13257449334,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.25-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.25-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.25-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 53
+        },
+        "patches": {
+          "available": 397
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 53
+        },
+        "patches": {
+          "not_probed": 397
+        }
+      }
+    },
+    {
+      "version": "1.0.26",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.26/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Fri, 08 May 2026 20:00:02 GMT",
+      "content_length": 36235,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.26/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.26/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 36235,
+              "last_modified": "Fri, 08 May 2026 20:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.26/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 36235,
+      "full": {
+        "items": 53,
+        "bytes": 19620502600,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.26-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.26-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.26-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 432,
+        "bytes": 14415581402,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.26-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.26-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.26-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 53
+        },
+        "patches": {
+          "available": 432
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 53
+        },
+        "patches": {
+          "not_probed": 432
+        }
+      }
+    },
+    {
+      "version": "1.0.28",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.28/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Sat, 09 May 2026 21:00:01 GMT",
+      "content_length": 37355,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.28/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.28/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 37355,
+              "last_modified": "Sat, 09 May 2026 21:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.28/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 37355,
+      "full": {
+        "items": 53,
+        "bytes": 19601429128,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.28-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.28-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.28-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 457,
+        "bytes": 15478715083,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.28-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.28-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.28-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 53
+        },
+        "patches": {
+          "available": 457
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 53
+        },
+        "patches": {
+          "not_probed": 457
+        }
+      }
+    },
+    {
+      "version": "1.0.29",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.29/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Tue, 12 May 2026 20:00:01 GMT",
+      "content_length": 38203,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.29/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.29/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 38203,
+              "last_modified": "Tue, 12 May 2026 20:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.0.29/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 38203,
+      "full": {
+        "items": 53,
+        "bytes": 19604405000,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.29-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.29-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.29-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 472,
+        "bytes": 15953048854,
+        "json": "data/nte/android/url_lists/publish_Android-1.0.29-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.0.29-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.0.29-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 53
+        },
+        "patches": {
+          "available": 472
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 53
+        },
+        "patches": {
+          "not_probed": 472
+        }
+      }
+    },
+    {
+      "version": "1.1.0",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.0/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Wed, 27 May 2026 22:58:38 GMT",
+      "content_length": 89674,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.0/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.0/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 89674,
+              "last_modified": "Wed, 27 May 2026 22:58:38 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.0/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 89674,
+      "full": {
+        "items": 72,
+        "bytes": 30537242358,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.0-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.0-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.0-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1323,
+        "bytes": 111968442664,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.0-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.0-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.0-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 1323
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 1323
+        }
+      }
+    },
+    {
+      "version": "1.1.1",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.1/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Thu, 28 May 2026 00:06:51 GMT",
+      "content_length": 58693,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.1/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.1/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 58693,
+              "last_modified": "Thu, 28 May 2026 00:06:51 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.1/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 58693,
+      "full": {
+        "items": 72,
+        "bytes": 30537606646,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.1-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.1-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.1-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 682,
+        "bytes": 62114170672,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.1-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.1-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.1-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 682
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 682
+        }
+      }
+    },
+    {
+      "version": "1.1.2",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.2/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Thu, 28 May 2026 22:00:06 GMT",
+      "content_length": 60085,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.2/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.2/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 60085,
+              "last_modified": "Thu, 28 May 2026 22:00:06 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.2/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 60085,
+      "full": {
+        "items": 72,
+        "bytes": 30542493774,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.2-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.2-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.2-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 706,
+        "bytes": 56224955944,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.2-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.2-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.2-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 706
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 706
+        }
+      }
+    },
+    {
+      "version": "1.1.3",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.3/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Fri, 29 May 2026 21:04:46 GMT",
+      "content_length": 57248,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.3/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.3/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 57248,
+              "last_modified": "Fri, 29 May 2026 21:04:46 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.3/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 57248,
+      "full": {
+        "items": 72,
+        "bytes": 30566208196,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.3-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.3-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.3-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 668,
+        "bytes": 50688471428,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.3-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.3-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.3-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 668
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 668
+        }
+      }
+    },
+    {
+      "version": "1.1.4",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.4/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Mon, 01 Jun 2026 20:34:01 GMT",
+      "content_length": 58741,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.4/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.4/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 58741,
+              "last_modified": "Mon, 01 Jun 2026 20:34:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.4/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 58741,
+      "full": {
+        "items": 72,
+        "bytes": 30647720617,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.4-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.4-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.4-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 702,
+        "bytes": 51591863011,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.4-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.4-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.4-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 702
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 702
+        }
+      }
+    },
+    {
+      "version": "1.1.5",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.5/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Wed, 03 Jun 2026 20:00:02 GMT",
+      "content_length": 60741,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.5/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.5/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 60741,
+              "last_modified": "Wed, 03 Jun 2026 20:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.5/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 60741,
+      "full": {
+        "items": 72,
+        "bytes": 30655647488,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.5-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.5-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.5-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 749,
+        "bytes": 52497946544,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.5-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.5-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.5-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 749
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 749
+        }
+      }
+    },
+    {
+      "version": "1.1.7",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.7/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Fri, 05 Jun 2026 20:00:02 GMT",
+      "content_length": 62741,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.7/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.7/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 62741,
+              "last_modified": "Fri, 05 Jun 2026 20:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.7/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 62741,
+      "full": {
+        "items": 72,
+        "bytes": 30701771719,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.7-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.7-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.7-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 797,
+        "bytes": 53776647056,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.7-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.7-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.7-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 797
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 797
+        }
+      }
+    },
+    {
+      "version": "1.1.8",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.8/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Sat, 06 Jun 2026 06:28:01 GMT",
+      "content_length": 63973,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.8/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.8/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 63973,
+              "last_modified": "Sat, 06 Jun 2026 06:28:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.8/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 63973,
+      "full": {
+        "items": 72,
+        "bytes": 30701699495,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.8-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.8-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.8-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 827,
+        "bytes": 54363015959,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.8-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.8-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.8-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 827
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 827
+        }
+      }
+    },
+    {
+      "version": "1.1.9",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.9/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Tue, 09 Jun 2026 22:30:01 GMT",
+      "content_length": 65765,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.9/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.9/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 65765,
+              "last_modified": "Tue, 09 Jun 2026 22:30:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.9/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 65765,
+      "full": {
+        "items": 72,
+        "bytes": 30733951708,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.9-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.9-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.9-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 869,
+        "bytes": 55276795123,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.9-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.9-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.9-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 869
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 869
+        }
+      }
+    },
+    {
+      "version": "1.1.10",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.10/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Thu, 11 Jun 2026 20:00:01 GMT",
+      "content_length": 65861,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.10/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.10/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 65861,
+              "last_modified": "Thu, 11 Jun 2026 20:00:01 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.10/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 65861,
+      "full": {
+        "items": 72,
+        "bytes": 30733951644,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.10-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.10-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.10-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 871,
+        "bytes": 55423824028,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.10-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.10-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.10-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 871
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 871
+        }
+      }
+    },
+    {
+      "version": "1.1.11",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.11/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Wed, 17 Jun 2026 22:03:33 GMT",
+      "content_length": 67733,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.11/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.11/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 67733,
+              "last_modified": "Wed, 17 Jun 2026 22:03:33 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.11/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 67733,
+      "full": {
+        "items": 72,
+        "bytes": 31032882140,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.11-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.11-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.11-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 904,
+        "bytes": 56871585334,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.11-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.11-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.11-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 904
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 904
+        }
+      }
+    },
+    {
+      "version": "1.1.12",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.12/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Thu, 18 Jun 2026 20:00:03 GMT",
+      "content_length": 68997,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.12/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.12/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 68997,
+              "last_modified": "Thu, 18 Jun 2026 20:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.12/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 68997,
+      "full": {
+        "items": 72,
+        "bytes": 31049297875,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.12-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.12-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.12-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 934,
+        "bytes": 57893201457,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.12-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.12-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.12-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 934
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 934
+        }
+      }
+    },
+    {
+      "version": "1.1.13",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.13/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Sat, 20 Jun 2026 20:00:02 GMT",
+      "content_length": 70549,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.13/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.13/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 70549,
+              "last_modified": "Sat, 20 Jun 2026 20:00:02 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.13/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 70549,
+      "full": {
+        "items": 72,
+        "bytes": 31050111571,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.13-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.13-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.13-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 967,
+        "bytes": 58825305813,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.13-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.13-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.13-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 967
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 967
+        }
+      }
+    },
+    {
+      "version": "1.1.14",
+      "platform": "Android",
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "reslist_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.14/ResList.bin.zip",
+      "object_base_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Res",
+      "status": 200,
+      "last_modified": "Tue, 23 Jun 2026 20:00:03 GMT",
+      "content_length": 72325,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.14/ResList.bin.zip",
+            "probe": {
+              "ok": true,
+              "status": 200,
+              "method": "GET",
+              "checked_at": "2026-07-10 04:11:50 +0800",
+              "final_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.14/ResList.bin.zip",
+              "content_type": "application/zip",
+              "size": 72325,
+              "last_modified": "Tue, 23 Jun 2026 20:00:03 GMT",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "high"
+            }
+          }
+        ],
+        "source": {
+          "kind": "live_probe",
+          "confidence": "high"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "http_2xx",
+          "preferred_url": "https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/1.1.14/ResList.bin.zip",
+          "confidence": "high",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/update_nte_android_static.py"
+      },
+      "reslist_bytes": 72325,
+      "full": {
+        "items": 72,
+        "bytes": 31053298791,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.14-full.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.14-full.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.14-full.files.aria2.txt"
+      },
+      "patches": {
+        "items": 1009,
+        "bytes": 59544941339,
+        "json": "data/nte/android/url_lists/publish_Android-1.1.14-patches.json",
+        "urls": "data/nte/android/url_lists/publish_Android-1.1.14-patches.urls.txt",
+        "aria2": "data/nte/android/url_lists/publish_Android-1.1.14-patches.patches.aria2.txt"
+      },
+      "availability_counts": {
+        "full": {
+          "available": 72
+        },
+        "patches": {
+          "available": 1009
+        }
+      },
+      "availability_reasons": {
+        "full": {
+          "not_probed": 72
+        },
+        "patches": {
+          "not_probed": 1009
+        }
+      }
+    }
+  ],
+  "generated_at": "2026-07-10 04:11:50 +0800",
+  "last_checked_at": "2026-07-10 04:11:50 +0800",
+  "update_json": {
+    "url": "https://yhcdn1.wmupd.com/clientRes/publish_Updata/update.json",
+    "status": 200,
+    "android_default": {
+      "versioncode": "120",
+      "version": "1.2.0",
+      "content": "亲爱的鉴定师，《异环》全新版本已上线。为了给您带来更优质的游戏体验，我们对游戏进行了性能优化和内容更新。请您尽快更新至最新版本，继续您的海特洛之旅~",
+      "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
+      "force": "1"
+    }
+  },
+  "branches": [
+    {
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "base_path": "https://yhcdn1.wmupd.com/clientRes/publish_Android",
+      "note": "Original Android resource branch recovered from the 1.0 APK config."
+    },
+    {
+      "branch": "Android_120",
+      "branch_kind": "versioncode_branch",
+      "base_path": "https://yhcdn1.wmupd.com/clientRes/Android_120",
+      "apk_version": "1.2.0",
+      "versioncode": "120",
+      "apk_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
+      "note": "Current Android resources branch tied to APK versioncode 120."
+    },
+    {
+      "branch": "Android_130",
+      "branch_kind": "candidate_versioncode_branch",
+      "base_path": "https://yhcdn1.wmupd.com/clientRes/Android_130",
+      "versioncode": "130",
+      "note": "Future sibling branch probe; kept in branch_scan even when empty."
+    }
+  ],
+  "branch_scan": [
+    {
+      "branch": "publish_Android",
+      "branch_kind": "legacy_android",
+      "base_path": "https://yhcdn1.wmupd.com/clientRes/publish_Android",
+      "candidate_versions": 75,
+      "available_versions": 34,
+      "version_ranges": [
+        [
+          "1.0.0",
+          "1.0.30"
+        ],
+        [
+          "1.1.0",
+          "1.1.20"
+        ],
+        [
+          "1.2.0",
+          "1.2.22"
+        ]
+      ],
+      "note": "Original Android resource branch recovered from the 1.0 APK config."
+    },
+    {
+      "branch": "Android_120",
+      "branch_kind": "versioncode_branch",
+      "base_path": "https://yhcdn1.wmupd.com/clientRes/Android_120",
+      "candidate_versions": 62,
+      "available_versions": 10,
+      "version_ranges": [
+        [
+          "1.2.0",
+          "1.2.30"
+        ],
+        [
+          "1.3.0",
+          "1.3.30"
+        ]
+      ],
+      "note": "Current Android resources branch tied to APK versioncode 120."
+    },
+    {
+      "branch": "Android_130",
+      "branch_kind": "candidate_versioncode_branch",
+      "base_path": "https://yhcdn1.wmupd.com/clientRes/Android_130",
+      "candidate_versions": 31,
+      "available_versions": 0,
+      "version_ranges": [
+        [
+          "1.3.0",
+          "1.3.30"
+        ]
+      ],
+      "note": "Future sibling branch probe; kept in branch_scan even when empty."
+    }
+  ]
+}
