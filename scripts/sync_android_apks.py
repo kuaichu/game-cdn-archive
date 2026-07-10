@@ -1952,6 +1952,211 @@ KNOWN_APKS = [
     },
 ]
 
+BH3_DOWNLOAD_LIBRARY_APKS = [
+    {
+        "game_id": "bh3",
+        "version": "1.4.0",
+        "channel": "guofu-oss",
+        "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20170407-184918-gf_android_ota-versions-v1_4-4R-6d1fb22-ASB-il2cpp_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/1.4.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "1.7.0",
+        "channel": "guofu-alt",
+        "url": "http://app.bh3.com/public/Android/20170828-android_versions_v1_7_The_Awakening_of_SliverWolf_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/1.7.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "1.8.0",
+        "channel": "guofu-oss",
+        "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20171012-android_versions_v1_8_Scarlet_Mitama_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/1.8.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "1.9.0",
+        "channel": "guofu-oss",
+        "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20171123-android_versions_v1_9_resurrection_of_the_sacramental_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/1.9.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "2.0.0",
+        "channel": "guofu-oss",
+        "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180111-android_versions_v2_0_Housewarming_Party_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/2.0.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "2.1.0",
+        "channel": "guofu-oss",
+        "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/2.1.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "2.2.0",
+        "channel": "guofu-oss",
+        "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180329-android_versions_v2_2_the_Guardian_of_shenzhou_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/2.2.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "2.5.0",
+        "channel": "guofu-oss",
+        "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180726-android_versions-v2_5_hail_my_proud_queen_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/2.5.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "3.3.0",
+        "channel": "guofu-oss",
+        "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.3.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "3.4.0",
+        "channel": "guofu-oss",
+        "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20190823-210658-gf_android_ota-R3_4-The_Twilight_Ruling_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.4.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "3.6.0",
+        "channel": "guofu-oss",
+        "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20191202-153409-gf_android_ota-versions-v3_6-ARM64_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.6.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "3.7.0",
+        "channel": "guofu-oss",
+        "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.7.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "3.8.0",
+        "channel": "guofu-oss",
+        "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20200227-173653-gf_android_ota-versions-v3_8-Dawn_of_Glory_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.8.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "3.9.0",
+        "channel": "guofu-oss",
+        "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20200423-212246-gf_android_ota-versions-v3_9_1-Starlit_Sanctum.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.9.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "5.2.0",
+        "channel": "guofu",
+        "url": "https://bundle.bh3.com/public/Android/20210916-100433-gf_android_ota-versions-v5_2-Infinite_Future_guofu.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/5.2.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "6.8.0",
+        "channel": "gw",
+        "url": "https://bundle.bh3.com/ptpublic/rel/20230702172043_o8BzGMLGBbVpTjyy/CPS/20230629-122046-gf_android_ota-versions-v6_8-Saha_and_Rebirth_gw.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/6.8.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "6.9.0",
+        "channel": "mys",
+        "url": "https://bundle.bh3.com/ptpublic/rel/20230814114102_KD8RjBDLGc0wU5j9/CPS/20230809-234720-gf_android_ota-versions-v6_9-Cutting_Dreams_at_Dawn_mys.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/6.9.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "7.3.0",
+        "channel": "gw",
+        "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/7.3.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "7.5.0",
+        "channel": "gw",
+        "url": "https://bundle.bh3.com/ptpublic/rel/20240506104443_Eb7wY4fRoYiICW5J/CPS/20240430-053124-gf_android_ota-versions-v7_5-Crusade_of_Chasing_Shadows_gw.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/7.5.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "7.6.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240624104231_kQdR9e8gTqYZeAgW/CPS/20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/7.6.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "7.7.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240805103951_0EjefJt3gubtCF3N/CPS/20240731-233936-gf_android_ota-versions-v7_7-Drudging_Drifting_Dreaming_gw.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/7.7.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "8.0.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20241208070032_L5tMaxvchIF0LKZg/CPS/20241204-232347-gf_android_ota-versions-v8_0-InSearchoftheSun_gw.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/8.0.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "8.1.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250120104717_JKPilwZ9G9BSw6JF/cps/20250116-012226-gf_android_ota-versions-v8_1-DrumminginNew_gw.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/8.1.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "8.2.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250321105946_GHQTTjbASRjRe2s6/CPS/20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/8.2.md",
+    },
+    {
+        "game_id": "bh3",
+        "version": "8.4.0",
+        "channel": "gw",
+        "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250717152657_HmMWzKltujR0bm3L/CPS/20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
+        "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+        "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/8.4.md",
+    },
+]
+
+KNOWN_APKS.extend(BH3_DOWNLOAD_LIBRARY_APKS)
+
 GAME_NAMES = {
     "bh2": {"name": "崩坏学园2", "subName": "Houkai Gakuen 2"},
     "nte": {"name": "异环", "subName": "Neverness to Everness"},
@@ -3284,6 +3489,10 @@ def apk_hashes(entry: dict) -> set[str]:
     for value in (entry.get("md5"), md5_from_filename(entry.get("filename") or "")):
         if value and re.fullmatch(r"[0-9a-fA-F]{32}", value):
             hashes.add(value.lower())
+    status = int(entry.get("status") or 0)
+    content_type = str(entry.get("content_type") or "").lower()
+    if not 200 <= status < 400 or "text/html" in content_type or "application/xml" in content_type:
+        return hashes
     etag = (entry.get("etag") or "").strip().strip('"').lower()
     if etag:
         hashes.add(etag)

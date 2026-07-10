@@ -1,0 +1,58 @@
+[
+  {
+    "game_id": "bh3",
+    "version": "8.4.0",
+    "channel": "gw",
+    "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250717152657_HmMWzKltujR0bm3L/CPS/20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
+    "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+    "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/8.4.md",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 668953782,
+    "last_modified": "Thu, 17 Jul 2025 07:28:35 GMT",
+    "etag": "A3F452DEE571984CA36A3CF49CC813BF-10",
+    "md5": "",
+    "crc64": "",
+    "error": "",
+    "filename": "20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
+    "captured_at": "2026-07-10T06:37:54.844642+00:00",
+    "updated_at": "2025-07-17T07:28:35+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250717152657_HmMWzKltujR0bm3L/CPS/20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-10T06:40:13.725Z",
+            "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250717152657_HmMWzKltujR0bm3L/CPS/20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 668953782,
+            "last_modified": "Thu, 17 Jul 2025 07:28:35 GMT",
+            "etag": "A3F452DEE571984CA36A3CF49CC813BF-10",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250717152657_HmMWzKltujR0bm3L/CPS/20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]

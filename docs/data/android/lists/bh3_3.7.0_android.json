@@ -2,18 +2,21 @@
   {
     "game_id": "bh3",
     "version": "3.7.0",
-    "channel": "guofu",
-    "url": "https://app.bh3.com/public/Android/20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
-    "source": "User-provided historical URL; original domain no longer resolves",
-    "status": 0,
-    "content_type": "",
+    "channel": "guofu-oss",
+    "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
+    "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+    "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.7.md",
+    "status": 404,
+    "content_type": "application/xml",
     "size": 0,
     "last_modified": "",
     "etag": "",
     "md5": "",
     "crc64": "",
-    "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+    "error": "APK object unavailable",
     "filename": "20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
-    "captured_at": "2026-07-05T09:10:00.000000+00:00"
+    "captured_at": "2026-07-10T06:37:54.844642+00:00",
+    "updated_at": "2020-01-09T17:16:48+00:00",
+    "updated_at_source": "filename_timestamp"
   }
 ]

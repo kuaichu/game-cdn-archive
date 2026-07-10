@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-07-09T08:59:05.824074+00:00",
-  "generated_at": "2026-07-09T08:59:05.824074+00:00",
+  "last_checked_at": "2026-07-10T06:55:08.185337+00:00",
+  "generated_at": "2026-07-10T06:55:08.185337+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -9945,8 +9945,8 @@
                 "probe": {
                   "ok": true,
                   "status": 200,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:31.207Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20260521184041_fIpuozZUX1U7jnuv/CPS/20260514-004049-gf_android_ota-versions-v8_9-Lives_Flourish_gw.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 698069680,
@@ -9955,7 +9955,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10000,8 +10000,8 @@
                 "probe": {
                   "ok": true,
                   "status": 200,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:32.485Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20260129104916_BoBPLPFIyJkDEQgJ/CPS/20260122-005217-gf_android_ota-versions-v8_7-Passage_To_NewDawns_ym.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 695651102,
@@ -10010,7 +10010,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10055,8 +10055,8 @@
                 "probe": {
                   "ok": true,
                   "status": 200,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:32.767Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20251126103029_6BdFwrhJbJwHQQAX/CPS/20251119-224340-gf_android_ota-versions-v8_6-Banquet_Operative_gw.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 694020894,
@@ -10065,7 +10065,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10110,8 +10110,8 @@
                 "probe": {
                   "ok": true,
                   "status": 200,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:33.015Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250919160133_7I3uYOQENmLOcD8O/CPS/20250911-052146-gf_android_ota-versions-v8_5-A_Lightful_Love_gw.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 680451531,
@@ -10120,7 +10120,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10133,6 +10133,62 @@
               "state": "available",
               "reason": "http_2xx",
               "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250919160133_7I3uYOQENmLOcD8O/CPS/20250911-052146-gf_android_ota-versions-v8_5-A_Lightful_Love_gw.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "8.4.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250717152657_HmMWzKltujR0bm3L/CPS/20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/8.4.md",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 668953782,
+          "last_modified": "Thu, 17 Jul 2025 07:28:35 GMT",
+          "etag": "A3F452DEE571984CA36A3CF49CC813BF-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2025-07-17T07:28:35+00:00",
+          "updated_at_source": "apk_last_modified",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250717152657_HmMWzKltujR0bm3L/CPS/20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "HEAD",
+                  "checked_at": "2026-07-10T06:40:13.725Z",
+                  "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250717152657_HmMWzKltujR0bm3L/CPS/20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
+                  "content_type": "application/vnd.android.package-archive",
+                  "size": 668953782,
+                  "last_modified": "Thu, 17 Jul 2025 07:28:35 GMT",
+                  "etag": "A3F452DEE571984CA36A3CF49CC813BF-10",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.281,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250717152657_HmMWzKltujR0bm3L/CPS/20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
               "confidence": "high",
               "retained": false,
               "display_label": "可用"
@@ -10165,8 +10221,8 @@
                 "probe": {
                   "ok": true,
                   "status": 200,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:33.411Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250523115648_9RU48di9UxAQIixO/CPS/20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 661362858,
@@ -10175,7 +10231,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10191,6 +10247,174 @@
               "confidence": "high",
               "retained": false,
               "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "8.2.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250321105946_GHQTTjbASRjRe2s6/CPS/20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/8.2.md",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 658160042,
+          "last_modified": "Fri, 21 Mar 2025 03:13:08 GMT",
+          "etag": "49C6A0DB974FE04D7214942483384246-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2025-03-21T03:13:08+00:00",
+          "updated_at_source": "apk_last_modified",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250321105946_GHQTTjbASRjRe2s6/CPS/20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "HEAD",
+                  "checked_at": "2026-07-10T06:40:13.685Z",
+                  "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250321105946_GHQTTjbASRjRe2s6/CPS/20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
+                  "content_type": "application/vnd.android.package-archive",
+                  "size": 658160042,
+                  "last_modified": "Fri, 21 Mar 2025 03:13:08 GMT",
+                  "etag": "49C6A0DB974FE04D7214942483384246-10",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.281,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250321105946_GHQTTjbASRjRe2s6/CPS/20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "8.1.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250120104717_JKPilwZ9G9BSw6JF/cps/20250116-012226-gf_android_ota-versions-v8_1-DrumminginNew_gw.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/8.1.md",
+          "status": 403,
+          "content_type": "",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20250116-012226-gf_android_ota-versions-v8_1-DrumminginNew_gw.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2025-01-20T10:47:17+00:00",
+          "updated_at_source": "filename_timestamp",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250120104717_JKPilwZ9G9BSw6JF/cps/20250116-012226-gf_android_ota-versions-v8_1-DrumminginNew_gw.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 403,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250120104717_JKPilwZ9G9BSw6JF/cps/20250116-012226-gf_android_ota-versions-v8_1-DrumminginNew_gw.apk",
+                  "content_type": "",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "8.0.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20241208070032_L5tMaxvchIF0LKZg/CPS/20241204-232347-gf_android_ota-versions-v8_0-InSearchoftheSun_gw.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/8.0.md",
+          "status": 403,
+          "content_type": "",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20241204-232347-gf_android_ota-versions-v8_0-InSearchoftheSun_gw.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2024-12-08T07:00:32+00:00",
+          "updated_at_source": "filename_timestamp",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.bh3.com/ptpublic/rel/20241208070032_L5tMaxvchIF0LKZg/CPS/20241204-232347-gf_android_ota-versions-v8_0-InSearchoftheSun_gw.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 403,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20241208070032_L5tMaxvchIF0LKZg/CPS/20241204-232347-gf_android_ota-versions-v8_0-InSearchoftheSun_gw.apk",
+                  "content_type": "",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -10221,7 +10445,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-09T08:11:15.884028+00:00",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/CPS/20241024-005902-gf_android_ota-versions-v7_9-Stars_Derailed_gw.apk",
                   "content_type": "",
                   "size": 0,
@@ -10230,7 +10454,7 @@
                   "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.538,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10276,7 +10500,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-09T08:11:15.884028+00:00",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240912162405_49ekXZIjd6SoVTrN/CPS/20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
                   "content_type": "",
                   "size": 0,
@@ -10285,7 +10509,7 @@
                   "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.538,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10301,6 +10525,174 @@
               "confidence": "low",
               "retained": true,
               "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "7.7.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240805103951_0EjefJt3gubtCF3N/CPS/20240731-233936-gf_android_ota-versions-v7_7-Drudging_Drifting_Dreaming_gw.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/7.7.md",
+          "status": 403,
+          "content_type": "",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20240731-233936-gf_android_ota-versions-v7_7-Drudging_Drifting_Dreaming_gw.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2024-08-05T10:39:51+00:00",
+          "updated_at_source": "filename_timestamp",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240805103951_0EjefJt3gubtCF3N/CPS/20240731-233936-gf_android_ota-versions-v7_7-Drudging_Drifting_Dreaming_gw.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 403,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240805103951_0EjefJt3gubtCF3N/CPS/20240731-233936-gf_android_ota-versions-v7_7-Drudging_Drifting_Dreaming_gw.apk",
+                  "content_type": "",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "7.6.0",
+          "channel": "gw",
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240624104231_kQdR9e8gTqYZeAgW/CPS/20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/7.6.md",
+          "status": 403,
+          "content_type": "",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2024-06-24T10:42:31+00:00",
+          "updated_at_source": "filename_timestamp",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240624104231_kQdR9e8gTqYZeAgW/CPS/20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 403,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240624104231_kQdR9e8gTqYZeAgW/CPS/20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
+                  "content_type": "",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "7.5.0",
+          "channel": "gw",
+          "url": "https://bundle.bh3.com/ptpublic/rel/20240506104443_Eb7wY4fRoYiICW5J/CPS/20240430-053124-gf_android_ota-versions-v7_5-Crusade_of_Chasing_Shadows_gw.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/7.5.md",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 600051270,
+          "last_modified": "Wed, 25 Jun 2025 02:51:44 GMT",
+          "etag": "23B88F761E302F0BBCB0E343D3D4357D-10",
+          "md5": "",
+          "crc64": "11014474017573172542",
+          "error": "",
+          "filename": "20240430-053124-gf_android_ota-versions-v7_5-Crusade_of_Chasing_Shadows_gw.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2025-06-25T02:51:44+00:00",
+          "updated_at_source": "apk_last_modified",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bundle.bh3.com/ptpublic/rel/20240506104443_Eb7wY4fRoYiICW5J/CPS/20240430-053124-gf_android_ota-versions-v7_5-Crusade_of_Chasing_Shadows_gw.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bundle.bh3.com/ptpublic/rel/20240506104443_Eb7wY4fRoYiICW5J/CPS/20240430-053124-gf_android_ota-versions-v7_5-Crusade_of_Chasing_Shadows_gw.apk",
+                  "content_type": "application/vnd.android.package-archive",
+                  "size": 600051270,
+                  "last_modified": "Wed, 25 Jun 2025 02:51:44 GMT",
+                  "etag": "23B88F761E302F0BBCB0E343D3D4357D-10",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20240506104443_Eb7wY4fRoYiICW5J/CPS/20240430-053124-gf_android_ota-versions-v7_5-Crusade_of_Chasing_Shadows_gw.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -10330,8 +10722,8 @@
                 "probe": {
                   "ok": true,
                   "status": 200,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:33.666Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/ptpublic/rel/20240325143924_D6bZkQP9zm8vNajM/CPS/20240321-183112-gf_android_ota-versions-v7_4-Invitation_to_the_Mad_Banquet_gw.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 571277789,
@@ -10340,7 +10732,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10385,8 +10777,8 @@
                 "probe": {
                   "ok": true,
                   "status": 200,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:33.899Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_guofu.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 586476686,
@@ -10395,7 +10787,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10408,6 +10800,62 @@
               "state": "available",
               "reason": "http_2xx",
               "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_guofu.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "7.3.0",
+          "channel": "gw",
+          "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/7.3.md",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 586476683,
+          "last_modified": "Fri, 04 Jul 2025 08:22:31 GMT",
+          "etag": "F1E35DD8D30FBE4D2755789E63D1DA1A-10",
+          "md5": "",
+          "crc64": "4922770558463387441",
+          "error": "",
+          "filename": "20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2025-07-04T08:22:31+00:00",
+          "updated_at_source": "apk_last_modified",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
+                  "content_type": "application/vnd.android.package-archive",
+                  "size": 586476683,
+                  "last_modified": "Fri, 04 Jul 2025 08:22:31 GMT",
+                  "etag": "F1E35DD8D30FBE4D2755789E63D1DA1A-10",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
               "confidence": "high",
               "retained": false,
               "display_label": "可用"
@@ -10440,8 +10888,8 @@
                 "probe": {
                   "ok": true,
                   "status": 200,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:34.101Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/ptpublic/rel/20231218144111_nFwR8NyQCxVRbXeo/CPS/20231213-222300-gf_android_ota-versions-v7_2-The_Wings_to_Mars_gw.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 538409750,
@@ -10450,7 +10898,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10495,8 +10943,8 @@
                 "probe": {
                   "ok": true,
                   "status": 200,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:34.300Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/ptpublic/rel/20231106153627_b1OpytRR6oCFFnkm/CPS/20231102-000511-gf_android_ota-versions-v7_1-Starbound_Painter_baidu.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 845542287,
@@ -10505,7 +10953,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10550,8 +10998,8 @@
                 "probe": {
                   "ok": true,
                   "status": 200,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:34.532Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/ptpublic/rel/20230925103219_8WqdhyRJLpCQJNBY/CPS/20230920-235123-gf_android_ota-versions-v7_0-RePromise_to_Luna_gw.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 722100914,
@@ -10560,7 +11008,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10573,6 +11021,118 @@
               "state": "available",
               "reason": "http_2xx",
               "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20230925103219_8WqdhyRJLpCQJNBY/CPS/20230920-235123-gf_android_ota-versions-v7_0-RePromise_to_Luna_gw.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "6.9.0",
+          "channel": "mys",
+          "url": "https://bundle.bh3.com/ptpublic/rel/20230814114102_KD8RjBDLGc0wU5j9/CPS/20230809-234720-gf_android_ota-versions-v6_9-Cutting_Dreams_at_Dawn_mys.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/6.9.md",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 530170531,
+          "last_modified": "Mon, 14 Aug 2023 07:06:10 GMT",
+          "etag": "41ADE09F06022697823A10BAC63E7598-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "20230809-234720-gf_android_ota-versions-v6_9-Cutting_Dreams_at_Dawn_mys.apk",
+          "captured_at": "2026-07-10T06:55:08.185337+00:00",
+          "updated_at": "2023-08-14T07:06:10+00:00",
+          "updated_at_source": "apk_last_modified",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bundle.bh3.com/ptpublic/rel/20230814114102_KD8RjBDLGc0wU5j9/CPS/20230809-234720-gf_android_ota-versions-v6_9-Cutting_Dreams_at_Dawn_mys.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bundle.bh3.com/ptpublic/rel/20230814114102_KD8RjBDLGc0wU5j9/CPS/20230809-234720-gf_android_ota-versions-v6_9-Cutting_Dreams_at_Dawn_mys.apk",
+                  "content_type": "application/vnd.android.package-archive",
+                  "size": 530170531,
+                  "last_modified": "Mon, 14 Aug 2023 07:06:10 GMT",
+                  "etag": "41ADE09F06022697823A10BAC63E7598-10",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20230814114102_KD8RjBDLGc0wU5j9/CPS/20230809-234720-gf_android_ota-versions-v6_9-Cutting_Dreams_at_Dawn_mys.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "6.8.0",
+          "channel": "gw",
+          "url": "https://bundle.bh3.com/ptpublic/rel/20230702172043_o8BzGMLGBbVpTjyy/CPS/20230629-122046-gf_android_ota-versions-v6_8-Saha_and_Rebirth_gw.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/6.8.md",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 530428840,
+          "last_modified": "Mon, 03 Jul 2023 02:26:11 GMT",
+          "etag": "BA55A1D096EEB915468BE92A88F29749-10",
+          "md5": "",
+          "crc64": "",
+          "error": "",
+          "filename": "20230629-122046-gf_android_ota-versions-v6_8-Saha_and_Rebirth_gw.apk",
+          "captured_at": "2026-07-10T06:55:08.185337+00:00",
+          "updated_at": "2023-07-03T02:26:11+00:00",
+          "updated_at_source": "apk_last_modified",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bundle.bh3.com/ptpublic/rel/20230702172043_o8BzGMLGBbVpTjyy/CPS/20230629-122046-gf_android_ota-versions-v6_8-Saha_and_Rebirth_gw.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bundle.bh3.com/ptpublic/rel/20230702172043_o8BzGMLGBbVpTjyy/CPS/20230629-122046-gf_android_ota-versions-v6_8-Saha_and_Rebirth_gw.apk",
+                  "content_type": "application/vnd.android.package-archive",
+                  "size": 530428840,
+                  "last_modified": "Mon, 03 Jul 2023 02:26:11 GMT",
+                  "etag": "BA55A1D096EEB915468BE92A88F29749-10",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20230702172043_o8BzGMLGBbVpTjyy/CPS/20230629-122046-gf_android_ota-versions-v6_8-Saha_and_Rebirth_gw.apk",
               "confidence": "high",
               "retained": false,
               "display_label": "可用"
@@ -10605,8 +11165,8 @@
                 "probe": {
                   "ok": true,
                   "status": 200,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:34.733Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/public/Android/20230413-122623-gf_android_ota-versions-v6_6-Woven_from_Last_Snow_gw.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 651976589,
@@ -10615,7 +11175,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10660,8 +11220,8 @@
                 "probe": {
                   "ok": true,
                   "status": 200,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:34.945Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/public/Android/20230301-220508-gf_android_ota-versions-v6_5-Hot_Sands_Escapade_gw.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 645319429,
@@ -10670,7 +11230,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10715,8 +11275,8 @@
                 "probe": {
                   "ok": true,
                   "status": 200,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:35.156Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/public/Android/20230110-030853-gf_android_ota-versions-v6_4-From_Finality_the_Origin_guofu.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 669218608,
@@ -10725,7 +11285,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10770,17 +11330,17 @@
                 "probe": {
                   "ok": false,
                   "status": 404,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:35.353Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/public/Android/20221103-165551-gf_android_ota-versions-v6_2-The_Chrono_and_the_Hare_guofu.apk",
                   "content_type": "text/html",
-                  "size": 137,
+                  "size": 0,
                   "last_modified": "Tue, 28 Feb 2023 10:25:46 GMT",
                   "etag": "60B0F4630F6F13F329E338B74014282D",
-                  "error": "HTTP 404",
+                  "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10825,17 +11385,17 @@
                 "probe": {
                   "ok": false,
                   "status": 404,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:36.707Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/public/Android/20220922-171040-gf_android_ota-versions-v6_1-Moonshade_Epic_guofu.apk",
                   "content_type": "text/html",
-                  "size": 137,
+                  "size": 0,
                   "last_modified": "Tue, 28 Feb 2023 10:25:46 GMT",
                   "etag": "60B0F4630F6F13F329E338B74014282D",
-                  "error": "HTTP 404",
+                  "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10880,17 +11440,73 @@
                 "probe": {
                   "ok": false,
                   "status": 404,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:38.191Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/public/Android/20220302-235837-gf_android_ota-versions-v5_6-Elysian_Reverie_guofu.apk",
                   "content_type": "text/html",
-                  "size": 137,
+                  "size": 0,
                   "last_modified": "Tue, 28 Feb 2023 10:25:46 GMT",
                   "etag": "60B0F4630F6F13F329E338B74014282D",
-                  "error": "HTTP 404",
+                  "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "5.2.0",
+          "channel": "guofu",
+          "url": "https://bundle.bh3.com/public/Android/20210916-100433-gf_android_ota-versions-v5_2-Infinite_Future_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/5.2.md",
+          "status": 404,
+          "content_type": "text/html",
+          "size": 0,
+          "last_modified": "Tue, 28 Feb 2023 10:25:46 GMT",
+          "etag": "60B0F4630F6F13F329E338B74014282D",
+          "md5": "",
+          "crc64": "2237473512751335202",
+          "error": "APK object unavailable",
+          "filename": "20210916-100433-gf_android_ota-versions-v5_2-Infinite_Future_guofu.apk",
+          "captured_at": "2026-07-10T06:40:11.811+00:00",
+          "updated_at": "2023-02-28T10:25:46+00:00",
+          "updated_at_source": "apk_last_modified",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bundle.bh3.com/public/Android/20210916-100433-gf_android_ota-versions-v5_2-Infinite_Future_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bundle.bh3.com/public/Android/20210916-100433-gf_android_ota-versions-v5_2-Infinite_Future_guofu.apk",
+                  "content_type": "text/html",
+                  "size": 0,
+                  "last_modified": "Tue, 28 Feb 2023 10:25:46 GMT",
+                  "etag": "60B0F4630F6F13F329E338B74014282D",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10935,17 +11551,17 @@
                 "probe": {
                   "ok": false,
                   "status": 404,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:39.137Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/public/Android/20210713-190832-gf_android_ota-versions-v5_0_1-Inherit_the_Flame_guofu.apk",
                   "content_type": "text/html",
-                  "size": 137,
+                  "size": 0,
                   "last_modified": "Tue, 28 Feb 2023 10:25:46 GMT",
                   "etag": "60B0F4630F6F13F329E338B74014282D",
-                  "error": "HTTP 404",
+                  "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10990,17 +11606,17 @@
                 "probe": {
                   "ok": false,
                   "status": 404,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:39.760Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/public/Android/20210603-161309-gf_android_ota-versions-v4_9-Outworld_Traveler_guofu.apk",
                   "content_type": "text/html",
-                  "size": 137,
+                  "size": 0,
                   "last_modified": "Tue, 28 Feb 2023 10:25:46 GMT",
                   "etag": "60B0F4630F6F13F329E338B74014282D",
-                  "error": "HTTP 404",
+                  "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11045,17 +11661,17 @@
                 "probe": {
                   "ok": false,
                   "status": 404,
-                  "method": "HEAD",
-                  "checked_at": "2026-07-09T08:43:40.849Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://bundle.bh3.com/public/Android/20210422-145145-gf_android_ota-versions-v4_8-The_Phantom_of_the_Theater_guofu.apk",
                   "content_type": "text/html",
-                  "size": 137,
+                  "size": 0,
                   "last_modified": "Tue, 28 Feb 2023 10:25:46 GMT",
                   "etag": "60B0F4630F6F13F329E338B74014282D",
-                  "error": "HTTP 404",
+                  "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11088,7 +11704,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20200921-205726-gf_android_ota-versions-v4_3-Rhythms_of_Neon_guofu.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00",
           "updated_at": "2020-09-21T20:57:26+00:00",
@@ -11100,17 +11716,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:41.544Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://app.bh3.com/public/Android/20200921-205726-gf_android_ota-versions-v4_3-Rhythms_of_Neon_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11120,12 +11736,180 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "3.9.0",
+          "channel": "guofu-oss",
+          "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20200423-212246-gf_android_ota-versions-v3_9_1-Starlit_Sanctum.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.9.md",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20200423-212246-gf_android_ota-versions-v3_9_1-Starlit_Sanctum.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2020-04-23T21:22:46+00:00",
+          "updated_at_source": "filename_timestamp",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20200423-212246-gf_android_ota-versions-v3_9_1-Starlit_Sanctum.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20200423-212246-gf_android_ota-versions-v3_9_1-Starlit_Sanctum.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "3.8.0",
+          "channel": "guofu-oss",
+          "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20200227-173653-gf_android_ota-versions-v3_8-Dawn_of_Glory_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.8.md",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20200227-173653-gf_android_ota-versions-v3_8-Dawn_of_Glory_guofu.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2020-02-27T17:36:53+00:00",
+          "updated_at_source": "filename_timestamp",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20200227-173653-gf_android_ota-versions-v3_8-Dawn_of_Glory_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20200227-173653-gf_android_ota-versions-v3_8-Dawn_of_Glory_guofu.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "3.7.0",
+          "channel": "guofu-oss",
+          "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.7.md",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2020-01-09T17:16:48+00:00",
+          "updated_at_source": "filename_timestamp",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11143,7 +11927,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja% Noir_guofu.apk",
           "captured_at": "2026-07-06T00:21:43.092679+00:00",
           "updated_at": "2019-11-21T20:33:21+00:00",
@@ -11155,17 +11939,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:41.670Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://app.bh3.com/public/Android/20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja%%20Noir_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11175,12 +11959,68 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "3.6.0",
+          "channel": "guofu-oss",
+          "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20191202-153409-gf_android_ota-versions-v3_6-ARM64_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.6.md",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20191202-153409-gf_android_ota-versions-v3_6-ARM64_guofu.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2019-12-02T15:34:09+00:00",
+          "updated_at_source": "filename_timestamp",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20191202-153409-gf_android_ota-versions-v3_6-ARM64_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20191202-153409-gf_android_ota-versions-v3_6-ARM64_guofu.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11198,7 +12038,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20191018-162047-gf_android_ota-versions-v3_5-Stygian_Nymph_guofu.apk",
           "captured_at": "2026-06-08T18:34:52.700463+00:00",
           "updated_at": "2019-10-18T16:20:47+00:00",
@@ -11210,17 +12050,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:41.925Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://app.bh3.com/public/Android/20191018-162047-gf_android_ota-versions-v3_5-Stygian_Nymph_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11230,12 +12070,12 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11253,7 +12093,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20190823-210658-gf_android_ota-R3_4-The_Twilight_Ruling_guofu.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00",
           "updated_at": "2019-08-23T21:06:58+00:00",
@@ -11265,17 +12105,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:42.072Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://app.bh3.com/public/Android/20190823-210658-gf_android_ota-R3_4-The_Twilight_Ruling_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11285,12 +12125,68 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "3.4.0",
+          "channel": "guofu-oss",
+          "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20190823-210658-gf_android_ota-R3_4-The_Twilight_Ruling_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.4.md",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20190823-210658-gf_android_ota-R3_4-The_Twilight_Ruling_guofu.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2019-08-23T21:06:58+00:00",
+          "updated_at_source": "filename_timestamp",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20190823-210658-gf_android_ota-R3_4-The_Twilight_Ruling_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20190823-210658-gf_android_ota-R3_4-The_Twilight_Ruling_guofu.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11308,7 +12204,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
           "captured_at": "2026-06-08T18:34:52.700463+00:00",
           "updated_at": "2019-07-11T15:36:03+00:00",
@@ -11320,17 +12216,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:42.329Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://app.bh3.com/public/Android/20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11340,12 +12236,68 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "3.3.0",
+          "channel": "guofu-oss",
+          "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.3.md",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2019-07-11T15:36:03+00:00",
+          "updated_at_source": "filename_timestamp",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11363,7 +12315,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20190531-201355-gf_android_ota-versions-v3_2-Nursery_Rhymes_with_Illusion_guofu1.apk",
           "captured_at": "2026-06-08T18:34:52.700463+00:00",
           "updated_at": "2019-05-31T20:13:55+00:00",
@@ -11375,17 +12327,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:42.430Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://app.bh3.com/public/Android/20190531-201355-gf_android_ota-versions-v3_2-Nursery_Rhymes_with_Illusion_guofu1.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11395,12 +12347,174 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "2.5.0",
+          "channel": "guofu-oss",
+          "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180726-android_versions-v2_5_hail_my_proud_queen_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/2.5.md",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20180726-android_versions-v2_5_hail_my_proud_queen_guofu.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180726-android_versions-v2_5_hail_my_proud_queen_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180726-android_versions-v2_5_hail_my_proud_queen_guofu.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "2.2.0",
+          "channel": "guofu-oss",
+          "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180329-android_versions_v2_2_the_Guardian_of_shenzhou_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/2.2.md",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20180329-android_versions_v2_2_the_Guardian_of_shenzhou_guofu.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180329-android_versions_v2_2_the_Guardian_of_shenzhou_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180329-android_versions_v2_2_the_Guardian_of_shenzhou_guofu.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "2.1.0",
+          "channel": "guofu-oss",
+          "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/2.1.md",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180208-android_versions_v2_1_1_the_shadow_of_dragon_guofu.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11418,7 +12532,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20180111-android_versions_v2_0_Housewarming_Party_guofu.apk",
           "captured_at": "2026-06-08T18:34:52.700463+00:00",
           "availability": {
@@ -11428,17 +12542,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:42.613Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://app.bh3.com/public/Android/20180111-android_versions_v2_0_Housewarming_Party_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11448,12 +12562,66 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "2.0.0",
+          "channel": "guofu-oss",
+          "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180111-android_versions_v2_0_Housewarming_Party_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/2.0.md",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20180111-android_versions_v2_0_Housewarming_Party_guofu.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180111-android_versions_v2_0_Housewarming_Party_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20180111-android_versions_v2_0_Housewarming_Party_guofu.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11471,7 +12639,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20171123-android_versions_v1_9_resurrection_of_the_sacramental_guofu.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00",
           "availability": {
@@ -11481,17 +12649,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:42.821Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "http://app.bh3.com/public/Android/20171123-android_versions_v1_9_resurrection_of_the_sacramental_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11501,12 +12669,66 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "1.9.0",
+          "channel": "guofu-oss",
+          "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20171123-android_versions_v1_9_resurrection_of_the_sacramental_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/1.9.md",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20171123-android_versions_v1_9_resurrection_of_the_sacramental_guofu.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20171123-android_versions_v1_9_resurrection_of_the_sacramental_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20171123-android_versions_v1_9_resurrection_of_the_sacramental_guofu.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11524,7 +12746,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20171012-android_versions_v1_8_Scarlet_Mitama_guofu.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00",
           "availability": {
@@ -11534,17 +12756,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:42.975Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "http://app.bh3.com/public/Android/20171012-android_versions_v1_8_Scarlet_Mitama_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11554,12 +12776,66 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "1.8.0",
+          "channel": "guofu-oss",
+          "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20171012-android_versions_v1_8_Scarlet_Mitama_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/1.8.md",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20171012-android_versions_v1_8_Scarlet_Mitama_guofu.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20171012-android_versions_v1_8_Scarlet_Mitama_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20171012-android_versions_v1_8_Scarlet_Mitama_guofu.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11577,7 +12853,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20170824-android_versions_v1_7_The_Awakening_of_SliverWolf_guofu.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00",
           "availability": {
@@ -11587,17 +12863,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:43.070Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "http://app.bh3.com/public/Android/20170824-android_versions_v1_7_The_Awakening_of_SliverWolf_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11607,12 +12883,66 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "1.7.0",
+          "channel": "guofu-alt",
+          "url": "http://app.bh3.com/public/Android/20170828-android_versions_v1_7_The_Awakening_of_SliverWolf_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/1.7.md",
+          "status": 0,
+          "content_type": "",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+          "filename": "20170828-android_versions_v1_7_The_Awakening_of_SliverWolf_guofu.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "http://app.bh3.com/public/Android/20170828-android_versions_v1_7_The_Awakening_of_SliverWolf_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 0,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "http://app.bh3.com/public/Android/20170828-android_versions_v1_7_The_Awakening_of_SliverWolf_guofu.apk",
+                  "content_type": "",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11630,7 +12960,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20170630-android_versions-v1_6_TogetherinSummer_guofu.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00",
           "availability": {
@@ -11640,17 +12970,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:43.185Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "http://app.bh3.com/public/Android/20170630-android_versions-v1_6_TogetherinSummer_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11660,12 +12990,12 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11683,7 +13013,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20170525-android_versions-v1_5_Theresa_Fight_guofu.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00",
           "availability": {
@@ -11693,17 +13023,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:43.270Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "http://app.bh3.com/public/Android/20170525-android_versions-v1_5_Theresa_Fight_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11713,12 +13043,12 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11736,7 +13066,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20170407-184918-gf_android_ota-versions-v1_4-4R-6d1fb22-ASB-il2cpp_guofu.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00",
           "updated_at": "2017-04-07T18:49:18+00:00",
@@ -11748,17 +13078,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:43.436Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "http://app.bh3.com/public/Android/20170407-184918-gf_android_ota-versions-v1_4-4R-6d1fb22-ASB-il2cpp_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11768,12 +13098,68 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
+        },
+        {
+          "game_id": "bh3",
+          "version": "1.4.0",
+          "channel": "guofu-oss",
+          "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20170407-184918-gf_android_ota-versions-v1_4-4R-6d1fb22-ASB-il2cpp_guofu.apk",
+          "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+          "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/1.4.md",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "20170407-184918-gf_android_ota-versions-v1_4-4R-6d1fb22-ASB-il2cpp_guofu.apk",
+          "captured_at": "2026-07-10T06:37:54.844642+00:00",
+          "updated_at": "2017-04-07T18:49:18+00:00",
+          "updated_at_source": "filename_timestamp",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20170407-184918-gf_android_ota-versions-v1_4-4R-6d1fb22-ASB-il2cpp_guofu.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
+                  "final_url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20170407-184918-gf_android_ota-versions-v1_4-4R-6d1fb22-ASB-il2cpp_guofu.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.033,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11791,7 +13177,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20170228-202036-gf_android_ota-versions-v1_3_bugfix-updateota-2de1573-ASB-il2cpp_guofu.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00",
           "updated_at": "2017-02-28T20:20:36+00:00",
@@ -11803,17 +13189,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:43.596Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "http://app.bh3.com/public/Android/20170228-202036-gf_android_ota-versions-v1_3_bugfix-updateota-2de1573-ASB-il2cpp_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11823,12 +13209,12 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11846,7 +13232,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20161230-180434-gf_android-versions-v1_2-4R-ASB-il2cpp_guofu.apk",
           "captured_at": "2026-06-08T18:34:52.700463+00:00",
           "updated_at": "2016-12-30T18:04:34+00:00",
@@ -11858,17 +13244,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:43.683Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://app.bh3.com/public/Android/20161230-180434-gf_android-versions-v1_2-4R-ASB-il2cpp_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11878,12 +13264,12 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11901,7 +13287,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20161108-112940-gf_android-versions-v1_1-4R-705fcfd-ASB-il2cpp_guofu.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00",
           "updated_at": "2016-11-08T11:29:40+00:00",
@@ -11913,17 +13299,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:43.726Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "http://app.bh3.com/public/Android/20161108-112940-gf_android-versions-v1_1-4R-705fcfd-ASB-il2cpp_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11933,12 +13319,12 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11956,7 +13342,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "0_gf_android-versions-v1_0_2nd-4R-b2b8e16-ASB-mono_guofu.apk",
           "captured_at": "2026-06-06T07:29:12.631982+00:00",
           "availability": {
@@ -11966,17 +13352,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:43.825Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "http://app.bh3.com/public/Android/0_gf_android-versions-v1_0_2nd-4R-b2b8e16-ASB-mono_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11986,12 +13372,12 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -12009,7 +13395,7 @@
           "etag": "",
           "md5": "",
           "crc64": "",
-          "error": "<urlopen error [Errno -5] No address associated with hostname>",
+          "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
           "filename": "20160927-204034-gf_android-versions-v0_9_9_android-4R-797e295-ASB-mono_guofu.apk",
           "captured_at": "2026-06-08T18:34:52.700463+00:00",
           "updated_at": "2016-09-27T20:40:34+00:00",
@@ -12021,17 +13407,17 @@
                 "probe": {
                   "ok": false,
                   "status": 0,
-                  "method": "CURL_HEAD",
-                  "checked_at": "2026-07-09T08:43:43.850Z",
+                  "method": "LEGACY_ANDROID_HEAD",
+                  "checked_at": "2026-07-10T06:55:08.185337+00:00",
                   "final_url": "https://app.bh3.com/public/Android/20160927-204034-gf_android-versions-v0_9_9_android-4R-797e295-ASB-mono_guofu.apk",
                   "content_type": "",
                   "size": 0,
                   "last_modified": "",
                   "etag": "",
-                  "error": "curl probe failed",
+                  "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0.033,
                   "scheduler_confidence": "high"
                 }
               }
@@ -12041,12 +13427,12 @@
               "confidence": "low"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "not_probed",
+              "state": "unavailable",
+              "reason": "retained_historical",
               "preferred_url": "",
               "confidence": "low",
-              "retained": false,
-              "display_label": "状态未知"
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -12073,10 +13459,30 @@
           "aria2": "data/android/lists/bh3_8.5.0_android.aria2.txt",
           "json": "data/android/lists/bh3_8.5.0_android.json"
         },
+        "8.4.0": {
+          "urls": "data/android/lists/bh3_8.4.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_8.4.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_8.4.0_android.json"
+        },
         "8.3.0": {
           "urls": "data/android/lists/bh3_8.3.0_android.urls.txt",
           "aria2": "data/android/lists/bh3_8.3.0_android.aria2.txt",
           "json": "data/android/lists/bh3_8.3.0_android.json"
+        },
+        "8.2.0": {
+          "urls": "data/android/lists/bh3_8.2.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_8.2.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_8.2.0_android.json"
+        },
+        "8.1.0": {
+          "urls": "data/android/lists/bh3_8.1.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_8.1.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_8.1.0_android.json"
+        },
+        "8.0.0": {
+          "urls": "data/android/lists/bh3_8.0.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_8.0.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_8.0.0_android.json"
         },
         "7.9.0": {
           "urls": "data/android/lists/bh3_7.9.0_android.urls.txt",
@@ -12087,6 +13493,21 @@
           "urls": "data/android/lists/bh3_7.8.0_android.urls.txt",
           "aria2": "data/android/lists/bh3_7.8.0_android.aria2.txt",
           "json": "data/android/lists/bh3_7.8.0_android.json"
+        },
+        "7.7.0": {
+          "urls": "data/android/lists/bh3_7.7.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_7.7.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_7.7.0_android.json"
+        },
+        "7.6.0": {
+          "urls": "data/android/lists/bh3_7.6.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_7.6.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_7.6.0_android.json"
+        },
+        "7.5.0": {
+          "urls": "data/android/lists/bh3_7.5.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_7.5.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_7.5.0_android.json"
         },
         "7.4.0": {
           "urls": "data/android/lists/bh3_7.4.0_android.urls.txt",
@@ -12112,6 +13533,16 @@
           "urls": "data/android/lists/bh3_7.0.0_android.urls.txt",
           "aria2": "data/android/lists/bh3_7.0.0_android.aria2.txt",
           "json": "data/android/lists/bh3_7.0.0_android.json"
+        },
+        "6.9.0": {
+          "urls": "data/android/lists/bh3_6.9.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_6.9.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_6.9.0_android.json"
+        },
+        "6.8.0": {
+          "urls": "data/android/lists/bh3_6.8.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_6.8.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_6.8.0_android.json"
         },
         "6.6.0": {
           "urls": "data/android/lists/bh3_6.6.0_android.urls.txt",
@@ -12143,6 +13574,11 @@
           "aria2": "data/android/lists/bh3_5.6.0_android.aria2.txt",
           "json": "data/android/lists/bh3_5.6.0_android.json"
         },
+        "5.2.0": {
+          "urls": "data/android/lists/bh3_5.2.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_5.2.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_5.2.0_android.json"
+        },
         "5.0.1": {
           "urls": "data/android/lists/bh3_5.0.1_android.urls.txt",
           "aria2": "data/android/lists/bh3_5.0.1_android.aria2.txt",
@@ -12162,6 +13598,21 @@
           "urls": "data/android/lists/bh3_4.3.0_android.urls.txt",
           "aria2": "data/android/lists/bh3_4.3.0_android.aria2.txt",
           "json": "data/android/lists/bh3_4.3.0_android.json"
+        },
+        "3.9.0": {
+          "urls": "data/android/lists/bh3_3.9.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_3.9.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_3.9.0_android.json"
+        },
+        "3.8.0": {
+          "urls": "data/android/lists/bh3_3.8.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_3.8.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_3.8.0_android.json"
+        },
+        "3.7.0": {
+          "urls": "data/android/lists/bh3_3.7.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_3.7.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_3.7.0_android.json"
         },
         "3.6.0": {
           "urls": "data/android/lists/bh3_3.6.0_android.urls.txt",
@@ -12187,6 +13638,21 @@
           "urls": "data/android/lists/bh3_3.2.0_android.urls.txt",
           "aria2": "data/android/lists/bh3_3.2.0_android.aria2.txt",
           "json": "data/android/lists/bh3_3.2.0_android.json"
+        },
+        "2.5.0": {
+          "urls": "data/android/lists/bh3_2.5.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_2.5.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_2.5.0_android.json"
+        },
+        "2.2.0": {
+          "urls": "data/android/lists/bh3_2.2.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_2.2.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_2.2.0_android.json"
+        },
+        "2.1.0": {
+          "urls": "data/android/lists/bh3_2.1.0_android.urls.txt",
+          "aria2": "data/android/lists/bh3_2.1.0_android.aria2.txt",
+          "json": "data/android/lists/bh3_2.1.0_android.json"
         },
         "2.0.0": {
           "urls": "data/android/lists/bh3_2.0.0_android.urls.txt",

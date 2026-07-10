@@ -16,42 +16,26 @@
     "filename": "20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_guofu.apk",
     "captured_at": "2026-07-05T02:03:55.017956+00:00",
     "updated_at": "2024-01-29T03:08:00+00:00",
-    "updated_at_source": "apk_last_modified",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_guofu.apk",
-          "probe": {
-            "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-08T06:44:28.245603+00:00",
-            "final_url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_guofu.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 586476686,
-            "last_modified": "Mon, 29 Jan 2024 03:08:00 GMT",
-            "etag": "C490B72C7307FAEEFECB7F900C127C34-10",
-            "error": "",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 18.754,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "high"
-      },
-      "interpretation": {
-        "state": "available",
-        "reason": "http_2xx",
-        "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_guofu.apk",
-        "confidence": "high",
-        "retained": false,
-        "display_label": "可用"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
+    "updated_at_source": "apk_last_modified"
+  },
+  {
+    "game_id": "bh3",
+    "version": "7.3.0",
+    "channel": "gw",
+    "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
+    "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+    "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/7.3.md",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 586476683,
+    "last_modified": "Fri, 04 Jul 2025 08:22:31 GMT",
+    "etag": "F1E35DD8D30FBE4D2755789E63D1DA1A-10",
+    "md5": "",
+    "crc64": "4922770558463387441",
+    "error": "",
+    "filename": "20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
+    "captured_at": "2026-07-10T06:37:54.844642+00:00",
+    "updated_at": "2025-07-04T08:22:31+00:00",
+    "updated_at_source": "apk_last_modified"
   }
 ]

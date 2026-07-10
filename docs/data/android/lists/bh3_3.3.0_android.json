@@ -12,46 +12,30 @@
     "etag": "",
     "md5": "",
     "crc64": "",
-    "error": "<urlopen error [Errno -5] No address associated with hostname>",
+    "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
     "filename": "20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
     "captured_at": "2026-06-08T18:34:52.700463+00:00",
     "updated_at": "2019-07-11T15:36:03+00:00",
-    "updated_at_source": "filename_timestamp",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://app.bh3.com/public/Android/20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
-          "probe": {
-            "ok": false,
-            "status": 0,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-08T06:44:28.245603+00:00",
-            "final_url": "https://app.bh3.com/public/Android/20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
-            "content_type": "",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 18.754,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "low"
-      },
-      "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
-        "preferred_url": "",
-        "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
+    "updated_at_source": "filename_timestamp"
+  },
+  {
+    "game_id": "bh3",
+    "version": "3.3.0",
+    "channel": "guofu-oss",
+    "url": "https://bh3rd-app.oss-cn-shanghai.aliyuncs.com/public/Android/20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
+    "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+    "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.3.md",
+    "status": 404,
+    "content_type": "application/xml",
+    "size": 0,
+    "last_modified": "",
+    "etag": "",
+    "md5": "",
+    "crc64": "",
+    "error": "APK object unavailable",
+    "filename": "20190711-153603-gf_android_ota-R3_3-Refactoring_of_Angel_guofu.apk",
+    "captured_at": "2026-07-10T06:37:54.844642+00:00",
+    "updated_at": "2019-07-11T15:36:03+00:00",
+    "updated_at_source": "filename_timestamp"
   }
 ]

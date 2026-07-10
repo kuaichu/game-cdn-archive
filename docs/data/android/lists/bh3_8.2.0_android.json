@@ -1,0 +1,58 @@
+[
+  {
+    "game_id": "bh3",
+    "version": "8.2.0",
+    "channel": "gw",
+    "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250321105946_GHQTTjbASRjRe2s6/CPS/20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
+    "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
+    "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/8.2.md",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 658160042,
+    "last_modified": "Fri, 21 Mar 2025 03:13:08 GMT",
+    "etag": "49C6A0DB974FE04D7214942483384246-10",
+    "md5": "",
+    "crc64": "",
+    "error": "",
+    "filename": "20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
+    "captured_at": "2026-07-10T06:37:54.844642+00:00",
+    "updated_at": "2025-03-21T03:13:08+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250321105946_GHQTTjbASRjRe2s6/CPS/20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "HEAD",
+            "checked_at": "2026-07-10T06:40:13.685Z",
+            "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250321105946_GHQTTjbASRjRe2s6/CPS/20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 658160042,
+            "last_modified": "Fri, 21 Mar 2025 03:13:08 GMT",
+            "etag": "49C6A0DB974FE04D7214942483384246-10",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": null,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250321105946_GHQTTjbASRjRe2s6/CPS/20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
