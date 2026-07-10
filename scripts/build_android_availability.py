@@ -172,6 +172,45 @@ def protect_known_good_interpretation(
     return protected
 
 
+def strong_apk_probe(probe: ProbeResult) -> bool:
+    facts = probe.get("probe") if isinstance(probe, dict) else None
+    if not isinstance(facts, dict):
+        return False
+    status = int_value(facts.get("status"))
+    size = int_value(facts.get("size"))
+    content_type = str(facts.get("content_type") or "").split(";", 1)[0].strip().lower()
+    return (
+        bool(facts.get("ok"))
+        and status in {200, 206}
+        and size > APK_SIZE_THRESHOLD_BYTES
+        and content_type in APK_CONTENT_TYPES
+    )
+
+
+def stabilize_recovery_interpretation(
+    record: dict[str, Any],
+    probes: list[ProbeResult],
+    interpretation: dict[str, Any],
+) -> dict[str, Any]:
+    if interpretation.get("state") != "available" or not probes or not strong_apk_probe(probes[0]):
+        return interpretation
+    if known_good_apk_record(record):
+        return interpretation
+    previous_availability = record.get("availability")
+    previous_candidates = previous_availability.get("candidates") if isinstance(previous_availability, dict) else None
+    if isinstance(previous_candidates, list) and any(strong_apk_probe(candidate) for candidate in previous_candidates):
+        return interpretation
+    provisional = dict(interpretation)
+    provisional.update({
+        "state": "unknown",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": False,
+        "display_label": "状态未知",
+    })
+    return provisional
+
+
 def fake_200_tightened(record: dict[str, Any], interpretation: dict[str, Any]) -> bool:
     if old_unavailable(record):
         return False
@@ -212,6 +251,7 @@ def apply_availability(index: dict[str, Any], config: ProbeScheduleConfig) -> tu
         probes = schedule_probe_candidates([url], previous=previous, config=config)
         interpretation = adapter.interpret(probes, record)
         interpretation = protect_known_good_interpretation(record, probes, interpretation)
+        interpretation = stabilize_recovery_interpretation(record, probes, interpretation)
         record["availability"] = availability_block(
             candidates=probes,
             source_kind="live_probe",

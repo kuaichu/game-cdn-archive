@@ -28,7 +28,7 @@ from adapters.nte import NteAvailabilityAdapter  # noqa: E402
 from adapters.tof import TofAvailabilityAdapter  # noqa: E402
 from adapters.wuwa import WuwaAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import ProbeResult, availability_block, probe_fact_defaults  # noqa: E402
-from scripts.build_android_availability import protect_known_good_interpretation, write_linked_json_lists  # noqa: E402
+from scripts.build_android_availability import protect_known_good_interpretation, stabilize_recovery_interpretation, write_linked_json_lists  # noqa: E402
 from scripts.build_wuwa_availability import apply_availability, load_versions  # noqa: E402
 from scripts.probe_scheduler import PersistentProbeCache, ProbeScheduleConfig, should_probe_previous  # noqa: E402
 from scripts.validate_availability import validate_android, validate_arknights, validate_endfield, validate_hoyo, validate_nte, validate_tof, validate_wuwa  # noqa: E402
@@ -407,6 +407,79 @@ def assert_android_linked_list_sync() -> None:
         updated = load_json(list_path)
     if updated != game["versions"]:
         raise AssertionError(f"Android linked JSON list did not receive updated availability: {updated!r}")
+
+
+def assert_android_recovery_stability() -> None:
+    url = "https://example.invalid/game.apk"
+    previous_probe = android_probe(
+        url,
+        ok=False,
+        status=403,
+        content_type="application/xml",
+        size=334,
+        error="HTTP 403",
+    )
+    record = {
+        "game_id": "android-test",
+        "version": "1.0.0",
+        "url": url,
+        "filename": "game.apk",
+        "status": 404,
+        "content_type": "application/xml",
+        "size": 0,
+        "error": "APK object unavailable",
+        "availability": availability_block(
+            [previous_probe],
+            "live_probe",
+            {
+                "state": "unknown",
+                "reason": "http_403",
+                "preferred_url": "",
+                "confidence": "low",
+                "retained": False,
+                "display_label": "状态未知",
+            },
+            "scripts/test_availability_negative.py",
+        ),
+    }
+    current_probe = android_probe(
+        url,
+        ok=True,
+        status=206,
+        content_type="application/vnd.android.package-archive",
+        size=2 * 1024 * 1024 * 1024,
+    )
+    available = AndroidAvailabilityAdapter().interpret([current_probe], record)
+    first_success = stabilize_recovery_interpretation(record, [current_probe], available)
+    if first_success["state"] != "unknown" or first_success["reason"] != available["reason"]:
+        raise AssertionError(f"first recovery success must remain provisional: {first_success!r}")
+
+    record["availability"] = availability_block(
+        [current_probe],
+        "live_probe",
+        first_success,
+        "scripts/test_availability_negative.py",
+    )
+    second_success = stabilize_recovery_interpretation(record, [current_probe], available)
+    if second_success != available:
+        raise AssertionError(f"second consecutive recovery success must become available: {second_success!r}")
+
+    known_good = dict(record)
+    known_good.update({
+        "status": 200,
+        "content_type": "application/vnd.android.package-archive",
+        "size": 2 * 1024 * 1024 * 1024,
+        "error": "",
+        "availability": availability_block(
+            [previous_probe],
+            "live_probe",
+            first_success,
+            "scripts/test_availability_negative.py",
+        ),
+    })
+    immediate = stabilize_recovery_interpretation(known_good, [current_probe], available)
+    if immediate != available:
+        raise AssertionError(f"known-good APK metadata must allow immediate recovery: {immediate!r}")
 
 
 def assert_hoyo_metadata_paths() -> None:
@@ -1272,6 +1345,7 @@ def main() -> None:
     assert_android_known_good_conflict_protection()
     assert_android_failed_probe_ttl()
     assert_android_linked_list_sync()
+    assert_android_recovery_stability()
     assert_hoyo_metadata_paths()
     assert_endfield_upstream_paths()
     assert_nte_paths()
@@ -1317,6 +1391,7 @@ def main() -> None:
     print("android_known_good_conflict=PASS")
     print("android_failed_probe_ttl=PASS")
     print("android_linked_list_sync=PASS")
+    print("android_recovery_stability=PASS")
     print("hoyo_metadata_inference=PASS")
     print("endfield_upstream_archive=PASS")
     print("nte_live_probe_and_metadata=PASS")
