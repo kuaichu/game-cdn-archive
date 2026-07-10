@@ -39,7 +39,6 @@ jobs:
       TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
       TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       TELEGRAM_CHANNEL_CHAT_ID: ${{ secrets.TELEGRAM_CHANNEL_CHAT_ID }}
-      NTE_TELEGRAM_CHAT_ID: ${{ secrets.NTE_TELEGRAM_CHAT_ID }}
       TELEGRAM_TRANSIENT_DELETE_AFTER_SECONDS: ${{ vars.TELEGRAM_TRANSIENT_DELETE_AFTER_SECONDS }}
       SYNC_SCOPE: ${{ github.event_name == 'workflow_dispatch' && inputs.scope || 'all' }}
 
@@ -445,9 +444,7 @@ jobs:
         shell: bash
         run: |
           update_summary_file="${RUNNER_TEMP}/game-cdn-version-updates.txt"
-          nte_update_summary_file="${RUNNER_TEMP}/nte-version-updates.txt"
           python scripts/summarize_version_updates.py --output "$update_summary_file"
-          python scripts/summarize_nte_updates.py --output "$nte_update_summary_file"
           {
             echo "VERSION_UPDATE_SUMMARY<<__GAME_CDN_VERSION_UPDATES__"
             if [ -s "$update_summary_file" ]; then
@@ -455,12 +452,6 @@ jobs:
               echo
             fi
             echo "__GAME_CDN_VERSION_UPDATES__"
-            echo "NTE_UPDATE_SUMMARY<<__NTE_VERSION_UPDATES__"
-            if [ -s "$nte_update_summary_file" ]; then
-              cat "$nte_update_summary_file"
-              echo
-            fi
-            echo "__NTE_VERSION_UPDATES__"
           } >> "$GITHUB_ENV"
 
       - name: Commit changes
@@ -521,8 +512,8 @@ jobs:
           JOB_STATUS: ${{ job.status }}
           DATA_CHANGED: ${{ steps.commit.outputs.changed }}
         run: |
-          if [ -z "$TELEGRAM_BOT_TOKEN" ]; then
-            echo "Telegram bot token is not configured, skip result notification."
+          if [ -z "$TELEGRAM_BOT_TOKEN" ] || { [ -z "$TELEGRAM_CHAT_ID" ] && [ -z "$TELEGRAM_CHANNEL_CHAT_ID" ]; }; then
+            echo "Telegram secrets are not configured, skip result notification."
             exit 0
           fi
 
@@ -817,7 +808,7 @@ jobs:
           message="$message
           Run: <a href=\"$run_url\">#$GITHUB_RUN_ID</a>"
 
-          persistent_targets="${TELEGRAM_CHAT_ID:-$TELEGRAM_CHANNEL_CHAT_ID}"
+          persistent_targets="${TELEGRAM_CHANNEL_CHAT_ID:-$TELEGRAM_CHAT_ID}"
           transient_targets="${TELEGRAM_CHAT_ID:-$TELEGRAM_CHANNEL_CHAT_ID}"
           delete_after_seconds="${TELEGRAM_TRANSIENT_DELETE_AFTER_SECONDS:-90}"
           notification_targets="$persistent_targets"
@@ -832,15 +823,4 @@ jobs:
             notification_targets="$transient_targets"
           fi
 
-          if [ -n "$notification_targets" ]; then
-            send_telegram result "$message" "$notification_targets" "$notification_delete_after"
-          else
-            echo "::warning::No private Telegram result target configured."
-          fi
-
-          if [ "$JOB_STATUS" = "success" ] && [ -n "${NTE_UPDATE_SUMMARY:-}" ]; then
-            nte_targets="${NTE_TELEGRAM_CHAT_ID:-@NevernessToEvernessVersion}"
-            nte_updates_html="$(html_escape "$NTE_UPDATE_SUMMARY")"
-            nte_message="$nte_updates_html"
-            send_telegram nte "$nte_message" "$nte_targets" 0
-          fi
+          send_telegram result "$message" "$notification_targets" "$notification_delete_after"

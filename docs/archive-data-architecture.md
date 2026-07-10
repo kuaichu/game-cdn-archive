@@ -15,7 +15,6 @@ questions before future changes:
 | Endfield / 终末地 PC | Semi-split: compact `index.json`, aggregate `versions.json`, generated lists | Has validator and staging promotion tool | Validated, but version payload is still aggregate. |
 | Arknights / 明日方舟 PC | Semi-split: compact `index.json`, aggregate `versions.json`, generated lists | Has validator and staging promotion tool | Smallest pipeline; used as low-risk proof of the workflow. |
 | NTE / 异环 PC | Legacy/generated catalog plus per-version URL lists | No dedicated staging/promote validator yet | Existing downloader/reslist tools are separate from the new validator pattern. |
-| NTE / 异环 Android resources | Legacy/generated catalog plus per-version URL lists under `docs/data/nte/android/` | Availability validator only | Intentional NTE-only legacy sibling for Android post-install resources; APK installers remain in the Android APK archive. |
 | HoYo PC catalog | Split: compact `games.json`, per-version shards, plus chunk shards | Has structural split validator | Package/update metadata now follows the WuWa-style selected-version load path. |
 | Android APK archive | Aggregate `index.json`, per-version list files | No dedicated staging/promote validator yet | Covers many games in one data set; should be split by game/source before major changes. |
 | Aether Gazer / 深空之眼 Android resources | Split: compact `index.json`, per-version resource shard, generated URL / aria2 lists | File-size guard only | Captured Android `.bytes` manifests; URLs are derived from `md5.ys` hash objects under the official resource CDN. |
@@ -29,7 +28,6 @@ The frontend starts by reading compact top-level indexes:
 
 ```text
 docs/data/catalog.json
-docs/data/nte/android/catalog.json
 docs/data/tof/catalog.json
 docs/data/p5x/catalog.json
 docs/data/hoyo/games.json
@@ -240,52 +238,6 @@ Current status:
 - Partially separated because URL lists are external.
 - Does not yet have a dedicated structural validator like WuWa/Endfield/AK.
 - Any future refactor should first add a validator before changing format.
-
-## NTE Android Resources
-
-NTE Android resources are separate from both NTE PC resources and the cross-game
-Android APK archive. APK records answer "which installer was captured";
-Android resource ResLists answer "which post-install resource objects the client
-downloads".
-
-```text
-docs/data/nte/android/
-  catalog.json
-  url_lists/
-    publish_Android-1.1.14-full.json
-    Android_120-1.2.19-full.json
-    Android_120-1.2.19-patches.json
-    ...
-```
-
-Important script:
-
-- `scripts/update_nte_android_static.py`
-
-Important architecture points:
-
-- This is a deliberate NTE-only legacy-layout decision, made because NTE PC
-  already uses catalog + URL-list shards and the Android resource set is small.
-- It must not be treated as the default shape for new PatcherSDK games. Tower
-  of Fantasy and P5X should continue to use their own game roots and should be
-  migrated forward rather than copied into NTE's legacy root.
-- `publish_Android` was recovered from early APK config data and currently
-  covers the `1.0` / `1.1` resource line.
-- `Android_120` is tied to the `1.2.0` APK `versioncode=120` branch; resource
-  minor versions are platform-specific and do not match PC one-for-one.
-- Future Android APK versioncode branches should be enumerated as siblings, for
-  example `Android_130`, instead of assuming `Android_120` is the permanent
-  Android root.
-- Availability uses the NTE adapter: ResList archive fetches are `live_probe`,
-  while decoded full/patch object URLs are `metadata_inference`.
-
-Current status:
-
-- `publish_Android` and `Android_120` are generated into the static site.
-- `Android_130` is probed as a future sibling and preserved in `branch_scan`
-  even when no versions are currently available.
-- When NTE PC is migrated to a modern split structure, this Android resource
-  branch should move in the same pass.
 
 ## Tower of Fantasy PC
 
