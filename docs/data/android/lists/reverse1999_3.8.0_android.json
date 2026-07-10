@@ -16,6 +16,42 @@
     "filename": "Reverse1999_Bluepoch_1000.apk",
     "captured_at": "2026-07-05T02:10:35.258149+00:00",
     "updated_at": "2026-06-11T00:35:28+00:00",
-    "updated_at_source": "apk_last_modified"
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
+          "probe": {
+            "ok": false,
+            "status": 567,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:07.448Z",
+            "final_url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
+            "content_type": "text/html; charset=UTF-8",
+            "size": 7351,
+            "last_modified": "",
+            "etag": "",
+            "error": "HTTP 567",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.0,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unknown",
+        "reason": "http_5xx",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": false,
+        "display_label": "状态未知"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

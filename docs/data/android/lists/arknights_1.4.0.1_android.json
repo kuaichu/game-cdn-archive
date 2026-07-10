@@ -22,34 +22,34 @@
         {
           "url": "https://ak.hycdn.cn/apk/202103041209-1401-kdb7ess6im3ys7jesg60/arknights-hg-1401.apk",
           "probe": {
-            "ok": false,
-            "status": 403,
-            "method": "CURL_HEAD",
-            "checked_at": "2026-07-09T08:44:33.182Z",
+            "ok": true,
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:37:21.352Z",
             "final_url": "https://ak.hycdn.cn/apk/202103041209-1401-kdb7ess6im3ys7jesg60/arknights-hg-1401.apk",
-            "content_type": "application/xml",
-            "size": 334,
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1694317081,
             "last_modified": "Fri, 06 Sep 2024 03:13:01 GMT",
             "etag": "68032AB49696738211396DCBD05FD3B0-400",
-            "error": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   334    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   334    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
-        "preferred_url": "",
-        "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "state": "available",
+        "reason": "range_probe_ok",
+        "preferred_url": "https://ak.hycdn.cn/apk/202103041209-1401-kdb7ess6im3ys7jesg60/arknights-hg-1401.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

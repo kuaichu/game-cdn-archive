@@ -23,9 +23,9 @@
           "url": "https://ak.hycdn.cn/apk/202403011713-2221-3edpmka8jf3f9jo7vjqk/arknights-hg-2221.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-10T18:20:47.000Z",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:37:18.068Z",
             "final_url": "https://ak.hycdn.cn/apk/202403011713-2221-3edpmka8jf3f9jo7vjqk/arknights-hg-2221.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 1696680791,
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://ak.hycdn.cn/apk/202403011713-2221-3edpmka8jf3f9jo7vjqk/arknights-hg-2221.apk",
         "confidence": "high",
         "retained": false,

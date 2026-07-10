@@ -24,9 +24,9 @@
           "url": "https://bundle.bh3.com/ptpublic/rel/20241208070032_L5tMaxvchIF0LKZg/CPS/20241204-232347-gf_android_ota-versions-v8_0-InSearchoftheSun_gw.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-10T10:27:59.528+00:00",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:37:08.876Z",
             "final_url": "https://bundle.bh3.com/ptpublic/rel/20241208070032_L5tMaxvchIF0LKZg/CPS/20241204-232347-gf_android_ota-versions-v8_0-InSearchoftheSun_gw.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 692344942,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": null,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20241208070032_L5tMaxvchIF0LKZg/CPS/20241204-232347-gf_android_ota-versions-v8_0-InSearchoftheSun_gw.apk",
         "confidence": "high",
         "retained": false,

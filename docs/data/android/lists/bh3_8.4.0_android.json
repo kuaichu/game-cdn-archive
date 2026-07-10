@@ -24,9 +24,9 @@
           "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250717152657_HmMWzKltujR0bm3L/CPS/20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-10T06:40:13.725Z",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:37:08.373Z",
             "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250717152657_HmMWzKltujR0bm3L/CPS/20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 668953782,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.281,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250717152657_HmMWzKltujR0bm3L/CPS/20250709-232754-gf_android_ota-versions-v8_4-For_the_Stars_gw.apk",
         "confidence": "high",
         "retained": false,

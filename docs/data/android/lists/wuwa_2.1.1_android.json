@@ -23,9 +23,9 @@
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20250303101706_MQcbLujOCnf4R9G6R7/%E9%B8%A3%E6%BD%AE_2.1.1_127864672__%E5%AE%98%E6%B8%A0_eb769f191b1aaaf291dcf9a56fbcd1d7_shelled.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-09T08:42:11.757Z",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:18.216Z",
             "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250303101706_MQcbLujOCnf4R9G6R7/%E9%B8%A3%E6%BD%AE_2.1.1_127864672__%E5%AE%98%E6%B8%A0_eb769f191b1aaaf291dcf9a56fbcd1d7_shelled.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2020387609,
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://mirrors-package-mc.aki-game.com/client/download/20250303101706_MQcbLujOCnf4R9G6R7/%E9%B8%A3%E6%BD%AE_2.1.1_127864672__%E5%AE%98%E6%B8%A0_eb769f191b1aaaf291dcf9a56fbcd1d7_shelled.apk",
         "confidence": "high",
         "retained": false,

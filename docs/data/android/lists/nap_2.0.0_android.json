@@ -23,9 +23,9 @@
           "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20250524102650_a8PjvKxdb4vmCkHH/gw/ZenlessZoneZero_2.0.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-09T08:42:38.069Z",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:41.022Z",
             "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20250524102650_a8PjvKxdb4vmCkHH/gw/ZenlessZoneZero_2.0.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 421754822,
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20250524102650_a8PjvKxdb4vmCkHH/gw/ZenlessZoneZero_2.0.apk",
         "confidence": "high",
         "retained": false,

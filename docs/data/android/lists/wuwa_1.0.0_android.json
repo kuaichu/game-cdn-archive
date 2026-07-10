@@ -22,17 +22,17 @@
         {
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20240515180358_GMXTiY9I3QUipDJypL/%E9%B8%A3%E6%BD%AE_1.0.0_official.apk",
           "probe": {
-            "ok": true,
+            "ok": false,
             "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-09T08:42:13.324Z",
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:39.805Z",
             "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20240515180358_GMXTiY9I3QUipDJypL/%E9%B8%A3%E6%BD%AE_1.0.0_official.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 1992566354,
-            "last_modified": "Mon, 20 May 2024 14:11:38 GMT",
-            "etag": "26c83b9ea8feb8c6aed1573cddec7650-380",
-            "error": "",
-            "bot_challenge": false,
+            "content_type": "text/html",
+            "size": 2660,
+            "last_modified": "",
+            "etag": "",
+            "error": "HTTP 200",
+            "bot_challenge": true,
             "stale": false,
             "age_hours": 0.0,
             "scheduler_confidence": "high"
@@ -41,15 +41,15 @@
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "high"
+        "confidence": "low"
       },
       "interpretation": {
-        "state": "available",
-        "reason": "http_2xx",
-        "preferred_url": "https://mirrors-package-mc.aki-game.com/client/download/20240515180358_GMXTiY9I3QUipDJypL/%E9%B8%A3%E6%BD%AE_1.0.0_official.apk",
-        "confidence": "high",
+        "state": "unknown",
+        "reason": "bot_challenge",
+        "preferred_url": "",
+        "confidence": "low",
         "retained": false,
-        "display_label": "可用"
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

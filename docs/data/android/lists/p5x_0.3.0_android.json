@@ -24,9 +24,9 @@
           "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_CBT3_20240115.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-09T08:41:30.253Z",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:07.363Z",
             "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_CBT3_20240115.apk",
             "content_type": "application/octet-stream",
             "size": 1806170124,
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_CBT3_20240115.apk",
         "confidence": "high",
         "retained": false,

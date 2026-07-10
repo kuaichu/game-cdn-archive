@@ -23,34 +23,34 @@
         {
           "url": "https://bundle.bh3.com/ptpublic/rel/20240506104443_Eb7wY4fRoYiICW5J/CPS/20240430-053124-gf_android_ota-versions-v7_5-Crusade_of_Chasing_Shadows_gw.apk",
           "probe": {
-            "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-10T06:55:08.185337+00:00",
+            "ok": false,
+            "status": 403,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:37:09.767Z",
             "final_url": "https://bundle.bh3.com/ptpublic/rel/20240506104443_Eb7wY4fRoYiICW5J/CPS/20240430-053124-gf_android_ota-versions-v7_5-Crusade_of_Chasing_Shadows_gw.apk",
-            "content_type": "application/vnd.android.package-archive",
+            "content_type": "application/xml",
             "size": 600051270,
             "last_modified": "Wed, 25 Jun 2025 02:51:44 GMT",
             "etag": "23B88F761E302F0BBCB0E343D3D4357D-10",
-            "error": "",
+            "error": "HTTP 403",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.033,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "high"
+        "confidence": "low"
       },
       "interpretation": {
-        "state": "available",
-        "reason": "http_2xx",
-        "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20240506104443_Eb7wY4fRoYiICW5J/CPS/20240430-053124-gf_android_ota-versions-v7_5-Crusade_of_Chasing_Shadows_gw.apk",
-        "confidence": "high",
+        "state": "unknown",
+        "reason": "http_403",
+        "preferred_url": "",
+        "confidence": "low",
         "retained": false,
-        "display_label": "可用"
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

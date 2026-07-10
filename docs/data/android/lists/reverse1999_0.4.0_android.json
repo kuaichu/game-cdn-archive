@@ -21,15 +21,15 @@
           "url": "https://d.bluepoch.com/officialweb/50001/reverse1999_1000_app_0.4.0_bluepoch.apk",
           "probe": {
             "ok": false,
-            "status": 404,
-            "method": "HEAD",
-            "checked_at": "2026-07-10T18:45:12.213Z",
+            "status": 567,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:07.944Z",
             "final_url": "https://d.bluepoch.com/officialweb/50001/reverse1999_1000_app_0.4.0_bluepoch.apk",
-            "content_type": "application/xml",
-            "size": 0,
+            "content_type": "text/html; charset=UTF-8",
+            "size": 7351,
             "last_modified": "",
             "etag": "",
-            "error": "APK object unavailable",
+            "error": "HTTP 567",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0.0,
@@ -42,12 +42,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
+        "state": "unknown",
+        "reason": "http_5xx",
         "preferred_url": "",
         "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "retained": false,
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

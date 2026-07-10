@@ -23,9 +23,9 @@
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20260324174322_3Ap1c8k6juCzDfI1JV/KR_TF_49-%E9%B8%A3%E6%BD%AE_3.2.1_164300475_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_83e2cdd963fff1e42e1d1a3e6c895a32_shelled.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-09T08:42:11.287Z",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:14.626Z",
             "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20260324174322_3Ap1c8k6juCzDfI1JV/KR_TF_49-%E9%B8%A3%E6%BD%AE_3.2.1_164300475_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_83e2cdd963fff1e42e1d1a3e6c895a32_shelled.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2000067295,
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://mirrors-package-mc.aki-game.com/client/download/20260324174322_3Ap1c8k6juCzDfI1JV/KR_TF_49-%E9%B8%A3%E6%BD%AE_3.2.1_164300475_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_83e2cdd963fff1e42e1d1a3e6c895a32_shelled.apk",
         "confidence": "high",
         "retained": false,

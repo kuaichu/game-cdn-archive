@@ -23,9 +23,9 @@
           "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ_1.1.1_202307170926.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-10T18:45:12.213Z",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:08.406Z",
             "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ_1.1.1_202307170926.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 1507901029,
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ_1.1.1_202307170926.apk",
         "confidence": "high",
         "retained": false,

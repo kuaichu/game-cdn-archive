@@ -22,17 +22,17 @@
         {
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20241224103726_DxOIeFzo0WOzqOufSL/%E9%B8%A3%E6%BD%AE_2.0.0_124936468__%E5%AE%98%E6%B8%A0_e9e27e3beccb245e79c81bb77a019bc7_shelled.apk",
           "probe": {
-            "ok": true,
+            "ok": false,
             "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-09T08:42:12.783Z",
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:18.452Z",
             "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20241224103726_DxOIeFzo0WOzqOufSL/%E9%B8%A3%E6%BD%AE_2.0.0_124936468__%E5%AE%98%E6%B8%A0_e9e27e3beccb245e79c81bb77a019bc7_shelled.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 1981155172,
-            "last_modified": "Tue, 24 Dec 2024 02:37:31 GMT",
-            "etag": "32c340f8cf805aba43e0561b104500bd-38",
-            "error": "",
-            "bot_challenge": false,
+            "content_type": "text/html",
+            "size": 2660,
+            "last_modified": "",
+            "etag": "",
+            "error": "HTTP 200",
+            "bot_challenge": true,
             "stale": false,
             "age_hours": 0.0,
             "scheduler_confidence": "high"
@@ -41,15 +41,15 @@
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "high"
+        "confidence": "low"
       },
       "interpretation": {
-        "state": "available",
-        "reason": "http_2xx",
-        "preferred_url": "https://mirrors-package-mc.aki-game.com/client/download/20241224103726_DxOIeFzo0WOzqOufSL/%E9%B8%A3%E6%BD%AE_2.0.0_124936468__%E5%AE%98%E6%B8%A0_e9e27e3beccb245e79c81bb77a019bc7_shelled.apk",
-        "confidence": "high",
+        "state": "unknown",
+        "reason": "bot_challenge",
+        "preferred_url": "",
+        "confidence": "low",
         "retained": false,
-        "display_label": "可用"
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

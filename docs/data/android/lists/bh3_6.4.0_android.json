@@ -23,9 +23,9 @@
           "url": "https://bundle.bh3.com/public/Android/20230110-030853-gf_android_ota-versions-v6_4-From_Finality_the_Origin_guofu.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-10T06:55:08.185337+00:00",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:37:13.012Z",
             "final_url": "https://bundle.bh3.com/public/Android/20230110-030853-gf_android_ota-versions-v6_4-From_Finality_the_Origin_guofu.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 669218608,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.033,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://bundle.bh3.com/public/Android/20230110-030853-gf_android_ota-versions-v6_4-From_Finality_the_Origin_guofu.apk",
         "confidence": "high",
         "retained": false,

@@ -24,8 +24,8 @@
           "probe": {
             "ok": true,
             "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-09T08:43:25.295Z",
+            "method": "GET",
+            "checked_at": "2026-07-10T19:37:05.251Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20230818153431_sMKzYZ9EOeT15oNn/StarRail_1.3.0_gw.apk",
             "content_type": "text/plain",
             "size": 3,
@@ -79,8 +79,8 @@
           "probe": {
             "ok": true,
             "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-09T08:43:25.308Z",
+            "method": "GET",
+            "checked_at": "2026-07-10T19:37:05.379Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20230818153431_sMKzYZ9EOeT15oNn/StarRail_1.3.0_mihoyo_8.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 178326344,

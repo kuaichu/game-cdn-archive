@@ -24,9 +24,9 @@
           "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250321105946_GHQTTjbASRjRe2s6/CPS/20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-10T06:40:13.685Z",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:37:08.545Z",
             "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250321105946_GHQTTjbASRjRe2s6/CPS/20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 658160042,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.281,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250321105946_GHQTTjbASRjRe2s6/CPS/20250314-114608-gf_android_ota-versions-v8_2-Roving_Among_Clouds_gw.apk",
         "confidence": "high",
         "retained": false,

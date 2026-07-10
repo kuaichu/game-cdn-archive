@@ -22,19 +22,19 @@
         {
           "url": "https://ak.hycdn.cn/apk/202312011528-2141-n09gx6umwxg279rjm8js/arknights-hg-2141.apk",
           "probe": {
-            "ok": false,
-            "status": 403,
-            "method": "CURL_HEAD",
-            "checked_at": "2026-07-09T08:43:59.802Z",
+            "ok": true,
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:37:18.392Z",
             "final_url": "https://ak.hycdn.cn/apk/202312011528-2141-n09gx6umwxg279rjm8js/arknights-hg-2141.apk",
-            "content_type": "application/xml",
-            "size": 334,
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1590567784,
             "last_modified": "Mon, 09 Sep 2024 02:53:43 GMT",
             "etag": "9D4876FFBD79FD041D6A7C261D195C8F-400",
-            "error": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0   334    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -44,12 +44,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
+        "state": "unknown",
+        "reason": "range_probe_ok",
         "preferred_url": "",
         "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "retained": false,
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

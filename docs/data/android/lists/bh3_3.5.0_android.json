@@ -24,9 +24,9 @@
           "probe": {
             "ok": false,
             "status": 0,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-10T06:55:08.185337+00:00",
-            "final_url": "https://app.bh3.com/public/Android/20191018-162047-gf_android_ota-versions-v3_5-Stygian_Nymph_guofu.apk",
+            "method": "GET",
+            "checked_at": "2026-07-10T19:37:15.119Z",
+            "final_url": "",
             "content_type": "",
             "size": 0,
             "last_modified": "",
@@ -34,7 +34,7 @@
             "error": "dns: <urlopen error [Errno 11001] getaddrinfo failed>",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.033,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -44,12 +44,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
+        "state": "unknown",
+        "reason": "dns_error",
         "preferred_url": "",
         "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "retained": false,
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

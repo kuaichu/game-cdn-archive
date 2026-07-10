@@ -22,19 +22,19 @@
         {
           "url": "https://ak.hycdn.cn/apk/202407072201-2301-oq0ywpuqm0unmfdzeift/arknights-hg-2301.apk",
           "probe": {
-            "ok": false,
-            "status": 403,
-            "method": "CURL_HEAD",
-            "checked_at": "2026-07-09T08:43:53.770Z",
+            "ok": true,
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:37:17.289Z",
             "final_url": "https://ak.hycdn.cn/apk/202407072201-2301-oq0ywpuqm0unmfdzeift/arknights-hg-2301.apk",
-            "content_type": "application/xml",
-            "size": 334,
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1913410430,
             "last_modified": "Wed, 11 Sep 2024 02:59:47 GMT",
             "etag": "7B3DF489845A17CAF378DBCB837B8D18-400",
-            "error": "% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0   334    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0   334    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -44,12 +44,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
+        "state": "unknown",
+        "reason": "range_probe_ok",
         "preferred_url": "",
         "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "retained": false,
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

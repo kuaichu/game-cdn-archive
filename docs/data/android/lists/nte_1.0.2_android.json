@@ -26,9 +26,9 @@
           "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260423.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-09T01:29:39.071Z",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:06.344Z",
             "final_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260423.apk",
             "content_type": "application/octet-stream",
             "size": 940694857,
@@ -37,7 +37,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 7.168,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -48,7 +48,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260423.apk",
         "confidence": "high",
         "retained": false,

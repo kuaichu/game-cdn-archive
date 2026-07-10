@@ -17,6 +17,42 @@
     "crc64": "13948144934372544214",
     "error": "",
     "filename": "klbqm_LD0S0N00011.apk",
-    "captured_at": "2026-07-05T01:50:12.992811+00:00"
+    "captured_at": "2026-07-05T01:50:12.992811+00:00",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+          "probe": {
+            "ok": false,
+            "status": 567,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:08.166Z",
+            "final_url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+            "content_type": "text/html; charset=UTF-8",
+            "size": 7352,
+            "last_modified": "",
+            "etag": "",
+            "error": "HTTP 567",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.0,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unknown",
+        "reason": "http_5xx",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": false,
+        "display_label": "状态未知"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

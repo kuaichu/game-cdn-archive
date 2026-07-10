@@ -22,17 +22,17 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-09T08:59:05.824074+00:00",
+            "method": "GET",
+            "checked_at": "2026-07-10T19:37:25.288Z",
             "final_url": "https://static.benghuai.com/Download/v12_2/Beta.StripResource_12.2.103_36.shell.apk",
             "content_type": "application/xml",
-            "size": 0,
+            "size": 402,
             "last_modified": "",
             "etag": "",
-            "error": "APK object unavailable",
+            "error": "HTTP 404",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": null,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

@@ -24,9 +24,9 @@
           "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_laohu_20250911.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "CURL_HEAD",
-            "checked_at": "2026-07-09T08:39:48.884Z",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:06.880Z",
             "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_laohu_20250911.apk",
             "content_type": "application/octet-stream",
             "size": 1895447913,
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_laohu_20250911.apk",
         "confidence": "high",
         "retained": false,

@@ -24,9 +24,9 @@
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20260602140107_IWq564494HEOb1qCLN/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.4.0_170559099_33_%E5%AE%98%E6%B8%A0_0151cd62aef4c25ab11e32a40e05ddc4_shelled.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-09T01:29:40.166Z",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:14.014Z",
             "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20260602140107_IWq564494HEOb1qCLN/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.4.0_170559099_33_%E5%AE%98%E6%B8%A0_0151cd62aef4c25ab11e32a40e05ddc4_shelled.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2016398059,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 7.208,
+            "age_hours": 0,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://mirrors-package-mc.aki-game.com/client/download/20260602140107_IWq564494HEOb1qCLN/KR_BBS01-%E9%B8%A3%E6%BD%AE_3.4.0_170559099_33_%E5%AE%98%E6%B8%A0_0151cd62aef4c25ab11e32a40e05ddc4_shelled.apk",
         "confidence": "high",
         "retained": false,

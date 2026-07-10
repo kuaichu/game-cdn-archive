@@ -16,6 +16,42 @@
     "filename": "mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
     "captured_at": "2026-06-06T22:54:29.106555+00:00",
     "updated_at": "2023-05-22T14:05:43+00:00",
-    "updated_at_source": "filename_timestamp"
+    "updated_at_source": "filename_timestamp",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://download.ys4fun.com/package/channel/285/mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
+          "probe": {
+            "ok": false,
+            "status": 404,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:10.816Z",
+            "final_url": "https://download.ys4fun.com/package/channel/285/mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
+            "content_type": "application/xml",
+            "size": 457,
+            "last_modified": "",
+            "etag": "",
+            "error": "HTTP 404",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.0,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unavailable",
+        "reason": "retained_historical",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": true,
+        "display_label": "链接失效"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
   }
 ]

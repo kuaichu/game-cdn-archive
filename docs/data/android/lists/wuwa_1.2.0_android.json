@@ -23,9 +23,9 @@
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20240808152445_wfgvR40uxlHKdbvrjc/%E9%B8%A3%E6%BD%AE_1.2.0_112802763__%E5%AE%98%E6%B8%A0_81b08709203b7387d166954acc706a48_shelled.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "HEAD",
-            "checked_at": "2026-07-09T08:42:13.140Z",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:19.551Z",
             "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20240808152445_wfgvR40uxlHKdbvrjc/%E9%B8%A3%E6%BD%AE_1.2.0_112802763__%E5%AE%98%E6%B8%A0_81b08709203b7387d166954acc706a48_shelled.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2016298925,
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://mirrors-package-mc.aki-game.com/client/download/20240808152445_wfgvR40uxlHKdbvrjc/%E9%B8%A3%E6%BD%AE_1.2.0_112802763__%E5%AE%98%E6%B8%A0_81b08709203b7387d166954acc706a48_shelled.apk",
         "confidence": "high",
         "retained": false,

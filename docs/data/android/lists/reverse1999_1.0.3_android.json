@@ -22,8 +22,8 @@
           "probe": {
             "ok": false,
             "status": 567,
-            "method": "HEAD",
-            "checked_at": "2026-07-09T08:41:32.141Z",
+            "method": "GET",
+            "checked_at": "2026-07-10T19:36:07.719Z",
             "final_url": "https://d.bluepoch.com/prepage/Reverse1999_app1.0.3_res100.0.101_Bluepoch_1006.apk",
             "content_type": "text/html; charset=UTF-8",
             "size": 7352,
@@ -42,12 +42,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
+        "state": "unknown",
+        "reason": "http_5xx",
         "preferred_url": "",
         "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "retained": false,
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
