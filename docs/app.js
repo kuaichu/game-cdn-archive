@@ -1230,7 +1230,7 @@ const renderVersionMenu = () => {
       $("#selectButton").setAttribute("aria-expanded", "false");
       if (isWuwa()) {
         await loadWuwaVersion();
-      } else if (currentGame().kind === "hoyo") {
+      } else if (isHoyo() && state.mode !== "android" && state.mode !== "legacy") {
         await loadHoyoVersion();
       }
       render();
