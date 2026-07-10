@@ -2733,6 +2733,12 @@ def extract_first_apk_url(text: str, pattern: str, base_url: str) -> str | None:
     return urllib.parse.urljoin(base_url, value)
 
 
+def archive_object_url(url: str) -> str:
+    """Keep a resolved CDN object path without its short-lived signature."""
+    parsed = urllib.parse.urlsplit(url)
+    return urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, "", ""))
+
+
 def iso_from_unix_timestamp(value: object) -> str | None:
     try:
         timestamp = float(value)
@@ -3181,8 +3187,8 @@ def discover_hypergryph_apks() -> list[dict]:
             "url": item["url"],
             "source": "official Hypergryph latest APK endpoint; resolves to a CDN URL",
             "source_url": item["url"],
-            "archive_url": final_url,
-            "archive_note": "CDN URL captured during sync",
+            "archive_url": archive_object_url(final_url),
+            "archive_note": "CDN object path resolved during sync; temporary signature omitted.",
             "metadata_url": final_url,
             "filename_url": final_url,
             "force_refresh": True,

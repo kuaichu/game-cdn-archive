@@ -1883,7 +1883,11 @@ const androidItem = (entry, index = 0, total = 0) => ({
   sizeLabel: `${androidAvailabilityLabel(entry)} / ${fmtKnownBytes(entry.size)}`,
   hash: entry.md5 || entry.etag || "",
   url: entry.url,
-  extraLinks: entry.archive_url ? [{ url: entry.archive_url, label: "签名留档" }] : [],
+  extraLinks: entry.archive_url ? [{
+    url: entry.archive_url,
+    label: "归档路径",
+    title: "同步时解析到的 CDN 对象路径；临时签名未保留，不保证可直接下载",
+  }] : [],
   count: total ? `${index + 1}/${total}` : "",
 });
 
@@ -3050,14 +3054,14 @@ const fileAlternateLinks = (item) => [
 ].filter((link) => link.url);
 
 const fileAlternateActionHtml = (links, fallbackLabel = "镜像") => links
-  .map((link) => `<a class="icon-button mirror-link" href="${escapeHtml(link.url)}" target="_blank" rel="noreferrer" title="备用下载链接">${icons.down}<span>${escapeHtml(link.label || fallbackLabel)}</span></a>`)
+  .map((link) => `<a class="icon-button mirror-link" href="${escapeHtml(link.url)}" target="_blank" rel="noreferrer" title="${escapeHtml(link.title || "备用下载链接")}">${icons.down}<span>${escapeHtml(link.label || fallbackLabel)}</span></a>`)
   .join("");
 
 const fileActionHtml = (item) => {
   const preferredUrl = item.preferredUrl || item.url;
   const alternateLinks = fileAlternateLinks(item);
-  const primaryLabel = alternateLinks.length ? "CDN1" : "打开";
-  const copyLabel = alternateLinks.length ? "复制 CDN1" : "复制链接";
+  const primaryLabel = alternateLinks.length ? "官方入口" : "打开";
+  const copyLabel = alternateLinks.length ? "复制官方入口" : "复制链接";
   const urlActions = item.officialUrl
     ? `
       <button class="icon-button copy-link" type="button" data-url="${escapeHtml(preferredUrl)}" title="复制当前可用链接">${icons.copy}<span>复制可用链接</span></button>
@@ -3353,7 +3357,7 @@ const renderNotice = () => {
     `;
   } else if (state.mode === "android") {
     const androidNotice = isEndfield()
-      ? "页面保存已确认的官方 Android APK 下载入口；终末地使用官方 launcher latest 入口，同时留档同步时解析到的 Hycdn 临时签名目标。签名目标可能过期，但仍保留历史记录价值。该列表从当前可确认版本开始滚动保存，不代表完整历史。"
+      ? "页面保存已确认的官方 Android APK 下载入口；终末地使用官方 launcher latest 入口，并记录同步时解析到的 Hycdn CDN 对象路径。临时签名不会保留，因此归档路径不保证可直接下载。该列表从当前可确认版本开始滚动保存，不代表完整历史。"
       : "页面保存已确认的官方 Android APK CDN URL；同步任务会解析支持的官方最新下载入口，发现新 APK 后记录大小、Last-Modified、ETag 与可用状态。该列表从当前可确认版本开始滚动保存，不代表完整历史。";
     notice.innerHTML = `
       <div class="notice-copy">
