@@ -1,0 +1,55 @@
+[
+  {
+    "game_id": "reverse1999",
+    "version": "0.4.0",
+    "channel": "official",
+    "url": "https://d.bluepoch.com/officialweb/50001/reverse1999_1000_app_0.4.0_bluepoch.apk",
+    "source": "official Reverse: 1999 historical APK URL provided by user; original CDN object now returns 404",
+    "status": 404,
+    "content_type": "application/xml",
+    "size": 0,
+    "last_modified": "",
+    "etag": "",
+    "md5": "",
+    "crc64": "",
+    "error": "APK object unavailable",
+    "filename": "reverse1999_1000_app_0.4.0_bluepoch.apk",
+    "captured_at": "2026-07-10T18:45:12.213582+00:00",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://d.bluepoch.com/officialweb/50001/reverse1999_1000_app_0.4.0_bluepoch.apk",
+          "probe": {
+            "ok": false,
+            "status": 404,
+            "method": "HEAD",
+            "checked_at": "2026-07-10T18:45:12.213Z",
+            "final_url": "https://d.bluepoch.com/officialweb/50001/reverse1999_1000_app_0.4.0_bluepoch.apk",
+            "content_type": "application/xml",
+            "size": 0,
+            "last_modified": "",
+            "etag": "",
+            "error": "APK object unavailable",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.0,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "low"
+      },
+      "interpretation": {
+        "state": "unavailable",
+        "reason": "retained_historical",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": true,
+        "display_label": "链接失效"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]

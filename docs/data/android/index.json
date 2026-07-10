@@ -996,6 +996,59 @@
             },
             "generated_by": "scripts/build_android_availability.py"
           }
+        },
+        {
+          "game_id": "reverse1999",
+          "version": "0.4.0",
+          "channel": "official",
+          "url": "https://d.bluepoch.com/officialweb/50001/reverse1999_1000_app_0.4.0_bluepoch.apk",
+          "source": "official Reverse: 1999 historical APK URL provided by user; original CDN object now returns 404",
+          "status": 404,
+          "content_type": "application/xml",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
+          "md5": "",
+          "crc64": "",
+          "error": "APK object unavailable",
+          "filename": "reverse1999_1000_app_0.4.0_bluepoch.apk",
+          "captured_at": "2026-07-10T18:45:12.213582+00:00",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://d.bluepoch.com/officialweb/50001/reverse1999_1000_app_0.4.0_bluepoch.apk",
+                "probe": {
+                  "ok": false,
+                  "status": 404,
+                  "method": "HEAD",
+                  "checked_at": "2026-07-10T18:45:12.213Z",
+                  "final_url": "https://d.bluepoch.com/officialweb/50001/reverse1999_1000_app_0.4.0_bluepoch.apk",
+                  "content_type": "application/xml",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.0,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "low"
+            },
+            "interpretation": {
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
         }
       ],
       "links": {
@@ -1008,6 +1061,11 @@
           "urls": "data/android/lists/reverse1999_1.0.3_android.urls.txt",
           "aria2": "data/android/lists/reverse1999_1.0.3_android.aria2.txt",
           "json": "data/android/lists/reverse1999_1.0.3_android.json"
+        },
+        "0.4.0": {
+          "urls": "data/android/lists/reverse1999_0.4.0_android.urls.txt",
+          "aria2": "data/android/lists/reverse1999_0.4.0_android.aria2.txt",
+          "json": "data/android/lists/reverse1999_0.4.0_android.json"
         }
       }
     },
@@ -1070,6 +1128,61 @@
             },
             "generated_by": "scripts/build_android_availability.py"
           }
+        },
+        {
+          "game_id": "calabiyau",
+          "version": "1.1.1.1972",
+          "channel": "official",
+          "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ_1.1.1_202307170926.apk",
+          "source": "official Calabiyau historical APK URL provided by user; versionName read from AndroidManifest.xml",
+          "status": 200,
+          "content_type": "application/vnd.android.package-archive",
+          "size": 1507901029,
+          "last_modified": "Mon, 17 Jul 2023 12:51:19 GMT",
+          "etag": "739f5efa80f81cf62f8582ce6553f0ec-45",
+          "md5": "",
+          "crc64": "5322371824986655971",
+          "error": "",
+          "filename": "CBJQ_1.1.1_202307170926.apk",
+          "captured_at": "2026-07-10T18:45:12.213582+00:00",
+          "updated_at": "2023-07-17T12:51:19+00:00",
+          "updated_at_source": "apk_last_modified",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ_1.1.1_202307170926.apk",
+                "probe": {
+                  "ok": true,
+                  "status": 200,
+                  "method": "HEAD",
+                  "checked_at": "2026-07-10T18:45:12.213Z",
+                  "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ_1.1.1_202307170926.apk",
+                  "content_type": "application/vnd.android.package-archive",
+                  "size": 1507901029,
+                  "last_modified": "Mon, 17 Jul 2023 12:51:19 GMT",
+                  "etag": "739f5efa80f81cf62f8582ce6553f0ec-45",
+                  "error": "",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": 0.0,
+                  "scheduler_confidence": "high"
+                }
+              }
+            ],
+            "source": {
+              "kind": "live_probe",
+              "confidence": "high"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "http_2xx",
+              "preferred_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ_1.1.1_202307170926.apk",
+              "confidence": "high",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_android_availability.py"
+          }
         }
       ],
       "links": {
@@ -1077,6 +1190,11 @@
           "urls": "data/android/lists/calabiyau_1.1.6.4_android.urls.txt",
           "aria2": "data/android/lists/calabiyau_1.1.6.4_android.aria2.txt",
           "json": "data/android/lists/calabiyau_1.1.6.4_android.json"
+        },
+        "1.1.1.1972": {
+          "urls": "data/android/lists/calabiyau_1.1.1.1972_android.urls.txt",
+          "aria2": "data/android/lists/calabiyau_1.1.1.1972_android.aria2.txt",
+          "json": "data/android/lists/calabiyau_1.1.1.1972_android.json"
         }
       }
     },

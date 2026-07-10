@@ -160,12 +160,27 @@ KNOWN_APKS = [
         "headers": {"Referer": "https://re.bluepoch.com/"},
     },
     {
+        "game_id": "reverse1999",
+        "version": "0.4.0",
+        "channel": "official",
+        "url": "https://d.bluepoch.com/officialweb/50001/reverse1999_1000_app_0.4.0_bluepoch.apk",
+        "source": "official Reverse: 1999 historical APK URL provided by user; original CDN object now returns 404",
+        "headers": {"Referer": "https://re.bluepoch.com/"},
+    },
+    {
         "game_id": "calabiyau",
         "version": "1.1.6.4",
         "channel": "official",
         "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
         "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
         "headers": {"Referer": "https://klbq.qq.com/"},
+    },
+    {
+        "game_id": "calabiyau",
+        "version": "1.1.1.1972",
+        "channel": "official",
+        "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ_1.1.1_202307170926.apk",
+        "source": "official Calabiyau historical APK URL provided by user; versionName read from AndroidManifest.xml",
     },
     {
         "game_id": "aethergazer",
