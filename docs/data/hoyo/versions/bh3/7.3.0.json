@@ -1,0 +1,51 @@
+{
+  "game": {
+    "full": {
+      "name": "BH3_v7.3.0_971816bb764a.7z",
+      "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/PC/BH3_v7.3.0_971816bb764a.7z",
+      "checksum": "",
+      "size": 16717500488,
+      "availability": {
+        "candidates": [
+          {
+            "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/PC/BH3_v7.3.0_971816bb764a.7z",
+            "probe": {
+              "ok": true,
+              "status": 0,
+              "method": "METADATA_SIZE",
+              "checked_at": "2026-07-10T07:23:24.304Z",
+              "final_url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/PC/BH3_v7.3.0_971816bb764a.7z",
+              "content_type": "",
+              "size": 16717500488,
+              "last_modified": "",
+              "etag": "",
+              "error": "",
+              "bot_challenge": false,
+              "stale": false,
+              "age_hours": null,
+              "scheduler_confidence": "medium"
+            }
+          }
+        ],
+        "source": {
+          "kind": "metadata_inference",
+          "confidence": "medium"
+        },
+        "interpretation": {
+          "state": "available",
+          "reason": "not_probed",
+          "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/PC/BH3_v7.3.0_971816bb764a.7z",
+          "confidence": "medium",
+          "retained": false,
+          "display_label": "可用"
+        },
+        "generated_by": "scripts/build_hoyo_availability.py"
+      }
+    }
+  },
+  "voice": {},
+  "update": {},
+  "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/PC/extract",
+  "chunk": null,
+  "version": "7.3.0"
+}

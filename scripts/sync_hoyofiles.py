@@ -558,6 +558,20 @@ MANUAL_HOYO_VERSION_PATCHES: dict[str, dict[str, dict[str, Any]]] = {
             "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20231218144111_nFwR8NyQCxVRbXeo/PC/extract",
             "chunk": None,
         },
+        "7.3.0": {
+            "game": {
+                "full": {
+                    "name": "BH3_v7.3.0_971816bb764a.7z",
+                    "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/PC/BH3_v7.3.0_971816bb764a.7z",
+                    "checksum": "",
+                    "size": 16717500488,
+                }
+            },
+            "voice": {},
+            "update": {},
+            "decompressed_path": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/PC/extract",
+            "chunk": None,
+        },
         "7.4.0": {
             "game": {
                 "full": {

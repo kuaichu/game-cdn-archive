@@ -1,8 +1,8 @@
 {
   "source": "https://hoyo-files.amarea.cn",
   "api_base": "https://autopatch.amarea.cn/pkg_version",
-  "last_checked_at": "2026-07-09T08:04:40.110Z",
-  "generated_at": "2026-07-09T08:08:14.197Z",
+  "last_checked_at": "2026-07-10T07:23:24.304Z",
+  "generated_at": "2026-07-10T07:23:24.304Z",
   "games": [
     {
       "id": "hk4e",
@@ -7622,6 +7622,61 @@
           }
         },
         {
+          "version": "7.3.0",
+          "package_items": 1,
+          "update_items": 0,
+          "direct_bytes": 16717500488,
+          "has_chunk": false,
+          "has_decompressed_path": true,
+          "unavailable_items": 0,
+          "last_modified": "Mon, 29 Jan 2024 07:07:42 GMT",
+          "last_modified_status": 200,
+          "last_modified_url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/PC/BH3_v7.3.0_971816bb764a.7z",
+          "last_modified_source": "pc_package",
+          "availability": {
+            "candidates": [
+              {
+                "url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/PC/BH3_v7.3.0_971816bb764a.7z",
+                "probe": {
+                  "ok": false,
+                  "status": 0,
+                  "method": "METADATA_SUMMARY",
+                  "checked_at": "2026-07-10T07:23:24.304Z",
+                  "final_url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/PC/BH3_v7.3.0_971816bb764a.7z",
+                  "content_type": "",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "not_probed",
+                  "bot_challenge": false,
+                  "stale": false,
+                  "age_hours": null,
+                  "scheduler_confidence": "low"
+                }
+              }
+            ],
+            "source": {
+              "kind": "metadata_inference",
+              "confidence": "medium"
+            },
+            "interpretation": {
+              "state": "available",
+              "reason": "not_probed",
+              "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/PC/BH3_v7.3.0_971816bb764a.7z",
+              "confidence": "medium",
+              "retained": false,
+              "display_label": "可用"
+            },
+            "generated_by": "scripts/build_hoyo_availability.py"
+          },
+          "availability_counts": {
+            "available": 1
+          },
+          "availability_reasons": {
+            "not_probed": 1
+          }
+        },
+        {
           "version": "7.4.0",
           "package_items": 1,
           "update_items": 0,
@@ -8547,13 +8602,13 @@
           "availability_reasons": {}
         }
       ],
-      "version_count": 53,
+      "version_count": 54,
       "first_version": "3.7.0",
       "latest_version": "8.9.0",
-      "direct_items": 48,
+      "direct_items": 49,
       "update_items": 1,
       "chunk_versions": 8,
-      "direct_bytes": 368871463515,
+      "direct_bytes": 385588964003,
       "versions_url": "https://autopatch.amarea.cn/pkg_version/bh3_versions.json"
     }
   ]
