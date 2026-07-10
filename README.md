@@ -16,17 +16,18 @@ or redistribute game binaries.
 | 游戏 | 平台 | 状态 | 版本更新时间 |
 | --- | --- | --- | --- |
 | Neverness to Everness / 异环 | Windows PC | 已解码并索引到 `1.2.14`（可用 `42` 个 / 已探测 `77` 个） | `2026-07-09 04:00:02 北京时间` |
+| Neverness to Everness / 异环 | Android resources | Android 装后资源 ResList 已解码并索引到 `1.2.19`（`44` 个版本 / `2` 个分支） | `2026-07-09 04:00:02 北京时间` |
 | Tower of Fantasy / 幻塔 | Windows PC | 官方 PatcherSDK ResList 已解码并索引到 `6.2.2`（`41` 个版本） | `2026-07-04 06:47:22 北京时间` |
 | Persona 5: The Phantom X / 女神异闻录：夜幕魅影 | Windows PC | 官方 PatcherSDK ResList 已解码并索引到 `1.0.74`（`25` 个版本） | `2026-07-06 11:15:12 北京时间` |
 | Arknights: Endfield / 明日方舟：终末地 | Windows PC | 官方启动器 API 历史与归档镜像已索引到 `1.3.3`（`7` 个版本） | `2026-06-05 06:15:27 北京时间` |
 | Arknights / 明日方舟 | Windows PC | 官方启动器包元数据已索引到 `74.0.0`（`1` 个版本） | `未知` |
-| Wuthering Waves / 鸣潮 | Windows PC | 官方启动器资源索引与 CDN 镜像已索引到 `3.4.1`（`41` 个版本） | `2026-06-17 00:25:46 北京时间` |
+| Wuthering Waves / 鸣潮 | Windows PC | 官方启动器资源索引与 CDN 镜像已索引到 `3.5.0`（`42` 个版本） | `2026-07-06 06:28:36 北京时间` |
 | Genshin Impact / 原神 | Windows PC | HoyoFiles 版本元数据已迁移到 `6.7.0`（`55` 个版本） | `2026-06-18 23:01:33 北京时间` |
 | Honkai: Star Rail / 崩坏：星穹铁道 | Windows PC | HoyoFiles 版本元数据已迁移到 `4.3.0`（`28` 个版本） | `2026-05-23 15:56:03 北京时间` |
 | Zenless Zone Zero / 绝区零 | Windows PC | HoyoFiles 版本元数据已迁移到 `3.0.0`（`19` 个版本） | `2026-05-29 12:15:38 北京时间` |
 | Honkai Impact 3 / 崩坏3 | Windows PC | HoyoFiles 版本元数据已迁移到 `8.9.0`（`53` 个版本） | `2026-05-22 11:08:32 北京时间` |
 
-_整个项目的数据刷新时间：`2026-07-09 16:59:05 北京时间`。_
+_整个项目的数据刷新时间：`2026-07-10 12:29:01 北京时间`。_
 <!-- README_VERSION_SUMMARY_END -->
 
 ## 当前进度快照
@@ -39,11 +40,12 @@ _整个项目的数据刷新时间：`2026-07-09 16:59:05 北京时间`。_
 | 范围 | 当前进度 |
 | --- | --- |
 | NTE / 异环 PC | 已索引官方 Windows 清单 `1.0.0` 到 `1.2.14`；`77` 个已探测条目中有 `42` 个可用版本 |
+| NTE / 异环 Android resources | 已索引 Android 装后资源 ResList `1.0.0` 到 `1.2.19`；覆盖 `2` 个资源分支，最新清单包含 `46` 个完整对象与 `244` 个补丁对象 |
 | Tower of Fantasy / 幻塔 PC | 已索引官方 Windows ResList `5.5.3` 到 `6.2.2`；最新清单包含 `91` 个完整文件与 `2047` 个补丁对象 |
 | Persona 5: The Phantom X / 女神异闻录：夜幕魅影 PC | 已索引官方 Windows ResList `1.0.34` 到 `1.0.74`；最新清单包含 `3` 个完整文件与 `833` 个补丁对象 |
 | Endfield / 终末地 PC | 已导入 `7` 个 CN 启动器历史快照，最新 `1.3.3`；官方签名包 URL 与归档镜像 URL 均已保留 |
 | Arknights / 明日方舟 PC | 官方启动器包元数据已索引到 `74.0.0`；最新快照包含 `19` 个包条目 |
-| Wuthering Waves / 鸣潮 PC | 已索引 `41` 个 CN 启动器 / resource-index 快照，最新 `3.4.1`；官方索引暴露的文件 URL、CDN 镜像与补丁路由均已保留 |
+| Wuthering Waves / 鸣潮 PC | 已索引 `42` 个 CN 启动器 / resource-index 快照，最新 `3.5.0`；官方索引暴露的文件 URL、CDN 镜像与补丁路由均已保留 |
 | HoYo CN PC 目录 | 已迁移公开 HoyoFiles 元数据：原神 `1.0.0-6.7.0`（`55` 个版本），崩坏：星穹铁道 `1.0.5-4.3.0`（`28` 个版本），绝区零 `0.2.0-3.0.0`（`19` 个版本），崩坏3 `3.7.0-8.9.0`（`53` 个版本） |
 | Android APK 归档 | 保留 `18` 个游戏的 `259` 条已确认或历史验证过的官方 APK CDN 记录 |
 <!-- README_PROGRESS_SNAPSHOT_END -->
@@ -129,6 +131,10 @@ docs/
   data/
     catalog.json            静态页面使用的版本摘要
     url_lists/              按版本生成的 URL / aria2 / JSON 索引
+    nte/
+      android/
+        catalog.json        异环 Android 装后资源 ResList 版本摘要
+        url_lists/          异环 Android 资源按版本生成的 URL / aria2 / JSON 索引
     tof/
       catalog.json          幻塔 PatcherSDK ResList 版本摘要
       url_lists/            幻塔按版本生成的 URL / aria2 / JSON 索引
@@ -189,6 +195,25 @@ https://yhcdn1.wmupd.com/clientRes/publish_PC/Version/Windows/version/{version}/
 ```
 
 已观察到的可用版本包括 `1.0.0`、`1.0.1`、`1.0.3`、`1.0.5` 到 `1.0.9`、`1.0.11`、`1.0.13` 到 `1.0.15`，以及 `1.1.0` 到 `1.1.5`。
+
+### NTE Android 资源清单
+
+异环 Android APK 安装包和装后资源清单是两个层级：APK 直链保存在 Android APK 归档中；Android 资源 ResList 单独保存在：
+
+```text
+docs/data/nte/android/
+```
+
+Android 资源同样使用 PatcherSDK 风格的 `ResList.bin.zip`，解码参数不需要换：key seed 仍是 `1289@Patcher`，IV seed 仍是 `PatcherSDK`。当前观察到两个资源分支：
+
+| 分支 | 入口 | 说明 |
+| --- | --- | --- |
+| `publish_Android` | `https://yhcdn1.wmupd.com/clientRes/publish_Android/Version/Android/version/{version}/ResList.bin.zip` | 从早期 APK 配置中恢复的 Android 资源分支，当前覆盖 `1.0.x` 与 `1.1.x`。 |
+| `Android_120` | `https://yhcdn1.wmupd.com/clientRes/Android_120/Version/Android/version/{version}/ResList.bin.zip` | 当前 `1.2.0 / versioncode 120` APK 对应的资源分支，资源小版本和 PC 小版本不完全同步。 |
+
+`Android_120` 中的 `120` 对应 APK versioncode，而不是 ResList 小版本。后续如果 APK 大版本进入 `1.3.0 / vc130`，需要继续枚举 `Android_130` 等兄弟分支；不要把 `Android_120` 当作唯一 Android 根路径。
+
+这部分暂时沿用 NTE PC 的 legacy catalog + url_lists 形状，是为了和现有 NTE 页面共用加载和展示路径。等 NTE PC 将来迁到现代分片结构时，Android 资源应同批迁移，不应把这个特例扩散到 ToF/P5X 等绿地数据集。
 
 ## 幻塔清单说明
 
