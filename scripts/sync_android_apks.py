@@ -1508,6 +1508,13 @@ KNOWN_APKS = [
     },
     {
         "game_id": "arknights",
+        "version": "1.9.8.1",
+        "channel": "hg",
+        "url": "https://ak.hycdn.cn/apk/202303031911-1981-2immsmdktq3dvi0ukxvd/arknights-hg-1981.apk",
+        "source": "official ak.hycdn.cn Android APK URL provided by user; version inferred from the official 1981 package build identifier",
+    },
+    {
+        "game_id": "arknights",
         "version": "2.0.0.1",
         "channel": "hg",
         "url": "https://ak.hycdn.cn/apk/202304281114-2001-3l0xy1rm0mm8u2ibbzmc/arknights-hg-2001.apk",
@@ -1533,6 +1540,13 @@ KNOWN_APKS = [
         "channel": "hg",
         "url": "https://ak.hycdn.cn/apk/202312011528-2141-n09gx6umwxg279rjm8js/arknights-hg-2141.apk",
         "source": "official CDN URL recovered from archive.org CDX search",
+    },
+    {
+        "game_id": "arknights",
+        "version": "2.2.2.1",
+        "channel": "hg",
+        "url": "https://ak.hycdn.cn/apk/202403011713-2221-3edpmka8jf3f9jo7vjqk/arknights-hg-2221.apk",
+        "source": "official ak.hycdn.cn Android APK URL provided by user; version inferred from the official 2221 package build identifier",
     },
     {
         "game_id": "arknights",
@@ -3203,6 +3217,14 @@ def discover_hypergryph_apks() -> list[dict]:
         if not version:
             print(f"Hypergryph APK has no version: {final_url}")
             continue
+        if item["game_id"] == "arknights":
+            build_match = re.search(
+                r"arknights-hg-(\d{4})\.apk$",
+                urllib.parse.urlsplit(final_url).path,
+                re.IGNORECASE,
+            )
+            if build_match:
+                version = ".".join(build_match.group(1))
         entries.append({
             "game_id": item["game_id"],
             "version": normalize_version(version),
