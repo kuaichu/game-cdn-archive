@@ -69,6 +69,7 @@ def android_probe(
     content_type: str,
     size: int,
     error: str = "",
+    bot_challenge: bool = False,
 ) -> ProbeResult:
     return {
         "url": url,
@@ -81,6 +82,7 @@ def android_probe(
             content_type=content_type,
             size=size,
             error=error,
+            bot_challenge=bot_challenge,
             stale=False,
             scheduler_confidence="high",
         ),
@@ -242,8 +244,22 @@ def assert_android_negative_paths() -> None:
     result_non_apk = adapter.interpret([
         android_probe(url, ok=True, status=200, content_type="text/html", size=20 * 1024 * 1024)
     ], {"game_id": "android-test", "version": "1.0.0", "url": url, "filename": "game.apk"})
-    if result_non_apk["state"] != "unavailable" or result_non_apk["reason"] != "content_type_mismatch":
+    if result_non_apk["state"] != "unknown" or result_non_apk["reason"] != "content_type_mismatch":
         raise AssertionError(f"unexpected Android non-APK interpretation: {result_non_apk!r}")
+
+    result_bot_challenge = adapter.interpret([
+        android_probe(
+            url,
+            ok=False,
+            status=200,
+            content_type="text/html",
+            size=2660,
+            error="HTTP 200",
+            bot_challenge=True,
+        )
+    ], {"game_id": "android-test", "version": "1.0.0", "url": url, "filename": "game.apk"})
+    if result_bot_challenge["state"] != "unknown" or result_bot_challenge["reason"] != "bot_challenge":
+        raise AssertionError(f"unexpected Android bot-challenge interpretation: {result_bot_challenge!r}")
 
     result_fake_200 = adapter.interpret([
         android_probe(url, ok=True, status=200, content_type="text/plain", size=3)
@@ -258,6 +274,12 @@ def assert_android_negative_paths() -> None:
     }
     if result_fake_200 != expected_fake_200:
         raise AssertionError(f"unexpected Android fake-200 interpretation: {result_fake_200!r}")
+
+    result_fake_range = adapter.interpret([
+        android_probe(url, ok=True, status=206, content_type="text/plain", size=3)
+    ], {"game_id": "android-test", "version": "1.0.0", "url": url, "filename": "game.apk"})
+    if result_fake_range != expected_fake_200:
+        raise AssertionError(f"unexpected Android fake range interpretation: {result_fake_range!r}")
 
     result_small = adapter.interpret([
         android_probe(url, ok=True, status=200, content_type="application/vnd.android.package-archive", size=16)
@@ -285,6 +307,26 @@ def assert_android_negative_paths() -> None:
     }
     if result_retained != expected_retained:
         raise AssertionError(f"unexpected Android retained interpretation: {result_retained!r}")
+
+    historical_record = {
+        "game_id": "android-test",
+        "version": "0.9.0",
+        "url": url,
+        "filename": "game.apk",
+        "captured_at": "2026-01-01T00:00:00Z",
+        "source": "Wayback Machine historical URL",
+    }
+    result_historical_403 = adapter.interpret([
+        android_probe(url, ok=False, status=403, content_type="application/xml", size=334, error="HTTP 403")
+    ], historical_record)
+    if result_historical_403["state"] != "unknown" or result_historical_403["reason"] != "http_403":
+        raise AssertionError(f"unexpected Android historical 403 interpretation: {result_historical_403!r}")
+
+    result_historical_dns = adapter.interpret([
+        android_probe(url, ok=False, status=0, content_type="", size=0, error="dns: getaddrinfo failed")
+    ], historical_record)
+    if result_historical_dns["state"] != "unknown" or result_historical_dns["reason"] != "dns_error":
+        raise AssertionError(f"unexpected Android historical DNS interpretation: {result_historical_dns!r}")
 
 
 def assert_hoyo_metadata_paths() -> None:

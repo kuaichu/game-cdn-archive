@@ -6,6 +6,7 @@ from scripts.availability_schema import Confidence, Interpretation, ProbeResult
 
 
 APK_SIZE_THRESHOLD_BYTES = 1024 * 1024
+TEXT_PLACEHOLDER_MAX_BYTES = 1024
 APK_CONTENT_TYPES = {
     "application/vnd.android.package-archive",
     "application/octet-stream",
@@ -63,7 +64,7 @@ def _error_reason(status: int, error: str) -> tuple[str, str]:
     if "timeout" in error:
         return "http_timeout", "状态未知"
     if error.startswith("dns:") or "getaddrinfo" in error or "no address" in error or "could not resolve host" in error:
-        return "dns_error", "链接失效"
+        return "dns_error", "状态未知"
     if error.startswith("tls:") or "certificate" in error or "ssl" in error:
         return "tls_error", "状态未知"
     if status == 0:
@@ -93,7 +94,7 @@ class AndroidAvailabilityAdapter:
         usable = bool(probe.get("ok")) and 200 <= status < 400 and apk_like and size > APK_SIZE_THRESHOLD_BYTES
 
         if usable:
-            reason = "range_probe_ok" if probe.get("method") == "GET" and status == 206 else (
+            reason = "range_probe_ok" if str(probe.get("method") or "").endswith("GET") and status == 206 else (
                 "http_3xx" if 300 <= status < 400 else "http_2xx"
             )
             return {
@@ -105,28 +106,17 @@ class AndroidAvailabilityAdapter:
                 "display_label": "可用",
             }
 
-        if apk_url and status == 200 and content_type_base in INVALID_APK_CONTENT_TYPES:
+        if probe.get("bot_challenge"):
             return {
-                "state": "unavailable",
-                "reason": "content_type_mismatch",
+                "state": "unknown",
+                "reason": "bot_challenge",
                 "preferred_url": "",
-                "confidence": "low" if confidence == "high" else confidence,
+                "confidence": "low",
                 "retained": False,
-                "display_label": "链接失效",
+                "display_label": "状态未知",
             }
 
-        if apk_url and status == 200 and _looks_like_apk_content(content_type) and size <= APK_SIZE_THRESHOLD_BYTES:
-            return {
-                "state": "unavailable",
-                "reason": "size_zero",
-                "preferred_url": "",
-                "confidence": "low" if confidence == "high" else confidence,
-                "retained": False,
-                "display_label": "链接失效",
-            }
-
-        dead = status >= 400 or error.startswith("dns:") or "getaddrinfo" in error or "could not resolve host" in error
-        if dead and _is_historical_record(record):
+        if status == 404 and _is_historical_record(record):
             return {
                 "state": "unavailable",
                 "reason": "retained_historical",
@@ -136,14 +126,25 @@ class AndroidAvailabilityAdapter:
                 "display_label": "链接失效",
             }
 
-        if probe.get("bot_challenge"):
+        if apk_url and status in {200, 206} and content_type_base in INVALID_APK_CONTENT_TYPES:
+            state = "unavailable" if size <= TEXT_PLACEHOLDER_MAX_BYTES else "unknown"
             return {
-                "state": "unknown",
-                "reason": "bot_challenge",
+                "state": state,
+                "reason": "content_type_mismatch",
                 "preferred_url": "",
-                "confidence": "low",
+                "confidence": "low" if confidence == "high" else confidence,
                 "retained": False,
-                "display_label": "状态未知",
+                "display_label": "链接失效" if state == "unavailable" else "状态未知",
+            }
+
+        if apk_url and status in {200, 206} and _looks_like_apk_content(content_type) and size <= APK_SIZE_THRESHOLD_BYTES:
+            return {
+                "state": "unavailable",
+                "reason": "size_zero",
+                "preferred_url": "",
+                "confidence": "low" if confidence == "high" else confidence,
+                "retained": False,
+                "display_label": "链接失效",
             }
 
         if 200 <= status < 400:
@@ -158,7 +159,7 @@ class AndroidAvailabilityAdapter:
             }
 
         reason, label = _error_reason(status, error)
-        state = "unavailable" if reason in {"http_404", "dns_error"} else "unknown"
+        state = "unavailable" if reason == "http_404" else "unknown"
         return {
             "state": state,
             "reason": reason,
