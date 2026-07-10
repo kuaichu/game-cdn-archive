@@ -17,7 +17,7 @@ for path in (ROOT, SCRIPTS):
     if str(path) not in sys.path:
         sys.path.insert(0, str(path))
 
-from adapters.android import AndroidAvailabilityAdapter  # noqa: E402
+from adapters.android import APK_CONTENT_TYPES, APK_SIZE_THRESHOLD_BYTES, AndroidAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import ProbeResult, availability_block, probe_fact_defaults  # noqa: E402
 from scripts.probe_scheduler import ProbeScheduleConfig, previous_probe_by_url, schedule_probe_candidates  # noqa: E402
 
@@ -112,8 +112,47 @@ def old_unavailable(record: dict[str, Any]) -> bool:
     return bool(record.get("error")) or status < 200 or status >= 400
 
 
+def known_good_apk_record(record: dict[str, Any]) -> bool:
+    status = int_value(record.get("status"))
+    size = int_value(record.get("size"))
+    content_type = str(record.get("content_type") or "").split(";", 1)[0].strip().lower()
+    return (
+        200 <= status < 400
+        and not record.get("error")
+        and size > APK_SIZE_THRESHOLD_BYTES
+        and content_type in APK_CONTENT_TYPES
+    )
+
+
+def protect_known_good_interpretation(
+    record: dict[str, Any],
+    probes: list[ProbeResult],
+    interpretation: dict[str, Any],
+) -> dict[str, Any]:
+    if not known_good_apk_record(record):
+        return interpretation
+    if interpretation.get("state") != "unavailable":
+        return interpretation
+    if interpretation.get("reason") not in {"content_type_mismatch", "size_zero"}:
+        return interpretation
+    probe = probes[0].get("probe") if probes else None
+    if not isinstance(probe, dict) or int_value(probe.get("status")) not in {200, 206}:
+        return interpretation
+    protected = dict(interpretation)
+    protected.update({
+        "state": "unknown",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": False,
+        "display_label": "状态未知",
+    })
+    return protected
+
+
 def fake_200_tightened(record: dict[str, Any], interpretation: dict[str, Any]) -> bool:
     if old_unavailable(record):
+        return False
+    if known_good_apk_record(record):
         return False
     status = int_value(record.get("status"))
     if status != 200:
@@ -149,6 +188,7 @@ def apply_availability(index: dict[str, Any], config: ProbeScheduleConfig) -> tu
             raise ValueError(f"Android APK record has invalid URL: {record.get('game_id')} {record.get('version')}")
         probes = schedule_probe_candidates([url], previous=previous, config=config)
         interpretation = adapter.interpret(probes, record)
+        interpretation = protect_known_good_interpretation(record, probes, interpretation)
         record["availability"] = availability_block(
             candidates=probes,
             source_kind="live_probe",

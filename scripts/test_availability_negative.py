@@ -26,6 +26,7 @@ from adapters.nte import NteAvailabilityAdapter  # noqa: E402
 from adapters.tof import TofAvailabilityAdapter  # noqa: E402
 from adapters.wuwa import WuwaAvailabilityAdapter  # noqa: E402
 from scripts.availability_schema import ProbeResult, availability_block, probe_fact_defaults  # noqa: E402
+from scripts.build_android_availability import protect_known_good_interpretation  # noqa: E402
 from scripts.build_wuwa_availability import apply_availability, load_versions  # noqa: E402
 from scripts.probe_scheduler import PersistentProbeCache, ProbeScheduleConfig  # noqa: E402
 from scripts.validate_availability import validate_android, validate_arknights, validate_endfield, validate_hoyo, validate_nte, validate_tof, validate_wuwa  # noqa: E402
@@ -327,6 +328,31 @@ def assert_android_negative_paths() -> None:
     ], historical_record)
     if result_historical_dns["state"] != "unknown" or result_historical_dns["reason"] != "dns_error":
         raise AssertionError(f"unexpected Android historical DNS interpretation: {result_historical_dns!r}")
+
+
+def assert_android_known_good_conflict_protection() -> None:
+    url = "https://example.invalid/game.apk"
+    record = {
+        "game_id": "android-test",
+        "version": "1.0.0",
+        "url": url,
+        "filename": "game.apk",
+        "status": 200,
+        "content_type": "application/vnd.android.package-archive",
+        "size": 2 * 1024 * 1024 * 1024,
+        "error": "",
+    }
+    tiny_probe = android_probe(url, ok=True, status=206, content_type="text/plain", size=3)
+    interpretation = AndroidAvailabilityAdapter().interpret([tiny_probe], record)
+    protected = protect_known_good_interpretation(record, [tiny_probe], interpretation)
+    if protected["state"] != "unknown" or protected["reason"] != "content_type_mismatch":
+        raise AssertionError(f"known-good APK conflict was not protected: {protected!r}")
+
+    missing_probe = android_probe(url, ok=False, status=404, content_type="application/xml", size=0, error="HTTP 404")
+    missing_interpretation = AndroidAvailabilityAdapter().interpret([missing_probe], record)
+    missing_result = protect_known_good_interpretation(record, [missing_probe], missing_interpretation)
+    if missing_result != missing_interpretation:
+        raise AssertionError(f"definitive 404 must not be conflict-protected: {missing_result!r}")
 
 
 def assert_hoyo_metadata_paths() -> None:
@@ -1189,6 +1215,7 @@ def assert_wuwa_build_stage_zero_network() -> None:
 def main() -> None:
     assert_arknights_failed_probe_maps_to_unavailable()
     assert_android_negative_paths()
+    assert_android_known_good_conflict_protection()
     assert_hoyo_metadata_paths()
     assert_endfield_upstream_paths()
     assert_nte_paths()
@@ -1231,6 +1258,7 @@ def main() -> None:
     print("android_failed_probe=PASS")
     print("android_fake_200=PASS")
     print("android_retained_historical=PASS")
+    print("android_known_good_conflict=PASS")
     print("hoyo_metadata_inference=PASS")
     print("endfield_upstream_archive=PASS")
     print("nte_live_probe_and_metadata=PASS")
