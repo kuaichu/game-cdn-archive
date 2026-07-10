@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import subprocess
 import urllib.error
@@ -23,6 +24,10 @@ from availability_schema import ProbeFacts, ProbeResult, probe_fact_defaults
 
 DEFAULT_HEADERS = {
     "User-Agent": "game-cdn-archive/1.0 (+https://github.com/kuaichu/game-cdn-archive)",
+    "Accept": "*/*",
+}
+BROWSER_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/138.0.0.0 Safari/537.36",
     "Accept": "*/*",
 }
 
@@ -121,18 +126,27 @@ def exception_meta(exc: Exception, method: str, checked_at: str) -> ProbeFacts:
     )
 
 
-def request_meta(url: str, method: str, timeout: int, checked_at: str) -> ProbeFacts:
-    headers = dict(DEFAULT_HEADERS)
+def request_meta(
+    url: str,
+    method: str,
+    timeout: int,
+    checked_at: str,
+    headers: dict[str, str] | None = None,
+    method_label: str | None = None,
+) -> ProbeFacts:
+    request_headers = dict(DEFAULT_HEADERS)
+    if headers:
+        request_headers.update(headers)
     if method == "GET":
-        headers["Range"] = "bytes=0-0"
-    request = urllib.request.Request(url_for_request(url), headers=headers, method=method)
+        request_headers["Range"] = "bytes=0-0"
+    request = urllib.request.Request(url_for_request(url), headers=request_headers, method=method)
     try:
         with urllib.request.urlopen(request, timeout=timeout) as response:
-            return response_meta(response, method, checked_at)
+            return response_meta(response, method_label or method, checked_at)
     except urllib.error.HTTPError as exc:
-        return http_error_meta(exc, method, checked_at)
+        return http_error_meta(exc, method_label or method, checked_at)
     except Exception as exc:
-        return exception_meta(exc, method, checked_at)
+        return exception_meta(exc, method_label or method, checked_at)
 
 
 def parse_curl_headers(output: str) -> tuple[int, Any, str]:
@@ -148,30 +162,48 @@ def parse_curl_headers(output: str) -> tuple[int, Any, str]:
     return status, headers, block
 
 
-def curl_head_meta(url: str, timeout: int, checked_at: str) -> ProbeFacts:
+def curl_request_meta(
+    url: str,
+    method: str,
+    timeout: int,
+    checked_at: str,
+    headers: dict[str, str] | None = None,
+    method_label: str | None = None,
+) -> ProbeFacts:
+    request_headers = dict(DEFAULT_HEADERS)
+    if headers:
+        request_headers.update(headers)
     command = [
         "curl",
-        "-I",
         "-L",
+        "-sS",
         "--max-time",
         str(timeout),
         "-A",
-        DEFAULT_HEADERS["User-Agent"],
-        url_for_request(url),
+        request_headers["User-Agent"],
     ]
+    for key, value in request_headers.items():
+        if key.lower() != "user-agent":
+            command.extend(["-H", f"{key}: {value}"])
+    if method == "HEAD":
+        command.append("-I")
+    else:
+        command.extend(["--range", "0-0", "--output", os.devnull, "--dump-header", "-"])
+    command.append(url_for_request(url))
+    result_method = method_label or f"CURL_{method}"
     try:
         completed = subprocess.run(command, text=True, capture_output=True, timeout=timeout + 5, check=False)
     except FileNotFoundError as exc:
-        return exception_meta(exc, "CURL_HEAD", checked_at)
+        return exception_meta(exc, result_method, checked_at)
     except Exception as exc:
-        return exception_meta(exc, "CURL_HEAD", checked_at)
+        return exception_meta(exc, result_method, checked_at)
     output = f"{completed.stdout}\n{completed.stderr}"
     status, headers, headers_text = parse_curl_headers(completed.stdout)
     content_type = headers.get("Content-Type", "")
     error = "" if 200 <= status < 400 else (completed.stderr.strip() or f"HTTP {status}" if status else "curl probe failed")
     return probe_fact_defaults(
         status=status,
-        method="CURL_HEAD",
+        method=result_method,
         checked_at=checked_at,
         final_url=headers.get("Location", "") or url,
         content_type=content_type,
@@ -181,6 +213,10 @@ def curl_head_meta(url: str, timeout: int, checked_at: str) -> ProbeFacts:
         error=error,
         bot_challenge=is_bot_challenge(status, content_type, output),
     )
+
+
+def curl_head_meta(url: str, timeout: int, checked_at: str) -> ProbeFacts:
+    return curl_request_meta(url, "HEAD", timeout, checked_at)
 
 
 def needs_range_fallback(meta: ProbeFacts) -> bool:
@@ -207,6 +243,91 @@ def should_try_curl(meta: ProbeFacts) -> bool:
     return False
 
 
+def content_type_base(meta: ProbeFacts) -> str:
+    return str(meta.get("content_type") or "").split(";", 1)[0].strip().lower()
+
+
+def is_apk_candidate(url: str, meta: ProbeFacts) -> bool:
+    for value in (url, str(meta.get("final_url") or "")):
+        path = urllib.parse.unquote(urllib.parse.urlsplit(value).path).lower()
+        if path.endswith(".apk"):
+            return True
+    return False
+
+
+def needs_browser_fallback(meta: ProbeFacts) -> bool:
+    status = int(meta.get("status") or 0)
+    if meta.get("bot_challenge") or status in {403, 429, 503}:
+        return True
+    return 200 <= status < 400 and content_type_base(meta) in {"text/html", "application/xml", "text/xml"}
+
+
+def evidence_score(meta: ProbeFacts) -> int:
+    status = int(meta.get("status") or 0)
+    size = int(meta.get("size") or 0)
+    content_type = content_type_base(meta)
+    if meta.get("bot_challenge"):
+        return 0
+    if status in {200, 206} and content_type in {
+        "application/vnd.android.package-archive",
+        "application/octet-stream",
+        "binary/octet-stream",
+    } and size > 1024 * 1024:
+        return 100
+    if status in {200, 206} and content_type not in {"text/html", "application/xml", "text/xml"} and size > 0:
+        return 60
+    if status in {404, 410}:
+        return 50
+    if status in {403, 429, 503}:
+        return 20
+    if 200 <= status < 400:
+        return 10
+    return 0
+
+
+def probe_profile(
+    url: str,
+    timeout: int,
+    checked_at: str,
+    headers: dict[str, str] | None = None,
+    method_prefix: str = "",
+) -> ProbeFacts:
+    head = request_meta(
+        url,
+        "HEAD",
+        timeout,
+        checked_at,
+        headers=headers,
+        method_label=f"{method_prefix}HEAD" if method_prefix else "HEAD",
+    )
+    apk_candidate = is_apk_candidate(url, head)
+    meta = head
+    if apk_candidate or needs_range_fallback(head):
+        ranged = request_meta(
+            url,
+            "GET",
+            timeout,
+            checked_at,
+            headers=headers,
+            method_label=f"{method_prefix}GET" if method_prefix else "GET",
+        )
+        if apk_candidate or int(ranged.get("status") or 0) in {200, 206}:
+            meta = ranged
+    if should_try_curl(meta) or needs_browser_fallback(meta):
+        method = "GET" if apk_candidate else "HEAD"
+        curled = curl_request_meta(
+            url,
+            method,
+            timeout,
+            checked_at,
+            headers=headers,
+            method_label=f"CURL_{method_prefix}{method}",
+        )
+        if evidence_score(curled) > evidence_score(meta):
+            meta = curled
+    return meta
+
+
 def mark_ok(meta: ProbeFacts) -> ProbeFacts:
     status = int(meta.get("status") or 0)
     size = int(meta.get("size") or 0)
@@ -224,15 +345,17 @@ def probe_one(url: str, timeout: int = 20) -> ProbeResult:
     if not isinstance(url, str) or not url.startswith(("http://", "https://")):
         raise ValueError(f"probe candidate must be an HTTP URL: {url!r}")
     checked_at = iso_now()
-    meta = request_meta(url, "HEAD", timeout, checked_at)
-    if needs_range_fallback(meta):
-        ranged = request_meta(url, "GET", timeout, checked_at)
-        if int(ranged.get("status") or 0) in {200, 206}:
-            meta = ranged
-    if should_try_curl(meta):
-        curled = curl_head_meta(url, timeout, checked_at)
-        if int(curled.get("status") or 0) >= int(meta.get("status") or 0) or not meta.get("ok"):
-            meta = curled
+    meta = probe_profile(url, timeout, checked_at)
+    if needs_browser_fallback(meta):
+        browser_meta = probe_profile(
+            url,
+            timeout,
+            checked_at,
+            headers=BROWSER_HEADERS,
+            method_prefix="BROWSER_",
+        )
+        if evidence_score(browser_meta) > evidence_score(meta):
+            meta = browser_meta
     return {"url": url, "probe": mark_ok(meta)}
 
 
