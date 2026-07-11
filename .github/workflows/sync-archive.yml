@@ -493,6 +493,7 @@ jobs:
           JOB_STATUS: ${{ job.status }}
           DATA_CHANGED: ${{ steps.commit.outputs.changed }}
           SYNC_SUPERSEDED: ${{ steps.commit.outputs.superseded }}
+          SYNC_RERUN_QUEUED: ${{ steps.commit.outputs.rerun_queued }}
         run: |
           if [ -z "$TELEGRAM_BOT_TOKEN" ] || { [ -z "$TELEGRAM_CHAT_ID" ] && [ -z "$TELEGRAM_CHANNEL_CHAT_ID" ]; }; then
             echo "Telegram secrets are not configured, skip result notification."
@@ -715,7 +716,11 @@ jobs:
           scope="${NOTIFY_SCOPE:-${SYNC_SCOPE:-all}}"
 
           if [ "$SYNC_SUPERSEDED" = "true" ]; then
-            change_result="superseded; clean rerun queued"
+            if [ "$SYNC_RERUN_QUEUED" = "true" ]; then
+              change_result="superseded; clean rerun queued"
+            else
+              change_result="superseded; no additional rerun"
+            fi
           else
             case "$DATA_CHANGED" in
               true)
@@ -776,8 +781,13 @@ jobs:
           fi
 
           if [ "$SYNC_SUPERSEDED" = "true" ]; then
-            message="$message
+            if [ "$SYNC_RERUN_QUEUED" = "true" ]; then
+              message="$message
           Note: origin/main changed during generation; exactly one clean rerun was queued."
+            else
+              message="$message
+          Note: this automatic retry was superseded by a newer main commit; no additional run was queued."
+            fi
           fi
 
           if [ "$JOB_STATUS" != "success" ]; then

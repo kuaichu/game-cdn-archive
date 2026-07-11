@@ -97,6 +97,7 @@ def test_detached_head_push(root: Path) -> None:
     assert result.returncode == 0, result.stderr
     assert "changed=true" in result.output_text  # type: ignore[attr-defined]
     assert "superseded=false" in result.output_text  # type: ignore[attr-defined]
+    assert "rerun_queued=false" in result.output_text  # type: ignore[attr-defined]
     assert git(remote, "rev-parse", "main").stdout.strip() == git(work, "rev-parse", "HEAD").stdout.strip()
 
 
@@ -128,17 +129,21 @@ def test_remote_change_dispatches_once(root: Path) -> None:
     assert result.returncode == 0, result.stderr
     assert "changed=false" in result.output_text  # type: ignore[attr-defined]
     assert "superseded=true" in result.output_text  # type: ignore[attr-defined]
+    assert "rerun_queued=true" in result.output_text  # type: ignore[attr-defined]
     assert len(capture.read_text(encoding="utf-8").splitlines()) == 1
 
 
-def test_bot_retry_never_redispatches(root: Path) -> None:
+def test_bot_retry_finishes_without_redispatch(root: Path) -> None:
     _, seed, work = setup_repo(root)
     change_readme(work)
     advance_remote(seed)
     curl_bin, capture = fake_curl(root)
     result = invoke(work, root, actor="github-actions[bot]", curl_bin=curl_bin)
-    assert result.returncode != 0
-    assert "refusing to dispatch another workflow run" in result.stdout
+    assert result.returncode == 0, result.stderr
+    assert "changed=false" in result.output_text  # type: ignore[attr-defined]
+    assert "superseded=true" in result.output_text  # type: ignore[attr-defined]
+    assert "rerun_queued=false" in result.output_text  # type: ignore[attr-defined]
+    assert "no additional run will be dispatched" in result.stdout
     assert not capture.exists()
 
 
@@ -147,7 +152,7 @@ def main() -> None:
         ("detached_head_push", test_detached_head_push),
         ("unchanged_remote_push_failure", test_unchanged_remote_push_failure),
         ("remote_change_dispatches_once", test_remote_change_dispatches_once),
-        ("bot_retry_never_redispatches", test_bot_retry_never_redispatches),
+        ("bot_retry_finishes_without_redispatch", test_bot_retry_finishes_without_redispatch),
     )
     for name, test in tests:
         with tempfile.TemporaryDirectory(prefix=f"archive-commit-{name}-") as temp_dir:

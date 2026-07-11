@@ -11,14 +11,16 @@ ARCHIVE_CURL_BIN="${ARCHIVE_CURL_BIN:-curl}"
 write_result() {
   local changed="$1"
   local superseded="$2"
+  local rerun_queued="$3"
   {
     echo "changed=${changed}"
     echo "superseded=${superseded}"
+    echo "rerun_queued=${rerun_queued}"
   } >> "$GITHUB_OUTPUT"
 }
 
 if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
-  write_result false false
+  write_result false false false
   exit 0
 fi
 
@@ -44,7 +46,7 @@ git add -- "${existing_paths[@]}"
 
 if git diff --cached --quiet; then
   echo "::warning::The sync produced only unstaged or ignored paths; nothing will be committed."
-  write_result false false
+  write_result false false false
   exit 0
 fi
 
@@ -60,7 +62,7 @@ push_status="${PIPESTATUS[0]}"
 set -e
 
 if [ "$push_status" -eq 0 ]; then
-  write_result true false
+  write_result true false false
   exit 0
 fi
 
@@ -69,7 +71,7 @@ remote_commit="$(git rev-parse origin/main)"
 
 if [ "$remote_commit" = "$local_commit" ]; then
   echo "::warning::git push reported an error, but origin/main already contains the generated commit."
-  write_result true false
+  write_result true false false
   exit 0
 fi
 
@@ -79,8 +81,9 @@ if [ "$remote_commit" = "$base_commit" ]; then
 fi
 
 if [ "$GITHUB_ACTOR" = "github-actions[bot]" ]; then
-  echo "::error::origin/main changed during an automatic retry; refusing to dispatch another workflow run."
-  exit 1
+  write_result false true false
+  echo "::notice::This automatic retry was superseded by a newer main commit; no additional run will be dispatched."
+  exit 0
 fi
 
 echo "::warning::origin/main changed from ${base_commit} to ${remote_commit}; queueing one clean ${SYNC_SCOPE} sync."
@@ -92,5 +95,5 @@ echo "::warning::origin/main changed from ${base_commit} to ${remote_commit}; qu
   "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/sync-archive.yml/dispatches" \
   --data "{\"ref\":\"main\",\"inputs\":{\"scope\":\"${SYNC_SCOPE}\"}}"
 
-write_result false true
+write_result false true true
 echo "::notice::This run was superseded by a newer main commit; one clean sync was queued."
