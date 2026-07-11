@@ -13511,13 +13511,13 @@
       "versions": [
         {
           "game_id": "arknights",
-          "version": "2.7.5",
+          "version": "2.7.5.1",
           "channel": "official",
           "url": "https://ak.hypergryph.com/downloads/android_lastest",
           "source": "official Hypergryph latest APK endpoint; resolves to a CDN URL",
           "source_url": "https://ak.hypergryph.com/downloads/android_lastest",
           "archive_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/75.0/package/1/1/Android/75.0.0_on1FEr6BLTxmDmQD/arknights-hg-2751.apk",
-          "archive_note": "CDN object path resolved during sync; temporary signature omitted.",
+          "archive_note": "CDN URL captured during sync",
           "status": 200,
           "content_type": "application/vnd.android.package-archive",
           "size": 2105745348,
@@ -13536,10 +13536,10 @@
                 "url": "https://ak.hypergryph.com/downloads/android_lastest",
                 "probe": {
                   "ok": true,
-                  "status": 200,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-07-11T03:30:49.012215+00:00",
-                  "final_url": "https://ak.hypergryph.com/downloads/android_lastest",
+                  "status": 206,
+                  "method": "GET",
+                  "checked_at": "2026-07-10T19:37:22.555Z",
+                  "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/75.0/package/1/1/Android/75.0.0_on1FEr6BLTxmDmQD/arknights-hg-2751.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 2105745348,
                   "last_modified": "Mon, 06 Jul 2026 06:24:30 GMT",
@@ -13547,7 +13547,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.183,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -13558,7 +13558,7 @@
             },
             "interpretation": {
               "state": "available",
-              "reason": "http_2xx",
+              "reason": "range_probe_ok",
               "preferred_url": "https://ak.hypergryph.com/downloads/android_lastest",
               "confidence": "high",
               "retained": false,
@@ -14779,10 +14779,10 @@
         }
       ],
       "links": {
-        "2.7.5": {
-          "urls": "data/android/lists/arknights_2.7.5_android.urls.txt",
-          "aria2": "data/android/lists/arknights_2.7.5_android.aria2.txt",
-          "json": "data/android/lists/arknights_2.7.5_android.json"
+        "2.7.5.1": {
+          "urls": "data/android/lists/arknights_2.7.5.1_android.urls.txt",
+          "aria2": "data/android/lists/arknights_2.7.5.1_android.aria2.txt",
+          "json": "data/android/lists/arknights_2.7.5.1_android.json"
         },
         "2.7.4.1": {
           "urls": "data/android/lists/arknights_2.7.4.1_android.urls.txt",

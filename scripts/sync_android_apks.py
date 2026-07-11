@@ -2570,6 +2570,17 @@ def normalize_version(version: str) -> str:
     return ".".join(str(part) for part in parts[:3])
 
 
+def arknights_version_from_apk_url(url: str) -> str | None:
+    match = re.search(
+        r"arknights-hg-(\d{4})\.apk$",
+        urllib.parse.urlsplit(url).path,
+        re.IGNORECASE,
+    )
+    if not match:
+        return None
+    return ".".join(match.group(1))
+
+
 def version_from_url(url: str) -> str:
     filename = filename_from_url(url)
     patterns = [
@@ -3240,17 +3251,14 @@ def discover_hypergryph_apks() -> list[dict]:
         if not version:
             print(f"Hypergryph APK has no version: {final_url}")
             continue
+        normalized_version = normalize_version(version)
         if item["game_id"] == "arknights":
-            build_match = re.search(
-                r"arknights-hg-(\d{4})\.apk$",
-                urllib.parse.urlsplit(final_url).path,
-                re.IGNORECASE,
-            )
-            if build_match:
-                version = ".".join(build_match.group(1))
+            build_version = arknights_version_from_apk_url(final_url)
+            if build_version:
+                normalized_version = build_version
         entries.append({
             "game_id": item["game_id"],
-            "version": normalize_version(version),
+            "version": normalized_version,
             "channel": item["channel"],
             "url": item["url"],
             "source": "official Hypergryph latest APK endpoint; resolves to a CDN URL",
