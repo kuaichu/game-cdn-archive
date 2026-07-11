@@ -26,10 +26,10 @@
           "url": "https://ak.hypergryph.com/downloads/android_lastest",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-07-10T19:37:22.555Z",
-            "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/75.0/package/1/1/Android/75.0.0_on1FEr6BLTxmDmQD/arknights-hg-2751.apk",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-11T07:33:27.220765+00:00",
+            "final_url": "https://ak.hypergryph.com/downloads/android_lastest",
             "content_type": "application/vnd.android.package-archive",
             "size": 2105745348,
             "last_modified": "Mon, 06 Jul 2026 06:24:30 GMT",
@@ -37,7 +37,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.117,
             "scheduler_confidence": "high"
           }
         }
@@ -48,7 +48,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://ak.hypergryph.com/downloads/android_lastest",
         "confidence": "high",
         "retained": false,
