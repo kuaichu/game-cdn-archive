@@ -462,36 +462,7 @@ jobs:
         shell: bash
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: |
-          bash scripts/gha_run_step.sh "Commit changes" bash -e -o pipefail -c '
-            if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
-              echo "changed=false" >> "$GITHUB_OUTPUT"
-              exit 0
-            fi
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add README.md docs/data docs/app.js docs/index.html scripts/update_nte_static.py scripts/update_tof_static.py scripts/update_p5x_static.py scripts/build_tof_availability.py scripts/build_p5x_availability.py scripts/sync_hoyofiles.py scripts/import_endfield_archive.py scripts/validate_endfield_archive.py scripts/sync_wuwa.py scripts/sync_arknights_pc.py scripts/validate_arknights_pc.py scripts/sync_android_apks.py scripts/probe_url_status.py scripts/check_docs_file_sizes.py scripts/update_readme_summary.py
-            git commit -m "Auto update archive data"
-            if git push; then
-              echo "changed=true" >> "$GITHUB_OUTPUT"
-              exit 0
-            fi
-
-            # A long-running sync can overlap an interactive data commit. Rebase is
-            # unsafe for generated JSON: it can conflict on a large aggregate file
-            # and leave this run's generated state half-applied. Queue a clean run
-            # from the latest main instead, so all generators and validators rerun.
-            echo "::warning::Push failed because origin/main changed during sync; queueing a fresh run from the latest main."
-            curl --fail --silent --show-error \
-              --request POST \
-              --header "Accept: application/vnd.github+json" \
-              --header "Authorization: Bearer ${GITHUB_TOKEN}" \
-              --header "X-GitHub-Api-Version: 2022-11-28" \
-              "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/sync-archive.yml/dispatches" \
-              --data "{\"ref\":\"main\",\"inputs\":{\"scope\":\"${SYNC_SCOPE}\"}}"
-            echo "::error::origin/main changed during archive generation. A fresh ${SYNC_SCOPE} sync was queued and will rerun from the latest main."
-            exit 1
-          '
+        run: bash scripts/gha_run_step.sh "Commit changes" bash scripts/commit_archive_changes.sh
 
       - name: Check Cloudflare credentials
         if: steps.commit.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
@@ -521,6 +492,7 @@ jobs:
         env:
           JOB_STATUS: ${{ job.status }}
           DATA_CHANGED: ${{ steps.commit.outputs.changed }}
+          SYNC_SUPERSEDED: ${{ steps.commit.outputs.superseded }}
         run: |
           if [ -z "$TELEGRAM_BOT_TOKEN" ] || { [ -z "$TELEGRAM_CHAT_ID" ] && [ -z "$TELEGRAM_CHANNEL_CHAT_ID" ]; }; then
             echo "Telegram secrets are not configured, skip result notification."
@@ -742,17 +714,21 @@ jobs:
           trigger="${NOTIFY_TRIGGER:-$trigger}"
           scope="${NOTIFY_SCOPE:-${SYNC_SCOPE:-all}}"
 
-          case "$DATA_CHANGED" in
-            true)
-              change_result="changed and committed"
-              ;;
-            false)
-              change_result="no changes"
-              ;;
-            *)
-              change_result="not reached"
-              ;;
-          esac
+          if [ "$SYNC_SUPERSEDED" = "true" ]; then
+            change_result="superseded; clean rerun queued"
+          else
+            case "$DATA_CHANGED" in
+              true)
+                change_result="changed and committed"
+                ;;
+              false)
+                change_result="no changes"
+                ;;
+              *)
+                change_result="not reached"
+                ;;
+            esac
+          fi
 
           duration="unknown"
           if [[ "${NOTIFY_STARTED_AT:-}" =~ ^[0-9]+$ ]]; then
@@ -773,7 +749,9 @@ jobs:
           scope_html="$(html_escape "$scope")"
           duration_html="$(html_escape "$duration")"
 
-          if [ "$JOB_STATUS" = "success" ]; then
+          if [ "$SYNC_SUPERSEDED" = "true" ]; then
+            title="Game CDN Archive sync superseded"
+          elif [ "$JOB_STATUS" = "success" ]; then
             title="Game CDN Archive sync finished"
           else
             title="Game CDN Archive sync failed"
@@ -795,6 +773,11 @@ jobs:
           elif [ "$DATA_CHANGED" = "true" ]; then
             message="$message
           Updates: no game version changes detected"
+          fi
+
+          if [ "$SYNC_SUPERSEDED" = "true" ]; then
+            message="$message
+          Note: origin/main changed during generation; exactly one clean rerun was queued."
           fi
 
           if [ "$JOB_STATUS" != "success" ]; then
