@@ -26,10 +26,10 @@
           "url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-07-10T19:37:27.799Z",
-            "final_url": "https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.3/package/1/1/Android/1.3.4_PZm7Rp0p1e8i8oNT/endfield-hg-1-1.3.4.apk?auth_key=1783712247-8b76b1d029324f55b65b9c47dcb3ccf9-0-93f0f1820f2e891289aa19a9bea20fb9",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-11T00:17:11.225132+00:00",
+            "final_url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
             "content_type": "application/vnd.android.package-archive",
             "size": 1750465244,
             "last_modified": "Fri, 29 May 2026 08:26:57 GMT",
@@ -37,7 +37,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 0.948,
             "scheduler_confidence": "high"
           }
         }
@@ -48,7 +48,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
         "confidence": "high",
         "retained": false,

@@ -4,7 +4,7 @@
     "version": "1.1.6.4",
     "channel": "official",
     "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
-    "source": "official Calabiyau website HTML; versionName read from AndroidManifest.xml",
+    "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
     "source_url": "https://klbqm.idreamsky.com/",
     "updated_at": "2025-10-22T23:42:15+00:00",
     "updated_at_source": "official_config",
@@ -23,16 +23,16 @@
         {
           "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
           "probe": {
-            "ok": false,
-            "status": 567,
+            "ok": true,
+            "status": 206,
             "method": "GET",
-            "checked_at": "2026-07-10T19:36:08.166Z",
+            "checked_at": "2026-07-11T01:12:27.238Z",
             "final_url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
-            "content_type": "text/html; charset=UTF-8",
-            "size": 7352,
-            "last_modified": "",
-            "etag": "",
-            "error": "HTTP 567",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1875804958,
+            "last_modified": "Wed, 24 Jun 2026 23:13:41 GMT",
+            "etag": "950a5ed1a3093b7543d6afe62aa55554",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0.0,
@@ -42,15 +42,15 @@
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unknown",
-        "reason": "http_5xx",
-        "preferred_url": "",
-        "confidence": "low",
+        "state": "available",
+        "reason": "range_probe_ok",
+        "preferred_url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+        "confidence": "high",
         "retained": false,
-        "display_label": "状态未知"
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

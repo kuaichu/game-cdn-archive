@@ -22,34 +22,34 @@
         {
           "url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
           "probe": {
-            "ok": false,
-            "status": 567,
-            "method": "GET",
-            "checked_at": "2026-07-10T19:36:07.448Z",
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-11T00:17:11.225132+00:00",
             "final_url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
-            "content_type": "text/html; charset=UTF-8",
-            "size": 7351,
-            "last_modified": "",
-            "etag": "",
-            "error": "HTTP 567",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2035392298,
+            "last_modified": "Thu, 11 Jun 2026 00:35:28 GMT",
+            "etag": "175ae1d065affaa3c5e6c2d3f3483779-243",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 0.92,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unknown",
-        "reason": "http_5xx",
-        "preferred_url": "",
-        "confidence": "low",
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
+        "confidence": "high",
         "retained": false,
-        "display_label": "状态未知"
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

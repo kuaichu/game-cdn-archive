@@ -1,0 +1,60 @@
+[
+  {
+    "game_id": "arknights",
+    "version": "2.7.5",
+    "channel": "official",
+    "url": "https://ak.hypergryph.com/downloads/android_lastest",
+    "source": "official Hypergryph latest APK endpoint; resolves to a CDN URL",
+    "source_url": "https://ak.hypergryph.com/downloads/android_lastest",
+    "archive_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/75.0/package/1/1/Android/75.0.0_on1FEr6BLTxmDmQD/arknights-hg-2751.apk",
+    "archive_note": "CDN object path resolved during sync; temporary signature omitted.",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 2105745348,
+    "last_modified": "Mon, 06 Jul 2026 06:24:30 GMT",
+    "etag": "ED31BDE0792A844F15C186BD5B2739C8-400",
+    "md5": "",
+    "crc64": "",
+    "error": "",
+    "filename": "arknights-hg-2751.apk",
+    "captured_at": "2026-07-10T11:14:47.676454+00:00",
+    "updated_at": "2026-07-06T06:24:30+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://ak.hypergryph.com/downloads/android_lastest",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-11T00:17:11.225132+00:00",
+            "final_url": "https://ak.hypergryph.com/downloads/android_lastest",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2105745348,
+            "last_modified": "Mon, 06 Jul 2026 06:24:30 GMT",
+            "etag": "ED31BDE0792A844F15C186BD5B2739C8-400",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.947,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://ak.hypergryph.com/downloads/android_lastest",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
