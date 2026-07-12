@@ -22,34 +22,34 @@
         {
           "url": "https://ak.hycdn.cn/apk/202109151624-1581-fnj60dalawa9hrco20a7/arknights-hg-1581.apk",
           "probe": {
-            "ok": true,
-            "status": 206,
+            "ok": false,
+            "status": 403,
             "method": "GET",
-            "checked_at": "2026-07-10T19:37:20.963Z",
+            "checked_at": "2026-07-12T01:00:58.870Z",
             "final_url": "https://ak.hycdn.cn/apk/202109151624-1581-fnj60dalawa9hrco20a7/arknights-hg-1581.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 1628461303,
+            "content_type": "application/xml",
+            "size": 334,
             "last_modified": "Fri, 06 Sep 2024 03:29:03 GMT",
             "etag": "9046F14512E5FA56BA4729E38681646B-400",
-            "error": "",
+            "error": "HTTP 403",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 13.052,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "high"
+        "confidence": "low"
       },
       "interpretation": {
-        "state": "available",
-        "reason": "range_probe_ok",
-        "preferred_url": "https://ak.hycdn.cn/apk/202109151624-1581-fnj60dalawa9hrco20a7/arknights-hg-1581.apk",
-        "confidence": "high",
+        "state": "unknown",
+        "reason": "http_403",
+        "preferred_url": "",
+        "confidence": "low",
         "retained": false,
-        "display_label": "可用"
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

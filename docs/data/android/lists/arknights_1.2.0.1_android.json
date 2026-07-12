@@ -22,34 +22,34 @@
         {
           "url": "https://ak.hycdn.cn/apk/202010281505-1201-f75c49dbdd52c3d0d02f/arknights-hg-1201.apk",
           "probe": {
-            "ok": true,
-            "status": 206,
+            "ok": false,
+            "status": 403,
             "method": "GET",
-            "checked_at": "2026-07-10T19:37:21.742Z",
+            "checked_at": "2026-07-12T01:01:20.978Z",
             "final_url": "https://ak.hycdn.cn/apk/202010281505-1201-f75c49dbdd52c3d0d02f/arknights-hg-1201.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 1607689957,
+            "content_type": "application/xml",
+            "size": 334,
             "last_modified": "Fri, 06 Sep 2024 02:50:29 GMT",
             "etag": "B8A675EE3777BBDC68A7C7AEB33DB74A-400",
-            "error": "",
+            "error": "HTTP 403",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 13.051,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "high"
+        "confidence": "low"
       },
       "interpretation": {
-        "state": "available",
-        "reason": "range_probe_ok",
-        "preferred_url": "https://ak.hycdn.cn/apk/202010281505-1201-f75c49dbdd52c3d0d02f/arknights-hg-1201.apk",
-        "confidence": "high",
+        "state": "unknown",
+        "reason": "http_403",
+        "preferred_url": "",
+        "confidence": "low",
         "retained": false,
-        "display_label": "可用"
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
