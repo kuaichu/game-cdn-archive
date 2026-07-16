@@ -1,0 +1,58 @@
+[
+  {
+    "game_id": "bluearchive",
+    "version": "3.0.2",
+    "channel": "Official",
+    "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/b00bd36d8ac74ac19710ea89a3e72826/BlueArchive.apk",
+    "source": "official Blue Archive website bundle; versionName read from AndroidManifest.xml",
+    "source_url": "https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/index.0773252b.js",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 2126400085,
+    "last_modified": "Tue, 14 Jul 2026 03:07:35 GMT",
+    "etag": "9451C388DC9A4DD6D9E1A0BE855F7820-2028",
+    "md5": "",
+    "crc64": "",
+    "error": "",
+    "filename": "BlueArchive.apk",
+    "captured_at": "2026-07-16T06:40:00.593290+00:00",
+    "updated_at": "2026-07-14T03:07:35+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/b00bd36d8ac74ac19710ea89a3e72826/BlueArchive.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-16T06:40:00.593290+00:00",
+            "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/b00bd36d8ac74ac19710ea89a3e72826/BlueArchive.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2126400085,
+            "last_modified": "Tue, 14 Jul 2026 03:07:35 GMT",
+            "etag": "9451C388DC9A4DD6D9E1A0BE855F7820-2028",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.914,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/b00bd36d8ac74ac19710ea89a3e72826/BlueArchive.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]

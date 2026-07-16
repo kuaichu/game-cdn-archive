@@ -4,7 +4,7 @@
     "version": "2.1.2",
     "channel": "Official",
     "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
-    "source": "official Blue Archive website bundle; versionName read from AndroidManifest.xml",
+    "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
     "source_url": "https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/index.29e2b169.js",
     "status": 200,
     "content_type": "application/vnd.android.package-archive",
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.752,
+            "age_hours": 7.277,
             "scheduler_confidence": "high"
           }
         }
