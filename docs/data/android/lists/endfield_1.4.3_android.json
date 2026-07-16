@@ -1,0 +1,60 @@
+[
+  {
+    "game_id": "endfield",
+    "version": "1.4.3",
+    "channel": "official",
+    "url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
+    "source": "official Hypergryph latest APK endpoint; resolves to a CDN URL",
+    "source_url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
+    "archive_url": "https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.4/package/1/1/Android/1.4.3_N3kXcstgi31V2hpt/endfield-hg-1-1.4.3.apk",
+    "archive_note": "CDN object path resolved during sync; temporary signature omitted.",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 993840184,
+    "last_modified": "Mon, 13 Jul 2026 03:19:02 GMT",
+    "etag": "AAB0E7C131A156E9FF660EFEBAFF5601-388",
+    "md5": "",
+    "crc64": "",
+    "error": "",
+    "filename": "endfield-hg-1-1.4.3.apk",
+    "captured_at": "2026-06-06T18:35:34.842095+00:00",
+    "updated_at": "2026-07-13T03:19:02+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-16T00:18:14.541213+00:00",
+            "final_url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 993840184,
+            "last_modified": "Mon, 13 Jul 2026 03:19:02 GMT",
+            "etag": "AAB0E7C131A156E9FF660EFEBAFF5601-388",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.866,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]

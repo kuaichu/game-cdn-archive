@@ -32,22 +32,22 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 17.602,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unknown",
+        "state": "available",
         "reason": "range_probe_ok",
-        "preferred_url": "",
-        "confidence": "low",
+        "preferred_url": "https://autopatchcn.yuanshen.com/client_app/Android/20201111_c957958f02d43b5b/yuanshen_1.1.0_mihoyo.apk",
+        "confidence": "high",
         "retained": false,
-        "display_label": "状态未知"
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

@@ -27,7 +27,7 @@
             "ok": true,
             "status": 200,
             "method": "GET",
-            "checked_at": "2026-07-15T01:13:03.694Z",
+            "checked_at": "2026-07-16T01:03:15.977Z",
             "final_url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
             "content_type": "text/html",
             "size": 29190,
@@ -36,7 +36,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 6.276,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -52,62 +52,6 @@
         "confidence": "low",
         "retained": false,
         "display_label": "状态未知"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
-  },
-  {
-    "game_id": "aethergazer",
-    "version": "0.306.120",
-    "channel": "gwdl",
-    "url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-    "source": "official Aether Gazer Android download endpoint; resolves to a CDN URL",
-    "source_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-    "archive_url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
-    "archive_note": "CDN URL captured during sync",
-    "status": 404,
-    "content_type": "text/html",
-    "size": 0,
-    "last_modified": "",
-    "etag": "",
-    "md5": "",
-    "crc64": "",
-    "error": "APK object unavailable",
-    "filename": "ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
-    "captured_at": "2026-07-15T06:35:44.739476+00:00",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-          "probe": {
-            "ok": false,
-            "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-15T06:35:44.739476+00:00",
-            "final_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
-            "content_type": "text/html",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "APK object unavailable",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 0.898,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "low"
-      },
-      "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
-        "preferred_url": "",
-        "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
