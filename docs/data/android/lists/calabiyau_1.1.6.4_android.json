@@ -4,7 +4,7 @@
     "version": "1.1.6.4",
     "channel": "official",
     "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
-    "source": "official Calabiyau website HTML; versionName read from AndroidManifest.xml",
+    "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
     "source_url": "https://klbqm.idreamsky.com/",
     "updated_at": "2025-10-22T23:42:15+00:00",
     "updated_at_source": "official_config",
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.903,
+            "age_hours": 7.062,
             "scheduler_confidence": "high"
           }
         }
