@@ -12,7 +12,7 @@
     "etag": "",
     "md5": "",
     "crc64": "",
-    "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+    "error": "<urlopen error [Errno -5] No address associated with hostname>",
     "filename": "20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja% Noir_guofu.apk",
     "captured_at": "2026-07-06T00:21:43.092679+00:00",
     "updated_at": "2019-11-21T20:33:21+00:00",
@@ -24,9 +24,9 @@
           "probe": {
             "ok": false,
             "status": 0,
-            "method": "GET",
-            "checked_at": "2026-07-18T01:01:28.079Z",
-            "final_url": "",
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-20T18:20:19.227345+00:00",
+            "final_url": "https://app.bh3.com/public/Android/20191121-203321-gf_android_ota-versions-v3_6-32gfandroid_Ninja%%20Noir_guofu.apk",
             "content_type": "",
             "size": 0,
             "last_modified": "",
@@ -34,7 +34,7 @@
             "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 0.83,
             "scheduler_confidence": "high"
           }
         }
@@ -61,14 +61,14 @@
     "url": "http://app.bh3.com/public/Android/20191202-153409-gf_android_ota-versions-v3_6-ARM64_guofu.apk",
     "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
     "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/3.6.md",
-    "status": 404,
-    "content_type": "application/xml",
+    "status": 0,
+    "content_type": "",
     "size": 0,
     "last_modified": "",
     "etag": "",
     "md5": "",
     "crc64": "",
-    "error": "APK object unavailable",
+    "error": "<urlopen error [Errno -5] No address associated with hostname>",
     "filename": "20191202-153409-gf_android_ota-versions-v3_6-ARM64_guofu.apk",
     "captured_at": "2026-07-10T06:37:54.844642+00:00",
     "updated_at": "2019-12-02T15:34:09+00:00",
@@ -80,9 +80,9 @@
           "probe": {
             "ok": false,
             "status": 0,
-            "method": "GET",
-            "checked_at": "2026-07-18T01:01:28.264Z",
-            "final_url": "",
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-20T18:20:19.227345+00:00",
+            "final_url": "http://app.bh3.com/public/Android/20191202-153409-gf_android_ota-versions-v3_6-ARM64_guofu.apk",
             "content_type": "",
             "size": 0,
             "last_modified": "",
@@ -90,7 +90,7 @@
             "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 0.83,
             "scheduler_confidence": "high"
           }
         }

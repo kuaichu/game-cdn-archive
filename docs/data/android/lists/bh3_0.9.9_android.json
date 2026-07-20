@@ -12,7 +12,7 @@
     "etag": "",
     "md5": "",
     "crc64": "",
-    "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+    "error": "<urlopen error [Errno -5] No address associated with hostname>",
     "filename": "20160927-204034-gf_android-versions-v0_9_9_android-4R-797e295-ASB-mono_guofu.apk",
     "captured_at": "2026-06-08T18:34:52.700463+00:00",
     "updated_at": "2016-09-27T20:40:34+00:00",
@@ -24,9 +24,9 @@
           "probe": {
             "ok": false,
             "status": 0,
-            "method": "GET",
-            "checked_at": "2026-07-18T01:01:30.029Z",
-            "final_url": "",
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-20T18:20:19.227345+00:00",
+            "final_url": "https://app.bh3.com/public/Android/20160927-204034-gf_android-versions-v0_9_9_android-4R-797e295-ASB-mono_guofu.apk",
             "content_type": "",
             "size": 0,
             "last_modified": "",
@@ -34,7 +34,7 @@
             "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 0.83,
             "scheduler_confidence": "high"
           }
         }

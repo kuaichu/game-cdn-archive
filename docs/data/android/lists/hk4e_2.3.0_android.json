@@ -8,14 +8,14 @@
     "status": 200,
     "content_type": "application/vnd.android.package-archive",
     "size": 258637118,
-    "last_modified": "Mon, 15 Nov 2021 03:28:01 GMT",
-    "etag": "0460F2DFC3AD3AB7E602B0D812281A60-10",
+    "last_modified": "Tue, 19 Apr 2022 10:27:24 GMT",
+    "etag": "571b8a972079e78411189a4b736264a6",
     "md5": "",
-    "crc64": "",
+    "crc64": "15391687249296496072",
     "error": "",
     "filename": "yuanshen_2.3.0_mihoyo.apk",
     "captured_at": "2026-06-08T17:43:05.181300+00:00",
-    "updated_at": "2021-11-15T03:28:01+00:00",
+    "updated_at": "2022-04-19T10:27:24+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
@@ -23,9 +23,9 @@
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20211115112423_mcqMxJ8RGidTl6Ho/mihoyo/yuanshen_2.3.0_mihoyo.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-07-18T00:59:44.228Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-20T18:20:19.227345+00:00",
             "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20211115112423_mcqMxJ8RGidTl6Ho/mihoyo/yuanshen_2.3.0_mihoyo.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 258637118,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 0.826,
             "scheduler_confidence": "high"
           }
         }
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20211115112423_mcqMxJ8RGidTl6Ho/mihoyo/yuanshen_2.3.0_mihoyo.apk",
         "confidence": "high",
         "retained": false,

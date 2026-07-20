@@ -12,7 +12,7 @@
     "etag": "",
     "md5": "",
     "crc64": "",
-    "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+    "error": "<urlopen error [Errno -5] No address associated with hostname>",
     "filename": "20170525-android_versions-v1_5_Theresa_Fight_guofu.apk",
     "captured_at": "2026-06-06T07:29:12.631982+00:00",
     "availability": {
@@ -22,9 +22,9 @@
           "probe": {
             "ok": false,
             "status": 0,
-            "method": "GET",
-            "checked_at": "2026-07-18T01:01:29.824Z",
-            "final_url": "",
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-20T18:20:19.227345+00:00",
+            "final_url": "http://app.bh3.com/public/Android/20170525-android_versions-v1_5_Theresa_Fight_guofu.apk",
             "content_type": "",
             "size": 0,
             "last_modified": "",
@@ -32,7 +32,7 @@
             "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 0.83,
             "scheduler_confidence": "high"
           }
         }

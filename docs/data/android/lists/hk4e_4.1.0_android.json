@@ -24,17 +24,17 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "GET",
-            "checked_at": "2026-07-18T00:59:16.039Z",
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-20T18:20:19.227345+00:00",
             "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20230919105032_n8MbYGE88BYwQa6j/mihoyo/yuanshen_4.1.0.apk",
             "content_type": "application/xml",
-            "size": 362,
+            "size": 0,
             "last_modified": "",
             "etag": "",
-            "error": "HTTP 404",
+            "error": "APK object unavailable",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 0.826,
             "scheduler_confidence": "high"
           }
         }

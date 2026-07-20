@@ -8,14 +8,14 @@
     "status": 200,
     "content_type": "text/plain",
     "size": 3,
-    "last_modified": "Fri, 20 Sep 2024 09:38:51 GMT",
+    "last_modified": "Mon, 24 Mar 2025 08:36:40 GMT",
     "etag": "06377DB9F4697DA95000A32DC53F1B61",
     "md5": "",
     "crc64": "15949246268997603124",
     "error": "",
     "filename": "StarRail_2.3.0.apk",
     "captured_at": "2026-06-08T15:56:33.817046+00:00",
-    "updated_at": "2024-09-20T09:38:51+00:00",
+    "updated_at": "2025-03-24T08:36:40+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
@@ -23,18 +23,18 @@
           "url": "https://autopatchcn.bhsr.com/client/cn/20240608161617_2zjrqfLT5RZmEzcR/gw/StarRail_2.3.0.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-07-18T01:00:36.265Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-20T18:20:19.227345+00:00",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20240608161617_2zjrqfLT5RZmEzcR/gw/StarRail_2.3.0.apk",
             "content_type": "text/plain",
             "size": 3,
-            "last_modified": "Fri, 20 Sep 2024 09:38:51 GMT",
+            "last_modified": "Mon, 24 Mar 2025 08:36:40 GMT",
             "etag": "06377DB9F4697DA95000A32DC53F1B61",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 0.827,
             "scheduler_confidence": "high"
           }
         }

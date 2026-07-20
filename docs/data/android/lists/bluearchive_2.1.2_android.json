@@ -5,7 +5,6 @@
     "channel": "Official",
     "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
     "source": "official CDN URL captured manually; versionName read from AndroidManifest.xml",
-    "source_url": "https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/index.29e2b169.js",
     "status": 200,
     "content_type": "application/vnd.android.package-archive",
     "size": 1723356917,
@@ -24,9 +23,9 @@
           "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-07-18T00:56:13.808Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-20T18:20:19.227345+00:00",
             "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 1723356917,
@@ -35,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 0.822,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
         "confidence": "high",
         "retained": false,
