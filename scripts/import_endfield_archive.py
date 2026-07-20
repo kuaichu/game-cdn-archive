@@ -26,6 +26,24 @@ def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def load_archive_inputs(archive_root: Path) -> tuple[list, list, list]:
+    game_dir = archive_root / "output" / "akEndfield" / "launcher" / "game" / "1"
+    paths = (
+        game_dir / "all.json",
+        game_dir / "all_patch.json",
+        archive_root / "output" / "mirror_file_list.json",
+    )
+    missing = [path for path in paths if not path.is_file()]
+    if missing:
+        missing_list = "\n".join(f"  - {path}" for path in missing)
+        raise FileNotFoundError(
+            "Endfield upstream archive inputs are missing. Clone the upstream "
+            "repository's archive branch, not its default main branch.\n"
+            f"Missing files:\n{missing_list}"
+        )
+    return tuple(load_json(path) for path in paths)
+
+
 def strip_query(url: str) -> str:
     parts = urlsplit(url)
     return urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
@@ -160,10 +178,7 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    game_dir = args.archive_root / "output" / "akEndfield" / "launcher" / "game" / "1"
-    full_records = load_json(game_dir / "all.json")
-    patch_records = load_json(game_dir / "all_patch.json")
-    mirror_records = load_json(args.archive_root / "output" / "mirror_file_list.json")
+    full_records, patch_records, mirror_records = load_archive_inputs(args.archive_root)
     mirrors = {item["orig"]: item for item in mirror_records}
 
     full_by_version: dict[str, dict] = {}

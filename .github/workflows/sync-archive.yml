@@ -321,16 +321,33 @@ jobs:
           GHA_RUN_RETRY_DELAY: 20
         run: bash scripts/gha_run_step.sh "Refresh HoyoFiles data" python scripts/sync_hoyofiles.py
 
+      - name: Test Endfield sync contract
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'endfield'
+        run: python scripts/test_endfield_sync.py
+
       - name: Clone Endfield upstream archive
         if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'endfield'
         env:
           GHA_RUN_RETRIES: 2
           GHA_RUN_RETRY_DELAY: 20
-        run: bash scripts/gha_run_step.sh "Clone Endfield upstream archive" git clone --depth 1 https://github.com/daydreamer-json/ak-endfield-api-archive.git /tmp/ak-endfield-api-archive
+        run: bash scripts/gha_run_step.sh "Clone Endfield upstream archive" bash scripts/checkout_endfield_archive.sh /tmp/ak-endfield-api-archive
 
-      - name: Refresh Endfield data
+      - name: Stage Endfield data
         if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'endfield'
-        run: bash scripts/gha_run_step.sh "Refresh Endfield data" python scripts/import_endfield_archive.py /tmp/ak-endfield-api-archive
+        run: bash scripts/gha_run_step.sh "Stage Endfield data" python scripts/import_endfield_archive.py /tmp/ak-endfield-api-archive --output docs/data/endfield/staging
+
+      - name: Validate staged Endfield data
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'endfield'
+        run: bash scripts/gha_run_step.sh "Validate staged Endfield data" python scripts/validate_endfield_archive.py --root docs/data/endfield/staging
+
+      - name: Promote Endfield data
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'endfield'
+        run: bash scripts/gha_run_step.sh "Promote Endfield data" python scripts/promote_endfield_staging.py
+
+      - name: Clean Endfield staging data
+        if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'endfield'
+        shell: bash
+        run: rm -rf -- docs/data/endfield/staging
 
       - name: Validate Endfield data
         if: env.SYNC_SCOPE == 'all' || env.SYNC_SCOPE == 'endfield'
