@@ -3,7 +3,7 @@
     "game_id": "gf2",
     "version": "3.0.0",
     "channel": "gwaz",
-    "url": "https://mica-download.sunborngame.com/p2/apk/3532/1744344831_signed_aligned_ReYun_gwaz_GW_Build_CN_878_7155_9889_1744280284_3532_100.apk?auth_key=1784571744-02079270463292309504-0-72eff250ce4d292269c4790fdac3dff2",
+    "url": "https://mica-download.sunborngame.com/p2/apk/3532/1744344831_signed_aligned_ReYun_gwaz_GW_Build_CN_878_7155_9889_1744280284_3532_100.apk?auth_key=1784593329-02079360998631800832-0-9e70b4c7370ec45c94d321518ea5fd89",
     "source": "official Sunborn download API; resolves to a short-lived signed APK URL",
     "source_url": "https://gf2-web-preregister-api.sunborngame.com/website/url_manage?timestamp=1780775971&nonce=c20j1x&sign=74ca012c6a9ef865f150e6613462bb5a",
     "signed_url": true,
@@ -23,13 +23,13 @@
     "availability": {
       "candidates": [
         {
-          "url": "https://mica-download.sunborngame.com/p2/apk/3532/1744344831_signed_aligned_ReYun_gwaz_GW_Build_CN_878_7155_9889_1744280284_3532_100.apk?auth_key=1784571744-02079270463292309504-0-72eff250ce4d292269c4790fdac3dff2",
+          "url": "https://mica-download.sunborngame.com/p2/apk/3532/1744344831_signed_aligned_ReYun_gwaz_GW_Build_CN_878_7155_9889_1744280284_3532_100.apk?auth_key=1784593329-02079360998631800832-0-9e70b4c7370ec45c94d321518ea5fd89",
           "probe": {
             "ok": true,
             "status": 200,
             "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-20T18:20:19.227345+00:00",
-            "final_url": "https://mica-download.sunborngame.com/p2/apk/3532/1744344831_signed_aligned_ReYun_gwaz_GW_Build_CN_878_7155_9889_1744280284_3532_100.apk?auth_key=1784571744-02079270463292309504-0-72eff250ce4d292269c4790fdac3dff2",
+            "checked_at": "2026-07-21T00:18:53.407650+00:00",
+            "final_url": "https://mica-download.sunborngame.com/p2/apk/3532/1744344831_signed_aligned_ReYun_gwaz_GW_Build_CN_878_7155_9889_1744280284_3532_100.apk?auth_key=1784593329-02079360998631800832-0-9e70b4c7370ec45c94d321518ea5fd89",
             "content_type": "application/vnd.android.package-archive",
             "size": 1852239327,
             "last_modified": "Mon, 14 Apr 2025 15:20:37 GMT",
@@ -37,7 +37,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.83,
+            "age_hours": 0.851,
             "scheduler_confidence": "high"
           }
         }
@@ -49,7 +49,7 @@
       "interpretation": {
         "state": "available",
         "reason": "http_2xx",
-        "preferred_url": "https://mica-download.sunborngame.com/p2/apk/3532/1744344831_signed_aligned_ReYun_gwaz_GW_Build_CN_878_7155_9889_1744280284_3532_100.apk?auth_key=1784571744-02079270463292309504-0-72eff250ce4d292269c4790fdac3dff2",
+        "preferred_url": "https://mica-download.sunborngame.com/p2/apk/3532/1744344831_signed_aligned_ReYun_gwaz_GW_Build_CN_878_7155_9889_1744280284_3532_100.apk?auth_key=1784593329-02079360998631800832-0-9e70b4c7370ec45c94d321518ea5fd89",
         "confidence": "high",
         "retained": false,
         "display_label": "可用"

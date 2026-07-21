@@ -24,17 +24,17 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-20T18:20:19.227345+00:00",
+            "method": "GET",
+            "checked_at": "2026-07-21T01:06:41.661Z",
             "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.1.8.0.96.202405271642.apk",
             "content_type": "application/xml",
-            "size": 0,
+            "size": 486,
             "last_modified": "",
             "etag": "",
-            "error": "APK object unavailable",
+            "error": "HTTP 404",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.822,
+            "age_hours": 0,
             "scheduler_confidence": "high"
           }
         }

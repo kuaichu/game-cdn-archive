@@ -24,9 +24,9 @@
           "probe": {
             "ok": false,
             "status": 0,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-20T18:20:19.227345+00:00",
-            "final_url": "http://app.bh3.com/public/Android/20170407-184918-gf_android_ota-versions-v1_4-4R-6d1fb22-ASB-il2cpp_guofu.apk",
+            "method": "GET",
+            "checked_at": "2026-07-21T01:07:48.743Z",
+            "final_url": "",
             "content_type": "",
             "size": 0,
             "last_modified": "",
@@ -34,7 +34,7 @@
             "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.83,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

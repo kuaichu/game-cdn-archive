@@ -24,17 +24,17 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-20T18:20:19.227345+00:00",
+            "method": "GET",
+            "checked_at": "2026-07-21T01:07:40.452Z",
             "final_url": "https://bundle.bh3.com/public/Android/20220302-235837-gf_android_ota-versions-v5_6-Elysian_Reverie_guofu.apk",
             "content_type": "text/html",
-            "size": 0,
+            "size": 137,
             "last_modified": "Tue, 28 Feb 2023 10:25:46 GMT",
             "etag": "60B0F4630F6F13F329E338B74014282D",
-            "error": "APK object unavailable",
+            "error": "HTTP 404",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.83,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

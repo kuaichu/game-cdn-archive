@@ -24,17 +24,17 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-20T18:20:19.227345+00:00",
+            "method": "GET",
+            "checked_at": "2026-07-21T01:07:24.438Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20230527110540_Kt2XHQtmHSq920j9/StarRail_1.1.0_gw.apk",
             "content_type": "application/xml",
-            "size": 0,
+            "size": 340,
             "last_modified": "",
             "etag": "",
-            "error": "APK object unavailable",
+            "error": "HTTP 404",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.827,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

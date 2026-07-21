@@ -31,17 +31,17 @@
           "probe": {
             "ok": false,
             "status": 0,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-20T18:20:19.227345+00:00",
-            "final_url": "https://mirrors-package-mc.kurogame.com/client/download/20230418111737_A4Xe1fhoNEOpWYsVfy/mc_0.7.0_72216273_9e6c7cc5565764257c2866c25d4e3c10_shelled.apk",
+            "method": "GET",
+            "checked_at": "2026-07-21T01:07:06.748Z",
+            "final_url": "",
             "content_type": "",
             "size": 0,
             "last_modified": "",
             "etag": "",
-            "error": "<urlopen error [Errno -2] Name or service not known>",
+            "error": "dns: <urlopen error [Errno -2] Name or service not known>",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.825,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -52,7 +52,7 @@
       },
       "interpretation": {
         "state": "unknown",
-        "reason": "not_probed",
+        "reason": "dns_error",
         "preferred_url": "",
         "confidence": "low",
         "retained": false,

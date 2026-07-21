@@ -23,18 +23,18 @@
           "url": "https://ak.hycdn.cn/apk/202104141056-1501-ddfegbjv0zp6gj9r138x/arknights-hg-1501.apk",
           "probe": {
             "ok": false,
-            "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-20T18:20:19.227345+00:00",
+            "status": 403,
+            "method": "GET",
+            "checked_at": "2026-07-21T01:09:08.913Z",
             "final_url": "https://ak.hycdn.cn/apk/202104141056-1501-ddfegbjv0zp6gj9r138x/arknights-hg-1501.apk",
             "content_type": "application/xml",
-            "size": 0,
+            "size": 334,
             "last_modified": "Fri, 06 Sep 2024 03:18:15 GMT",
             "etag": "DB2EE8F0DEE48E10FDC49269D82CE58B-400",
-            "error": "APK object unavailable",
+            "error": "HTTP 403",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.83,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -44,12 +44,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
+        "state": "unknown",
+        "reason": "http_403",
         "preferred_url": "",
         "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "retained": false,
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
