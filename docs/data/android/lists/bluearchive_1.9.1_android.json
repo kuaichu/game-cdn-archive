@@ -31,8 +31,8 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "CURL_GET",
-            "checked_at": "2026-07-22T01:00:49.759Z",
+            "method": "GET",
+            "checked_at": "2026-07-22T07:50:04.775Z",
             "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/task_game_apk/official/1.9.1/BlueArchive_official_1.9.1_0718_1.apk",
             "content_type": "application/xml",
             "size": 448,
