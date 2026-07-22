@@ -23,18 +23,18 @@
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20230807114707_aYkNEDtpSvHXDdWO/mihoyo/yuanshen_4.0.0.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-20T18:20:19.227345+00:00",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-22T01:05:07.179Z",
             "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20230807114707_aYkNEDtpSvHXDdWO/mihoyo/yuanshen_4.0.0.apk",
-            "content_type": "application/vnd.android.package-archive",
+            "content_type": "application/vnd.android.package-archive;charset=UTF-8",
             "size": 385910767,
-            "last_modified": "Tue, 08 Aug 2023 08:24:12 GMT",
-            "etag": "07548e6efecd17cd0c52d6168a830fdf",
+            "last_modified": "Mon, 07 Aug 2023 06:17:19 GMT",
+            "etag": "luWdwBpldfdXkeq6l1spVYmvGeYn",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 14.107,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20230807114707_aYkNEDtpSvHXDdWO/mihoyo/yuanshen_4.0.0.apk",
         "confidence": "high",
         "retained": false,
