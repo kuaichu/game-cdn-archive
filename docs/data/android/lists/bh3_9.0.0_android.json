@@ -1,0 +1,58 @@
+[
+  {
+    "game_id": "bh3",
+    "version": "9.0.0",
+    "channel": "20260715154830_irZOIRldy2vFHp3T",
+    "url": "https://autopatchcn.bh3.com/ptpublic/rel/20260715154830_irZOIRldy2vFHp3T/20260709-005224-gf_android_ota-versions-v9_0-Dreams_End_gw.apk",
+    "source": "official download porter latest endpoint",
+    "source_url": "https://act-api-takumi.mihoyo.com/event/download_porter/link/bh3_cn/bh3/android_gw",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 699364580,
+    "last_modified": "Wed, 15 Jul 2026 08:07:50 GMT",
+    "etag": "F5B35E278645CB1F55FE49E242405BD7-10",
+    "md5": "",
+    "crc64": "",
+    "error": "",
+    "filename": "20260709-005224-gf_android_ota-versions-v9_0-Dreams_End_gw.apk",
+    "captured_at": "2026-07-23T00:32:30.123677+00:00",
+    "updated_at": "2026-07-15T08:07:50+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://autopatchcn.bh3.com/ptpublic/rel/20260715154830_irZOIRldy2vFHp3T/20260709-005224-gf_android_ota-versions-v9_0-Dreams_End_gw.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-23T00:32:30.123677+00:00",
+            "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20260715154830_irZOIRldy2vFHp3T/20260709-005224-gf_android_ota-versions-v9_0-Dreams_End_gw.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 699364580,
+            "last_modified": "Wed, 15 Jul 2026 08:07:50 GMT",
+            "etag": "F5B35E278645CB1F55FE49E242405BD7-10",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.487,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20260715154830_irZOIRldy2vFHp3T/20260709-005224-gf_android_ota-versions-v9_0-Dreams_End_gw.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
