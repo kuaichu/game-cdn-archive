@@ -1,0 +1,60 @@
+[
+  {
+    "game_id": "aethergazer",
+    "version": "0.307.210",
+    "channel": "gwdl",
+    "url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
+    "source": "official Aether Gazer Android download endpoint; resolves to a CDN URL",
+    "source_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
+    "archive_url": "https://packaging.ys4fun.com/package/channel/307/ali_prod_307_1_ys4fun_20260707111153_M01000000_SkBESzM0_sign.apk",
+    "archive_note": "CDN URL captured during sync",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 2025016606,
+    "last_modified": "Mon, 13 Jul 2026 07:17:06 GMT",
+    "etag": "5A5588AAE08B7B7341988CC3E4886B36-194",
+    "md5": "",
+    "crc64": "11775326794904019032",
+    "error": "",
+    "filename": "ali_prod_307_1_ys4fun_20260707111153_M01000000_SkBESzM0_sign.apk",
+    "captured_at": "2026-07-24T06:51:46.403392+00:00",
+    "updated_at": "2026-07-13T07:17:06+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-07-24T06:51:46.403392+00:00",
+            "final_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2025016606,
+            "last_modified": "Mon, 13 Jul 2026 07:17:06 GMT",
+            "etag": "5A5588AAE08B7B7341988CC3E4886B36-194",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.981,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
