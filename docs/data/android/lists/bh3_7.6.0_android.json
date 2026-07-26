@@ -24,9 +24,9 @@
           "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240624104231_kQdR9e8gTqYZeAgW/CPS/20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-25T00:29:38.843805+00:00",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-07-26T01:32:19.887Z",
             "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240624104231_kQdR9e8gTqYZeAgW/CPS/20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 628088256,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 7.189,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240624104231_kQdR9e8gTqYZeAgW/CPS/20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
         "confidence": "high",
         "retained": false,
