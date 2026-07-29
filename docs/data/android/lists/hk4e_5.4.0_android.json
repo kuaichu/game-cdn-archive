@@ -23,15 +23,15 @@
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20250125201545_gha0IQ1BkLIOw6B4/mihoyo/yuanshen_5.4.0.apk",
           "probe": {
             "ok": false,
-            "status": 404,
+            "status": 0,
             "method": "GET",
-            "checked_at": "2026-07-29T01:23:55.585Z",
-            "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20250125201545_gha0IQ1BkLIOw6B4/mihoyo/yuanshen_5.4.0.apk",
-            "content_type": "application/xml",
-            "size": 362,
+            "checked_at": "2026-07-29T08:15:09.898Z",
+            "final_url": "",
+            "content_type": "",
+            "size": 0,
             "last_modified": "",
             "etag": "",
-            "error": "HTTP 404",
+            "error": "timeout",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0.0,
@@ -44,12 +44,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
+        "state": "unknown",
+        "reason": "http_timeout",
         "preferred_url": "",
         "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "retained": false,
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
