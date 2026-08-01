@@ -2,7 +2,7 @@
   "source": "https://github.com/daydreamer-json/ak-endfield-api-archive",
   "source_site": "https://ak-endfield-api-archive.daydreamer-json.cc/",
   "official_api": "https://launcher.hypergryph.com/api/game/get_latest?appcode=6LL0KJuqHBVz33WK&launcher_appcode=abYeZZ16BPluCFyT&channel=1&sub_channel=1&launcher_sub_channel=1",
-  "last_checked_at": "2026-07-31T07:25:53.433162+00:00",
+  "last_checked_at": "2026-08-01T00:22:37.559397+00:00",
   "generated_from_observation": "2026-07-15T22:25:41.725+00:00",
   "game": {
     "id": "endfield",
@@ -22,12 +22,10 @@
       "unpacked_size": 112037239895,
       "mirror_items": 50,
       "availability_counts": {
-        "available": 86,
-        "mirror_only": 50
+        "mirror_only": 136
       },
       "availability_reasons": {
-        "mirror_fallback": 50,
-        "not_probed": 86
+        "mirror_fallback": 136
       },
       "availability": {
         "candidates": [
@@ -37,7 +35,7 @@
               "ok": false,
               "status": 0,
               "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-31T07:25:53.433162+00:00",
+              "checked_at": "2026-08-01T00:22:37.559397+00:00",
               "final_url": "endfield-upstream://1.4.4",
               "content_type": "",
               "size": 0,
@@ -61,7 +59,7 @@
           "preferred_url": "",
           "confidence": "medium",
           "retained": false,
-          "display_label": "官方过期"
+          "display_label": "镜像可用"
         },
         "generated_by": "scripts/build_endfield_availability.py"
       }
@@ -90,7 +88,7 @@
               "ok": false,
               "status": 0,
               "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-31T07:25:53.433162+00:00",
+              "checked_at": "2026-08-01T00:22:37.559397+00:00",
               "final_url": "endfield-upstream://1.3.3",
               "content_type": "",
               "size": 0,
@@ -141,7 +139,7 @@
               "ok": false,
               "status": 0,
               "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-31T07:25:53.433162+00:00",
+              "checked_at": "2026-08-01T00:22:37.559397+00:00",
               "final_url": "endfield-upstream://1.2.5",
               "content_type": "",
               "size": 0,
@@ -192,7 +190,7 @@
               "ok": false,
               "status": 0,
               "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-31T07:25:53.433162+00:00",
+              "checked_at": "2026-08-01T00:22:37.559397+00:00",
               "final_url": "endfield-upstream://1.2.4",
               "content_type": "",
               "size": 0,
@@ -243,7 +241,7 @@
               "ok": false,
               "status": 0,
               "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-31T07:25:53.433162+00:00",
+              "checked_at": "2026-08-01T00:22:37.559397+00:00",
               "final_url": "endfield-upstream://1.1.9",
               "content_type": "",
               "size": 0,
@@ -296,7 +294,7 @@
               "ok": false,
               "status": 0,
               "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-31T07:25:53.433162+00:00",
+              "checked_at": "2026-08-01T00:22:37.559397+00:00",
               "final_url": "endfield-upstream://1.0.14",
               "content_type": "",
               "size": 0,
@@ -347,7 +345,7 @@
               "ok": false,
               "status": 0,
               "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-31T07:25:53.433162+00:00",
+              "checked_at": "2026-08-01T00:22:37.559397+00:00",
               "final_url": "endfield-upstream://1.0.13",
               "content_type": "",
               "size": 0,
@@ -398,7 +396,7 @@
               "ok": false,
               "status": 0,
               "method": "UPSTREAM_ARCHIVE",
-              "checked_at": "2026-07-31T07:25:53.433162+00:00",
+              "checked_at": "2026-08-01T00:22:37.559397+00:00",
               "final_url": "endfield-upstream://0.5.27",
               "content_type": "",
               "size": 0,

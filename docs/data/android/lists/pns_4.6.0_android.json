@@ -24,9 +24,9 @@
           "url": "https://zspms-txcdn-media.kurogame.com/install/20260717-v4_6-zspms_A1372.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-07-31T00:28:44.895088+00:00",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-08-01T03:05:34.319Z",
             "final_url": "https://zspms-txcdn-media.kurogame.com/install/20260717-v4_6-zspms_A1372.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2086642875,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 8.336,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://zspms-txcdn-media.kurogame.com/install/20260717-v4_6-zspms_A1372.apk",
         "confidence": "high",
         "retained": false,
@@ -82,7 +82,7 @@
             "ok": true,
             "status": 206,
             "method": "GET",
-            "checked_at": "2026-07-31T01:57:30.668Z",
+            "checked_at": "2026-08-01T03:05:36.809Z",
             "final_url": "https://zspms-txcdn-media.kurogame.com/install/20260717-v4_6-zspms_A1346.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2086524091,
@@ -91,7 +91,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 6.857,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
