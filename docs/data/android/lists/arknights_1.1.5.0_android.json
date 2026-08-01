@@ -24,8 +24,8 @@
           "probe": {
             "ok": false,
             "status": 403,
-            "method": "GET",
-            "checked_at": "2026-08-01T03:05:10.068Z",
+            "method": "CURL_GET",
+            "checked_at": "2026-08-01T09:47:43.034Z",
             "final_url": "https://ak.hycdn.cn/apk/202007081730-1150-774ce26c6443bf45e5f5/arknights-hg-1150.apk",
             "content_type": "application/xml",
             "size": 334,
