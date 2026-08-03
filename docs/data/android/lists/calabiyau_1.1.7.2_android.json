@@ -8,14 +8,14 @@
     "source_url": "https://klbqm.idreamsky.com/",
     "updated_at": "2025-10-22T23:42:15+00:00",
     "updated_at_source": "official_config",
-    "status": 404,
-    "content_type": "text/html; charset=UTF-8",
-    "size": 0,
-    "last_modified": "",
-    "etag": "",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 1960385298,
+    "last_modified": "Wed, 29 Jul 2026 23:05:29 GMT",
+    "etag": "a18fcd9db8f658ec3ee2b2b41b5c7e14",
     "md5": "",
-    "crc64": "",
-    "error": "APK object unavailable",
+    "crc64": "13358406610359567726",
+    "error": "",
     "filename": "klbqm_LD0S0N00011.apk",
     "captured_at": "2026-07-05T01:50:12.992811+00:00",
     "availability": {
@@ -23,34 +23,34 @@
         {
           "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
           "probe": {
-            "ok": false,
-            "status": 404,
+            "ok": true,
+            "status": 200,
             "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-08-02T07:00:40.846532+00:00",
+            "checked_at": "2026-08-03T00:38:08.399074+00:00",
             "final_url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
-            "content_type": "text/html; charset=UTF-8",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "APK object unavailable",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1960385298,
+            "last_modified": "Wed, 29 Jul 2026 23:05:29 GMT",
+            "etag": "a18fcd9db8f658ec3ee2b2b41b5c7e14",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 1.325,
+            "age_hours": 1.36,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
-        "preferred_url": "",
-        "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
