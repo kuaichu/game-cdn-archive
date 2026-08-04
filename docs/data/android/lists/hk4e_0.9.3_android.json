@@ -22,17 +22,17 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-08-04T00:37:47.844770+00:00",
+            "method": "GET",
+            "checked_at": "2026-08-04T08:45:18.282Z",
             "final_url": "https://autopatchcn.yuanshen.com/client_app/yuanshen_0.9.3.apk",
             "content_type": "application/xml",
-            "size": 0,
+            "size": 306,
             "last_modified": "",
             "etag": "",
-            "error": "APK object unavailable",
+            "error": "HTTP 404",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 1.923,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

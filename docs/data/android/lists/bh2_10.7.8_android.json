@@ -22,17 +22,17 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-08-04T00:37:47.844770+00:00",
+            "method": "GET",
+            "checked_at": "2026-08-04T08:52:14.089Z",
             "final_url": "https://static.benghuai.com/Download/v10_7/Original.StripResource_10.7.8_319_adz.shell.apk",
             "content_type": "application/xml",
-            "size": 0,
+            "size": 409,
             "last_modified": "",
             "etag": "",
-            "error": "APK object unavailable",
+            "error": "HTTP 404",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 1.927,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

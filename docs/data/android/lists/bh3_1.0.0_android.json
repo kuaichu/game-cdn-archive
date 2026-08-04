@@ -22,9 +22,9 @@
           "probe": {
             "ok": false,
             "status": 0,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-08-04T00:37:47.844770+00:00",
-            "final_url": "http://app.bh3.com/public/Android/0_gf_android-versions-v1_0_2nd-4R-b2b8e16-ASB-mono_guofu.apk",
+            "method": "GET",
+            "checked_at": "2026-08-04T08:48:24.507Z",
+            "final_url": "",
             "content_type": "",
             "size": 0,
             "last_modified": "",
@@ -32,7 +32,7 @@
             "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 1.927,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
