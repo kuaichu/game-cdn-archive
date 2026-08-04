@@ -23,18 +23,18 @@
           "url": "https://ak.hycdn.cn/apk/202309271907-2101-y0c1c0hpwmvo6svddz9v/arknights-hg-2101.apk",
           "probe": {
             "ok": false,
-            "status": 403,
-            "method": "GET",
-            "checked_at": "2026-08-03T02:05:30.938Z",
+            "status": 404,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-04T00:37:47.844770+00:00",
             "final_url": "https://ak.hycdn.cn/apk/202309271907-2101-y0c1c0hpwmvo6svddz9v/arknights-hg-2101.apk",
             "content_type": "application/xml",
-            "size": 334,
+            "size": 0,
             "last_modified": "Mon, 09 Sep 2024 02:46:59 GMT",
             "etag": "C43D3A26BD1F7F67A1A1DDC1BD09AF94-400",
-            "error": "HTTP 403",
+            "error": "APK object unavailable",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.927,
             "scheduler_confidence": "high"
           }
         }
@@ -44,12 +44,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unknown",
-        "reason": "http_403",
+        "state": "unavailable",
+        "reason": "retained_historical",
         "preferred_url": "",
         "confidence": "low",
-        "retained": false,
-        "display_label": "状态未知"
+        "retained": true,
+        "display_label": "链接失效"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

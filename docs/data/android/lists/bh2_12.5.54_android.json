@@ -22,17 +22,17 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "GET",
-            "checked_at": "2026-08-03T02:06:50.668Z",
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-04T00:37:47.844770+00:00",
             "final_url": "https://static.benghuai.com/Download/v12_5/Mix_12.5.54_335.shell.apk",
             "content_type": "application/xml",
-            "size": 387,
+            "size": 0,
             "last_modified": "",
             "etag": "",
-            "error": "HTTP 404",
+            "error": "APK object unavailable",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.927,
             "scheduler_confidence": "high"
           }
         }
@@ -75,17 +75,17 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "GET",
-            "checked_at": "2026-08-03T02:06:50.846Z",
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-04T00:37:47.844770+00:00",
             "final_url": "https://static.benghuai.com/Download/v12_5/Mix_12.5.54_335_v1.shell.apk",
             "content_type": "application/xml",
-            "size": 390,
+            "size": 0,
             "last_modified": "",
             "etag": "",
-            "error": "HTTP 404",
+            "error": "APK object unavailable",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.927,
             "scheduler_confidence": "high"
           }
         }

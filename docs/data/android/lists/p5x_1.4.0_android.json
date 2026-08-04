@@ -23,9 +23,9 @@
           "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_6198_baidupcpz_20250402.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-08-03T01:59:25.200Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-04T00:37:47.844770+00:00",
             "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_6198_baidupcpz_20250402.apk",
             "content_type": "application/octet-stream",
             "size": 1809704417,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.872,
             "scheduler_confidence": "high"
           }
         }
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_6198_baidupcpz_20250402.apk",
         "confidence": "high",
         "retained": false,
@@ -81,7 +81,7 @@
             "ok": true,
             "status": 206,
             "method": "GET",
-            "checked_at": "2026-08-03T01:59:27.170Z",
+            "checked_at": "2026-08-04T02:30:07.950Z",
             "final_url": "https://p5xapk.wmupd.com/webops/p5x/laohu_p5x_20250408.apk",
             "content_type": "application/octet-stream",
             "size": 1812944992,

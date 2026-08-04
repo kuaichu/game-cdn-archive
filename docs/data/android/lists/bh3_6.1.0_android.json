@@ -24,17 +24,17 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "GET",
-            "checked_at": "2026-08-03T02:04:36.927Z",
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-04T00:37:47.844770+00:00",
             "final_url": "https://bundle.bh3.com/public/Android/20220922-171040-gf_android_ota-versions-v6_1-Moonshade_Epic_guofu.apk",
             "content_type": "text/html",
-            "size": 137,
+            "size": 0,
             "last_modified": "Tue, 28 Feb 2023 10:25:46 GMT",
             "etag": "60B0F4630F6F13F329E338B74014282D",
-            "error": "HTTP 404",
+            "error": "APK object unavailable",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.927,
             "scheduler_confidence": "high"
           }
         }
