@@ -23,7 +23,7 @@
             "ok": false,
             "status": 404,
             "method": "GET",
-            "checked_at": "2026-08-05T03:28:59.352Z",
+            "checked_at": "2026-08-05T09:52:51.175Z",
             "final_url": "http://static.benghuai.com/Download/v4_3/Original.StripResource_4.3.210_10_signed.apk",
             "content_type": "application/xml",
             "size": 405,
@@ -76,7 +76,7 @@
             "ok": false,
             "status": 404,
             "method": "GET",
-            "checked_at": "2026-08-05T03:29:00.030Z",
+            "checked_at": "2026-08-05T09:52:52.056Z",
             "final_url": "http://static.benghuai.com/Download/v4_3/Original_4.3.210_10_signed.apk",
             "content_type": "application/xml",
             "size": 391,
@@ -85,7 +85,7 @@
             "error": "HTTP 404",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 0,
             "scheduler_confidence": "high"
           }
         }
