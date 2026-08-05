@@ -15,7 +15,7 @@
     "crc64": "5916321676915424376",
     "error": "",
     "filename": "yh_gw_20260702.apk",
-    "captured_at": "2026-06-06T07:29:12.631982+00:00",
+    "captured_at": "2026-08-05T00:29:30.927331+00:00",
     "updated_at": "2026-06-29T06:05:29+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
@@ -24,9 +24,9 @@
           "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-08-03T01:59:12.986Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-05T00:29:30.927331+00:00",
             "final_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
             "content_type": "application/octet-stream",
             "size": 1177407809,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0,
+            "age_hours": 2.805,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
         "confidence": "high",
         "retained": false,

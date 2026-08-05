@@ -24,8 +24,8 @@
           "probe": {
             "ok": true,
             "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-08-04T00:37:47.844770+00:00",
+            "method": "GET",
+            "checked_at": "2026-08-05T03:25:06.897Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20251025162622_alR6Tz1Le986Lu9q/gw_An/StarRail_3.7.0.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 364194771,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 8.126,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
