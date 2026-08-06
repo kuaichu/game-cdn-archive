@@ -23,33 +23,33 @@
           "url": "https://packaging.ys4fun.com/package/channel/303/mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "CURL_GET",
-            "checked_at": "2026-08-05T03:18:34.669Z",
+            "status": 200,
+            "method": "GET",
+            "checked_at": "2026-08-06T01:39:24.611Z",
             "final_url": "https://packaging.ys4fun.com/package/channel/303/mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 1833034832,
-            "last_modified": "Thu, 11 Sep 2025 09:39:36 GMT",
-            "etag": "5D6C68FB99A03CCC30BA5E94D97A76B6-175",
+            "content_type": "text/html",
+            "size": 29190,
+            "last_modified": "",
+            "etag": "",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 6.494,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "high"
+        "confidence": "low"
       },
       "interpretation": {
-        "state": "available",
-        "reason": "range_probe_ok",
-        "preferred_url": "https://packaging.ys4fun.com/package/channel/303/mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
-        "confidence": "high",
+        "state": "unknown",
+        "reason": "content_type_mismatch",
+        "preferred_url": "",
+        "confidence": "low",
         "retained": false,
-        "display_label": "可用"
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

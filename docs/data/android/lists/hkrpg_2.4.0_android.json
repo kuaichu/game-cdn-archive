@@ -23,9 +23,9 @@
           "url": "https://autopatchcn.bhsr.com/client/cn/20240719102722_EhJt8U81MUk0CIGt/gw/StarRail_2.4.0.apk",
           "probe": {
             "ok": true,
-            "status": 200,
+            "status": 206,
             "method": "GET",
-            "checked_at": "2026-08-05T03:25:23.644Z",
+            "checked_at": "2026-08-06T01:42:50.992Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20240719102722_EhJt8U81MUk0CIGt/gw/StarRail_2.4.0.apk",
             "content_type": "text/plain",
             "size": 3,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 6.397,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

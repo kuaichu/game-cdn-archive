@@ -23,34 +23,34 @@
         {
           "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
           "probe": {
-            "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-08-05T00:29:30.927331+00:00",
-            "final_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
-            "content_type": "application/octet-stream",
-            "size": 1177407809,
-            "last_modified": "Mon, 29 Jun 2026 06:05:29 GMT",
-            "etag": "D2666816B3E4467FC4D3A411F3962322-113",
-            "error": "",
+            "ok": false,
+            "status": 0,
+            "method": "GET",
+            "checked_at": "2026-08-06T01:25:13.805Z",
+            "final_url": "",
+            "content_type": "",
+            "size": 0,
+            "last_modified": "",
+            "etag": "",
+            "error": "timeout",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 9.311,
+            "age_hours": 0,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "high"
+        "confidence": "low"
       },
       "interpretation": {
-        "state": "available",
-        "reason": "http_2xx",
-        "preferred_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260702.apk",
-        "confidence": "high",
+        "state": "unknown",
+        "reason": "http_timeout",
+        "preferred_url": "",
+        "confidence": "low",
         "retained": false,
-        "display_label": "可用"
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
