@@ -25,17 +25,17 @@
           "probe": {
             "ok": true,
             "status": 206,
-            "method": "GET",
-            "checked_at": "2026-08-07T03:28:56.337Z",
+            "method": "CURL_GET",
+            "checked_at": "2026-08-08T01:22:49.926Z",
             "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260623115935_3uIVP7RHonRpZW88/mihoyo/yuanshen_6.7.0.apk",
-            "content_type": "application/vnd.android.package-archive;charset=UTF-8",
+            "content_type": "application/vnd.android.package-archive",
             "size": 466303603,
             "last_modified": "Tue, 23 Jun 2026 09:15:02 GMT",
-            "etag": "ljQRmiGZMhGsn-8DvSe4ufhfWoSt",
+            "etag": "92E6B7660C1851D445DBDE5072BDDBCE-10",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 3.681,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

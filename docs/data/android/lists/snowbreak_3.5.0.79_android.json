@@ -24,8 +24,8 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "GET",
-            "checked_at": "2026-08-07T03:27:03.890Z",
+            "method": "CURL_GET",
+            "checked_at": "2026-08-08T01:20:05.259Z",
             "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.5.0.79.jinshan_20260118141532.apk",
             "content_type": "application/xml",
             "size": 500,
@@ -34,7 +34,7 @@
             "error": "HTTP 404",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 3.712,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
