@@ -25,31 +25,31 @@
             "ok": true,
             "status": 206,
             "method": "GET",
-            "checked_at": "2026-08-10T01:02:59.043Z",
+            "checked_at": "2026-08-11T01:31:54.874Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20230818153431_sMKzYZ9EOeT15oNn/StarRail_1.3.0_gw.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 178342728,
-            "last_modified": "Fri, 25 Aug 2023 07:27:21 GMT",
-            "etag": "2b491d6c789fd2d6e4c588a66800237d-2",
+            "content_type": "text/plain",
+            "size": 3,
+            "last_modified": "Wed, 12 Jun 2024 06:38:00 GMT",
+            "etag": "06377DB9F4697DA95000A32DC53F1B61",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 6.221,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "high"
+        "confidence": "low"
       },
       "interpretation": {
-        "state": "available",
-        "reason": "range_probe_ok",
-        "preferred_url": "https://autopatchcn.bhsr.com/client/cn/20230818153431_sMKzYZ9EOeT15oNn/StarRail_1.3.0_gw.apk",
-        "confidence": "high",
+        "state": "unavailable",
+        "reason": "content_type_mismatch",
+        "preferred_url": "",
+        "confidence": "low",
         "retained": false,
-        "display_label": "可用"
+        "display_label": "链接失效"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
@@ -80,16 +80,16 @@
             "ok": true,
             "status": 206,
             "method": "GET",
-            "checked_at": "2026-08-10T01:03:00.156Z",
+            "checked_at": "2026-08-11T01:31:56.285Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20230818153431_sMKzYZ9EOeT15oNn/StarRail_1.3.0_mihoyo_8.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 178326344,
-            "last_modified": "Fri, 18 Aug 2023 10:11:40 GMT",
-            "etag": "23afb140792216c91d00eda312c8acaa-2",
+            "last_modified": "Fri, 18 Aug 2023 07:46:21 GMT",
+            "etag": "01BA0CEA150EE1AF8F9F4E4A7EB732FC-10",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 6.221,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
