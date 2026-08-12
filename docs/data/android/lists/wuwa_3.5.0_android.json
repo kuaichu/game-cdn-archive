@@ -15,7 +15,7 @@
     "crc64": "11216179085876283464",
     "error": "",
     "filename": "鸣潮_3.5.0_172895146_33_官渠_3e74faa7c258967d018486ed461e8607_shelled.apk",
-    "captured_at": "2026-07-27T08:01:40.087812+00:00",
+    "captured_at": "2026-08-12T06:06:03.944799+00:00",
     "updated_at": "2026-07-02T10:41:46+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
@@ -24,9 +24,9 @@
           "url": "https://mirrors-package-mc.aki-game.com/client/download/20260702184141_MbD56iPHs88E9r7qnL/%E9%B8%A3%E6%BD%AE_3.5.0_172895146_33_%E5%AE%98%E6%B8%A0_3e74faa7c258967d018486ed461e8607_shelled.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-08-11T01:26:47.015Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-12T06:06:03.944799+00:00",
             "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20260702184141_MbD56iPHs88E9r7qnL/%E9%B8%A3%E6%BD%AE_3.5.0_172895146_33_%E5%AE%98%E6%B8%A0_3e74faa7c258967d018486ed461e8607_shelled.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2024016862,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 5.621,
+            "age_hours": 0.996,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://mirrors-package-mc.aki-game.com/client/download/20260702184141_MbD56iPHs88E9r7qnL/%E9%B8%A3%E6%BD%AE_3.5.0_172895146_33_%E5%AE%98%E6%B8%A0_3e74faa7c258967d018486ed461e8607_shelled.apk",
         "confidence": "high",
         "retained": false,

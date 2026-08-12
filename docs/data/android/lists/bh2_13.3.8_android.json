@@ -1,0 +1,60 @@
+[
+  {
+    "game_id": "bh2",
+    "version": "13.3.8",
+    "channel": "official",
+    "url": "https://www.benghuai.com/download/latest",
+    "source": "official Honkai Gakuen 2 latest Android download endpoint; resolves to a static.benghuai.com APK URL",
+    "source_url": "https://www.benghuai.com/download/latest",
+    "archive_url": "https://static.benghuai.com/Download/v13_3/Original.StripResource_13.3.8_342_UuQ.apk",
+    "archive_note": "CDN URL captured during sync",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 261215062,
+    "last_modified": "Fri, 07 Aug 2026 02:10:03 GMT",
+    "etag": "070DD32FBEC9F595276A0304D8270C1E-25",
+    "md5": "",
+    "crc64": "",
+    "error": "",
+    "filename": "Original.StripResource_13.3.8_342_UuQ.apk",
+    "captured_at": "2026-08-12T06:06:03.944799+00:00",
+    "updated_at": "2026-08-07T02:10:03+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://www.benghuai.com/download/latest",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-12T06:06:03.944799+00:00",
+            "final_url": "https://www.benghuai.com/download/latest",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 261215062,
+            "last_modified": "Fri, 07 Aug 2026 02:10:03 GMT",
+            "etag": "070DD32FBEC9F595276A0304D8270C1E-25",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.063,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://www.benghuai.com/download/latest",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
