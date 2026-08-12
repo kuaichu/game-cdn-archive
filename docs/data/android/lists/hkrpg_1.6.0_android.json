@@ -25,16 +25,16 @@
             "ok": true,
             "status": 206,
             "method": "GET",
-            "checked_at": "2026-08-11T01:31:47.895Z",
+            "checked_at": "2026-08-12T01:14:57.021Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20231215090743_ffCg5V2j0gON2tvr/gw/StarRail_1.6.0.apk",
-            "content_type": "text/plain",
-            "size": 3,
-            "last_modified": "Wed, 12 Jun 2024 06:55:42 GMT",
-            "etag": "06377DB9F4697DA95000A32DC53F1B61",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 233971006,
+            "last_modified": "Fri, 15 Dec 2023 03:29:41 GMT",
+            "etag": "446ec1a4c34793811286d59db313bb23-2",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 5.542,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -44,12 +44,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "content_type_mismatch",
+        "state": "unknown",
+        "reason": "range_probe_ok",
         "preferred_url": "",
         "confidence": "low",
         "retained": false,
-        "display_label": "链接失效"
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
@@ -80,16 +80,16 @@
             "ok": true,
             "status": 206,
             "method": "GET",
-            "checked_at": "2026-08-11T01:31:49.270Z",
+            "checked_at": "2026-08-12T01:14:58.536Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20231215090743_ffCg5V2j0gON2tvr/mihoyo_8/StarRail_1.6.0.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 234003804,
-            "last_modified": "Fri, 15 Dec 2023 01:19:05 GMT",
-            "etag": "C35CCE33CE80ABA310185C259243468B-10",
+            "last_modified": "Fri, 22 Dec 2023 13:56:30 GMT",
+            "etag": "e58258b7091c9660efe05b86fe38d773-2",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 5.542,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
