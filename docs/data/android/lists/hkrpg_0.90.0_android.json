@@ -22,16 +22,16 @@
         {
           "url": "https://autopatchcn.bhsr.com/client/cn/20230202112711_Gqh20JqTKF8yCY7c/StarRail_0.90.0.apk",
           "probe": {
-            "ok": false,
-            "status": 404,
+            "ok": true,
+            "status": 206,
             "method": "GET",
-            "checked_at": "2026-08-16T00:59:50.551Z",
+            "checked_at": "2026-08-16T06:03:58.304Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20230202112711_Gqh20JqTKF8yCY7c/StarRail_0.90.0.apk",
-            "content_type": "text/html",
-            "size": 18,
-            "last_modified": "Thu, 08 Sep 2022 10:13:18 GMT",
-            "etag": "53AF239EE5D3E261545DEDEDCB6FFD57",
-            "error": "HTTP 404",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 190708688,
+            "last_modified": "Thu, 02 Feb 2023 04:25:24 GMT",
+            "etag": "b375679231863215c17e965385522deb-2",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0.0,
@@ -44,12 +44,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
+        "state": "unknown",
+        "reason": "range_probe_ok",
         "preferred_url": "",
         "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "retained": false,
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
