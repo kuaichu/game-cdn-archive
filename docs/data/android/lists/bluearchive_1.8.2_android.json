@@ -30,15 +30,15 @@
           "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/task_game_apk/official/1.8.2/BlueArchive_official_1.8.2_0517_1.apk",
           "probe": {
             "ok": false,
-            "status": 404,
+            "status": 0,
             "method": "GET",
-            "checked_at": "2026-08-15T06:24:11.442Z",
-            "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/task_game_apk/official/1.8.2/BlueArchive_official_1.8.2_0517_1.apk",
-            "content_type": "application/xml",
-            "size": 448,
+            "checked_at": "2026-08-16T00:54:05.141Z",
+            "final_url": "",
+            "content_type": "",
+            "size": 0,
             "last_modified": "",
             "etag": "",
-            "error": "HTTP 404",
+            "error": "timeout",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0.0,
@@ -51,12 +51,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
+        "state": "unknown",
+        "reason": "http_timeout",
         "preferred_url": "",
         "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "retained": false,
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
