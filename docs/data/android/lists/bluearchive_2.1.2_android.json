@@ -24,8 +24,8 @@
           "probe": {
             "ok": true,
             "status": 206,
-            "method": "CURL_GET",
-            "checked_at": "2026-08-16T00:52:51.714Z",
+            "method": "GET",
+            "checked_at": "2026-08-17T00:43:29.372Z",
             "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 1723356917,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 5.156,
+            "age_hours": 0,
             "scheduler_confidence": "high"
           }
         }
