@@ -15,7 +15,7 @@ or redistribute game binaries.
 
 | 游戏 | 平台 | 状态 | 版本更新时间 |
 | --- | --- | --- | --- |
-| Neverness to Everness / 异环 | Windows PC | 已解码并索引到 `1.3.7`（可用 `54` 个 / 已探测 `101` 个） | `2026-08-15 04:00:01 北京时间` |
+| Neverness to Everness / 异环 | Windows PC | 已解码并索引到 `1.3.8`（可用 `55` 个 / 已探测 `102` 个） | `2026-08-18 00:14:26 北京时间` |
 | Tower of Fantasy / 幻塔 | Windows PC | 官方 PatcherSDK ResList 已解码并索引到 `6.3.2`（`45` 个版本） | `2026-08-15 06:00:01 北京时间` |
 | Persona 5: The Phantom X / 女神异闻录：夜幕魅影 | Windows PC | 官方 PatcherSDK ResList 已解码并索引到 `1.0.74`（`25` 个版本） | `2026-07-06 11:15:12 北京时间` |
 | Arknights: Endfield / 明日方舟：终末地 | Windows PC | 官方启动器 API 历史与归档镜像已索引到 `1.4.4`（`8` 个版本） | `2026-07-16 06:15:36 北京时间` |
@@ -26,7 +26,7 @@ or redistribute game binaries.
 | Zenless Zone Zero / 绝区零 | Windows PC | HoyoFiles 版本元数据已迁移到 `3.1.0`（`20` 个版本） | `2026-07-13 19:07:26 北京时间` |
 | Honkai Impact 3 / 崩坏3 | Windows PC | HoyoFiles 版本元数据已迁移到 `9.0.0`（`56` 个版本） | `2026-07-16 17:59:04 北京时间` |
 
-_整个项目的数据刷新时间：`2026-08-17 13:14:42 北京时间`。_
+_整个项目的数据刷新时间：`2026-08-18 07:54:23 北京时间`。_
 <!-- README_VERSION_SUMMARY_END -->
 
 ## 当前进度快照
@@ -34,11 +34,11 @@ _整个项目的数据刷新时间：`2026-08-17 13:14:42 北京时间`。_
 <!-- README_PROGRESS_SNAPSHOT_START -->
 <!-- 此区块由 scripts/update_readme_summary.py 生成，请勿手改。 -->
 
-当前仓库快照来自生成数据，检查时间：`2026-08-17 12:56:36 北京时间`。
+当前仓库快照来自生成数据，检查时间：`2026-08-18 07:40:42 北京时间`。
 
 | 范围 | 当前进度 |
 | --- | --- |
-| NTE / 异环 PC | 已索引官方 Windows 清单 `1.0.0` 到 `1.3.7`；`101` 个已探测条目中有 `54` 个可用版本 |
+| NTE / 异环 PC | 已索引官方 Windows 清单 `1.0.0` 到 `1.3.8`；`102` 个已探测条目中有 `55` 个可用版本 |
 | Tower of Fantasy / 幻塔 PC | 已索引官方 Windows ResList `5.5.3` 到 `6.3.2`；最新清单包含 `95` 个完整文件与 `594` 个补丁对象 |
 | Persona 5: The Phantom X / 女神异闻录：夜幕魅影 PC | 已索引官方 Windows ResList `1.0.34` 到 `1.0.74`；最新清单包含 `3` 个完整文件与 `833` 个补丁对象 |
 | Endfield / 终末地 PC | 已导入 `8` 个 CN 启动器历史快照，最新 `1.4.4`；官方签名包 URL 与归档镜像 URL 均已保留 |

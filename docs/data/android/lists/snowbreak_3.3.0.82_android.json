@@ -24,8 +24,8 @@
           "probe": {
             "ok": true,
             "status": 206,
-            "method": "GET",
-            "checked_at": "2026-08-17T00:44:29.214Z",
+            "method": "CURL_GET",
+            "checked_at": "2026-08-18T00:58:41.542Z",
             "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.3.0.82.jinshan.20251029164128.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 1408190389,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 5.497,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
