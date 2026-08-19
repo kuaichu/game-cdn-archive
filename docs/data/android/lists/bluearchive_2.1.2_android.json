@@ -22,16 +22,16 @@
         {
           "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
           "probe": {
-            "ok": false,
-            "status": 0,
+            "ok": true,
+            "status": 206,
             "method": "GET",
-            "checked_at": "2026-08-19T01:17:56.289Z",
-            "final_url": "",
-            "content_type": "",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "timeout",
+            "checked_at": "2026-08-19T06:05:28.687Z",
+            "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1723356917,
+            "last_modified": "Tue, 23 Sep 2025 05:29:37 GMT",
+            "etag": "5D9E2E9524A91CE8873B67101CC362F8-1644",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0.0,
@@ -41,15 +41,15 @@
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unknown",
-        "reason": "http_timeout",
-        "preferred_url": "",
-        "confidence": "low",
+        "state": "available",
+        "reason": "range_probe_ok",
+        "preferred_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
+        "confidence": "high",
         "retained": false,
-        "display_label": "状态未知"
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
