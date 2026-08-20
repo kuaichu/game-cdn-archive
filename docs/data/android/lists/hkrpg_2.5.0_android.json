@@ -25,16 +25,16 @@
             "ok": true,
             "status": 206,
             "method": "GET",
-            "checked_at": "2026-08-19T01:25:37.981Z",
+            "checked_at": "2026-08-20T01:16:57.302Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20240829163400_T4NhQaIeWzaVVwjM/gw/StarRail_2.5.0.apk",
-            "content_type": "text/plain",
-            "size": 3,
-            "last_modified": "Thu, 20 Feb 2025 10:57:42 GMT",
-            "etag": "06377DB9F4697DA95000A32DC53F1B61",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 255275687,
+            "last_modified": "Wed, 04 Sep 2024 05:57:48 GMT",
+            "etag": "0d560f1564258acd8414b90ffe0661c7-2",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 4.7,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -44,12 +44,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "content_type_mismatch",
+        "state": "unknown",
+        "reason": "range_probe_ok",
         "preferred_url": "",
         "confidence": "low",
         "retained": false,
-        "display_label": "链接失效"
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

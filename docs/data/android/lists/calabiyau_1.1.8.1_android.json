@@ -1,0 +1,58 @@
+[
+  {
+    "game_id": "calabiyau",
+    "version": "1.1.8.1",
+    "channel": "official",
+    "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+    "source": "official Calabiyau website HTML; versionName read from AndroidManifest.xml",
+    "source_url": "https://klbqm.idreamsky.com/",
+    "updated_at": "2025-10-22T23:42:15+00:00",
+    "updated_at_source": "official_config",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 1951535891,
+    "last_modified": "Wed, 19 Aug 2026 23:26:18 GMT",
+    "etag": "6b297b539368f8b3a249cef73e6c82c8",
+    "md5": "",
+    "crc64": "15365378223730378173",
+    "error": "",
+    "filename": "klbqm_LD0S0N00011.apk",
+    "captured_at": "2026-07-05T01:50:12.992811+00:00",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-19T23:57:22.693658+00:00",
+            "final_url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1951535891,
+            "last_modified": "Wed, 19 Aug 2026 23:26:18 GMT",
+            "etag": "6b297b539368f8b3a249cef73e6c82c8",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.255,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
