@@ -23,16 +23,16 @@
         {
           "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240624104231_kQdR9e8gTqYZeAgW/CPS/20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
           "probe": {
-            "ok": false,
-            "status": 403,
+            "ok": true,
+            "status": 206,
             "method": "GET",
-            "checked_at": "2026-08-20T06:11:05.255Z",
+            "checked_at": "2026-08-21T01:12:18.169Z",
             "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240624104231_kQdR9e8gTqYZeAgW/CPS/20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
-            "content_type": "application/xml",
+            "content_type": "application/vnd.android.package-archive",
             "size": 628088256,
             "last_modified": "Wed, 25 Jun 2025 02:44:46 GMT",
             "etag": "CEBD2E23854FF5010A508BFFDC843558-10",
-            "error": "HTTP 403",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0.0,
@@ -42,15 +42,15 @@
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unknown",
-        "reason": "http_403",
-        "preferred_url": "",
-        "confidence": "low",
+        "state": "available",
+        "reason": "range_probe_ok",
+        "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240624104231_kQdR9e8gTqYZeAgW/CPS/20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
+        "confidence": "high",
         "retained": false,
-        "display_label": "状态未知"
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
