@@ -6,51 +6,51 @@
     "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
     "source": "official Snowbreak download config; version read from APK URL or AndroidManifest.xml",
     "source_url": "https://www.cbjq.com/api/config/tag/zt/index_download?filter=0",
-    "status": 0,
-    "content_type": "",
-    "size": 0,
-    "last_modified": "",
-    "etag": "",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 1427726880,
+    "last_modified": "Thu, 07 May 2026 03:12:21 GMT",
+    "etag": "a22da702ac349b6c06dbc6a6c69adcb0-171",
     "md5": "",
-    "crc64": "",
-    "error": "<urlopen error _ssl.c:993: The handshake operation timed out>",
+    "crc64": "17658315226039455406",
+    "error": "",
     "filename": "CBJQ.3.6.0.122.jinshan_202603301341.apk",
     "captured_at": "2026-07-05T01:50:12.992811+00:00",
-    "updated_at": "2026-03-30T13:41:00+00:00",
-    "updated_at_source": "filename_timestamp",
+    "updated_at": "2026-05-07T03:12:21+00:00",
+    "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
         {
           "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
           "probe": {
-            "ok": false,
-            "status": 0,
+            "ok": true,
+            "status": 200,
             "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-08-20T23:57:57.310150+00:00",
+            "checked_at": "2026-08-21T05:14:32.256686+00:00",
             "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
-            "content_type": "",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "timeout",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1427726880,
+            "last_modified": "Thu, 07 May 2026 03:12:21 GMT",
+            "etag": "a22da702ac349b6c06dbc6a6c69adcb0-171",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 1.163,
+            "age_hours": 1.451,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unknown",
-        "reason": "http_timeout",
-        "preferred_url": "",
-        "confidence": "low",
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
+        "confidence": "high",
         "retained": false,
-        "display_label": "状态未知"
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
