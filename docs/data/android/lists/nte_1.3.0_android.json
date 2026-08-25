@@ -6,51 +6,49 @@
     "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260813.apk",
     "source": "official website Android download config; versionName read from AndroidManifest.xml",
     "source_url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/yh-gameDownload.js",
-    "status": 200,
-    "content_type": "application/octet-stream",
-    "size": 1251685920,
-    "last_modified": "Wed, 12 Aug 2026 21:50:32 GMT",
-    "etag": "2D138919F4F2658D30C94864B22755FF-120",
+    "status": 0,
+    "content_type": "",
+    "size": 0,
+    "last_modified": "",
+    "etag": "",
     "md5": "",
-    "crc64": "10465564197041353160",
-    "error": "",
+    "crc64": "",
+    "error": "<urlopen error timed out>",
     "filename": "yh_gw_20260813.apk",
-    "captured_at": "2026-08-20T23:57:57.310150+00:00",
-    "updated_at": "2026-08-12T21:50:32+00:00",
-    "updated_at_source": "apk_last_modified",
+    "captured_at": "2026-08-25T05:04:25.158761+00:00",
     "availability": {
       "candidates": [
         {
           "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260813.apk",
           "probe": {
-            "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-08-24T03:30:20.470Z",
+            "ok": false,
+            "status": 0,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-25T05:04:25.158761+00:00",
             "final_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260813.apk",
-            "content_type": "application/octet-stream",
-            "size": 1251685920,
-            "last_modified": "Wed, 12 Aug 2026 21:50:32 GMT",
-            "etag": "2D138919F4F2658D30C94864B22755FF-120",
-            "error": "",
+            "content_type": "",
+            "size": 0,
+            "last_modified": "",
+            "etag": "",
+            "error": "timeout",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 2.568,
+            "age_hours": 1.359,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "high"
+        "confidence": "low"
       },
       "interpretation": {
-        "state": "available",
-        "reason": "range_probe_ok",
-        "preferred_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260813.apk",
-        "confidence": "high",
+        "state": "unknown",
+        "reason": "http_timeout",
+        "preferred_url": "",
+        "confidence": "low",
         "retained": false,
-        "display_label": "可用"
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
