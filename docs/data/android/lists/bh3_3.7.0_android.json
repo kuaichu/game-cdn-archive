@@ -25,9 +25,9 @@
           "probe": {
             "ok": false,
             "status": 0,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-08-27T04:44:36.087025+00:00",
-            "final_url": "http://app.bh3.com/public/Android/20200109-171648-gf_android_ota-versions-v3_7-Sublime_Spring_guofu.apk",
+            "method": "GET",
+            "checked_at": "2026-08-27T16:35:19.967Z",
+            "final_url": "",
             "content_type": "",
             "size": 0,
             "last_modified": "",
@@ -35,7 +35,7 @@
             "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 1.405,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
