@@ -6,25 +6,27 @@
     "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260813.apk",
     "source": "official website Android download config; versionName read from AndroidManifest.xml",
     "source_url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/yh-gameDownload.js",
-    "status": 0,
-    "content_type": "",
-    "size": 0,
-    "last_modified": "",
-    "etag": "",
+    "status": 200,
+    "content_type": "application/octet-stream",
+    "size": 1251685920,
+    "last_modified": "Wed, 12 Aug 2026 21:50:32 GMT",
+    "etag": "2D138919F4F2658D30C94864B22755FF-120",
     "md5": "",
-    "crc64": "",
-    "error": "<urlopen error timed out>",
+    "crc64": "10465564197041353160",
+    "error": "",
     "filename": "yh_gw_20260813.apk",
     "captured_at": "2026-08-25T05:04:25.158761+00:00",
+    "updated_at": "2026-08-12T21:50:32+00:00",
+    "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
         {
           "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260813.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "CURL_GET",
-            "checked_at": "2026-08-26T00:32:06.036Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-27T04:44:36.087025+00:00",
             "final_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260813.apk",
             "content_type": "application/octet-stream",
             "size": 1251685920,
@@ -33,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 5.852,
+            "age_hours": 1.39,
             "scheduler_confidence": "high"
           }
         }
@@ -44,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260813.apk",
         "confidence": "high",
         "retained": false,

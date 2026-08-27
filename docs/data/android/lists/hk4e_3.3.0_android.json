@@ -8,14 +8,14 @@
     "status": 200,
     "content_type": "application/vnd.android.package-archive",
     "size": 369290808,
-    "last_modified": "Thu, 01 Dec 2022 02:46:39 GMT",
-    "etag": "63eb57c109814666e3b33cd05b9dcb74",
+    "last_modified": "Mon, 28 Nov 2022 02:36:20 GMT",
+    "etag": "FA7AFE3F556228B6B8CF9ED33A240F0D-10",
     "md5": "",
-    "crc64": "6833298814126144580",
+    "crc64": "",
     "error": "",
     "filename": "yuanshen_3.3.0.apk",
     "captured_at": "2026-06-06T23:27:36.097556+00:00",
-    "updated_at": "2022-12-01T02:46:39+00:00",
+    "updated_at": "2022-11-28T02:36:20+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
@@ -23,18 +23,18 @@
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20221125145552_5ZtiRoenlT70kKdw/mihoyo/yuanshen_3.3.0.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-08-26T00:39:39.016Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-27T04:44:36.087025+00:00",
             "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20221125145552_5ZtiRoenlT70kKdw/mihoyo/yuanshen_3.3.0.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 369290808,
-            "last_modified": "Thu, 01 Dec 2022 02:46:39 GMT",
-            "etag": "63eb57c109814666e3b33cd05b9dcb74",
+            "last_modified": "Mon, 28 Nov 2022 02:36:20 GMT",
+            "etag": "FA7AFE3F556228B6B8CF9ED33A240F0D-10",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 5.737,
+            "age_hours": 1.402,
             "scheduler_confidence": "high"
           }
         }
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20221125145552_5ZtiRoenlT70kKdw/mihoyo/yuanshen_3.3.0.apk",
         "confidence": "high",
         "retained": false,

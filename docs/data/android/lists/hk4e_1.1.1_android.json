@@ -8,14 +8,14 @@
     "status": 200,
     "content_type": "application/vnd.android.package-archive",
     "size": 152568499,
-    "last_modified": "Thu, 21 Apr 2022 04:38:47 GMT",
-    "etag": "446d15e3e6923c8c20083293aa35506d",
+    "last_modified": "Fri, 06 Nov 2020 09:32:33 GMT",
+    "etag": "A6FF16DB6B5D79CAFC8CC3C05AD48E2F-15",
     "md5": "",
-    "crc64": "40722724834554537",
+    "crc64": "",
     "error": "",
     "filename": "yuanshen_1.1.1_mihoyo.apk",
     "captured_at": "2026-06-08T17:43:05.181300+00:00",
-    "updated_at": "2022-04-21T04:38:47+00:00",
+    "updated_at": "2020-11-06T09:32:33+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
@@ -23,18 +23,18 @@
           "url": "https://autopatchcn.yuanshen.com/client_app/Android/20201111_c957958f02d43b5b/yuanshen_1.1.1_mihoyo.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-08-26T00:40:03.929Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-27T04:44:36.087025+00:00",
             "final_url": "https://autopatchcn.yuanshen.com/client_app/Android/20201111_c957958f02d43b5b/yuanshen_1.1.1_mihoyo.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 152568499,
-            "last_modified": "Thu, 21 Apr 2022 04:38:47 GMT",
-            "etag": "446d15e3e6923c8c20083293aa35506d",
+            "last_modified": "Fri, 06 Nov 2020 09:32:33 GMT",
+            "etag": "A6FF16DB6B5D79CAFC8CC3C05AD48E2F-15",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 5.731,
+            "age_hours": 1.402,
             "scheduler_confidence": "high"
           }
         }
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://autopatchcn.yuanshen.com/client_app/Android/20201111_c957958f02d43b5b/yuanshen_1.1.1_mihoyo.apk",
         "confidence": "high",
         "retained": false,

@@ -6,51 +6,51 @@
     "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240805103951_0EjefJt3gubtCF3N/CPS/20240731-233936-gf_android_ota-versions-v7_7-Drudging_Drifting_Dreaming_gw.apk",
     "source": "official BH3 CN Android URL indexed by keitarogg/BH3-Download-Library",
     "source_url": "https://github.com/keitarogg/BH3-Download-Library/blob/9632e267bb8b1f3104b5abb6401a84524f36471c/RELEASE/CN-ANDROID/7.7.md",
-    "status": 200,
-    "content_type": "application/vnd.android.package-archive",
-    "size": 620025060,
-    "last_modified": "Wed, 25 Jun 2025 06:22:25 GMT",
-    "etag": "B3F1D526AC683546C51FDE6A330878BD-10",
+    "status": 403,
+    "content_type": "",
+    "size": 0,
+    "last_modified": "",
+    "etag": "",
     "md5": "",
     "crc64": "",
-    "error": "",
+    "error": "APK object unavailable",
     "filename": "20240731-233936-gf_android_ota-versions-v7_7-Drudging_Drifting_Dreaming_gw.apk",
     "captured_at": "2026-07-10T06:37:54.844642+00:00",
-    "updated_at": "2025-06-25T06:22:25+00:00",
-    "updated_at_source": "apk_last_modified",
+    "updated_at": "2024-08-05T10:39:51+00:00",
+    "updated_at_source": "filename_timestamp",
     "availability": {
       "candidates": [
         {
           "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240805103951_0EjefJt3gubtCF3N/CPS/20240731-233936-gf_android_ota-versions-v7_7-Drudging_Drifting_Dreaming_gw.apk",
           "probe": {
-            "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-08-26T00:43:33.967Z",
+            "ok": false,
+            "status": 403,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-27T04:44:36.087025+00:00",
             "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240805103951_0EjefJt3gubtCF3N/CPS/20240731-233936-gf_android_ota-versions-v7_7-Drudging_Drifting_Dreaming_gw.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 620025060,
-            "last_modified": "Wed, 25 Jun 2025 06:22:25 GMT",
-            "etag": "B3F1D526AC683546C51FDE6A330878BD-10",
-            "error": "",
+            "content_type": "",
+            "size": 0,
+            "last_modified": "",
+            "etag": "",
+            "error": "APK object unavailable",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 5.675,
+            "age_hours": 1.402,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "high"
+        "confidence": "low"
       },
       "interpretation": {
-        "state": "available",
-        "reason": "range_probe_ok",
-        "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240805103951_0EjefJt3gubtCF3N/CPS/20240731-233936-gf_android_ota-versions-v7_7-Drudging_Drifting_Dreaming_gw.apk",
-        "confidence": "high",
+        "state": "unknown",
+        "reason": "http_403",
+        "preferred_url": "",
+        "confidence": "low",
         "retained": false,
-        "display_label": "可用"
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

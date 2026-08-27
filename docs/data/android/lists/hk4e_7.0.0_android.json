@@ -9,14 +9,14 @@
     "status": 200,
     "content_type": "application/vnd.android.package-archive",
     "size": 478735343,
-    "last_modified": "Mon, 03 Aug 2026 11:04:13 GMT",
-    "etag": "aa697044ed8ec701faa86e81202465bf",
+    "last_modified": "Mon, 03 Aug 2026 09:25:07 GMT",
+    "etag": "2B21281E6CE5EA69E9872F5B6DE1A4A6-10",
     "md5": "",
-    "crc64": "15852710230531907",
+    "crc64": "",
     "error": "",
     "filename": "yuanshen_7.0.0.apk",
     "captured_at": "2026-08-12T00:11:30.945943+00:00",
-    "updated_at": "2026-08-03T11:04:13+00:00",
+    "updated_at": "2026-08-03T09:25:07+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
@@ -24,18 +24,18 @@
           "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260803155301_dVPuDB44YQg4Wkwy/mihoyo/yuanshen_7.0.0.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-08-26T00:38:57.997Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-27T04:44:36.087025+00:00",
             "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260803155301_dVPuDB44YQg4Wkwy/mihoyo/yuanshen_7.0.0.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 478735343,
-            "last_modified": "Mon, 03 Aug 2026 11:04:13 GMT",
-            "etag": "aa697044ed8ec701faa86e81202465bf",
+            "last_modified": "Mon, 03 Aug 2026 09:25:07 GMT",
+            "etag": "2B21281E6CE5EA69E9872F5B6DE1A4A6-10",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 5.745,
+            "age_hours": 1.402,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260803155301_dVPuDB44YQg4Wkwy/mihoyo/yuanshen_7.0.0.apk",
         "confidence": "high",
         "retained": false,

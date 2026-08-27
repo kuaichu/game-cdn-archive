@@ -7,36 +7,36 @@
     "channel": "306",
     "url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
     "source": "official CDN URL provided by user; versionName read from AndroidManifest.xml",
-    "status": 200,
-    "content_type": "application/vnd.android.package-archive",
-    "size": 2024284550,
-    "last_modified": "Tue, 23 Jun 2026 02:24:40 GMT",
-    "etag": "722185039D0BF56D00E5BBB198DB0762-194",
+    "status": 404,
+    "content_type": "text/html",
+    "size": 0,
+    "last_modified": "",
+    "etag": "",
     "md5": "",
-    "crc64": "6168240042595353111",
-    "error": "",
+    "crc64": "",
+    "error": "APK object unavailable",
     "filename": "ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
     "captured_at": "2026-07-09T05:33:11.954440+00:00",
-    "updated_at": "2026-06-23T02:24:40+00:00",
-    "updated_at_source": "apk_last_modified",
+    "updated_at": "2026-06-18T10:43:54+00:00",
+    "updated_at_source": "filename_timestamp",
     "availability": {
       "candidates": [
         {
           "url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
           "probe": {
-            "ok": true,
-            "status": 200,
-            "method": "GET",
-            "checked_at": "2026-08-26T00:37:54.379Z",
+            "ok": false,
+            "status": 404,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-08-27T04:44:36.087025+00:00",
             "final_url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
             "content_type": "text/html",
-            "size": 29190,
+            "size": 0,
             "last_modified": "",
             "etag": "",
-            "error": "",
+            "error": "APK object unavailable",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 5.756,
+            "age_hours": 1.399,
             "scheduler_confidence": "high"
           }
         }
@@ -46,12 +46,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unknown",
-        "reason": "content_type_mismatch",
+        "state": "unavailable",
+        "reason": "retained_historical",
         "preferred_url": "",
         "confidence": "low",
-        "retained": false,
-        "display_label": "状态未知"
+        "retained": true,
+        "display_label": "链接失效"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
