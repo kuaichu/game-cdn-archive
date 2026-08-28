@@ -5,51 +5,51 @@
     "channel": "303",
     "url": "https://packaging.ys4fun.com/package/channel/303/mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
     "source": "official CDN URL recovered from official historical download page; versionName read from AndroidManifest.xml",
-    "status": 404,
-    "content_type": "text/html",
-    "size": 0,
-    "last_modified": "",
-    "etag": "",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 1833034832,
+    "last_modified": "Thu, 11 Sep 2025 09:39:36 GMT",
+    "etag": "5D6C68FB99A03CCC30BA5E94D97A76B6-175",
     "md5": "",
-    "crc64": "",
-    "error": "APK object unavailable",
+    "crc64": "11029514340957415713",
+    "error": "",
     "filename": "mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
     "captured_at": "2026-06-06T22:54:29.106555+00:00",
-    "updated_at": "2025-09-10T11:08:08+00:00",
-    "updated_at_source": "filename_timestamp",
+    "updated_at": "2025-09-11T09:39:36+00:00",
+    "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
         {
           "url": "https://packaging.ys4fun.com/package/channel/303/mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
           "probe": {
-            "ok": false,
-            "status": 404,
+            "ok": true,
+            "status": 200,
             "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-08-27T15:26:49.188731+00:00",
+            "checked_at": "2026-08-28T07:17:14.813227+00:00",
             "final_url": "https://packaging.ys4fun.com/package/channel/303/mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
-            "content_type": "text/html",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "APK object unavailable",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1833034832,
+            "last_modified": "Thu, 11 Sep 2025 09:39:36 GMT",
+            "etag": "5D6C68FB99A03CCC30BA5E94D97A76B6-175",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 1.121,
+            "age_hours": 0.884,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
-        "preferred_url": "",
-        "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://packaging.ys4fun.com/package/channel/303/mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

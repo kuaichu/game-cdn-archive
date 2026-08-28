@@ -23,9 +23,9 @@
           "url": "https://autopatchcn.bh3.com/ptpublic/rel/20260521184041_fIpuozZUX1U7jnuv/CPS/20260514-004049-gf_android_ota-versions-v8_9-Lives_Flourish_gw.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-08-27T04:44:36.087025+00:00",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-08-28T08:15:39.836Z",
             "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20260521184041_fIpuozZUX1U7jnuv/CPS/20260514-004049-gf_android_ota-versions-v8_9-Lives_Flourish_gw.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 698069680,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 11.84,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20260521184041_fIpuozZUX1U7jnuv/CPS/20260514-004049-gf_android_ota-versions-v8_9-Lives_Flourish_gw.apk",
         "confidence": "high",
         "retained": false,

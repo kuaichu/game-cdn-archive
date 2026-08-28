@@ -23,9 +23,9 @@
           "url": "https://bundle.bh3.com/ptpublic/rel/20231106153627_b1OpytRR6oCFFnkm/CPS/20231102-000511-gf_android_ota-versions-v7_1-Starbound_Painter_baidu.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-08-27T04:44:36.087025+00:00",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-08-28T08:15:56.225Z",
             "final_url": "https://bundle.bh3.com/ptpublic/rel/20231106153627_b1OpytRR6oCFFnkm/CPS/20231102-000511-gf_android_ota-versions-v7_1-Starbound_Painter_baidu.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 845542287,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 11.844,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://bundle.bh3.com/ptpublic/rel/20231106153627_b1OpytRR6oCFFnkm/CPS/20231102-000511-gf_android_ota-versions-v7_1-Starbound_Painter_baidu.apk",
         "confidence": "high",
         "retained": false,
