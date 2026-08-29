@@ -23,18 +23,18 @@
           "url": "https://autopatchcn.bhsr.com/client/cn/20260523161433_yrgZsgGJ4R1J210J/gw_An/StarRail_4.3.0.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "CURL_GET",
-            "checked_at": "2026-08-28T08:14:12.575Z",
+            "status": 200,
+            "method": "GET",
+            "checked_at": "2026-08-29T05:54:07.039Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20260523161433_yrgZsgGJ4R1J210J/gw_An/StarRail_4.3.0.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 429056746,
-            "last_modified": "Tue, 26 May 2026 21:00:35 GMT",
-            "etag": "d3abe33844073029d651ce07d6492383-3",
+            "last_modified": "Sat, 23 May 2026 08:16:51 GMT",
+            "etag": "5185B4D2A6755092EF6823DC8BA81040-10",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 9.617,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://autopatchcn.bhsr.com/client/cn/20260523161433_yrgZsgGJ4R1J210J/gw_An/StarRail_4.3.0.apk",
         "confidence": "high",
         "retained": false,
