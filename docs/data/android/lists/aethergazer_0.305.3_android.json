@@ -5,51 +5,51 @@
     "channel": "305",
     "url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
     "source": "official CDN URL provided by user",
-    "status": 404,
-    "content_type": "text/html",
-    "size": 0,
-    "last_modified": "",
-    "etag": "",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 2023625968,
+    "last_modified": "Mon, 23 Mar 2026 04:02:37 GMT",
+    "etag": "339695581774CBDF745D857F8975AA34-193",
     "md5": "",
-    "crc64": "",
-    "error": "APK object unavailable",
+    "crc64": "8155058698090329544",
+    "error": "",
     "filename": "ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
     "captured_at": "2026-06-08T18:26:03.629191+00:00",
-    "updated_at": "2026-03-20T11:01:14+00:00",
-    "updated_at_source": "filename_timestamp",
+    "updated_at": "2026-03-23T04:02:37+00:00",
+    "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
         {
           "url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
           "probe": {
-            "ok": false,
-            "status": 404,
+            "ok": true,
+            "status": 200,
             "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-08-31T10:57:25.220771+00:00",
+            "checked_at": "2026-09-01T02:01:45.373921+00:00",
             "final_url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
-            "content_type": "text/html",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "APK object unavailable",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2023625968,
+            "last_modified": "Mon, 23 Mar 2026 04:02:37 GMT",
+            "etag": "339695581774CBDF745D857F8975AA34-193",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 1.014,
+            "age_hours": 0.961,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
-        "preferred_url": "",
-        "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
