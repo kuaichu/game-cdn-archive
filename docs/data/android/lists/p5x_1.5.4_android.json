@@ -15,7 +15,7 @@
     "crc64": "13402655340528874976",
     "error": "",
     "filename": "p5x_1_official_20260621.apk",
-    "captured_at": "2026-08-25T23:47:34.304919+00:00",
+    "captured_at": "2026-09-01T09:30:55.515160+00:00",
     "updated_at": "2026-06-12T02:48:29+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
@@ -24,9 +24,9 @@
           "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-08-31T02:51:32.313Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-09-01T09:30:55.515160+00:00",
             "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
             "content_type": "application/octet-stream",
             "size": 1664463882,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 9.111,
+            "age_hours": 0.77,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
         "confidence": "high",
         "retained": false,
