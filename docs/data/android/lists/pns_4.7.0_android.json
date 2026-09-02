@@ -24,9 +24,9 @@
           "url": "https://zspms-txcdn-media.kurogame.com/install/20260819-v4_7-zspms_A1372.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-09-01T02:01:45.373921+00:00",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-09-02T02:36:40.661Z",
             "final_url": "https://zspms-txcdn-media.kurogame.com/install/20260819-v4_7-zspms_A1372.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2090247584,
@@ -35,63 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 8.363,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "high"
-      },
-      "interpretation": {
-        "state": "available",
-        "reason": "http_2xx",
-        "preferred_url": "https://zspms-txcdn-media.kurogame.com/install/20260819-v4_7-zspms_A1372.apk",
-        "confidence": "high",
-        "retained": false,
-        "display_label": "可用"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
-  },
-  {
-    "game_id": "pns",
-    "version": "4.7.0",
-    "channel": "模拟器",
-    "url": "https://zspms-txcdn-media.kurogame.com/install/20260819-v4_7-zspms_A1346.apk",
-    "source": "official Punishing: Gray Raven Android emulator download index",
-    "source_url": "https://download.kurogames.com/pns/official/cn/zh-Hans/androidpc_app.json",
-    "status": 200,
-    "content_type": "application/vnd.android.package-archive",
-    "size": 2090436000,
-    "last_modified": "Mon, 17 Aug 2026 10:36:23 GMT",
-    "etag": "5F7105823E0182A47C1CF6A33A53A5C9-400",
-    "md5": "",
-    "crc64": "",
-    "error": "",
-    "filename": "20260819-v4_7-zspms_A1346.apk",
-    "captured_at": "2026-08-18T23:53:28.364993+00:00",
-    "updated_at": "2026-08-17T10:36:23+00:00",
-    "updated_at_source": "apk_last_modified",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://zspms-txcdn-media.kurogame.com/install/20260819-v4_7-zspms_A1346.apk",
-          "probe": {
-            "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-09-01T03:05:50.839Z",
-            "final_url": "https://zspms-txcdn-media.kurogame.com/install/20260819-v4_7-zspms_A1346.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 2090436000,
-            "last_modified": "Mon, 17 Aug 2026 10:36:23 GMT",
-            "etag": "5F7105823E0182A47C1CF6A33A53A5C9-400",
-            "error": "",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 7.295,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -103,7 +47,7 @@
       "interpretation": {
         "state": "available",
         "reason": "range_probe_ok",
-        "preferred_url": "https://zspms-txcdn-media.kurogame.com/install/20260819-v4_7-zspms_A1346.apk",
+        "preferred_url": "https://zspms-txcdn-media.kurogame.com/install/20260819-v4_7-zspms_A1372.apk",
         "confidence": "high",
         "retained": false,
         "display_label": "可用"
