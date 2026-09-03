@@ -25,8 +25,8 @@
           "probe": {
             "ok": true,
             "status": 206,
-            "method": "GET",
-            "checked_at": "2026-09-02T02:28:36.586Z",
+            "method": "CURL_GET",
+            "checked_at": "2026-09-03T02:21:25.094Z",
             "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260316.apk",
             "content_type": "application/octet-stream",
             "size": 1635917801,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 7.451,
+            "age_hours": 0,
             "scheduler_confidence": "high"
           }
         }

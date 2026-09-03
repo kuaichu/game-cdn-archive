@@ -24,8 +24,8 @@
           "probe": {
             "ok": false,
             "status": 403,
-            "method": "CURL_GET",
-            "checked_at": "2026-09-02T09:56:42.650Z",
+            "method": "GET",
+            "checked_at": "2026-09-03T02:31:19.074Z",
             "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250523115648_9RU48di9UxAQIixO/CPS/20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
             "content_type": "application/xml",
             "size": 661362858,
