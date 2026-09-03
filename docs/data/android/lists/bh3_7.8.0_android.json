@@ -22,16 +22,16 @@
         {
           "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240912162405_49ekXZIjd6SoVTrN/CPS/20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
           "probe": {
-            "ok": false,
-            "status": 403,
+            "ok": true,
+            "status": 206,
             "method": "GET",
-            "checked_at": "2026-09-03T02:31:29.903Z",
+            "checked_at": "2026-09-03T10:45:17.538Z",
             "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240912162405_49ekXZIjd6SoVTrN/CPS/20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
-            "content_type": "application/xml",
+            "content_type": "application/vnd.android.package-archive",
             "size": 627025502,
             "last_modified": "Wed, 20 May 2026 03:59:25 GMT",
             "etag": "C7771C36A3A4BD50A0CAA5324B9ACF21-10",
-            "error": "HTTP 403",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0.0,
@@ -41,15 +41,15 @@
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unknown",
-        "reason": "http_403",
-        "preferred_url": "",
-        "confidence": "low",
+        "state": "available",
+        "reason": "range_probe_ok",
+        "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240912162405_49ekXZIjd6SoVTrN/CPS/20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
+        "confidence": "high",
         "retained": false,
-        "display_label": "状态未知"
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

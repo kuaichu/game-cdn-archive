@@ -22,16 +22,16 @@
         {
           "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250523115648_9RU48di9UxAQIixO/CPS/20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
           "probe": {
-            "ok": false,
-            "status": 403,
+            "ok": true,
+            "status": 206,
             "method": "GET",
-            "checked_at": "2026-09-03T02:31:19.074Z",
+            "checked_at": "2026-09-03T10:45:16.013Z",
             "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250523115648_9RU48di9UxAQIixO/CPS/20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
-            "content_type": "application/xml",
+            "content_type": "application/vnd.android.package-archive",
             "size": 661362858,
             "last_modified": "Fri, 15 Aug 2025 02:09:18 GMT",
             "etag": "D5A243BB59065896E8A425A1537567E9-10",
-            "error": "HTTP 403",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0.0,
@@ -41,15 +41,15 @@
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unknown",
-        "reason": "http_403",
-        "preferred_url": "",
-        "confidence": "low",
+        "state": "available",
+        "reason": "range_probe_ok",
+        "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250523115648_9RU48di9UxAQIixO/CPS/20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
+        "confidence": "high",
         "retained": false,
-        "display_label": "状态未知"
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
