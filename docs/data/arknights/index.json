@@ -2,8 +2,8 @@
   "source": "Hypergryph launcher API",
   "source_site": "https://ak.hypergryph.com/pcs",
   "official_api": "https://launcher.hypergryph.com/api/game/get_latest?appcode=GzD1CpaWgmSq1wew&launcher_appcode=abYeZZ16BPluCFyT&channel=1&sub_channel=1&launcher_sub_channel=1",
-  "last_checked_at": "2026-09-03T09:11:51.833771+00:00",
-  "generated_at": "2026-09-03T09:11:51.833771+00:00",
+  "last_checked_at": "2026-09-04T01:10:05.442802+00:00",
+  "generated_at": "2026-09-04T01:10:05.442802+00:00",
   "game": {
     "id": "arknights",
     "name": "明日方舟",
@@ -14,13 +14,13 @@
   },
   "versions": [
     {
-      "version": "76.0.0",
-      "observed_at": "2026-09-03T09:11:51.833771+00:00",
-      "version_family": "76.0",
+      "version": "77.0.0",
+      "observed_at": "2026-09-04T01:10:05.442802+00:00",
+      "version_family": "77.0",
       "package_items": 20,
-      "packed_size": 20707212434,
-      "unpacked_size": 45574409193,
-      "game_files_md5": "86f10402f2abeb283624ae90f4a0063a"
+      "packed_size": 21132367434,
+      "unpacked_size": 46519876073,
+      "game_files_md5": "cab39a8bf4894e7fae4583f08b6a21e0"
     }
   ]
 }

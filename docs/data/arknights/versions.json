@@ -1,34 +1,34 @@
 {
-  "76.0.0": {
-    "version": "76.0.0",
-    "observed_at": "2026-09-03T09:11:51.833771+00:00",
-    "client_version": "2.7.61",
-    "file_path": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/files",
+  "77.0.0": {
+    "version": "77.0.0",
+    "observed_at": "2026-09-04T01:10:05.442802+00:00",
+    "client_version": "2.7.71",
+    "file_path": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/files",
     "package_items": 20,
-    "packed_size": 20707212434,
-    "unpacked_size": 45574409193,
-    "game_files_md5": "86f10402f2abeb283624ae90f4a0063a",
+    "packed_size": 21132367434,
+    "unpacked_size": 46519876073,
+    "game_files_md5": "cab39a8bf4894e7fae4583f08b6a21e0",
     "packages": [
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.001",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.001",
         "part": 1,
         "size": 1073741824,
-        "md5": "e7871f255d95c4091771db32c7e59853",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.001",
+        "md5": "9fe809f505e03092fbf1073e0e41d039",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.001",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.001",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.001",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:46.967Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.001",
+                "checked_at": "2026-09-04T02:05:48.488Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.001",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 11:51:01 GMT",
-                "etag": "D4EF40CC038C67DF6739A158E00CD5A4-400",
+                "last_modified": "Mon, 31 Aug 2026 04:15:36 GMT",
+                "etag": "E5A54F9514931CA7996B51134BDED837-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -44,7 +44,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.001",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.001",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -53,25 +53,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.002",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.002",
         "part": 2,
         "size": 1073741824,
-        "md5": "a8eea55fb1ea681293871a4c5e0b6882",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.002",
+        "md5": "ecad97b0985c2c9dbe8e40be13ed29a8",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.002",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.002",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.002",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:47.541Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.002",
+                "checked_at": "2026-09-04T02:05:49.016Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.002",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 12:10:14 GMT",
-                "etag": "5E85E85AD810BAEAD82C15A37F450A6F-400",
+                "last_modified": "Mon, 31 Aug 2026 04:43:53 GMT",
+                "etag": "CE6A24486433721799B9E34D6763F066-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -87,7 +87,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.002",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.002",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -96,29 +96,29 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.003",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.003",
         "part": 3,
         "size": 1073741824,
-        "md5": "b9103a69c996524e67aff087a61b99fa",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.003",
+        "md5": "752ca235f9718229112853d7dbbafb2c",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.003",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.003",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.003",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:47.734Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.003",
+                "checked_at": "2026-09-04T02:05:49.343Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.003",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 12:25:30 GMT",
-                "etag": "3A0076440A725ABA0FD32438DA6CCBF7-400",
+                "last_modified": "Mon, 31 Aug 2026 04:16:37 GMT",
+                "etag": "0FFAC3C90571885CF58F289F3498FE0D-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
-                "age_hours": 0,
+                "age_hours": 0.0,
                 "scheduler_confidence": "high"
               }
             }
@@ -130,7 +130,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.003",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.003",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -139,25 +139,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.004",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.004",
         "part": 4,
         "size": 1073741824,
-        "md5": "3fb07b47eedd6719c218cbf0a132990c",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.004",
+        "md5": "ba77d0174c24e503be7616a2055115d6",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.004",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.004",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.004",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:48.083Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.004",
+                "checked_at": "2026-09-04T02:05:49.537Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.004",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 12:10:18 GMT",
-                "etag": "89633866D0D9B3B660A2C5CED6782645-400",
+                "last_modified": "Mon, 31 Aug 2026 04:37:34 GMT",
+                "etag": "BF79BD276424E3ACCEE81EE4AC46B2D8-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -173,7 +173,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.004",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.004",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -182,25 +182,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.005",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.005",
         "part": 5,
         "size": 1073741824,
-        "md5": "ecbfc405565bd1a40670f42cb674bd21",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.005",
+        "md5": "36051d49787208b15a8d754d431a92c2",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.005",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.005",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.005",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:48.298Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.005",
+                "checked_at": "2026-09-04T02:05:49.759Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.005",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 12:04:33 GMT",
-                "etag": "F43E011EBCDBF9377B6175F3C6699BEE-400",
+                "last_modified": "Mon, 31 Aug 2026 04:15:41 GMT",
+                "etag": "94B5153FF4EE6948034CDFDDBACFDAB8-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -216,7 +216,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.005",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.005",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -225,25 +225,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.006",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.006",
         "part": 6,
         "size": 1073741824,
-        "md5": "087d93b7eeb1c3c36eb62144cd8aed82",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.006",
+        "md5": "a1f8edc9bd3e13d8a896b12e8de4f19e",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.006",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.006",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.006",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:48.680Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.006",
+                "checked_at": "2026-09-04T02:05:49.956Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.006",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 11:49:14 GMT",
-                "etag": "8D1659622711F141956ACCEBF3360D2F-400",
+                "last_modified": "Mon, 31 Aug 2026 03:56:11 GMT",
+                "etag": "EA668A3B56D7196AC3E0CDE45E5B5030-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -259,7 +259,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.006",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.006",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -268,25 +268,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.007",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.007",
         "part": 7,
         "size": 1073741824,
-        "md5": "1fe7f5304bde3721690a7ac868d819ab",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.007",
+        "md5": "b42d0c00630aa825d623c0ca743d5b9e",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.007",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.007",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.007",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:48.992Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.007",
+                "checked_at": "2026-09-04T02:05:50.177Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.007",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 12:27:07 GMT",
-                "etag": "A7F04C546A49C37184876D41B84CDFC8-400",
+                "last_modified": "Mon, 31 Aug 2026 03:53:00 GMT",
+                "etag": "EBA76D7F486124EEFF48FC996970DE20-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -302,7 +302,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.007",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.007",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -311,25 +311,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.008",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.008",
         "part": 8,
         "size": 1073741824,
-        "md5": "343c18f8a35b5506bcf66ef92a0d0417",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.008",
+        "md5": "78481b37398ff0625a57edd123772621",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.008",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.008",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.008",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:49.310Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.008",
+                "checked_at": "2026-09-04T02:05:50.503Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.008",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 11:51:06 GMT",
-                "etag": "3FF0B5B13261F5EB718BE3C6F2F3034C-400",
+                "last_modified": "Mon, 31 Aug 2026 04:44:57 GMT",
+                "etag": "6EE0F5E73443B5930DF64F3C7697E476-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -345,7 +345,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.008",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.008",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -354,25 +354,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.009",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.009",
         "part": 9,
         "size": 1073741824,
-        "md5": "c855b6bd4635ace7e7473badae1ea8c2",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.009",
+        "md5": "b3e321450de92f4a20cde9b9af0abcff",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.009",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.009",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.009",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:49.622Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.009",
+                "checked_at": "2026-09-04T02:05:50.699Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.009",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 12:21:35 GMT",
-                "etag": "2E86EB28634CD371F3A7E4CB0EE1AD7C-400",
+                "last_modified": "Mon, 31 Aug 2026 04:45:17 GMT",
+                "etag": "901857FCB25E00A4FC80890EF95F96E7-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -388,7 +388,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.009",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.009",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -397,25 +397,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.010",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.010",
         "part": 10,
         "size": 1073741824,
-        "md5": "e7a2528ac501e88401bc6d62923cada4",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.010",
+        "md5": "3aca1c0cf4b7455d1108f1e308d0e26e",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.010",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.010",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.010",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:49.957Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.010",
+                "checked_at": "2026-09-04T02:05:50.924Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.010",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 11:52:38 GMT",
-                "etag": "52850BA824CCFB7043976B084D43D691-400",
+                "last_modified": "Mon, 31 Aug 2026 03:54:34 GMT",
+                "etag": "E93C04760959AF3BE5FC636D65725B7D-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -431,7 +431,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.010",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.010",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -440,25 +440,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.011",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.011",
         "part": 11,
         "size": 1073741824,
-        "md5": "058f89417950f9a392dbe6b9f9f6a60b",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.011",
+        "md5": "5d62240de5c3db2dee99ce8109b39427",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.011",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.011",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.011",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:50.148Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.011",
+                "checked_at": "2026-09-04T02:05:51.118Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.011",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 11:55:24 GMT",
-                "etag": "DF9B6A059F97DC864E8AF3FF8EF79478-400",
+                "last_modified": "Mon, 31 Aug 2026 04:43:14 GMT",
+                "etag": "48821A35525DE763663E154146696D44-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -474,7 +474,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.011",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.011",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -483,25 +483,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.012",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.012",
         "part": 12,
         "size": 1073741824,
-        "md5": "aaab0d6cb99627f4c0c9932e9f820451",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.012",
+        "md5": "6677930d32ba5d25fd5b8a496eeac975",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.012",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.012",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.012",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:50.344Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.012",
+                "checked_at": "2026-09-04T02:05:51.310Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.012",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 11:54:03 GMT",
-                "etag": "C8AC8BF8974E9D3934C159D36A33B093-400",
+                "last_modified": "Mon, 31 Aug 2026 04:37:49 GMT",
+                "etag": "C42E0F28597150F50E4B7D38982550B6-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -517,7 +517,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.012",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.012",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -526,25 +526,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.013",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.013",
         "part": 13,
         "size": 1073741824,
-        "md5": "1f586b661725cd2694de157e5f7d86d9",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.013",
+        "md5": "759a5bc2a29063bde2178fc9d68a32bd",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.013",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.013",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.013",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:50.530Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.013",
+                "checked_at": "2026-09-04T02:05:51.506Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.013",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 12:34:17 GMT",
-                "etag": "27A03129C2DEC614EC3AADDECC1498EB-400",
+                "last_modified": "Mon, 31 Aug 2026 04:40:22 GMT",
+                "etag": "FB07F43372D4FC7BF0DFC4EC79F3B0DD-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -560,7 +560,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.013",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.013",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -569,25 +569,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.014",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.014",
         "part": 14,
         "size": 1073741824,
-        "md5": "aef98738a07a51b36b53e52a70bae13c",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.014",
+        "md5": "28a03f8b9e2024a088be1bfc2f040314",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.014",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.014",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.014",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:50.735Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.014",
+                "checked_at": "2026-09-04T02:05:51.695Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.014",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 12:25:53 GMT",
-                "etag": "F631CC8FE1CB7126D22092CA9011D8BF-400",
+                "last_modified": "Mon, 31 Aug 2026 04:16:56 GMT",
+                "etag": "6E69803904D1AC337EC9E6543163CECD-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -603,7 +603,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.014",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.014",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -612,25 +612,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.015",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.015",
         "part": 15,
         "size": 1073741824,
-        "md5": "5e99d2bcda3940f82a08e294c6e969cc",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.015",
+        "md5": "8c1daa40742cc912d30d01991d6e18a7",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.015",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.015",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.015",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:50.928Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.015",
+                "checked_at": "2026-09-04T02:05:51.889Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.015",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 12:28:06 GMT",
-                "etag": "ED856EAFFC39B1949D266975359B52E2-400",
+                "last_modified": "Mon, 31 Aug 2026 04:21:57 GMT",
+                "etag": "ACD6E13D0945F860D9B95E537BA48B1E-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -646,7 +646,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.015",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.015",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -655,25 +655,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.016",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.016",
         "part": 16,
         "size": 1073741824,
-        "md5": "22661b49210930dae318ec76dcc84fcf",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.016",
+        "md5": "8a69e93566e5880928f160db8a9b7223",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.016",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.016",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.016",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:51.271Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.016",
+                "checked_at": "2026-09-04T02:05:52.082Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.016",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 12:22:01 GMT",
-                "etag": "CED77449000E903D42E0A307A9C458F1-400",
+                "last_modified": "Mon, 31 Aug 2026 04:02:30 GMT",
+                "etag": "98EC6ED5DAB0DB4558B34DA1C81209B9-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -689,7 +689,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.016",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.016",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -698,25 +698,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.017",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.017",
         "part": 17,
         "size": 1073741824,
-        "md5": "1bb123f991ccf5ae256f8a2d956d8ae2",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.017",
+        "md5": "384bb24e84d89813977936ff059cf208",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.017",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.017",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.017",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:51.581Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.017",
+                "checked_at": "2026-09-04T02:05:52.271Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.017",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 11:44:54 GMT",
-                "etag": "DF9DCD67640C66ECA5BB2FBA8095E06B-400",
+                "last_modified": "Mon, 31 Aug 2026 04:43:57 GMT",
+                "etag": "2E27034D994EEC6F3E4086B6F59CFC21-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -732,7 +732,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.017",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.017",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -741,25 +741,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.018",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.018",
         "part": 18,
         "size": 1073741824,
-        "md5": "5135d6a664640ce18f9ac86c6a2adf06",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.018",
+        "md5": "aa00a059a4ea0ec55f39640bf1893fb4",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.018",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.018",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.018",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:51.769Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.018",
+                "checked_at": "2026-09-04T02:05:52.561Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.018",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 12:28:30 GMT",
-                "etag": "C4CF6DA8F1326B48021CA1448EB7391B-400",
+                "last_modified": "Mon, 31 Aug 2026 04:36:57 GMT",
+                "etag": "EC4FA601F41A7FFFD5FEC57FB2A43DC5-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -775,7 +775,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.018",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.018",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -784,25 +784,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.019",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.019",
         "part": 19,
         "size": 1073741824,
-        "md5": "3cb5461803f2c85c9a6eca6cb2e79647",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.019",
+        "md5": "408f7a5eed2d749269b69a20e3159f5a",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.019",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.019",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.019",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:51.960Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.019",
+                "checked_at": "2026-09-04T02:05:52.775Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.019",
                 "content_type": "application/octet-stream",
                 "size": 1073741824,
-                "last_modified": "Mon, 27 Jul 2026 12:06:30 GMT",
-                "etag": "AEA15422EE01CB40BCC43FAEDD913981-400",
+                "last_modified": "Mon, 31 Aug 2026 04:17:26 GMT",
+                "etag": "D3B4700AEFC0A5A877D5A1F7E9893157-400",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -818,7 +818,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.019",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.019",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -827,25 +827,25 @@
         }
       },
       {
-        "name": "production_076-76.0.0-77edc7a6880-45-HG.zip.020",
+        "name": "production_077-77.0.0-c2e7ae33b25-48-HG.zip.020",
         "part": 20,
-        "size": 306117778,
-        "md5": "c6b2e469bdb973dbb6c63ab28304751f",
-        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.020",
+        "size": 731272778,
+        "md5": "69339ece1f8b03d1c83d7ce3fecffc83",
+        "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.020",
         "availability": {
           "candidates": [
             {
-              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.020",
+              "url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.020",
               "probe": {
                 "ok": true,
                 "status": 200,
                 "method": "HEAD",
-                "checked_at": "2026-09-03T10:43:52.143Z",
-                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.020",
+                "checked_at": "2026-09-04T02:05:52.970Z",
+                "final_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.020",
                 "content_type": "application/octet-stream",
-                "size": 306117778,
-                "last_modified": "Mon, 27 Jul 2026 12:23:53 GMT",
-                "etag": "33F5BAF3D36196EA8FB07BE6F9798347-120",
+                "size": 731272778,
+                "last_modified": "Mon, 31 Aug 2026 04:15:45 GMT",
+                "etag": "24BE744E403A6F1A16FF4AD76834FD93-285",
                 "error": "",
                 "bot_challenge": false,
                 "stale": false,
@@ -861,7 +861,7 @@
           "interpretation": {
             "state": "available",
             "reason": "http_2xx",
-            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/76.0/update/1/1/Windows/76.0.0_jbAnLFy2dtzNQvii/packs/production_076-76.0.0-77edc7a6880-45-HG.zip.020",
+            "preferred_url": "https://ak.hycdn.cn/GzD1CpaWgmSq1wew/77.0/update/1/1/Windows/77.0.0_o2Ri5AN2Z7XXjdtF/packs/production_077-77.0.0-c2e7ae33b25-48-HG.zip.020",
             "confidence": "high",
             "retained": false,
             "display_label": "可用"
@@ -872,9 +872,9 @@
     ],
     "links": {
       "packages": {
-        "json": "data/arknights/lists/76.0.0_packages.json",
-        "urls": "data/arknights/lists/76.0.0_packages.urls.txt",
-        "aria2": "data/arknights/lists/76.0.0_packages.aria2.txt"
+        "json": "data/arknights/lists/77.0.0_packages.json",
+        "urls": "data/arknights/lists/77.0.0_packages.urls.txt",
+        "aria2": "data/arknights/lists/77.0.0_packages.aria2.txt"
       }
     }
   }
