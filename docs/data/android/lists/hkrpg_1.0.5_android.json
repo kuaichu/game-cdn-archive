@@ -22,34 +22,34 @@
         {
           "url": "https://autopatchcn.bhsr.com/client/cn/20230413215209_VC9JD8S2WrcciZFu/StarRail_1.0.5_gw.apk",
           "probe": {
-            "ok": true,
-            "status": 206,
+            "ok": false,
+            "status": 404,
             "method": "GET",
-            "checked_at": "2026-09-04T02:13:41.985Z",
+            "checked_at": "2026-09-05T02:07:38.463Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20230413215209_VC9JD8S2WrcciZFu/StarRail_1.0.5_gw.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 161288002,
-            "last_modified": "Mon, 17 Apr 2023 03:00:32 GMT",
-            "etag": "b5a7eceaee09c52eac9be5686b51c97e-2",
-            "error": "",
+            "content_type": "text/html",
+            "size": 18,
+            "last_modified": "Thu, 08 Sep 2022 10:13:18 GMT",
+            "etag": "53AF239EE5D3E261545DEDEDCB6FFD57",
+            "error": "HTTP 404",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 8.21,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "high"
+        "confidence": "low"
       },
       "interpretation": {
-        "state": "available",
-        "reason": "range_probe_ok",
-        "preferred_url": "https://autopatchcn.bhsr.com/client/cn/20230413215209_VC9JD8S2WrcciZFu/StarRail_1.0.5_gw.apk",
-        "confidence": "high",
-        "retained": false,
-        "display_label": "可用"
+        "state": "unavailable",
+        "reason": "retained_historical",
+        "preferred_url": "",
+        "confidence": "low",
+        "retained": true,
+        "display_label": "链接失效"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
