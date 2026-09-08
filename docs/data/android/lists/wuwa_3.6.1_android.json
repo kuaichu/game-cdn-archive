@@ -1,0 +1,58 @@
+[
+  {
+    "game_id": "wuwa",
+    "version": "3.6.1",
+    "channel": "官渠",
+    "url": "https://mirrors-package-mc.aki-game.com/client/download/20260908151023_qMkjUNQ46hHurYHtzM/%E9%B8%A3%E6%BD%AE_3.6.1_176520876_33_%E5%AE%98%E6%B8%A0_ef8052cb55a533eb900fdbc872bf64d7_shelled.apk",
+    "source": "official Wuthering Waves Android download index",
+    "source_url": "https://download.kurogames.com/mc_WnGtDn85y8lJB4mTmYHYuNjIl9n6YGVm/official/cn/zh-Hans/android_app.json",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 1887022898,
+    "last_modified": "Tue, 08 Sep 2026 07:10:29 GMT",
+    "etag": "59efe5fa46f3e8eee4477f05fb335ffd-36",
+    "md5": "ef8052cb55a533eb900fdbc872bf64d7",
+    "crc64": "956816367713567688",
+    "error": "",
+    "filename": "鸣潮_3.6.1_176520876_33_官渠_ef8052cb55a533eb900fdbc872bf64d7_shelled.apk",
+    "captured_at": "2026-09-08T09:02:27.053954+00:00",
+    "updated_at": "2026-09-08T07:10:29+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://mirrors-package-mc.aki-game.com/client/download/20260908151023_qMkjUNQ46hHurYHtzM/%E9%B8%A3%E6%BD%AE_3.6.1_176520876_33_%E5%AE%98%E6%B8%A0_ef8052cb55a533eb900fdbc872bf64d7_shelled.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-09-08T09:02:27.053954+00:00",
+            "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20260908151023_qMkjUNQ46hHurYHtzM/%E9%B8%A3%E6%BD%AE_3.6.1_176520876_33_%E5%AE%98%E6%B8%A0_ef8052cb55a533eb900fdbc872bf64d7_shelled.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 1887022898,
+            "last_modified": "Tue, 08 Sep 2026 07:10:29 GMT",
+            "etag": "59efe5fa46f3e8eee4477f05fb335ffd-36",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.893,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://mirrors-package-mc.aki-game.com/client/download/20260908151023_qMkjUNQ46hHurYHtzM/%E9%B8%A3%E6%BD%AE_3.6.1_176520876_33_%E5%AE%98%E6%B8%A0_ef8052cb55a533eb900fdbc872bf64d7_shelled.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
