@@ -1,0 +1,58 @@
+[
+  {
+    "game_id": "nap",
+    "version": "3.2.0",
+    "channel": "gw",
+    "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260827111653_PGgW44kwRSLPkMBE/gw/ZenlessZoneZero_3.2.apk",
+    "source": "official download porter latest endpoint",
+    "source_url": "https://api-takumi.mihoyo.com/event/download_porter/link/nap_cn/official/android_default",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 490934515,
+    "last_modified": "Thu, 27 Aug 2026 04:13:22 GMT",
+    "etag": "4E483ED77F502C01D6CD62B8743DA768-10",
+    "md5": "",
+    "crc64": "",
+    "error": "",
+    "filename": "ZenlessZoneZero_3.2.apk",
+    "captured_at": "2026-09-09T01:47:04.155691+00:00",
+    "updated_at": "2026-08-27T04:13:22+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260827111653_PGgW44kwRSLPkMBE/gw/ZenlessZoneZero_3.2.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-09-09T01:47:04.155691+00:00",
+            "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260827111653_PGgW44kwRSLPkMBE/gw/ZenlessZoneZero_3.2.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 490934515,
+            "last_modified": "Thu, 27 Aug 2026 04:13:22 GMT",
+            "etag": "4E483ED77F502C01D6CD62B8743DA768-10",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 0.992,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260827111653_PGgW44kwRSLPkMBE/gw/ZenlessZoneZero_3.2.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
