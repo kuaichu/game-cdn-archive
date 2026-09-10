@@ -8,14 +8,14 @@
     "status": 200,
     "content_type": "application/vnd.android.package-archive",
     "size": 268154188,
-    "last_modified": "Thu, 21 Nov 2024 16:16:04 GMT",
-    "etag": "1AD44B77997AE62CD560B3DC2F56F822-10",
+    "last_modified": "Fri, 29 Nov 2024 08:59:06 GMT",
+    "etag": "1b422c011b6c7d44bbeb1d4cf43af7fb-2",
     "md5": "",
     "crc64": "",
     "error": "",
     "filename": "StarRail_2.7.0.apk",
     "captured_at": "2026-06-08T16:11:52.960334+00:00",
-    "updated_at": "2024-11-21T16:16:04+00:00",
+    "updated_at": "2024-11-29T08:59:06+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
@@ -23,18 +23,18 @@
           "url": "https://autopatchcn.bhsr.com/client/cn/20241121163119_GdgAYjnYypkAQKYt/gw_An/StarRail_2.7.0.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-09-09T02:48:19.437Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-09-10T01:14:13.912422+00:00",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20241121163119_GdgAYjnYypkAQKYt/gw_An/StarRail_2.7.0.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 268154188,
-            "last_modified": "Thu, 21 Nov 2024 16:16:04 GMT",
-            "etag": "1AD44B77997AE62CD560B3DC2F56F822-10",
+            "last_modified": "Fri, 29 Nov 2024 08:59:06 GMT",
+            "etag": "1b422c011b6c7d44bbeb1d4cf43af7fb-2",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.078,
             "scheduler_confidence": "high"
           }
         }
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://autopatchcn.bhsr.com/client/cn/20241121163119_GdgAYjnYypkAQKYt/gw_An/StarRail_2.7.0.apk",
         "confidence": "high",
         "retained": false,
