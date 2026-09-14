@@ -21,15 +21,15 @@
           "url": "http://static.benghuai.com/Download/v3_4/Original_3.4.8_1_signed.apk",
           "probe": {
             "ok": false,
-            "status": 504,
+            "status": 404,
             "method": "GET",
-            "checked_at": "2026-09-14T02:41:19.440Z",
+            "checked_at": "2026-09-14T10:56:09.041Z",
             "final_url": "http://static.benghuai.com/Download/v3_4/Original_3.4.8_1_signed.apk",
-            "content_type": "text/html",
-            "size": 279,
+            "content_type": "application/xml",
+            "size": 388,
             "last_modified": "",
             "etag": "",
-            "error": "HTTP 504",
+            "error": "HTTP 404",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0.0,
@@ -42,12 +42,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unknown",
-        "reason": "http_5xx",
+        "state": "unavailable",
+        "reason": "retained_historical",
         "preferred_url": "",
         "confidence": "low",
-        "retained": false,
-        "display_label": "状态未知"
+        "retained": true,
+        "display_label": "链接失效"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
