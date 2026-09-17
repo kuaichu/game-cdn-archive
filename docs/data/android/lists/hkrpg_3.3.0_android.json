@@ -8,14 +8,14 @@
     "status": 200,
     "content_type": "application/vnd.android.package-archive",
     "size": 326230663,
-    "last_modified": "Sat, 17 May 2025 04:43:29 GMT",
-    "etag": "d868156d186e2a2e6772e425fb006532-2",
+    "last_modified": "Fri, 09 May 2025 08:10:33 GMT",
+    "etag": "6132CACE64362A2220D47BBDED638E0E-10",
     "md5": "",
     "crc64": "",
     "error": "",
     "filename": "StarRail_3.3.0.apk",
     "captured_at": "2026-06-08T16:11:52.960334+00:00",
-    "updated_at": "2025-05-17T04:43:29+00:00",
+    "updated_at": "2025-05-09T08:10:33+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
@@ -23,18 +23,18 @@
           "url": "https://autopatchcn.bhsr.com/client/cn/20250509160832_GYFFC7NLruyZB5hq/gw_An/StarRail_3.3.0.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-09-16T02:36:52.623Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-09-17T01:36:28.837453+00:00",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20250509160832_GYFFC7NLruyZB5hq/gw_An/StarRail_3.3.0.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 326230663,
-            "last_modified": "Sat, 17 May 2025 04:43:29 GMT",
-            "etag": "d868156d186e2a2e6772e425fb006532-2",
+            "last_modified": "Fri, 09 May 2025 08:10:33 GMT",
+            "etag": "6132CACE64362A2220D47BBDED638E0E-10",
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.718,
             "scheduler_confidence": "high"
           }
         }
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://autopatchcn.bhsr.com/client/cn/20250509160832_GYFFC7NLruyZB5hq/gw_An/StarRail_3.3.0.apk",
         "confidence": "high",
         "retained": false,

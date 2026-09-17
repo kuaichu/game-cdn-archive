@@ -6,35 +6,35 @@
     "url": "https://autopatchcn.bhsr.com/client/cn/20230202112711_Gqh20JqTKF8yCY7c/StarRail_0.90.0.apk",
     "source": "official CDN URL captured manually",
     "status": 404,
-    "content_type": "application/xml",
+    "content_type": "text/html",
     "size": 0,
-    "last_modified": "",
-    "etag": "",
+    "last_modified": "Thu, 08 Sep 2022 10:13:18 GMT",
+    "etag": "53AF239EE5D3E261545DEDEDCB6FFD57",
     "md5": "",
-    "crc64": "",
+    "crc64": "4510927154085114263",
     "error": "APK object unavailable",
     "filename": "StarRail_0.90.0.apk",
     "captured_at": "2026-06-08T15:56:33.817046+00:00",
-    "updated_at": "2023-02-02T11:27:11+00:00",
-    "updated_at_source": "filename_timestamp",
+    "updated_at": "2022-09-08T10:13:18+00:00",
+    "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
         {
           "url": "https://autopatchcn.bhsr.com/client/cn/20230202112711_Gqh20JqTKF8yCY7c/StarRail_0.90.0.apk",
           "probe": {
-            "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-09-16T02:37:28.433Z",
+            "ok": false,
+            "status": 404,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-09-17T01:36:28.837453+00:00",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20230202112711_Gqh20JqTKF8yCY7c/StarRail_0.90.0.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 190708688,
-            "last_modified": "Thu, 02 Feb 2023 04:25:24 GMT",
-            "etag": "b375679231863215c17e965385522deb-2",
-            "error": "",
+            "content_type": "text/html",
+            "size": 0,
+            "last_modified": "Thu, 08 Sep 2022 10:13:18 GMT",
+            "etag": "53AF239EE5D3E261545DEDEDCB6FFD57",
+            "error": "APK object unavailable",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.718,
             "scheduler_confidence": "high"
           }
         }
@@ -44,12 +44,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unknown",
-        "reason": "range_probe_ok",
+        "state": "unavailable",
+        "reason": "retained_historical",
         "preferred_url": "",
         "confidence": "low",
-        "retained": false,
-        "display_label": "状态未知"
+        "retained": true,
+        "display_label": "链接失效"
       },
       "generated_by": "scripts/build_android_availability.py"
     }

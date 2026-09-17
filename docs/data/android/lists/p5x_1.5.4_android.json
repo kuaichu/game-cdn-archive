@@ -6,51 +6,49 @@
     "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
     "source": "official website Android download config; versionName read from AndroidManifest.xml",
     "source_url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
-    "status": 200,
-    "content_type": "application/octet-stream",
-    "size": 1664463882,
-    "last_modified": "Fri, 12 Jun 2026 02:48:29 GMT",
-    "etag": "831A4100025A89E210C2D608AB178D43-159",
+    "status": 0,
+    "content_type": "",
+    "size": 0,
+    "last_modified": "",
+    "etag": "",
     "md5": "",
-    "crc64": "13402655340528874976",
-    "error": "",
+    "crc64": "",
+    "error": "<urlopen error timed out>",
     "filename": "p5x_1_official_20260621.apk",
     "captured_at": "2026-09-01T09:30:55.515160+00:00",
-    "updated_at": "2026-06-12T02:48:29+00:00",
-    "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
         {
           "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
           "probe": {
-            "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-09-16T02:32:50.927Z",
+            "ok": false,
+            "status": 0,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-09-17T01:36:28.837453+00:00",
             "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
-            "content_type": "application/octet-stream",
-            "size": 1664463882,
-            "last_modified": "Fri, 12 Jun 2026 02:48:29 GMT",
-            "etag": "831A4100025A89E210C2D608AB178D43-159",
-            "error": "",
+            "content_type": "",
+            "size": 0,
+            "last_modified": "",
+            "etag": "",
+            "error": "timeout",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.708,
             "scheduler_confidence": "high"
           }
         }
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "high"
+        "confidence": "low"
       },
       "interpretation": {
-        "state": "available",
-        "reason": "range_probe_ok",
-        "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260621.apk",
-        "confidence": "high",
+        "state": "unknown",
+        "reason": "http_timeout",
+        "preferred_url": "",
+        "confidence": "low",
         "retained": false,
-        "display_label": "可用"
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
