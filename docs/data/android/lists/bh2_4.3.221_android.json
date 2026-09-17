@@ -22,17 +22,17 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-09-17T01:36:28.837453+00:00",
+            "method": "GET",
+            "checked_at": "2026-09-17T10:38:04.952Z",
             "final_url": "http://static.benghuai.com/Download/v4_3/Mix_4.3.221_10_signed.apk",
             "content_type": "application/xml",
-            "size": 0,
+            "size": 386,
             "last_modified": "",
             "etag": "",
-            "error": "APK object unavailable",
+            "error": "HTTP 404",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 1.722,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

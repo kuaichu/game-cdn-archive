@@ -23,19 +23,19 @@
         {
           "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260423.apk",
           "probe": {
-            "ok": false,
-            "status": 0,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-09-17T01:36:28.837453+00:00",
+            "ok": true,
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-09-17T10:31:12.566Z",
             "final_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260423.apk",
-            "content_type": "",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "timeout",
+            "content_type": "application/octet-stream",
+            "size": 940694857,
+            "last_modified": "Tue, 21 Apr 2026 00:31:06 GMT",
+            "etag": "0FF00F2A862674B307075A60485D4F73-90",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 1.708,
+            "age_hours": 0,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "unknown",
-        "reason": "http_timeout",
+        "reason": "range_probe_ok",
         "preferred_url": "",
         "confidence": "low",
         "retained": false,
