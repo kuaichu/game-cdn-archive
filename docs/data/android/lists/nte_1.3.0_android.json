@@ -23,16 +23,16 @@
         {
           "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260813.apk",
           "probe": {
-            "ok": false,
-            "status": 0,
+            "ok": true,
+            "status": 206,
             "method": "GET",
-            "checked_at": "2026-09-23T02:53:11.424Z",
-            "final_url": "",
-            "content_type": "",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "timeout",
+            "checked_at": "2026-09-23T10:52:56.877Z",
+            "final_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260813.apk",
+            "content_type": "application/octet-stream",
+            "size": 1251685920,
+            "last_modified": "Wed, 12 Aug 2026 21:50:32 GMT",
+            "etag": "2D138919F4F2658D30C94864B22755FF-120",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0,
@@ -42,15 +42,15 @@
       ],
       "source": {
         "kind": "live_probe",
-        "confidence": "low"
+        "confidence": "high"
       },
       "interpretation": {
-        "state": "unknown",
-        "reason": "http_timeout",
-        "preferred_url": "",
-        "confidence": "low",
+        "state": "available",
+        "reason": "range_probe_ok",
+        "preferred_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260813.apk",
+        "confidence": "high",
         "retained": false,
-        "display_label": "状态未知"
+        "display_label": "可用"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
