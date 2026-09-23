@@ -21,19 +21,19 @@
         {
           "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260909.apk",
           "probe": {
-            "ok": false,
-            "status": 0,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-09-22T09:29:34.464448+00:00",
+            "ok": true,
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-09-23T02:54:02.476Z",
             "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260909.apk",
-            "content_type": "",
-            "size": 0,
-            "last_modified": "",
-            "etag": "",
-            "error": "Remote end closed connection without response",
+            "content_type": "application/octet-stream",
+            "size": 1643583223,
+            "last_modified": "Wed, 09 Sep 2026 05:07:07 GMT",
+            "etag": "3248F2F8B24360E3400AC2C26309A5B5-157",
+            "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 1.234,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -44,7 +44,7 @@
       },
       "interpretation": {
         "state": "unknown",
-        "reason": "not_probed",
+        "reason": "range_probe_ok",
         "preferred_url": "",
         "confidence": "low",
         "retained": false,

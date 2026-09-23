@@ -1,0 +1,58 @@
+[
+  {
+    "game_id": "hk4e",
+    "version": "7.1.0",
+    "channel": "mihoyo",
+    "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260915143557_znpK0stDcvvXlIk8/mihoyo/yuanshen_7.1.0.apk",
+    "source": "official download porter latest endpoint",
+    "source_url": "https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/android_default",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 513290339,
+    "last_modified": "Tue, 15 Sep 2026 06:39:56 GMT",
+    "etag": "842349682820CB7FD8C7605581047CFB-10",
+    "md5": "",
+    "crc64": "",
+    "error": "",
+    "filename": "yuanshen_7.1.0.apk",
+    "captured_at": "2026-09-23T01:39:55.463663+00:00",
+    "updated_at": "2026-09-15T06:39:56+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260915143557_znpK0stDcvvXlIk8/mihoyo/yuanshen_7.1.0.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-09-23T01:39:55.463663+00:00",
+            "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260915143557_znpK0stDcvvXlIk8/mihoyo/yuanshen_7.1.0.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 513290339,
+            "last_modified": "Tue, 15 Sep 2026 06:39:56 GMT",
+            "etag": "842349682820CB7FD8C7605581047CFB-10",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.261,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20260915143557_znpK0stDcvvXlIk8/mihoyo/yuanshen_7.1.0.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
