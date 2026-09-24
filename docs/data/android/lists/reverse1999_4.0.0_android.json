@@ -1,0 +1,57 @@
+[
+  {
+    "game_id": "reverse1999",
+    "version": "4.0.0",
+    "channel": "official",
+    "url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
+    "source": "official Reverse: 1999 Android download URL; versionName read from AndroidManifest.xml",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 2053260139,
+    "last_modified": "Wed, 23 Sep 2026 21:02:54 GMT",
+    "etag": "d234dae2ce7571d2fa04966d38da2c33-245",
+    "md5": "",
+    "crc64": "13122715435188829588",
+    "error": "",
+    "filename": "Reverse1999_Bluepoch_1000.apk",
+    "captured_at": "2026-07-05T02:10:35.258149+00:00",
+    "updated_at": "2026-09-23T21:02:54+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-09-24T01:39:59.339090+00:00",
+            "final_url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2053260139,
+            "last_modified": "Wed, 23 Sep 2026 21:02:54 GMT",
+            "etag": "d234dae2ce7571d2fa04966d38da2c33-245",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.242,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
