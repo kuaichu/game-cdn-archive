@@ -6,25 +6,27 @@
     "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260909.apk",
     "source": "official website Android download config; versionName read from AndroidManifest.xml",
     "source_url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/p5x-gameDownload.js",
-    "status": 0,
-    "content_type": "",
-    "size": 0,
-    "last_modified": "",
-    "etag": "",
+    "status": 200,
+    "content_type": "application/octet-stream",
+    "size": 1643583223,
+    "last_modified": "Wed, 09 Sep 2026 05:07:07 GMT",
+    "etag": "3248F2F8B24360E3400AC2C26309A5B5-157",
     "md5": "",
-    "crc64": "",
-    "error": "Remote end closed connection without response",
+    "crc64": "6449833929296736045",
+    "error": "",
     "filename": "p5x_1_official_20260909.apk",
-    "captured_at": "2026-09-22T09:29:34.464448+00:00",
+    "captured_at": "2026-09-25T01:41:46.027610+00:00",
+    "updated_at": "2026-09-09T05:07:07+00:00",
+    "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
         {
           "url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260909.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-09-24T02:54:12.065Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-09-25T01:41:46.027610+00:00",
             "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260909.apk",
             "content_type": "application/octet-stream",
             "size": 1643583223,
@@ -33,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0,
+            "age_hours": 0.962,
             "scheduler_confidence": "high"
           }
         }
@@ -44,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260909.apk",
         "confidence": "high",
         "retained": false,
