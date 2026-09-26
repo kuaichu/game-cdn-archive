@@ -24,8 +24,8 @@
           "probe": {
             "ok": true,
             "status": 206,
-            "method": "CURL_GET",
-            "checked_at": "2026-09-25T02:44:27.600Z",
+            "method": "GET",
+            "checked_at": "2026-09-26T03:04:24.776Z",
             "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20240301202146_2eos1Ghjnr2cl6UN/mihoyo/yuanshen_4.5.0.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 348339739,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 8.081,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
