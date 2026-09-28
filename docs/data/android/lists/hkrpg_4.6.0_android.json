@@ -1,0 +1,58 @@
+[
+  {
+    "game_id": "hkrpg",
+    "version": "4.6.0",
+    "channel": "gw_An",
+    "url": "https://autopatchcn.bhsr.com/client/4.6.0/20260917_90d9C15FEbfa/Android_apk/gw_An/StarRail_4.6.0.apk",
+    "source": "official download porter latest endpoint",
+    "source_url": "https://api-takumi.mihoyo.com/event/download_porter/link/hkrpg_cn/official/android_default",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 469359432,
+    "last_modified": "Thu, 17 Sep 2026 09:26:16 GMT",
+    "etag": "2CF043DBFDB6EEF2D639D594C70D9125-45",
+    "md5": "",
+    "crc64": "",
+    "error": "",
+    "filename": "StarRail_4.6.0.apk",
+    "captured_at": "2026-09-28T01:51:30.233268+00:00",
+    "updated_at": "2026-09-17T09:26:16+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://autopatchcn.bhsr.com/client/4.6.0/20260917_90d9C15FEbfa/Android_apk/gw_An/StarRail_4.6.0.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-09-28T01:51:30.233268+00:00",
+            "final_url": "https://autopatchcn.bhsr.com/client/4.6.0/20260917_90d9C15FEbfa/Android_apk/gw_An/StarRail_4.6.0.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 469359432,
+            "last_modified": "Thu, 17 Sep 2026 09:26:16 GMT",
+            "etag": "2CF043DBFDB6EEF2D639D594C70D9125-45",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.126,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://autopatchcn.bhsr.com/client/4.6.0/20260917_90d9C15FEbfa/Android_apk/gw_An/StarRail_4.6.0.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
