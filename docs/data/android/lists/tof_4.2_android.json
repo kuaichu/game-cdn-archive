@@ -33,8 +33,8 @@
           "probe": {
             "ok": true,
             "status": 206,
-            "method": "CURL_GET",
-            "checked_at": "2026-09-28T11:58:03.964Z",
+            "method": "GET",
+            "checked_at": "2026-09-29T12:23:58.061Z",
             "final_url": "https://htapk.wmupd.com/webops/ht/ht_QRSL-20240711.apk",
             "content_type": "application/octet-stream",
             "size": 1559683250,
@@ -43,7 +43,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 15.738,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
