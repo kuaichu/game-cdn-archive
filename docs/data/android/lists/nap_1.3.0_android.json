@@ -24,8 +24,8 @@
           "probe": {
             "ok": true,
             "status": 206,
-            "method": "CURL_GET",
-            "checked_at": "2026-09-30T04:07:00.174Z",
+            "method": "GET",
+            "checked_at": "2026-10-01T03:26:28.558Z",
             "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20241025155348_P1CiQgR6Uw0z3Pb8/gw/ZenlessZoneZero_1.3.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 371880986,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 7.762,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }

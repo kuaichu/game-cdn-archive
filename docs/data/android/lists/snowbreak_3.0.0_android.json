@@ -23,15 +23,15 @@
           "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ_3.0.0_202507031642_jinshan_30020.mtp.apk",
           "probe": {
             "ok": false,
-            "status": 404,
+            "status": 0,
             "method": "GET",
-            "checked_at": "2026-09-30T11:51:29.012Z",
-            "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ_3.0.0_202507031642_jinshan_30020.mtp.apk",
-            "content_type": "application/xml",
-            "size": 501,
+            "checked_at": "2026-10-01T03:24:52.328Z",
+            "final_url": "",
+            "content_type": "",
+            "size": 0,
             "last_modified": "",
             "etag": "",
-            "error": "HTTP 404",
+            "error": "tls: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0.0,
@@ -44,12 +44,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
+        "state": "unknown",
+        "reason": "tls_error",
         "preferred_url": "",
         "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "retained": false,
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
