@@ -8,25 +8,27 @@
     "source_url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/yh-gameDownload.js",
     "archive_note": "Historical official APK URL preserved even though the current official endpoint serves the same APK bytes under a newer versionName.",
     "preserve_same_hash": true,
-    "status": 0,
-    "content_type": "",
-    "size": 0,
-    "last_modified": "",
-    "etag": "",
+    "status": 200,
+    "content_type": "application/octet-stream",
+    "size": 940694857,
+    "last_modified": "Tue, 21 Apr 2026 00:31:06 GMT",
+    "etag": "0FF00F2A862674B307075A60485D4F73-90",
     "md5": "",
-    "crc64": "",
-    "error": "<urlopen error timed out>",
+    "crc64": "8990914718054970518",
+    "error": "",
     "filename": "yh_gw_20260423.apk",
     "captured_at": "2026-07-05T03:31:49.029579+00:00",
+    "updated_at": "2026-04-21T00:31:06+00:00",
+    "updated_at_source": "apk_last_modified",
     "availability": {
       "candidates": [
         {
           "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260423.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-09-30T11:49:45.328Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-10-02T02:33:18.833841+00:00",
             "final_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260423.apk",
             "content_type": "application/octet-stream",
             "size": 940694857,
@@ -35,7 +37,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 15.563,
+            "age_hours": 1.265,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +48,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260423.apk",
         "confidence": "high",
         "retained": false,

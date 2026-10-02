@@ -16,14 +16,14 @@
       "length": 946733437,
       "digest": "S4VKAABA3E36FW64KHACHZVPFOMHR6IK"
     },
-    "status": 0,
-    "content_type": "",
-    "size": 0,
-    "last_modified": "",
-    "etag": "",
+    "status": 200,
+    "content_type": "application/octet-stream",
+    "size": 1559683250,
+    "last_modified": "Thu, 11 Jul 2024 10:48:10 GMT",
+    "etag": "5FAF3262496FE481C6BB9BE845A75718-149",
     "md5": "",
-    "crc64": "",
-    "error": "<urlopen error timed out>",
+    "crc64": "6140127737111448214",
+    "error": "",
     "filename": "ht_QRSL-20240711.apk",
     "captured_at": "2026-07-09T04:40:42.860380+00:00",
     "availability": {
@@ -32,9 +32,9 @@
           "url": "https://htapk.wmupd.com/webops/ht/ht_QRSL-20240711.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-09-30T11:49:47.087Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-10-02T02:33:18.833841+00:00",
             "final_url": "https://htapk.wmupd.com/webops/ht/ht_QRSL-20240711.apk",
             "content_type": "application/octet-stream",
             "size": 1559683250,
@@ -43,7 +43,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 15.562,
+            "age_hours": 1.265,
             "scheduler_confidence": "high"
           }
         }
@@ -54,7 +54,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://htapk.wmupd.com/webops/ht/ht_QRSL-20240711.apk",
         "confidence": "high",
         "retained": false,

@@ -24,8 +24,8 @@
           "probe": {
             "ok": true,
             "status": 200,
-            "method": "GET",
-            "checked_at": "2026-10-01T03:29:20.567Z",
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-10-02T02:33:18.833841+00:00",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20230926141222_ZKWHBONxYlx8PGYQ/StarRail_1.4.0_ad_bdpz.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 201308951,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.279,
             "scheduler_confidence": "high"
           }
         }
@@ -79,8 +79,8 @@
           "probe": {
             "ok": true,
             "status": 200,
-            "method": "GET",
-            "checked_at": "2026-10-01T03:29:21.560Z",
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-10-02T02:33:18.833841+00:00",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20230926141222_ZKWHBONxYlx8PGYQ/StarRail_1.4.0_mihoyo.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 201231097,
@@ -89,7 +89,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.279,
             "scheduler_confidence": "high"
           }
         }

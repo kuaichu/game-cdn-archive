@@ -11,7 +11,7 @@
     "last_modified": "Sat, 03 Aug 2024 07:23:02 GMT",
     "etag": "116F1EE9974086750844EA3FE3EBB65D-10",
     "md5": "",
-    "crc64": "",
+    "crc64": "5566355078017885974",
     "error": "",
     "filename": "ZenlessZoneZero_1.1.apk",
     "captured_at": "2026-06-21T04:43:45.169494+00:00",
@@ -23,9 +23,9 @@
           "url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240803114639_42wr7vZPfbOKwfpF/gw/ZenlessZoneZero_1.1.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-10-01T03:26:51.697Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-10-02T02:33:18.833841+00:00",
             "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240803114639_42wr7vZPfbOKwfpF/gw/ZenlessZoneZero_1.1.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 339872824,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.278,
             "scheduler_confidence": "high"
           }
         }
@@ -45,7 +45,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240803114639_42wr7vZPfbOKwfpF/gw/ZenlessZoneZero_1.1.apk",
         "confidence": "high",
         "retained": false,
