@@ -32,9 +32,9 @@
           "url": "https://htapk.wmupd.com/webops/ht/ht_QRSL-20240711.apk",
           "probe": {
             "ok": true,
-            "status": 200,
-            "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-10-02T02:33:18.833841+00:00",
+            "status": 206,
+            "method": "GET",
+            "checked_at": "2026-10-03T03:03:39.539Z",
             "final_url": "https://htapk.wmupd.com/webops/ht/ht_QRSL-20240711.apk",
             "content_type": "application/octet-stream",
             "size": 1559683250,
@@ -43,7 +43,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 9.088,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
@@ -54,7 +54,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "http_2xx",
+        "reason": "range_probe_ok",
         "preferred_url": "https://htapk.wmupd.com/webops/ht/ht_QRSL-20240711.apk",
         "confidence": "high",
         "retained": false,
