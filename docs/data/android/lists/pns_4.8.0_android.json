@@ -15,7 +15,7 @@
     "crc64": "",
     "error": "",
     "filename": "20260924-v4_8-zspms_A1372.apk",
-    "captured_at": "2026-10-04T10:40:45.777089+00:00",
+    "captured_at": "2026-10-05T11:44:09.503373+00:00",
     "updated_at": "2026-09-23T03:11:15+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
@@ -26,7 +26,7 @@
             "ok": true,
             "status": 200,
             "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-10-04T10:40:45.777089+00:00",
+            "checked_at": "2026-10-05T11:44:09.503373+00:00",
             "final_url": "https://zspms-txcdn-media.kurogame.com/install/G4tN7bD2vF9c/20260924-v4_8-zspms_A1372.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2091334582,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 1.216,
+            "age_hours": 1.414,
             "scheduler_confidence": "high"
           }
         }
@@ -71,7 +71,7 @@
     "crc64": "",
     "error": "",
     "filename": "20260924-v4_8-zspms_A1346.apk",
-    "captured_at": "2026-09-26T01:56:53.320578+00:00",
+    "captured_at": "2026-10-05T11:44:09.503373+00:00",
     "updated_at": "2026-09-23T03:10:36+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
@@ -80,9 +80,9 @@
           "url": "https://zspms-txcdn-media.kurogame.com/install/7sK9pR2xQ5z8/20260924-v4_8-zspms_A1346.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-10-04T04:19:57.069Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-10-05T11:44:09.503373+00:00",
             "final_url": "https://zspms-txcdn-media.kurogame.com/install/7sK9pR2xQ5z8/20260924-v4_8-zspms_A1346.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2091363254,
@@ -91,7 +91,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 7.563,
+            "age_hours": 1.414,
             "scheduler_confidence": "high"
           }
         }
@@ -102,7 +102,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://zspms-txcdn-media.kurogame.com/install/7sK9pR2xQ5z8/20260924-v4_8-zspms_A1346.apk",
         "confidence": "high",
         "retained": false,
