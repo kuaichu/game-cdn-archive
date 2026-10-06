@@ -22,8 +22,8 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "CURL_GET",
-            "checked_at": "2026-10-05T13:05:39.068Z",
+            "method": "GET",
+            "checked_at": "2026-10-06T04:31:19.634Z",
             "final_url": "https://autopatchcn.yuanshen.com/client_app/yuanshen_0.9.3.apk",
             "content_type": "application/xml",
             "size": 306,
