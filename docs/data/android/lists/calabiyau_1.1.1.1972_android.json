@@ -24,8 +24,8 @@
           "probe": {
             "ok": true,
             "status": 206,
-            "method": "GET",
-            "checked_at": "2026-10-06T04:21:26.995Z",
+            "method": "CURL_GET",
+            "checked_at": "2026-10-07T04:22:21.716Z",
             "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ_1.1.1_202307170926.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 1507901029,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 8.167,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
