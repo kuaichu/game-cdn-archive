@@ -24,8 +24,8 @@
           "probe": {
             "ok": true,
             "status": 206,
-            "method": "CURL_GET",
-            "checked_at": "2026-10-07T04:22:44.359Z",
+            "method": "GET",
+            "checked_at": "2026-10-08T03:41:28.959Z",
             "final_url": "https://packaging.ys4fun.com/package/channel/303/mimir_ali_prod_303_1_ys4fun_20250910110808_M01000000_LSu3eyVW_sign.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 1833034832,
@@ -34,7 +34,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 7.928,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
