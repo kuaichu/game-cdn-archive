@@ -23,15 +23,15 @@
           "url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.2.5.0.109.jinshan_202501141654.apk",
           "probe": {
             "ok": false,
-            "status": 404,
+            "status": 0,
             "method": "GET",
-            "checked_at": "2026-10-13T13:14:32.623Z",
-            "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.2.5.0.109.jinshan_202501141654.apk",
-            "content_type": "application/xml",
-            "size": 495,
+            "checked_at": "2026-10-14T02:56:55.760Z",
+            "final_url": "",
+            "content_type": "",
+            "size": 0,
             "last_modified": "",
             "etag": "",
-            "error": "HTTP 404",
+            "error": "timeout",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0.0,
@@ -44,12 +44,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
+        "state": "unknown",
+        "reason": "http_timeout",
         "preferred_url": "",
         "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "retained": false,
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
