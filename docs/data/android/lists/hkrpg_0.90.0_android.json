@@ -24,8 +24,8 @@
           "probe": {
             "ok": false,
             "status": 404,
-            "method": "GET",
-            "checked_at": "2026-10-20T03:05:26.595Z",
+            "method": "CURL_GET",
+            "checked_at": "2026-10-20T10:27:43.724Z",
             "final_url": "https://autopatchcn.bhsr.com/client/cn/20230202112711_Gqh20JqTKF8yCY7c/StarRail_0.90.0.apk",
             "content_type": "text/html",
             "size": 18,
