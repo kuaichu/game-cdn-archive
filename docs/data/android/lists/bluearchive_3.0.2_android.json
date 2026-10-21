@@ -5,7 +5,7 @@
     "channel": "Official",
     "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/b00bd36d8ac74ac19710ea89a3e72826/BlueArchive.apk",
     "source": "official Blue Archive website bundle; versionName read from AndroidManifest.xml",
-    "source_url": "https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/index.0773252b.js",
+    "source_url": "https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/index.7ab147c6.js",
     "status": 200,
     "content_type": "application/vnd.android.package-archive",
     "size": 2126400085,
@@ -15,7 +15,7 @@
     "crc64": "",
     "error": "",
     "filename": "BlueArchive.apk",
-    "captured_at": "2026-10-19T09:59:03.695409+00:00",
+    "captured_at": "2026-10-21T09:31:40.439104+00:00",
     "updated_at": "2026-07-14T03:07:35+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
@@ -26,7 +26,7 @@
             "ok": true,
             "status": 200,
             "method": "LEGACY_ANDROID_HEAD",
-            "checked_at": "2026-10-20T02:03:59.848026+00:00",
+            "checked_at": "2026-10-21T09:31:40.439104+00:00",
             "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/b00bd36d8ac74ac19710ea89a3e72826/BlueArchive.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2126400085,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.962,
+            "age_hours": 0.951,
             "scheduler_confidence": "high"
           }
         }
