@@ -1,6 +1,6 @@
 {
-  "last_checked_at": "2026-10-29T02:37:44.244111+00:00",
-  "generated_at": "2026-10-29T02:37:44.244111+00:00",
+  "last_checked_at": "2026-10-29T11:00:27.032118+00:00",
+  "generated_at": "2026-10-29T11:00:27.032118+00:00",
   "source": "manually captured official Android APK CDN URLs",
   "games": {
     "nte": {
@@ -34,7 +34,7 @@
                   "ok": true,
                   "status": 206,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:40:38.986Z",
+                  "checked_at": "2026-10-29T12:04:26.682Z",
                   "final_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260924.apk",
                   "content_type": "application/octet-stream",
                   "size": 1424163842,
@@ -43,7 +43,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 15.968,
+                  "age_hours": 0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -89,34 +89,34 @@
               {
                 "url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260423.apk",
                 "probe": {
-                  "ok": false,
-                  "status": 0,
+                  "ok": true,
+                  "status": 206,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:38:45.461Z",
-                  "final_url": "",
-                  "content_type": "",
-                  "size": 0,
-                  "last_modified": "",
-                  "etag": "",
-                  "error": "timeout",
+                  "checked_at": "2026-10-29T12:04:28.199Z",
+                  "final_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260423.apk",
+                  "content_type": "application/octet-stream",
+                  "size": 940694857,
+                  "last_modified": "Tue, 21 Apr 2026 00:31:06 GMT",
+                  "etag": "0FF00F2A862674B307075A60485D4F73-90",
+                  "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
             ],
             "source": {
               "kind": "live_probe",
-              "confidence": "low"
+              "confidence": "high"
             },
             "interpretation": {
-              "state": "unknown",
-              "reason": "http_timeout",
-              "preferred_url": "",
-              "confidence": "low",
+              "state": "available",
+              "reason": "range_probe_ok",
+              "preferred_url": "https://yhapk.wmupd.com/webops/yh/yh_gw_20260423.apk",
+              "confidence": "high",
               "retained": false,
-              "display_label": "状态未知"
+              "display_label": "可用"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -183,7 +183,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.412,
                   "scheduler_confidence": "high"
                 }
               }
@@ -243,7 +243,7 @@
                   "ok": true,
                   "status": 206,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:40:44.071Z",
+                  "checked_at": "2026-10-29T12:04:31.600Z",
                   "final_url": "https://p5xapk.wmupd.com/webops/p5x/p5x_1_official_20260909.apk",
                   "content_type": "application/octet-stream",
                   "size": 1643583223,
@@ -252,7 +252,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 15.985,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -308,7 +308,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.412,
                   "scheduler_confidence": "high"
                 }
               }
@@ -364,7 +364,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.411,
                   "scheduler_confidence": "high"
                 }
               }
@@ -420,7 +420,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.411,
                   "scheduler_confidence": "high"
                 }
               }
@@ -476,7 +476,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.41,
                   "scheduler_confidence": "high"
                 }
               }
@@ -531,7 +531,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.41,
                   "scheduler_confidence": "high"
                 }
               }
@@ -587,7 +587,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.409,
                   "scheduler_confidence": "high"
                 }
               }
@@ -643,7 +643,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.408,
                   "scheduler_confidence": "high"
                 }
               }
@@ -699,7 +699,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.407,
                   "scheduler_confidence": "high"
                 }
               }
@@ -755,7 +755,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.407,
                   "scheduler_confidence": "high"
                 }
               }
@@ -811,7 +811,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.406,
                   "scheduler_confidence": "high"
                 }
               }
@@ -915,7 +915,7 @@
                   "ok": true,
                   "status": 200,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://d.bluepoch.com/home/Reverse1999_Bluepoch_1000.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 2053260139,
@@ -924,7 +924,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.041,
+                  "age_hours": 1.069,
                   "scheduler_confidence": "high"
                 }
               }
@@ -968,7 +968,7 @@
                   "ok": false,
                   "status": 567,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:40:13.210Z",
+                  "checked_at": "2026-10-29T12:04:34.502Z",
                   "final_url": "https://d.bluepoch.com/prepage/Reverse1999_app1.0.3_res100.0.101_Bluepoch_1006.apk",
                   "content_type": "text/html; charset=UTF-8",
                   "size": 7352,
@@ -1021,7 +1021,7 @@
                   "ok": false,
                   "status": 567,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:40:15.197Z",
+                  "checked_at": "2026-10-29T12:04:36.278Z",
                   "final_url": "https://d.bluepoch.com/officialweb/50001/reverse1999_1000_app_0.4.0_bluepoch.apk",
                   "content_type": "text/html; charset=UTF-8",
                   "size": 7352,
@@ -1082,14 +1082,14 @@
           "source_url": "https://klbqm.idreamsky.com/",
           "updated_at": "2025-10-22T23:42:15+00:00",
           "updated_at_source": "official_config",
-          "status": 200,
-          "content_type": "application/vnd.android.package-archive",
-          "size": 2010087641,
-          "last_modified": "Wed, 21 Oct 2026 23:05:08 GMT",
-          "etag": "69eeaa19c2f19a68279170c4fe75ac61",
+          "status": 404,
+          "content_type": "text/html; charset=UTF-8",
+          "size": 0,
+          "last_modified": "",
+          "etag": "",
           "md5": "",
-          "crc64": "15438619836925593038",
-          "error": "",
+          "crc64": "",
+          "error": "APK object unavailable",
           "filename": "klbqm_LD0S0N00011.apk",
           "captured_at": "2026-07-05T01:50:12.992811+00:00",
           "availability": {
@@ -1097,34 +1097,34 @@
               {
                 "url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
                 "probe": {
-                  "ok": true,
-                  "status": 200,
+                  "ok": false,
+                  "status": 404,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
-                  "content_type": "application/vnd.android.package-archive",
-                  "size": 2010087641,
-                  "last_modified": "Wed, 21 Oct 2026 23:05:08 GMT",
-                  "etag": "69eeaa19c2f19a68279170c4fe75ac61",
-                  "error": "",
+                  "content_type": "text/html; charset=UTF-8",
+                  "size": 0,
+                  "last_modified": "",
+                  "etag": "",
+                  "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.042,
+                  "age_hours": 1.07,
                   "scheduler_confidence": "high"
                 }
               }
             ],
             "source": {
               "kind": "live_probe",
-              "confidence": "high"
+              "confidence": "low"
             },
             "interpretation": {
-              "state": "available",
-              "reason": "http_2xx",
-              "preferred_url": "https://ms-pack.dl.gxpan.cn/990375/com.idreamsky.klbqm/klbqm_LD0S0N00011.apk",
-              "confidence": "high",
-              "retained": false,
-              "display_label": "可用"
+              "state": "unavailable",
+              "reason": "retained_historical",
+              "preferred_url": "",
+              "confidence": "low",
+              "retained": true,
+              "display_label": "链接失效"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -1164,7 +1164,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.406,
                   "scheduler_confidence": "high"
                 }
               }
@@ -1229,7 +1229,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://open.ys4fun.com/web-api/pass/linkrouter/gwdl",
                   "content_type": "text/html",
                   "size": 0,
@@ -1238,7 +1238,7 @@
                   "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.043,
+                  "age_hours": 1.07,
                   "scheduler_confidence": "high"
                 }
               }
@@ -1286,7 +1286,7 @@
                   "ok": true,
                   "status": 200,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:40:51.898Z",
+                  "checked_at": "2026-10-29T12:04:37.506Z",
                   "final_url": "https://packaging.ys4fun.com/package/channel/306/ali_prod_306_1_ys4fun_20260618104354_M01000000_nEKGA047_sign.apk",
                   "content_type": "text/html",
                   "size": 987,
@@ -1295,7 +1295,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 15.991,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -1341,16 +1341,16 @@
                   "ok": true,
                   "status": 200,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:40:53.529Z",
+                  "checked_at": "2026-10-29T12:04:38.784Z",
                   "final_url": "https://packaging.ys4fun.com/package/channel/305/ali_prod_305_1_ys4fun_20260320110114_M01000000_9xDEnIqS_sign.apk",
                   "content_type": "text/html",
-                  "size": 987,
+                  "size": 984,
                   "last_modified": "",
                   "etag": "",
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 15.991,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -1405,7 +1405,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.406,
                   "scheduler_confidence": "high"
                 }
               }
@@ -1460,7 +1460,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.405,
                   "scheduler_confidence": "high"
                 }
               }
@@ -1506,7 +1506,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://packaging.ys4fun.com/package/channel/294/mimir_ali_prod_294_1_ys4fun_20240710095639_M01000000_bi3NUfr4_sign.apk",
                   "content_type": "text/html",
                   "size": 0,
@@ -1515,7 +1515,7 @@
                   "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.044,
+                  "age_hours": 1.07,
                   "scheduler_confidence": "high"
                 }
               }
@@ -1561,7 +1561,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://download.ys4fun.com/package/channel/285/mimir_ali_prod_285_1_ys4fun_20230522140543_M01000000_jGFY17u6_sign.apk",
                   "content_type": "application/xml",
                   "size": 0,
@@ -1570,7 +1570,7 @@
                   "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.044,
+                  "age_hours": 1.07,
                   "scheduler_confidence": "high"
                 }
               }
@@ -1635,62 +1635,6 @@
       "versions": [
         {
           "game_id": "bluearchive",
-          "version": "3.0.2",
-          "channel": "Official",
-          "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/b00bd36d8ac74ac19710ea89a3e72826/BlueArchive.apk",
-          "source": "official Blue Archive website bundle; versionName read from AndroidManifest.xml",
-          "source_url": "https://webcnstatic.yostar.net/ba_cn_web/prod/web/assets/index.7ab147c6.js",
-          "status": 200,
-          "content_type": "application/vnd.android.package-archive",
-          "size": 2126400085,
-          "last_modified": "Tue, 14 Jul 2026 03:07:35 GMT",
-          "etag": "9451C388DC9A4DD6D9E1A0BE855F7820-2028",
-          "md5": "",
-          "crc64": "",
-          "error": "",
-          "filename": "BlueArchive.apk",
-          "captured_at": "2026-10-26T01:26:30.506502+00:00",
-          "updated_at": "2026-07-14T03:07:35+00:00",
-          "updated_at_source": "apk_last_modified",
-          "availability": {
-            "candidates": [
-              {
-                "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/b00bd36d8ac74ac19710ea89a3e72826/BlueArchive.apk",
-                "probe": {
-                  "ok": true,
-                  "status": 200,
-                  "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
-                  "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/b00bd36d8ac74ac19710ea89a3e72826/BlueArchive.apk",
-                  "content_type": "application/vnd.android.package-archive",
-                  "size": 2126400085,
-                  "last_modified": "Tue, 14 Jul 2026 03:07:35 GMT",
-                  "etag": "9451C388DC9A4DD6D9E1A0BE855F7820-2028",
-                  "error": "",
-                  "bot_challenge": false,
-                  "stale": false,
-                  "age_hours": 1.044,
-                  "scheduler_confidence": "high"
-                }
-              }
-            ],
-            "source": {
-              "kind": "live_probe",
-              "confidence": "high"
-            },
-            "interpretation": {
-              "state": "available",
-              "reason": "http_2xx",
-              "preferred_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/b00bd36d8ac74ac19710ea89a3e72826/BlueArchive.apk",
-              "confidence": "high",
-              "retained": false,
-              "display_label": "可用"
-            },
-            "generated_by": "scripts/build_android_availability.py"
-          }
-        },
-        {
-          "game_id": "bluearchive",
           "version": "2.1.2",
           "channel": "Official",
           "url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
@@ -1715,7 +1659,7 @@
                   "ok": true,
                   "status": 206,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:40:54.846Z",
+                  "checked_at": "2026-10-29T12:04:39.763Z",
                   "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/game_apk_v2/Official/befa8862e4914729b0344be2892727f5/BlueArchive.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 1723356917,
@@ -1724,7 +1668,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 15.991,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -1777,7 +1721,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:40:22.197Z",
+                  "checked_at": "2026-10-29T12:04:40.514Z",
                   "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/task_game_apk/official/1.9.1/BlueArchive_official_1.9.1_0718_1.apk",
                   "content_type": "application/xml",
                   "size": 448,
@@ -1839,7 +1783,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:40:24.540Z",
+                  "checked_at": "2026-10-29T12:04:43.874Z",
                   "final_url": "https://pkg.bluearchive-cn.com/pubplat/gpp/sdkpackage/prod/task_game_apk/official/1.8.2/BlueArchive_official_1.8.2_0517_1.apk",
                   "content_type": "application/xml",
                   "size": 448,
@@ -1848,7 +1792,7 @@
                   "error": "HTTP 404",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -1870,11 +1814,6 @@
         }
       ],
       "links": {
-        "3.0.2": {
-          "urls": "data/android/lists/bluearchive_3.0.2_android.urls.txt",
-          "aria2": "data/android/lists/bluearchive_3.0.2_android.aria2.txt",
-          "json": "data/android/lists/bluearchive_3.0.2_android.json"
-        },
         "2.1.2": {
           "urls": "data/android/lists/bluearchive_2.1.2_android.urls.txt",
           "aria2": "data/android/lists/bluearchive_2.1.2_android.aria2.txt",
@@ -1923,7 +1862,7 @@
                   "ok": true,
                   "status": 200,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.6.0.122.jinshan_202603301341.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 1427726880,
@@ -1932,7 +1871,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.045,
+                  "age_hours": 1.072,
                   "scheduler_confidence": "high"
                 }
               }
@@ -1977,8 +1916,8 @@
                 "probe": {
                   "ok": false,
                   "status": 404,
-                  "method": "CURL_GET",
-                  "checked_at": "2026-10-29T03:40:26.406Z",
+                  "method": "GET",
+                  "checked_at": "2026-10-29T12:04:46.749Z",
                   "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.5.0.79.jinshan_20260118141532.apk",
                   "content_type": "application/xml",
                   "size": 500,
@@ -2042,7 +1981,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.4,
                   "scheduler_confidence": "high"
                 }
               }
@@ -2097,7 +2036,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.399,
                   "scheduler_confidence": "high"
                 }
               }
@@ -2143,7 +2082,7 @@
                   "ok": true,
                   "status": 206,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:41:10.721Z",
+                  "checked_at": "2026-10-29T12:04:49.351Z",
                   "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.3.2.0.136.jinshan_202509221312.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 1305690714,
@@ -2152,7 +2091,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 16.007,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -2197,8 +2136,8 @@
                 "probe": {
                   "ok": false,
                   "status": 404,
-                  "method": "CURL_GET",
-                  "checked_at": "2026-10-29T03:41:35.206Z",
+                  "method": "GET",
+                  "checked_at": "2026-10-29T12:04:51.375Z",
                   "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ_3.0.0_202507031642_jinshan_30020.mtp.apk",
                   "content_type": "application/xml",
                   "size": 501,
@@ -2253,10 +2192,10 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:41:58.937Z",
+                  "checked_at": "2026-10-29T12:04:53.857Z",
                   "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.2.5.0.109.jinshan_202501141654.apk",
                   "content_type": "application/xml",
-                  "size": 499,
+                  "size": 495,
                   "last_modified": "",
                   "etag": "",
                   "error": "HTTP 404",
@@ -2307,11 +2246,11 @@
                 "probe": {
                   "ok": false,
                   "status": 404,
-                  "method": "CURL_GET",
-                  "checked_at": "2026-10-29T03:42:02.230Z",
+                  "method": "GET",
+                  "checked_at": "2026-10-29T12:04:56.697Z",
                   "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.1.8.0.96.202405271642.apk",
                   "content_type": "application/xml",
-                  "size": 486,
+                  "size": 490,
                   "last_modified": "",
                   "etag": "",
                   "error": "HTTP 404",
@@ -2362,17 +2301,17 @@
                 "probe": {
                   "ok": false,
                   "status": 404,
-                  "method": "CURL_GET",
-                  "checked_at": "2026-10-29T03:42:25.154Z",
+                  "method": "GET",
+                  "checked_at": "2026-10-29T12:04:58.915Z",
                   "final_url": "https://cbjq-content.xoyocdn.com/ob202307/setup/ob202307/setup/Android/CBJQ.1.6.0.99_202402281240.apk",
                   "content_type": "application/xml",
-                  "size": 490,
+                  "size": 486,
                   "last_modified": "",
                   "etag": "",
                   "error": "HTTP 404",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -2472,7 +2411,7 @@
                   "ok": true,
                   "status": 206,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:41:24.438Z",
+                  "checked_at": "2026-10-29T12:05:01.064Z",
                   "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20261015181329_BRJMI7spAua0ec9apY/%E9%B8%A3%E6%BD%AE_3.7.1_180055711_33_%E5%AE%98%E6%B8%A0_7f4384688022322d4c3c5a32abf957f6_shelled.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 1396309032,
@@ -2481,7 +2420,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 16.023,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -2537,7 +2476,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.37,
                   "scheduler_confidence": "high"
                 }
               }
@@ -2592,7 +2531,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.37,
                   "scheduler_confidence": "high"
                 }
               }
@@ -2648,7 +2587,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.37,
                   "scheduler_confidence": "high"
                 }
               }
@@ -2704,7 +2643,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.37,
                   "scheduler_confidence": "high"
                 }
               }
@@ -2760,7 +2699,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.37,
                   "scheduler_confidence": "high"
                 }
               }
@@ -2815,7 +2754,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.369,
                   "scheduler_confidence": "high"
                 }
               }
@@ -2871,7 +2810,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 8.369,
                   "scheduler_confidence": "high"
                 }
               }
@@ -2927,7 +2866,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 8.369,
                   "scheduler_confidence": "high"
                 }
               }
@@ -2983,7 +2922,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.369,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3017,6 +2956,7 @@
           "md5": "0812c3eaf14c876481e41cb9783e11cf",
           "crc64": "",
           "error": "APK object unavailable",
+          "exception_info": "O2|404",
           "filename": "KR_TF_52-鸣潮_3.0.1_157207705_33_库洛_投放包_1_0812c3eaf14c876481e41cb9783e11cf_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-12-30T15:33:35+00:00",
@@ -3029,7 +2969,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20251230153335_DIaYUy2QRRUcV9JRgM/KR_TF_52-%E9%B8%A3%E6%BD%AE_3.0.1_157207705_33_%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_0812c3eaf14c876481e41cb9783e11cf_shelled.apk",
                   "content_type": "application/xml",
                   "size": 0,
@@ -3038,7 +2978,7 @@
                   "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.086,
+                  "age_hours": 1.076,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3093,7 +3033,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.369,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3149,7 +3089,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.368,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3204,7 +3144,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.368,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3260,7 +3200,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.368,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3307,7 +3247,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250825103928_on6XW04clnHhBnrvCe/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.6.0_145597397__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_d9bb02269dfea9e4084cb4f0f141e4c4_shelled.apk",
                   "content_type": "application/xml",
                   "size": 0,
@@ -3316,7 +3256,7 @@
                   "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.087,
+                  "age_hours": 1.076,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3350,6 +3290,7 @@
           "md5": "d52f6d505a9741173a20005313a7c594",
           "crc64": "",
           "error": "APK object unavailable",
+          "exception_info": "O2|404",
           "filename": "KR_TF_41-鸣潮_2.5.0_142563591__库洛_投放包_1_d52f6d505a9741173a20005313a7c594_shelled.apk",
           "captured_at": "2026-06-08T17:43:05.181300+00:00",
           "updated_at": "2025-07-21T17:58:18+00:00",
@@ -3362,7 +3303,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250721175818_mtpHRQl6I2qBYIj4w0/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.5.0_142563591__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_d52f6d505a9741173a20005313a7c594_shelled.apk",
                   "content_type": "application/xml",
                   "size": 0,
@@ -3371,7 +3312,7 @@
                   "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.087,
+                  "age_hours": 1.076,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3417,7 +3358,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250709105231_grUsSFZZmVEXfwkHyM/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.4.1_141938334__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_0198dea9f935f0df478aeae416b85a83_shelled.apk",
                   "content_type": "application/xml",
                   "size": 0,
@@ -3426,7 +3367,7 @@
                   "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.087,
+                  "age_hours": 1.076,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3473,7 +3414,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250609192249_lbNQFD2LbLW5ZWemLF/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.4.0_139015362__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_82ecc5a3dad3ec68f67500dbf289f2c3_shelled.apk",
                   "content_type": "application/xml",
                   "size": 0,
@@ -3482,7 +3423,7 @@
                   "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.087,
+                  "age_hours": 1.076,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3529,7 +3470,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://mirrors-package-mc.aki-game.com/client/download/20250423181738_d3TQAVpJNjy9CIsriH/KR_TF_41-%E9%B8%A3%E6%BD%AE_2.3.0_135127140__%E5%BA%93%E6%B4%9B_%E6%8A%95%E6%94%BE%E5%8C%85_1_2d29eda4701501e76b018f280b7ccf0_shelled.apk",
                   "content_type": "application/xml",
                   "size": 0,
@@ -3538,7 +3479,7 @@
                   "error": "APK object unavailable",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.087,
+                  "age_hours": 1.076,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3593,7 +3534,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.367,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3648,7 +3589,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.367,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3703,7 +3644,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.367,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3758,7 +3699,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.367,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3813,7 +3754,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.367,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3868,7 +3809,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 8.367,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3923,7 +3864,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.367,
                   "scheduler_confidence": "high"
                 }
               }
@@ -3978,7 +3919,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.367,
                   "scheduler_confidence": "high"
                 }
               }
@@ -4033,7 +3974,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.367,
                   "scheduler_confidence": "high"
                 }
               }
@@ -4088,7 +4029,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.367,
                   "scheduler_confidence": "high"
                 }
               }
@@ -4141,7 +4082,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:43:01.566Z",
+                  "checked_at": "2026-10-29T12:05:01.979Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -4369,7 +4310,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.367,
                   "scheduler_confidence": "high"
                 }
               }
@@ -4415,7 +4356,7 @@
                   "ok": true,
                   "status": 206,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:41:25.116Z",
+                  "checked_at": "2026-10-29T12:05:02.366Z",
                   "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20260415151146_HP6JUMY1mL9VnQWt/gw/ZenlessZoneZero_2.8.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 432222688,
@@ -4424,7 +4365,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 16.028,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -4479,7 +4420,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.367,
                   "scheduler_confidence": "high"
                 }
               }
@@ -4534,7 +4475,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.366,
                   "scheduler_confidence": "high"
                 }
               }
@@ -4589,7 +4530,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.365,
                   "scheduler_confidence": "high"
                 }
               }
@@ -4644,7 +4585,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.365,
                   "scheduler_confidence": "high"
                 }
               }
@@ -4699,7 +4640,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.364,
                   "scheduler_confidence": "high"
                 }
               }
@@ -4745,7 +4686,7 @@
                   "ok": true,
                   "status": 206,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:41:31.947Z",
+                  "checked_at": "2026-10-29T12:05:04.594Z",
                   "final_url": "https://autopatchcn.juequling.com/package_download/op/client_app/download/20240914102852_G6ZTcn1Y1EGPzlKq/cps_gw/ZenlessZoneZero_1.2.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 368234311,
@@ -4754,7 +4695,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 16.029,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -4809,7 +4750,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.364,
                   "scheduler_confidence": "high"
                 }
               }
@@ -4864,7 +4805,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.364,
                   "scheduler_confidence": "high"
                 }
               }
@@ -4978,7 +4919,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.363,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5033,7 +4974,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.363,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5088,7 +5029,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.362,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5143,7 +5084,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.362,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5198,7 +5139,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.361,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5253,7 +5194,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.361,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5308,7 +5249,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.361,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5363,7 +5304,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.361,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5418,7 +5359,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.359,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5473,7 +5414,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.359,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5528,7 +5469,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.359,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5583,7 +5524,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.358,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5629,7 +5570,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:43:39.558Z",
+                  "checked_at": "2026-10-29T12:05:06.347Z",
                   "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20250125201545_gha0IQ1BkLIOw6B4/mihoyo/yuanshen_5.4.0.apk",
                   "content_type": "application/xml",
                   "size": 362,
@@ -5684,7 +5625,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:43:46.496Z",
+                  "checked_at": "2026-10-29T12:05:14.026Z",
                   "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20241223180529_TD3XG9XKsqN3o88m/mihoyo/yuanshen_5.3.0.apk",
                   "content_type": "application/xml",
                   "size": 362,
@@ -5748,7 +5689,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.357,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5803,7 +5744,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5858,7 +5799,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -5904,7 +5845,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:43:55.631Z",
+                  "checked_at": "2026-10-29T12:05:15.962Z",
                   "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20240709193922_lKTTQu3hTabVYoWi/mihoyo/yuanshen_4.8.0.apk",
                   "content_type": "application/xml",
                   "size": 362,
@@ -5968,7 +5909,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.357,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6014,7 +5955,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:43:58.466Z",
+                  "checked_at": "2026-10-29T12:05:23.970Z",
                   "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20240416103648_ZdHhq03TDhSpRocX/mihoyo/yuanshen_4.6.0.apk",
                   "content_type": "application/xml",
                   "size": 362,
@@ -6078,7 +6019,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.357,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6124,7 +6065,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:44:01.073Z",
+                  "checked_at": "2026-10-29T12:05:24.751Z",
                   "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20240122140232_rebB7JXUoZcId5WF/mihoyo/yuanshen_4.4.0.apk",
                   "content_type": "application/xml",
                   "size": 362,
@@ -6188,7 +6129,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6243,7 +6184,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6289,7 +6230,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:44:05.133Z",
+                  "checked_at": "2026-10-29T12:05:26.567Z",
                   "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20230919105032_n8MbYGE88BYwQa6j/mihoyo/yuanshen_4.1.0.apk",
                   "content_type": "application/xml",
                   "size": 362,
@@ -6353,7 +6294,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6408,7 +6349,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6463,7 +6404,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6518,7 +6459,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6573,7 +6514,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.355,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6619,7 +6560,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:44:10.963Z",
+                  "checked_at": "2026-10-29T12:05:28.458Z",
                   "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20230109151120_vmaeMAkG2koYOJDo/mihoyo/yuanshen_3.4.0.apk",
                   "content_type": "application/xml",
                   "size": 362,
@@ -6628,7 +6569,7 @@
                   "error": "HTTP 404",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6683,7 +6624,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.355,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6729,7 +6670,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:44:13.706Z",
+                  "checked_at": "2026-10-29T12:05:32.274Z",
                   "final_url": "https://autopatchcn.yuanshen.com/client_app/download/Android/20221024105331_bOTAbIxOuQ7A26Yu/mihoyo/yuanshen_3.2.0.apk",
                   "content_type": "application/xml",
                   "size": 362,
@@ -6793,7 +6734,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.355,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6848,7 +6789,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.355,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6903,7 +6844,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 8.355,
                   "scheduler_confidence": "high"
                 }
               }
@@ -6958,7 +6899,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.355,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7013,7 +6954,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.355,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7068,7 +7009,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.355,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7123,7 +7064,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.354,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7178,7 +7119,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.354,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7233,7 +7174,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.354,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7288,7 +7229,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.354,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7343,7 +7284,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.354,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7398,7 +7339,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.354,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7453,7 +7394,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.354,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7508,7 +7449,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.354,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7563,7 +7504,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.353,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7618,7 +7559,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.353,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7673,7 +7614,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.353,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7728,7 +7669,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.352,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7774,16 +7715,16 @@
                   "ok": true,
                   "status": 206,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:41:51.057Z",
+                  "checked_at": "2026-10-29T12:05:33.936Z",
                   "final_url": "https://autopatchcn.yuanshen.com/client_app/Android/20201111_c957958f02d43b5b/yuanshen_1.1.0_mihoyo.apk",
-                  "content_type": "application/vnd.android.package-archive",
+                  "content_type": "application/vnd.android.package-archive;charset=UTF-8",
                   "size": 152568901,
                   "last_modified": "Wed, 04 Nov 2020 08:12:39 GMT",
-                  "etag": "87E826EAC54E310FF0B8F1C70973F88E-15",
+                  "etag": "lt7aEUfd2qnlwhxPcvMAqPN5ZHHv",
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 16.044,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7838,7 +7779,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.352,
                   "scheduler_confidence": "high"
                 }
               }
@@ -7882,7 +7823,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:44:29.176Z",
+                  "checked_at": "2026-10-29T12:05:33.959Z",
                   "final_url": "https://autopatchcn.yuanshen.com/client_app/yuanshen_0.9.3.apk",
                   "content_type": "application/xml",
                   "size": 306,
@@ -8225,7 +8166,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.351,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8280,7 +8221,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.351,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8335,7 +8276,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.351,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8390,7 +8331,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.351,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8445,7 +8386,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.351,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8500,7 +8441,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.351,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8555,7 +8496,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.351,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8610,7 +8551,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.351,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8665,7 +8606,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.351,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8720,7 +8661,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.351,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8775,7 +8716,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.351,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8830,7 +8771,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.35,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8885,7 +8826,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.35,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8940,7 +8881,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.35,
                   "scheduler_confidence": "high"
                 }
               }
@@ -8995,7 +8936,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.35,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9050,7 +8991,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.349,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9105,7 +9046,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.349,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9160,7 +9101,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.349,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9215,7 +9156,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.349,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9270,7 +9211,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.349,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9325,7 +9266,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.349,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9380,7 +9321,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.349,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9435,7 +9376,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.349,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9490,7 +9431,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.349,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9545,7 +9486,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.349,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9600,7 +9541,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.349,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9655,7 +9596,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.348,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9710,7 +9651,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.348,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9765,7 +9706,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.348,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9820,7 +9761,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.348,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9875,7 +9816,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.348,
                   "scheduler_confidence": "high"
                 }
               }
@@ -9921,7 +9862,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:44:45.960Z",
+                  "checked_at": "2026-10-29T12:05:36.034Z",
                   "final_url": "https://autopatchcn.bhsr.com/client/cn/20230527110540_Kt2XHQtmHSq920j9/StarRail_1.1.0_gw.apk",
                   "content_type": "text/html",
                   "size": 18,
@@ -9976,7 +9917,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:44:47.919Z",
+                  "checked_at": "2026-10-29T12:05:38.063Z",
                   "final_url": "https://autopatchcn.bhsr.com/client/cn/20230413215209_VC9JD8S2WrcciZFu/StarRail_1.0.5_gw.apk",
                   "content_type": "text/html",
                   "size": 18,
@@ -10031,7 +9972,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:44:50.183Z",
+                  "checked_at": "2026-10-29T12:05:39.611Z",
                   "final_url": "https://autopatchcn.bhsr.com/client/cn/20230202112711_Gqh20JqTKF8yCY7c/StarRail_0.90.0.apk",
                   "content_type": "text/html",
                   "size": 18,
@@ -10254,7 +10195,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.347,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10309,7 +10250,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.347,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10364,7 +10305,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.347,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10419,7 +10360,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.346,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10474,7 +10415,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.346,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10530,7 +10471,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.346,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10573,34 +10514,34 @@
               {
                 "url": "https://autopatchcn.bh3.com/ptpublic/rel/20250523115648_9RU48di9UxAQIixO/CPS/20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
                 "probe": {
-                  "ok": true,
-                  "status": 206,
+                  "ok": false,
+                  "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:42:01.745Z",
+                  "checked_at": "2026-10-29T12:05:41.250Z",
                   "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250523115648_9RU48di9UxAQIixO/CPS/20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
-                  "content_type": "application/vnd.android.package-archive",
+                  "content_type": "application/xml",
                   "size": 661362858,
                   "last_modified": "Fri, 15 Aug 2025 02:09:18 GMT",
                   "etag": "D5A243BB59065896E8A425A1537567E9-10",
-                  "error": "",
+                  "error": "HTTP 403",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 16.048,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
             ],
             "source": {
               "kind": "live_probe",
-              "confidence": "high"
+              "confidence": "low"
             },
             "interpretation": {
-              "state": "available",
-              "reason": "range_probe_ok",
-              "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20250523115648_9RU48di9UxAQIixO/CPS/20250514-232040-gf_android_ota-versions-v8_3-Spacetime_Warp_gw.apk",
-              "confidence": "high",
+              "state": "unknown",
+              "reason": "http_403",
+              "preferred_url": "",
+              "confidence": "low",
               "retained": false,
-              "display_label": "可用"
+              "display_label": "状态未知"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -10641,7 +10582,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.348,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10697,7 +10638,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.348,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10753,7 +10694,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.348,
                   "scheduler_confidence": "high"
                 }
               }
@@ -10796,34 +10737,34 @@
               {
                 "url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/CPS/20241024-005902-gf_android_ota-versions-v7_9-Stars_Derailed_gw.apk",
                 "probe": {
-                  "ok": true,
-                  "status": 206,
+                  "ok": false,
+                  "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:42:02.539Z",
+                  "checked_at": "2026-10-29T12:05:47.448Z",
                   "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/CPS/20241024-005902-gf_android_ota-versions-v7_9-Stars_Derailed_gw.apk",
-                  "content_type": "application/vnd.android.package-archive",
+                  "content_type": "application/xml",
                   "size": 655626042,
                   "last_modified": "Wed, 25 Jun 2025 02:42:53 GMT",
                   "etag": "1653CC8BF6CD0DB85CCFD1DED86B7F21-10",
-                  "error": "",
+                  "error": "HTTP 403",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 16.048,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
             ],
             "source": {
               "kind": "live_probe",
-              "confidence": "high"
+              "confidence": "low"
             },
             "interpretation": {
-              "state": "available",
-              "reason": "range_probe_ok",
-              "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20241025151816_Y1hlFtfrB4sR5Scd/CPS/20241024-005902-gf_android_ota-versions-v7_9-Stars_Derailed_gw.apk",
-              "confidence": "high",
+              "state": "unknown",
+              "reason": "http_403",
+              "preferred_url": "",
+              "confidence": "low",
               "retained": false,
-              "display_label": "可用"
+              "display_label": "状态未知"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -10851,34 +10792,34 @@
               {
                 "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240912162405_49ekXZIjd6SoVTrN/CPS/20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
                 "probe": {
-                  "ok": true,
-                  "status": 206,
+                  "ok": false,
+                  "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:42:02.962Z",
+                  "checked_at": "2026-10-29T12:05:53.092Z",
                   "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240912162405_49ekXZIjd6SoVTrN/CPS/20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
-                  "content_type": "application/vnd.android.package-archive",
+                  "content_type": "application/xml",
                   "size": 627025502,
                   "last_modified": "Wed, 20 May 2026 03:59:25 GMT",
                   "etag": "C7771C36A3A4BD50A0CAA5324B9ACF21-10",
-                  "error": "",
+                  "error": "HTTP 403",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 16.048,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
             ],
             "source": {
               "kind": "live_probe",
-              "confidence": "high"
+              "confidence": "low"
             },
             "interpretation": {
-              "state": "available",
-              "reason": "range_probe_ok",
-              "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240912162405_49ekXZIjd6SoVTrN/CPS/20240910-235705-gf_android_ota-versions-v7_8-Planetary_Rewind_gw.apk",
-              "confidence": "high",
+              "state": "unknown",
+              "reason": "http_403",
+              "preferred_url": "",
+              "confidence": "low",
               "retained": false,
-              "display_label": "可用"
+              "display_label": "状态未知"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -10907,34 +10848,34 @@
               {
                 "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240805103951_0EjefJt3gubtCF3N/CPS/20240731-233936-gf_android_ota-versions-v7_7-Drudging_Drifting_Dreaming_gw.apk",
                 "probe": {
-                  "ok": true,
-                  "status": 206,
+                  "ok": false,
+                  "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:42:03.459Z",
+                  "checked_at": "2026-10-29T12:05:58.776Z",
                   "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240805103951_0EjefJt3gubtCF3N/CPS/20240731-233936-gf_android_ota-versions-v7_7-Drudging_Drifting_Dreaming_gw.apk",
-                  "content_type": "application/vnd.android.package-archive",
+                  "content_type": "application/xml",
                   "size": 620025060,
                   "last_modified": "Wed, 25 Jun 2025 06:22:25 GMT",
                   "etag": "B3F1D526AC683546C51FDE6A330878BD-10",
-                  "error": "",
+                  "error": "HTTP 403",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 16.048,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
             ],
             "source": {
               "kind": "live_probe",
-              "confidence": "high"
+              "confidence": "low"
             },
             "interpretation": {
-              "state": "available",
-              "reason": "range_probe_ok",
-              "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240805103951_0EjefJt3gubtCF3N/CPS/20240731-233936-gf_android_ota-versions-v7_7-Drudging_Drifting_Dreaming_gw.apk",
-              "confidence": "high",
+              "state": "unknown",
+              "reason": "http_403",
+              "preferred_url": "",
+              "confidence": "low",
               "retained": false,
-              "display_label": "可用"
+              "display_label": "状态未知"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -10963,34 +10904,34 @@
               {
                 "url": "https://autopatchcn.bh3.com/ptpublic/rel/20240624104231_kQdR9e8gTqYZeAgW/CPS/20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
                 "probe": {
-                  "ok": true,
-                  "status": 206,
+                  "ok": false,
+                  "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:42:04.011Z",
+                  "checked_at": "2026-10-29T12:06:05.494Z",
                   "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240624104231_kQdR9e8gTqYZeAgW/CPS/20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
-                  "content_type": "application/vnd.android.package-archive",
+                  "content_type": "application/xml",
                   "size": 628088256,
                   "last_modified": "Wed, 25 Jun 2025 02:44:46 GMT",
                   "etag": "CEBD2E23854FF5010A508BFFDC843558-10",
-                  "error": "",
+                  "error": "HTTP 403",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 16.048,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
             ],
             "source": {
               "kind": "live_probe",
-              "confidence": "high"
+              "confidence": "low"
             },
             "interpretation": {
-              "state": "available",
-              "reason": "range_probe_ok",
-              "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20240624104231_kQdR9e8gTqYZeAgW/CPS/20240620-002924-gf_android_ota-versions-v7_6-Fading_Dreams_gw.apk",
-              "confidence": "high",
+              "state": "unknown",
+              "reason": "http_403",
+              "preferred_url": "",
+              "confidence": "low",
               "retained": false,
-              "display_label": "可用"
+              "display_label": "状态未知"
             },
             "generated_by": "scripts/build_android_availability.py"
           }
@@ -11022,7 +10963,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:44:56.060Z",
+                  "checked_at": "2026-10-29T12:06:10.895Z",
                   "final_url": "https://bundle.bh3.com/ptpublic/rel/20240506104443_Eb7wY4fRoYiICW5J/CPS/20240430-053124-gf_android_ota-versions-v7_5-Crusade_of_Chasing_Shadows_gw.apk",
                   "content_type": "application/xml",
                   "size": 600051270,
@@ -11086,7 +11027,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11141,7 +11082,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11188,7 +11129,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:44:59.748Z",
+                  "checked_at": "2026-10-29T12:06:21.003Z",
                   "final_url": "https://bundle.bh3.com/ptpublic/rel/20240129110128_8vnNEN2tuKyZwUhB/CPS/20240125-141104-gf_android_ota-versions-v7_3-Dreamseeking_Voyage_gw.apk",
                   "content_type": "application/xml",
                   "size": 586476683,
@@ -11252,7 +11193,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.357,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11307,7 +11248,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.357,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11362,7 +11303,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11418,7 +11359,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11474,7 +11415,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11529,7 +11470,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11584,7 +11525,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.356,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11639,7 +11580,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.355,
                   "scheduler_confidence": "high"
                 }
               }
@@ -11685,7 +11626,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:10.149Z",
+                  "checked_at": "2026-10-29T12:06:26.755Z",
                   "final_url": "https://bundle.bh3.com/public/Android/20221103-165551-gf_android_ota-versions-v6_2-The_Chrono_and_the_Hare_guofu.apk",
                   "content_type": "text/html",
                   "size": 137,
@@ -11740,7 +11681,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:10.638Z",
+                  "checked_at": "2026-10-29T12:06:31.907Z",
                   "final_url": "https://bundle.bh3.com/public/Android/20220922-171040-gf_android_ota-versions-v6_1-Moonshade_Epic_guofu.apk",
                   "content_type": "text/html",
                   "size": 137,
@@ -11795,7 +11736,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:11.406Z",
+                  "checked_at": "2026-10-29T12:06:32.751Z",
                   "final_url": "https://bundle.bh3.com/public/Android/20220302-235837-gf_android_ota-versions-v5_6-Elysian_Reverie_guofu.apk",
                   "content_type": "text/html",
                   "size": 137,
@@ -11851,7 +11792,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:11.849Z",
+                  "checked_at": "2026-10-29T12:06:36.933Z",
                   "final_url": "https://bundle.bh3.com/public/Android/20210916-100433-gf_android_ota-versions-v5_2-Infinite_Future_guofu.apk",
                   "content_type": "text/html",
                   "size": 137,
@@ -11906,7 +11847,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:12.266Z",
+                  "checked_at": "2026-10-29T12:06:38.696Z",
                   "final_url": "https://bundle.bh3.com/public/Android/20210713-190832-gf_android_ota-versions-v5_0_1-Inherit_the_Flame_guofu.apk",
                   "content_type": "text/html",
                   "size": 137,
@@ -11961,7 +11902,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:12.762Z",
+                  "checked_at": "2026-10-29T12:06:39.446Z",
                   "final_url": "https://bundle.bh3.com/public/Android/20210603-161309-gf_android_ota-versions-v4_9-Outworld_Traveler_guofu.apk",
                   "content_type": "text/html",
                   "size": 137,
@@ -12016,7 +11957,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:13.248Z",
+                  "checked_at": "2026-10-29T12:06:41.158Z",
                   "final_url": "https://bundle.bh3.com/public/Android/20210422-145145-gf_android_ota-versions-v4_8-The_Phantom_of_the_Theater_guofu.apk",
                   "content_type": "text/html",
                   "size": 137,
@@ -12071,7 +12012,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:13.678Z",
+                  "checked_at": "2026-10-29T12:06:41.910Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12127,7 +12068,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:13.990Z",
+                  "checked_at": "2026-10-29T12:06:42.122Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12183,7 +12124,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:14.221Z",
+                  "checked_at": "2026-10-29T12:06:42.224Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12192,7 +12133,7 @@
                   "error": "dns: <urlopen error [Errno -5] No address associated with hostname>",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -12239,7 +12180,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:14.333Z",
+                  "checked_at": "2026-10-29T12:06:42.494Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12294,7 +12235,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:14.386Z",
+                  "checked_at": "2026-10-29T12:06:42.562Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12350,7 +12291,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:14.610Z",
+                  "checked_at": "2026-10-29T12:06:42.647Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12405,7 +12346,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:14.654Z",
+                  "checked_at": "2026-10-29T12:06:42.770Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12460,7 +12401,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:14.761Z",
+                  "checked_at": "2026-10-29T12:06:42.791Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12515,7 +12456,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:14.913Z",
+                  "checked_at": "2026-10-29T12:06:42.833Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12570,7 +12511,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:14.932Z",
+                  "checked_at": "2026-10-29T12:06:42.850Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12624,7 +12565,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.018Z",
+                  "checked_at": "2026-10-29T12:06:42.866Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12678,7 +12619,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.196Z",
+                  "checked_at": "2026-10-29T12:06:42.884Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12732,7 +12673,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.215Z",
+                  "checked_at": "2026-10-29T12:06:42.902Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12785,7 +12726,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.231Z",
+                  "checked_at": "2026-10-29T12:06:42.918Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12838,7 +12779,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.257Z",
+                  "checked_at": "2026-10-29T12:06:42.944Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12891,7 +12832,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.274Z",
+                  "checked_at": "2026-10-29T12:06:42.960Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12944,7 +12885,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.514Z",
+                  "checked_at": "2026-10-29T12:06:42.982Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -12998,7 +12939,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.534Z",
+                  "checked_at": "2026-10-29T12:06:42.997Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -13051,7 +12992,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.555Z",
+                  "checked_at": "2026-10-29T12:06:43.013Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -13104,7 +13045,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.600Z",
+                  "checked_at": "2026-10-29T12:06:43.030Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -13159,7 +13100,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.631Z",
+                  "checked_at": "2026-10-29T12:06:43.046Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -13214,7 +13155,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.654Z",
+                  "checked_at": "2026-10-29T12:06:43.062Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -13269,7 +13210,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.736Z",
+                  "checked_at": "2026-10-29T12:06:43.098Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -13324,7 +13265,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.755Z",
+                  "checked_at": "2026-10-29T12:06:43.115Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -13377,7 +13318,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.771Z",
+                  "checked_at": "2026-10-29T12:06:43.131Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -13432,7 +13373,7 @@
                   "ok": false,
                   "status": 0,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:15.790Z",
+                  "checked_at": "2026-10-29T12:06:43.148Z",
                   "final_url": "",
                   "content_type": "",
                   "size": 0,
@@ -13778,7 +13719,7 @@
                   "ok": true,
                   "status": 200,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://ak.hypergryph.com/downloads/android_lastest",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 1861585573,
@@ -13787,7 +13728,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.125,
+                  "age_hours": 1.104,
                   "scheduler_confidence": "high"
                 }
               }
@@ -13842,7 +13783,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.358,
                   "scheduler_confidence": "high"
                 }
               }
@@ -13888,7 +13829,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:16.096Z",
+                  "checked_at": "2026-10-29T12:06:43.164Z",
                   "final_url": "https://ak.hycdn.cn/apk/202501201109-2441-f4nql2kxbinoieig3as2/arknights-hg-2441.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -13943,7 +13884,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:21.314Z",
+                  "checked_at": "2026-10-29T12:06:54.991Z",
                   "final_url": "https://ak.hycdn.cn/apk/202411291024-2421-u4qncegvfv5sesfovkaq/arknights-hg-2421.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -13952,7 +13893,7 @@
                   "error": "HTTP 403",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -13998,7 +13939,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:26.037Z",
+                  "checked_at": "2026-10-29T12:07:05.974Z",
                   "final_url": "https://ak.hycdn.cn/apk/202410301849-2401-te3svuc43h63yfe8a4pk/arknights-hg-2401.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14053,7 +13994,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:31.006Z",
+                  "checked_at": "2026-10-29T12:07:19.705Z",
                   "final_url": "https://ak.hycdn.cn/apk/202407072201-2301-oq0ywpuqm0unmfdzeift/arknights-hg-2301.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14108,7 +14049,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:36.293Z",
+                  "checked_at": "2026-10-29T12:07:26.012Z",
                   "final_url": "https://ak.hycdn.cn/apk/202404071436-2241-7hrpbfdt2x4bu2h9sz2q/arknights-hg-2241.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14163,7 +14104,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:42.507Z",
+                  "checked_at": "2026-10-29T12:07:34.969Z",
                   "final_url": "https://ak.hycdn.cn/apk/202403011713-2221-3edpmka8jf3f9jo7vjqk/arknights-hg-2221.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14218,7 +14159,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:48.162Z",
+                  "checked_at": "2026-10-29T12:07:42.295Z",
                   "final_url": "https://ak.hycdn.cn/apk/202312011528-2141-n09gx6umwxg279rjm8js/arknights-hg-2141.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14273,7 +14214,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:53.283Z",
+                  "checked_at": "2026-10-29T12:07:53.404Z",
                   "final_url": "https://ak.hycdn.cn/apk/202309271907-2101-y0c1c0hpwmvo6svddz9v/arknights-hg-2101.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14282,7 +14223,7 @@
                   "error": "HTTP 403",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -14328,7 +14269,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:45:59.967Z",
+                  "checked_at": "2026-10-29T12:08:08.950Z",
                   "final_url": "https://ak.hycdn.cn/apk/202307041815-2040-y9rygj9zi97245mhou8y/arknights-hg-2040.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14337,7 +14278,7 @@
                   "error": "HTTP 403",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -14383,7 +14324,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:46:05.368Z",
+                  "checked_at": "2026-10-29T12:08:15.010Z",
                   "final_url": "https://ak.hycdn.cn/apk/202304281114-2001-3l0xy1rm0mm8u2ibbzmc/arknights-hg-2001.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14438,7 +14379,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:46:11.938Z",
+                  "checked_at": "2026-10-29T12:08:21.597Z",
                   "final_url": "https://ak.hycdn.cn/apk/202303031911-1981-2immsmdktq3dvi0ukxvd/arknights-hg-1981.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14493,7 +14434,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:46:17.801Z",
+                  "checked_at": "2026-10-29T12:08:33.307Z",
                   "final_url": "https://ak.hycdn.cn/apk/202209261155-1901-hel5xybw05jzbti29ks2/arknights-hg-1901.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14548,7 +14489,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:46:24.492Z",
+                  "checked_at": "2026-10-29T12:08:40.223Z",
                   "final_url": "https://ak.hycdn.cn/apk/202204121544-1801-yk1f3rk2xef6ouhqok38/arknights-hg-1801.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14603,7 +14544,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:46:31.709Z",
+                  "checked_at": "2026-10-29T12:08:47.158Z",
                   "final_url": "https://ak.hycdn.cn/apk/202109151624-1581-fnj60dalawa9hrco20a7/arknights-hg-1581.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14658,7 +14599,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:46:36.826Z",
+                  "checked_at": "2026-10-29T12:08:54.155Z",
                   "final_url": "https://ak.hycdn.cn/apk/202104141056-1501-ddfegbjv0zp6gj9r138x/arknights-hg-1501.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14713,7 +14654,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:46:43.240Z",
+                  "checked_at": "2026-10-29T12:09:03.954Z",
                   "final_url": "https://ak.hycdn.cn/apk/202103041209-1401-kdb7ess6im3ys7jesg60/arknights-hg-1401.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14768,7 +14709,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:46:49.538Z",
+                  "checked_at": "2026-10-29T12:09:17.277Z",
                   "final_url": "https://ak.hycdn.cn/apk/202012161718-1210-2f98d22a22c6bca91335/arknights-hg-1210.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14823,7 +14764,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:46:56.247Z",
+                  "checked_at": "2026-10-29T12:09:29.855Z",
                   "final_url": "https://ak.hycdn.cn/apk/202010281505-1201-f75c49dbdd52c3d0d02f/arknights-hg-1201.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14878,7 +14819,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:06.428Z",
+                  "checked_at": "2026-10-29T12:09:37.787Z",
                   "final_url": "https://ak.hycdn.cn/apk/202009231557-1190-ad849fdf21cc0693d122/arknights-hg-1190.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14933,7 +14874,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:13.613Z",
+                  "checked_at": "2026-10-29T12:09:47.591Z",
                   "final_url": "https://ak.hycdn.cn/apk/202008241206-1180-133220af4fdcf33dfedc/arknights-hg-1180.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -14988,7 +14929,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:20.071Z",
+                  "checked_at": "2026-10-29T12:09:56.826Z",
                   "final_url": "https://ak.hycdn.cn/apk/202007081730-1150-774ce26c6443bf45e5f5/arknights-hg-1150.apk",
                   "content_type": "application/xml",
                   "size": 334,
@@ -15169,7 +15110,7 @@
                   "ok": true,
                   "status": 200,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://www.benghuai.com/download/latest",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 259127512,
@@ -15178,7 +15119,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.162,
+                  "age_hours": 1.161,
                   "scheduler_confidence": "high"
                 }
               }
@@ -15233,7 +15174,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 8.378,
                   "scheduler_confidence": "high"
                 }
               }
@@ -15277,7 +15218,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:26.776Z",
+                  "checked_at": "2026-10-29T12:10:05.926Z",
                   "final_url": "https://static.benghuai.com/Download/v12_6/Beta.StripResource_12.6.101_38.shell.apk",
                   "content_type": "application/xml",
                   "size": 402,
@@ -15330,7 +15271,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:26.958Z",
+                  "checked_at": "2026-10-29T12:10:06.344Z",
                   "final_url": "https://static.benghuai.com/Download/v12_6/Mix_12.6.54_338.shell.apk",
                   "content_type": "application/xml",
                   "size": 387,
@@ -15339,7 +15280,7 @@
                   "error": "HTTP 404",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -15383,7 +15324,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:27.142Z",
+                  "checked_at": "2026-10-29T12:10:06.590Z",
                   "final_url": "https://static.benghuai.com/Download/v12_6/Beta.StripResource_12.6.27_38.shell.apk",
                   "content_type": "application/xml",
                   "size": 401,
@@ -15436,7 +15377,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:28.894Z",
+                  "checked_at": "2026-10-29T12:10:06.819Z",
                   "final_url": "https://static.benghuai.com/Download/v12_6/Original.StripResource_12.6.8_338_SgC.shell.apk",
                   "content_type": "application/xml",
                   "size": 409,
@@ -15489,7 +15430,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:29.052Z",
+                  "checked_at": "2026-10-29T12:10:06.990Z",
                   "final_url": "https://static.benghuai.com/Download/v12_5/Mix_12.5.54_335.shell.apk",
                   "content_type": "application/xml",
                   "size": 387,
@@ -15542,7 +15483,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:29.212Z",
+                  "checked_at": "2026-10-29T12:10:07.227Z",
                   "final_url": "https://static.benghuai.com/Download/v12_5/Mix_12.5.54_335_v1.shell.apk",
                   "content_type": "application/xml",
                   "size": 390,
@@ -15551,7 +15492,7 @@
                   "error": "HTTP 404",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -15595,7 +15536,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:30.861Z",
+                  "checked_at": "2026-10-29T12:10:07.460Z",
                   "final_url": "https://static.benghuai.com/Download/v12_5/Original.StripResource_12.5.8_335_Oo0.shell.apk",
                   "content_type": "application/xml",
                   "size": 409,
@@ -15648,7 +15589,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:31.031Z",
+                  "checked_at": "2026-10-29T12:10:07.701Z",
                   "final_url": "https://static.benghuai.com/Download/v12_4/Beta.StripResource_12.4.101_36.shell.apk",
                   "content_type": "application/xml",
                   "size": 402,
@@ -15701,7 +15642,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:32.555Z",
+                  "checked_at": "2026-10-29T12:10:07.936Z",
                   "final_url": "https://static.benghuai.com/Download/v12_4/Mix_12.4.54_334.shell.apk",
                   "content_type": "application/xml",
                   "size": 387,
@@ -15710,7 +15651,7 @@
                   "error": "HTTP 404",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0.0,
+                  "age_hours": 0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -15754,7 +15695,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:33.827Z",
+                  "checked_at": "2026-10-29T12:10:08.113Z",
                   "final_url": "https://static.benghuai.com/Download/v12_4/Original.StripResource_12.4.8_334_mLi.shell.apk",
                   "content_type": "application/xml",
                   "size": 409,
@@ -15807,7 +15748,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:33.982Z",
+                  "checked_at": "2026-10-29T12:10:08.418Z",
                   "final_url": "https://static.benghuai.com/Download/v12_3/Beta.StripResource_12.3.103_36.shell.apk",
                   "content_type": "application/xml",
                   "size": 402,
@@ -15860,7 +15801,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:34.139Z",
+                  "checked_at": "2026-10-29T12:10:08.713Z",
                   "final_url": "https://static.benghuai.com/Download/v12_3/Beta.StripResource_12.3.101_36.shell.apk",
                   "content_type": "application/xml",
                   "size": 402,
@@ -15913,7 +15854,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:35.547Z",
+                  "checked_at": "2026-10-29T12:10:08.951Z",
                   "final_url": "https://static.benghuai.com/Download/v12_3/Mix_12.3.54_332.shell.apk",
                   "content_type": "application/xml",
                   "size": 387,
@@ -15966,7 +15907,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:35.698Z",
+                  "checked_at": "2026-10-29T12:10:09.254Z",
                   "final_url": "https://static.benghuai.com/Download/v12_3/Beta.StripResource_12.3.27_36.shell.apk",
                   "content_type": "application/xml",
                   "size": 401,
@@ -16019,7 +15960,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:35.857Z",
+                  "checked_at": "2026-10-29T12:10:09.426Z",
                   "final_url": "https://static.benghuai.com/Download/v12_3/Original.StripResource_12.3.8_332.shell_HoX.apk",
                   "content_type": "application/xml",
                   "size": 409,
@@ -16072,7 +16013,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:36.013Z",
+                  "checked_at": "2026-10-29T12:10:09.661Z",
                   "final_url": "https://static.benghuai.com/Download/v12_2/Beta.StripResource_12.2.103_36.shell.apk",
                   "content_type": "application/xml",
                   "size": 402,
@@ -16125,7 +16066,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:36.171Z",
+                  "checked_at": "2026-10-29T12:10:09.963Z",
                   "final_url": "https://static.benghuai.com/Download/v12_2/Mix_12.2.54_331.shell.apk",
                   "content_type": "application/xml",
                   "size": 387,
@@ -16178,7 +16119,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:36.327Z",
+                  "checked_at": "2026-10-29T12:10:10.135Z",
                   "final_url": "https://static.benghuai.com/Download/v12_2/Original.StripResource_12.2.8_331_TnH.shell.apk",
                   "content_type": "application/xml",
                   "size": 409,
@@ -16231,7 +16172,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:42.164Z",
+                  "checked_at": "2026-10-29T12:10:10.329Z",
                   "final_url": "https://static.benghuai.com/Download/v12_1/Original.StripResource_12.1.8_330_OyD.shell.apk",
                   "content_type": "application/xml",
                   "size": 409,
@@ -16284,7 +16225,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:45.003Z",
+                  "checked_at": "2026-10-29T12:10:10.624Z",
                   "final_url": "https://static.benghuai.com/Download/v11_4/Original.StripResource_11.4.8_325_xEh.shell.apk",
                   "content_type": "application/xml",
                   "size": 409,
@@ -16337,7 +16278,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:46.154Z",
+                  "checked_at": "2026-10-29T12:10:10.854Z",
                   "final_url": "https://static.benghuai.com/Download/v10_7/Original.StripResource_10.7.8_319_adz.shell.apk",
                   "content_type": "application/xml",
                   "size": 409,
@@ -16390,7 +16331,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:48.846Z",
+                  "checked_at": "2026-10-29T12:10:11.027Z",
                   "final_url": "https://static.benghuai.com/Download/v9_8/Beta.StripResource_9.8.103_36.shell.apk",
                   "content_type": "application/xml",
                   "size": 400,
@@ -16399,7 +16340,7 @@
                   "error": "HTTP 404",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 0,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -16443,7 +16384,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:49.000Z",
+                  "checked_at": "2026-10-29T12:10:11.206Z",
                   "final_url": "https://static.benghuai.com/Download/v9_8/Mix_9.8.54_311.shell.apk",
                   "content_type": "application/xml",
                   "size": 385,
@@ -16496,7 +16437,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:50.220Z",
+                  "checked_at": "2026-10-29T12:10:11.493Z",
                   "final_url": "https://static.benghuai.com/Download/v9_8/Original.StripResource_9.8.8_311_32va.shell.apk",
                   "content_type": "application/xml",
                   "size": 408,
@@ -16549,7 +16490,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:50.375Z",
+                  "checked_at": "2026-10-29T12:10:11.727Z",
                   "final_url": "https://static.benghuai.com/Download/v9_7/Mix_9.7.54_310.shell.apk",
                   "content_type": "application/xml",
                   "size": 385,
@@ -16602,7 +16543,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:50.528Z",
+                  "checked_at": "2026-10-29T12:10:12.023Z",
                   "final_url": "https://static.benghuai.com/Download/v9_7/Original.StripResource_9.7.8_310_4ij.shell.apk",
                   "content_type": "application/xml",
                   "size": 407,
@@ -16655,7 +16596,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:50.684Z",
+                  "checked_at": "2026-10-29T12:10:12.197Z",
                   "final_url": "http://static.benghuai.com/Download/v8_6/Original.StripResource_8.6.8_298_unsign.signed.apk",
                   "content_type": "application/xml",
                   "size": 411,
@@ -16708,7 +16649,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:51.414Z",
+                  "checked_at": "2026-10-29T12:10:12.352Z",
                   "final_url": "http://static.benghuai.com/Download/v8_5/Original.StripResource_8.5.8_297_unsign.signed_ykXq6e.apk",
                   "content_type": "application/xml",
                   "size": 418,
@@ -16761,7 +16702,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:52.089Z",
+                  "checked_at": "2026-10-29T12:10:12.511Z",
                   "final_url": "http://static.benghuai.com/Download/v7_5/Original.StripResource_7.5.8_284_signed.apk",
                   "content_type": "application/xml",
                   "size": 404,
@@ -16814,7 +16755,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:53.833Z",
+                  "checked_at": "2026-10-29T12:10:12.628Z",
                   "final_url": "http://static.benghuai.com/Download/v4_3/Mix_4.3.221_10_signed.apk",
                   "content_type": "application/xml",
                   "size": 386,
@@ -16867,7 +16808,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:54.778Z",
+                  "checked_at": "2026-10-29T12:10:12.788Z",
                   "final_url": "http://static.benghuai.com/Download/v4_3/Original.StripResource_4.3.210_10_signed.apk",
                   "content_type": "application/xml",
                   "size": 405,
@@ -16920,7 +16861,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:55.463Z",
+                  "checked_at": "2026-10-29T12:10:12.907Z",
                   "final_url": "http://static.benghuai.com/Download/v4_3/Original_4.3.210_10_signed.apk",
                   "content_type": "application/xml",
                   "size": 391,
@@ -16973,7 +16914,7 @@
                   "ok": false,
                   "status": 404,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:56.170Z",
+                  "checked_at": "2026-10-29T12:10:13.124Z",
                   "final_url": "http://static.benghuai.com/Download/v3_4/Original_3.4.8_1_signed.apk",
                   "content_type": "application/xml",
                   "size": 388,
@@ -17204,7 +17145,7 @@
                   "ok": true,
                   "status": 200,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
                   "final_url": "https://launcher.hypergryph.com/game/latest/6LL0KJuqHBVz33WK/1/1",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 1691723099,
@@ -17213,7 +17154,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.171,
+                  "age_hours": 1.163,
                   "scheduler_confidence": "high"
                 }
               }
@@ -17261,7 +17202,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:47:59.729Z",
+                  "checked_at": "2026-10-29T12:10:13.317Z",
                   "final_url": "https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.2/package/1/1/Android/1.2.5_mStKKtMSeUpoODur/endfield-hg-1-1.2.5.apk",
                   "content_type": "text/html",
                   "size": 238,
@@ -17318,7 +17259,7 @@
                   "ok": false,
                   "status": 403,
                   "method": "GET",
-                  "checked_at": "2026-10-29T03:48:00.329Z",
+                  "checked_at": "2026-10-29T12:10:14.980Z",
                   "final_url": "https://beyond.hycdn.cn/6LL0KJuqHBVz33WK/1.1/package/1/1/Android/1.1.8_sLAAL9caQ48xm4a8/endfield-hg-1-1.1.8.apk",
                   "content_type": "text/html",
                   "size": 238,
@@ -17374,7 +17315,7 @@
           "game_id": "gf2",
           "version": "4.0.0",
           "channel": "gwaz",
-          "url": "https://mica-download.sunborngame.com/p2/apk/5137/1785400757_signed_aligned_ReYun_gwaz_GW_Build_CN_1189_13467_9889_1785396096_5137_100.apk?auth_key=1793241670-02115634770858737664-0-4ee4ef867461d4097ce63d311ecfaf1f",
+          "url": "https://mica-download.sunborngame.com/p2/apk/5137/1785400757_signed_aligned_ReYun_gwaz_GW_Build_CN_1189_13467_9889_1785396096_5137_100.apk?auth_key=1793271987-02115761929061400576-0-785981787bd35ef9d8162cca8b6f0d67",
           "source": "official Sunborn download API; resolves to a short-lived signed APK URL",
           "source_url": "https://gf2-web-preregister-api.sunborngame.com/website/url_manage?timestamp=1780775971&nonce=c20j1x&sign=74ca012c6a9ef865f150e6613462bb5a",
           "signed_url": true,
@@ -17394,13 +17335,13 @@
           "availability": {
             "candidates": [
               {
-                "url": "https://mica-download.sunborngame.com/p2/apk/5137/1785400757_signed_aligned_ReYun_gwaz_GW_Build_CN_1189_13467_9889_1785396096_5137_100.apk?auth_key=1793241670-02115634770858737664-0-4ee4ef867461d4097ce63d311ecfaf1f",
+                "url": "https://mica-download.sunborngame.com/p2/apk/5137/1785400757_signed_aligned_ReYun_gwaz_GW_Build_CN_1189_13467_9889_1785396096_5137_100.apk?auth_key=1793271987-02115761929061400576-0-785981787bd35ef9d8162cca8b6f0d67",
                 "probe": {
                   "ok": true,
                   "status": 200,
                   "method": "LEGACY_ANDROID_HEAD",
-                  "checked_at": "2026-10-29T02:37:44.244111+00:00",
-                  "final_url": "https://mica-download.sunborngame.com/p2/apk/5137/1785400757_signed_aligned_ReYun_gwaz_GW_Build_CN_1189_13467_9889_1785396096_5137_100.apk?auth_key=1793241670-02115634770858737664-0-4ee4ef867461d4097ce63d311ecfaf1f",
+                  "checked_at": "2026-10-29T11:00:27.032118+00:00",
+                  "final_url": "https://mica-download.sunborngame.com/p2/apk/5137/1785400757_signed_aligned_ReYun_gwaz_GW_Build_CN_1189_13467_9889_1785396096_5137_100.apk?auth_key=1793271987-02115761929061400576-0-785981787bd35ef9d8162cca8b6f0d67",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 1918365508,
                   "last_modified": "Fri, 07 Aug 2026 02:36:46 GMT",
@@ -17408,7 +17349,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 1.171,
+                  "age_hours": 1.164,
                   "scheduler_confidence": "high"
                 }
               }
@@ -17420,7 +17361,7 @@
             "interpretation": {
               "state": "available",
               "reason": "http_2xx",
-              "preferred_url": "https://mica-download.sunborngame.com/p2/apk/5137/1785400757_signed_aligned_ReYun_gwaz_GW_Build_CN_1189_13467_9889_1785396096_5137_100.apk?auth_key=1793241670-02115634770858737664-0-4ee4ef867461d4097ce63d311ecfaf1f",
+              "preferred_url": "https://mica-download.sunborngame.com/p2/apk/5137/1785400757_signed_aligned_ReYun_gwaz_GW_Build_CN_1189_13467_9889_1785396096_5137_100.apk?auth_key=1793271987-02115761929061400576-0-785981787bd35ef9d8162cca8b6f0d67",
               "confidence": "high",
               "retained": false,
               "display_label": "可用"
@@ -17468,7 +17409,7 @@
                   "ok": true,
                   "status": 206,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:45:12.391Z",
+                  "checked_at": "2026-10-29T12:10:16.431Z",
                   "final_url": "https://zspms-txcdn-media.kurogame.com/download/Z5w8P3r6j2L9/20261023-v4_8_1-zspms_A1372.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 2089444059,
@@ -17477,7 +17418,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 16.047,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
@@ -17524,7 +17465,7 @@
                   "ok": true,
                   "status": 206,
                   "method": "GET",
-                  "checked_at": "2026-10-28T11:45:15.154Z",
+                  "checked_at": "2026-10-29T12:10:18.197Z",
                   "final_url": "https://zspms-txcdn-media.kurogame.com/download/R3tX6b2Qn7m4/20261023-v4_8_1-zspms_A1346.apk",
                   "content_type": "application/vnd.android.package-archive",
                   "size": 2089896052,
@@ -17533,7 +17474,7 @@
                   "error": "",
                   "bot_challenge": false,
                   "stale": false,
-                  "age_hours": 16.046,
+                  "age_hours": 0.0,
                   "scheduler_confidence": "high"
                 }
               }
