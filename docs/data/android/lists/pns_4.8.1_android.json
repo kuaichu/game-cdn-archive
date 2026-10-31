@@ -2,62 +2,6 @@
   {
     "game_id": "pns",
     "version": "4.8.1",
-    "channel": "官渠",
-    "url": "https://zspms-txcdn-media.kurogame.com/download/Z5w8P3r6j2L9/20261023-v4_8_1-zspms_A1372.apk",
-    "source": "official Punishing: Gray Raven Android download index",
-    "source_url": "https://download.kurogames.com/pns/official/cn/zh-Hans/android_app.json",
-    "status": 200,
-    "content_type": "application/vnd.android.package-archive",
-    "size": 2089444059,
-    "last_modified": "Thu, 22 Oct 2026 03:26:39 GMT",
-    "etag": "33882FAC71FA704DDA51ECFAB2A2DD79-400",
-    "md5": "",
-    "crc64": "",
-    "error": "",
-    "filename": "20261023-v4_8_1-zspms_A1372.apk",
-    "captured_at": "2026-10-27T09:54:02.750452+00:00",
-    "updated_at": "2026-10-22T03:26:39+00:00",
-    "updated_at_source": "apk_last_modified",
-    "availability": {
-      "candidates": [
-        {
-          "url": "https://zspms-txcdn-media.kurogame.com/download/Z5w8P3r6j2L9/20261023-v4_8_1-zspms_A1372.apk",
-          "probe": {
-            "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-10-30T12:25:55.954Z",
-            "final_url": "https://zspms-txcdn-media.kurogame.com/download/Z5w8P3r6j2L9/20261023-v4_8_1-zspms_A1372.apk",
-            "content_type": "application/vnd.android.package-archive",
-            "size": 2089444059,
-            "last_modified": "Thu, 22 Oct 2026 03:26:39 GMT",
-            "etag": "33882FAC71FA704DDA51ECFAB2A2DD79-400",
-            "error": "",
-            "bot_challenge": false,
-            "stale": false,
-            "age_hours": 15.56,
-            "scheduler_confidence": "high"
-          }
-        }
-      ],
-      "source": {
-        "kind": "live_probe",
-        "confidence": "high"
-      },
-      "interpretation": {
-        "state": "available",
-        "reason": "range_probe_ok",
-        "preferred_url": "https://zspms-txcdn-media.kurogame.com/download/Z5w8P3r6j2L9/20261023-v4_8_1-zspms_A1372.apk",
-        "confidence": "high",
-        "retained": false,
-        "display_label": "可用"
-      },
-      "generated_by": "scripts/build_android_availability.py"
-    }
-  },
-  {
-    "game_id": "pns",
-    "version": "4.8.1",
     "channel": "模拟器",
     "url": "https://zspms-txcdn-media.kurogame.com/download/R3tX6b2Qn7m4/20261023-v4_8_1-zspms_A1346.apk",
     "source": "official Punishing: Gray Raven Android emulator download index",
@@ -82,7 +26,7 @@
             "ok": true,
             "status": 206,
             "method": "GET",
-            "checked_at": "2026-10-30T12:25:58.189Z",
+            "checked_at": "2026-10-31T11:47:59.838Z",
             "final_url": "https://zspms-txcdn-media.kurogame.com/download/R3tX6b2Qn7m4/20261023-v4_8_1-zspms_A1346.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 2089896052,
@@ -91,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 15.559,
+            "age_hours": 0.0,
             "scheduler_confidence": "high"
           }
         }
