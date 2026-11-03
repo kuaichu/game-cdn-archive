@@ -15,7 +15,7 @@
     "crc64": "",
     "error": "",
     "filename": "20260910-000623-gf_android_ota-versions-v9_1-New_Page_gw.apk",
-    "captured_at": "2026-09-24T01:39:59.339090+00:00",
+    "captured_at": "2026-11-03T04:07:26.427381+00:00",
     "updated_at": "2026-09-18T08:26:51+00:00",
     "updated_at_source": "apk_last_modified",
     "availability": {
@@ -24,9 +24,9 @@
           "url": "https://autopatchcn.bh3.com/ptpublic/rel/20260918161242_ugCcGWcYOmBJg8wo/CPS/20260910-000623-gf_android_ota-versions-v9_1-New_Page_gw.apk",
           "probe": {
             "ok": true,
-            "status": 206,
-            "method": "GET",
-            "checked_at": "2026-11-02T04:06:35.146Z",
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-11-03T04:07:26.427381+00:00",
             "final_url": "https://autopatchcn.bh3.com/ptpublic/rel/20260918161242_ugCcGWcYOmBJg8wo/CPS/20260910-000623-gf_android_ota-versions-v9_1-New_Page_gw.apk",
             "content_type": "application/vnd.android.package-archive",
             "size": 705897700,
@@ -35,7 +35,7 @@
             "error": "",
             "bot_challenge": false,
             "stale": false,
-            "age_hours": 0.0,
+            "age_hours": 1.289,
             "scheduler_confidence": "high"
           }
         }
@@ -46,7 +46,7 @@
       },
       "interpretation": {
         "state": "available",
-        "reason": "range_probe_ok",
+        "reason": "http_2xx",
         "preferred_url": "https://autopatchcn.bh3.com/ptpublic/rel/20260918161242_ugCcGWcYOmBJg8wo/CPS/20260910-000623-gf_android_ota-versions-v9_1-New_Page_gw.apk",
         "confidence": "high",
         "retained": false,
