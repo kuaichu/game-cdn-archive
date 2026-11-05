@@ -1,0 +1,58 @@
+[
+  {
+    "game_id": "nte",
+    "version": "1.5.0",
+    "channel": "official",
+    "url": "https://yhapk.wmupd.com/webops/yh/w9H2dL7v/yh_laohu_1.5stable_20261103.apk",
+    "source": "official website Android download config; versionName read from AndroidManifest.xml",
+    "source_url": "https://static.games.wanmei.com/public/commonData/gamesData/gameDownload/yh-gameDownload.js",
+    "status": 200,
+    "content_type": "application/octet-stream",
+    "size": 1569631114,
+    "last_modified": "Wed, 04 Nov 2026 22:05:36 GMT",
+    "etag": "14A7D9F092597467FA604718691871F7-150",
+    "md5": "",
+    "crc64": "13947747510712939272",
+    "error": "",
+    "filename": "yh_laohu_1.5stable_20261103.apk",
+    "captured_at": "2026-11-05T03:42:41.831018+00:00",
+    "updated_at": "2026-11-04T22:05:36+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://yhapk.wmupd.com/webops/yh/w9H2dL7v/yh_laohu_1.5stable_20261103.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-11-05T03:42:41.831018+00:00",
+            "final_url": "https://yhapk.wmupd.com/webops/yh/w9H2dL7v/yh_laohu_1.5stable_20261103.apk",
+            "content_type": "application/octet-stream",
+            "size": 1569631114,
+            "last_modified": "Wed, 04 Nov 2026 22:05:36 GMT",
+            "etag": "14A7D9F092597467FA604718691871F7-150",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.118,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://yhapk.wmupd.com/webops/yh/w9H2dL7v/yh_laohu_1.5stable_20261103.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]

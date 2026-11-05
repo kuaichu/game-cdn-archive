@@ -1,0 +1,114 @@
+[
+  {
+    "game_id": "pns",
+    "version": "4.9.1",
+    "channel": "官渠",
+    "url": "https://zspms-txcdn-media.kurogame.com/download/2aS7kP9vD3rH/20261105-v4_9-zspms_A1372.apk",
+    "source": "official Punishing: Gray Raven Android download index",
+    "source_url": "https://download.kurogames.com/pns/official/cn/zh-Hans/android_app.json",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 2123433926,
+    "last_modified": "Wed, 04 Nov 2026 03:54:12 GMT",
+    "etag": "CA4FC4096045802FA423CB7BFFBED35B-203",
+    "md5": "",
+    "crc64": "",
+    "error": "",
+    "filename": "20261105-v4_9-zspms_A1372.apk",
+    "captured_at": "2026-11-05T03:42:41.831018+00:00",
+    "updated_at": "2026-11-04T03:54:12+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://zspms-txcdn-media.kurogame.com/download/2aS7kP9vD3rH/20261105-v4_9-zspms_A1372.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-11-05T03:42:41.831018+00:00",
+            "final_url": "https://zspms-txcdn-media.kurogame.com/download/2aS7kP9vD3rH/20261105-v4_9-zspms_A1372.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2123433926,
+            "last_modified": "Wed, 04 Nov 2026 03:54:12 GMT",
+            "etag": "CA4FC4096045802FA423CB7BFFBED35B-203",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.32,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://zspms-txcdn-media.kurogame.com/download/2aS7kP9vD3rH/20261105-v4_9-zspms_A1372.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  },
+  {
+    "game_id": "pns",
+    "version": "4.9.1",
+    "channel": "模拟器",
+    "url": "https://zspms-txcdn-media.kurogame.com/download/F4dN8zX6cJ7m/20261105-v4_9-zspms_A1346.apk",
+    "source": "official Punishing: Gray Raven Android emulator download index",
+    "source_url": "https://download.kurogames.com/pns/official/cn/zh-Hans/androidpc_app.json",
+    "status": 200,
+    "content_type": "application/vnd.android.package-archive",
+    "size": 2123577286,
+    "last_modified": "Wed, 04 Nov 2026 03:51:13 GMT",
+    "etag": "C087C8BDACFFEA0B900214C15622DA88-203",
+    "md5": "",
+    "crc64": "",
+    "error": "",
+    "filename": "20261105-v4_9-zspms_A1346.apk",
+    "captured_at": "2026-11-05T03:42:41.831018+00:00",
+    "updated_at": "2026-11-04T03:51:13+00:00",
+    "updated_at_source": "apk_last_modified",
+    "availability": {
+      "candidates": [
+        {
+          "url": "https://zspms-txcdn-media.kurogame.com/download/F4dN8zX6cJ7m/20261105-v4_9-zspms_A1346.apk",
+          "probe": {
+            "ok": true,
+            "status": 200,
+            "method": "LEGACY_ANDROID_HEAD",
+            "checked_at": "2026-11-05T03:42:41.831018+00:00",
+            "final_url": "https://zspms-txcdn-media.kurogame.com/download/F4dN8zX6cJ7m/20261105-v4_9-zspms_A1346.apk",
+            "content_type": "application/vnd.android.package-archive",
+            "size": 2123577286,
+            "last_modified": "Wed, 04 Nov 2026 03:51:13 GMT",
+            "etag": "C087C8BDACFFEA0B900214C15622DA88-203",
+            "error": "",
+            "bot_challenge": false,
+            "stale": false,
+            "age_hours": 1.32,
+            "scheduler_confidence": "high"
+          }
+        }
+      ],
+      "source": {
+        "kind": "live_probe",
+        "confidence": "high"
+      },
+      "interpretation": {
+        "state": "available",
+        "reason": "http_2xx",
+        "preferred_url": "https://zspms-txcdn-media.kurogame.com/download/F4dN8zX6cJ7m/20261105-v4_9-zspms_A1346.apk",
+        "confidence": "high",
+        "retained": false,
+        "display_label": "可用"
+      },
+      "generated_by": "scripts/build_android_availability.py"
+    }
+  }
+]
