@@ -21,15 +21,15 @@
           "url": "https://static.benghuai.com/Download/v10_7/Original.StripResource_10.7.8_319_adz.shell.apk",
           "probe": {
             "ok": false,
-            "status": 404,
+            "status": 504,
             "method": "GET",
-            "checked_at": "2026-11-06T04:54:43.255Z",
+            "checked_at": "2026-11-06T13:52:42.605Z",
             "final_url": "https://static.benghuai.com/Download/v10_7/Original.StripResource_10.7.8_319_adz.shell.apk",
-            "content_type": "application/xml",
-            "size": 409,
+            "content_type": "text/html",
+            "size": 279,
             "last_modified": "",
             "etag": "",
-            "error": "HTTP 404",
+            "error": "HTTP 504",
             "bot_challenge": false,
             "stale": false,
             "age_hours": 0.0,
@@ -42,12 +42,12 @@
         "confidence": "low"
       },
       "interpretation": {
-        "state": "unavailable",
-        "reason": "retained_historical",
+        "state": "unknown",
+        "reason": "http_5xx",
         "preferred_url": "",
         "confidence": "low",
-        "retained": true,
-        "display_label": "链接失效"
+        "retained": false,
+        "display_label": "状态未知"
       },
       "generated_by": "scripts/build_android_availability.py"
     }
