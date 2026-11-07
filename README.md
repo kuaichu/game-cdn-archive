@@ -1,5 +1,25 @@
 # Game CDN Archive / 二游官方 CDN 索引
 
+> **已停止维护（2026-11-07）**：本仓库保留 Game CDN Archive V1 的源码、历史与最终归档数据，自动同步、月报和自动部署已停用。后续开发与数据更新请访问 [Game Manifest Index](https://gmi.yeque.top/)（[源码仓库](https://github.com/kuaichu/Game-Manifest-Index)）。下文的版本、可用性及同步说明属于历史快照，不代表持续更新或实时检测。
+
+## 旧项目截图
+
+以下截图拍摄于 2026-11-07，展示本项目原有的云端页面。
+
+### 版本概览与体积趋势
+
+![Game CDN Archive V1：异环版本概览与体积趋势](screenshots/overview.png)
+
+### 鸣潮文件目录浏览
+
+![Game CDN Archive V1：鸣潮文件目录、大小与下载列表](screenshots/wuwa.png)
+
+### Android APK 归档
+
+![Game CDN Archive V1：鸣潮 Android APK 元数据与下载命令](screenshots/android.png)
+
+---
+
 这是一个非官方的游戏 CDN 元数据归档项目，用来保存官方启动器清单、文件 URL、校验值、镜像 URL、APK 记录和下载辅助列表。
 
 项目目标是数字保存、版本研究和技术复现。仓库只保存索引和元数据，不镜像、不重新打包、不分发任何游戏本体文件。
